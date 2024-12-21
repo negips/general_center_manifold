@@ -1,0 +1,58 @@
+\begin{thebibliography}{}
+
+\bibitem[Carr, 1982]{carr82}
+Carr, J. (1982).
+\newblock {\em Applications of centre manifold theory}, volume~35.
+\newblock Springer Science \& Business Media.
+
+\bibitem[Cross and Greenside, 2009]{cross09}
+Cross, M. and Greenside, H. (2009).
+\newblock {\em Pattern Formation and Dynamics in Nonequilibrium Systems}.
+\newblock Cambridge University Press.
+
+\bibitem[Cross, 1980]{cross80}
+Cross, M.~C. (1980).
+\newblock {Derivation of the amplitude equation at the {R}ayleigh–{B}ènard
+  instability}.
+\newblock {\em The Physics of Fluids}, 23(9):1727--1731.
+
+\bibitem[Guckenheimer and Holmes, 1983]{guckenheimer83}
+Guckenheimer, J. and Holmes, P. (1983).
+\newblock {\em Nonlinear Oscillations, Dynamical Systems, and Bifurcations of
+  Vector Fields}.
+\newblock Springer Science \& Business Media New York.
+
+\bibitem[Newell and Whitehead, 1969]{newell69}
+Newell, A.~C. and Whitehead, J.~A. (1969).
+\newblock Finite bandwidth, finite amplitude convection.
+\newblock {\em Journal of Fluid Mechanics}, 38(2):279–303.
+
+\bibitem[Sijbrand, 1985]{sijbrand85}
+Sijbrand, J. (1985).
+\newblock Properties of center manifolds.
+\newblock {\em Transactions of the American Mathematical Society},
+  289(2):431--469.
+
+\bibitem[Sipp and Lebedev, 2007]{sipp07}
+Sipp, D. and Lebedev, A. (2007).
+\newblock Global stability of base and mean flows: a general approach and its
+  applications to cylinder and open cavity flows.
+\newblock {\em Journal of Fluid Mechanics}, 593:333–358.
+
+\bibitem[Stuart, 1958]{stuart58}
+Stuart, J.~T. (1958).
+\newblock On the non-linear mechanics of hydrodynamic stability.
+\newblock {\em Journal of Fluid Mechanics}, 4(1):1–21.
+
+\bibitem[Stuart, 1960]{stuart60}
+Stuart, J.~T. (1960).
+\newblock On the non-linear mechanics of wave disturbances in stable and
+  unstable parallel flows part 1. the basic behaviour in plane poiseuille flow.
+\newblock {\em Journal of Fluid Mechanics}, 9(3):353–370.
+
+\bibitem[Wiggins, 2003]{wiggins03}
+Wiggins, S. (2003).
+\newblock {\em Introduction to Applied Nonlinear Dynamical Systems and Chaos}.
+\newblock Springer-Verlag New York.
+
+\end{thebibliography}

@@ -1,0 +1,190 @@
+\appendix
+
+
+
+\section{Symbolic simplification of the graph equation}
+\label{app:AppendixA}
+
+The structure of the problem emerging from the asymptotic approximation of the center manifold may be understood symbolically. This is illustrated at second order but the essential structure remains the same at higher orders. The second order terms in the power series of $\mathbf{x}$ can be represented symbolically as interaction terms from three sets of amplitudes $\mathbf{x}_{P}, \mathbf{x}_{R}$ and $\mathbf{x}_{I}$. So that the second-order asymptotic expansion of $\mathfrak{h}$ may be represented symbolically as
+\begin{align}
+	\label{eqn:H2_symbolic}
+	\begin{split}
+		\mathfrak{h}_{(2)}(\mathbf{x}) =
+		& \mathbf{x}_{P,P}\vfield{y}_{P,P} + 
+		    \mathbf{x}_{P,R}\vfield{y}_{P,R} + \\  
+		& \mathbf{x}_{P,I}\vfield{y}_{P,I} + 
+		    \mathbf{x}_{R,R}\vfield{y}_{R,R} + \\
+		& \mathbf{x}_{R,I}\vfield{y}_{R,I} + 
+		    \mathbf{x}_{I,I}\vfield{y}_{I,I},
+	\end{split}
+\end{align}
+where, $\mathbf{x}_{P,R}\vfield{y}_{P,R}$ denotes all terms of the type $x_{\alpha}x_{\beta}y_{\alpha,\beta}$ with $x_{\alpha}\in \mathbf{x}_{P}, x_{\beta}\in \mathbf{x}_{R}$, and so on.
+
+The focus here is on the terms that are linear in the fields $\vecy_{a,b}$, which define the structure of the problem at each order, so that the simplification is carried out for the terms arising out of $(\partial \mathfrak{h}/\partial \mathbf{x})\cdot \mathbf{\widehat{K}}\mathbf{x} - (\mathbf{Q}\Lu\mathbf{Q})\mathfrak{h}$. Of these, only the first term results in a coupling between the various fields $\vfield{y}_{\alpha,\beta}$, while the second term, $(\mathbf{Q}\Lu\mathbf{Q})\mathfrak{h}$ provides no coupling. Keeping in mind the structure of $\mathbf{\widehat{K}}$ given by equation~\eqref{eqn:khat}, one obtains the following set of expressions from the expansion of the first term,
+\begin{align}
+	\begin{split}
+		&\xbf_{P,P}(\LambdaP\vecy_{P,P} + \LambdaP\vecy_{P,P} + \Gamma\vecy_{P,R}) + \\
+		%
+		&\xbf_{P,R}(\LambdaP\vecy_{P,R} + \Lambda_{R}\vecy_{P,R} + 2\Gamma\vecy_{R,R}) + \\
+		%
+		&\xbf_{P,I}(\LambdaP\vecy_{P,I} + \LambdaI\vecy_{P,I} + \Gamma\vecy_{R,I}) + \\
+		%
+		& \xbf_{R,R}(\LambdaR\vecy_{R,R} + \LambdaR\vecy_{R,R}) + \\
+		%
+		& \xbf_{R,I}(\LambdaR\vecy_{R,I} + \LambdaI\vecy_{R,I}) + \\
+		%
+		& \xbf_{I,I}(\LambdaI\vecy_{I,I} + \LambdaI\vecy_{I,I}).
+	\end{split}
+\end{align}
+The structure is easily understood when presenting the linear system of equations in matrix form,
+\begin{widetext}
+	\begin{align}
+		\label{eqn:system_matrix_O2}
+		\left(
+		\begin{bmatrix}
+			(\LambdaP + \LambdaP) & \Gammabf & \zerobf & \zerobf & \zerobf & \zerobf \\ 
+			\zerobf & (\LambdaP + \LambdaR) & \zerobf & 2\Gammabf & \zerobf & \zerobf \\ 
+			\zerobf & \zerobf & (\LambdaP + \LambdaI) & \zerobf & \Gammabf & \zerobf \\ 
+			\zerobf & \zerobf & \zerobf & (\LambdaR + \LambdaR) & \zerobf & \zerobf \\ 
+			\zerobf & \zerobf & \zerobf & \zerobf & (\LambdaR + \LambdaI) & \zerobf \\ 
+			\zerobf & \zerobf & \zerobf & \zerobf & \zerobf & (\LambdaI + \LambdaI)
+		\end{bmatrix} -
+		(\mathbf{Q}\Lu\mathbf{Q})\mathbf{I}
+	%	(\mathbf{Q}\Lu\mathbf{Q})
+	%	\begin{bmatrix}
+	%		I & \zerobf & \zerobf & \zerobf & \zerobf & \zerobf \\ 
+	%		\zerobf & I & \zerobf & \zerobf & \zerobf & \zerobf \\ 
+	%		\zerobf & \zerobf & I & \zerobf & \zerobf & \zerobf \\ 
+	%		\zerobf & \zerobf & \zerobf & I & \zerobf & \zerobf \\ 
+	%		\zerobf & \zerobf & \zerobf & \zerobf & I & \zerobf \\ 
+	%		\zerobf & \zerobf & \zerobf & \zerobf & \zerobf & I
+	%	\end{bmatrix}
+		\right)
+		\begin{Bmatrix}
+			\vecy_{P,P} \\
+			\vecy_{P,R} \\
+			\vecy_{P,I} \\
+			\vecy_{R,R} \\
+			\vecy_{R,I} \\
+			\vecy_{I,I}
+		\end{Bmatrix}.
+	\end{align}	
+\end{widetext}
+The resulting linear system is upper-triangular so that all fields may be evaluated in a sequential manner using back substitution, starting from the last row of the matrix in equation~\eqref{eqn:system_matrix_O2}. An additional point to note is that only the fields that represent interactions of the parameter mode amplitudes $\xbf_{P}$ with other modes involve coupling terms, \ie, the fields of the type $\vecy_{P,P}, \vecy_{P,R}$ and $\vecy_{P,I}$ are coupled while, the fields of the type $\vecy_{R,R}, \vecy_{R,I}$ and $\vecy_{I,I}$ are completely decoupled. One may therefore generically write the equation for the evaluation of each field $\vecy_{\alpha,\beta}$ as,
+\begin{align}
+	\label{eqn:coupled_fields_app}
+	(\widehat{\lambda}_{\alpha} + \widehat{\lambda}_{\beta})\vfield{y}_{\alpha,\beta} 
+	%
+	- (\mathbf{Q}\Lu\mathbf{Q})\vfield{y}_{\alpha,\beta} = \vfield{g}_{\alpha,\beta} - \vfield{g}^{c}_{\alpha,\beta},
+\end{align}
+where, $\widehat{\lambda}_{i}$ is the $i^{th}$ diagonal value (and also the eigenvalue) of $\mathbf{\widehat{K}}$. The inhomogeneous terms arising out of $\mathcal{G}$ are denoted as $\vfield{g}_{\alpha,\beta}$ and the coupling terms arising due to non-zero $\Gammabf$ are denoted as $\vfield{g}^{c}_{\alpha,\beta}$. When solving sequentially, the coupling terms are known a priori, and for $\alpha > l$, they vanish identically. 
+ 
+
+
+%\section{Algebraic simplification of the graph equation}
+%\label{AppendixB}
+%
+%The terms in the graph equation are analyzed in detail when the center-manifold is evaluated asymptotically using a power series in $\mathbf{x}$. Here the expressions arising for the second order $(k = 2)$ asymptotic terms,
+%\begin{align}
+%	\label{eqn:H2_asymptotic}
+%	\mathfrak{h}_{(2)}(\mathbf{x}) = \sum_{a=1}^{M}\sum_{b=a}^{M} x_{a}x_{b}\vfield{y}_{a,b},
+%\end{align}
+%is considered, for a critical subspace size of $M = l + n + m$, with $l$  parameters, $n$ purely real eigenvalues and $m$ purely imaginary eigenvalues. This leads to a total of $T_{2} = C(M+k-1,k)$ polynomial expressions. The focus here is only on the linear terms which define the system of equations at each order $k$, with the focus on 
+%terms arising from $(\partial \mathfrak{h}/\partial \mathbf{x})\cdot \mathbf{\widehat{K}}\mathbf{x}$, which leads to the coupling of fields within each order $k$. The terms that arise from 
+%The resulting coefficients of $x_{\alpha}x_{\beta}$ (with $\beta\ge\alpha$) are,
+%\begin{align}
+%	\label{eqn:second_order_linear_terms}
+%	\begin{split}
+%		 &\overbrace{\sum_{j=1}^{\beta}\widehat{K}_{j,\alpha}\vfield{y}_{j,\beta}}^{I} +
+%		 % 
+%		 \overbrace{\sum_{j=1}^{\alpha}\widehat{K}_{j,\beta}\vfield{y}_{j,\alpha}}^{II}
+%		%
+%		+ \overbrace{\sum_{j=\alpha}^{M}\widehat{K}_{j,\beta}\vfield{y}_{\alpha,j}}^{III} + \\
+%		%
+%		& \underbrace{\sum_{j=\beta}^{M}\widehat{K}_{j,\alpha}\vfield{y}_{\beta,j}}_{IV}
+%		%
+%		- \left[\sum_{j=1}^{\alpha}\widehat{K}_{j,\beta}\vfield{y}_{j,\alpha} + \sum_{j=\beta}^{M}\widehat{K}_{j,\alpha}\vfield{y}_{\beta,j} \right]\delta_{\alpha,\beta},
+%	\end{split}
+%\end{align}
+%where the main terms are marked with over and underbraces. 
+%This is analyzed in two cases: (1) $\alpha > l$ and (2) $\alpha \le l$. 
+%
+%\subsection{Case 1: $\alpha > l$}
+%\label{app:AppendixB1}
+%
+%In term $I$, $\widehat{K}_{j,\alpha}$ is non-zero only for the diagonal elements, \ie, $j=\alpha$. Hence, $\sum_{j=1}^{\beta}\widehat{K}_{j,\alpha}\vfield{y}_{j,\beta} = \widehat{K}_{\alpha,\alpha}\vfield{y}_{\alpha,\beta}$.
+%
+%In term $II$, since $\beta\ge\alpha > l$, therefore $\widehat{K}_{j,\beta}$ are matrix entries from columns $l+1,\ldots M$. These always vanish except for $\alpha = \beta$, hence, $\sum_{j=1}^{\alpha}\widehat{K}_{j,\beta}\vfield{y}_{j,\alpha} = \widehat{K}_{\alpha,\beta}\vfield{y}_{\alpha,\alpha}\delta_{\alpha,\beta}$. 
+%
+%Similarly in term $III$, $\widehat{K}_{j,\beta}$ is non-zero only for $j=\beta$, therefore, $\sum_{j=\alpha}^{M}\widehat{K}_{j,\beta}\vfield{y}_{\alpha,j} = \widehat{K}_{\beta,\beta}\vfield{y}_{\alpha,\beta}$.
+%
+%In term $IV$, again one obtains non-zero values only for $\alpha = \beta$, resulting in $\sum_{j=\beta}^{M}\widehat{K}_{j,\alpha}\vfield{y}_{\beta,j} = \widehat{K}_{\beta,\alpha}\vfield{y}_{\beta,\beta}\delta_{\alpha,\beta}$.
+%
+%The remaining two terms are the same as terms $II$ and $IV$ restricted to $\alpha = \beta$ and with a negative sign. Therefore for case (1) with $\alpha>l$ one gets a complete decoupling of fields and the only remaining terms are
+%\begin{eqnarray}
+%	\widehat{K}_{\alpha,\alpha}\vfield{y}_{\alpha,\beta} + \widehat{K}_{\beta,\beta}\vfield{y}_{\alpha,\beta} \nonumber.
+%\end{eqnarray}
+%The total number of fields which result in such a simplification are $D_{k} = C(n+m+k-1,k)$, with $k=2$. 
+%
+%
+%\subsection{Case 2: $\alpha \le l$}
+%\label{app:AppendixB2}
+%
+%In term $I$, $\widehat{K}_{j,\alpha}$ is non-zero only for $l < j \le M$. Hence, due to term $I$, the field $\vfield{y}_{\alpha,\beta}$ is coupled to all fields $\vfield{y}_{i,\beta}$, with $i>l$. However, these fields $\vfield{y}_{i,\beta}$ are known fields since they can already be evaluated independently as per section~\ref{app:AppendixB1}. 
+%
+%In term $II$, $\widehat{K}_{j,\beta}$ is always zero for $j\in 1,\ldots\alpha$. Hence term $II$ provides no coupling to other fields. 
+%
+%Term $III$ may be rewritten as,
+%\begin{eqnarray}
+%	\sum_{j=\alpha}^{M}\widehat{K}_{j,\beta}\vfield{y}_{\alpha,j} = \sum_{j=\alpha}^{\beta}\widehat{K}_{j,\beta}\vfield{y}_{\alpha,j} + \sum_{j=\beta+1}^{M}\widehat{K}_{j,\beta}\vfield{y}_{\alpha,j}. \nonumber
+%\end{eqnarray} 
+%The first term in right hand side involves the upper triangular part of $\mathbf{\widehat{K}}$ and therefore vanishes. The second term provides the coupling terms and therefore $\vfield{y}_{\alpha,\beta}$ is coupled to fields $\vfield{y}_{\alpha,j}$, with $j > \beta$. 
+%
+%Term $IV$ is such that it couples the field $\vfield{y}_{\alpha,\beta}$ only with fields $\vfield{y}_{a,b}$, where $a,b \ge \beta \ge \alpha$.
+%
+%Again, the last two terms are the same as terms $II$ and $IV$ for $\alpha = \beta$. 
+%
+%The result is that for case (2), \ie, $\alpha \le l$, the fields are coupled to each other. However, consider a vector of ordered fields $\vfield{y}_{\alpha,\beta}$ with increasing last index, \ie,  $\mathbf{y} = [\vfield{y}_{1,1}, \vfield{y}_{1,2},, \ldots,\vfield{y}_{1,M},\vfield{y}_{2,2},\vfield{y}_{2,3},\ldots,\vfield{y}_{M,M}]$. Each field is only coupled to fields that come later in the list. This results in a matrix for the system of equations for $\vfield{y}_{\alpha,\beta}$ that is upper triangular. This may be solved sequentially and each field only needs to be solved individually, since the coupling terms for each equation are from fields that have already been evaluated.
+%
+%Combining both cases together one obtains a system of equations for the fields $\vfield{y}_{\alpha,\beta}$ which is upper triangular and the fields may be solved sequentially starting from the indices $(\alpha,\beta) = (M,M)$, and moving towards $(\alpha,\beta) = (1,1)$. Of these, $D_{2}$ fields are completely uncoupled, corresponding to case (1). 
+
+
+
+%\begin{table*}
+%	\centering
+%	\caption{Coefficients of polynomial terms for $\dot{x}_{1}$ obtained numerically for the two cases. }
+%	\begin{tabular}{c | c | c}
+%		Polynomial Terms  & Cylinder Wake		                  & Open Cavity\\
+%		\hline\hline
+%		$x_{0}$           & $0.0 + 0.0i$ 				      & $0.0 + 0.0i$ 			     \\
+%		$x_{1}$           & $0.0 + 0.7455i$ 				& $0.0 + 7.495i$   		     \\
+%		$x_{2}$           & $0.0 + 0.0i$ 					& $0.0 + 0.0i$ 			     \\
+%            $x_{0}x_{0}$      & $(+3.640 + 2.291i)\times10^{-8}$ 	      & $(+11.72 - 6.618i)\times10^{-2}$ \\
+%		$x_{0}x_{1}$      & $(+1.976 + 0.698i)\times10^{-1}$ 		& $(+8.345 + 7.238i)\times10^{-1}$ \\
+%		$x_{0}x_{2}$      & $(+6.388 + 4.616i)\times10^{-3}$ 		& $(-1.544 + 5.471i)\times10^{-2}$ \\
+%		$x_{1}x_{1}$      & $(-1.479 - 0.211i)\times10^{-11}$ 	& $(+18.42 - 4.701i)\times10^{-1}$ \\
+%		$x_{1}x_{2}$      & $(-1.306 + 1.290i)\times10^{-10}$ 	& $(+2.268 - 3.955i)\times10^{+0}$ \\
+%            $x_{2}x_{2}$      & $(+0.380 - 1.652i)\times10^{-11}$ 	& $(+1.007 + 4.994i)\times10^{-1}$ \\
+%            $x_{0}x_{0}x_{0}$	& $(+2.954 + 1.373i)\times10^{-8}$        & $(+9.656 - 5.478i)\times10^{-2}$ \\ 
+%            $x_{0}x_{0}x_{1}$	& $(+7.264 - 4.787i)\times10^{-2}$        & $(+3.188 + 2.514i)\times10^{-1}$ \\
+%            $x_{0}x_{0}x_{2}$ & $(+4.477 - 1.482i)\times10^{-3}$        & $(-7.922 + 2.635i)\times10^{-2}$ \\
+%            $x_{0}x_{1}x_{1}$ & $(-3.854 - 3.090i)\times10^{-9}$        & $(+12.94 - 6.695i)\times10^{-1}$ \\
+%            $x_{0}x_{1}x_{2}$ & $(+0.711 + 2.542i)\times10^{-9}$        & $(+0.898 - 1.946i)\times10^{+1}$ \\
+%            $x_{0}x_{2}x_{2}$ & $(+1.077 + 0.492i)\times10^{-10}$       & $(+2.234 - 2.946i)\times10^{-1}$ \\
+%            $x_{1}x_{1}x_{1}$ & $(+1.615 - 2.904i)\times10^{-5}$        & $(-3.701 + 3.134i)\times10^{+0}$ \\
+%            $x_{1}x_{1}x_{2}$ & $(-2.526 + 8.010i)\times10^{-3}$        & $(-5.744 + 3.425i)\times10^{+2}$ \\
+%            $x_{1}x_{2}x_{2}$ & $(+0.973 - 3.380i)\times10^{-5}$        & $(-9.844 + 3.445i)\times10^{+1}$ \\
+%            $x_{2}x_{2}x_{2}$ & $(-2.308 -5.938i)\times10^{-7}$        & $(-4.613 + 6.681i)\times10^{+0}$ \\
+%		\hline\hline
+%	\end{tabular} 
+%	\label{tab:coeffs_x1}
+%\end{table*}
+
+
+%\section{Bifurcation Algorithm}
+%\label{AppendixB}
+
+
+
+
+

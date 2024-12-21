@@ -1,0 +1,53 @@
+This is BibTeX, Version 0.99d (TeX Live 2024/Arch Linux)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: apalike.bst
+Database file #1: mainNotes.bib
+Database file #2: references.bib
+I was expecting a `,' or a `}'---line 31 of file references.bib
+ :  
+ :  publisher={Springer}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You've used 10 entries,
+            1935 wiz_defined-function locations,
+            531 strings with 5004 characters,
+and the built_in function-call counts, 3466 in all, are:
+= -- 333
+> -- 94
+< -- 11
++ -- 28
+- -- 28
+* -- 280
+:= -- 610
+add.period$ -- 30
+call.type$ -- 10
+change.case$ -- 60
+chr.to.int$ -- 10
+cite$ -- 10
+duplicate$ -- 140
+empty$ -- 279
+format.name$ -- 46
+if$ -- 682
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 14
+newline$ -- 53
+num.names$ -- 30
+pop$ -- 53
+preamble$ -- 1
+purify$ -- 64
+quote$ -- 0
+skip$ -- 108
+stack$ -- 0
+substring$ -- 271
+swap$ -- 11
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 52
+warning$ -- 0
+while$ -- 27
+width$ -- 0
+write$ -- 129
+(There was 1 error message)
