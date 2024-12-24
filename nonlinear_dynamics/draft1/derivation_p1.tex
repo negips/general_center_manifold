@@ -370,7 +370,7 @@ The various fields $\vfield{y}_{a,b}$ are coupled due to the off-diagonal matrix
 	%
 	- (\mathbf{Q}\Lu\mathbf{Q})\vfield{y}_{\alpha,\beta} = \vfield{g}_{\alpha,\beta} - \vfield{g}^{c}_{\alpha,\beta}, \nonumber
 \end{align}
-where, the coupling terms for each pair of $(\alpha,\beta)$ have been denoted $\vfield{g}^{c}_{\alpha,\beta}$. These coupling terms vanish identically for $l < \alpha \le M$ (and $\beta\ge\alpha$) and for the remaining terms they are known apriori due to the upper-triangular nature of the system of equations. The system may be represented in a slightly different manner as, 
+where, the coupling terms for each pair of $(\alpha,\beta)$ have been denoted $\vfield{g}^{c}_{\alpha,\beta}$. These coupling terms vanish identically for $l < \alpha \le M$ (and $\beta\ge\alpha$) and for the remaining terms they are known apriori due to the upper-triangular nature of the system of equations. Recall that that the unknown fields $\vfield{y}_{\alpha,\beta}\in\mathds{T}_{s}$, therefore, $\vfield{y}_{\alpha,\beta} = \mathbf{Q}\mathbf{Q}\vfield{y}_{\alpha,\beta}$  and the system may be represented in a slightly different manner as, 
 	\begin{align}
 	\label{eqn:resolvent_fields_order_2}
 	\begin{split}
@@ -378,8 +378,8 @@ where, the coupling terms for each pair of $(\alpha,\beta)$ have been denoted $\
 		%
 		\widehat{\omega}_{\alpha,\beta} =& \widehat{\lambda}_{\alpha} + \widehat{\lambda}_{\beta}, \\
 		%
-		\mathcal{R}_{s}(\omega) =& [\omega\mathbf{I} 
-		- (\mathbf{Q}\Lu\mathbf{Q})]^{-1},
+		\mathcal{R}_{s}(\omega) =& [\mathbf{Q}(\omega\mathbf{I} 
+		- \Lu)\mathbf{Q}]^{-1},
 	\end{split}
 \end{align}
 where, the quantity $\mathcal{R}_{s}(\omega)$ is a \emph{restricted resolvent} operator, \ie, the resolvent operator restricted to the stable subspace of $\Lu$. 
@@ -407,7 +407,11 @@ with $1<\alpha\le\beta\le\gamma\le\delta\le M$, and so on for even higher order 
 
 Finally, note that the resolvent operator in equations~\eqref{eqn:resolvent_fields_order_2} and \eqref{eqn:resolvent_fields_higher_order} is never singular. The singularity of the resolvent operator occurs at points on the complex plane corresponding to the eigenvalue spectrum of the corresponding operator. In this case the operator in question is the restricted operator $(\mathbf{Q}\Lu\mathbf{Q})$, which has an eigenvalue spectrum with strictly negative real part $(\mathfrak{Re}(\lambda) < 0)$. On the other hand, for all asymptotic terms, the restricted resolvent is evaluated at points $\widehat{\omega}$ which is the sum of integral multiples of the critical eigenvalues, hence $\mathfrak{Re}(\widehat{\omega}) = 0$ identically. Therefore the restricted resolvent operator is non-singular for all the asymptotic terms. The singularity of the resolvent operator is usually associated with resonant terms leading to higher order terms in the Poincar\'{e} normal form or, to secular terms when considering a multiple time-scale expansion of solutions. In the current case the question of resonance never arises. 
 
-Finally, once the fields associated with the asymptotic expansion of $\mathfrak{h}(\xbf)$ have been evaluated to the desired order, the power series for $\mathfrak{h}$ can be substituted into equation~\eqref{eqn:evolution_final1} resulting in a set of ordinary differential equations for the evolution of the critical mode amplitudes in the center-manifold. These are different from the usual ``amplitude equations'' \cite{newell69,cross80,cross09} which typically refer to the slowly modulating component of solutions, also referred to as the Stuart-Landau equations \citep{stuart58,stuart60,sipp07} in the hydrodynamics literature. In this case the amplitude evolution includes both the fast time scale due to the instabilities as well as any slow timescale variations that may emerge. The Stuart-Landau equations may be derived from the reduced set of equations~\eqref{eqn:evolution_final1} by considering a multiple-timescale expansion or a normal form for the obtained ordinary differential equations. 
+Finally, once the fields associated with the asymptotic expansion of $\mathfrak{h}(\xbf)$ have been evaluated to the desired order, the power series for $\mathfrak{h}$ can be substituted into equation~\eqref{eqn:evolution_final1} resulting in a set of ordinary differential equations for the evolution of the critical mode amplitudes in the center-manifold,
+\begin{align}
+	\dfrac{d\mathbf{x}}{d t} =& \mathbf{\widehat{K}}\mathbf{x} + \mathcal{\widehat{F}}(\mathbf{x},\mathfrak{h}(\xbf)) \label{eqn:amplitude}.
+\end{align}
+These are different from the usual ``amplitude equations'' \cite{newell69,cross80,cross09} which typically refer to the slowly modulating component of solutions, also referred to as the Stuart-Landau equations \citep{stuart58,stuart60,sipp07} in the hydrodynamics literature. In this case the amplitude evolution includes both the fast time scale due to the instabilities as well as any slow timescale variations that may emerge. The Stuart-Landau equations may be derived from the reduced set of equations~\eqref{eqn:evolution_final1} by considering a multiple-timescale expansion or a normal form for the obtained ordinary differential equations. 
 
 
 

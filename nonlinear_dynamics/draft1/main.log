@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.6.23)  21 DEC 2024 23:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.6.23)  25 DEC 2024 01:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -858,13 +858,13 @@ LaTeX2e <2024-06-01> patch level 1
 L3 programming layer <2024-05-27>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 04F2141D0983595F16C6EF1B2D984670;1929.
+(rerunfilecheck)             Checksum: DDAADF74940DD722BBCA821B2A0682EE;1929.
  ) 
 Here is how much of TeX's memory you used:
- 25074 strings out of 475560
- 450005 string characters out of 5778795
+ 25076 strings out of 475560
+ 450033 string characters out of 5778795
  1974905 words of memory out of 5000000
- 47177 multiletter control sequences out of 15000+600000
+ 47178 multiletter control sequences out of 15000+600000
  571071 words of font info for 85 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  94i,20n,131p,1407b,521s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -887,10 +887,10 @@ ist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type
 1/public/amsfonts/cm/cmti9.pfb></usr/share/texmf-dist/fonts/type1/public/double
 stroke/dsrom10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/euf
 m10.pfb>
-Output written on main.pdf (7 pages, 306590 bytes).
+Output written on main.pdf (7 pages, 306476 bytes).
 PDF statistics:
- 332 PDF objects out of 1000 (max. 8388607)
- 275 compressed objects within 3 object streams
- 87 named destinations out of 1000 (max. 500000)
+ 333 PDF objects out of 1000 (max. 8388607)
+ 276 compressed objects within 3 object streams
+ 88 named destinations out of 1000 (max. 500000)
  93 words of extra memory for PDF output out of 10000 (max. 10000000)
 
