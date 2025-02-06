@@ -1,9 +1,37 @@
 \begin{thebibliography}{}
 
+\bibitem[{\AA}kervik et~al., 2006]{akervik06}
+{\AA}kervik, E., Brandt, L., Henningson, D.~S., Hœpffner, J., Marxen, O., and
+  Schlatter, P. (2006).
+\newblock Steady solutions of the {N}avier-{S}tokes equations by selective
+  frequency damping.
+\newblock {\em Physics of Fluids}, 18(6):068102.
+
+\bibitem[Barkley, 2006]{barkley06}
+Barkley, D. (2006).
+\newblock Linear analysis of the cylinder wake mean flow.
+\newblock {\em Europhysics Letters ({EPL})}, 75(5):750--756.
+
+\bibitem[Carini et~al., 2015]{carini15}
+Carini, M., Auteri, F., and Giannetti, F. (2015).
+\newblock Centre-manifold reduction of bifurcating flows.
+\newblock {\em Journal of Fluid Mechanics}, 767:109–145.
+
 \bibitem[Carr, 1982]{carr82}
 Carr, J. (1982).
 \newblock {\em Applications of centre manifold theory}, volume~35.
 \newblock Springer Science \& Business Media.
+
+\bibitem[Chomaz et~al., 1988]{chomaz88}
+Chomaz, J., Huerre, P., and Redekopp, L. (1988).
+\newblock Bifurcations to local and global modes in spatially developing flows.
+\newblock {\em Physical review letters}, 60(1):25.
+
+\bibitem[Chomaz, 2005]{chomaz05}
+Chomaz, J.-M. (2005).
+\newblock Global instabilities in spatially developing flows: non-normality and
+  nonlinearity.
+\newblock {\em Annu. Rev. Fluid Mech.}, 37(1):357--392.
 
 \bibitem[Cross and Greenside, 2009]{cross09}
 Cross, M. and Greenside, H. (2009).
@@ -16,16 +44,90 @@ Cross, M.~C. (1980).
   instability}.
 \newblock {\em The Physics of Fluids}, 23(9):1727--1731.
 
+\bibitem[Deville et~al., 2002]{deville02}
+Deville, M.~O., Fischer, P.~F., and Mund, E.~H. (2002).
+\newblock {\em High-Order Methods for Incompressible Fluid Flow}.
+\newblock Number~9 in Cambridge Monographs on Applied and Computational
+  Mathematics. Cambridge University Press.
+
+\bibitem[Dušek et~al., 1994]{dusek94}
+Dušek, J., Gal, P.~L., and Fraunié, P. (1994).
+\newblock A numerical and theoretical study of the first {H}opf bifurcation in
+  a cylinder wake.
+\newblock {\em Journal of Fluid Mechanics}, 264:59–80.
+
+\bibitem[Fischer et~al., 2008]{nek5000}
+Fischer, P.~F., Lottes, J.~W., and Kerkemeier, S.~G. (2008).
+\newblock Nek5000 web page.
+\newblock \url{http://nek5000.mcs.anl.gov}.
+
+\bibitem[Gianetti and Luchini, 2007]{giannetti07}
+Gianetti, F. and Luchini, P. (2007).
+\newblock Structural sensitivity of the first instability of the cylinder wake.
+\newblock {\em Journal of Fluid Mechanics}, 581:167–197.
+
 \bibitem[Guckenheimer and Holmes, 1983]{guckenheimer83}
 Guckenheimer, J. and Holmes, P. (1983).
 \newblock {\em Nonlinear Oscillations, Dynamical Systems, and Bifurcations of
   Vector Fields}.
 \newblock Springer Science \& Business Media New York.
 
+\bibitem[Landau, 1944]{landau_52}
+Landau, L.~D. (1944).
+\newblock On the problem of turbulence.
+\newblock In HAAR, D.~T., editor, {\em Collected Papers of L.D. Landau}, pages
+  387--391. Pergamon.
+
+\bibitem[Maday and Patera, 1989]{maday89}
+Maday, Y. and Patera, A.~T. (1989).
+\newblock Spectral element methods for the incompressible {N}avier-{S}tokes
+  equations.
+\newblock In {\em State-of-the-art surveys on computational mechanics}, pages
+  71--143. American Society of Mechanical Engineers, New York.
+
+\bibitem[Manti{\v{c}}-Lugo et~al., 2015]{mantivc15}
+Manti{\v{c}}-Lugo, V., Arratia, C., and Gallaire, F. (2015).
+\newblock A self-consistent model for the saturation dynamics of the vortex
+  shedding around the mean flow in the unstable cylinder wake.
+\newblock {\em Physics of Fluids}, 27(7).
+
+\bibitem[Meliga et~al., 2012]{meliga12}
+Meliga, P., Gallaire, F., and Chomaz, J.-M. (2012).
+\newblock A weakly nonlinear mechanism for mode selection in swirling jets.
+\newblock {\em Journal of Fluid Mechanics}, 699:216–262.
+
+\bibitem[Negi, 2019]{negiphd}
+Negi, P. (2019).
+\newblock {\em Stability and transition in pitching wings}.
+\newblock PhD thesis, KTH Royal Institute of Technology.
+
+\bibitem[Negi et~al., 2020]{negi20}
+Negi, P.~S., Hanifi, A., and Henningson, D.~S. (2020).
+\newblock On the linear global stability analysis of rigid-body motion
+  fluid–structure-interaction problems.
+\newblock {\em Journal of Fluid Mechanics}, 903:A35.
+
 \bibitem[Newell and Whitehead, 1969]{newell69}
 Newell, A.~C. and Whitehead, J.~A. (1969).
 \newblock Finite bandwidth, finite amplitude convection.
 \newblock {\em Journal of Fluid Mechanics}, 38(2):279–303.
+
+\bibitem[Patera, 1984]{patera84}
+Patera, A.~T. (1984).
+\newblock A spectral element method for fluid dynamics: Laminar flow in a
+  channel expansion.
+\newblock {\em Journal of Computational Physics}, 54(3):468 -- 488.
+
+\bibitem[Pier, 2002]{pier02}
+Pier, B. (2002).
+\newblock On the frequency selection of finite-amplitude vortex shedding in the
+  cylinder wake.
+\newblock {\em Journal of Fluid Mechanics}, 458:407–417.
+
+\bibitem[Provansal et~al., 1987]{provansal87}
+Provansal, M., Mathis, C., and Boyer, L. (1987).
+\newblock Bénard-von {K}ármán instability: transient and forced regimes.
+\newblock {\em Journal of Fluid Mechanics}, 182:1–22.
 
 \bibitem[Sijbrand, 1985]{sijbrand85}
 Sijbrand, J. (1985).
@@ -39,6 +141,19 @@ Sipp, D. and Lebedev, A. (2007).
   applications to cylinder and open cavity flows.
 \newblock {\em Journal of Fluid Mechanics}, 593:333–358.
 
+\bibitem[Sorensen, 1992]{sorensen92}
+Sorensen, D.~C. (1992).
+\newblock Implicit application of polynomial filters in a k-step arnoldi
+  method.
+\newblock {\em Siam journal on matrix analysis and applications},
+  13(1):357--385.
+
+\bibitem[Stewart, 2002]{stewart02}
+Stewart, G.~W. (2002).
+\newblock A {K}rylov--{S}chur algorithm for large eigenproblems.
+\newblock {\em SIAM Journal on Matrix Analysis and Applications},
+  23(3):601--614.
+
 \bibitem[Stuart, 1958]{stuart58}
 Stuart, J.~T. (1958).
 \newblock On the non-linear mechanics of hydrodynamic stability.
@@ -49,6 +164,13 @@ Stuart, J.~T. (1960).
 \newblock On the non-linear mechanics of wave disturbances in stable and
   unstable parallel flows part 1. the basic behaviour in plane poiseuille flow.
 \newblock {\em Journal of Fluid Mechanics}, 9(3):353–370.
+
+\bibitem[Watson, 1960]{watson60}
+Watson, J. (1960).
+\newblock On the non-linear mechanics of wave disturbances in stable and
+  unstable parallel flows part 2. the development of a solution for plane
+  {P}oiseuille flow and for plane {C}ouette flow.
+\newblock {\em Journal of Fluid Mechanics}, 9(3):371–389.
 
 \bibitem[Wiggins, 2003]{wiggins03}
 Wiggins, S. (2003).
