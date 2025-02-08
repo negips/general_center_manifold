@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.6.23)  7 FEB 2025 00:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.6.23)  9 FEB 2025 01:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -750,10 +750,10 @@ Package caption Info: New subtype `subtable' on input line 238.
 \c@subtable=\count332
 )
 Class revtex4-2 Info: Unrecognized LaTeX tabular. Please update this document c
-lass! (Proceeding with fingers crossed.) on input line 107.
-Class revtex4-2 Info: cite was not loaded (OK!) on input line 107.
-Class revtex4-2 Info: mcite was not loaded (OK!) on input line 107.
-Class revtex4-2 Info: multicol was not loaded (OK!) on input line 107.
+lass! (Proceeding with fingers crossed.) on input line 108.
+Class revtex4-2 Info: cite was not loaded (OK!) on input line 108.
+Class revtex4-2 Info: mcite was not loaded (OK!) on input line 108.
+Class revtex4-2 Info: multicol was not loaded (OK!) on input line 108.
  (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count333
@@ -766,24 +766,24 @@ LaTeX Warning: Unused global option(s):
 (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
-LaTeX Font Info:    Checking defaults for U/stixonebb/m/n on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for U/stixonebb/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
  (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count334
@@ -806,7 +806,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 107.
+Package hyperref Info: Link coloring OFF on input line 108.
  (./main.out)
 (./main.out)
 \@outlinefile=\write5
@@ -814,15 +814,15 @@ Package hyperref Info: Link coloring OFF on input line 107.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-Class revtex4-2 Info: Taking \maketitle back from hyperref on input line 107.
+Class revtex4-2 Info: Taking \maketitle back from hyperref on input line 108.
 \openout3 = `mainNotes.bib'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 124
+LaTeX Font Info:    Trying to load font information for U+msa on input line 125
 .
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 124
+LaTeX Font Info:    Trying to load font information for U+msb on input line 125
 .
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -848,11 +848,11 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.2.32
 l.365 \end{align}
                  ]) (./ginzburg_landau.tex [6]
 Package epstopdf Info: Source file: <imgs/GL_spectra.eps>
-(epstopdf)                    date: 2025-02-05 20:54:07
-(epstopdf)                    size: 27904 bytes
+(epstopdf)                    date: 2025-02-07 16:53:16
+(epstopdf)                    size: 25936 bytes
 (epstopdf)             Output file: <imgs/GL_spectra-eps-converted-to.pdf>
-(epstopdf)                    date: 2025-02-05 20:54:12
-(epstopdf)                    size: 18369 bytes
+(epstopdf)                    date: 2025-02-07 16:54:00
+(epstopdf)                    size: 17178 bytes
 (epstopdf)             Command: <repstopdf --outfile=imgs/GL_spectra-eps-conver
 ted-to.pdf imgs/GL_spectra.eps>
 (epstopdf)             \includegraphics on input line 41.
@@ -869,48 +869,129 @@ Overfull \hbox (3.9028pt too wide) in paragraph at lines 41--42
  []
 
 [7 <./imgs/GL_spectra-eps-converted-to.pdf>]
-Overfull \hbox (1.55481pt too wide) detected at line 145
+Overfull \hbox (10.79417pt too wide) detected at line 111
 []
  []
 
 
-Underfull \hbox (badness 1248) in paragraph at lines 161--163
-\OT1/cmr/m/n/10 With all the sub-com-po-nents eval-u-ated, the center-
+Underfull \hbox (badness 2126) in paragraph at lines 125--126
+[]\OT1/cmr/m/n/10 To avoid con-fu-sion with the spa-tial vari-able $\OML/cmm/m/
+it/10 x$\OT1/cmr/m/n/10 ,
  []
 
-) (./appendix.tex [8
+
+Underfull \hbox (badness 1221) in paragraph at lines 125--126
+\OT1/cmr/m/n/10 the crit-i-cal mode am-pli-tudes are de-noted by $\OT1/cmr/bx/n
+/10 z \OT1/cmr/m/n/10 =
+ []
+
+Package epstopdf Info: Source file: <imgs/GL_fields.eps>
+(epstopdf)                    date: 2025-02-09 01:18:09
+(epstopdf)                    size: 26864 bytes
+(epstopdf)             Output file: <imgs/GL_fields-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-02-09 01:18:13
+(epstopdf)                    size: 12565 bytes
+(epstopdf)             Command: <repstopdf --outfile=imgs/GL_fields-eps-convert
+ed-to.pdf imgs/GL_fields.eps>
+(epstopdf)             \includegraphics on input line 234.
+Package epstopdf Info: Output file is already uptodate.
+<imgs/GL_fields-eps-converted-to.pdf, id=286, 578.16pt x 433.62pt>
+File: imgs/GL_fields-eps-converted-to.pdf Graphic file (type pdf)
+<use imgs/GL_fields-eps-converted-to.pdf>
+Package pdftex.def Info: imgs/GL_fields-eps-converted-to.pdf  used on input lin
+e 234.
+(pdftex.def)             Requested size: 249.9028pt x 187.42558pt.
+
+Overfull \hbox (3.9028pt too wide) in paragraph at lines 234--235
+ [][] 
+ []
+
+[8
 pdfTeX warning (ext4): destination with the same identifier (name{equation.3.43
 }) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.9 \begin{align}
-                 ]) (./main.bbl
-Underfull \hbox (badness 1127) in paragraph at lines 48--52
- []\OT1/cmr/m/n/9 Deville, M. O., Fis-cher, P. F., and Mund, E. H.
+l.252 \end{align}
+                 ]
+
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
+ on input line 252.
+
+Package epstopdf Info: Source file: <imgs/center_manifold_omega1.eps>
+(epstopdf)                    date: 2025-02-09 00:52:51
+(epstopdf)                    size: 23962 bytes
+(epstopdf)             Output file: <imgs/center_manifold_omega1-eps-converted-
+to.pdf>
+(epstopdf)                    date: 2025-02-09 00:52:55
+(epstopdf)                    size: 14941 bytes
+(epstopdf)             Command: <repstopdf --outfile=imgs/center_manifold_omega
+1-eps-converted-to.pdf imgs/center_manifold_omega1.eps>
+(epstopdf)             \includegraphics on input line 267.
+Package epstopdf Info: Output file is already uptodate.
+<imgs/center_manifold_omega1-eps-converted-to.pdf, id=312, 578.16pt x 505.89pt>
+
+File: imgs/center_manifold_omega1-eps-converted-to.pdf Graphic file (type pdf)
+<use imgs/center_manifold_omega1-eps-converted-to.pdf>
+Package pdftex.def Info: imgs/center_manifold_omega1-eps-converted-to.pdf  used
+ on input line 267.
+(pdftex.def)             Requested size: 249.9028pt x 218.66318pt.
+Package epstopdf Info: Source file: <imgs/center_manifold_omega2.eps>
+(epstopdf)                    date: 2025-02-09 00:52:51
+(epstopdf)                    size: 24381 bytes
+(epstopdf)             Output file: <imgs/center_manifold_omega2-eps-converted-
+to.pdf>
+(epstopdf)                    date: 2025-02-09 00:54:26
+(epstopdf)                    size: 16198 bytes
+(epstopdf)             Command: <repstopdf --outfile=imgs/center_manifold_omega
+2-eps-converted-to.pdf imgs/center_manifold_omega2.eps>
+(epstopdf)             \includegraphics on input line 268.
+Package epstopdf Info: Output file is already uptodate.
+<imgs/center_manifold_omega2-eps-converted-to.pdf, id=313, 578.16pt x 505.89pt>
+
+File: imgs/center_manifold_omega2-eps-converted-to.pdf Graphic file (type pdf)
+<use imgs/center_manifold_omega2-eps-converted-to.pdf>
+Package pdftex.def Info: imgs/center_manifold_omega2-eps-converted-to.pdf  used
+ on input line 268.
+(pdftex.def)             Requested size: 249.9028pt x 218.66318pt.
+
+Overfull \hbox (3.9028pt too wide) in paragraph at lines 267--269
+ [][] 
  []
 
-[9]
-Underfull \hbox (badness 1158) in paragraph at lines 133--137
+
+Overfull \hbox (3.9028pt too wide) in paragraph at lines 267--269
+ [] 
+ []
+
+
+Underfull \hbox (badness 2221) in paragraph at lines 264--272
+[]\OT1/cmr/m/n/10 The center-manifold re-duc-tion ob-tained in equa-
+ []
+
+) (./appendix.tex [9 <./imgs/GL_fields-eps-converted-to.pdf> <./imgs/center_man
+ifold_omega1-eps-converted-to.pdf> <./imgs/center_manifold_omega2-eps-converted
+-to.pdf>]) (./main.bbl
+Underfull \hbox (badness 1158) in paragraph at lines 42--46
  \OT1/cmr/m/it/9 Trans-ac-tions of the Amer-i-can Math-e-mat-i-cal So-ci-ety\OT
 1/cmr/m/n/9 ,
  []
 
-) [10] (./main.aux)
+[10]) [11] (./main.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 1
 L3 programming layer <2024-05-27>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 2A1E05139682B632C359A9C4B55FBE97;2066.
+(rerunfilecheck)             Checksum: 707F9EA25C8C0FF77B4776553DCFE50C;2066.
  ) 
 Here is how much of TeX's memory you used:
- 25264 strings out of 475560
- 453233 string characters out of 5778795
- 1979905 words of memory out of 5000000
- 47316 multiletter control sequences out of 15000+600000
- 573761 words of font info for 97 fonts, out of 8000000 for 9000
+ 25295 strings out of 475560
+ 455569 string characters out of 5778795
+ 1986905 words of memory out of 5000000
+ 47362 multiletter control sequences out of 15000+600000
+ 571071 words of font info for 85 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 94i,20n,131p,2040b,623s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 94i,20n,131p,1407b,625s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/publ
@@ -927,13 +1008,13 @@ lic/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></us
 r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmti9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmtt9.pfb></usr/share/texmf-dist/fonts/type1/public/doublestroke/dsrom10.
-pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb>
-Output written on main.pdf (10 pages, 358177 bytes).
+1/public/amsfonts/cm/cmti9.pfb></usr/share/texmf-dist/fonts/type1/public/double
+stroke/dsrom10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/euf
+m10.pfb>
+Output written on main.pdf (11 pages, 382693 bytes).
 PDF statistics:
- 459 PDF objects out of 1000 (max. 8388607)
- 357 compressed objects within 4 object streams
- 129 named destinations out of 1000 (max. 500000)
- 106 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 578 PDF objects out of 1000 (max. 8388607)
+ 383 compressed objects within 4 object streams
+ 120 named destinations out of 1000 (max. 500000)
+ 121 words of extra memory for PDF output out of 10000 (max. 10000000)
 

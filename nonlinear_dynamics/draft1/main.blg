@@ -9,45 +9,45 @@ I was expecting a `,' or a `}'---line 31 of file references.bib
  :  publisher={Springer}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You've used 31 entries,
+You've used 13 entries,
             1935 wiz_defined-function locations,
-            663 strings with 8209 characters,
-and the built_in function-call counts, 11635 in all, are:
-= -- 1132
-> -- 382
-< -- 25
-+ -- 131
-- -- 121
-* -- 973
-:= -- 2034
-add.period$ -- 96
-call.type$ -- 31
-change.case$ -- 209
-chr.to.int$ -- 31
-cite$ -- 31
-duplicate$ -- 451
-empty$ -- 884
-format.name$ -- 164
-if$ -- 2290
+            555 strings with 5474 characters,
+and the built_in function-call counts, 4563 in all, are:
+= -- 443
+> -- 126
+< -- 13
++ -- 38
+- -- 38
+* -- 377
+:= -- 802
+add.period$ -- 39
+call.type$ -- 13
+change.case$ -- 80
+chr.to.int$ -- 13
+cite$ -- 13
+duplicate$ -- 182
+empty$ -- 364
+format.name$ -- 59
+if$ -- 894
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 34
-newline$ -- 158
-num.names$ -- 95
-pop$ -- 165
+missing$ -- 17
+newline$ -- 68
+num.names$ -- 39
+pop$ -- 65
 preamble$ -- 1
-purify$ -- 215
+purify$ -- 84
 quote$ -- 0
-skip$ -- 344
+skip$ -- 140
 stack$ -- 0
-substring$ -- 914
-swap$ -- 48
-text.length$ -- 4
+substring$ -- 363
+swap$ -- 14
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 176
+type$ -- 70
 warning$ -- 0
-while$ -- 92
+while$ -- 38
 width$ -- 0
-write$ -- 403
+write$ -- 168
 (There was 1 error message)

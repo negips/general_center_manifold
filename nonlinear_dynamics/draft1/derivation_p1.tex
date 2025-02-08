@@ -21,7 +21,7 @@ The system may be rewritten in terms of the deviation from the fixed point solut
 	\begin{split}
 		\frac{\partial \vecu}{\partial t} =& \Lu(\vecu) + \\
 		%
-		& [\vecf(\vecUb + \vecu,\vecMu) - \vecf(\vecUb,\vecMu) - \Lu(\vecu)],
+		& [\vecf(\vecUb + \vecu,\vecMu) - \Lu(\vecu)],
 	\end{split}
 	\label{eqn:evolution_deviation}
 \end{equation}
@@ -79,7 +79,7 @@ Here, as done earlier, the evolution equations are split into the linear and non
 $\vecf_{NL}(\vecUb,\vecu,\vecMu,\vecnu)$ represents the non-linear terms of the modified system given by
 \begin{equation}
 	\begin{split}
-		\vecf_{NL}(\vecUb,\vecu,\vecMu,\vecnu) =& \vecf(\vecUb + \vecu,\vecMu + \vecnu) - \vecf(\vecUb,\vecMu) \\
+		\vecf_{NL}(\vecUb,\vecu,\vecMu,\vecnu) =& \vecf(\vecUb + \vecu,\vecMu + \vecnu) \\
 		%
 		& - \Lu(\vecu) - \Lmu(\vecnu).
 	\end{split}
