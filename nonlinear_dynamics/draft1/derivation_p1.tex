@@ -2,15 +2,15 @@
 \label{sec:problem_setup}
 
 %%%%
-\subsection{The Standard Problem}
+\subsection{The Standard System}
 \label{sec:standard}
 
-Consider a system with a state vector denoted by $\vecU$, consisting of $l$ parameters given by the vector $\vecmu$, and an evolution law given by 
+Consider a system with its state variable denoted by $\vecU$, consisting of $l$ parameters given by the vector $\vecmu$, and an evolution law given by 
 \begin{equation}
 	\frac{\partial \vecU}{\partial t} = \vecf(\vecU,\vecmu).
 	\label{eqn:evolution0}
 \end{equation}
-Physical systems typically will have real parameters $\vecmu$ however, allowing for complex parameters presents no additional difficulty and we assume that $\vecmu \in \mathds{C}^{l}$. 
+The evolution law may be a finite set of ordinary differential equations or, an infinite dimensional partial differential equation as often arises for the space-time evolution of physical systems. Typically, physical systems will have real parameters $\vecmu$ however, allowing for complex parameters presents no additional difficulty and we assume that $\vecmu \in \mathds{C}^{l}$. 
 For a certain set of parameter values $\vecmu = \vecMu$, the system is assumed to have a fixed point for a state vector $\vecUb$ satisfying
 \begin{equation}
 	0 = \vecf(\vecUb,\vecMu).
@@ -32,8 +32,8 @@ where, $\Lu$ is the linearized operator at the fixed point, acting on $\vecu$, d
 \end{equation}
 The right hand side in equation~\eqref{eqn:evolution_deviation} has been divided into the linear and non-linear contributions with $\Lu(\vecu)$ representing the linear part and the remaining terms in the square brackets representing the non-linear contributions.
 
-Furthermore, we assume that $\vecMu$ represents a bifurcation point of the system. It is generically assumed that the system undergoes a multiple co-dimension bufurcation at $\vecMu$ and that the linearized operator $\Lu$ has $N$ critical eigenvalues $\lambda$. Of those, there are 
-$n$ purely real critical eigenvalues with $\mathfrak{Re}(\lambda) = 0, \mathfrak{Im}(\lambda) = 0$, and $m = N - n$ purely imaginary critical eigenvalues with $\mathfrak{Re}(\lambda) = 0, \mathfrak{Im}(\lambda) \ne 0$. For real systems $m$ is an even number since the purely imaginary eigenvalues occur in complex-conjugate pairs. Accordingly, the system has $N$ critical eigenpairs $(\lambda_{i},\vecv_{i}), i\in 1\ldots N$, where $\vecv_{i}$ represents the eigenvector corresponding to $\lambda_{i}$. 
+Furthermore, we assume that $\vecMu$ represents the parameters of the system at a bifurcation point. It is generically assumed that the system undergoes a multiple co-dimension bufurcation at $\vecMu$ and that the linearized operator $\Lu$ has a dicrete set of $N$ critical eigenvalues $\lambda$, with zero growth rate $(\mathfrak{Re}(\lambda) = 0)$. Of those, there are 
+$n$ purely real critical eigenvalues with $\mathfrak{Re}(\lambda) = 0, \mathfrak{Im}(\lambda) = 0$, and $m = N - n$ purely imaginary critical eigenvalues with $\mathfrak{Re}(\lambda) = 0, \mathfrak{Im}(\lambda) \ne 0$. For real systems $m$ is an even number since the complex eigenvalues occur in conjugate pairs. Accordingly, the system has $N$ critical eigenpairs $(\lambda_{i},\vecv_{i}), i\in 1\ldots N$, where $\vecv_{i}$ represents the eigenvector corresponding to $\lambda_{i}$. 
 
 The adjoint of the direct linearized operator $\Lu$ is denoted as $\Lu^{\dagger}$ which also has $N$ critical eigenpairs $(\lambda^{*}_{i}, \vecw^{\dagger}_{i})$. The scaling of the eigenvectors of the direct and adjoint operators may be defined such that they satisfy the birthogonality condition
 \begin{eqnarray}
@@ -53,14 +53,14 @@ where, the superscript $^{H}$ represents the Hermitian transpose, $\mathbf{I}_{n
 	\label{eqn:stable_projector}
 	\mathbf{Q} = \mathbf{I} - \mathbf{V}\mathbf{W}^{H}.
 \end{eqnarray}
-Additionally, $\mathbf{\Lambda}_{I}$ is defined as an $m\times m$ diagonal matrix with the purely imaginary critical eigenvalues on the diagonal, and $\mathbf{\Lambda}_{R}$ is defined as an $n\times n$ diagonal matrix with the purely real critical eigenvalues on the diagonal, with the implicit assumption of diagonalizability of $\Lu$ within this subspace. Note that $\mathbf{\Lambda}_{R}$ is essentially a null matrix however, it will be useful in illuminating the asymptotic structure of center-manifold. 
+Additionally, $\mathbf{\Lambda}_{I}$ is defined as an $m\times m$ diagonal matrix with the purely imaginary critical eigenvalues on the diagonal, and $\mathbf{\Lambda}_{R}$ is defined as an $n\times n$ diagonal matrix with the purely real critical eigenvalues on the diagonal, with the implicit assumption of diagonalizability of $\Lu$ within this subspace. Note that $\mathbf{\Lambda}_{R}$ is essentially a null matrix however, it will be useful in illuminating the asymptotic structure of center-manifold in the later sections. 
 
 
 %%%%%%%%%
-\subsection{The Extended Problem}
+\subsection{The Extended System}
 \label{sec:extended}
 
-The same system is now consider for the case of parameter perturbation so that the evolution dynamics are now evaluated at parameter values of $\vecmu = \vecMu + \vecnu$, with $\vecnu$ being the vector of parameter perturbations and is now considered as a dynamic variable, henceforth referred to as the \emph{extended variable}. The evolution of $\vecnu$ is of course governed by a trivial set of equations however, the procedure leads to an extended system of equation with modified linear and non-linear operators given by
+The same system is now considered for the case of parameter perturbation so that the evolution dynamics are now evaluated at parameter values of $\vecmu = \vecMu + \vecnu$, with $\vecnu$ being the vector of parameter perturbations and is now considered as a dynamic variable, henceforth referred to as the \emph{extended variable}. The evolution of $\vecnu$ is of course governed by a trivial set of equations however, the procedure leads to an extended system of equation with modified linear and non-linear operators given by
 \begin{subequations}
 	\begin{eqnarray}
 			\label{eqn:evolution_extended1}
@@ -85,7 +85,7 @@ $\vecf_{NL}(\vecUb,\vecu,\vecMu,\vecnu)$ represents the non-linear terms of the 
 	\end{split}
 	\label{eqn:nonlinear_term}
 \end{equation}
-An overhead hat notation is used to refer to variables and operators associated with the extend space, so that the new state vector, non-linear term and linearized operator is denoted as $\efield{u}$, $\efield{f}_{NL}$ and $\widehat{\mathcal{L}}$ respectively, that are defined as,
+An overhead hat notation, $\widehat{\cdot}$ , is used to refer to variables and operators associated with the extend space, so that the new state vector, non-linear term and the linearized operator are denoted by $\efield{u}$, $\efield{f}_{NL}$ and $\widehat{\mathcal{L}}$, and are defined as,
 \begin{eqnarray}
 	\efield{u} = \begin{Bmatrix}
 		\vecu \\ 
@@ -113,7 +113,7 @@ The full system may then be represented compactly as
 	\dfrac{\partial \efield{u}}{\partial t} =
 	\mathcal{\widehat{L}}(\efield{u})  - \efield{f}_{NL}.
 \end{equation}
-The system defined by equation~\ref{eqn:evolution_extended}, or its compact form equation~\ref{eqn:evolution_extended_compact}, with additional dynamical equations for the parameters will be referred to as the \emph{extended system}. 
+The system defined by equation~\eqref{eqn:evolution_extended}, or its compact form equation~\eqref{eqn:evolution_extended_compact}, with additional dynamical equations for the parameters will be referred to as the \emph{extended system}. 
 
 The extended system has a larger critical subspace as compared to the original system due to the $l$ additional purely real zero eigenvalues introduced by the trivial parameter evolution equations. The eigenvector structure in the additional critical dimensions however is not trivial. Nevertheless, the eigenspace structure of the extended system can be deduced directly from the properties of the original system. 
 
@@ -155,7 +155,7 @@ In order to see that these are indeed generalized eigenvectors one may note that
 	\ExtL^{2}(\efield{v}^{p}_{i}) = \ExtL([(\mathbf{V}_{R}\cdot\vfield{\gamma}_{i}); \vfield{0}]) = \vfield{0},
 \end{eqnarray}
 which may be verified by simple subtitutions. In case the original operator $\Lu$ is defective for $\lambda = 0$ then equation~\eqref{eqn:generalized_eigenvectors} is satisfied for a higher value of $a$. 
-It is easy to see that if there are no purely real critical eigenvalues, \ie, $n = 0$, then equation~\eqref{eqn:singular_pmode} is equivalent to equation~\eqref{eqn:nonsingular_pmode}, and $\efield{v}^{p}_{i}$ reduces to $\efield{v}^{q}_{i}$ since, $\mathbf{W}_{R}$ is a null matrix and $\mathbf{Q}_{R}$ is simply the identity. Henceforth equation~\eqref{eqn:singular_pmode} is used for the definition of the new subspace introduced by the modes $\efield{v}^{p}_{i}$ since it is a more general definition. One may define a matrix $\mathbf{V}_{P}$ whose columns are the vectors $\vecv^{p}_{i}$, which will be required subsequently for the construction of projectors on to this new subspace. The (generalized) eigenmodes $\efield{v}^{p}_{i}$ are referred to as \emph{parameter modes}, since they arise due to the inclusion of parameters as dynamic variables.
+It is easy to see that if there are no purely real critical eigenvalues, \ie, $n = 0$, then equation~\eqref{eqn:singular_pmode} is equivalent to equation~\eqref{eqn:nonsingular_pmode}, and $\efield{v}^{p}_{i}$ reduces to $\efield{v}^{q}_{i}$ since, $\mathbf{W}_{R}$ is a null matrix and $\mathbf{Q}_{R}$ is simply the identity. Henceforth equation~\eqref{eqn:singular_pmode} is used for the definition of the new subspace introduced by the modes $\efield{v}^{p}_{i}$ since it is a more general definition, and subsumes the non-singular case. One may define a matrix $\mathbf{V}_{P}$ whose columns are the vectors $\vecv^{p}_{i}$, which will be required subsequently for the construction of projectors on to this new subspace. The (generalized) eigenmodes $\efield{v}^{p}_{i}$ are referred to as \emph{parameter modes}, since they arise due to the inclusion of parameters as dynamic variables.
 
 The adjoint of the extended linear operator is defined as 
 \begin{eqnarray}
@@ -170,7 +170,7 @@ The adjoint of the extended linear operator is defined as
 	\end{Bmatrix}
 \label{eqn:adjoint_operator_extended}.
 \end{eqnarray}
-For any eigenpair $(\lambda^{*},\vecw^{\dagger})$ (with $\lambda^{*}\ne 0$) of the original adjoint operator $\Lu^{\dagger}$, the corresponding eigenpair of the extended operator $\ExtL^{\dagger}$ is given by $(\lambda^{*}, \efield{w}^{\dagger})$, with $\efield{w}^{\dagger} = [\vecw^{\dagger}; \vfield{\zeta}^{\dagger}]$ and  $\vfield{\zeta}^{\dagger}$ defined as
+For any eigenpair $(\lambda^{*},\vecw^{\dagger})$ (with $\lambda^{*}\ne 0$) of the original adjoint operator $\Lu^{\dagger}$, the corresponding eigenpair of the extended operator $\ExtL^{\dagger}$ is given by $(\lambda^{*}, \efield{w}^{\dagger})$, with $\efield{w}^{\dagger} = [\vecw^{\dagger}; \vfield{\zeta}^{\dagger}]$, and  $\vfield{\zeta}^{\dagger}$ defined as
 \begin{eqnarray}
 	\label{eqn:extended_adjoint_eigenvector}
 	\vfield{\zeta}^{\dagger} = \Lmu^{\dagger}\cdot\vecw^{\dagger}/\lambda^{*}.
@@ -179,39 +179,39 @@ The matrix of all $\vfield{\zeta}^{\dagger}$ for critical  adjoint eigenmodes $(
 
 For all eigenpairs with $(\lambda^{*},\vecw^{\dagger})$ with $\lambda^{*} = 0$, the corresponding extended eigenpair is $(\lambda^{*},\efield{w}^{\dagger})$, with $\efield{w}^{\dagger} = [\vecw^{\dagger}; \vfield{0}]$. As is the case for the direct problem, this corresponds to a generalized eigenvector which does not satisfy $\ExtL^{\dagger}(\efield{w}^{\dagger}) = \vfield{0}$, but rather satisfies $\ExtL^{\dagger}(\ExtL^{\dagger}(\efield{w}^{\dagger})) = \vfield{0}$. Finally, one obtains $l$ additional eigenpairs with a special structure $(\lambda^{*}_{i},[\vecw^{\dagger}_{i};\vfield{\zeta}^{\dagger}_{i}]) = (0,[\vfield{0};\vfield{e}_{i}])$. That is, the adjoint eigenvector has only one non-zero element corresponding to the $i^{th}$ parameter variable. These are referred to as the \emph{adjoint parameter modes}.
 
-Three pairs matrices are defined for the different (generalized) eigenspaces and their corresponding projectors. The matrix $\mathbf{\widehat{V}}_{I}$ comprises of $m$ columns that are the critical eigenvectors of $\ExtL$ corresponding to the purely imaginary eigenvalues. The matrix $\mathbf{\widehat{W}}_{I}$ comprises of the corresponding eigenvectors of the adjoint extended operator $\ExtL^{\dagger}$. The matrix $\mathbf{\widehat{V}}_{R}$ comprises of eigenvectors of $\ExtL$ for the purely real critical eigenvalues, which are extensions of the purely real eigenvalues of the original operator $\Lu$. The matrix $\mathbf{\widehat{W}}_{R}$ is the counterpart of $\mathbf{\widehat{V}}_{R}$ for the adjoint problem. Both $\mathbf{\widehat{V}}_{R}$ and $\mathbf{\widehat{W}}_{R}$ have $n$ columns. 
+Three pairs of matrices are defined for the different (generalized) eigenspaces and their corresponding projectors. The matrix $\mathbf{\widehat{V}}_{I}$ comprises of $m$ columns that are the critical eigenvectors of $\ExtL$ corresponding to the purely imaginary eigenvalues. The matrix $\mathbf{\widehat{W}}_{I}$ comprises of the corresponding eigenvectors of the adjoint extended operator $\ExtL^{\dagger}$. The matrix $\mathbf{\widehat{V}}_{R}$ comprises of eigenvectors of $\ExtL$ for the purely real critical eigenvalues, which are extensions of the purely real eigenvalues of the original operator $\Lu$. The matrix $\mathbf{\widehat{W}}_{R}$ is the counterpart of $\mathbf{\widehat{V}}_{R}$ for the adjoint problem. Both $\mathbf{\widehat{V}}_{R}$ and $\mathbf{\widehat{W}}_{R}$ have $n$ columns. 
 Finally, the matrix $\mathbf{\widehat{V}}_{P}$ comprises $l$ columns of the parameter modes while $\mathbf{\widehat{W}}_{P}$ comprises of the adjoint parameter modes. In terms of the matrices defined earlier, the newly defined matrices have the following structure, 
 \begin{subequations}
 	\begin{align}
-		\mathbf{\widehat{V}}_{I} = \begin{Bmatrix}
+		\mathbf{\widehat{V}}_{I} = \begin{bmatrix}
 			\mathbf{V}_{I} \\ 
 			\mathbf{0}
-		\end{Bmatrix}; \hspace{5mm} &
+		\end{bmatrix}; \hspace{5mm} &
 		%
-		\mathbf{\widehat{W}}_{I} = \begin{Bmatrix}
+		\mathbf{\widehat{W}}_{I} = \begin{bmatrix}
 			\mathbf{W}_{I} \\ 
 			\mathbf{Z}
-		\end{Bmatrix}; \\
+		\end{bmatrix}; \\
 		%%
-		\mathbf{\widehat{V}}_{R} = \begin{Bmatrix}
+		\mathbf{\widehat{V}}_{R} = \begin{bmatrix}
 			\mathbf{V}_{R} \\ 
 			\mathbf{0}
-		\end{Bmatrix}; \hspace{5mm} &
+		\end{bmatrix}; \hspace{5mm} &
 		%
-		\mathbf{\widehat{W}}_{R} = \begin{Bmatrix}
+		\mathbf{\widehat{W}}_{R} = \begin{bmatrix}
 			\mathbf{W}_{R} \\ 
 			\mathbf{0}
-		\end{Bmatrix}; \\
+		\end{bmatrix}; \\
 		%%
-		\mathbf{\widehat{V}}_{P} = \begin{Bmatrix}
+		\mathbf{\widehat{V}}_{P} = \begin{bmatrix}
 			\mathbf{V}_{P} \\ 
 			\mathbf{I}_{l}
-		\end{Bmatrix}; \hspace{5mm} &
+		\end{bmatrix}; \hspace{5mm} &
 		%
-		\mathbf{\widehat{W}}_{P} = \begin{Bmatrix}
+		\mathbf{\widehat{W}}_{P} = \begin{bmatrix}
 			\mathbf{0} \\ 
 			\mathbf{I}_{l}
-		\end{Bmatrix}.
+		\end{bmatrix}.
 	\end{align}
 \end{subequations}
 Obviously, $\mathbf{\widehat{V}}_{P}$ and $\mathbf{\widehat{W}}_{P}$ have no counter-parts in the original system. The three pairs of matrices arising from the direct and adjoint problems are bi-orthogonal leading to the following relations,
@@ -240,7 +240,7 @@ Finally, a reduced matrix representing the oblique projection of the extended li
 		\mathbf{0} & \mathbf{0} & \mathbf{\Lambda}_{I} 
 	\end{bmatrix},
 \end{eqnarray}
-which is a complex matrix of size $(l+n+m)\times(l+n+m)$. Both $\mathbf{\Lambda}_{P}$ and $\mathbf{\Lambda}_{R}$ are null matrices of the appropriate sizes.
+which is a complex matrix of size $(l+n+m)\times(l+n+m)$. Both $\mathbf{\Lambda}_{P}$ and $\mathbf{\Lambda}_{R}$ are null matrices of the appropriate sizes. The diagonal elements of $\mathbf{\widehat{K}}$ represent the eigenvalues of the reduced system, that are the critical eigenvalues of the extended system, and may be represented by the vector $\widehat{\boldsymbol{\lambda}} = diag(\mathbf{\widehat{K}})$. 
 
 It is important to point out here that the extended variable $\vfield{\nu}$ identically vanishes in the stable subspace of the extended linear system $\ExtL$. This may be seen from the structure of the eigenmodes that were extended from the original system. The $\vfield{\nu}$ component of all such modes identically vanishes. It is only the parameter modes that contribute to the extended variables and these modes are part of the critical subspace. This may also be understood from the dynamics perspective. The stable subspace represents the time-dependent decaying part of the linearized solution. If the decaying solution contributes to $\vecnu$ then this would imply a time dependence of some (or all) of the parameters. This would contradict the trivial evolution equation for the parameter perturbations that was introduced. 
 
@@ -250,7 +250,7 @@ It is important to point out here that the extended variable $\vfield{\nu}$ iden
 \subsection{Graph Equation}
 \label{sec:graph_equation}
 
-Section~\ref{sec:extended} outlines the spectral properties of the system when extended to include the parameters as dynamic variables. Effectively the size of the critical subspace increases and, the eigen structure of the extended linearized system $\ExtL$ can be deduced from the spectral properties of the original linear system $\Lu$. The critical subspace of the new system is of dimension $M=l+n+m$. The stable subspace on the other hand remains entirely unaffected. The center-manifold theorem can be applied to this extended system given by equation~\eqref{eqn:evolution_extended_compact} which includes the effect of parameter perturbation via the different parameter modes of the system. However, we first transform the system into a canonical form, explicitly separating out the stable and critical subspaces. 
+Section~\ref{sec:extended} outlines the spectral properties of the system when extended to include the parameters as dynamic variables. Effectively the size of the critical subspace increases and, the eigen-structure of the extended linearized system $\ExtL$ can be deduced from the spectral properties of the original linear system $\Lu$. The critical subspace of the new system is of dimension $M=l+n+m$. The stable subspace on the other hand remains entirely unaffected. The center-manifold theorem can be applied to this extended system given by equation~\eqref{eqn:evolution_extended_compact} which includes the effect of parameter perturbation via the different parameter modes of the system. However, we first transform the system into a canonical form, explicitly separating out the stable and critical subspaces. 
 
 The solution to equation~\eqref{eqn:evolution_extended_compact} is decomposed into the fields belonging to the critical and stable subspaces of $\ExtL$. Since the critical subspace is finite dimensional, it is represented by the time-dependent amplitudes of the critical eigenvectors. Accordingly, the solution is decomposed as
 \begin{subequations}
@@ -276,14 +276,12 @@ Multiplying equation~\eqref{eqn:evolution_extended_decomposed} by $\mathbf{\wide
 \end{subequations}
 Equations~\eqref{eqn:evolution_extended_decomposed1} and \eqref{eqn:evolution_extended_decomposed2} may be further simplified. Recall $\mathbf{\widehat{Q}}$ is the projector into the stable subspace and $\efield{u}_{s}$ also lies in the stable subspace. Hence $\mathbf{\widehat{Q}}\efield{u}_{s} = \efield{u}_{s}$. Similarly, $\mathbf{\widehat{Q}}\ExtL\efield{u}_{s}$ also lies in the stable subspace since $\mathbf{\widehat{Q}}\ExtL$ annhilates all components in the critical subspace and $\efield{u}_{s}$ lies in the invariant (stable) subspace of $\ExtL$. Finally note that by construction, the extended variable vanishes for $\mathcal{\widehat{N}}$. Since the extended variable vanishes for all three terms in equation~\eqref{eqn:evolution_extended_decomposed2} all terms may be written without the hat notation and the equation can be solved in the original system without the extended variable. 
 
-A further notational change is made for the non-linear terms with
-\begin{subequations}
-	\begin{eqnarray}
-		\mathcal{\widehat{F}}(\mathbf{x},\vfield{u}_{s}) = \mathbf{\widehat{W}}^{H}\mathcal{\widehat{N}}(\mathbf{x},\vfield{u}_{s}), \\
-		% 
-		\mathcal{G}(\mathbf{x},\vfield{u}_{s}) = \mathbf{Q}\mathcal{N}(\mathbf{x},\vfield{u}_{s}),
-	\end{eqnarray}
-\end{subequations}
+A further notational change is made for the non-linear terms with,
+\begin{eqnarray}
+	\mathcal{\widehat{F}}(\mathbf{x},\vfield{u}_{s}) = \mathbf{\widehat{W}}^{H}\mathcal{\widehat{N}}(\mathbf{x},\vfield{u}_{s}), \nonumber \\
+	% 
+	\mathcal{G}(\mathbf{x},\vfield{u}_{s}) = \mathbf{Q}\mathcal{N}(\mathbf{x},\vfield{u}_{s}), \nonumber
+\end{eqnarray} 
 which results in the pair of equations given by
 \begin{subequations}
 	\begin{align}
@@ -296,7 +294,7 @@ which results in the pair of equations given by
 \end{subequations}
  The linear term in equation~\eqref{eqn:evolution_final2} is written in manner so as to emphasize its restriction to the stable subspace. 
  
- The individual terms in equation~\eqref{eqn:evolution_final} are easily interpretted. $\mathbf{x}$ are the amplitudes of the critical eigenmodes of the extended space, $\mathbf{\widehat{K}}$ is the extended linearized operator reduced to the critical subspace and $\mathcal{\widehat{F}}$ is the vector of components of the projection of the nonlinearity in the critical eigendirections. $\vecu_{s}$ is the part of the solution that belongs to the stable subspace, $\mathbf{Q}\Lu\mathbf{Q}$ is the restriction of the original linear operator to the stable subspace, and $\mathcal{G}(\mathbf{x},\vfield{u}_{s})$ is the restriction of the non-linearity to the stable subspace. The form of the equations is very similar to the one regularly used for center-manifold applications in ordinary differential equations \citep{guckenheimer83,wiggins03}. 
+ The individual terms in equation~\eqref{eqn:evolution_final} are easily interpretted. $\mathbf{x}$ is the vector if amplitudes of the critical eigenmodes of the extended space, $\mathbf{\widehat{K}}$ is the extended linearized operator reduced to the critical subspace and $\mathcal{\widehat{F}}$ is the vector of components of the projection of the nonlinearity in the critical eigendirections. $\vecu_{s}$ is the part of the solution that belongs to the stable subspace, $\mathbf{Q}\Lu\mathbf{Q}$ is the restriction of the original linear operator to the stable subspace, and $\mathcal{G}(\mathbf{x},\vfield{u}_{s})$ is the restriction of the non-linearity to the stable subspace. The form of the equations is very similar to the one regularly used for center-manifold applications in ordinary differential equations \citep{guckenheimer83,wiggins03}. 
  
  Note that equation~\eqref{eqn:evolution_final1} for the first $l$ variables, denoted  by $\mathbf{x}_{P}$ simply reduces to,
  \begin{eqnarray} 	
@@ -306,13 +304,13 @@ This represents equation~\eqref{eqn:evolution_extended2} in the transformed vari
 
 Finally note that the two evolution equations~\eqref{eqn:evolution_final1} and \eqref{eqn:evolution_final2} represent slightly different quantities since, $\mathbf{x}$ is the critical mode \emph{amplitude vector} while $\vfield{u}_{s}$ is the part of the total solution in the stable subspace. For partial differential equation type systems arising from physical problems $\vfield{u}_{s}$ may in fact be an infinite-dimensional field. Henceforth, $\vfield{u}_{s}$ will generically be referred to as a field. 
 
-The center-manifold theorem is now applied to equation~\eqref{eqn:evolution_final}. 	The solution to equation~\eqref{eqn:evolution_final}, denoted as the pair ($\mathbf{x},\vfield{u}_{s}$), is assumed to lie in a Hilbert space which is a direct product of the critical and stable subspaces, $\mathds{H} = \mathds{C}^{M} \bigoplus \mathds{T}_{s}$, where $\mathds{C}^{M}$ is the complex vector space of dimension $M$ and represents the center subspace of the linearized operator of the system. $\mathds{T}_{s}$ represents the stable subspace of the linearized operator. 
+The center-manifold theorem is now applied to equation~\eqref{eqn:evolution_final}. 	The solution to equation~\eqref{eqn:evolution_final}, denoted as the pair ($\mathbf{x},\vfield{u}_{s}$), is assumed to lie in a Hilbert space which is a direct product of the critical and stable subspaces, $\mathds{H} = \mathds{C}^{M} \bigoplus \mathds{T}_{s}$, where $\mathds{C}^{M}$ is the complex vector space of dimension $M$ and represents the center subspace of the linearized operator of the system given by equation~\eqref{eqn:evolution_final}. $\mathds{T}_{s}$ represents the stable subspace of the linearized operator. 
 %
 Using the center-manifold theorem, one may assume that the stable solution $\vfield{u}_{s}$ evolves as a graph over the critical subspace $\mathbf{x}$ such that $\vfield{u}_{s} \sim \mathfrak{h}(\mathbf{x})$ where, $\mathfrak{h}$ is a function with the following properties,
 \begin{eqnarray}
 	\label{eqn:CM_approx_properties}
 	\mathfrak{h}: \mathds{C}^{M} \to \mathds{T}_{s}, & \nonumber \\
-	\mathfrak{h}(\mathbf{x}) \mapsto (\boldsymbol{0},\pfield{0}), & \hspace{5mm} \textit{for}\ \mathbf{x} = [0,0,\ldots,0] , \nonumber \\
+	\mathfrak{h}(\mathbf{x}) \mapsto (\boldsymbol{0},\vfield{0}), & \hspace{5mm} \textit{for}\ \mathbf{x} = [0,0,\ldots,0] , \nonumber \\
 	\mathfrak{h}(\mathbf{x}) \sim \mathcal{O}(\mathbf{x}^{2}), & \nonumber
 \end{eqnarray}
 \ie, $\mathfrak{h}$ maps the critical subspace $\mathds{C}^{M}$ into the stable subspace $\mathds{T}_{s}$, vanishes at the origin and, is asymptotic to $\mathcal{O}(\mathbf{x}^{2})$, as $\mathbf{x}$ approaches the origin. 
@@ -321,7 +319,7 @@ In general the smoothness of $\mathfrak{h}$ depends on the smoothness of the non
 	\label{eqn:graph_equation}
 	\left(\frac{\partial \mathfrak{h}}{\partial \mathbf{x}}\right)\cdot \left(\mathbf{\widehat{K}}\mathbf{x} + \mathcal{\widehat{F}}(\mathbf{x},\mathfrak{h}) \right) = (\mathbf{Q}\Lu\mathbf{Q})\mathfrak{h} + \mathcal{G}(\mathbf{x},\mathfrak{h}),
 \end{align}
-which defines the center-manifold of the system.
+which defines the center-manifold for the system governed by equation~\eqref{eqn:evolution_final}. 
 
 \subsection{Asymptotic Approximation}
 \label{sec:asymptotic_center_manifold}
@@ -370,7 +368,7 @@ The various fields $\vfield{y}_{a,b}$ are coupled due to the off-diagonal matrix
 	%
 	- (\mathbf{Q}\Lu\mathbf{Q})\vfield{y}_{\alpha,\beta} = \vfield{g}_{\alpha,\beta} - \vfield{g}^{c}_{\alpha,\beta}, \nonumber
 \end{align}
-where, the coupling terms for each pair of $(\alpha,\beta)$ have been denoted $\vfield{g}^{c}_{\alpha,\beta}$. These coupling terms vanish identically for $l < \alpha \le M$ (and $\beta\ge\alpha$) and for the remaining terms they are known apriori due to the upper-triangular nature of the system of equations. Recall that that the unknown fields $\vfield{y}_{\alpha,\beta}\in\mathds{T}_{s}$, therefore, $\vfield{y}_{\alpha,\beta} = \mathbf{Q}\mathbf{Q}\vfield{y}_{\alpha,\beta}$  and the system may be represented in a slightly different manner as, 
+where, $\widehat{\lambda}_{\alpha},\widehat{\lambda}_{\beta} \in \widehat{\boldsymbol{\lambda}}$, are the eigenvalues of $\mathbf{\widehat{K}}$, and the coupling terms for each pair of $(\alpha,\beta)$ have been denoted $\vfield{g}^{c}_{\alpha,\beta}$. These coupling terms vanish identically for $\alpha > l $ (and $\beta\ge\alpha$) and for the remaining terms they are known apriori due to the upper-triangular nature of the system of equations. Recall that the unknown fields $\vfield{y}_{\alpha,\beta}\in\mathds{T}_{s}$, therefore, $\vfield{y}_{\alpha,\beta} = \mathbf{Q}\mathbf{Q}\vfield{y}_{\alpha,\beta}$ and the system may be represented in a slightly different manner as, 
 	\begin{align}
 	\label{eqn:resolvent_fields_order_2}
 	\begin{split}
@@ -411,7 +409,7 @@ Finally, once the fields associated with the asymptotic expansion of $\mathfrak{
 \begin{align}
 	\dfrac{d\mathbf{x}}{d t} =& \mathbf{\widehat{K}}\mathbf{x} + \mathcal{\widehat{F}}(\mathbf{x},\mathfrak{h}(\xbf)) \label{eqn:amplitude}.
 \end{align}
-These are different from the usual ``amplitude equations'' \cite{newell69,cross80,cross09} which typically refer to the slowly modulating component of solutions, also referred to as the Stuart-Landau equations \citep{stuart58,stuart60,sipp07} in the hydrodynamics literature. In this case the amplitude evolution includes both the fast time scale due to the instabilities as well as any slow timescale variations that may emerge. The Stuart-Landau equations may be derived from the reduced set of equations~\eqref{eqn:evolution_final1} by considering a multiple-timescale expansion or a normal form for the obtained ordinary differential equations. 
+These are different from the usual ``amplitude equations'' \cite{newell69,cross80,cross09} which typically refer to the slowly modulating component of solutions, also referred to as the Stuart-Landau equations \citep{stuart58,stuart60,sipp07} in the hydrodynamics literature. In this case the amplitude evolution includes both the fast time scale due to the instabilities as well as any slow timescale variations that may emerge. The Stuart-Landau equations may be derived from the reduced set of equations~\eqref{eqn:evolution_final1} by considering a multiple-timescale expansion for the obtained ordinary differential equations, if so desired. 
 
 
 

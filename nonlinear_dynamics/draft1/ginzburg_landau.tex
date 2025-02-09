@@ -1,7 +1,7 @@
 \section{A Model Problem}
 \label{sec:ginzburg_landau}
 
-The asymptotic center-manifold derived in section~\ref{sec:center_manifold_derivation} is applied to a Ginzburg-Landau model which is described by a complex-conjugate pair of equations as,
+The asymptotic center-manifold derived in section~\ref{sec:center_manifold_derivation} is applied to a Ginzburg-Landau model described by a complex-conjugate pair of equations as,
 \begin{subequations}
 	\label{eqn:ginzburg_landau}
 	\begin{align}
@@ -14,9 +14,9 @@ Where, $x$ is the spatial coordinate, $\nabla$ and $\Lap$ are the one-dimensiona
 \begin{align}
 	\mathcal{L}_{0}	=& \left[\delta_{1}\nabla + \delta_{2} + \delta_{3}x + \delta_{4}\Lap\right], \nonumber \\
 	%
-	\mathcal{L}^{*}_{0} =&\left[\delta^{*}_{1}\nabla + \delta^{*}_{2} + \delta^{*}_{3}x + \delta^{*}_{4}\Lap\right], \nonumber
+	\mathcal{L}^{*}_{0} =&\left[\delta^{*}_{1}\nabla + \delta^{*}_{2} + \delta^{*}_{3}x + \delta^{*}_{4}\Lap\right]. \nonumber
 \end{align}
-and the linear operator for both $A$ and $A^{*}$ written together as
+The linear operator for both $A$ and $A^{*}$ are written together as
 \begin{eqnarray}
 	\mathcal{L} = \begin{bmatrix}
 		\mathcal{L}_{0}		& 0 \\
@@ -24,7 +24,7 @@ and the linear operator for both $A$ and $A^{*}$ written together as
 	\end{bmatrix}
 \end{eqnarray}
 
-For semi-infinite domains, $x\in[0,\infty)$, the spectrum for $\mathcal{L}_{1}$ is known analytically \citep{chomaz88} and is given by,
+For semi-infinite domains, $x\in[0,\infty)$, the spectrum for $\mathcal{L}_{0}$ is known analytically \citep{chomaz88} and is given by,
 %\begin{subequations}
 	\begin{align}
 		\omega_{n}	=& \delta_{2} - \dfrac{\delta_{1}^{2}}{4\delta_{4}} + (\delta_{4}\delta_{3}^{2})^{1/3}\zeta_{n}, \label{eqn:eigenvalues} 
@@ -32,10 +32,9 @@ For semi-infinite domains, $x\in[0,\infty)$, the spectrum for $\mathcal{L}_{1}$ 
 		%\phi_{n}(x)		=& \mathrm{Ai}([-\delta_{3}/\delta_{4}]^{1/3}x + \zeta_{n}), \label{eqn:eigenvectors}
 	\end{align}
 %\end{subequations}
-and the corrresponding complex conjugate for $\mathcal{L}^{*}_{0}$. Here $\mathrm{Ai}$ denotes the Airy function and $\zeta_{n}$ its countable set of zeros.
- The system parameters at bifurcation are chosen \emph{ad hoc} as $\delta^{0}_{1} = -1.0$, $\delta^{0}_{2} = 0.741 + 1.025i$, $\delta^{0}_{3}=-0.125$, $\delta^{0}_{4}=(1.0 - i)/\sqrt{2}$ and $\delta^{0}_{5} =-0.1+0.1i$, which results in a single critical eigenmode with eigenvalue $\omega_{c} = 1.0i$ for $\mathcal{L}_{0}$ and its conjugate, $-1.0i$ for $\mathcal{L}^{*}_{0}$, and all other eigenvalues have negative real parts. 
+and the corrresponding complex conjugate for $\mathcal{L}^{*}_{0}$. Here $\zeta_{n}$ denotes the countable set of zeros of the Airy function. The system parameters are chosen \emph{ad hoc} as $\delta^{b}_{1} = -1.0$, $\delta^{b}_{2} = 0.741 + 1.025i$, $\delta^{b}_{3}=-0.125$, $\delta^{b}_{4}=(1.0 - i)/\sqrt{2}$ and $\delta^{b}_{5} =-0.1+0.1i$, such that the system is at the bifurcation point with a single critical eigenmode with eigenvalue $\omega_{c} = 1.0i$ for $\mathcal{L}_{0}$ and its conjugate, $-1.0i$ for $\mathcal{L}^{*}_{0}$, and all other eigenvalues have negative real parts. 
  
- A center-manifold approximation of the model problem requires the evaluation of restricted resolvents, which is a difficult problem to solve analytically. Therefore the problem is considered in a trucated domain of $x\in [0,40]$ with the boundary conditions of $A = 0$ at $x=0$ and, $\partial A/\partial x = 0$ at $x=40$. Due to the spatially localized nature of the first few eigenvectors (which dictate the global dynamics), this truncation does not affect the dynamics in any significant manner, as can be seen from the comparison of the numerically evaluated spectrum in the truncated domain to the analytical spectrum in the semi-infinite domain (figure~\ref{fig:GL_spectrum}). The numerical spectrum was obtained via the implicitly restarted Arnoldi method \citep{sorensen92}.
+ A center-manifold approximation of the model problem requires the evaluation of restricted resolvents, which is a difficult problem to solve analytically. Therefore the problem is considered in a trucated domain of $x\in [0,40]$ with the boundary conditions of $A = 0$ at $x=0$ and, $\partial A/\partial x = 0$ at $x=40$. Due to the spatially localized nature of the first few eigenvectors (which dictate the global dynamics), this truncation does not affect the dynamics in any significant manner, as can be seen from the comparison of the numerically evaluated spectrum (via the implicitly restarted Arnoldi method \citep{sorensen92}) in the truncated domain to the analytical spectrum in the semi-infinite domain (figure~\ref{fig:GL_spectrum}). 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.49\textwidth]{GL_spectra}
@@ -77,16 +76,21 @@ The projectors into the stable subspaces of $\mathcal{L}_{0}$ and $\mathcal{L}^{
 	\mathbf{Q}^{*}_{0} 	=& \mathbf{I} - \phi^{*}_{c}\chi^{*H}_{c}. \nonumber
 \end{align}
 
-The system in equation~\eqref{eqn:ginzburg_landau} has a total of five parameters (ten including the complex-conjugate pairs) that can be varied from their bifurcation values. In order to avoid an explosion in the number of terms $T_{k}$ arising from the combinatorial problem, only the variations in $\delta_{3},\delta_{4},\delta^{*}_{3}$ and $\delta^{*}_{4}$ are considered, which suffice to illustrate the derivation of the asymptotic center-manifold under parameter variations. Although the parameters are complex-conjugate pairs, it turns out to be simplest to treat them all as independent parameters and enforce the complex-conjugate property later when parameter values are prescribed, which is essentially the same as treating $A$ and $A^{*}$ independently and having two independent critical eigenvectors $\vecv_{5}$ and $\vecv_{6}$. 
+The system in equation~\eqref{eqn:ginzburg_landau} has a total of five parameters (ten including the complex-conjugate pairs) that can be varied from their bifurcation values. In order to avoid an explosion in the number of terms $T_{k}$ arising from the combinatorial problem, only the variations in $\delta_{3},\delta_{4},\delta^{*}_{3}$ and $\delta^{*}_{4}$ are considered, which suffice to illustrate the construction of the asymptotic center-manifold under parameter variations. Although the parameters are complex-conjugate pairs, it turns out to be simplest to treat them all as independent parameters and enforce the complex-conjugate property later when parameter values are prescribed, which is essentially the same as treating $A$ and $A^{*}$ independently and having two independent critical eigenvectors $\vecv_{5}$ and $\vecv_{6}$. 
 The extended variable for the parameter evolution is then $\vecnu = [\delta'_{3};\delta'_{4};\delta'^{*}_{3};\delta'^{*}_{4}]$, with 
 \begin{align}
-	\delta_{3} =& \delta^{0}_{3} + \delta'_{3},& \delta_{4} =& \delta^{0}_{4} + \delta'_{4}, \nonumber \\
-	\delta^{*}_{3} =& (\delta^{0}_{3})^{*} + \delta'^{*}_{3}, &\delta^{*}_{4} =& (\delta^{0}_{4})^{*} + \delta'^{*}_{4}. \nonumber
+	\delta_{3} =& \delta^{b}_{3} + \delta'_{3},& \delta_{4} =& \delta^{b}_{4} + \delta'_{4}, \nonumber \\
+	\delta^{*}_{3} =& (\delta^{b}_{3})^{*} + \delta'^{*}_{3}, &\delta^{*}_{4} =& (\delta^{b}_{4})^{*} + \delta'^{*}_{4}. \nonumber
 \end{align}
-The extended state vector is denoted as $\widehat{A} = [A; A^{*}; \vecnu]$. With the knowledge of the linear operator and having calculated the critical eigenmodes, all the terms for the center-manifold approximation can now be easily built. 
+The extended state vector is denoted as $\widehat{A} = [A; A^{*}; \vecnu]$. With the knowledge of the linear operator and having calculated the critical eigenmodes, all the expressions for the center-manifold approximation of the extended system can now be easily built. 
 The extended linear operator is given by,
  \begin{align}
  	\mathcal{\widehat{L}} = \begin{bmatrix}
+ 		\mathcal{L} 	   & 0				 \\
+		0							  & 0											
+ 	\end{bmatrix} = 
+ 	%
+ 	\begin{bmatrix}
  		\mathcal{L}_{0} 	   & 0											&	0 \\
  		0									  & \mathcal{L}^{*}_{0}		&   0 \\
  		0									  & 0											&  0
@@ -132,17 +136,17 @@ The non-linear term of the original system is given by $\mathcal{N}_{NL} =  [\ma
  		\mathcal{N}_{1} =&
 			z_{1}z_{5}x\phi_{c} + z_{1}xA_{1s} + z_{2}z_{5}\Lap\phi_{c} + z_{2}\Lap A_{1s} \\
 			%
-			 &+ \delta^{0}_{5}(\phi^{*}_{c}z_{6} +  A_{2s}) (\phi_{c}z_{5} +  A_{1s})(\phi_{c}z_{5} +  A_{1s}),
+			 &+ \delta^{b}_{5}(\phi^{*}_{c}z_{6} +  A_{2s}) (\phi_{c}z_{5} +  A_{1s})(\phi_{c}z_{5} +  A_{1s}),
 	\end{split} \nonumber \\
 	%
 	\begin{split}
 		\mathcal{N}_{2} =&
 		z_{3}z_{6}x\phi^{*}_{c} + z_{3}xA_{2s} + z_{4}z_{6}\Lap\phi^{*}_{c} + z_{4}\Lap A_{2s} \\
 		%
-		&+ \delta^{0*}_{5}(\phi_{c}z_{5} +  A_{1s}) (\phi^{*}_{c}z_{6} +  A_{2s})(\phi^{*}_{c}z_{6} +  A_{2s}),
+		&+ \delta^{b*}_{5}(\phi_{c}z_{5} +  A_{1s}) (\phi^{*}_{c}z_{6} +  A_{2s})(\phi^{*}_{c}z_{6} +  A_{2s}),
 	\end{split} \nonumber
 \end{align}
-and in the extended space it is defined as $\mathcal{\widehat{N}}_{NL} =  [\mathcal{N}_{1}; \mathcal{N}_{2}; 0]$. The evolution equations for the critical and stable subspaces are
+and in the extended space it is defined as $\mathcal{\widehat{N}} =  [\mathcal{N}_{1}; \mathcal{N}_{2}; 0]$. The evolution equations for the critical and stable subspaces are
 \begin{subequations}
 	\label{eqn:GL_canonical}
 \begin{align}
@@ -151,18 +155,18 @@ and in the extended space it is defined as $\mathcal{\widehat{N}}_{NL} =  [\math
 	\dfrac{d z_{5}}{dt}	=& \omega_{c}z_{5} + \chi_{c}^{H}\mathcal{N}_{1},  \\
 	%
 	\dfrac{d z_{6}}{dt}	=& \omega^{*}_{c}z_{6} + \chi^{*H}_{c}\mathcal{N}_{2},  \\
-	\dfrac{\partial A_{s}}{\partial t} =& \mathbf{Q}\mathcal{L}\mathbf{Q}A_{s} + \mathbf{Q}\mathcal{N}_{NL}.
+	\dfrac{\partial A_{s}}{\partial t} =& \mathbf{Q}\mathcal{L}\mathbf{Q}A_{s} + \mathbf{Q}\mathcal{N}.
 \end{align}
 \end{subequations}
-The center-manifold theorem is applied to equation~\eqref{eqn:GL_canonical} and the stable component solution are evaluated asympotically as a power series in $\zbf$, 
+The center-manifold theorem is applied to equation~\eqref{eqn:GL_canonical} and the stable component solution is evaluated asympotically as a power series in $\zbf$, 
 \begin{align}
 	\label{eqn:GL_asymptotic}
-		\mathfrak{h}(\mathbf{z}) =& \sum_{a=1}^{6}\sum_{b=a}^{6} z_{a}z_{b}\vfield{y}_{a,b}
+		\mathfrak{h}(\mathbf{z}) =& \sum_{\alpha=1}^{6}\sum_{\beta=\alpha}^{6} z_{\alpha}z_{\beta}\vfield{y}_{\alpha,\beta}
 		 + \mathcal{O}(\mathbf{z}^{3}), \nonumber \\
 		 %
-		 \vfield{y}_{a,b} =& \begin{Bmatrix}
-		 	\vfield{y}^{1}_{a,b} \vspace{1mm} \\
-		 	\vfield{y}^{2}_{a,b}
+		 \vfield{y}_{\alpha,\beta} =& \begin{Bmatrix}
+		 	\vfield{y}^{1}_{\alpha,\beta} \vspace{1mm} \\
+		 	\vfield{y}^{2}_{\alpha,\beta}
 		 \end{Bmatrix}.	\nonumber
 \end{align}
 For $M=6$, a total of $T_{2}=21$ terms are obtained at second order for the asymptotic approximation. All coupling terms $\vecg^{c}_{\alpha,\beta}$ vanish identically and only the following nontrivial forcing terms $\vecg_{\alpha,\beta}$ are obtained at second order,
@@ -199,7 +203,7 @@ For $M=6$, a total of $T_{2}=21$ terms are obtained at second order for the asym
 		\mathbf{Q}^{*}_{0}\Lap\phi^{*}_{c}
 	\end{Bmatrix}, \nonumber
 \end{align}
-with all other forcing terms $\vecg_{\alpha,\beta}$ vanishing identically. This leads to the restricted resolvent solutions $\vecy_{\alpha,\beta}$ that satisfy,
+with all other forcing terms $\vecg_{\alpha,\beta}$ vanishing identically at second order. This leads to the restricted resolvent solutions $\vecy_{\alpha,\beta}$ that satisfy,
  \begin{subequations}
  	\label{eqn:GL_resolvents}
 	 \begin{align}
@@ -212,7 +216,7 @@ with all other forcing terms $\vecg_{\alpha,\beta}$ vanishing identically. This 
 	 	\mathbf{Q}[(0 + \omega^{*}_{c})\mathbf{I} - \mathcal{L}]\mathbf{Q}\vecy_{4,6} =& \vecg_{4,6}, 
 	 \end{align}
 \end{subequations}
-and all other second order terms $\vecy_{\alpha,\beta}$ vanishing identically. The resolvent solutions in terms of the individual fields are written as
+with all other second order terms $\vecy_{\alpha,\beta}$ vanishing. The resolvent solutions in terms of the individual fields are written as
  \begin{subequations}
  	\label{eqn:GL_sub_resolvents}
 	 \begin{align}
@@ -241,13 +245,13 @@ The complex-conjugation property may now be enforced so that $z_{6}=z^{*}_{5}, z
 	\label{eqn:stuart_landau}
 	\begin{split}
 	\dfrac{d z_{5}}{d t} =
-	& \omega_{c}z_{5} + \delta'_{3}z_{5}(\chi^{H}_{c}x\phi_{c}) +  				(\delta'_{3})^{2}z_{5}(\chi^{H}_{c}x\vecy_{1,5}) \\
+	& \omega_{c}z_{5} + \delta'_{3}(\chi^{H}_{c}x\phi_{c})z_{5} +  				(\delta'_{3})^{2}(\chi^{H}_{c}x\vecy_{1,5})z_{5} \\
 	%
-	& + \delta'_{3}\delta'_{4}z_{5}(\chi^{H}_{c}x\vecy_{2,5}) + \delta'_{4}z_{5}(\chi^{H}_{c}\Lap\phi_{c}) \\
+	& + \delta'_{3}\delta'_{4}(\chi^{H}_{c}x\vecy_{2,5})z_{5} + \delta'_{4}(\chi^{H}_{c}\Lap\phi_{c})z_{5} \\
 	%
-	&  + \delta'_{3}\delta'_{4}z_{5}(\chi^{H}_{c}\Lap\vecy_{1,5}) + (\delta'_{4})^{2}z_{5}(\chi^{H}_{c}\Lap\vecy_{2,5}) \\
+	&  + \delta'_{3}\delta'_{4}(\chi^{H}_{c}\Lap\vecy_{1,5})z_{5} + (\delta'_{4})^{2}(\chi^{H}_{c}\Lap\vecy_{2,5})z_{5} \\
 	%
-	& + \delta^{0}_{5}|z_{5}|^{2}z_{5}(\chi^{H}_{c}|\phi_{c}|^{2}\phi_{c}),
+	& + \delta^{b}_{5}(\chi^{H}_{c}|\phi_{c}|^{2}\phi_{c})|z_{5}|^{2}z_{5},
 	\end{split} 
 \end{align}
 and its complex conjugate for $z_{6}$, mirroring the original structure of equation~\eqref{eqn:ginzburg_landau}. In this case, the Ginzburg-Landau equation has been reduced to a Stuart-Landau like equation in the vicinity of the bifurcation point. The inner-products in equation~\eqref{eqn:stuart_landau} are evaluated numerically as,
@@ -261,12 +265,12 @@ and its complex conjugate for $z_{6}$, mirroring the original structure of equat
 	\chi^{H}_{c}|\phi_{c}|^{2}\phi_{c} =&& 0.111 - 0.032i. \nonumber
 \end{align}
 
-The center-manifold reduction obtained in equation~\eqref{eqn:stuart_landau} can be compared with the original system by evaluating the angular frequencies obtained for the full system and its reduced counter part for parameter perturbations. The comparison is shown in figure~\ref{fig:omega_parameter_variation} for the variation of $\delta'_{3}$ and $\delta'_{4}$. The agreement is very good close to the bifurcation point with a systematic deviation arising at larger parameter variation, which would be expected given the asymptotic nature of the approximation. The deviation is also larger for $\delta'_{3}$ compared to $\delta'_{4}$, which could be qualitatively understood apriori, given the relatively large norm of $\vecy_{1,5}$, as seen in figure~\ref{fig:GL_fields}, which arises due to $\delta'_{3}$ perturbations. 
+The center-manifold reduction obtained in equation~\eqref{eqn:stuart_landau} can be compared with the original system by evaluating the angular frequencies obtained for the full system and its reduced counter-part for parameter perturbations. The comparison is shown in figure~\ref{fig:omega_parameter_variation} for the variation of $\delta'_{3}$ and $\delta'_{4}$. The agreement is very good close to the bifurcation point with a systematic deviation arising at larger parameter variations. Such deviation would be expected given the asymptotic nature of the approximation. The deviation is also larger for $\delta'_{3}$ compared to $\delta'_{4}$, which could be qualitatively understood apriori, given the relatively large norm of $\vecy_{1,5}$, as seen in figure~\ref{fig:GL_fields}, which arises due to $\delta'_{3}$ perturbations. 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.49\textwidth]{center_manifold_omega1}
 	\includegraphics[width=0.49\textwidth]{center_manifold_omega2}
-	\caption{Comparison of the angular frequencies obtained from the Ginzburg-Landau system, equation~\eqref{eqn:ginzburg_landau}, and its center-manifold reduction, equation~\eqref{eqn:stuart_landau} for different values of parameter perturbations. (Top) $\delta'_{4} = 0$ with varying $\delta'_{3}$ and, (bottom) $\delta'_{3} = 0$ with varying $\delta'_{4}$.}
+	\caption{Comparison of the angular frequencies obtained from the Ginzburg-Landau system, equation~\eqref{eqn:ginzburg_landau}, and its center-manifold reduction, equation~\eqref{eqn:stuart_landau} for different values of parameter perturbations. (Top) $\delta'_{4} = 0$ with varying $\delta'_{3}$ and, (bottom) $\delta'_{3} = 0$ with varying $\delta'_{4}$. Note the negative sign in the $x-$axis label in the bottom figure.}
 	\label{fig:omega_parameter_variation}
 \end{figure} 
 
