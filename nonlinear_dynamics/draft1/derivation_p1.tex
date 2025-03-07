@@ -26,16 +26,16 @@ The system may be rewritten in terms of the deviation from the fixed point solut
 	\label{eqn:evolution_deviation}
 \end{equation}
 where, $\Lu$ is the linearized operator at the fixed point, acting on $\vecu$, defined by
-\begin{equation}
+\begin{align}
 	\Lu(\vecu) = \left(\left.\frac{\partial \vecf}{\partial \vecU}\right|_{(\vecUb,\vecMu)} \right)\bcdot \vecu.
 	\label{eqn:linearized_operator_u}
-\end{equation}
+\end{align}
 The right hand side in equation~\eqref{eqn:evolution_deviation} has been divided into the linear and non-linear contributions with $\Lu(\vecu)$ representing the linear part and the remaining terms in the square brackets representing the non-linear contributions.
 
-Furthermore, we assume that $\vecMu$ represents the parameters of the system at a bifurcation point. It is generically assumed that the system undergoes a multiple co-dimension bufurcation at $\vecMu$ and that the linearized operator $\Lu$ has a dicrete set of $N$ critical eigenvalues $\lambda$, with zero growth rate $(\mathfrak{Re}(\lambda) = 0)$. Of those, there are 
-$n$ purely real critical eigenvalues with $\mathfrak{Re}(\lambda) = 0, \mathfrak{Im}(\lambda) = 0$, and $m = N - n$ purely imaginary critical eigenvalues with $\mathfrak{Re}(\lambda) = 0, \mathfrak{Im}(\lambda) \ne 0$. For real systems $m$ is an even number since the complex eigenvalues occur in conjugate pairs. Accordingly, the system has $N$ critical eigenpairs $(\lambda_{i},\vecv_{i}), i\in 1\ldots N$, where $\vecv_{i}$ represents the eigenvector corresponding to $\lambda_{i}$. 
+Furthermore, we assume that $\vecMu$ represents the parameters of the system at a bifurcation point. It is generically assumed that the system undergoes a multiple co-dimension bufurcation at $\vecMu$ and that the linearized operator $\Lu$ has a dicrete set of $N$ critical eigenvalues $\lambda^{c}$, with zero growth rate $(\mathfrak{Re}(\lambda^{c}) = 0)$. Of those, there are 
+$n$ purely real critical eigenvalues with $\mathfrak{Re}(\lambda^{c}) = 0, \mathfrak{Im}(\lambda^{c}) = 0$, and $m = N - n$ purely imaginary critical eigenvalues with $\mathfrak{Re}(\lambda^{c}) = 0, \mathfrak{Im}(\lambda^{c}) \ne 0$. For real systems $m$ is an even number since the complex eigenvalues occur in conjugate pairs. Accordingly, the system has $N$ critical eigenpairs $(\lambda^{c}_{i},\vecv_{i}), i\in 1\ldots N$, where $\vecv_{i}$ represents the eigenvector corresponding to $\lambda_{i}$. 
 
-The adjoint of the direct linearized operator $\Lu$ is denoted as $\Lu^{\dagger}$ which also has $N$ critical eigenpairs $(\lambda^{*}_{i}, \vecw^{\dagger}_{i})$. The scaling of the eigenvectors of the direct and adjoint operators may be defined such that they satisfy the birthogonality condition
+The adjoint of the direct linearized operator $\Lu$ is denoted as $\Lu^{\dagger}$ which also has $N$ critical eigenpairs $(\lambda^{c*}_{i}, \vecw^{\dagger}_{i})$. The scaling of the eigenvectors of the direct and adjoint operators may be defined such that they satisfy the birthogonality condition
 \begin{eqnarray}
 	\langle\vecw^{\dagger}_{i},\vecv_{j}\rangle = \delta_{i,j} \label{eqn:std_biorthogonality},
 \end{eqnarray}
@@ -60,15 +60,27 @@ Additionally, $\mathbf{\Lambda}_{I}$ is defined as an $m\times m$ diagonal matri
 \subsection{The Extended System}
 \label{sec:extended}
 
-The same system is now considered for the case of parameter perturbation so that the evolution dynamics are now evaluated at parameter values of $\vecmu = \vecMu + \vecnu$, with $\vecnu$ being the vector of parameter perturbations and is now considered as a dynamic variable, henceforth referred to as the \emph{extended variable}. The evolution of $\vecnu$ is of course governed by a trivial set of equations however, the procedure leads to an extended system of equation with modified linear and non-linear operators given by
+The same system is now considered for the case of parameter perturbation so that the evolution dynamics are now evaluated at parameter values of $\vecmu = \vecMu + \vecnu$, with $\vecnu$ being the vector of parameter perturbations. In addition, the system is forced with small-amplitude harmonic forcing of the type
+\begin{align}
+	\label{eqn:harmonic_forcing}
+	\vecf_{H}(t) =\sum_{i=1}^{h}\vecf_{i}\theta_{i}(t); && \theta_{i} = \epsilon_{i}e^{\omega_{i}t},
+\end{align}
+where, the various $\theta_{i}$ are treated as the dynamic variable, $\omega_{i}$ is purely imaginary, with the imaginary part representing the angular frequency of the forcing. $\vecf_{i}$ represents the shape of the $i^{th}$ harmonic forcing and $\epsilon_{i}$ is a scale factor. Constant forcing terms with zero frequency are readily incorporated when a particular (or multiple) $\omega_{i}=0$. The vector of the various $\theta_{i}$ is denoted as $\vectheta = [\theta_{1};\theta_{2};\ldots;\theta_{h}]$, and the vector of angular frequencies denoted $\boldsymbol{\omega}_{H} = [\omega_{1};\omega_{2};\ldots;\omega_{h}]$. The resulting evolution equation is 
+\begin{align}
+	\frac{\partial \vecu}{\partial t} =& \vecf(\vecUb + \vecu,\vecMu + \vecnu) + \sum_{i=1}^{h}\vecf_{i}\theta_{i}; \nonumber.
+\end{align}
+The diagonal matrix for the harmonic angular frequencies is represented by $\mathbf{\Lambda}_{H} = diag(\boldsymbol{\omega}_{H})$. Similarly, $\boldsymbol{\omega}_{P} = [0;0;\ldots;0]$ is defined as a null vector of length $l$ and $\mathbf{\Lambda}_{P}$ is defined as an $l\times l$ null matrix, to represent the trivial eigenvalues and linear evolution matrix of the parameter variables $\vecnu$. The extended system including the evolution equations for the newly introduced variables $\vecnu$ and $\vectheta$, henceforth referred to as the \emph{extended variables}, is given by,
 \begin{subequations}
-	\begin{eqnarray}
+	\begin{align}
 			\label{eqn:evolution_extended1}
-			\frac{\partial \vecu}{\partial t} =& \Lu(\vecu) + \Lmu(\vecnu) + \vecf_{NL}(\vecUb,\vecu,\vecMu,\vecnu) \\
+			\frac{\partial \vecu}{\partial t} =& \Lu(\vecu) + \Lmu(\vecnu) +\Ltheta(\vectheta) + \vecf_{NL}(\vecu,\vecnu) \\
 			%
 			\label{eqn:evolution_extended2}
-			\frac{d \vecnu}{d t} = & \vfield{0}.
-	\end{eqnarray}
+			\frac{d \vecnu}{d t} = & \mathbf{\Lambda}_{P}\vecnu \\
+			%
+			\label{eqn:evolution_extended3}
+			\frac{d \vectheta}{d t} = &  \mathbf{\Lambda}_{H}\vectheta, 
+	\end{align}
 	\label{eqn:evolution_extended}
 \end{subequations}
 Here, as done earlier, the evolution equations are split into the linear and non-linear contributions. $\Lu$ is the same linearized operator as defined earlier in equation~\ref{eqn:linearized_operator_u}. $\Lmu$ is the linearized operator acting on the newly introduced extended variable $\vecnu$, defined as
@@ -76,73 +88,195 @@ Here, as done earlier, the evolution equations are split into the linear and non
 	\Lmu(\vecnu) = \left(\left.\frac{\partial \vecf}{\partial \vecmu}\right|_{(\vecUb,\vecMu)} \right)\bcdot \vecnu.
 	\label{eqn:linearized_operator_mu}
 \end{equation}
-$\vecf_{NL}(\vecUb,\vecu,\vecMu,\vecnu)$ represents the non-linear terms of the modified system given by
+Similarly, $\Ltheta$ is the linearized operator acting on $\vectheta$, defined as,
+\begin{equation}
+	\Ltheta(\vectheta) = \left(\frac{\partial \vecf_{H}}{\partial \vectheta} \right)\bcdot \vectheta.
+	\label{eqn:linearized_operator_theta}
+\end{equation}
+This is the same expression as in equation~\eqref{eqn:harmonic_forcing}, just written in a manner consistent with the other terms. Finally, $\vecf_{NL}(\vecu,\vecnu)$ represents the non-linear terms of the modified system given by
 \begin{equation}
 	\begin{split}
-		\vecf_{NL}(\vecUb,\vecu,\vecMu,\vecnu) =& \vecf(\vecUb + \vecu,\vecMu + \vecnu) \\
+		\vecf_{NL}(\vecu,\vecnu) =& \vecf(\vecUb + \vecu,\vecMu + \vecnu) \\
 		%
-		& - \Lu(\vecu) - \Lmu(\vecnu).
+		& - \Lu(\vecu) - \Lmu(\vecnu),
 	\end{split}
 	\label{eqn:nonlinear_term}
 \end{equation}
-An overhead hat notation, $\widehat{\cdot}$ , is used to refer to variables and operators associated with the extend space, so that the new state vector, non-linear term and the linearized operator are denoted by $\efield{u}$, $\efield{f}_{NL}$ and $\widehat{\mathcal{L}}$, and are defined as,
-\begin{eqnarray}
+where, the dependence on $\vecUb$ and $\vecMu$ has been suppressed for notational convenience. 
+
+An overhead hat notation, $\widehat{\cdot}$ , is used to refer to variables and operators associated with the extend space, so that the new state vector, non-linear term and the linearized direct and adjoint operators are denoted by $\efield{u}$, $\efield{f}_{NL}$, $\widehat{\mathcal{L}}$ and $\widehat{\mathcal{L}^{\dagger}}$, that are defined as,
+\begin{align}
 	\efield{u} = \begin{Bmatrix}
 		\vecu \\ 
-		\vecnu
+		\vecnu \\
+		\vectheta
 	\end{Bmatrix}; \hspace{5mm}
 	% 
 	\efield{f}_{NL} = \begin{Bmatrix}
 		\vecf_{NL} \\ 
+		\vfield{0}	\\
 		\vfield{0}
-	\end{Bmatrix},	\\
-	\mathcal{\widehat{L}}(\efield{u}) =
+	\end{Bmatrix},
+\end{align}
+%
+\begin{align}
+	\mathcal{\widehat{L}}(\efield{u}) =&
 	\begin{bmatrix}
-		\Lu & \Lmu \\
-		\mathbf{0} 	& \mathbf{0}
+		\Lu & \Lmu & \Ltheta \\
+		\mathbf{0} 	& \mathbf{\Lambda}_{P} & \mathbf{0} \\
+		\mathbf{0} 	& \mathbf{0} &  \mathbf{\Lambda}_{H}
 	\end{bmatrix}
 	\begin{Bmatrix}
 		\vecu \\
-		\vecnu
+		\vecnu \\
+		\vectheta
 	\end{Bmatrix}
-	\label{eqn:linearized_operator_extended}.
-\end{eqnarray}
-The full system may then be represented compactly as
+	\label{eqn:linearized_operator_extended}, \\
+	%
+		\ExtL^{\dagger}(\efield{u}^{\dagger}) =&
+	\begin{bmatrix}
+		\Lu^{\dagger} 		   & \mathbf{0} & \mathbf{0} \\
+		\Lmu^{\dagger}	 	& \mathbf{\Lambda}^{\dagger}_{P} & \mathbf{0} \\
+		\Ltheta^{\dagger}  & \mathbf{0} & \mathbf{\Lambda}^{\dagger}_{H} \\
+	\end{bmatrix}
+	\begin{Bmatrix}
+		\vecu^{\dagger} \\
+		\vecnu^{\dagger} \\
+		\vectheta^{\dagger}
+	\end{Bmatrix}
+	\label{eqn:adjoint_operator_extended}.
+\end{align}
+The superscript $^{\dagger}$ refers to the operator adjoint and in the case of matrices it refers to the complex-conjugate transpose of the matrix. The full system may then be represented compactly as
 \begin{equation}
 	\label{eqn:evolution_extended_compact}
 	\dfrac{\partial \efield{u}}{\partial t} =
-	\mathcal{\widehat{L}}(\efield{u})  - \efield{f}_{NL}.
+	\mathcal{\widehat{L}}(\efield{u})  + \efield{f}_{NL}.
 \end{equation}
-The system defined by equation~\eqref{eqn:evolution_extended}, or its compact form equation~\eqref{eqn:evolution_extended_compact}, with additional dynamical equations for the parameters will be referred to as the \emph{extended system}. 
+The system defined by equation~\eqref{eqn:evolution_extended}, or its compact form equation~\eqref{eqn:evolution_extended_compact}, with additional dynamical equations for the extended variables will be referred to as the \emph{extended system}. 
 
-The extended system has a larger critical subspace as compared to the original system due to the $l$ additional purely real zero eigenvalues introduced by the trivial parameter evolution equations. The eigenvector structure in the additional critical dimensions however is not trivial. Nevertheless, the eigenspace structure of the extended system can be deduced directly from the properties of the original system. 
+The extended system has a larger critical subspace as compared to the original system due to the $l+h$ additional variables introduced. While the extension of the system seems almost trivial, the eigenvector structure in the additional critical dimensions however is not. Nevertheless, the extended eigenspace structure can be deduced directly from the properties of the original system. There are however some subtleties involved when the system extension introduces eigenvalues that are resonant with the original linear system $\Lu$. The system extension is therefore deduced for the resonant and the non-resonant case separately. 
 
-Observe that if $(\lambda, \vecv)$ is an eigenpair of the original linearized operator $\Lu$, then $(\lambda, [\vecv; \vfield{0}])$ is an eigenpair of the extended linearized operator $\ExtL$. Hence all the original eigenpairs can be trivially extended to the larger system. The additional critical eigenpairs introduced due to system extension need to be deduced. If $\Lu$ is non-singular, meaning it does not contain any purely real critical eigenvalues ($n = 0$), then this can be done in a straightforward manner. On the other hand if $\Lu$ is singular, the deduction is more subtle. $l$ canonical unit vectors $\vfield{e}_{i}$ are defined such that,
-\begin{eqnarray}
-	\label{eqn:zeta_i}
-	\vfield{e}_{i} = [\underbrace{0,0,\ldots,0}_{i-1},1,\underbrace{0,0\ldots,0}_{l-i}]^{T},
-\end{eqnarray}
-and a matrix of the ordered vectors $\vfield{e}_{i}$ as its columns is simply the identity matrix $\mathbf{I}_{l}$. For a non-singular $\Lu$ one may evaluate $\vecv^{q}_{i}$ as 
-\begin{eqnarray}
+\subsubsection{The Non-resonant case}
+
+First, consider the case when $\Lu$ has no zero eigenvalues and the harmonic forcing is not resonant with $\Lu$. 
+
+Observe that if $(\lambda, \vecv)$ is an eigenpair of the original linearized operator $\Lu$, then $(\lambda, [\vecv; \vfield{0}; \vfield{0}])$ is an eigenpair of the extended linearized operator $\ExtL$, which may be verified by simple substitution. Hence all the original eigenpairs can be trivially extended to the larger system. The additional critical eigenpairs introduced due to system extension need to be deduced. If $\Lu$ is non-singular, meaning it does not contain any purely real critical eigenvalues ($n = 0$), then this can be done in a straightforward manner. On the other hand if $\Lu$ is singular, the deduction is more subtle. Two sets of canonical unit vectors are defined such that,
+\begin{subequations}
+	\begin{align}
+		\label{eqn:zeta_i_l}
+		\vfield{e}^{l}_{i} = [\overbrace{0,0,\ldots,0}^{i-1},1,\overbrace{0,0\ldots,0}^{l-i}]^{T}, \\
+		%
+		\vfield{e}^{h}_{i} = [\underbrace{0,0,\ldots,0}_{i-1},1,\underbrace{0,0\ldots,0}_{h-i}]^{T}.
+	\end{align}
+\end{subequations}
+%and a matrix of the ordered vectors $\vfield{e}^{l}_{i}$ as its columns is simply the identity matrix $\mathbf{I}_{l}$, and similarly $\mathbf{I}_{h}$ for the ordered vectors $\vfield{e}^{h}_{i}$. 
+
+The $l$ eigenpairs generated by the system extension due to $\vecnu$ have the structure of the type $(\lambda_{i}, [\vecv^{p}_{i};\vfield{e}^{l}_{i}; \vfield{0}])$, which satisfy
+\begin{subequations}
 	\label{eqn:nonsingular_pmode}
-	\Lu(\vecv^{q}_{i}) + \Lmu(\vfield{e}_{i}) = 0, \\
-	\implies \vecv^{q}_{i} = -\Lu^{-1}\cdot\Lmu(\vfield{e}_{i}) \nonumber.
-\end{eqnarray}
-By simple substitution it can be shown that the extended vector $\efield{v}^{q}_{i} = [\vecv^{q}_{i}; e_{i}]$ satisfies the eigenvalue equation for the zero eigenvalue, $\ExtL(\efield{v}^{q}_{i}) = 0$. Hence for $i \in 1\ldots l$, the eigenvector structure of the additional critical modes introduced due to the system extension is given by $\efield{v}^{q}_{i}$ which satifies equation~\eqref{eqn:nonsingular_pmode}.
+	\begin{align}
+		(\lambda_{i}\mathbf{I} - \Lu)\vecv^{p}_{i} = \Lmu(\vfield{e}^{l}_{i});&&  \forall i\in 1,\ldots l \\
+		\lambda_{i} = (\boldsymbol{\omega}_{P})_{i} = 0 \nonumber. && 
+	\end{align}
+\end{subequations}
+This can be verified by simple substitution into the eigenvalue equation for $\ExtL$. These shall be referred to as \emph{parameter modes}.
 
-On the other hand, if $\Lu$ is singular then it can not be inverted and the solution to equation~\ref{eqn:nonsingular_pmode} is indeterminate. In such a scenario the procedure is more nuanced since, the system extension introduces additional directions into the critical eigenspace in the form of generalized eigenvectors for the zero eigenvalue. One may define an oblique projector,
+Similarly, the $h$ eigenpairs generated by system extension due to $\vectheta$ have the structure of the type $(\lambda_{i}, [\vecv^{h}_{i};\vfield{0}; \vfield{e}^{h}_{i} ])$, which satisfy
+\begin{subequations}
+	\label{eqn:nonsingular_hmode}
+	\begin{align}
+		(\lambda_{i}\mathbf{I} - \Lu)\vecv^{h}_{i} = \Ltheta(\vfield{e}^{h}_{i});&&  \forall i\in 1,\ldots h \nonumber \\
+		\lambda_{i} = (\boldsymbol{\omega}_{H})_{i} \nonumber. && 
+	\end{align}
+\end{subequations}
+These will be referred to has \emph{forcing modes}. 
+
+In the adjoint case, for any eigenpair $(\lambda^{*},\vecw^{\dagger})$ of the original adjoint operator $\Lu^{\dagger}$, the corresponding eigenpair of the extended operator $\ExtL^{\dagger}$ is given by $(\lambda^{*}, [\vfield{w}^{\dagger}; \vfield{\zeta}^{\dagger}_{P}; \vfield{\zeta}^{\dagger}_{H}])$, with,
+\begin{subequations}
+	\begin{eqnarray}
+		\label{eqn:extended_adjoint_eigenvector}
+		(\lambda^{*}\mathbf{I} - 	\mathbf{\Lambda}^{\dagger}_{P})\vfield{\zeta}^{\dagger}_{P} = \Lmu^{\dagger}\cdot\vecw^{\dagger}, \\
+		%
+		(\lambda^{*}\mathbf{I} - 	\mathbf{\Lambda}^{\dagger}_{H})\vfield{\zeta}^{\dagger}_{H} = \Ltheta^{\dagger}\cdot\vecw^{\dagger}
+	\end{eqnarray}
+\end{subequations}
+% The matrix of all $\vfield{\zeta}^{\dagger}$ for critical  adjoint eigenmodes $(\mathfrak{Im}(\lambda)\ne 0,\ \mathfrak{Re}(\lambda)=0)$ is denoted $\mathbf{Z}$.
+
+The adjoint eigenvectors that arise due to the system extension have a special structure. The $l$ \emph{adjoint parameter modes} are given by $(0,[\vfield{0};\vfield{e}^{l}_{i}; \vfield{0}])$, for $i\in1,\ldots l$ and, the $h$ \emph{adjoint forcing modes} are given by $(\omega_{i},[\vfield{0};\vfield{0}; \vfield{e}^{h}_{i}])$, for $i \in 1,\ldots,h$. Hence the spectral properties of the extended system can be easily deduced for the non-resonant extension of the system. 
+
+\subsubsection{The Resonant case}
+
+On the other hand, if the system extension is such that some of the eigenvalues introduced are in resonance with the original system, $\Lu$, then the deduction of the eigenstructure is more subtle. Here we assume that $\Lu$ is singular with one or more zero eigenvalues and that some of the angular frequencies of the harmonic forcings coincide with the oscillatory eigenvalues of $\Lu$. 
+
+Again, eigenpairs $(\lambda, \vfield{v})$ of the original system $\Lu$ can be trivially extended to $(\lambda, [\vecv; \vfield{0}; \vfield{0}])$ which satisfy the eigenvalue equation for $\ExtL$. 
+
+For the $i^{th}$ \emph{extended parameter mode}, define a vector $\vfield{\gamma}^{i}_{P} \in \mathds{C}^{N}$, where the $j^{th}$ element of the vector is given by,
+\begin{equation}
+	(\vfield{\gamma}^{i}_{P})_{j} =
+	\left\lbrace
+	\begin{split}
+		(\vecw^{\dagger}_{j})^{H}\Lmu(\vfield{e}^{l}_{i}),  && \textit{if } (\boldsymbol{\omega}_{P})_{i} = \lambda^{c}_{j} \\
+		0,						 && \textit{otherwise.}	
+	\end{split}\right.
+	%
+\end{equation}
+Then $(\lambda_{i}, [\vecv^{p}_{i};\vfield{e}^{l}_{i}; \vfield{0}])$ forms a generalized eigenmode which satisfies the modified relation,
+\begin{subequations}
+	\label{eqn:singular_pmode}
+	\begin{align}
+		(\lambda_{i}\mathbf{I} - \Lu)\vecv^{p}_{i} =& \Lmu(\vfield{e}^{l}_{i}) - \mathbf{V}\vfield{\gamma}^{i}_{P};&  \forall i\in 1,\ldots l, \\
+		%
+		\lambda_{i} = (\boldsymbol{\omega}_{P})_{i} =& 0, & \\
+		%
+		(\vecw^{\dagger}_{j})^{H}\vecv^{p}_{i} =& 0; & \textit{if } (\boldsymbol{\omega}_{P})_{i} = \lambda^{c}_{j}. 
+	\end{align}
+\end{subequations}
+
+Similarly, for the $i^{th}$ \emph{extended forcing mode}, define a vector $\vfield{\gamma}^{i}_{H} \in \mathds{C}^{N}$, where the $j^{th}$ element of the vector is given by,
+\begin{equation}
+	(\vfield{\gamma}^{i}_{H})_{j} =
+	\left\lbrace
+	\begin{split}
+		(\vecw^{\dagger}_{j})^{H}\Ltheta(\vfield{e}^{l}_{i}),  && \textit{if } (\boldsymbol{\omega}_{H})_{i} = \lambda^{c}_{j} \\
+		0,						 && \textit{otherwise.}	
+	\end{split}\right.
+	%
+\end{equation}
+Then $(\lambda_{i}, [\vecv^{q}_{i};\vfield{e}^{h}_{i}; \vfield{0}])$ forms a generalized eigenmode which satisfies the modified relation,
+\begin{subequations}
+	\label{eqn:singular_hmode}
+	\begin{align}
+		(\lambda_{i}\mathbf{I} - \Lu)\vecv^{q}_{i} =& \Ltheta(\vfield{e}^{h}_{i}) - \mathbf{V}\vfield{\gamma}^{i}_{H};&  \forall i\in 1,\ldots l, \\
+		%
+		\lambda_{i} = (\boldsymbol{\omega}_{P})_{i},& & \\
+		%
+		(\vecw^{\dagger}_{j})^{H}\vecv^{q}_{i} =& 0; & \textit{if } (\boldsymbol{\omega}_{H})_{i} = \lambda^{c}_{j}. 
+	\end{align}
+\end{subequations}
+
+
+
+
+
+
+
+
+
+
+
+$\Lu$ is singular then it can not be inverted and the solution to equation~\ref{eqn:nonsingular_pmode} is indeterminate. In such a scenario the procedure is more nuanced since, the system extension introduces additional directions into the critical eigenspace in the form of generalized eigenvectors for the zero eigenvalue. One may define an oblique projector,
 \begin{eqnarray}
 	\label{eqn:real_annhilator}
 	\mathbf{Q}_{R} = \mathbf{I} - \mathbf{V}_{R}\mathbf{W}^{H}_{R},
 \end{eqnarray}
 which annhilates all components along the singular directions $\mathbf{V}_{R}$, and define $\vfield{\gamma}_{i} = \mathbf{W}^{H}_{R}\Lmu(\vfield{e}_{i})$ as the components of $\Lmu(\vfield{e}_{i})$ along the singular directions. The matrix $\mathbf{\Gamma}$ is defined whose columns comprise of the ordered vectors $\vfield{\gamma}_{i}$, \ie, $\mathbf{\Gamma} = [\vfield{\gamma}_{1},\vfield{\gamma}_{2},\ldots,\vfield{\gamma}_{l}]$. One may then define $\vfield{v}^{p}_{i}$ through a modified condition,
-\begin{subequations}
-	\label{eqn:singular_pmode}
-	\begin{eqnarray}
-		\mathbf{Q}_{R}\Lu(\vecv^{p}_{i}) + \mathbf{Q}_{R}\Lmu(\vfield{e}_{i}) = 0, \\
-		 \textbf{s.t.} \hspace{5mm} \mathbf{W}^{H}_{R}\vecv^{p}_{i} = 0.
-	\end{eqnarray}
-\end{subequations}
+%\begin{subequations}
+%	\label{eqn:singular_pmode}
+%	\begin{eqnarray}
+%		\mathbf{Q}_{R}\Lu(\vecv^{p}_{i}) + \mathbf{Q}_{R}\Lmu(\vfield{e}_{i}) = 0, \\
+%		 \textbf{s.t.} \hspace{5mm} \mathbf{W}^{H}_{R}\vecv^{p}_{i} = 0.
+%	\end{eqnarray}
+%\end{subequations}
 The action of $\mathbf{Q}_{R}$ on $\Lmu(\vfield{e}_{i})$ annhilates all components along the singular directions and the second condition, $\mathbf{W}^{H}_{R}\vecv^{p}_{i}=0$, implies that $\vecv^{p}_{i}$ has no components in the singular directions. Therefore $\Lu$ can now be inverted by restricting it to the non-singular directions, \ie, along $\mathbf{Q}_{R}\Lu$, and no indeterminacy arises. The extended vectors $\efield{v}^{p}_{i} = [\vecv^{p}_{i};\vfield{e}_{i}]$ then form a set of generalized eigenvectors for the critical eigenvalues of $\lambda = 0$. 
 
 In order to see that these are indeed generalized eigenvectors one may note that the following relation is obtained,
