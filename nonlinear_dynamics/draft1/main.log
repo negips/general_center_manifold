@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.6.23)  7 MAR 2025 22:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.6.23)  8 MAR 2025 16:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -750,10 +750,10 @@ Package caption Info: New subtype `subtable' on input line 238.
 \c@subtable=\count332
 )
 Class revtex4-2 Info: Unrecognized LaTeX tabular. Please update this document c
-lass! (Proceeding with fingers crossed.) on input line 110.
-Class revtex4-2 Info: cite was not loaded (OK!) on input line 110.
-Class revtex4-2 Info: mcite was not loaded (OK!) on input line 110.
-Class revtex4-2 Info: multicol was not loaded (OK!) on input line 110.
+lass! (Proceeding with fingers crossed.) on input line 112.
+Class revtex4-2 Info: cite was not loaded (OK!) on input line 112.
+Class revtex4-2 Info: mcite was not loaded (OK!) on input line 112.
+Class revtex4-2 Info: multicol was not loaded (OK!) on input line 112.
  (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count333
@@ -763,34 +763,27 @@ File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 LaTeX Warning: Unused global option(s):
     [prr].
 
-(./main.aux
-
-LaTeX Warning: Label `eqn:adjoint_operator_extended' multiply defined.
-
-
-LaTeX Warning: Label `eqn:extended_adjoint_eigenvector' multiply defined.
-
-)
+(./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for U/stixonebb/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for U/stixonebb/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
  (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count334
@@ -813,7 +806,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 110.
+Package hyperref Info: Link coloring OFF on input line 112.
  (./main.out)
 (./main.out)
 \@outlinefile=\write5
@@ -821,15 +814,15 @@ Package hyperref Info: Link coloring OFF on input line 110.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-Class revtex4-2 Info: Taking \maketitle back from hyperref on input line 110.
+Class revtex4-2 Info: Taking \maketitle back from hyperref on input line 112.
 \openout3 = `mainNotes.bib'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 128
+LaTeX Font Info:    Trying to load font information for U+msa on input line 130
 .
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 128
+LaTeX Font Info:    Trying to load font information for U+msb on input line 130
 .
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -847,211 +840,64 @@ LaTeX Font Info:    Trying to load font information for U+euf on input line 35.
 (/usr/share/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 ) [1{/home/prabal/.texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
-Underfull \hbox (badness 1917) in paragraph at lines 184--187
+Underfull \hbox (badness 1917) in paragraph at lines 176--177
 \OT1/cmr/m/n/10 ten-sion due to $\OML/cmm/b/it/10 ^^R$ \OT1/cmr/m/n/10 have the
  struc-ture of the type
  []
 
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 220.
+(amsmath)                trying to recover with `aligned' on input line 210.
 
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 242.
+(amsmath)                trying to recover with `aligned' on input line 231.
 
-
-Underfull \hbox (badness 1454) in paragraph at lines 244--248
-\OT1/cmr/m/n/10 Then $(\OML/cmm/m/it/10 ^^U[]; \OT1/cmr/m/n/10 [\OML/cmm/b/it/1
-0 v[]\OT1/cmr/m/n/10 ; \OML/cmm/b/it/10 e[]\OT1/cmr/m/n/10 ; \OT1/cmr/bx/n/10 0
-\OT1/cmr/m/n/10 ])$ forms a gen-er-al-ized eigen-mode
- []
-
-[3] [4] [5
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.37
-}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.432 
-      ] [6
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.39
-}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.497 \end{align}
-                 ]) (./ginzburg_landau.tex [7]
-Package epstopdf Info: Source file: <imgs/GL_spectra.eps>
-(epstopdf)                    date: 2025-02-09 14:09:43
-(epstopdf)                    size: 26032 bytes
-(epstopdf)             Output file: <imgs/GL_spectra-eps-converted-to.pdf>
-(epstopdf)                    date: 2025-02-09 14:09:53
-(epstopdf)                    size: 17238 bytes
-(epstopdf)             Command: <repstopdf --outfile=imgs/GL_spectra-eps-conver
-ted-to.pdf imgs/GL_spectra.eps>
-(epstopdf)             \includegraphics on input line 40.
-Package epstopdf Info: Output file is already uptodate.
-<imgs/GL_spectra-eps-converted-to.pdf, id=256, 578.16pt x 433.62pt>
-File: imgs/GL_spectra-eps-converted-to.pdf Graphic file (type pdf)
-<use imgs/GL_spectra-eps-converted-to.pdf>
-Package pdftex.def Info: imgs/GL_spectra-eps-converted-to.pdf  used on input li
-ne 40.
-(pdftex.def)             Requested size: 249.9028pt x 187.42558pt.
-
-Overfull \hbox (3.9028pt too wide) in paragraph at lines 40--41
- [][] 
- []
-
-[8 <./imgs/GL_spectra-eps-converted-to.pdf>]
-Overfull \hbox (10.79417pt too wide) detected at line 115
-[]
- []
-
-
-Underfull \hbox (badness 2126) in paragraph at lines 129--130
-[]\OT1/cmr/m/n/10 To avoid con-fu-sion with the spa-tial vari-able $\OML/cmm/m/
-it/10 x$\OT1/cmr/m/n/10 ,
- []
-
-
-Underfull \hbox (badness 1221) in paragraph at lines 129--130
-\OT1/cmr/m/n/10 the crit-i-cal mode am-pli-tudes are de-noted by $\OT1/cmr/bx/n
-/10 z \OT1/cmr/m/n/10 =
- []
-
-Package epstopdf Info: Source file: <imgs/GL_fields.eps>
-(epstopdf)                    date: 2025-02-09 14:09:43
-(epstopdf)                    size: 26864 bytes
-(epstopdf)             Output file: <imgs/GL_fields-eps-converted-to.pdf>
-(epstopdf)                    date: 2025-02-09 14:09:53
-(epstopdf)                    size: 12562 bytes
-(epstopdf)             Command: <repstopdf --outfile=imgs/GL_fields-eps-convert
-ed-to.pdf imgs/GL_fields.eps>
-(epstopdf)             \includegraphics on input line 238.
-Package epstopdf Info: Output file is already uptodate.
-<imgs/GL_fields-eps-converted-to.pdf, id=320, 578.16pt x 433.62pt>
-File: imgs/GL_fields-eps-converted-to.pdf Graphic file (type pdf)
-<use imgs/GL_fields-eps-converted-to.pdf>
-Package pdftex.def Info: imgs/GL_fields-eps-converted-to.pdf  used on input lin
-e 238.
-(pdftex.def)             Requested size: 249.9028pt x 187.42558pt.
-
-Overfull \hbox (3.9028pt too wide) in paragraph at lines 238--239
- [][] 
- []
-
-[9
-pdfTeX warning (ext4): destination with the same identifier (name{equation.3.50
-}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.256 \end{align}
-                 ]
-
-LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 256.
-
-Package epstopdf Info: Source file: <imgs/center_manifold_omega1.eps>
-(epstopdf)                    date: 2025-02-09 14:09:43
-(epstopdf)                    size: 23989 bytes
-(epstopdf)             Output file: <imgs/center_manifold_omega1-eps-converted-
-to.pdf>
-(epstopdf)                    date: 2025-02-09 14:09:53
-(epstopdf)                    size: 14949 bytes
-(epstopdf)             Command: <repstopdf --outfile=imgs/center_manifold_omega
-1-eps-converted-to.pdf imgs/center_manifold_omega1.eps>
-(epstopdf)             \includegraphics on input line 271.
-Package epstopdf Info: Output file is already uptodate.
-<imgs/center_manifold_omega1-eps-converted-to.pdf, id=345, 578.16pt x 433.62pt>
-
-File: imgs/center_manifold_omega1-eps-converted-to.pdf Graphic file (type pdf)
-<use imgs/center_manifold_omega1-eps-converted-to.pdf>
-Package pdftex.def Info: imgs/center_manifold_omega1-eps-converted-to.pdf  used
- on input line 271.
-(pdftex.def)             Requested size: 249.9028pt x 187.42558pt.
-Package epstopdf Info: Source file: <imgs/center_manifold_omega2.eps>
-(epstopdf)                    date: 2025-02-09 14:09:43
-(epstopdf)                    size: 24409 bytes
-(epstopdf)             Output file: <imgs/center_manifold_omega2-eps-converted-
-to.pdf>
-(epstopdf)                    date: 2025-02-09 14:09:53
-(epstopdf)                    size: 16265 bytes
-(epstopdf)             Command: <repstopdf --outfile=imgs/center_manifold_omega
-2-eps-converted-to.pdf imgs/center_manifold_omega2.eps>
-(epstopdf)             \includegraphics on input line 272.
-Package epstopdf Info: Output file is already uptodate.
-<imgs/center_manifold_omega2-eps-converted-to.pdf, id=346, 578.16pt x 433.62pt>
-
-File: imgs/center_manifold_omega2-eps-converted-to.pdf Graphic file (type pdf)
-<use imgs/center_manifold_omega2-eps-converted-to.pdf>
-Package pdftex.def Info: imgs/center_manifold_omega2-eps-converted-to.pdf  used
- on input line 272.
-(pdftex.def)             Requested size: 249.9028pt x 187.42558pt.
-
-Overfull \hbox (3.9028pt too wide) in paragraph at lines 271--273
- [][] 
- []
-
-
-Overfull \hbox (3.9028pt too wide) in paragraph at lines 271--273
- [] 
- []
-
-
-Underfull \hbox (badness 2221) in paragraph at lines 268--276
-[]\OT1/cmr/m/n/10 The center-manifold re-duc-tion ob-tained in equa-
- []
-
-) (./appendix.tex [10 <./imgs/GL_fields-eps-converted-to.pdf> <./imgs/center_ma
-nifold_omega1-eps-converted-to.pdf> <./imgs/center_manifold_omega2-eps-converte
-d-to.pdf>]) (./main.bbl
+[3]) (./main.bbl [4]
 Underfull \hbox (badness 1158) in paragraph at lines 42--46
  \OT1/cmr/m/it/9 Trans-ac-tions of the Amer-i-can Math-e-mat-i-cal So-ci-ety\OT
 1/cmr/m/n/9 ,
  []
 
-[11]) [12] (./main.aux)
+) [5] (./main.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 1
 L3 programming layer <2024-05-27>
  ***********
-
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B31EE8FDC1A250838699F52CA63D2D5F;2370.
+(rerunfilecheck)             Checksum: 091814A1A8C6DE101F84512BA4404455;1365.
  ) 
 Here is how much of TeX's memory you used:
- 25325 strings out of 475560
- 456078 string characters out of 5778795
- 1986905 words of memory out of 5000000
- 47371 multiletter control sequences out of 15000+600000
+ 25045 strings out of 475560
+ 449330 string characters out of 5778795
+ 1979905 words of memory out of 5000000
+ 47166 multiletter control sequences out of 15000+600000
  571071 words of font info for 85 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 94i,20n,131p,1186b,625s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 94i,20n,131p,954b,611s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmbx7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmbx9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
-r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmmib10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cm
-mib5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb>
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
-b></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmti9.pfb></usr/share/texmf-dist/fonts/type1/public/doublestroke/ds
-rom10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb>
-Output written on main.pdf (12 pages, 399393 bytes).
+ic/amsfonts/cm/cmbx9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
+sr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmmib10.pfb></usr/share/texmf-dist/fonts/type1/public/amsf
+onts/cmextra/cmmib5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmex
+tra/cmmib7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pf
+b></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/font
+s/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texmf-dist/fonts/type1/public/
+doublestroke/dsrom10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/eul
+er/eufm10.pfb>
+Output written on main.pdf (5 pages, 272312 bytes).
 PDF statistics:
- 620 PDF objects out of 1000 (max. 8388607)
- 421 compressed objects within 5 object streams
- 141 named destinations out of 1000 (max. 500000)
- 137 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 257 PDF objects out of 1000 (max. 8388607)
+ 202 compressed objects within 3 object streams
+ 71 named destinations out of 1000 (max. 500000)
+ 77 words of extra memory for PDF output out of 10000 (max. 10000000)
 
