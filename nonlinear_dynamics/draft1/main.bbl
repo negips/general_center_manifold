@@ -1,20 +1,37 @@
 \begin{thebibliography}{}
 
+\bibitem[Cabr{\'e} et~al., 2003a]{cabre03a}
+Cabr{\'e}, X., Fontich, E., and De~la Llave, R. (2003a).
+\newblock The parameterization method for invariant manifolds i: manifolds
+  associated to non-resonant subspaces.
+\newblock {\em Indiana University mathematics journal}, pages 283--328.
+
+\bibitem[Cabr{\'e} et~al., 2003b]{cabre03b}
+Cabr{\'e}, X., Fontich, E., and De~la Llave, R. (2003b).
+\newblock The parameterization method for invariant manifolds ii: regularity
+  with respect to parameters.
+\newblock {\em Indiana University mathematics journal}, pages 329--360.
+
+\bibitem[Cabr{\'e} et~al., 2005]{cabre05}
+Cabr{\'e}, X., Fontich, E., and De~La~Llave, R. (2005).
+\newblock The parameterization method for invariant manifolds iii: overview and
+  applications.
+\newblock {\em Journal of Differential Equations}, 218(2):444--515.
+
+\bibitem[Carini et~al., 2015]{carini15}
+Carini, M., Auteri, F., and Giannetti, F. (2015).
+\newblock Centre-manifold reduction of bifurcating flows.
+\newblock {\em Journal of Fluid Mechanics}, 767:109–145.
+
 \bibitem[Carr, 1982]{carr82}
 Carr, J. (1982).
 \newblock {\em Applications of centre manifold theory}, volume~35.
 \newblock Springer Science \& Business Media.
 
-\bibitem[Chomaz et~al., 1988]{chomaz88}
-Chomaz, J., Huerre, P., and Redekopp, L. (1988).
-\newblock Bifurcations to local and global modes in spatially developing flows.
-\newblock {\em Physical review letters}, 60(1):25.
-
-\bibitem[Chomaz, 2005]{chomaz05}
-Chomaz, J.-M. (2005).
-\newblock Global instabilities in spatially developing flows: non-normality and
-  nonlinearity.
-\newblock {\em Annu. Rev. Fluid Mech.}, 37(1):357--392.
+\bibitem[Coullet and Spiegel, 1983]{coullet83}
+Coullet, P.~H. and Spiegel, E.~A. (1983).
+\newblock Amplitude equations for systems with competing instabilities.
+\newblock {\em SIAM Journal on Applied Mathematics}, 43(4):776--821.
 
 \bibitem[Cross and Greenside, 2009]{cross09}
 Cross, M. and Greenside, H. (2009).
@@ -27,6 +44,13 @@ Cross, M.~C. (1980).
   instability}.
 \newblock {\em The Physics of Fluids}, 23(9):1727--1731.
 
+\bibitem[Gallaire et~al., 2016]{gallaire16}
+Gallaire, F., Boujo, E., Mantic-Lugo, V., Arratia, C., Thiria, B., and Meliga,
+  P. (2016).
+\newblock Pushing amplitude equations far from threshold: application to the
+  supercritical hopf bifurcation in the cylinder wake.
+\newblock {\em Fluid Dynamics Research}, 48(6):061401.
+
 \bibitem[Guckenheimer and Holmes, 1983]{guckenheimer83}
 Guckenheimer, J. and Holmes, P. (1983).
 \newblock {\em Nonlinear Oscillations, Dynamical Systems, and Bifurcations of
@@ -38,6 +62,23 @@ Haragus, M. and G\'{e}rard, I. (2011).
 \newblock {\em Local Bifurcations, Center Manifolds, and Normal Forms in
   Infinite-Dimensional Dynamical Systems}.
 \newblock Springer-Verlag New York.
+
+\bibitem[Haro et~al., 2016]{haro16}
+Haro, A., Canadell, M., Figueras, J.-L., Luque, A., Mondelo, J.~M., et~al.
+  (2016).
+\newblock {\em The parameterization method for invariant manifolds}.
+\newblock Springer.
+
+\bibitem[Jain and Haller, 2022]{jain22}
+Jain, S. and Haller, G. (2022).
+\newblock How to compute invariant manifolds and their reduced dynamics in
+  high-dimensional finite element models.
+\newblock {\em Nonlinear dynamics}, 107(2):1417--1450.
+
+\bibitem[Negi, 2024]{negi24}
+Negi, P.~S. (2024).
+\newblock Asymptotic center--manifold for the navier--stokes.
+\newblock {\em arXiv preprint arXiv:2411.03727}.
 
 \bibitem[Newell and Whitehead, 1969]{newell69}
 Newell, A.~C. and Whitehead, J.~A. (1969).
@@ -55,13 +96,6 @@ Sipp, D. and Lebedev, A. (2007).
 \newblock Global stability of base and mean flows: a general approach and its
   applications to cylinder and open cavity flows.
 \newblock {\em Journal of Fluid Mechanics}, 593:333–358.
-
-\bibitem[Sorensen, 1992]{sorensen92}
-Sorensen, D.~C. (1992).
-\newblock Implicit application of polynomial filters in a k-step arnoldi
-  method.
-\newblock {\em Siam journal on matrix analysis and applications},
-  13(1):357--385.
 
 \bibitem[Stuart, 1958]{stuart58}
 Stuart, J.~T. (1958).

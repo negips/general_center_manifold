@@ -38,16 +38,14 @@ The adjoint of the direct linearized operator $\Lu$ is denoted as $\Lu^{\dagger}
 \begin{eqnarray}
 	\langle\vecw^{C}_{i},\vecv^{C}_{j}\rangle = \vecw^{C\dagger}_{i}\vecv^{C}_{j} = \delta_{i,j} \label{eqn:std_biorthogonality},
 \end{eqnarray}
-where $\langle\cdot,\cdot\rangle$ is the standard inner-product and $\delta_{i,j}$ is the Kronecker-delta fuction. The superscript $^{\dagger}$ is used here to indicate a complex-conjugated transpose of vectors and matrix operators. For scalars complex-conjugation is indicated by a $^{*}$ superscript. The superscript $^{H}$ which is often used for the same purpose is reserved for objects referring to harmonic forcings. One may define a matrix $\mathbf{V}$, whose columns comprise of the $n$ critical eigenvectors of $\Lu$ and the matrix spans the invariant center subspace of the linear operator $\Lu$. The corresponding matrix for the adjoint eigenvectors is denoted $\mathbf{W}$. Due to the chosen scaling the matrices satisfy the following relations,
+where $\langle\cdot,\cdot\rangle$ is the standard inner-product and $\delta_{i,j}$ is the Kronecker-delta fuction. The superscript $^{\dagger}$ is used here to indicate a complex-conjugated transpose of vectors and matrix operators. For scalars complex-conjugation is indicated by a $^{*}$ superscript. The superscript $^{H}$ which is often used for the same purpose is reserved for objects referring to harmonic forcings. One may define a matrix $\mathbf{V}$, whose columns comprise of the $n$ critical eigenvectors of $\Lu$ and the matrix spans the invariant center subspace of the linear operator $\Lu$. The corresponding matrix for the adjoint eigenvectors is denoted $\mathbf{W}$. Due to the chosen scaling denoted by equation~\eqref{eqn:std_biorthogonality} the matrices satisfy,
 \begin{align}
 	\label{eqn:biorthogonal_matrices}
-	\mathbf{W}^{\dagger}\mathbf{V} = \mathbf{I}_{n}
+	\mathbf{W}^{\dagger}\mathbf{V} = \mathbf{I}_{n},
 \end{align}
-where, $\mathbf{I}_{n}$ represents an identity matrix of order $n\times n$. The projection operator  into the stable subspace of $\Lu$ is defined by
-\begin{eqnarray}
-	\label{eqn:stable_projector}
-	\mathbf{Q} = \mathbf{I} - \mathbf{V}\mathbf{W}^{\dagger}.
-\end{eqnarray}
+where, $\mathbf{I}_{n}$ represents an identity matrix of order $n\times n$. The projection operator into the critical subspace (also the center subspace) is defined by $\mathbf{P} = \mathbf{V}\mathbf{W}^{\dagger}$, while the projection operator into its complement (stable subspace of $\Lu$) is defined by, $\mathbf{Q} = \mathbf{I} - \mathbf{V}\mathbf{W}^{\dagger}$. 
+
+
 Additionally, $\LambdaC$ is defined as an $n\times n$ diagonal matrix consisting of the critical eigenvalues of $\Lu$, with the implicit assumption of diagonalizability of $\Lu$ within this subspace. The ordering of the eigenvalues in $\LambdaC$ and eigenvectors in $\mathbf{V}$ is consistent with each other such that $\Lu\mathbf{V} = \mathbf{V}\LambdaC$. 
 
 
@@ -350,9 +348,14 @@ where, $\mathbf{W}$ is the matrix of the adjoint critical eigenvectors of $\Lu^{
 	\label{eqn:extended_biorthogonal_matrices}
 	\mathbf{\widehat{W}}^{\dagger}\mathbf{\widehat{V}} = \mathbf{I}_{m}, 
 \end{align}
-where, $m = n+l+h$. This is the analogue of equation~\eqref{eqn:biorthogonal_matrices}, and is simply a statement of the biorthogonality relation between the direct and adjoint eigenvectors in the extended space. The projector into the stable subspace is given by,
+where, $m = n+l+h$. This is the analogue of equation~\eqref{eqn:biorthogonal_matrices}, and is simply a statement of the biorthogonality relation between the direct and adjoint eigenvectors in the extended space. The projection matrices into the critical and stable subspaces of $\ExtL$ are given by,
 \begin{align}
-	\label{eqn:extended_stable_projector}
+	\label{eqn:extended_projectors}
+	\mathbf{\widehat{P}} &= \mathbf{\widehat{V}}\mathbf{\widehat{W}}^{\dagger} \\
+	%
+	\implies \mathbf{\widehat{P}} &= \mathbf{\widehat{V}_{C}}\mathbf{\widehat{W}}^{\dagger}_{C} + \mathbf{\widehat{V}_{P}}\mathbf{\widehat{W}}^{\dagger}_{P} +
+	\mathbf{\widehat{V}_{H}}\mathbf{\widehat{W}}^{\dagger}_{H}, \nonumber \\
+	%
 	\mathbf{\widehat{Q}} &= \mathbf{I} - \mathbf{\widehat{V}}\mathbf{\widehat{W}}^{\dagger}, \\
 	\implies \mathbf{\widehat{Q}} &= \mathbf{I} - \mathbf{\widehat{V}_{C}}\mathbf{\widehat{W}}^{\dagger}_{C} - \mathbf{\widehat{V}_{P}}\mathbf{\widehat{W}}^{\dagger}_{P} -
 	\mathbf{\widehat{V}_{H}}\mathbf{\widehat{W}}^{\dagger}_{H}. \nonumber
@@ -373,60 +376,9 @@ which is a complex matrix of size $m\times m$. The diagonal elements of $\mathbf
 
 Note that due to the special structure of the adjoint parameter and forcing modes, the projection of the extended nonlinearity $\efield{f}_{NL}$ onto the subspace spanned by the (direct) parameter and forcing modes vanishes identically. That is to say $\mathbf{\widehat{W}}^{\dagger}_{P}\efield{f}_{NL} = \veczero$, and $\mathbf{\widehat{W}}^{\dagger}_{H}\efield{f}_{NL} = \veczero$. 
 
-Finally, note that extended variables vanish identically for fields which lie entirely in the stable subspace of $\ExtL$. 
+%Finally, note that extended variables vanish identically for fields which lie entirely in the stable subspace of $\ExtL$. 
 
-\begin{lemma}
-	\label{lemma:lemma1}
-	Given an extended system described by equation~\eqref{eqn:evolution_extended}, with a linearized operator $\ExtL$, given by equation~\eqref{eqn:linearized_operator_extended}, 
-	if a vector, $\efield{u} = [\vfield{u};\vecnu;\vectheta]$, is such that its projection onto the center-subspace of $\ExtL$ vanishes, then, the extended variables $\vecnu$ and $\vectheta$ must also vanish identically for $\efield{u}$. 
-\end{lemma}
 
-\begin{proof}
-	\label{proof:proof1}
-	A vector $\efield{u}$ whose components along the center-subspace vanish implies that $\mathbf{\widehat{W}}^{\dagger}\efield{u} = \veczero$, where $\mathbf{\widehat{W}} = [\mathbf{\widehat{W}}_{C}, \mathbf{\widehat{W}}_{P}, \mathbf{\widehat{W}}_{H}]$, are as deduced in sections~\ref{sec:extended_system} and \ref{sec:extended_subspace_structure}. 
-	\begin{align}
-		\therefore \mathbf{\widehat{W}}^{\dagger}\efield{u} =& \begin{bmatrix}
-			\mathbf{W}^{\dagger}\vfield{u} + \mathbf{Z}^{\dagger}_{P}\vecnu + \mathbf{Z}^{\dagger}_{H}\vectheta \\
-			\mathbf{I}^{\dagger}\vecnu \\
-			\mathbf{I}^{\dagger}\vectheta
-		\end{bmatrix} = \begin{bmatrix}
-		\veczero \\
-		\veczero \\
-		\veczero
-		\end{bmatrix}. 		\nonumber
-	\end{align}
-	For this to hold,
-	\begin{align}
-		\mathbf{I}^{\dagger}\vecnu = \veczero, \implies \vecnu = \veczero, \nonumber \\ \mathbf{I}^{\dagger}\vectheta = \veczero, \implies \vectheta = \veczero. \nonumber
-	\end{align}
-	Hence, both the extended variables $\vecnu$ and $\vectheta$ vanish identically.
-\end{proof}
-
-\begin{corollary}
-	\label{corollary:corollary1}
-	Given an extended system described by equation~\eqref{eqn:evolution_extended}, with a linearized operator $\ExtL$, given by equation~\eqref{eqn:linearized_operator_extended}, 
-	if a vector, $\efield{u} = [\vfield{u};\vecnu;\vectheta]$, is such that its projection onto the center-subspace of $\ExtL$ vanishes, then, the projection of $\vfield{u}$ onto the center-subspace of $\Lu$ also vanishes.
-\end{corollary}
-\begin{proof}
-	\label{proof:proof2}
-	For a vector $\efield{u}$ that satisfies $\mathbf{\widehat{W}}^{\dagger}\efield{u} = \veczero$, by lemma~\ref{lemma:lemma1}, both $\vecnu$ and $\vectheta$ vanish identically. 
-	\begin{align}
-		\therefore \mathbf{\widehat{W}}^{\dagger}\efield{u} =& \begin{bmatrix}
-			\mathbf{W}^{\dagger}\vfield{u} \\
-			\veczero \\
-			\veczero
-		\end{bmatrix} = \begin{bmatrix}
-			\veczero \\
-			\veczero \\
-			\veczero
-		\end{bmatrix}, 		\nonumber
-	\end{align}
-	which implies $\mathbf{W}^{\dagger}\vfield{u} = \veczero$.  However, $\mathbf{W}$ spans the center-subspace of $\Lu^{\dagger}$, and therefore $\mathbf{W}^{\dagger}\vfield{u}$ is the projection of $\vfield{u}$ onto the center-subspace of $\Lu$, which vanishes as required.
-\end{proof}
-
-A proof of corollary~\ref{corollary:corollary1} in the case of infinite dimensional systems with parameter extensions can be found in \cite{haragus11}. 
-
-%It is important to point out here that the extended variable $\vfield{\nu}$ identically vanishes in the stable subspace of the extended linear system $\ExtL$. This may be seen from the structure of the eigenmodes that were extended from the original system. The $\vfield{\nu}$ component of all such modes identically vanishes. It is only the parameter modes that contribute to the extended variables and these modes are part of the critical subspace. This may also be understood from the dynamics perspective. The stable subspace represents the time-dependent decaying part of the linearized solution. If the decaying solution contributes to $\vecnu$ then this would imply a time dependence of some (or all) of the parameters. This would contradict the trivial evolution equation for the parameter perturbations that was introduced. 
 
 
 
