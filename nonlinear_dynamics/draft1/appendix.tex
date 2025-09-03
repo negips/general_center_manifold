@@ -5,79 +5,77 @@
 \section{Symbolic simplification of the graph equation}
 \label{app:AppendixA}
 
-The structure of the problem emerging from the asymptotic approximation of the center manifold may be understood symbolically. This is illustrated at second order but the essential structure remains the same at higher orders. The second order terms in the power series of $\mathbf{x}$ can be represented symbolically as interaction terms from three sets of amplitudes $\mathbf{x}_{P}, \mathbf{x}_{R}$ and $\mathbf{x}_{I}$. So that the second-order asymptotic expansion of $\mathfrak{h}$ may be represented symbolically as
+The structure of the problem emerging from the asymptotic approximation of the center manifold may be understood symbolically. This is illustrated at second order but the essential structure remains the same at higher orders. The second order terms in the power series of $\mathbf{x}$ can be represented symbolically as interaction terms from three sets of amplitudes $\mathbf{x}_{C}, \mathbf{x}_{P}$ and $\mathbf{x}_{H}$. So that the second-order asymptotic expansion of $\mathfrak{h}$ may be represented symbolically as
 \begin{align}
 	\label{eqn:H2_symbolic}
 	\begin{split}
 		\mathfrak{h}_{(2)}(\mathbf{x}) =
-		& \mathbf{x}_{P,P}\vfield{y}_{P,P} + 
-		    \mathbf{x}_{P,R}\vfield{y}_{P,R} + \\  
-		& \mathbf{x}_{P,I}\vfield{y}_{P,I} + 
-		    \mathbf{x}_{R,R}\vfield{y}_{R,R} + \\
-		& \mathbf{x}_{R,I}\vfield{y}_{R,I} + 
-		    \mathbf{x}_{I,I}\vfield{y}_{I,I},
+		& \mathbf{X}_{C,C}\vfield{Y}_{C,C} + 
+		    \mathbf{X}_{C,P}\vfield{Y}_{C,P} + \\  
+		& \mathbf{X}_{C,H}\vfield{Y}_{C,H} + 
+		    \mathbf{X}_{P,P}\vfield{Y}_{P,P} + \\
+		& \mathbf{X}_{P,H}\vfield{Y}_{P,H} + 
+		    \mathbf{X}_{H,H}\vfield{Y}_{H,H},
 	\end{split} 
 \end{align}
-where, $\mathbf{x}_{P,R}\vfield{y}_{P,R}$ denotes all terms of the type $x_{\alpha}x_{\beta}y_{\alpha,\beta}$ with $x_{\alpha}\in \mathbf{x}_{P}, x_{\beta}\in \mathbf{x}_{R}$, and so on.
+where, $\mathbf{X}_{C,P}\vfield{Y}_{C,P}$ denotes all terms of the type $x_{i}x_{j}\vecy_{i,j}$ with $x_{i}\in \xbf_{C}, x_{j}\in \xbf_{P}$, and so on.
 
-The focus here is on the terms that are linear in the fields $\vecy_{a,b}$, which define the structure of the problem at each order, so that the simplification is carried out for the terms arising out of $(\partial \mathfrak{h}/\partial \mathbf{x})\cdot \mathbf{\widehat{K}}\mathbf{x} - (\mathbf{Q}\Lu\mathbf{Q})\mathfrak{h}$. Of these, only the first term results in a coupling between the various fields $\vfield{y}_{\alpha,\beta}$, while the second term, $(\mathbf{Q}\Lu\mathbf{Q})\mathfrak{h}$ provides no coupling. Keeping in mind the structure of $\mathbf{\widehat{K}}$ given by equation~\eqref{eqn:khat}, one obtains the following set of expressions from the expansion of the first term,
+The focus here is on the terms that are linear in the fields $\vecy_{\alpha,\beta}$, which define the structure of the problem at each order, so that the simplification is carried out for the terms arising out of $(\partial \Q\mathfrak{h}/\partial \mathbf{x})\cdot \Khat\mathbf{x} - (\Q\Lu\Q)\mathfrak{h}$. Of these, only the first term results in a coupling between the various fields $\vfield{y}_{\alpha,\beta}$, due to the off-diagonal elements of the reduced matrix $\Khat$, 
+while the second term, $(\Q\Lu\Q)\mathfrak{h}$ provides no coupling. Keeping in mind the structure of $\Khat$ given by equation~\eqref{eqn:khat}, one obtains the following set of expressions from the expansion of the first term, $(\partial \mathbf{Q}\mathfrak{h}_{(2)}/\partial \mathbf{x})\cdot \mathbf{\widehat{K}}\mathbf{x}$ the following set of terms,
 \begin{align}
 	\begin{split}
-		&\xbf_{P,P}(\LambdaP\vecy_{P,P} + \LambdaP\vecy_{P,P} + \Gamma\vecy_{P,R}) + \\
+		&\Xbf_{C,C}(\LambdaC + \LambdaC)\Q\Ybf_{C,C} + \\
 		%
-		&\xbf_{P,R}(\LambdaP\vecy_{P,R} + \Lambda_{R}\vecy_{P,R} + 2\Gamma\vecy_{R,R}) + \\
+		&\Xbf_{C,P}((\LambdaC + \LambdaP)\Q\Ybf_{C,P} + 2\GammaP\Q\Ybf_{C,C}) + \\
 		%
-		&\xbf_{P,I}(\LambdaP\vecy_{P,I} + \LambdaI\vecy_{P,I} + \Gamma\vecy_{R,I}) + \\
+		&\Xbf_{C,H}((\LambdaC + \LambdaH)\Q\Ybf_{C,H} + 2\GammaH\Q\Ybf_{C,C}) + \\
 		%
-		& \xbf_{R,R}(\LambdaR\vecy_{R,R} + \LambdaR\vecy_{R,R}) + \\
+		& \Xbf_{P,P}((\LambdaP + \LambdaP)\Q\Ybf_{P,P} + \GammaP\Q\Ybf_{C,P}) + \\
 		%
-		& \xbf_{R,I}(\LambdaR\vecy_{R,I} + \LambdaI\vecy_{R,I}) + \\
+		& \Xbf_{P,H}((\LambdaP + \LambdaH)\Q\Ybf_{P,H} + \LambdaH\Q\Ybf_{C,P} + \LambdaP\Q\Ybf_{C,H}) + \\
 		%
-		& \xbf_{I,I}(\LambdaI\vecy_{I,I} + \LambdaI\vecy_{I,I}).
+		& \xbf_{H,H}((\LambdaH + \LambdaH)\Q\Ybf_{H,H} + \GammaH\Q\Ybf_{C,H}).
 	\end{split}
 \end{align}
-The structure is easily understood when presenting the linear system of equations in matrix form,
+The structure of the asymptotic system is easily understood when presenting the linear system of equations in matrix form,
 \begin{widetext}
 	\begin{align}
 		\label{eqn:system_matrix_O2}
-		\left(
 		\begin{bmatrix}
-			(\LambdaP + \LambdaP) & \Gammabf & \zerobf & \zerobf & \zerobf & \zerobf \\ 
-			\zerobf & (\LambdaP + \LambdaR) & \zerobf & 2\Gammabf & \zerobf & \zerobf \\ 
-			\zerobf & \zerobf & (\LambdaP + \LambdaI) & \zerobf & \Gammabf & \zerobf \\ 
-			\zerobf & \zerobf & \zerobf & (\LambdaR + \LambdaR) & \zerobf & \zerobf \\ 
-			\zerobf & \zerobf & \zerobf & \zerobf & (\LambdaR + \LambdaI) & \zerobf \\ 
-			\zerobf & \zerobf & \zerobf & \zerobf & \zerobf & (\LambdaI + \LambdaI)
-		\end{bmatrix} -
-		(\mathbf{Q}\Lu\mathbf{Q})\mathbf{I}
-	%	(\mathbf{Q}\Lu\mathbf{Q})
-	%	\begin{bmatrix}
-	%		I & \zerobf & \zerobf & \zerobf & \zerobf & \zerobf \\ 
-	%		\zerobf & I & \zerobf & \zerobf & \zerobf & \zerobf \\ 
-	%		\zerobf & \zerobf & I & \zerobf & \zerobf & \zerobf \\ 
-	%		\zerobf & \zerobf & \zerobf & I & \zerobf & \zerobf \\ 
-	%		\zerobf & \zerobf & \zerobf & \zerobf & I & \zerobf \\ 
-	%		\zerobf & \zerobf & \zerobf & \zerobf & \zerobf & I
-	%	\end{bmatrix}
-		\right)
-		\begin{Bmatrix}
-			\vecy_{P,P} \\
-			\vecy_{P,R} \\
-			\vecy_{P,I} \\
-			\vecy_{R,R} \\
-			\vecy_{R,I} \\
-			\vecy_{I,I}
-		\end{Bmatrix}.
+			\LambdaC + \LambdaC - \Lu_{s} & \zerobf & \zerobf & \zerobf & \zerobf & \zerobf \\
+			% 
+			\GammaP + \GammaP & \LambdaC + \LambdaP - \Lu_{s} & \zerobf & \zerobf & \zerobf & \zerobf \\
+			%
+			\GammaH + \GammaH & \zerobf & \LambdaC + \LambdaH - \Lu_{s} & \zerobf & \zerobf & \zerobf \\ 
+			%
+			\zerobf & \GammaP & \zerobf & \LambdaP + \LambdaP - \Lu_{s} & \zerobf & \zerobf \\
+			%
+			\zerobf & \GammaH & \GammaP & \zerobf & \LambdaP + \LambdaH - \Lu_{s} & \zerobf \\ 
+			%
+			\zerobf & \zerobf & \GammaH & \zerobf & \zerobf & \LambdaH + \LambdaH - \Lu_{s}
+		\end{bmatrix}
+		\begin{bmatrix}
+			\Q\Ybf_{C,C} \\
+			\Q\Ybf_{C,P} \\
+			\Q\Ybf_{C,H} \\
+			\Q\Ybf_{P,P} \\
+			\Q\Ybf_{P,H} \\
+			\Q\Ybf_{H,H}
+		\end{bmatrix},
 	\end{align}	
 \end{widetext}
-The resulting linear system is upper-triangular so that all fields may be evaluated in a sequential manner using back substitution, starting from the last row of the matrix in equation~\eqref{eqn:system_matrix_O2}. An additional point to note is that only the fields that represent interactions of the parameter mode amplitudes $\xbf_{P}$ with other modes involve coupling terms, \ie, the fields of the type $\vecy_{P,P}, \vecy_{P,R}$ and $\vecy_{P,I}$ are coupled while, the fields of the type $\vecy_{R,R}, \vecy_{R,I}$ and $\vecy_{I,I}$ are completely decoupled. One may therefore generically write the equation for the evaluation of each field $\vecy_{\alpha,\beta}$ as,
-\begin{align}
+where, $\Lu_{s} = \Q\Lu$. The resulting linear system is lower-triangular so that all fields $\Ybf_{\alpha,\beta}$ may be evaluated in a sequential manner using back substitution. Obviously, the first row for $\Ybf_{C,C}$ has no off-diagonal blocks and can always be evaluated independent of the other fields. This represents all the fields of the type $\vecy_{i,j}$, where, $(i,j) \in \IndexSet{i,j}{1,n}$. One may therefore generically write the equation for the evaluation of each field $\vecy_{i,j}$ as,
+\begin{equation}
 	\label{eqn:coupled_fields_app}
-	(\widehat{\lambda}_{\alpha} + \widehat{\lambda}_{\beta})\vfield{y}_{\alpha,\beta} 
+	\begin{split}
+	(\widehat{\lambda}_{i} + \widehat{\lambda}_{j})\Q\vfield{y}_{i,j} 
 	%
-	- (\mathbf{Q}\Lu\mathbf{Q})\vfield{y}_{\alpha,\beta} = \vfield{g}_{\alpha,\beta} - \vfield{g}^{c}_{\alpha,\beta},
-\end{align}
-where, $\widehat{\lambda}_{i}$ is the $i^{th}$ element of $\widehat{\boldsymbol{\lambda}}$, which is vector of the diagonal values of $\mathbf{\widehat{K}}$. The inhomogeneous terms arising out of $\mathcal{G}$ are denoted as $\vfield{g}_{\alpha,\beta}$ and the coupling terms arising due to non-zero $\Gammabf$ are denoted as $\vfield{g}^{c}_{\alpha,\beta}$. When solving sequentially, the coupling terms are known a priori, and for $\alpha > l$, they vanish identically. 
+	- (\mathbf{Q}\Lu\mathbf{Q})\vfield{y}_{i,j} = \vfield{g}_{i,j} - \vfield{g}^{c}_{i,j}, \\
+	%
+	\forall\ (i,j) \in \IndexSet{i,j}{1,m},
+	\end{split}
+\end{equation}
+where, $\widehat{\lambda}_{i}$ is the $i^{th}$ element of $\widehat{\boldsymbol{\lambda}}$, which is vector of the diagonal elements of $\mathbf{\widehat{K}}$. The inhomogeneous terms arising out of $\mathcal{G}$ are denoted as $\vfield{g}_{i,j}$ and the coupling terms arising due to non-zero $\GammaP$ and $\GammaH$ are denoted as $\vfield{g}^{c}_{i,j}$. When solving sequentially, the coupling terms are known a priori, and for all $(i,j) \in \IndexSet{i,j}{1,n}$, they vanish identically. 
  
 
 

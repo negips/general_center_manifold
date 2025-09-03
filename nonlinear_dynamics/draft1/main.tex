@@ -19,6 +19,16 @@
 \usepackage{graphicx}
 \usepackage{placeins}
 \usepackage{subcaption}
+\usepackage{amsthm}			% Theorems
+
+
+%\theoremstyle{nonumberplain}   % note 1
+%\theorembodyfont{\normalfont}
+%\theoremseparator{:}           % note 2
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+%\newtheorem{proof}{Proof}
 
 \newcommand*{\dt}[1]{%
 	\accentset{\mbox{\large\bfseries .}}{#1}}
@@ -60,9 +70,15 @@
 
 \newcommand{\fancy}[1]{{\color{white}\contour{black}{#1}}}
 
+\newcommand\IndexSet[2]{
+	\bm{\mathcal{I}}\{(#1),[#2]\}
+	}
+
+
 \def\vecU{\vfield{U}}
 \def\vecUb{\vfield{U^{b}}}
 \def\vecPb{\pfield{P^{b}}}
+\def\veczero{\vfield{0}}
 \def\vecu{\vfield{u}}
 \def\vecv{\vfield{v}}
 \def\vecw{\vfield{w}}
@@ -74,10 +90,16 @@
 \def\vecnu{\vfield{\nu}}
 \def\vecMu{\vfield{\mu^{b}}}
 \def\vectheta{\vfield{\theta}}
-\def\Lu{\mathcal{L}_{\vecU}}
-\def\Lmu{\mathcal{L}_{\vecmu}}
-\def\Ltheta{\mathcal{L}_{\vectheta}}
-\def\ExtL{\mathcal{\widehat{L}}}
+
+\def\Lu{\mathbf{L}}
+\def\Lmu{\mathbf{L}_{\vecmu}}
+\def\Ltheta{\mathbf{L}_{\vectheta}}
+\def\ExtL{\mathbf{\widehat{L}}}
+
+%\def\Lu{\mathcal{L}_{\vecU}}
+%\def\Lmu{\mathcal{L}_{\vecmu}}
+%\def\Ltheta{\mathcal{L}_{\vectheta}}
+%\def\ExtL{\mathcal{\widehat{L}}}
 
 \def\bcdot{\boldsymbol{\cdot}}
 \def\ie{\textit{i.e.}}
@@ -88,16 +110,29 @@
 \def\invRec{\inv{Re_{c}}}
 \def\Rey{\mathrm{Re}}
 
+
 \def\Lambdabf{\mathbf{\Lambda}}
 \def\LambdaC{\Lambdabf_{C}}
 \def\LambdaP{\Lambdabf_{P}}
 \def\LambdaH{\Lambdabf_{H}}
 \def\LambdaR{\Lambdabf_{R}}
 \def\LambdaI{\Lambdabf_{I}}
+
+\def\Gammabf{\mathbf{\Gamma}}
+\def\GammaP{\Gammabf_{P}}
+\def\GammaH{\Gammabf_{H}}
+
+\def\Q{\mathbf{Q}}
+\def\Qhat{\mathbf{\widehat{Q}}}
+\def\Khat{\mathbf{\widehat{K}}}
+
+
+\def\Xbf{\mathbf{X}}
+\def\Ybf{\mathbf{Y}}
 \def\xbf{\mathbf{x}}
 \def\zbf{\mathbf{z}}
 \def\zerobf{\mathbf{0}}
-\def\Gammabf{\mathbf{\Gamma}}
+
 \def\Lap{\nabla^{2}}
 
 %\def\bigblbracket{\boldsymbol{\left\lceil}}
@@ -131,8 +166,9 @@ The extension is done in a very general setting and it is shown that the consequ
 
 %\input{intro}
 \input{derivation_p1}
-%\input{ginzburg_landau}
-%\input{appendix}
+\input{derivation_graph}
+\input{ginzburg_landau}
+\input{appendix}
 
 \FloatBarrier
 

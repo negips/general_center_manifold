@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2024/Arch Linux)
+This is BibTeX, Version 0.99d (TeX Live 2025)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: apalike.bst
@@ -9,45 +9,45 @@ I was expecting a `,' or a `}'---line 31 of file references.bib
  :  publisher={Springer}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You've used 13 entries,
+You've used 14 entries,
             1935 wiz_defined-function locations,
-            555 strings with 5474 characters,
-and the built_in function-call counts, 4563 in all, are:
-= -- 443
-> -- 126
-< -- 13
-+ -- 38
-- -- 38
-* -- 377
-:= -- 802
-add.period$ -- 39
-call.type$ -- 13
-change.case$ -- 80
-chr.to.int$ -- 13
-cite$ -- 13
-duplicate$ -- 182
-empty$ -- 364
-format.name$ -- 59
-if$ -- 894
+            559 strings with 5621 characters,
+and the built_in function-call counts, 4879 in all, are:
+= -- 472
+> -- 139
+< -- 14
++ -- 42
+- -- 42
+* -- 400
+:= -- 859
+add.period$ -- 42
+call.type$ -- 14
+change.case$ -- 86
+chr.to.int$ -- 14
+cite$ -- 14
+duplicate$ -- 196
+empty$ -- 387
+format.name$ -- 66
+if$ -- 956
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 17
-newline$ -- 68
-num.names$ -- 39
-pop$ -- 65
+missing$ -- 19
+newline$ -- 73
+num.names$ -- 42
+pop$ -- 74
 preamble$ -- 1
-purify$ -- 84
+purify$ -- 91
 quote$ -- 0
-skip$ -- 140
+skip$ -- 150
 stack$ -- 0
-substring$ -- 363
-swap$ -- 14
+substring$ -- 375
+swap$ -- 15
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 70
+type$ -- 74
 warning$ -- 0
-while$ -- 38
+while$ -- 40
 width$ -- 0
-write$ -- 168
+write$ -- 180
 (There was 1 error message)
