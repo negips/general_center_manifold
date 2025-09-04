@@ -7,35 +7,35 @@
 \subsection{Normal Form}
 \label{sec:normal_form}
 
-In the context of invariant manifold theory, most previous approaches for the approximation of such manifolds can be viewed effectively as instances of what is referred to as the parametrization method. The framework was introduced in a series of papers by \cite{cabre03a,cabre03b,cabre05}, although, a particular instance of such an approach was presented earlier by \cite{coullet83} for the evaluation of the normal form of center manifolds. Nevertheless, subsequent works by \cite{carini15,jain22,negi24} can be fruitfully viewed through the lens of the parameterization method. Within this framework the reduced representation of the invariant manifold being approximated can be chosen in an arbitrary manner depending on the particular requirements of the reduction being sought. Amongst the plethora of arbitrary choices, the normal form is an important representation that is often sought since it represents the simplest form of the reduced equations. In this context, it can be shown that for asymptotic normal form evaluation of the extended system the calculations involve only the resolvents of the original linear system and therefore all existing algorithms may be utilized for the calculations. 
+In the context of invariant manifold theory, most previous approaches for the approximation of such manifolds can be viewed effectively as instances of what is referred to as the parametrization method. The framework was introduced in a series of papers by \citet{cabre03a,cabre03b,cabre05}, although, a particular instance of such an approach was presented earlier by \citet{coullet83} for the evaluation of the normal form of center manifolds. Nevertheless, subsequent works by \citet*{carini15,jain22,negi24} can be fruitfully viewed through the lens of the parameterization method. Within this framework the reduced representation of the invariant manifold being approximated can be chosen in an arbitrary manner depending on the particular requirements of the reduction being sought. Amongst the plethora of arbitrary choices, the normal form is an important representation that is often sought since it represents the simplest form of the reduced equations. In this context, it can be shown that for asymptotic normal form evaluation of the extended system the calculations involve only the resolvents of the original linear system and therefore all existing algorithms may be utilized for the calculations. 
 
-To simplify notation for multiple indices used hereafter, a multi-dimensional index set $\IndexSet{i,j,k,\ldots}{a,b}$ is introduced, which is an ordered set of all multi-dimensional indices $(i,j,k,\ldots)$, defined as 
+To simplify notation for multiple indices used hereafter, a multi-dimensional index set $\IndexSet{k}{a,b}$ is introduced, which is an ordered set of all  $k$-indices $(i_{1},i_{2}\ldots,i_{k})$, defined as 
 \begin{equation}
 	\label{eqn:index_set}
 	\begin{split}
-		\IndexSet{i,j,k,\ldots}{a,b} \coloneq &  \bm{\lbrace} (i,j,k,\ldots)\ \bm{|}\ i,j,k,a,b \in\mathds{N}, \\
-		& \forall\ a\le i \le b,\ i\le j \le b ,		\\
-		& j\le k \le b,  \ldots \bm{\rbrace},
+		\IndexSet{k}{a,b} \coloneq &  \bm{\lbrace} (i_{1},i_{2}\ldots,i_{k})\ \bm{|}\ a,b \in \mathds{N}, \\
+		& i_{1},i_{2}\ldots,i_{k} \in\mathds{N}, \\
+		& a\le i_{i} \le b,\\
+		& i_{1}\le i_{2} \le b, \\
+		& \ldots, \\
+		& i_{k-1}\le i_{k} \le b. \bm{\rbrace},
 	\end{split}
 \end{equation}
-%\begin{equation}
-%	\label{eqn:index_set}
-%	\IndexSet{i,j,k,\ldots}{a,b} \coloneq \left\lbrace
-%	\begin{tabular}{c | l}
-	%									 & $i,j,k,a,b \in \mathds{N}$, \\
-	%		 							 & $a\le i \le b$,       					\\
-	%	$(i,j,k,\ldots)$	 & $i\le j \le b $,						     \\
-	%									 & $j\le k \le b$,  					   \\
-	%									 &  $\ldots$
-	%	\end{tabular}\right\rbrace,
-%\end{equation}
-where, $i,j,k,\ldots$, are the index variables and $[a,b]$ specify the lower and upper bounds of the indices. Note that the higher index always starts from the previous index.
-Hence the index-set $\IndexSet{i,j}{1,3}$ is the set containing the tuples, $\{(1,1), (1,2), (1,3), (2,2), (2,3), (3,3)\}$. Similarly, multiple nested summations are denoted as,
+where, $i_{1},i_{2},\ldots,i_{k}$, are the index variables and $[a,b]$ specify the lower and upper bounds of the indices. Note that the higher index always starts from the previous index. Hence the index-set $\IndexSet{2}{1,3}$ is the set containing the tuples, $(i_{1},i_{2}) \in \{(1,1), (1,2), (1,3), (2,2), (2,3), (3,3)\}$. Similarly, multiple nested summations are denoted as,
 \begin{equation}
 	\label{eqn:summation}
-	\sum_{(i,j,k,\ldots)}^{[a,b]} = \sum_{i=a}^{b}\sum_{j=i}^{b}\sum_{k=j}^{b}\ldots
+	\sum_{(k)}^{[a,b]} = \sum_{i_{1}=a}^{b}\ \sum_{i_{2}=i_{1}}^{b}\ldots\sum_{i_{k}=i_{k-1}}^{b}
 \end{equation}
-As before, the higher index starts from the previous index.
+As before, the higher index starts from the previous index. For the asymptotic expansions we will typically have $a=1$ and $b=m$, where $m$ is the dimension of the manifold. In this scenario the number of tuples in a multi-index tuple set $\IndexSet{k}{1,m}$ is analytically known to be $T_{k} = C(m+k-1,k)$, where, 
+\begin{align}
+	\label{eqn:binomial}
+	C(n,k) = \binom{n}{k} = \dfrac{n!}{k! (n-k)!},
+\end{align}
+defines the binomial coefficient of $n$ and $k$. For example for a critical subspace dimension of $m=4$ one obtains $T_{2} = 10$ unknown fields $\vfield{y}_{a,b}$ at second order $(k=2)$ and, $T_{3} = 20$ unknown fields $\vfield{y}_{a,b,c}$ at third order $(k=3)$.
+
+
+
+
 
 
 Section~\ref{sec:extended_system} and \ref{sec:extended_subspace_structure} outline the spectral properties of the system when extended to include the parameters as dynamic variables. Effectively the size of the critical subspace increases and, the eigen-structure of the extended linearized system $\ExtL$ can be deduced from the spectral properties of the original linear system $\Lu$. The critical subspace of the new system is of dimension $m=n+l+h$. The center-manifold theorem can be applied to this extended system given by equation~\eqref{eqn:evolution_extended_compact} so that both parameter perturbations and harmonic forcings are directly incorporated into the larger center-manifold. 

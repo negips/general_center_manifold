@@ -1,42 +1,8 @@
 \section{Center Manifold for the extended system}
 \label{sec:center_manifold_derivation}
 
-%\subsection{Normal Form Approximation}
-%\label{sec:normal_1}
-
-\subsection{Normal Form}
-\label{sec:normal_form}
-
-In the context of invariant manifold theory, most previous approaches for the approximation of such manifolds can be viewed effectively as instances of what is referred to as the parametrization method. The framework was introduced in a series of papers by \cite{cabre03a,cabre03b,cabre05}, although, a particular instance of such an approach was presented earlier by \cite{coullet83} for the evaluation of the normal form of center manifolds. Nevertheless, subsequent works by \cite{carini15,jain22,negi24} can be fruitfully viewed through the lens of the parameterization method. Within this framework the reduced representation of the invariant manifold being approximated can be chosen in an arbitrary manner depending on the particular requirements of the reduction being sought. Amongst the plethora of arbitrary choices, the normal form is an important representation that is often sought since it represents the simplest form of the reduced equations. In this context, it can be shown that for asymptotic normal form evaluation of the extended system the calculations involve only the resolvents of the original linear system and therefore all existing algorithms may be utilized for the calculations. 
-
-To simplify notation for multiple indices used hereafter, a multi-dimensional index set $\IndexSet{i,j,k,\ldots}{a,b}$ is introduced, which is an ordered set of all multi-dimensional indices $(i,j,k,\ldots)$, defined as 
-\begin{equation}
-	\label{eqn:index_set}
-	\begin{split}
-		\IndexSet{i,j,k,\ldots}{a,b} \coloneq &  \bm{\lbrace} (i,j,k,\ldots)\ \bm{|}\ i,j,k,a,b \in\mathds{N}, \\
-		& \forall\ a\le i \le b,\ i\le j \le b ,		\\
-		& j\le k \le b,  \ldots \bm{\rbrace},
-	\end{split}
-\end{equation}
-%\begin{equation}
-%	\label{eqn:index_set}
-%	\IndexSet{i,j,k,\ldots}{a,b} \coloneq \left\lbrace
-%	\begin{tabular}{c | l}
-	%									 & $i,j,k,a,b \in \mathds{N}$, \\
-	%		 							 & $a\le i \le b$,       					\\
-	%	$(i,j,k,\ldots)$	 & $i\le j \le b $,						     \\
-	%									 & $j\le k \le b$,  					   \\
-	%									 &  $\ldots$
-	%	\end{tabular}\right\rbrace,
-%\end{equation}
-where, $i,j,k,\ldots$, are the index variables and $[a,b]$ specify the lower and upper bounds of the indices. Note that the higher index always starts from the previous index.
-Hence the index-set $\IndexSet{i,j}{1,3}$ is the set containing the tuples, $\{(1,1), (1,2), (1,3), (2,2), (2,3), (3,3)\}$. Similarly, multiple nested summations are denoted as,
-\begin{equation}
-	\label{eqn:summation}
-	\sum_{(i,j,k,\ldots)}^{[a,b]} = \sum_{i=a}^{b}\sum_{j=i}^{b}\sum_{k=j}^{b}\ldots
-\end{equation}
-As before, the higher index starts from the previous index.
-
+\subsection{Graph Equation}
+\label{sec:graph_equation}
 
 Section~\ref{sec:extended_system} and \ref{sec:extended_subspace_structure} outline the spectral properties of the system when extended to include the parameters as dynamic variables. Effectively the size of the critical subspace increases and, the eigen-structure of the extended linearized system $\ExtL$ can be deduced from the spectral properties of the original linear system $\Lu$. The critical subspace of the new system is of dimension $m=n+l+h$. The center-manifold theorem can be applied to this extended system given by equation~\eqref{eqn:evolution_extended_compact} so that both parameter perturbations and harmonic forcings are directly incorporated into the larger center-manifold. 
 
@@ -142,33 +108,33 @@ which defines the center-manifold for the system governed by equation~\eqref{eqn
 \subsection{Asymptotic Approximation}
 \label{sec:asymptotic_center_manifold}
 
-%To simplify notation for multiple indices used hereafter, a multi-dimensional index set $\IndexSet{i,j,k,\ldots}{a,b}$ is introduced, which is an ordered set of all multi-dimensional indices $(i,j,k,\ldots)$, defined as 
+To simplify notation for multiple indices used hereafter, a multi-dimensional index set $\IndexSet{i,j,k,\ldots}{a,b}$ is introduced, which is an ordered set of all multi-dimensional indices $(i,j,k,\ldots)$, defined as 
+\begin{equation}
+	\label{eqn:index_set}
+	\begin{split}
+		\IndexSet{i,j,k,\ldots}{a,b} \coloneq &  \bm{\lbrace} (i,j,k,\ldots)\ \bm{|}\ i,j,k,a,b \in\mathds{N}, \\
+					 & \forall\ a\le i \le b,\ i\le j \le b ,		\\
+					& j\le k \le b,  \ldots \bm{\rbrace},
+	\end{split}
+\end{equation}
 %\begin{equation}
 %	\label{eqn:index_set}
-%	\begin{split}
-%		\IndexSet{i,j,k,\ldots}{a,b} \coloneq &  \bm{\lbrace} (i,j,k,\ldots)\ \bm{|}\ i,j,k,a,b \in\mathds{N}, \\
-%					 & \forall\ a\le i \le b,\ i\le j \le b ,		\\
-%					& j\le k \le b,  \ldots \bm{\rbrace},
-%	\end{split}
+%	\IndexSet{i,j,k,\ldots}{a,b} \coloneq \left\lbrace
+%	\begin{tabular}{c | l}
+%									 & $i,j,k,a,b \in \mathds{N}$, \\
+%		 							 & $a\le i \le b$,       					\\
+%	$(i,j,k,\ldots)$	 & $i\le j \le b $,						     \\
+%									 & $j\le k \le b$,  					   \\
+%									 &  $\ldots$
+%	\end{tabular}\right\rbrace,
 %\end{equation}
-%%\begin{equation}
-%%	\label{eqn:index_set}
-%%	\IndexSet{i,j,k,\ldots}{a,b} \coloneq \left\lbrace
-%%	\begin{tabular}{c | l}
-%%									 & $i,j,k,a,b \in \mathds{N}$, \\
-%%		 							 & $a\le i \le b$,       					\\
-%%	$(i,j,k,\ldots)$	 & $i\le j \le b $,						     \\
-%%									 & $j\le k \le b$,  					   \\
-%%									 &  $\ldots$
-%%	\end{tabular}\right\rbrace,
-%%\end{equation}
-%where, $i,j,k,\ldots$, are the index variables and $[a,b]$ specify the lower and upper bounds of the indices. Note that the higher index always starts from the previous index.
-%Hence the index-set $\IndexSet{i,j}{1,3}$ is the set containing the tuples, $\{(1,1), (1,2), (1,3), (2,2), (2,3), (3,3)\}$. Similarly, multiple nested summations are denoted as,
-%\begin{equation}
-%	\label{eqn:summation}
-%	\sum_{(i,j,k,\ldots)}^{[a,b]} = \sum_{i=a}^{b}\sum_{j=i}^{b}\sum_{k=j}^{b}\ldots
-%\end{equation}
-%As before, the higher index starts from the previous index.
+where, $i,j,k,\ldots$, are the index variables and $[a,b]$ specify the lower and upper bounds of the indices. Note that the higher index always starts from the previous index.
+Hence the index-set $\IndexSet{i,j}{1,3}$ is the set containing the tuples, $\{(1,1), (1,2), (1,3), (2,2), (2,3), (3,3)\}$. Similarly, multiple nested summations are denoted as,
+\begin{equation}
+	\label{eqn:summation}
+	\sum_{(i,j,k,\ldots)}^{[a,b]} = \sum_{i=a}^{b}\sum_{j=i}^{b}\sum_{k=j}^{b}\ldots
+\end{equation}
+As before, the higher index starts from the previous index.
 
 The graph equation for the solution in stable subspace obtained in equation~\eqref{eqn:graph_equation} is in general a highly non-linear equation and typically can not be solved analytically. As an alternative, $\mathfrak{h}$ may be approximated asymptotically via a power series in $\mathbf{x}$ as, 
 \begin{align}

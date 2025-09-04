@@ -1,4 +1,4 @@
-\documentclass[aps,prr,twocolumn,groupedaddress]{revtex4-2}
+\documentclass[iicol,vancouver-num]{sn-jnl}
 
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -9,10 +9,10 @@
 %\usepackage{logix}
 \usepackage{mathtools}
 \usepackage{dsfont}
-\usepackage[square,numbers]{natbib}
-\usepackage[hidelinks]{hyperref}
-\usepackage{tikz}
-\usepackage[bb=stix,bfbb]{mathalpha}
+\usepackage[numbers]{natbib}
+%\usepackage[hidelinks]{hyperref}
+%\usepackage{tikz}
+%\usepackage[bb=stix,bfbb]{mathalpha}
 %\usepackage{bbold}
 \usepackage{bm}
 
@@ -33,12 +33,12 @@
 \newcommand*{\dt}[1]{%
 	\accentset{\mbox{\large\bfseries .}}{#1}}
 
-\newcommand{\obliquesymbol}[1]{%
-	\begin{tikzpicture}[#1]%
-		\draw (0,0) -- (1.0ex,0);%
-		\draw (0.5ex,0) -- (1.0ex,0.8ex);%
-	\end{tikzpicture}%
-}
+%\newcommand{\obliquesymbol}[1]{%
+%	\begin{tikzpicture}[#1]%
+%		\draw (0,0) -- (1.0ex,0);%
+%		\draw (0.5ex,0) -- (1.0ex,0.8ex);%
+%	\end{tikzpicture}%
+%}
 
 \graphicspath{{imgs/}{imgs2/}}
 
@@ -96,10 +96,6 @@
 \def\Ltheta{\mathbf{L}_{\vectheta}}
 \def\ExtL{\mathbf{\widehat{L}}}
 
-%\def\Lu{\mathcal{L}_{\vecU}}
-%\def\Lmu{\mathcal{L}_{\vecmu}}
-%\def\Ltheta{\mathcal{L}_{\vectheta}}
-%\def\ExtL{\mathcal{\widehat{L}}}
 
 \def\bcdot{\boldsymbol{\cdot}}
 \def\ie{\textit{i.e.}}
@@ -135,8 +131,6 @@
 
 \def\Lap{\nabla^{2}}
 
-%\def\bigblbracket{\boldsymbol{\left\lceil}}
-%\def\bigbrbracket{\boldsymbol{\right\rceil}}
 
 \DeclarePairedDelimiter{\vpceil}{\boldsymbol{\lceil}}{\boldsymbol{\rceil}}
 \DeclareBoldMathCommand\bigblbracket{\left\lceil}
@@ -147,20 +141,22 @@
 \begin{document}
 	
 %opening
-\title{Asymptotic center--manifold for systems with parameter perturbations}
-\author{Prabal S. Negi}
-\email[]{prabal.negi@oist.jp}
+\title[Asymptotic center--manifold]{Asymptotic center--manifold for systems with parameter perturbations}
+\author*[]{\fnm{Prabal} S. \sur{Negi}}\email{prabal.negi@oist.jp}
+
+%\author{Prabal S. Negi}
+%\email[]{prabal.negi@oist.jp}
 %\homepage[]{Your web page}
 %\thanks{}
 %\altaffiliation{}
-\affiliation{Okinawa Institute of Science and Technology Graduate University, Onna, Okinawa 904-0495, Japan}
+\affil[]{Okinawa Institute of Science and Technology Graduate University, Onna, Okinawa 904-0495, Japan}
 
 \date{\today}
 
-\begin{abstract}
+\abstract{
 Asymptotic center-manifold approximations are constructed for systems that have been perturbed slightly away from the bifurcation point in the parameter space. This is done by extending the existing system to include parameter perturbations as dynamic variables, leading to an extended critical subspace and dimensionality of the center-manifold. 
 The extension is done in a very general setting and it is shown that the consequences of such a system extension are non-trivial. The extended critical subspace has a certain structure associated with it, which may be deduced from the original system. The application of the center-manifold theorem to the extended system leads to a graph equation which rigorously valid in the vicinity of the bifurcation point (even in parameter space). The graph equation is approximated as an asymptotic power series in the amplitudes of the critical eigenmodes leading to general expressions for restricted resolvent solutions for the various terms in the power series at each order. A Ginzburg-Landau model near bifurcation is used to demonstrate the validity of the asymptotic center-manifold in the extended space.
-\end{abstract}
+}
 
 \maketitle
 
