@@ -10,8 +10,8 @@ Consider a system with its state variable denoted by $\vecU$, consisting of $l$ 
 	\frac{\partial \vecU}{\partial t} = \vecf(\vecU,\vecmu).
 	\label{eqn:evolution0}
 \end{equation}
-The evolution law may be a finite set of ordinary differential equations or, an infinite dimensional partial differential equation as often arises for the space-time evolution of physical systems. Typically, physical systems will have real parameters $\vecmu$ however, allowing for complex parameters presents no additional difficulty and we assume that $\vecmu \in \mathds{C}^{l}$. 
-For a certain set of parameter values $\vecmu = \vecMu$, the system is assumed to have a fixed point for a state vector $\vecUb$ satisfying
+The system state $\vecU$ is $N$-dimensional where, $N$ is assumed to be large. 
+The evolution law may arise from a finite set of ordinary differential equations or, may be a finite representation of an infinite dimensional partial differential equation as often arises from the numerical discretization of the space-time evolution equations of physical systems. Typically, physical systems will have real parameters $\vecmu$ however, allowing for complex parameters presents no additional difficulty and we assume that $\vecmu \in \mathds{C}^{l}$. For a certain set of parameter values $\vecmu = \vecMu$, the system is assumed to have a fixed point for a state vector $\vecUb$ satisfying
 \begin{equation}
 	0 = \vecf(\vecUb,\vecMu).
 	\label{eqn:fixed_point}
@@ -374,7 +374,12 @@ Finally, a reduced matrix representing the oblique projection of the extended li
 \end{eqnarray}
 which is a complex matrix of size $m\times m$. The diagonal elements of $\mathbf{\widehat{K}}$ represent the eigenvalues of the reduced system, that are the critical eigenvalues of the extended system, and may be represented by the vector $\widehat{\boldsymbol{\lambda}} = diag(\mathbf{\widehat{K}})$. 
 
-Note that due to the special structure of the adjoint parameter and forcing modes, the projection of the extended nonlinearity $\efield{f}_{NL}$ onto the subspace spanned by the (direct) parameter and forcing modes vanishes identically. That is to say $\mathbf{\widehat{W}}^{\dagger}_{P}\efield{f}_{NL} = \veczero$, and $\mathbf{\widehat{W}}^{\dagger}_{H}\efield{f}_{NL} = \veczero$. 
+Note that due to the special structure of the adjoint parameter and forcing modes, the projection of the extended nonlinearity $\efield{f}_{NL}$ onto the subspace spanned by the (direct) parameter and forcing modes vanishes identically. That is to say,
+\begin{align}
+		\label{eqn:vanishing_extended_fhat}
+		\mathbf{\widehat{W}}^{\dagger}_{P}\efield{f}_{NL} = \veczero, && \mathbf{\widehat{W}}^{\dagger}_{H}\efield{f}_{NL} = \veczero. 
+\end{align}
+ 
 
 %Finally, note that extended variables vanish identically for fields which lie entirely in the stable subspace of $\ExtL$. 
 
