@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.16)  5 SEP 2025 19:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.16)  6 SEP 2025 21:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -913,9 +913,9 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [6]
-Underfull \hbox (badness 1092) in paragraph at lines 18--20
-\OT1/cmr/m/n/10 [\OML/cmm/m/it/10.03749 a; b\OT1/cmr/m/n/10 ]$ spec-ify the low
-er and upper bounds of
+Underfull \hbox (badness 2538) in paragraph at lines 18--20
+\OT1/cmr/m/n/10 is the set con-tain-ing the tuples, $(\OML/cmm/m/it/10.03749 i[
+]; i[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10.03749 2
  []
 
 
@@ -938,9 +938,31 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [7]
-Overfull \hbox (1.49847pt too wide) detected at line 88
+Overfull \hbox (2.46161pt too wide) detected at line 88
 []
  []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 91.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 91.
+
+
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 108.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 108.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 108.
 
 ) (./main.bbl
 Underfull \hbox (badness 6842) in paragraph at lines 16--21
@@ -951,8 +973,6 @@ Underfull \hbox (badness 6842) in paragraph at lines 16--21
 Underfull \hbox (badness 1694) in paragraph at lines 23--28
 []\OT1/cmr/m/n/10 D. Sipp and A. Lebe-dev.  Global sta-
  []
-
-
 
 
 Underfull \hbox (badness 1052) in paragraph at lines 30--35
@@ -980,14 +1000,6 @@ Underfull \hbox (badness 2608) in paragraph at lines 53--57
  []
 
 
-Underfull \hbox (badness 4505) in paragraph at lines 66--69
-\OT1/cmr/m/n/10 for the navier--stokes.  \OT1/cmr/m/it/10.03749 arXiv preprint
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -998,13 +1010,21 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [8]
+Underfull \hbox (badness 4505) in paragraph at lines 66--69
+\OT1/cmr/m/n/10 for the navier--stokes.  \OT1/cmr/m/it/10.03749 arXiv preprint
+ []
+
+
 Underfull \hbox (badness 7963) in paragraph at lines 112--117
 \OT1/cmr/m/n/10 band-width, finite ampli-tude con-vec-tion.
  []
 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
 )
-
-
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1014,24 +1034,22 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 []| []
  []
 
-[9
-
-] (./main.aux)
+[9] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-03-26>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 7AB0D13E52FD850F06464ECB3E0CED22;1462.
+(rerunfilecheck)             Checksum: DC1F14D4E54E70B9A5340D4BE03E50E2;1890.
  ) 
 Here is how much of TeX's memory you used:
- 14694 strings out of 469626
- 234422 string characters out of 5471010
- 653346 words of memory out of 5000000
- 41148 multiletter control sequences out of 15000+600000
+ 14707 strings out of 469626
+ 234655 string characters out of 5471010
+ 653607 words of memory out of 5000000
+ 41154 multiletter control sequences out of 15000+600000
  650899 words of font info for 132 fonts, out of 8000000 for 9000
  1151 hyphenation exceptions out of 8191
- 90i,20n,131p,1533b,580s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,20n,131p,1533b,566s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pf
 b></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy
 7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10
@@ -1062,10 +1080,10 @@ ve/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive
 25/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb></usr/local/texlive/2
 025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive
 /2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on main.pdf (9 pages, 357135 bytes).
+Output written on main.pdf (9 pages, 359783 bytes).
 PDF statistics:
- 382 PDF objects out of 1000 (max. 8388607)
- 307 compressed objects within 4 object streams
- 101 named destinations out of 1000 (max. 500000)
- 65 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 398 PDF objects out of 1000 (max. 8388607)
+ 323 compressed objects within 4 object streams
+ 108 named destinations out of 1000 (max. 500000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 

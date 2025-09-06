@@ -16,7 +16,7 @@ To simplify notation for multiple indices used hereafter, a multi-dimensional in
 		& \ldots, \  i_{k-1}\le i_{k} \le b. \bm{\rbrace},
 	\end{split}
 \end{equation}
-where, $i_{1},i_{2},\ldots,i_{k}$, are the index variables and $[a,b]$ specify the lower and upper bounds of the indices. Note that the higher index always starts from the previous index. Hence the index-set $\IndexSet{2}{1,3}$ is the set containing the tuples, $(i_{1},i_{2}) \in \{(1,1), (1,2), (1,3), (2,2), (2,3), (3,3)\}$. Similarly, multiple nested summations are denoted as,
+where, $i_{1},i_{2},\ldots,i_{k}$, are the index variables and $[a,b]$ specify the lower and upper bounds of the indices. Obviously the indices $i_{1}$ \etc\ are dummy indices however their ordering is important since the higher index always starts from the previous index. Hence the index-set $\IndexSet{2}{1,3}$ is the set containing the tuples, $(i_{1},i_{2}) \in \{(1,1), (1,2), (1,3), (2,2), (2,3), (3,3)\}$. Similarly, multiple nested summations are denoted as,
 \begin{equation}
 	\label{eqn:summation}
 	\sum_{(k)}^{[a,b]} = \sum_{i_{1}=a}^{b}\ \sum_{i_{2}=i_{1}}^{b}\ldots\sum_{i_{k}=i_{k-1}}^{b}
@@ -79,7 +79,7 @@ resulting in,
 \begin{align}
 	\label{eqn:asymptotic_substitution}
 	\begin{split}
-		\sum^{m}_{\alpha=1}\dfrac{\partial }{\partial x_{\alpha}}\Big(\sum^{[1,m]}_{(1)}\yhatbf_{i_{1}}x_{i_{1}} + \ldots \Big)	 \Big(\sum^{[1,m]}_{(1)}\AsParam^{\alpha}_{i_{1}}x_{i_{1}} +\ldots \Big)= \\
+		\sum^{m}_{\alpha=1}\dfrac{\partial }{\partial x_{\alpha}}\Big(\sum^{[1,m]}_{(1)}\yhatbf_{i_{1}}x_{i_{1}} + \ldots \Big)	 \Big(\sum^{[1,m]}_{(1)}\AsParam^{\alpha}_{j_{1}}x_{j_{1}} +\ldots \Big)= \\
 		%
 		\ExtL\Big(\sum^{[1,m]}_{(1)}\yhatbf_{i_{1}}x_{i_{1}} + \ldots \Big)  +
 		% 
@@ -88,15 +88,28 @@ resulting in,
 \end{align}
 Here $\AsParam^{\alpha}_{i_{1}}$ represents the $\alpha^{th}$ element of the vector $\AsParam_{i_{1}}$. 
 
+\subsubsection{Asymptotic terms of $\mathcal{O}(|x|)$}
+\label{sec:normal_form_O1}
+
 At first order the non-linear terms do not contribute and one simply obtains,
 \begin{align}
-	\label{eqn:asymptotic_solutions_O1}
-		\sum^{m}_{\alpha=1}\Big(\yhatbf_{\alpha} \sum^{[1,m]}_{(1)}\AsParam^{\alpha}_{i_{1}}x_{i_{1}} \Big)= 
-		%
-		\ExtL\Big(\sum^{[1,m]}_{(1)}\yhatbf_{i_{1}}x_{i_{1}}\Big)  \nonumber \\
-		%
-		\implies \sum^{[1,m]}_{(1)}\Big( \sum^{m}_{\alpha=1}\yhatbf_{\alpha}\AsParam^{\alpha}_{i_{1}} - \ExtL\yhatbf_{i_{1}} \Big)= \veczero		 \nonumber 
+		\label{eqn:asymptotic_O1}
+		\sum^{[1,m]}_{(1)}\Big( \sum^{m}_{\alpha=1}\yhatbf_{\alpha}\AsParam^{\alpha}_{i_{1}} - \ExtL\yhatbf_{i_{1}} \Big)x_{i_{1}} = \veczero.
 \end{align}
+Here, the first restrictions on the asymptotic form of $\Param$ are applied, associating the unknown terms $\yhatbf_{i_{1}}, \ldots$ and $\AsParam_{i_{1}},\ldots$ with the generalized eigenvalue problem such that,
+\begin{subequations}
+	\begin{align}
+		\begin{bmatrix} \yhatbf_{i_{1}}, \yhatbf_{i_{2}},\ldots,\yhatbf_{i_{m}}\end{bmatrix} = 	\mathbf{\widehat{V}}, \\
+		\begin{bmatrix} \AsParam_{i_{1}}, \AsParam_{i_{2}},\ldots,\AsParam_{i_{m}}\end{bmatrix} = \mathbf{\widehat{K}},
+	\end{align}
+\end{subequations}
+which reduces equation~\eqref{eqn:asymptotic_O1} to equation~\eqref{eqn:extended_generalized_eigenvalue}. This then satisfies the tangency condition of the center-manifold, \ie, at the origin the center-manifold is tangent to the center subspace. 
+
+\subsubsection{Asymptotic terms of $\mathcal{O}(|x|^{2})$}
+\label{sec:normal_form_O2}
+
+At second order one obtains the following terms
+
 
 %
 %Section~\ref{sec:extended_system} and \ref{sec:extended_subspace_structure} outline the spectral properties of the system when extended to include the parameters as dynamic variables. Effectively the size of the critical subspace increases and, the eigen-structure of the extended linearized system $\ExtL$ can be deduced from the spectral properties of the original linear system $\Lu$. The critical subspace of the new system is of dimension $m=n+l+h$. The center-manifold theorem can be applied to this extended system given by equation~\eqref{eqn:evolution_extended_compact} so that both parameter perturbations and harmonic forcings are directly incorporated into the larger center-manifold. 

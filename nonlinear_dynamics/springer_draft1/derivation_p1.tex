@@ -362,7 +362,12 @@ where, $m = n+l+h$. This is the analogue of equation~\eqref{eqn:biorthogonal_mat
 \end{align}
 
 
-Finally, a reduced matrix representing the oblique projection of the extended linear operator $\ExtL$ onto the critical subspace is defined by,
+Finally, we have the generalized eigenvalue relation,
+\begin{eqnarray}
+	\label{eqn:extended_generalized_eigenvalue}
+	\ExtL\mathbf{\widehat{V}} = \mathbf{\widehat{V}}\mathbf{\widehat{K}},
+\end{eqnarray}
+with, 
 \begin{eqnarray}
 	\label{eqn:khat}
 	\mathbf{\widehat{K}} = \mathbf{\widehat{W}}^{\dagger}\ExtL\mathbf{\widehat{V}} = 
@@ -372,7 +377,7 @@ Finally, a reduced matrix representing the oblique projection of the extended li
 		\mathbf{0} & \mathbf{0} & \LambdaH
 	\end{bmatrix},
 \end{eqnarray}
-which is a complex matrix of size $m\times m$. The diagonal elements of $\mathbf{\widehat{K}}$ represent the eigenvalues of the reduced system, that are the critical eigenvalues of the extended system, and may be represented by the vector $\widehat{\boldsymbol{\lambda}} = diag(\mathbf{\widehat{K}})$. 
+being the reduced matrix representing the oblique projection of the extended linear operator $\ExtL$ onto the critical subspace. Obviously it is a complex matrix of size $m\times m$. The diagonal elements of $\mathbf{\widehat{K}}$ represent the eigenvalues of the reduced system, that are the critical eigenvalues of the extended system, and may be represented by the vector $\widehat{\boldsymbol{\lambda}} = diag(\mathbf{\widehat{K}})$. 
 
 Note that due to the special structure of the adjoint parameter and forcing modes, the projection of the extended nonlinearity $\efield{f}_{NL}$ onto the subspace spanned by the (direct) parameter and forcing modes vanishes identically. That is to say,
 \begin{align}
