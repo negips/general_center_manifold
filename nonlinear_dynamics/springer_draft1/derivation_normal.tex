@@ -58,9 +58,9 @@ Here the terms $\AsParam_{i_{1},i_{2},i_{3},\ldots}$ are $m$-dimensional vectors
 \begin{align}
 	\label{eqn:asymptotic_nonlinear_term}
 	\begin{split}
-		\efield{f}_{NL} =& \sum^{[1,m]}_{(2)}\efield{f}_{i_{1},i_{2}}x_{i_{1}}x_{i_{2}} + \\
+		\efield{f}_{NL} =& \sum^{[1,m]}_{(2)}\fhatbf_{i_{1},i_{2}}x_{i_{1}}x_{i_{2}} + \\
 		%
-		& \sum^{[1,m]}_{(3)}\efield{f}_{i_{1},i_{2},i_{3}}x_{i_{1}}x_{i_{2}}x_{i_{3}} + \ldots,
+		& \sum^{[1,m]}_{(3)}\fhatbf_{i_{1},i_{2},i_{3}}x_{i_{1}}x_{i_{2}}x_{i_{3}} + \ldots,
 	\end{split}
 \end{align}
 which is obtained via the grouping of terms with similar powers of $\xbf$. 
@@ -103,12 +103,71 @@ Here, the first restrictions on the asymptotic form of $\Param$ are applied, ass
 		\begin{bmatrix} \AsParam_{i_{1}}, \AsParam_{i_{2}},\ldots,\AsParam_{i_{m}}\end{bmatrix} = \mathbf{\widehat{K}},
 	\end{align}
 \end{subequations}
-which reduces equation~\eqref{eqn:asymptotic_O1} to equation~\eqref{eqn:extended_generalized_eigenvalue}. This then satisfies the tangency condition of the center-manifold, \ie, at the origin the center-manifold is tangent to the center subspace. 
+which reduces equation~\eqref{eqn:asymptotic_O1} to equation~\eqref{eqn:extended_generalized_eigenvalue}. This then satisfies the tangency condition of the invarian manifold, \ie, at the origin the center-manifold is tangent to the center subspace. Subsequently, $\widehat{K}_{i,j}$ will be used for all the first order terms of the type $\AsParam^{i}_{j}$ and the first order vectors $\yhatbf_{i}$ will be replaced by the respective eigenvectors $\vhatbf_{i}$. The reduced matrix $\mathbf{\widehat{K}}$ is responsible for the cross-coupling of different unknowns at each order of the asymptotic expansion. 
 
 \subsubsection{Asymptotic terms of $\mathcal{O}(|x|^{2})$}
 \label{sec:normal_form_O2}
 
-At second order one obtains the following terms
+At second order the non-linear terms contribute and one obtains the following relations
+\begin{align}
+	\label{eqn:asymptotic_O2}
+	\begin{split}
+		& \sum^{[1,m]}_{(2)}\Big( \sum^{m}_{j=1}\widehat{K}_{i_{1},j}x_{i_{2}}x_{j} + \widehat{K}_{i_{2},j}x_{i_{1}}x_{j} \Big)\yhatbf_{i_{1},i_{2}} + \\
+		%
+		& \sum^{[1,m]}_{(2)} \sum^{m}_{j=1}\AsParam^{j}_{i_{1},i_{2}}\vhatbf_{j}x_{i_{1}}x_{i_{2}} - \sum^{[1,m]}_{(2)} \ExtL\yhatbf_{i_{1},i_{2}}x_{i_{1}}x_{i_{2}} \\ 
+		%
+		& = \sum^{[1,m]}_{(2)} \fhatbf_{i_{1},i_{2}}x_{i_{1}}x_{i_{2}}.
+	\end{split} 
+\end{align}
+Collecting terms for a particular asymptotic term $x_{a}x_{b}$, where $(a,b)\in\IndexSet{2}{1,m}$, equation~\eqref{eqn:asymptotic_O2} reduces to,
+\begin{equation}
+	\label{eqn:asymptotic_O2_ab}
+	\begin{split}
+		&[\widehat{K}_{a,a} + \widehat{K}_{b,b}]\yhatbf_{a,b} + 
+		\Big[ \sum^{b}_{\substack{i=1 \\ i\neq a}}\widehat{K}_{i,a}\yhatbf_{i,b} + \sum^{m}_{\substack{i=a \\ i\neq b}}\widehat{K}_{i,b}\yhatbf_{a,i} \Big] \\
+		%
+		& + \sum^{m}_{j=1}\AsParam^{j}_{a,b}\vhatbf_{j} - \ExtL\yhatbf_{a,b} = \fhatbf_{a,b}.
+	\end{split}
+\end{equation}
+
+
+
+\subsubsection{Asymptotic terms of $\mathcal{O}(|x|^{3})$}
+\label{sec:normal_form_O3}
+
+At third order (and higher orders) one also obtains contributions from the lower order terms. 
+\begin{align}
+	\label{eqn:asymptotic_O3}
+	\begin{split}
+		& \sum^{[1,m]}_{(3)}\sum^{m}_{j=1}\left[  
+		\widehat{K}_{i_{1},j}x_{i_{2}}x_{i_{3}}x_{j} + 
+		%
+		\widehat{K}_{i_{2},j}x_{i_{1}}x_{i_{3}}x_{j} 
+		\right. + \\
+		%
+		& \left.
+		\widehat{K}_{i_{3},j}x_{i_{1}}x_{i_{2}}x_{j} \right]\yhatbf_{i_{1},i_{2},i_{3}} +  \\
+		%
+		& \sum^{[1,m]}_{(2)}\sum^{[1,m]}_{(2)}\left[ 
+		\AsParam^{i_{1}}_{j_{1},j_{2}}x_{i_{2}}x_{j_{1}}x_{j_{2}} + \AsParam^{i_{2}}_{j_{1},j_{2}}x_{i_{1}}x_{j_{1}}x_{j_{2}}
+		\right]\yhatbf_{i_{1},i_{2}} \\
+		%
+		%
+		& + \sum^{m}_{i=1}\sum^{[1,m]}_{(3)} \AsParam^{i}_{j_{1},j_{2},j_{3}}\vhatbf_{j}x_{j_{1}}x_{j_{2},x_{3}}  \\ 
+		%
+		& - \sum^{[1,m]}_{(3)} \ExtL\yhatbf_{i_{1},i_{2},1_{3}}x_{i_{1}}x_{i_{2}}x_{i_{3}} = \sum^{[1,m]}_{(3)} \fhatbf_{i_{1},i_{2},i_{3}}x_{i_{1}}x_{i_{2}}x_{i_{3}}.
+	\end{split} 
+\end{align}
+Collecting terms for a particular asymptotic term $x_{a}x_{b}$, where $(a,b)\in\IndexSet{2}{1,m}$, equation~\eqref{eqn:asymptotic_O3} reduces to,
+\begin{equation}
+	\label{eqn:asymptotic_O3_ab}
+	\begin{split}
+		&[\widehat{K}_{a,a} + \widehat{K}_{b,b}]\yhatbf_{a,b} + 
+		\Big[ \sum^{b}_{\substack{i=1 \\ i\neq a}}\widehat{K}_{i,a}\yhatbf_{i,b} + \sum^{m}_{\substack{i=a \\ i\neq b}}\widehat{K}_{i,b}\yhatbf_{a,i} \Big] \\
+		%
+		& + \sum^{m}_{j=1}\AsParam^{j}_{a,b}\vhatbf_{j} - \ExtL\yhatbf_{a,b} = \fhatbf_{a,b}.
+	\end{split}
+\end{equation}
 
 
 %
