@@ -112,7 +112,7 @@ At second order the non-linear terms contribute and one obtains the following re
 \begin{align}
 	\label{eqn:asymptotic_O2}
 	\begin{split}
-		& \sum^{[1,m]}_{(2)}\Big( \sum^{m}_{j=1}\widehat{K}_{i_{1},j}x_{i_{2}}x_{j} + \widehat{K}_{i_{2},j}x_{i_{1}}x_{j} \Big)\yhatbf_{i_{1},i_{2}} + \\
+		& \sum^{[1,m]}_{(2)}\sum^{m}_{j=1}\Big( \widehat{K}_{i_{1},j}x_{i_{2}}x_{j} + \widehat{K}_{i_{2},j}x_{i_{1}}x_{j} \Big)\yhatbf_{i_{1},i_{2}} + \\
 		%
 		& \sum^{[1,m]}_{(2)} \sum^{m}_{j=1}\AsParam^{j}_{i_{1},i_{2}}\vhatbf_{j}x_{i_{1}}x_{i_{2}} - \sum^{[1,m]}_{(2)} \ExtL\yhatbf_{i_{1},i_{2}}x_{i_{1}}x_{i_{2}} \\ 
 		%
@@ -124,9 +124,13 @@ Collecting terms for a particular asymptotic term $x_{a}x_{b}$, where $(a,b)\in\
 	\label{eqn:asymptotic_O2_ab}
 	\begin{split}
 		&[\widehat{K}_{a,a} + \widehat{K}_{b,b}]\yhatbf_{a,b} + 
-		\Big[ \sum^{b}_{\substack{i=1 \\ i\neq a}}\widehat{K}_{i,a}\yhatbf_{i,b} + \sum^{m}_{\substack{i=a \\ i\neq b}}\widehat{K}_{i,b}\yhatbf_{a,i} \Big] \\
-		%
-		& + \sum^{m}_{j=1}\AsParam^{j}_{a,b}\vhatbf_{j} - \ExtL\yhatbf_{a,b} = \fhatbf_{a,b}.
+		\Big[ \sum^{a}_{\substack{i=1 \\ i\neq b}}\widehat{K}_{i,b}\yhatbf_{i,a} +
+		\sum^{b}_{\substack{i=1 \\ i\neq a}}\widehat{K}_{i,a}\yhatbf_{i,b}\Big] + \\
+		& \Big[
+		 \sum^{m}_{\substack{i=a \\ i\neq b}}\widehat{K}_{i,b}\yhatbf_{a,i} +
+		 \sum^{m}_{\substack{i=b \\ i\neq a}}\widehat{K}_{i,a}\yhatbf_{b,i}  \Big] 
+		 + \sum^{m}_{j=1}\AsParam^{j}_{a,b}\vhatbf_{j}  \\
+		& - \ExtL\yhatbf_{a,b} = \fhatbf_{a,b}.
 	\end{split}
 \end{equation}
 
