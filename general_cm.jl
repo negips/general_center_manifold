@@ -8,7 +8,7 @@ using SymPy
 include("$JULIAHOME/Module_CenterManifold/CenterManifold.jl")
 include("$JULIACOMMON/KroneckerDelta.jl")
 
-n = 1
+n = 2
 l = 1
 h = 1
 m = n+l+h
@@ -45,17 +45,17 @@ Khat        = CenterManifold.GenerateSymMatrix(Kstr,m,m;ifreal=false)
 #Khat        = Matrix{Sym}(undef,M,M)
 #fill!(Khat,0)
 #
-for i in 1:n
-  for j in 1:l
-    Khat[i,n+j] = ΓP[i,j]
-  end
-end
-#
-for i in 1:n
-  for j in 1:h
-    Khat[i,n+l+j] = ΓH[i,j]
-  end
-end
+# for i in 1:n
+#   for j in 1:l
+#     Khat[i,n+j] = ΓP[i,j]
+#   end
+# end
+# #
+# for i in 1:n
+#   for j in 1:h
+#     Khat[i,n+l+j] = ΓH[i,j]
+#   end
+# end
 
 ##
 #for i in 1:m
@@ -193,9 +193,47 @@ for j in 0:m-1
   end       # a
 end         # j
 
+# Compact Representation 
+#---------------------------------------------------------------------- 
 
+ord     = 2
+nt2     = CenterManifold.NInteractionTerms(ord,m)
+RMat_O2 = fill(Sym(0),nt2,nt2)
 
+ind = fill(-99,ord)
+for z=1:nt2
+  CenterManifold.UpdatePolynomialIndex!(ind,ord,m)
+  a   = ind[1]+1
+  b   = ind[2]+1
+  for i in 1:a
+    indy = [i-1;a-1]
+    k    = CenterManifold.GetInteractionIndex(indy,m)
+    RMat_O2[z,k] = RMat_O2[z,k] + Khat[i,b]
+  end
 
+  # if (a != b)
+  #   for i in 1:b
+  #     indy = [i-1;b-1]
+  #     k    = CenterManifold.GetInteractionIndex(indy,m)
+  #     RMat_O2[z,k] = RMat_O2[z,k] + Khat[i,a]
+  #   end
+  # end 
+
+  # for i in a:m
+  #   indy = [a-1;i-1]
+  #   k    = CenterManifold.GetInteractionIndex(indy,m)
+  #   RMat_O2[z,k] = RMat_O2[z,k] + Khat[i,b]
+  # end
+
+  # if (a != b)
+  #   for i in b:m
+  #     indy = [i-1;a-1]
+  #     k    = CenterManifold.GetInteractionIndex(indy,m)
+  #     RMat_O2[z,k] = RMat_O2[z,k] + Khat[i,a]
+  #   end
+  # end 
+
+end
 
 
 

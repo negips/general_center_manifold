@@ -1,4 +1,4 @@
-\begin{thebibliography}{20}
+\begin{thebibliography}{11}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -82,66 +82,5 @@ Xavier Cabr{\'e}, Ernest Fontich, and Rafael De~la Llave.
   with respect to parameters.
 \newblock \emph{Indiana University mathematics journal}, pages 329--360,
   2003{\natexlab{b}}.
-
-\bibitem[Guckenheimer and Holmes(1983)]{guckenheimer83}
-John Guckenheimer and Philip Holmes.
-\newblock \emph{Nonlinear Oscillations, Dynamical Systems, and Bifurcations of
-  Vector Fields}.
-\newblock Springer Science \& Business Media, New York, 1983.
-\newblock \doi{10.1007/b97481}.
-
-\bibitem[Wiggins(2003)]{wiggins03}
-Stephen Wiggins.
-\newblock \emph{Introduction to Applied Nonlinear Dynamical Systems and Chaos}.
-\newblock Springer-Verlag New York, 2003.
-\newblock \doi{10.1007/b97481}.
-
-\bibitem[Carr(1982)]{carr82}
-Jack Carr.
-\newblock \emph{Applications of centre manifold theory}, volume~35.
-\newblock Springer Science \& Business Media, 1982.
-
-\bibitem[Sijbrand(1985)]{sijbrand85}
-Jan Sijbrand.
-\newblock Properties of center manifolds.
-\newblock \emph{Transactions of the American Mathematical Society},
-  289\penalty0 (2):\penalty0 431--469, 1985.
-\newblock ISSN 00029947.
-
-\bibitem[Newell and Whitehead(1969)]{newell69}
-Alan~C. Newell and J.~A. Whitehead.
-\newblock Finite bandwidth, finite amplitude convection.
-\newblock \emph{Journal of Fluid Mechanics}, 38\penalty0 (2):\penalty0
-  279–303, 1969.
-\newblock \doi{10.1017/S0022112069000176}.
-
-\bibitem[Cross(1980)]{cross80}
-M.~C. Cross.
-\newblock {Derivation of the amplitude equation at the {R}ayleigh–{B}ènard
-  instability}.
-\newblock \emph{The Physics of Fluids}, 23\penalty0 (9):\penalty0 1727--1731,
-  09 1980.
-\newblock ISSN 0031-9171.
-\newblock \doi{10.1063/1.863198}.
-
-\bibitem[Cross and Greenside(2009)]{cross09}
-Michael Cross and Henry Greenside.
-\newblock \emph{Pattern Formation and Dynamics in Nonequilibrium Systems}.
-\newblock Cambridge University Press, 2009.
-
-\bibitem[Stuart(1958)]{stuart58}
-J.~T. Stuart.
-\newblock On the non-linear mechanics of hydrodynamic stability.
-\newblock \emph{Journal of Fluid Mechanics}, 4\penalty0 (1):\penalty0 1–21,
-  1958.
-\newblock \doi{10.1017/S0022112058000276}.
-
-\bibitem[Stuart(1960)]{stuart60}
-J.~T. Stuart.
-\newblock On the non-linear mechanics of wave disturbances in stable and
-  unstable parallel flows part 1. the basic behaviour in plane poiseuille flow.
-\newblock \emph{Journal of Fluid Mechanics}, 9\penalty0 (3):\penalty0
-  353–370, 1960.
-\newblock \doi{10.1017/S002211206000116X}.
 
 \end{thebibliography}

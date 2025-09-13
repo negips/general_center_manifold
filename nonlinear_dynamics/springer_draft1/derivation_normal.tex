@@ -4,9 +4,10 @@
 %\subsection{Normal Form Approximation}
 %\label{sec:normal_1}
 
-In the context of invariant manifold theory, several previous approaches for the approximation of such manifolds can be effectively viewed  as instances of what is referred to as the parametrization method. The framework was introduced in a series of papers by \citet{cabre03a,cabre03b,cabre05}, although, a particular instance of such an approach was presented earlier by \citet{coullet83} for the evaluation of the normal form of center manifolds. Nevertheless, subsequent works by \citet*{carini15,jain22,negi24} can be fruitfully viewed through the lens of the parameterization method. Within this framework the reduced representation of the invariant manifold being approximated can be chosen in an arbitrary manner depending on the particular requirements of the reduction being sought. Amongst the plethora of arbitrary choices, the normal form is an important representation that is often sought since it represents the simplest form of the reduced equations. In this context, it can be shown that for asymptotic normal form evaluation of the extended system the calculations involve only the resolvents of the original linear system and therefore all existing algorithms may be utilized for the calculations. 
+In the context of invariant manifold theory, several previous approaches for the approximation of such manifolds can be effectively viewed  as instances of what is referred to as the parametrization method. The framework was introduced in a series of papers by \citet{cabre03a,cabre03b,cabre05}, although, a particular instance of such an approach was presented earlier by \citet{coullet83} for the evaluation of the normal form of center manifolds. Nevertheless, subsequent works by \citet*{carini15,jain22,negi24} can be fruitfully viewed through the lens of the parameterization method. Within this framework the reduced representation of the invariant manifold being approximated can be chosen in an arbitrary manner depending on the particular requirements of the reduction being sought. Amongst the plethora of arbitrary choices, the normal form is an important representation that is often sought since it represents the simplest form of the reduced equations. In the next subsection the normal form representation for the center-manifold of the extended system is deduced. 
+%In this context, it can be shown that for asymptotic normal form evaluation of the extended system the calculations involve only the resolvents of the original linear system and therefore all existing algorithms may be utilized for the calculations. 
 
-To simplify notation for multiple indices used hereafter, a multi-dimensional index set $\IndexSet{k}{a,b}$ is introduced, which is an ordered set of all  $k$-indices $(i_{1},i_{2}\ldots,i_{k})$, defined as 
+To simplify notation for multiple indices used hereafter, a multi-dimensional index set $\IndexSet{k}{a,b}$ is introduced, which is an ordered set of all  $k$-tuples $(i_{1},i_{2}\ldots,i_{k})$, defined as, 
 \begin{equation}
 	\label{eqn:index_set}
 	\begin{split}
@@ -16,12 +17,23 @@ To simplify notation for multiple indices used hereafter, a multi-dimensional in
 		& \ldots, \  i_{k-1}\le i_{k} \le b. \bm{\rbrace},
 	\end{split}
 \end{equation}
-where, $i_{1},i_{2},\ldots,i_{k}$, are the index variables and $[a,b]$ specify the lower and upper bounds of the indices. Obviously the indices $i_{1}$ \etc\ are dummy indices however their ordering is important since the higher index always starts from the previous index. Hence the index-set $\IndexSet{2}{1,3}$ is the set containing the tuples, $(i_{1},i_{2}) \in \{(1,1), (1,2), (1,3), (2,2), (2,3), (3,3)\}$. Similarly, multiple nested summations are denoted as,
+where, $i_{1},i_{2},\ldots,i_{k}$, are the index variables and $[a,b]$ specify the lower and upper bounds of the indices. Obviously the indices $i_{1}$ \etc\ are dummy indices however their relative position is important since the higher index always starts from the previous index. The set is ordered in the sense that the first element of the $\IndexSet{k}{a,b}$ is always $(i_{1},i_{2}\ldots,i_{k}) = (a,a,\ldots,a)$, the last element is $(i_{1},i_{2}\ldots,i_{k}) = (b,b,\ldots,b)$ and it is the last index $(i_{k})$ which iterates the fastest. Hence the index set $\IndexSet{3}{1,3}$ is the set containing the tuples, 
+%\begin{equation}
+	\begin{alignat}{2}
+	(i_{1},i_{2},i_{3}) \in\{ & (1,1,1), & (1,1,2), & (1,1,3), \nonumber \\
+										  	  & (1,2,2), & (1,2,3),& (1,3,3)  \nonumber \\
+										 	  & (2,2,2), & (2,2,3), & (2,3,3) \nonumber \\
+										 	  & (3,3,3) \} &   &   \nonumber 
+	\end{alignat} 
+%\end{equation}
+Similarly, multiple nested summations are denoted as,
 \begin{equation}
 	\label{eqn:summation}
 	\sum_{(k)}^{[a,b]} = \sum_{i_{1}=a}^{b}\ \sum_{i_{2}=i_{1}}^{b}\ldots\sum_{i_{k}=i_{k-1}}^{b}
 \end{equation}
-As before, the higher index starts from the previous index. For the asymptotic expansions we will typically have $a=1$ and $b=m$, where $m$ is the dimension of the manifold. For such cases the number of $k$-tuples in a multi-index tuple set $\IndexSet{k}{1,m}$ is analytically known to be $T^{k}_{m} = C(m+k-1,k)$, where, 
+As before, the higher index starts from the previous index. In principle the ordering of the tuples in a particular index set does not matter to the overall results however, keeping the ordering in mind helps to elucidate the structure of the asymptotic problem as will be shown subsequently. 
+
+For the asymptotic expansions we will typically have $a=1$ and $b=m$, where $m$ is the dimension of the manifold. For such cases the number of $k$-tuples in a multi-index tuple set $\IndexSet{k}{1,m}$ is analytically known to be $T^{k}_{m} = C(m+k-1,k)$, where, 
 \begin{align}
 	\label{eqn:binomial}
 	C(p,q) = \binom{p}{q} = \dfrac{p!}{q! (p-q)!},
@@ -32,13 +44,13 @@ defines the binomial coefficient of $p$ and $q$.
 \subsection{Normal Form}
 \label{sec:normal_form}
 
-One may find the exposition on the implementation of the parameterization method in previous works of \citet{haro16} and \citet{jain22}. To be clear, the application of the parameterization method to an extended system like equation~\eqref{eqn:evolution_extended} follows the same steps as outlined in those earlier works. However, in order to show that the resolvent calculations in fact only require the original linear system, and not the extended one, an explanation of the key steps of the method is necessary.
+One may find the exposition on the implementation of the parameterization method in previous works of \citet{haro16} and \citet{jain22}. To be clear, the application of the parameterization method to an extended system like equation~\eqref{eqn:evolution_extended} follows the same steps as outlined in those earlier works. However, many of the essential steps are repeated here to bring out the structure of system of equations at each asymptotic order in the context of system extension.
 
-Consider the extended system as defined by equation~\eqref{eqn:evolution_extended}, represented in a compact form by equation~\eqref{eqn:evolution_extended_compact}, which has an $m = n + l + h$ dimensional critical subspace. Assume $\xbf = [x_{1}; x_{2};\ldots;x_{m}]$ is an $m$-dimensional vector of coordinates that parameterize the center-manifold of the extended system. The evolution of the system along the center-manifold in the reduced coordinates is assumed to be given by $\dt{\xbf} = \Param(\xbf)$, where, $\Param$ is a vector valued function. The system solution on the center-manifold corresponding to a point $\xbf$ on the reduced system is given by $\mathcal{Y}(\xbf)$. At this stage neither $\Param(\xbf)$ nor $\mathcal{Y}(\xbf)$ have been specified in any form, since, the parameterization can be arbitrarily chosen. In order to obtain a normal form of the reduced system one may expand both $\Param(\xbf)$ and $\mathcal{Y}(\xbf)$ as a formal power series in $\xbf$ and constrain the asymptotic form of $\Param$ to be in a normal form for the parameterized coordinates $\xbf$. The asymptotic form of $\mathcal{Y}$ is obtained by introducing the asymptotic expansions into equation~\eqref{eqn:evolution_extended_compact} and solving the terms order-by-order. 
+Consider the extended system as defined by equation~\eqref{eqn:evolution_extended}, represented in a compact form by equation~\eqref{eqn:evolution_extended_compact}, which has an $m$-dimensional critical subspace ($m = n+l+h$). Assume $\xbf = [x_{1}; x_{2};\ldots;x_{m}]$ is an $m$-dimensional vector of coordinates that parameterize the center-manifold of the extended system. The evolution of the system along the center-manifold in the reduced coordinates is assumed to be given by $\dt{\xbf} = \Param(\xbf)$, where, $\Param$ is a vector valued function. The system solution on the center-manifold corresponding to a point $\xbf$ of the reduced system is given by $\mathcal{Y}(\xbf)$. At this stage neither $\Param(\xbf)$ nor $\mathcal{Y}(\xbf)$ have been specified in any form, since, the parameterization can be arbitrarily chosen. In order to obtain a normal form of the reduced system one may expand both $\Param(\xbf)$ and $\mathcal{Y}(\xbf)$ as a formal power series in $\xbf$ and constrain the asymptotic form of $\Param$ to be in a normal form for the parameterized coordinates $\xbf$. The asymptotic form of $\mathcal{Y}$ is obtained by introducing the asymptotic expansions into equation~\eqref{eqn:evolution_extended_compact} and solving the terms order-by-order. 
 
 In what follows, Einstein summation is \emph{not} assumed for repeated indices unless otherwise specified. We assume the power series expansions as,
 \begin{align}
-	\label{eqn:asymptotic_reduced_normal_form}
+	\label{eqn:reduced_normal_form}
 	\begin{split}
 	\Param(\xbf) =& \sum^{[1,m]}_{(1)}\AsParam_{i_{1}}x_{i_{1}} + \sum^{[1,m]}_{(2)}\AsParam_{i_{1},i_{2}}x_{i_{1}}x_{i_{2}} + \\
 	%
@@ -63,19 +75,19 @@ Here the terms $\AsParam_{i_{1},i_{2},i_{3},\ldots}$ are $m$-dimensional vectors
 		& \sum^{[1,m]}_{(3)}\fhatbf_{i_{1},i_{2},i_{3}}x_{i_{1}}x_{i_{2}}x_{i_{3}} + \ldots,
 	\end{split}
 \end{align}
-which is obtained via the grouping of terms with similar powers of $\xbf$. 
+which is obtained via the collection of terms with similar powers. 
 
 Substitution of the power series expansions into equation~\eqref{eqn:evolution_extended_compact} results in 
-\begin{align}
-	\begin{split}
-		\dfrac{\partial }{\partial t}\Big(\sum^{[1,m]}_{(1)}\yhatbf_{i_{1}}x_{i_{1}} + \ldots \Big) = 
-		%
-		\ExtL\Big(\sum^{[1,m]}_{(1)}\yhatbf_{i_{1}}x_{i_{1}} + \ldots \Big)  + \\
-		% 
-		\Big(\sum^{[1,m]}_{(2)}\efield{f}_{i_{1},i_{2}}x_{i_{1}}x_{i_{2}} + \ldots\Big),
-	\end{split} \nonumber
-\end{align}
-resulting in,
+%\begin{align}
+%	\begin{split}
+%		\dfrac{\partial }{\partial t}\Big(\sum^{[1,m]}_{(1)}\yhatbf_{i_{1}}x_{i_{1}} + \ldots \Big) = 
+%		%
+%		\ExtL\Big(\sum^{[1,m]}_{(1)}\yhatbf_{i_{1}}x_{i_{1}} + \ldots \Big)  + \\
+%		% 
+%		\Big(\sum^{[1,m]}_{(2)}\efield{f}_{i_{1},i_{2}}x_{i_{1}}x_{i_{2}} + \ldots\Big),
+%	\end{split} \nonumber
+%\end{align}
+%leading to,
 \begin{align}
 	\label{eqn:asymptotic_substitution}
 	\begin{split}
@@ -86,7 +98,7 @@ resulting in,
 		\Big(\sum^{[1,m]}_{(2)}\efield{f}_{i_{1},i_{2}}x_{i_{1}}x_{i_{2}} + \ldots\Big).
 	\end{split}
 \end{align}
-Here $\AsParam^{\alpha}_{i_{1}}$ represents the $\alpha^{th}$ element of the vector $\AsParam_{i_{1}}$. 
+Here $\AsParam^{\alpha}_{j_{1}}$ represents the $\alpha^{th}$ element of the vector $\AsParam_{j_{1}}$. At order $k$, one obtains $m\times T^{k}_{m}$ unknowns which define the elements of the vectors $\AsParam_{i_{1},\ldots,i_{k}}$, and the corresponding $T^{k}_{m}$ unknown vectors $\yhatbf_{i_{1},\ldots,i_{k}}$. The definitions of the two sets of unknowns are interdependent since the form of the reduced representation $\mathcal{G}(\xbf)$ determines the map $\mathcal{Y}(\xbf)$ from the reduced coordinates to the full solution (and vice versa). 
 
 \subsubsection{Asymptotic terms of $\mathcal{O}(|x|)$}
 \label{sec:normal_form_O1}
@@ -103,7 +115,7 @@ Here, the first restrictions on the asymptotic form of $\Param$ are applied, ass
 		\begin{bmatrix} \AsParam_{i_{1}}, \AsParam_{i_{2}},\ldots,\AsParam_{i_{m}}\end{bmatrix} = \mathbf{\widehat{K}},
 	\end{align}
 \end{subequations}
-which reduces equation~\eqref{eqn:asymptotic_O1} to equation~\eqref{eqn:extended_generalized_eigenvalue}. This then satisfies the tangency condition of the invarian manifold, \ie, at the origin the center-manifold is tangent to the center subspace. Subsequently, $\widehat{K}_{i,j}$ will be used for all the first order terms of the type $\AsParam^{i}_{j}$ and the first order vectors $\yhatbf_{i}$ will be replaced by the respective eigenvectors $\vhatbf_{i}$. The reduced matrix $\mathbf{\widehat{K}}$ is responsible for the cross-coupling of different unknowns at each order of the asymptotic expansion. 
+reduces equation~\eqref{eqn:asymptotic_O1} to equation~\eqref{eqn:extended_generalized_eigenvalue}. This then satisfies the tangency condition of the invariant manifold, \ie, at the origin the center-manifold is tangent to the center subspace. Subsequently, $\widehat{K}_{i,j}$ will be used for all the first order terms of the type $\AsParam^{i}_{j}$ and the first order vectors $\yhatbf_{i}$ will be replaced by the respective eigenvectors $\vhatbf_{i}$. The reduced matrix $\mathbf{\widehat{K}}$ is responsible for the cross-coupling of different unknowns at each order of the asymptotic expansion. 
 
 \subsubsection{Asymptotic terms of $\mathcal{O}(|x|^{2})$}
 \label{sec:normal_form_O2}
@@ -119,20 +131,42 @@ At second order the non-linear terms contribute and one obtains the following re
 		& = \sum^{[1,m]}_{(2)} \fhatbf_{i_{1},i_{2}}x_{i_{1}}x_{i_{2}}.
 	\end{split} 
 \end{align}
-Collecting terms for a particular asymptotic term $x_{a}x_{b}$, where $(a,b)\in\IndexSet{2}{1,m}$, equation~\eqref{eqn:asymptotic_O2} reduces to,
+Collecting the expressions for a particular asymptotic term $x_{a}x_{b}$, where $(a,b)\in\IndexSet{2}{1,m}$, equation~\eqref{eqn:asymptotic_O2} reduces to,
 \begin{equation}
 	\label{eqn:asymptotic_O2_ab}
 	\begin{split}
-		&[\widehat{K}_{a,a} + \widehat{K}_{b,b}]\yhatbf_{a,b} + 
-		\Big[ \sum^{a}_{\substack{i=1 \\ i\neq b}}\widehat{K}_{i,b}\yhatbf_{i,a} +
-		\sum^{b}_{\substack{i=1 \\ i\neq a}}\widehat{K}_{i,a}\yhatbf_{i,b}\Big] + \\
+		& \Big[ \sum^{a}_{i=1}\widehat{K}_{i,b}\yhatbf_{i,a} +
+		\sum^{b}_{i=1}\widehat{K}_{i,a}\yhatbf_{i,b} - \sum^{a}_{i=1}\widehat{K}_{i,b}\yhatbf_{i,a}\delta^{a}_{b} \Big] + \\
 		& \Big[
-		 \sum^{m}_{\substack{i=a \\ i\neq b}}\widehat{K}_{i,b}\yhatbf_{a,i} +
-		 \sum^{m}_{\substack{i=b \\ i\neq a}}\widehat{K}_{i,a}\yhatbf_{b,i}  \Big] 
-		 + \sum^{m}_{j=1}\AsParam^{j}_{a,b}\vhatbf_{j}  \\
-		& - \ExtL\yhatbf_{a,b} = \fhatbf_{a,b}.
+		 \sum^{m}_{i=a}\widehat{K}_{i,b}\yhatbf_{a,i} +
+		 \sum^{m}_{i=b}\widehat{K}_{i,a}\yhatbf_{b,i}  - 
+		 \sum^{m}_{i=b}\widehat{K}_{i,a}\yhatbf_{b,i}\delta^{a}_{b}\Big] 
+		   \\
+		& + \sum^{m}_{j=1}\AsParam^{j}_{a,b}\vhatbf_{j} - \ExtL\yhatbf_{a,b} = \fhatbf_{a,b}.
 	\end{split}
 \end{equation}
+At second order one obtains $T^{k}_{m}$ equations which collectively form the system of equations for all $\yhatbf_{i_{1},i_{2}}$ vectors that needs to be solved. Several important properties of equation~\eqref{eqn:asymptotic_O2_ab} need to be pointed out that have implications in terms of practial application and implementations. 
+
+First, clearly the various unknown vectors $\yhatbf_{i_{1},i_{2}}$ are coupled due to the off-diagonal terms in $\Khat$, which appear in the first two bracketted terms in equation~\eqref{eqn:asymptotic_O2_ab}. Recall that we are considering the tuples in our index set to be ordered so that the vectors $\yhatbf_{i_{1},i_{2}}$ can also be ordered in the same manner. For any index $(a,b)\in\IndexSet{2}{1,m}$ (and assuming $b>a$) the bracketted terms in equation~\eqref{eqn:asymptotic_O2_ab} can be rewritten as,
+\begin{equation}
+	\label{eqn:O2_ab_split}
+	\begin{split}
+		& \overbrace{\sum^{a}_{i=1}\left(\widehat{K}_{i,b}\yhatbf_{i,a} - \widehat{K}_{i,b}\yhatbf_{i,a}\delta^{a}_{b}\right)}^{B1} +
+		\overbrace{\sum^{a-1}_{i=1}\widehat{K}_{i,a}\yhatbf_{i,b}}^{B2} + \\
+		  \\
+		%
+		& \overbrace{\widehat{K}_{a,a}\yhatbf_{a,b}}^{D1} + \overbrace{\sum^{b}_{i=a+1}\widehat{K}_{i,a}\yhatbf_{i,b}}^{A1} + \\
+		%
+		& \overbrace{\sum^{b-1}_{i=a}\widehat{K}_{i,b}\yhatbf_{a,i}}^{B3} +
+		\overbrace{\widehat{K}_{b,b}\yhatbf_{a,b}}^{D2} +
+		\overbrace{\sum^{m}_{i=b+1}\widehat{K}_{i,b}\yhatbf_{a,i}}^{A2} + \\
+		%
+		& \overbrace{\sum^{m}_{i=b}\left(\widehat{K}_{i,a}\yhatbf_{b,i}  - 
+		\widehat{K}_{i,a}\yhatbf_{b,i}\delta^{a}_{b}\right)}^{A3}.
+	\end{split}
+\end{equation}
+The terms marked as $B1,B2,B3$ couple to vectors $\yhatbf_{i_{1},i_{2}}$ that precede $\yhatbf_{a,b}$ in the ordering, the terms marked $D1,D2$ couple to $\yhatbf_{a,b}$, and the terms marked as $A1,A2,A3$ couple to vectors that succeed $\yhatbf_{a,b}$ in the ordering. Notice that all the succeeding terms in $A1,A2,A3$ are always multiplied by elements of the $\Khat$ matrix that are below the main diagonal. However, since $\Khat$ has an upper triangular structure, all terms marked $A1,A2,A3$ vanish. Therefore any vector $\yhatbf_{a,b}$ only couples with vectors $\yhatbf_{i_{1},i_{2}}$ which precede it in the ordering. Thus the resulting system of equations for the $T^{2}_{m}$ unknown fields at second order is lower triangular and even though the fields are coupled with each other, they can still be solved for one at a time with back substitution. The splitting of terms in equation~\eqref{eqn:O2_ab_split} is done for $b>a$ however, the same conclusion applies even for the case of $a=b$ and the resulting system of equations is always lower triangular. 
+This lower triangular structure of the system of equations is not confined to the second-order approximation but in fact persists even for higher order asymptotic approximations. This is an important aspect particularly for large systems since for large $T^{k}_{m}$ the computational cost of a simultaneous coupled system solve can be prohibitive. 
 
 
 
