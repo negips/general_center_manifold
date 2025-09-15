@@ -147,26 +147,67 @@ Collecting the expressions for a particular asymptotic term $x_{a}x_{b}$, where 
 \end{equation}
 At second order one obtains $T^{k}_{m}$ equations which collectively form the system of equations for all $\yhatbf_{i_{1},i_{2}}$ vectors that needs to be solved. Several important properties of equation~\eqref{eqn:asymptotic_O2_ab} need to be pointed out that have implications in terms of practial application and implementations. 
 
-First, clearly the various unknown vectors $\yhatbf_{i_{1},i_{2}}$ are coupled due to the off-diagonal terms in $\Khat$, which appear in the first two bracketted terms in equation~\eqref{eqn:asymptotic_O2_ab}. Recall that we are considering the tuples in our index set to be ordered so that the vectors $\yhatbf_{i_{1},i_{2}}$ can also be ordered in the same manner. For any index $(a,b)\in\IndexSet{2}{1,m}$ (and assuming $b>a$) the bracketted terms in equation~\eqref{eqn:asymptotic_O2_ab} can be rewritten as,
+First, the various unknown vectors $\yhatbf_{i_{1},i_{2}}$ are coupled due to the off-diagonal terms in $\Khat$, which appear in the first two bracketted terms in equation~\eqref{eqn:asymptotic_O2_ab}. Recall that we are considering the tuples in our index set to be ordered so that the vectors $\yhatbf_{i_{1},i_{2}}$ can also be ordered in the same manner. For any index $(a,b)\in\IndexSet{2}{1,m}$ (and assuming $b>a$) the bracketted terms in equation~\eqref{eqn:asymptotic_O2_ab} can be rewritten as,
 \begin{equation}
 	\label{eqn:O2_ab_split}
 	\begin{split}
-		& \overbrace{\sum^{a}_{i=1}\left(\widehat{K}_{i,b}\yhatbf_{i,a} - \widehat{K}_{i,b}\yhatbf_{i,a}\delta^{a}_{b}\right)}^{B1} +
-		\overbrace{\sum^{a-1}_{i=1}\widehat{K}_{i,a}\yhatbf_{i,b}}^{B2} + \\
+		& \overbrace{\sum^{a}_{i=1}\left(\widehat{K}_{i,b}\yhatbf_{i,a} - \widehat{K}_{i,b}\yhatbf_{i,a}\delta^{a}_{b}\right)}^{P1} +
+		\overbrace{\sum^{a-1}_{i=1}\widehat{K}_{i,a}\yhatbf_{i,b}}^{P2} + \\
 		  \\
 		%
-		& \overbrace{\widehat{K}_{a,a}\yhatbf_{a,b}}^{D1} + \overbrace{\sum^{b}_{i=a+1}\widehat{K}_{i,a}\yhatbf_{i,b}}^{A1} + \\
+		& \overbrace{\widehat{K}_{a,a}\yhatbf_{a,b}}^{D1} + \overbrace{\sum^{b}_{i=a+1}\widehat{K}_{i,a}\yhatbf_{i,b}}^{S1} + \\
 		%
-		& \overbrace{\sum^{b-1}_{i=a}\widehat{K}_{i,b}\yhatbf_{a,i}}^{B3} +
+		& \overbrace{\sum^{b-1}_{i=a}\widehat{K}_{i,b}\yhatbf_{a,i}}^{P3} +
 		\overbrace{\widehat{K}_{b,b}\yhatbf_{a,b}}^{D2} +
-		\overbrace{\sum^{m}_{i=b+1}\widehat{K}_{i,b}\yhatbf_{a,i}}^{A2} + \\
+		\overbrace{\sum^{m}_{i=b+1}\widehat{K}_{i,b}\yhatbf_{a,i}}^{S2} + \\
 		%
 		& \overbrace{\sum^{m}_{i=b}\left(\widehat{K}_{i,a}\yhatbf_{b,i}  - 
-		\widehat{K}_{i,a}\yhatbf_{b,i}\delta^{a}_{b}\right)}^{A3}.
+		\widehat{K}_{i,a}\yhatbf_{b,i}\delta^{a}_{b}\right)}^{S3}.
 	\end{split}
 \end{equation}
-The terms marked as $B1,B2,B3$ couple to vectors $\yhatbf_{i_{1},i_{2}}$ that precede $\yhatbf_{a,b}$ in the ordering, the terms marked $D1,D2$ couple to $\yhatbf_{a,b}$, and the terms marked as $A1,A2,A3$ couple to vectors that succeed $\yhatbf_{a,b}$ in the ordering. Notice that all the succeeding terms in $A1,A2,A3$ are always multiplied by elements of the $\Khat$ matrix that are below the main diagonal. However, since $\Khat$ has an upper triangular structure, all terms marked $A1,A2,A3$ vanish. Therefore any vector $\yhatbf_{a,b}$ only couples with vectors $\yhatbf_{i_{1},i_{2}}$ which precede it in the ordering. Thus the resulting system of equations for the $T^{2}_{m}$ unknown fields at second order is lower triangular and even though the fields are coupled with each other, they can still be solved for one at a time with back substitution. The splitting of terms in equation~\eqref{eqn:O2_ab_split} is done for $b>a$ however, the same conclusion applies even for the case of $a=b$ and the resulting system of equations is always lower triangular. 
-This lower triangular structure of the system of equations is not confined to the second-order approximation but in fact persists even for higher order asymptotic approximations. This is an important aspect particularly for large systems since for large $T^{k}_{m}$ the computational cost of a simultaneous coupled system solve can be prohibitive. 
+The terms marked as $P1,P2,P3$ couple to vectors $\yhatbf_{i_{1},i_{2}}$ that precede $\yhatbf_{a,b}$ in the ordering, the terms marked $D1,D2$ couple to $\yhatbf_{a,b}$, and the terms marked as $S1,S2,S3$ couple to vectors that succeed $\yhatbf_{a,b}$ in the ordering. Notice that all the succeeding terms in $S1,S2,S3$ are always multiplied by elements of the $\Khat$ matrix that are below the main diagonal. However, since $\Khat$ has an upper triangular structure, all terms marked $S1,S2,S3$ vanish. Therefore any vector $\yhatbf_{a,b}$ only couples with vectors $\yhatbf_{i_{1},i_{2}}$ which precede it in the ordering. Thus the resulting system of equations for the $T^{2}_{m}$ unknown fields at second order is lower triangular and even though the fields are coupled with each other, they can still be solved for one at a time with back substitution. The splitting of terms in equation~\eqref{eqn:O2_ab_split} is done for $b>a$ however, the same conclusion applies even for the case of $a=b$ and the resulting system of equations is always lower triangular. 
+
+A visual representation of this cross coupling is shown in figure~\ref{fig:Khat_coupling}. For a given index $(a,b)\in\IndexSet{2}{1,m}$, the elements of the matrix $\Khat$ marked by $\mathbf{P}$ that multiply vectors $\yhatbf_{i_{1},i_{2}}$ which precede $\yhatbf_{a,b}$ in the ordering. Similarly, the elements marked by $\mathbf{S}$ multiply the vectors $\yhatbf_{i_{1},i_{2}}$ which succeed $\yhatbf_{a,b}$ in the ordering. The diagonal terms $\widehat{K}_{a,a}$ and $\widehat{K}_{b,b}$ always multiply $\yhatbf_{a,b}$. Obviously, when $\Khat$ is upper triangular, the contributions of the succeeding elements will always vanish. This lower triangular structure of the resulting system of equations for $\yhatbf_{i_{1},i_{2}}$ is not confined to the second-order approximation but in fact persists even for higher order asymptotic approximations so that at all orders, the system of equations can always be solved sequentially, one vector at a time. This is an important aspect particularly for large systems since, as $T^{k}_{m}$ becomes large, the computational cost of a simultaneous coupled system solve can be prohibitive. 
+\begin{figure}
+	\begin{align}
+	\begin{pNiceArray}{cccccccccc}[cell-space-top-limit=1pt, cell-space-bottom-limit=1pt]
+		\widehat{K}_{1,1} & & & \Block{3-1}{\begin{bmatrix}
+																					\  \\
+																					\mathbf{P} \\
+																					\
+																			\end{bmatrix}} & \Block{3-2}{\cdots} & & \Block{6-1}{\begin{bmatrix}
+																			\   \\
+																			\   \\
+																			\mathbf{P}  \\
+																			\ 	 \\
+																			\    \\
+																			\
+																		\end{bmatrix}} & \Block{7-3}{\cdots} & &\\ 
+		 & \Block{2-2}{\ddots} &  &  & & & & & &\\
+		\vdots & & & & & & & &\\
+		& \cdots &  & \widehat{K}_{a,a} & \cdots & & &\\
+		\Block{3-3}{\ } & & & \Block{6-1}{\begin{bmatrix}
+																			\   \\
+																			\ 	\\
+																			\   \\
+																			\mathbf{S} 	 \\
+																			\    \\
+																			\
+																		\end{bmatrix}} & \Block{2-2}{\ddots}  & & & & &\\
+		& & & & & & & & &\\
+		&\cdots & & & & & \widehat{K}_{b,b} & & \cdots & \\
+		& & & & & & \Block{3-1}{\begin{bmatrix}
+															\  \\
+															\mathbf{S} \\
+															\
+													\end{bmatrix}} & \Block{2-2}{\ddots} & & \vdots \\
+		& & & & & & & & & \\
+		& & & & & & & &\cdots & \widehat{K}_{m,m}
+	\end{pNiceArray} \nonumber
+	\end{align}
+	\caption{Coupling of the vector fields $\yhatbf_{i_{1},i_{2}}$ with the $\Khat$ matrix.}
+	\label{fig:Khat_coupling}
+\end{figure}
 
 
 
