@@ -18,14 +18,12 @@ To simplify notation for multiple indices used hereafter, a multi-dimensional in
 	\end{split}
 \end{equation}
 where, $i_{1},i_{2},\ldots,i_{k}$, are the index variables and $[a,b]$ specify the lower and upper bounds of the indices. Obviously the indices $i_{1}$ \etc\ are dummy indices however their relative position is important since the higher index always starts from the previous index. The set is ordered in the sense that the first element of the $\IndexSet{k}{a,b}$ is always $(i_{1},i_{2}\ldots,i_{k}) = (a,a,\ldots,a)$, the last element is $(i_{1},i_{2}\ldots,i_{k}) = (b,b,\ldots,b)$ and it is the last index $(i_{k})$ which iterates the fastest. Hence the index set $\IndexSet{3}{1,3}$ is the set containing the tuples, 
-%\begin{equation}
-	\begin{alignat}{2}
+\begin{alignat}{2}
 	(i_{1},i_{2},i_{3}) \in\{ & (1,1,1), & (1,1,2), & (1,1,3), \nonumber \\
-										  	  & (1,2,2), & (1,2,3),& (1,3,3)  \nonumber \\
-										 	  & (2,2,2), & (2,2,3), & (2,3,3) \nonumber \\
-										 	  & (3,3,3) \} &   &   \nonumber 
-	\end{alignat} 
-%\end{equation}
+								  	  & (1,2,2), & (1,2,3),& (1,3,3)  \nonumber \\
+								 	  & (2,2,2), & (2,2,3), & (2,3,3) \nonumber \\
+								 	  & (3,3,3) \} &.   &   \nonumber 
+\end{alignat} 
 Similarly, multiple nested summations are denoted as,
 \begin{equation}
 	\label{eqn:summation}
@@ -167,49 +165,40 @@ First, the various unknown vectors $\yhatbf_{i_{1},i_{2}}$ are coupled due to th
 \end{equation}
 The terms marked as $P1,P2,P3$ couple to vectors $\yhatbf_{i_{1},i_{2}}$ that precede $\yhatbf_{a,b}$ in the ordering, the terms marked $D1,D2$ couple to $\yhatbf_{a,b}$, and the terms marked as $S1,S2,S3$ couple to vectors that succeed $\yhatbf_{a,b}$ in the ordering. Notice that all the succeeding terms in $S1,S2,S3$ are always multiplied by elements of the $\Khat$ matrix that are below the main diagonal. However, since $\Khat$ has an upper triangular structure, all terms marked $S1,S2,S3$ vanish. Therefore any vector $\yhatbf_{a,b}$ only couples with vectors $\yhatbf_{i_{1},i_{2}}$ which precede it in the ordering. Thus the resulting system of equations for the $T^{2}_{m}$ unknown fields at second order is lower triangular and even though the fields are coupled with each other, they can still be solved for one at a time with back substitution. The splitting of terms in equation~\eqref{eqn:O2_ab_split} is done for $b>a$ however, the same conclusion applies even for the case of $a=b$ and the resulting system of equations is always lower triangular. 
 
-A visual representation of this cross coupling is shown in figure~\ref{fig:Khat_coupling}. For a given index $(a,b)\in\IndexSet{2}{1,m}$, the elements of the matrix $\Khat$ marked by $\mathbf{P}$ that multiply vectors $\yhatbf_{i_{1},i_{2}}$ which precede $\yhatbf_{a,b}$ in the ordering. Similarly, the elements marked by $\mathbf{S}$ multiply the vectors $\yhatbf_{i_{1},i_{2}}$ which succeed $\yhatbf_{a,b}$ in the ordering. The diagonal terms $\widehat{K}_{a,a}$ and $\widehat{K}_{b,b}$ always multiply $\yhatbf_{a,b}$. Obviously, when $\Khat$ is upper triangular, the contributions of the succeeding elements will always vanish. This lower triangular structure of the resulting system of equations for $\yhatbf_{i_{1},i_{2}}$ is not confined to the second-order approximation but in fact persists even for higher order asymptotic approximations so that at all orders, the system of equations can always be solved sequentially, one vector at a time. This is an important aspect particularly for large systems since, as $T^{k}_{m}$ becomes large, the computational cost of a simultaneous coupled system solve can be prohibitive. 
-\begin{figure}
-	\begin{align}
-	\begin{pNiceArray}{cccccccccc}[cell-space-top-limit=1pt, cell-space-bottom-limit=1pt]
-		\widehat{K}_{1,1} & & & \Block{3-1}{\begin{bmatrix}
-																					\  \\
-																					\mathbf{P} \\
-																					\
-																			\end{bmatrix}} & \Block{3-2}{\cdots} & & \Block{6-1}{\begin{bmatrix}
-																			\   \\
-																			\   \\
-																			\mathbf{P}  \\
-																			\ 	 \\
-																			\    \\
-																			\
-																		\end{bmatrix}} & \Block{7-3}{\cdots} & &\\ 
-		 & \Block{2-2}{\ddots} &  &  & & & & & &\\
-		\vdots & & & & & & & &\\
-		& \cdots &  & \widehat{K}_{a,a} & \cdots & & &\\
-		\Block{3-3}{\ } & & & \Block{6-1}{\begin{bmatrix}
-																			\   \\
-																			\ 	\\
-																			\   \\
-																			\mathbf{S} 	 \\
-																			\    \\
-																			\
-																		\end{bmatrix}} & \Block{2-2}{\ddots}  & & & & &\\
-		& & & & & & & & &\\
-		&\cdots & & & & & \widehat{K}_{b,b} & & \cdots & \\
-		& & & & & & \Block{3-1}{\begin{bmatrix}
-															\  \\
-															\mathbf{S} \\
-															\
-													\end{bmatrix}} & \Block{2-2}{\ddots} & & \vdots \\
-		& & & & & & & & & \\
-		& & & & & & & &\cdots & \widehat{K}_{m,m}
-	\end{pNiceArray} \nonumber
-	\end{align}
-	\caption{Coupling of the vector fields $\yhatbf_{i_{1},i_{2}}$ with the $\Khat$ matrix.}
-	\label{fig:Khat_coupling}
-\end{figure}
+A visual representation of this cross coupling is shown in figure~\ref{fig:Khat_coupling_O2}. For a given index $(a,b)\in\IndexSet{2}{1,m}$, the elements of the matrix $\Khat$ marked by $\mathbf{P}$ multiply vectors $\yhatbf_{i_{1},i_{2}}$ that precede $\yhatbf_{a,b}$ in the ordering. Similarly, the elements marked by $\mathbf{S}$ multiply the vectors $\yhatbf_{i_{1},i_{2}}$ which succeed $\yhatbf_{a,b}$ in the ordering. The diagonal terms $\widehat{K}_{a,a}$ and $\widehat{K}_{b,b}$ always multiply $\yhatbf_{a,b}$. Obviously, when $\Khat$ is upper triangular, the contributions of the succeeding elements will always vanish. 
+% Matrix
+\input{matrix_image_o2}
+This lower triangular structure of the resulting system of equations for $\yhatbf_{i_{1},i_{2}}$ is not confined to the second-order approximation but in fact persists even for higher order asymptotic approximations so that at all orders, the system of equations can always be solved sequentially, one vector at a time. This is an important aspect particularly for large systems since the computational cost of a simultaneous coupled system solve can be prohibitive (as $T^{k}_{m}$ becomes large).
+
+To keep the notation compact, the non-vanishing off-diagonal coupling terms will be represented as $\hhatbf_{a,b}$, defined for second order as,
+\begin{equation}
+	\label{eqn:offdiagonal_O2}
+	\hhatbf_{a,b} = \left\lbrace
+	\begin{aligned}
+		\sum^{a}_{i=1}\left(\widehat{K}_{i,b}\yhatbf_{i,a}   
+		-\widehat{K}_{i,b}\yhatbf_{i,a}\delta^{a}_{b}\right) \\
+		+	\sum^{a-1}_{i=1}\widehat{K}_{i,a}\yhatbf_{i,b} +
+		\sum^{b-1}_{i=a}\widehat{K}_{i,b}\yhatbf_{a,i}
+	\end{aligned}\right. 
+\end{equation}
+
+Due to the diagonal terms of $\Khat$ one obtains an expression of the type $[(\widehat{K}_{a,a} + \widehat{K}_{b,b})\mathbf{I} - \ExtL]\yhatbf_{a,b}$, which is singular when $(\widehat{K}_{a,a} + \widehat{K}_{b,b})$ is an eigenvalue of $\ExtL$. The normal form of the invariant manifold precisely resolves this singularity by requiring $\yhatbf_{a,b}$ to have a vanishing component along the singular direction. However, equation~\eqref{eqn:asymptotic_O2_ab} still needs to be balanced along the singular directions, which can only be done by $\sum^{m}_{j=1}\AsParam^{j}_{a,b}\vhatbf_{j}$. This defines the terms of the reduced representation $\AsParam^{j}_{a,b}$ such that,
+\begin{equation}
+	\AsParam^{j}_{a,b} =
+	\begin{cases}
+				\whatbf_{j}^{\dagger}(\fhatbf_{a,b} - \hhatbf_{a,b}); & \textit{if}\  \widehat{\lambda}_{j} = (\widehat{K}_{a,a}+\widehat{K}_{b,b}) \\
+				0														& \textit{otherwise}.
+	\end{cases}
+\end{equation}
 
 
+
+
+
+
+
+
+%%
 
 \subsubsection{Asymptotic terms of $\mathcal{O}(|x|^{3})$}
 \label{sec:normal_form_O3}
@@ -247,6 +236,9 @@ Collecting terms for a particular asymptotic term $x_{a}x_{b}$, where $(a,b)\in\
 		& + \sum^{m}_{j=1}\AsParam^{j}_{a,b}\vhatbf_{j} - \ExtL\yhatbf_{a,b} = \fhatbf_{a,b}.
 	\end{split}
 \end{equation}
+
+\input{matrix_image_o3}
+
 
 
 %
