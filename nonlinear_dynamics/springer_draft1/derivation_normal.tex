@@ -23,8 +23,10 @@ where, $i_{1},i_{2},\ldots,i_{k}$, are the index variables and $[a,b]$ specify t
 								  	  & (1,2,2), & (1,2,3),& (1,3,3)  \nonumber \\
 								 	  & (2,2,2), & (2,2,3), & (2,3,3) \nonumber \\
 								 	  & (3,3,3) \} &.   &   \nonumber 
-\end{alignat} 
-Similarly, multiple nested summations are denoted as,
+\end{alignat}
+If an element $(i_{1},i_{2},\ldots,i_{k})$ preceds an element $(j_{1},j_{2},\ldots,j_{k})$ in ordering it is denoted as $(i_{1},i_{2},\ldots,i_{k}) \prec (j_{1},j_{2},\ldots,j_{k})$ while, if  $(i_{1},i_{2},\ldots,i_{k})$ succeeds $(j_{1},j_{2},\ldots,j_{k})$ in the ordering it is denoted as $(i_{1},i_{2},\ldots,i_{k}) \succ (j_{1},j_{2},\ldots,j_{k})$. 
+
+In a similar vein, multiple nested summations are denoted as 
 \begin{equation}
 	\label{eqn:summation}
 	\sum_{(k)}^{[a,b]} = \sum_{i_{1}=a}^{b}\ \sum_{i_{2}=i_{1}}^{b}\ldots\sum_{i_{k}=i_{k-1}}^{b}
@@ -140,7 +142,7 @@ Collecting the expressions for a particular asymptotic term $x_{a}x_{b}$, where 
 		 \sum^{m}_{i=b}\widehat{K}_{i,a}\yhatbf_{b,i}  - 
 		 \sum^{m}_{i=b}\widehat{K}_{i,a}\yhatbf_{b,i}\delta^{a}_{b}\Big] 
 		   \\
-		& + \sum^{m}_{j=1}\AsParam^{j}_{a,b}\vhatbf_{j} - \ExtL\yhatbf_{a,b} = \fhatbf_{a,b}.
+		& + \sum^{m}_{i=1}\AsParam^{i}_{a,b}\vhatbf_{i} - \ExtL\yhatbf_{a,b} = \fhatbf_{a,b}.
 	\end{split}
 \end{equation}
 At second order one obtains $T^{k}_{m}$ equations which collectively form the system of equations for all $\yhatbf_{i_{1},i_{2}}$ vectors that needs to be solved. Several important properties of equation~\eqref{eqn:asymptotic_O2_ab} need to be pointed out that have implications in terms of practial application and implementations. 
@@ -163,7 +165,7 @@ First, the various unknown vectors $\yhatbf_{i_{1},i_{2}}$ are coupled due to th
 		\widehat{K}_{i,a}\yhatbf_{b,i}\delta^{a}_{b}\right)}^{S3}.
 	\end{split}
 \end{equation}
-The terms marked as $P1,P2,P3$ couple to vectors $\yhatbf_{i_{1},i_{2}}$ that precede $\yhatbf_{a,b}$ in the ordering, the terms marked $D1,D2$ couple to $\yhatbf_{a,b}$, and the terms marked as $S1,S2,S3$ couple to vectors that succeed $\yhatbf_{a,b}$ in the ordering. Notice that all the succeeding terms in $S1,S2,S3$ are always multiplied by elements of the $\Khat$ matrix that are below the main diagonal. However, since $\Khat$ has an upper triangular structure, all terms marked $S1,S2,S3$ vanish. Therefore any vector $\yhatbf_{a,b}$ only couples with vectors $\yhatbf_{i_{1},i_{2}}$ which precede it in the ordering. Thus the resulting system of equations for the $T^{2}_{m}$ unknown fields at second order is lower triangular and even though the fields are coupled with each other, they can still be solved for one at a time with back substitution. The splitting of terms in equation~\eqref{eqn:O2_ab_split} is done for $b>a$ however, the same conclusion applies even for the case of $a=b$ and the resulting system of equations is always lower triangular. 
+The terms marked as $P1,P2,P3$ couple to vectors $\yhatbf_{i_{1},i_{2}}$ such that $(i_{1},i_{2})\prec(a,b)$, the terms marked $D1,D2$ couple to $\yhatbf_{a,b}$, and the terms marked as $S1,S2,S3$ couple to vectors succeeding $\yhatbf_{a,b}$, \ie $(i_{1},i_{2})\succ(a,b)$. Notice that all the succeeding terms in $S1,S2,S3$ are always multiplied by elements of the $\Khat$ matrix that are below the main diagonal. However, since $\Khat$ has an upper triangular structure, all terms marked $S1,S2,S3$ vanish. Therefore any vector $\yhatbf_{a,b}$ only couples with vectors $\yhatbf_{i_{1},i_{2}}$ which precede it in the ordering. Thus the resulting system of equations for the $T^{2}_{m}$ unknown fields at second order is lower triangular and even though the fields are coupled with each other, they can still be solved for one at a time with back substitution. The splitting of terms in equation~\eqref{eqn:O2_ab_split} is done for $b>a$ however, the same conclusion applies even for the case of $a=b$ and the resulting system of equations is always lower triangular. 
 
 A visual representation of this cross coupling is shown in figure~\ref{fig:Khat_coupling_O2}. For a given index $(a,b)\in\IndexSet{2}{1,m}$, the elements of the matrix $\Khat$ marked by $\mathbf{P}$ multiply vectors $\yhatbf_{i_{1},i_{2}}$ that precede $\yhatbf_{a,b}$ in the ordering. Similarly, the elements marked by $\mathbf{S}$ multiply the vectors $\yhatbf_{i_{1},i_{2}}$ which succeed $\yhatbf_{a,b}$ in the ordering. The diagonal terms $\widehat{K}_{a,a}$ and $\widehat{K}_{b,b}$ always multiply $\yhatbf_{a,b}$. Obviously, when $\Khat$ is upper triangular, the contributions of the succeeding elements will always vanish. 
 % Matrix
@@ -173,7 +175,7 @@ This lower triangular structure of the resulting system of equations for $\yhatb
 To keep the notation compact, the non-vanishing off-diagonal coupling terms will be represented as $\hhatbf_{a,b}$, defined for second order as,
 \begin{equation}
 	\label{eqn:offdiagonal_O2}
-	\hhatbf_{a,b} = \left\lbrace
+	\hhatbf^{O}_{a,b} = \left\lbrace
 	\begin{aligned}
 		\sum^{a}_{i=1}\left(\widehat{K}_{i,b}\yhatbf_{i,a}   
 		-\widehat{K}_{i,b}\yhatbf_{i,a}\delta^{a}_{b}\right) \\
@@ -181,29 +183,31 @@ To keep the notation compact, the non-vanishing off-diagonal coupling terms will
 		\sum^{b-1}_{i=a}\widehat{K}_{i,b}\yhatbf_{a,i}
 	\end{aligned}\right. 
 \end{equation}
-
-Due to the diagonal terms of $\Khat$ one obtains an expression of the type $[(\widehat{K}_{a,a} + \widehat{K}_{b,b})\mathbf{I} - \ExtL]\yhatbf_{a,b}$, which is singular when $(\widehat{K}_{a,a} + \widehat{K}_{b,b})$ is an eigenvalue of $\ExtL$. The normal form of the invariant manifold precisely resolves this singularity by requiring $\yhatbf_{a,b}$ to have a vanishing component along the singular direction. However, equation~\eqref{eqn:asymptotic_O2_ab} still needs to be balanced along the singular directions, which can only be done by $\sum^{m}_{j=1}\AsParam^{j}_{a,b}\vhatbf_{j}$. This defines the terms of the reduced representation $\AsParam^{j}_{a,b}$ such that,
+The resulting equation for $\yhatbf_{a,b}$ may be written as
 \begin{equation}
-	\AsParam^{j}_{a,b} =
+	\begin{split}
+	\label{eqn:asymptotic_O2_compact}
+	\left[(\widehat{K}_{a,a} + \widehat{K}_{b,b})\mathbf{I} - \ExtL\right]\yhatbf_{a,b} \\
+	+ \sum^{m}_{i=1}\AsParam^{i}_{a,b}\vhatbf_{i} = \fhatbf_{a,b} - \hhatbf^{O}_{a,b} 
+	\end{split}
+\end{equation}
+This equation is singular when $(\widehat{K}_{a,a} + \widehat{K}_{b,b})$ is an eigenvalue of $\ExtL$, which is often referred to as a resonance condition. The normal form of the invariant manifold precisely resolves this singularity by requiring $\yhatbf_{a,b}$ to have a vanishing component along the singular direction. However, equation~\eqref{eqn:asymptotic_O2_ab} still needs to be balanced along the singular directions, which can only be done by $\sum^{m}_{i=1}\AsParam^{i}_{a,b}\vhatbf_{i}$. Multiplying equation~\eqref{eqn:asymptotic_O2_compact} with $\whatbf_{i}^{\dagger}$ and requiring that $\whatbf_{i}^{\dagger}\yhatbf_{a,b} = 0$ (in case of resonance), then provides us with the definition of $\AsParam^{j}_{a,b}$,
+\begin{equation}
+	\label{eqn:g2_definition}
+	\AsParam^{i}_{a,b} =
 	\begin{cases}
-				\whatbf_{j}^{\dagger}(\fhatbf_{a,b} - \hhatbf_{a,b}); & \textit{if}\  \widehat{\lambda}_{j} = (\widehat{K}_{a,a}+\widehat{K}_{b,b}) \\
-				0														& \textit{otherwise}.
+				\whatbf_{i}^{\dagger}(\fhatbf_{a,b} - \hhatbf^{O}_{a,b}); & \textit{if}\  (\widehat{K}_{a,a}+\widehat{K}_{b,b}) = \widehat{K}_{i,i},\\
+				0,														& \textit{otherwise},
 	\end{cases}
 \end{equation}
-
-
-
-
-
-
-
+where, $\whatbf_{i}$ is the $i^{th}$ adjoint eigenvector of $\ExtL$ as defined earlier. Since the system is lower triangular the terms $\hhatbf^{O}_{a,b}$ are always known apriori when solving the system sequentially. 
 
 %%
 
 \subsubsection{Asymptotic terms of $\mathcal{O}(|x|^{3})$}
 \label{sec:normal_form_O3}
 
-At third order (and higher orders) one also obtains contributions from the lower order terms. 
+At third (and higher) order one also obtains contributions from the lower order terms.  The sum of all contributions at third order can be written as,
 \begin{align}
 	\label{eqn:asymptotic_O3}
 	\begin{split}
@@ -221,25 +225,39 @@ At third order (and higher orders) one also obtains contributions from the lower
 		\right]\yhatbf_{i_{1},i_{2}} \\
 		%
 		%
-		& + \sum^{m}_{i=1}\sum^{[1,m]}_{(3)} \AsParam^{i}_{j_{1},j_{2},j_{3}}\vhatbf_{j}x_{j_{1}}x_{j_{2},x_{3}}  \\ 
+		& + \sum^{m}_{i=1}\sum^{[1,m]}_{(3)} \AsParam^{i}_{j_{1},j_{2},j_{3}}\vhatbf_{i}x_{j_{1}}x_{j_{2}}x_{j_{3}}  \\ 
 		%
 		& - \sum^{[1,m]}_{(3)} \ExtL\yhatbf_{i_{1},i_{2},1_{3}}x_{i_{1}}x_{i_{2}}x_{i_{3}} = \sum^{[1,m]}_{(3)} \fhatbf_{i_{1},i_{2},i_{3}}x_{i_{1}}x_{i_{2}}x_{i_{3}}.
 	\end{split} 
 \end{align}
-Collecting terms for a particular asymptotic term $x_{a}x_{b}$, where $(a,b)\in\IndexSet{2}{1,m}$, equation~\eqref{eqn:asymptotic_O3} reduces to,
-\begin{equation}
-	\label{eqn:asymptotic_O3_ab}
-	\begin{split}
-		&[\widehat{K}_{a,a} + \widehat{K}_{b,b}]\yhatbf_{a,b} + 
-		\Big[ \sum^{b}_{\substack{i=1 \\ i\neq a}}\widehat{K}_{i,a}\yhatbf_{i,b} + \sum^{m}_{\substack{i=a \\ i\neq b}}\widehat{K}_{i,b}\yhatbf_{a,i} \Big] \\
-		%
-		& + \sum^{m}_{j=1}\AsParam^{j}_{a,b}\vhatbf_{j} - \ExtL\yhatbf_{a,b} = \fhatbf_{a,b}.
-	\end{split}
-\end{equation}
-
+The $\Khat$ matrix is responsible for the cross contributions of different vectors $\yhatbf_{i_{1},i_{2},i_{3}}$ as seen from the first set of bracketted terms in equation~\eqref{eqn:asymptotic_O3}. Again, for a given tuple $(a,b,c)\in\IndexSet{3}{1,m}$, the coupling of $\Khat$ elements with vectors preceeding and succeeding $\yhatbf_{a,b,c}$ is depicted in figure~\ref{fig:Khat_coupling_O3}. With $\Khat$ being upper triangular, the contributions of succeeding elements, $(i_{1},i_{2},i_{3})\succ (a,b,c)$, vanishes and the resulting system of equations for $\yhatbf_{i_{1},i_{2},i_{3}}$ at third order is again lower triangular.
 \input{matrix_image_o3}
 
-
+The second set of bracketted terms in equation~\eqref{eqn:asymptotic_O3} are contributions from the lower order asymptotic terms. For a given index $(a,b,c)$, we represent the low order contributions as $\hhatbf^{L}_{a,b,c}$ and the contributions of the off-diagonal terms as $\hhatbf^{O}_{a,b,c}$ resulting in the compact expression for $\yhatbf_{a,b,c}$ as
+\begin{equation}
+	\begin{split}
+	\label{eqn:asymptotic_O3_compact}
+	\left[(\widehat{K}_{a,a} + \widehat{K}_{b,b} + \widehat{K}_{c,c})\mathbf{I} - \ExtL\right]\yhatbf_{a,b,c}  \\ 
+	+ \sum^{m}_{i=1}\AsParam^{i}_{a,b,c}\vhatbf_{i} = \fhatbf_{a,b,c} - \hhatbf^{O}_{a,b,c} - \hhatbf^{L}_{a,b,c}
+\end{split}
+\end{equation}
+The resolution of the system singularities due to the resonance condition, $(\widehat{K}_{a,a} + \widehat{K}_{b,b} + \widehat{K}_{c,c}) = \widehat{K}_{i,i}$, provides us with the third order terms of the reduced representation,
+\begin{equation}
+	\label{eqn:g3_definition}
+	\AsParam^{i}_{a,b,c} =
+	\begin{cases}
+		\begin{split}
+			\whatbf_{i}^{\dagger}(\fhatbf_{a,b,c} - \hhatbf^{L}_{a,b,c}\\
+			 - \hhatbf^{O}_{a,b});
+		\end{split}
+		 & \begin{split}
+			\textit{if},\ (\widehat{K}_{a,a}+\widehat{K}_{b,b}\\
+			 + \widehat{K}_{c,c}) = \widehat{K}_{i,i}
+		\end{split} \\
+		0,														& \textit{otherwise},
+	\end{cases}
+\end{equation}
+and $\whatbf^{\dagger}_{i}\yhatbf_{a,b,c} = 0$ if the resonance condition holds. 
 
 %
 %Section~\ref{sec:extended_system} and \ref{sec:extended_subspace_structure} outline the spectral properties of the system when extended to include the parameters as dynamic variables. Effectively the size of the critical subspace increases and, the eigen-structure of the extended linearized system $\ExtL$ can be deduced from the spectral properties of the original linear system $\Lu$. The critical subspace of the new system is of dimension $m=n+l+h$. The center-manifold theorem can be applied to this extended system given by equation~\eqref{eqn:evolution_extended_compact} so that both parameter perturbations and harmonic forcings are directly incorporated into the larger center-manifold. 
