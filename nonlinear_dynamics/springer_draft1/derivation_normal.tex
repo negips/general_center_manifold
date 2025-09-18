@@ -78,27 +78,17 @@ Here the terms $\AsParam_{i_{1},i_{2},i_{3},\ldots}$ are $m$-dimensional vectors
 which is obtained via the collection of terms with similar powers. 
 
 Substitution of the power series expansions into equation~\eqref{eqn:evolution_extended_compact} results in 
-%\begin{align}
-%	\begin{split}
-%		\dfrac{\partial }{\partial t}\Big(\sum^{[1,m]}_{(1)}\yhatbf_{i_{1}}x_{i_{1}} + \ldots \Big) = 
-%		%
-%		\ExtL\Big(\sum^{[1,m]}_{(1)}\yhatbf_{i_{1}}x_{i_{1}} + \ldots \Big)  + \\
-%		% 
-%		\Big(\sum^{[1,m]}_{(2)}\efield{f}_{i_{1},i_{2}}x_{i_{1}}x_{i_{2}} + \ldots\Big),
-%	\end{split} \nonumber
-%\end{align}
-%leading to,
 \begin{align}
 	\label{eqn:asymptotic_substitution}
 	\begin{split}
-		\sum^{m}_{\alpha=1}\dfrac{\partial }{\partial x_{\alpha}}\Big(\sum^{[1,m]}_{(1)}\yhatbf_{i_{1}}x_{i_{1}} + \ldots \Big)	 \Big(\sum^{[1,m]}_{(1)}\AsParam^{\alpha}_{j_{1}}x_{j_{1}} +\ldots \Big)= \\
+		\sum^{m}_{\alpha=1}\dfrac{\partial }{\partial x_{\alpha}}\Big(\sum^{[1,m]}_{(1)}\yhatbf_{i_{1}}x_{i_{1}} + \ldots \Big)	 \Big(\sum^{[1,m]}_{(1)}\AsParamEl^{\alpha}_{j_{1}}x_{j_{1}} +\ldots \Big)= \\
 		%
 		\ExtL\Big(\sum^{[1,m]}_{(1)}\yhatbf_{i_{1}}x_{i_{1}} + \ldots \Big)  +
 		% 
 		\Big(\sum^{[1,m]}_{(2)}\efield{f}_{i_{1},i_{2}}x_{i_{1}}x_{i_{2}} + \ldots\Big).
 	\end{split}
 \end{align}
-Here $\AsParam^{\alpha}_{j_{1}}$ represents the $\alpha^{th}$ element of the vector $\AsParam_{j_{1}}$. At order $k$, one obtains $m\times T^{k}_{m}$ unknowns which define the elements of the vectors $\AsParam_{i_{1},\ldots,i_{k}}$, and the corresponding $T^{k}_{m}$ unknown vectors $\yhatbf_{i_{1},\ldots,i_{k}}$. The definitions of the two sets of unknowns are interdependent since the form of the reduced representation $\mathcal{G}(\xbf)$ determines the map $\mathcal{Y}(\xbf)$ from the reduced coordinates to the full solution (and vice versa). 
+Here $\AsParamEl^{\alpha}_{j_{1}}$ represents the $\alpha^{th}$ element of the vector $\AsParam_{j_{1}}$. At order $k$, one obtains $m\times T^{k}_{m}$ unknowns which define the elements of the vectors $\AsParam_{i_{1},\ldots,i_{k}}$, and the corresponding $T^{k}_{m}$ unknown vectors $\yhatbf_{i_{1},\ldots,i_{k}}$. The definitions of the two sets of unknowns are interdependent since the form of the reduced representation $\mathcal{G}(\xbf)$ determines the map $\mathcal{Y}(\xbf)$ from the reduced coordinates to the full solution (and vice versa). 
 
 \subsubsection{Asymptotic terms of $\mathcal{O}(|x|)$}
 \label{sec:normal_form_O1}
@@ -106,7 +96,7 @@ Here $\AsParam^{\alpha}_{j_{1}}$ represents the $\alpha^{th}$ element of the vec
 At first order the non-linear terms do not contribute and one simply obtains,
 \begin{align}
 		\label{eqn:asymptotic_O1}
-		\sum^{[1,m]}_{(1)}\Big( \sum^{m}_{\alpha=1}\yhatbf_{\alpha}\AsParam^{\alpha}_{i_{1}} - \ExtL\yhatbf_{i_{1}} \Big)x_{i_{1}} = \veczero.
+		\sum^{[1,m]}_{(1)}\Big( \sum^{m}_{\alpha=1}\AsParamEl^{\alpha}_{i_{1}}\yhatbf_{\alpha} - \ExtL\yhatbf_{i_{1}} \Big)x_{i_{1}} = \veczero.
 \end{align}
 Here, the first restrictions on the asymptotic form of $\Param$ are applied, associating the unknown terms $\yhatbf_{i_{1}}, \ldots$ and $\AsParam_{i_{1}},\ldots$ with the generalized eigenvalue problem such that,
 \begin{subequations}
@@ -126,7 +116,7 @@ At second order the non-linear terms contribute and one obtains the following re
 	\begin{split}
 		& \sum^{[1,m]}_{(2)}\sum^{m}_{j=1}\Big( \widehat{K}_{i_{1},j}x_{i_{2}}x_{j} + \widehat{K}_{i_{2},j}x_{i_{1}}x_{j} \Big)\yhatbf_{i_{1},i_{2}} + \\
 		%
-		& \sum^{[1,m]}_{(2)} \sum^{m}_{j=1}\AsParam^{j}_{i_{1},i_{2}}\vhatbf_{j}x_{i_{1}}x_{i_{2}} - \sum^{[1,m]}_{(2)} \ExtL\yhatbf_{i_{1},i_{2}}x_{i_{1}}x_{i_{2}} \\ 
+		& \sum^{[1,m]}_{(2)} \sum^{m}_{j=1}\AsParamEl^{j}_{i_{1},i_{2}}\vhatbf_{j}x_{i_{1}}x_{i_{2}} - \sum^{[1,m]}_{(2)} \ExtL\yhatbf_{i_{1},i_{2}}x_{i_{1}}x_{i_{2}} \\ 
 		%
 		& = \sum^{[1,m]}_{(2)} \fhatbf_{i_{1},i_{2}}x_{i_{1}}x_{i_{2}}.
 	\end{split} 
@@ -142,7 +132,7 @@ Collecting the expressions for a particular asymptotic term $x_{a}x_{b}$, where 
 		 \sum^{m}_{i=b}\widehat{K}_{i,a}\yhatbf_{b,i}  - 
 		 \sum^{m}_{i=b}\widehat{K}_{i,a}\yhatbf_{b,i}\delta^{a}_{b}\Big] 
 		   \\
-		& + \sum^{m}_{i=1}\AsParam^{i}_{a,b}\vhatbf_{i} - \ExtL\yhatbf_{a,b} = \fhatbf_{a,b}.
+		& + \sum^{m}_{i=1}\AsParamEl^{i}_{a,b}\vhatbf_{i} - \ExtL\yhatbf_{a,b} = \fhatbf_{a,b}.
 	\end{split}
 \end{equation}
 At second order one obtains $T^{k}_{m}$ equations which collectively form the system of equations for all $\yhatbf_{i_{1},i_{2}}$ vectors that needs to be solved. Several important properties of equation~\eqref{eqn:asymptotic_O2_ab} need to be pointed out that have implications in terms of practial application and implementations. 
@@ -172,7 +162,7 @@ A visual representation of this cross coupling is shown in figure~\ref{fig:Khat_
 \input{matrix_image_o2}
 This lower triangular structure of the resulting system of equations for $\yhatbf_{i_{1},i_{2}}$ is not confined to the second-order approximation but in fact persists even for higher order asymptotic approximations so that at all orders, the system of equations can always be solved sequentially, one vector at a time. This is an important aspect particularly for large systems since the computational cost of a simultaneous coupled system solve can be prohibitive (as $T^{k}_{m}$ becomes large).
 
-To keep the notation compact, the non-vanishing off-diagonal coupling terms will be represented as $\hhatbf_{a,b}$, defined for second order as,
+To keep the notation compact, the non-vanishing off-diagonal coupling terms will be represented as $\hhatbf^{O}_{a,b}$, defined for second order as,
 \begin{equation}
 	\label{eqn:offdiagonal_O2}
 	\hhatbf^{O}_{a,b} = \left\lbrace
@@ -180,27 +170,28 @@ To keep the notation compact, the non-vanishing off-diagonal coupling terms will
 		\sum^{a}_{i=1}\left(\widehat{K}_{i,b}\yhatbf_{i,a}   
 		-\widehat{K}_{i,b}\yhatbf_{i,a}\delta^{a}_{b}\right) \\
 		+	\sum^{a-1}_{i=1}\widehat{K}_{i,a}\yhatbf_{i,b} +
-		\sum^{b-1}_{i=a}\widehat{K}_{i,b}\yhatbf_{a,i}
+		\sum^{b-1}_{i=a}\widehat{K}_{i,b}\yhatbf_{a,i}.
 	\end{aligned}\right. 
 \end{equation}
 The resulting equation for $\yhatbf_{a,b}$ may be written as
-\begin{equation}
-	\begin{split}
+\begin{align}
 	\label{eqn:asymptotic_O2_compact}
-	\left[(\widehat{K}_{a,a} + \widehat{K}_{b,b})\mathbf{I} - \ExtL\right]\yhatbf_{a,b} \\
-	+ \sum^{m}_{i=1}\AsParam^{i}_{a,b}\vhatbf_{i} = \fhatbf_{a,b} - \hhatbf^{O}_{a,b} 
-	\end{split}
-\end{equation}
-This equation is singular when $(\widehat{K}_{a,a} + \widehat{K}_{b,b})$ is an eigenvalue of $\ExtL$, which is often referred to as a resonance condition. The normal form of the invariant manifold precisely resolves this singularity by requiring $\yhatbf_{a,b}$ to have a vanishing component along the singular direction. However, equation~\eqref{eqn:asymptotic_O2_ab} still needs to be balanced along the singular directions, which can only be done by $\sum^{m}_{i=1}\AsParam^{i}_{a,b}\vhatbf_{i}$. Multiplying equation~\eqref{eqn:asymptotic_O2_compact} with $\whatbf_{i}^{\dagger}$ and requiring that $\whatbf_{i}^{\dagger}\yhatbf_{a,b} = 0$ (in case of resonance), then provides us with the definition of $\AsParam^{j}_{a,b}$,
+	\begin{aligned}
+	\left[\omega_{a,b}\Ihat - \ExtL\right]\yhatbf_{a,b} + \sum^{m}_{i=1}\AsParamEl^{i}_{a,b}\vhatbf_{i} \\
+	 = \fhatbf_{a,b} - \hhatbf^{O}_{a,b},
+	\end{aligned} &&\\
+	\omega_{a,b} = \widehat{K}_{a,a} + \widehat{K}_{b,b},
+\end{align}
+where, $\Ihat$ is the identity matrix for the extended system. This equation is singular when $\omega_{a,b}$ is an eigenvalue of $\ExtL$, which is often referred to as a resonance condition. The normal form of the invariant manifold precisely resolves this singularity by requiring $\yhatbf_{a,b}$ to have a vanishing component along the singular direction. However, equation~\eqref{eqn:asymptotic_O2_ab} still needs to be balanced along the singular directions, which can only be done by $\sum^{m}_{j=1}\AsParamEl^{j}_{a,b}\vhatbf_{j}$. Multiplying equation~\eqref{eqn:asymptotic_O2_compact} with $\whatbf_{j}^{\dagger}$ and requiring that $\whatbf_{j}^{\dagger}\yhatbf_{a,b} = 0$ (in case of resonance), then provides us with the definition of $\AsParam_{a,b}$,
 \begin{equation}
 	\label{eqn:g2_definition}
-	\AsParam^{i}_{a,b} =
+	\AsParamEl^{j}_{a,b} =
 	\begin{cases}
-				\whatbf_{i}^{\dagger}(\fhatbf_{a,b} - \hhatbf^{O}_{a,b}); & \textit{if}\  (\widehat{K}_{a,a}+\widehat{K}_{b,b}) = \widehat{K}_{i,i},\\
+				\whatbf_{j}^{\dagger}(\fhatbf_{a,b} - \hhatbf^{O}_{a,b}); & \textit{if}\  \omega_{a,b} = \widehat{K}_{j,j},\\
 				0,														& \textit{otherwise},
 	\end{cases}
 \end{equation}
-where, $\whatbf_{i}$ is the $i^{th}$ adjoint eigenvector of $\ExtL$ as defined earlier. Since the system is lower triangular the terms $\hhatbf^{O}_{a,b}$ are always known apriori when solving the system sequentially. 
+where, $\whatbf_{j}$ is the $j^{th}$ adjoint eigenvector of $\ExtL$ as defined earlier. Since the system is lower triangular the terms $\hhatbf^{O}_{a,b}$ are always known apriori when solving the system sequentially. 
 
 %%
 
@@ -221,260 +212,79 @@ At third (and higher) order one also obtains contributions from the lower order 
 		\widehat{K}_{i_{3},j}x_{i_{1}}x_{i_{2}}x_{j} \right]\yhatbf_{i_{1},i_{2},i_{3}} +  \\
 		%
 		& \sum^{[1,m]}_{(2)}\sum^{[1,m]}_{(2)}\left[ 
-		\AsParam^{i_{1}}_{j_{1},j_{2}}x_{i_{2}}x_{j_{1}}x_{j_{2}} + \AsParam^{i_{2}}_{j_{1},j_{2}}x_{i_{1}}x_{j_{1}}x_{j_{2}}
+		\AsParamEl^{i_{1}}_{j_{1},j_{2}}x_{i_{2}}x_{j_{1}}x_{j_{2}} + \AsParamEl^{i_{2}}_{j_{1},j_{2}}x_{i_{1}}x_{j_{1}}x_{j_{2}}
 		\right]\yhatbf_{i_{1},i_{2}} \\
 		%
 		%
-		& + \sum^{m}_{i=1}\sum^{[1,m]}_{(3)} \AsParam^{i}_{j_{1},j_{2},j_{3}}\vhatbf_{i}x_{j_{1}}x_{j_{2}}x_{j_{3}}  \\ 
+		& + \sum^{m}_{j=1}\sum^{[1,m]}_{(3)} \AsParamEl^{j}_{i_{1},i_{2},i_{3}}\vhatbf_{i}x_{i_{1}}x_{i_{2}}x_{i_{3}}  \\ 
 		%
-		& - \sum^{[1,m]}_{(3)} \ExtL\yhatbf_{i_{1},i_{2},1_{3}}x_{i_{1}}x_{i_{2}}x_{i_{3}} = \sum^{[1,m]}_{(3)} \fhatbf_{i_{1},i_{2},i_{3}}x_{i_{1}}x_{i_{2}}x_{i_{3}}.
+		& - \sum^{[1,m]}_{(3)} \ExtL\yhatbf_{i_{1},i_{2},i_{3}}x_{i_{1}}x_{i_{2}}x_{i_{3}} = \sum^{[1,m]}_{(3)} \fhatbf_{i_{1},i_{2},i_{3}}x_{i_{1}}x_{i_{2}}x_{i_{3}}.
 	\end{split} 
 \end{align}
-The $\Khat$ matrix is responsible for the cross contributions of different vectors $\yhatbf_{i_{1},i_{2},i_{3}}$ as seen from the first set of bracketted terms in equation~\eqref{eqn:asymptotic_O3}. Again, for a given tuple $(a,b,c)\in\IndexSet{3}{1,m}$, the coupling of $\Khat$ elements with vectors preceeding and succeeding $\yhatbf_{a,b,c}$ is depicted in figure~\ref{fig:Khat_coupling_O3}. With $\Khat$ being upper triangular, the contributions of succeeding elements, $(i_{1},i_{2},i_{3})\succ (a,b,c)$, vanishes and the resulting system of equations for $\yhatbf_{i_{1},i_{2},i_{3}}$ at third order is again lower triangular.
+The $\Khat$ matrix is responsible for the cross contributions of different vectors $\yhatbf_{i_{1},i_{2},i_{3}}$ as seen from the first set of bracketted terms in equation~\eqref{eqn:asymptotic_O3}. Again, for a given tuple $(a,b,c)\in\IndexSet{3}{1,m}$, the coupling of $\Khat$ elements with vectors preceeding and succeeding $\yhatbf_{a,b,c}$ is depicted in figure~\ref{fig:Khat_coupling_O3}. With $\Khat$ being upper triangular, the contribution of succeeding elements, $(i_{1},i_{2},i_{3})\succ (a,b,c)$, vanishes and the resulting system of equations for $\yhatbf_{i_{1},i_{2},i_{3}}$ at third order is again lower triangular.
 \input{matrix_image_o3}
 
 The second set of bracketted terms in equation~\eqref{eqn:asymptotic_O3} are contributions from the lower order asymptotic terms. For a given index $(a,b,c)$, we represent the low order contributions as $\hhatbf^{L}_{a,b,c}$ and the contributions of the off-diagonal terms as $\hhatbf^{O}_{a,b,c}$ resulting in the compact expression for $\yhatbf_{a,b,c}$ as
-\begin{equation}
-	\begin{split}
-	\label{eqn:asymptotic_O3_compact}
-	\left[(\widehat{K}_{a,a} + \widehat{K}_{b,b} + \widehat{K}_{c,c})\mathbf{I} - \ExtL\right]\yhatbf_{a,b,c}  \\ 
-	+ \sum^{m}_{i=1}\AsParam^{i}_{a,b,c}\vhatbf_{i} = \fhatbf_{a,b,c} - \hhatbf^{O}_{a,b,c} - \hhatbf^{L}_{a,b,c}
-\end{split}
-\end{equation}
-The resolution of the system singularities due to the resonance condition, $(\widehat{K}_{a,a} + \widehat{K}_{b,b} + \widehat{K}_{c,c}) = \widehat{K}_{i,i}$, provides us with the third order terms of the reduced representation,
+\begin{subequations}
+\begin{align}
+	\begin{aligned}
+		\label{eqn:asymptotic_O3_compact}
+		\left[\omega_{a,b,c}\Ihat - \ExtL\right]\yhatbf_{a,b,c}  + \sum^{m}_{j=1}\AsParamEl^{j}_{a,b,c}\vhatbf_{j} \\ 
+		 = \fhatbf_{a,b,c} - \hhatbf^{O}_{a,b,c} - \hhatbf^{L}_{a,b,c}
+	\end{aligned} &&\\
+	\omega_{a,b,c} = \widehat{K}_{a,a} + \widehat{K}_{b,b} + \widehat{K}_{c,c}.&&
+\end{align}
+\end{subequations}
+The resolution of the system singularities due to the resonance condition, $\omega_{a,b,c} = \widehat{K}_{j,j}$, provides us with the third order terms of the reduced representation,
 \begin{equation}
 	\label{eqn:g3_definition}
-	\AsParam^{i}_{a,b,c} =
+	\AsParamEl^{j}_{a,b,c} =
 	\begin{cases}
 		\begin{split}
-			\whatbf_{i}^{\dagger}(\fhatbf_{a,b,c} - \hhatbf^{L}_{a,b,c}\\
-			 - \hhatbf^{O}_{a,b});
+			\whatbf_{j}^{\dagger}(\fhatbf_{a,b,c} - \hhatbf^{L}_{a,b,c}\\
+			 - \hhatbf^{O}_{a,b,c});
 		\end{split}
 		 & \begin{split}
-			\textit{if},\ (\widehat{K}_{a,a}+\widehat{K}_{b,b}\\
-			 + \widehat{K}_{c,c}) = \widehat{K}_{i,i}
+			\textit{if},\ \omega_{a,b,c} = \widehat{K}_{j,j}
 		\end{split} \\
 		0,														& \textit{otherwise},
 	\end{cases}
 \end{equation}
-and $\whatbf^{\dagger}_{i}\yhatbf_{a,b,c} = 0$ if the resonance condition holds. 
+and $\whatbf^{\dagger}_{j}\yhatbf_{a,b,c} = 0$ if the resonance condition holds. 
 
-%
-%Section~\ref{sec:extended_system} and \ref{sec:extended_subspace_structure} outline the spectral properties of the system when extended to include the parameters as dynamic variables. Effectively the size of the critical subspace increases and, the eigen-structure of the extended linearized system $\ExtL$ can be deduced from the spectral properties of the original linear system $\Lu$. The critical subspace of the new system is of dimension $m=n+l+h$. The center-manifold theorem can be applied to this extended system given by equation~\eqref{eqn:evolution_extended_compact} so that both parameter perturbations and harmonic forcings are directly incorporated into the larger center-manifold. 
-%
-%A particular graph style parameterization is chosen for the representation of the invariant center-manifold which explicitly decomposes the critical and stable subspace components. The solution to equation~\eqref{eqn:evolution_extended_compact} is decomposed into the fields belonging to the critical and stable subspaces of $\ExtL$. Since the critical subspace is finite dimensional, it is represented by the time-dependent amplitudes of the critical eigenvectors. Accordingly, the solution is decomposed as
-%\begin{subequations}
-%	\begin{align}
-%		\efield{u}(t) =& \mathbf{\widehat{V}}\mathbf{x}(t) + \Qhat\efield{u}_{s}(t), \\
-%		%
-%		\mathbf{\widehat{V}}\mathbf{x} =& \mathbf{\widehat{V}_{C}}\mathbf{x}_{C} + \mathbf{\widehat{V}_{P}}\mathbf{x}_{P} + \mathbf{\widehat{V}_{H}}\mathbf{x}_{H},  	
-%	\end{align}
-%	%
-%	\begin{align}
-%		\mathbf{x} = \begin{bmatrix}
-%			\mathbf{x}_{C} \\
-%			\mathbf{x}_{P} \\
-%			\mathbf{x}_{H} 
-%		\end{bmatrix}, &&
-%		%
-%		\efield{u}_{s}(t) = \begin{bmatrix}
-%			\vfield{u}_{s} \\
-%			\veczero \\
-%			\veczero 
-%		\end{bmatrix}, \nonumber
-%	\end{align} 
-%\end{subequations}
-%where $\mathbf{x} \in \mathds{C}^{m}$, is the complex vector of the time-dependent amplitudes of the critical eigenmodes, with $\mathbf{x}_{C}\in\mathds{C}^{n}$, $\mathbf{x}_{P}\in\mathds{C}^{l}$ and $\mathbf{x}_{H}\in\mathds{C}^{h}$ being the amplitude vectors for the (extension of the) original critical modes, parameter modes and the harmonic modes respectively. $\efield{u}_{s}$ is the part of the solution lying in the stable subspace of $\ExtL$. In accordance with lemma~\ref{lemma:lemma1}, the extended variables vanish for $\efield{u}_{s}$. $\Qhat$ is projector onto the stable subspace of $\ExtL$. Note that $\Qhat\efield{u}_{s} = \efield{u}_{s}$, by definition of $\Qhat$ and $\efield{u}_{s}$. The nonlinear term is now denoted as $\mathcal{N}(\mathbf{x},\vfield{u}_{s}) = \vfield{f}_{NL}(\vecu,\vecnu)$ with its extension $\mathcal{\widehat{N}}(\mathbf{x},\vfield{u}_{s}) = \efield{f}_{NL}(\vecu,\vecnu)$, to emphasize the change of variables. Substituting the solution decomposition in to equation~\eqref{eqn:evolution_extended_compact} and using the projection matrices $\mathbf{\widehat{W}}$ and $\Qhat$ one obtains the two evolution equations for $\xbf$ and $\efield{u}_{s}$ as
-%\begin{subequations}
-%	\begin{align}
-%		\dfrac{d\mathbf{x}}{d t} =& \mathbf{\widehat{K}}\mathbf{x} + \mathbf{\widehat{W}}^{H}\mathcal{\widehat{N}} \label{eqn:evolution_extended_decomposed1}.\\
-%		%
-%		\dfrac{\partial \Qhat \efield{u}_{s}}{\partial t} =& \Qhat\ExtL \Qhat\efield{u}_{s} + \Qhat\mathcal{\widehat{N}}
-%		 \label{eqn:evolution_extended_decomposed2}. 
-%	\end{align}
-%\end{subequations}
-%Equation~ \eqref{eqn:evolution_extended_decomposed2} may be further simplified by noting that the individual terms have the following structure,
-%\begin{align}
-%		\Qhat\efield{u}_{s} = 
-%		\begin{bmatrix}
-%			\mathbf{Q}\vfield{u}_{s} \\
-%			\veczero \\
-%			\veczero 
-%		\end{bmatrix}, &
-%		%
-%		\hspace{1mm} \Qhat\ExtL\Qhat\efield{u}_{s} = 
-%		\begin{bmatrix}
-%			\mathbf{Q}\Lu\mathbf{Q}\vfield{u}_{s} \\
-%			\veczero \\
-%			\veczero 
-%		\end{bmatrix}, &
-%		%
-%		\Qhat\mathcal{\widehat{N}} = 
-%		\begin{bmatrix}
-%			\mathbf{Q}\mathcal{N} \\
-%			\veczero \\
-%			\veczero 
-%		\end{bmatrix},	
-%	\nonumber
-%\end{align}
-%Since the extended variables vanish for all three terms in equation~\eqref{eqn:evolution_extended_decomposed2}, the stable subspace solution $\vfield{u}_{s}$ can be evaluated completely within the original system. A further notational change is made for the non-linear terms with,
-%\begin{eqnarray}
-%	\mathcal{\widehat{F}}(\mathbf{x},\vfield{u}_{s}) = \mathbf{\widehat{W}}^{H}\mathcal{\widehat{N}}(\mathbf{x},\vfield{u}_{s}), \nonumber \\
-%	% 
-%	\mathcal{G}(\mathbf{x},\vfield{u}_{s}) = \mathbf{Q}\mathcal{N}(\mathbf{x},\vfield{u}_{s}), \nonumber
-%\end{eqnarray} 
-%which results in the pair of equations given by
-%\begin{subequations}
-%	\begin{align}
-%		\dfrac{d\mathbf{x}}{d t} =& \mathbf{\widehat{K}}\mathbf{x} + \mathcal{\widehat{F}}(\mathbf{x},\vfield{u}_{s}) \label{eqn:evolution_final1}.\\
-%		%
-%		\dfrac{\partial \mathbf{Q}\vfield{u}_{s}}{\partial t} =& (\mathbf{Q}\Lu \mathbf{Q})\vfield{u}_{s} + \mathcal{G}(\mathbf{x},\vfield{u}_{s})
-%		\label{eqn:evolution_final2}. 
-%	\end{align}
-%	\label{eqn:evolution_final}
-%\end{subequations}
-% 
-% The individual terms in equation~\eqref{eqn:evolution_final} are easily interpretted. $\mathbf{x}$ is the vector if amplitudes of the critical eigenmodes of the extended space, $\mathbf{\widehat{K}}$ is the extended linearized operator reduced to the critical subspace and $\mathcal{\widehat{F}}$ is the vector of components of the projection of the nonlinearity in the critical eigendirections. $\vecu_{s}$ is the part of the solution that belongs to the stable subspace, $\mathbf{Q}\Lu\mathbf{Q}$ is the restriction of the original linear operator to the stable subspace, and $\mathcal{G}(\mathbf{x},\vfield{u}_{s})$ is the restriction of the non-linearity to the stable subspace. The form of the equations is very similar to the one regularly used for center-manifold applications in ordinary differential equations \citep{guckenheimer83,wiggins03}. 
-% 
-% Note that equation~\eqref{eqn:evolution_final1} for the parameter and forcing modes simply reduces to,
-% \begin{align} 	
-% 	\dfrac{d \xbf_{P}}{d t} = \LambdaP\xbf_{P}, && 	\dfrac{d \xbf_{H}}{d t} = \LambdaH\xbf_{H}. \nonumber
-% \end{align}
-%This represents equations~\eqref{eqn:evolution_extended2} and \eqref{eqn:evolution_extended3} in the transformed variables. In addition, due to the chosen scaling of eigenvectors and use of cannonical vectors $\vfield{e}^{P}_{i}$ for the definition of the parameter modes, the parameter perturbations are given by $\vecnu = \xbf_{P}$. Similarly, for harmonic forcings in equation~\eqref{eqn:harmonic_forcing} we have $\vectheta = \xbf_{H}$. 
-%
-%Finally note that the two evolution equations~\eqref{eqn:evolution_final1} and \eqref{eqn:evolution_final2} represent slightly different quantities since, $\mathbf{x}$ is the critical mode \emph{amplitude vector}. Equation~\eqref{eqn:evolution_final1} is effectively the reduced order model of the system albeit, \emph{not} in its normal form. $\vfield{u}_{s}$ is the part of the total solution in the stable subspace, which is effectively driven by the critical subspace. Henceforth, $\vfield{u}_{s}$ will generically be referred to as a field. 
-%
-%The center-manifold theorem is now applied to equation~\eqref{eqn:evolution_final}. 	The solution to equation~\eqref{eqn:evolution_final}, denoted as the pair ($\mathbf{x},\vfield{u}_{s}$), is assumed to lie in a Hilbert space which is a direct product of the critical and stable subspaces, $\mathds{H} = \mathds{C}^{m} \bigoplus \mathds{T}_{s}$, where $\mathds{C}^{m}$ is the complex vector space of dimension $m$ and represents the center subspace of the linearized operator of the system given by equation~\eqref{eqn:evolution_final}. $\mathds{T}_{s}$ represents the stable subspace of the linearized operator. 
-%%
-%Using the center-manifold theorem, one may assume that the stable solution $\vfield{u}_{s}$ evolves as a graph over the critical subspace $\mathbf{x}$ such that $\vfield{u}_{s} \sim \mathfrak{h}(\mathbf{x})$ where, $\mathfrak{h}$ is a function with the following properties,
-%\begin{eqnarray}
-%	\label{eqn:CM_approx_properties}
-%	\mathfrak{h}: \mathds{C}^{m} \to \mathds{T}_{s}, & \nonumber \\
-%	\mathfrak{h}(\mathbf{x}) \mapsto (\boldsymbol{0},\vfield{0}), & \hspace{5mm} \textit{for}\ \mathbf{x} = [0,0,\ldots,0] , \nonumber \\
-%	\mathfrak{h}(\mathbf{x}) \sim \mathcal{O}(\mathbf{x}^{2}), & \nonumber
-%\end{eqnarray}
-%\ie, $\mathfrak{h}$ maps the critical subspace $\mathds{C}^{m}$ into the stable subspace $\mathds{T}_{s}$, vanishes at the origin and, is asymptotic to $\mathcal{O}(\mathbf{x}^{2})$, as $\mathbf{x}$ approaches the origin. 
-%In general the smoothness of $\mathfrak{h}$ depends on the smoothness of the nonlinearities $\mathcal{\widehat{F}}$ and $\mathcal{G}$. Typically the center-manifold cannot be assumed to be analytic apriori \citep{carr82,sijbrand85}. In the current work degeneracies arising due to the loss of analyticity are not considered and the center manifold is assumed to be smooth enough to allow asymptotic approximations to a certain order. Substitution of $\mathfrak{h}$ in to equation~\eqref{eqn:evolution_final} results in a graph equation,
-%\begin{align}
-%	\label{eqn:graph_equation}
-%	\left(\frac{\partial \mathbf{Q}\mathfrak{h}}{\partial \mathbf{x}}\right)\cdot \left(\mathbf{\widehat{K}}\mathbf{x} + \mathcal{\widehat{F}}(\mathbf{x},\mathfrak{h}) \right) = (\mathbf{Q}\Lu\mathbf{Q})\mathfrak{h} + \mathcal{G}(\mathbf{x},\mathfrak{h}),
-%\end{align}
-%which defines the center-manifold for the system governed by equation~\eqref{eqn:evolution_final}. 
-%
-%\subsection{Asymptotic Approximation}
-%\label{sec:asymptotic_center_manifold}
-%
-%%To simplify notation for multiple indices used hereafter, a multi-dimensional index set $\IndexSet{i,j,k,\ldots}{a,b}$ is introduced, which is an ordered set of all multi-dimensional indices $(i,j,k,\ldots)$, defined as 
-%%\begin{equation}
-%%	\label{eqn:index_set}
-%%	\begin{split}
-%%		\IndexSet{i,j,k,\ldots}{a,b} \coloneq &  \bm{\lbrace} (i,j,k,\ldots)\ \bm{|}\ i,j,k,a,b \in\mathds{N}, \\
-%%					 & \forall\ a\le i \le b,\ i\le j \le b ,		\\
-%%					& j\le k \le b,  \ldots \bm{\rbrace},
-%%	\end{split}
-%%\end{equation}
-%%%\begin{equation}
-%%%	\label{eqn:index_set}
-%%%	\IndexSet{i,j,k,\ldots}{a,b} \coloneq \left\lbrace
-%%%	\begin{tabular}{c | l}
-%%%									 & $i,j,k,a,b \in \mathds{N}$, \\
-%%%		 							 & $a\le i \le b$,       					\\
-%%%	$(i,j,k,\ldots)$	 & $i\le j \le b $,						     \\
-%%%									 & $j\le k \le b$,  					   \\
-%%%									 &  $\ldots$
-%%%	\end{tabular}\right\rbrace,
-%%%\end{equation}
-%%where, $i,j,k,\ldots$, are the index variables and $[a,b]$ specify the lower and upper bounds of the indices. Note that the higher index always starts from the previous index.
-%%Hence the index-set $\IndexSet{i,j}{1,3}$ is the set containing the tuples, $\{(1,1), (1,2), (1,3), (2,2), (2,3), (3,3)\}$. Similarly, multiple nested summations are denoted as,
-%%\begin{equation}
-%%	\label{eqn:summation}
-%%	\sum_{(i,j,k,\ldots)}^{[a,b]} = \sum_{i=a}^{b}\sum_{j=i}^{b}\sum_{k=j}^{b}\ldots
-%%\end{equation}
-%%As before, the higher index starts from the previous index.
-%
-%The graph equation for the solution in stable subspace obtained in equation~\eqref{eqn:graph_equation} is in general a highly non-linear equation and typically can not be solved analytically. As an alternative, $\mathfrak{h}$ may be approximated asymptotically via a power series in $\mathbf{x}$ as, 
-%\begin{align}
-%	\label{eqn:H_asymptotic}
-%	\begin{split}
-%	\mathfrak{h}(\mathbf{x}) =& \sum_{(a,b)}^{[1,m]} x_{a}x_{b}\vfield{y}_{a,b} +
-%	%
-%	\sum_{(a,b,c)}^{[1,m]} x_{a}x_{b}x_{c}\vfield{y}_{a,b,c} \\
-%	%
-%	& + \mathcal{O}(\mathbf{x}^{4}),
-%\end{split}
-%\end{align}
-%where, the $x_{a},\ x_{b}$, \textit{etc}, are the (time-dependent) components of the critical subspace variables $\mathbf{x}$ and, the various $\vfield{y}_{a,b,c\ldots}$ are the \emph{time-independent} fields associated with each term of the power series and represents the structure of the solution terms lying in the stable subspace. Substitution of the asymptotic expressions into the graph equation and with some algebraic manipulation, one obtains a series of linear inhomogeneous equations for the individual fields $\vfield{y}_{a,b,c\ldots}$, which may be solved for, order by order. At each order $k$, one obtains $T_{k} = C(m+k-1,k)$ fields, where, 
-%\begin{align}
-%	\label{eqn:binomial}
-%	C(n,k) = \binom{n}{k} = \dfrac{n!}{k! (n-k)!},
-%\end{align}
-%defines the binomial coefficient of $n$ and $k$. For example for a critical subspace dimension of $m=4$ one obtains $T_{2} = 10$ unknown fields $\vfield{y}_{a,b}$ at second order $(k=2)$ and, $T_{3} = 20$ unknown fields $\vfield{y}_{a,b,c}$ at third order $(k=3)$. Therefore one obtains a $T_{k}\times T_{k}$ matrix representing the linear system of equations for the fields $\vecy_{a,b,c,\ldots}$, along with the inhomogeneous terms at each order $k$. 
-%
-%Considering a second-order asymptotic approximation for $\mathfrak{h}$, and the substitution of equation~\eqref{eqn:H_asymptotic} in to equation~\eqref{eqn:graph_equation}, results in expressions for the second order terms as,
-%\begin{align}
-%	\begin{split}
-%	\sum_{(a,b)}^{[1,m]}\sum_{i=1}^{m}(\widehat{K}_{a,i}x_{i}x_{b} + \widehat{K}_{b,i}x_{a}x_{i})\Q\vecy_{a,b} \\
-%	%
-%	- \sum_{(a,b)}^{[1,m]}[(\Q\Lu\Q)\vecy_{a,b} + \vfield{g}_{a,b}]x_{a}x_{b} = 0,
-%	\end{split}
-%\end{align}
-%where, the terms arising from $\mathcal{G}$ and $[(\partial \Q\mathfrak{h}/\partial \mathbf{x})\cdot \mathcal{\widehat{F}}]$ are represented by $\vfield{g}_{a,b}$. These do not contain any contributions from the field terms $\vfield{y}_{a,b}$ and are the inhomogeneous terms arising at each order.  $\widehat{K}_{a,i}$ and $\widehat{K}_{b,i}$ are the matrix elements of $\mathbf{\widehat{K}}$. 
-%
-%%The balance of coefficients of each polynomial term $x_{\alpha}x_{\beta}$ results in an equation of the form,
-%%\begin{align}
-%%	\label{eqn:second_order_alpha_beta_terms}
-%%	\begin{split}
-%%		 \vfield{g}_{\alpha,\beta} =& \ \ \ \mathbf{Q}\left[\sum_{j=1}^{\beta}\widehat{K}_{j,\alpha}\vfield{y}_{j,\beta} + \sum_{j=1}^{\alpha}\widehat{K}_{j,\beta}\vfield{y}_{j,\alpha} \right] \\
-%%		%
-%%		& + \mathbf{Q}\left[\sum_{j=\alpha}^{M}\widehat{K}_{j,\beta}\vfield{y}_{\alpha,j} + \sum_{j=\beta}^{M}\widehat{K}_{j,\alpha}\vfield{y}_{\beta,j} \right] \\
-%%		%
-%%		& - \mathbf{Q}\left[\sum_{j=1}^{\alpha}\widehat{K}_{j,\beta}\vfield{y}_{j,\alpha} + \sum_{j=\beta}^{M}\widehat{K}_{j,\alpha}\vfield{y}_{\beta,j} \right]\delta_{\alpha,\beta} \\
-%%		%
-%%		& - (\mathbf{Q}\Lu\mathbf{Q})\vfield{y}_{\alpha,\beta}.
-%%	\end{split}
-%%\end{align}
-%The various fields $\vfield{y}_{a,b}$ are coupled due to the off-diagonal matrix elements of $\Khat$. This is in fact the case even at higher orders of the asymptotic approximation. It is always the off-diagonal terms of $\Khat$ that couple the different fields, $\vecy_{a,b,c,\ldots}$, within each order, so that the system of equations obtained needs to be solved simultaneously for all fields within each order. For large systems, even at moderate values of $m$ and $k$, this can become prohibitive since the number of fields $T_{k}$ rises rapidly. However, the matrix $\Khat$ has a sparse and particular structure with $\GammaP$ and $\GammaH$ being responsible for the off-diagonal elements. Due to this structure the resulting fields may infact be solved sequentially. The structure of the system of equations arising at second order is analyzed symbolically in appendix~\ref{app:AppendixA}. Due to the sparsity pattern of $\Khat$, the system of equations obtained at second order results in a lower-triangular matrix for the unknown fields $\vecy_{a,b}$, which allows the fields to be solved individually in sequential order. This results in a general equation for the field terms at second order as,
-%\begin{align}
-%	% \label{eqn:coupled_fields1}
-%	(\widehat{\lambda}_{\alpha} + \widehat{\lambda}_{\beta})\mathbf{Q}\vfield{y}_{\alpha,\beta} 
-%	%
-%	- (\mathbf{Q}\Lu\mathbf{Q})\vfield{y}_{\alpha,\beta} = \vfield{g}_{\alpha,\beta} - \vfield{g}^{c}_{\alpha,\beta}, \nonumber
-%\end{align}
-%where, $\widehat{\lambda}_{\alpha},\widehat{\lambda}_{\beta} \in \widehat{\boldsymbol{\lambda}}$, are the diagonal elements of $\Khat$, and the coupling terms for each pair of $(\alpha,\beta)$ have been denoted $\vfield{g}^{c}_{\alpha,\beta}$. These coupling terms vanish identically for the indices $(\alpha,\beta)\in\IndexSet{\alpha,\beta}{1,n}$) and for the remaining terms they are known apriori due to the lower-triangular nature of the system of equations. Recall that the unknown fields $\vfield{y}_{\alpha,\beta}\in\mathds{T}_{s}$, and $\mathbf{Q}$ is the projector into the stable subspace. Therefore $\mathbf{Q}^{2} = \mathbf{Q}$, and, $\mathbf{Q}^{2}\vfield{y}_{\alpha,\beta} = \mathbf{Q}\vfield{y}_{\alpha,\beta}$ and the system may be represented in a slightly different manner as, 
-%	\begin{align}
-%	\label{eqn:resolvent_fields_order_2}
-%	\begin{split}
-%		\vfield{y}_{\alpha,\beta} =&  \mathcal{R}_{s}(\widehat{\omega}_{\alpha,\beta})[\vfield{g}_{\alpha,\beta} - \vfield{g}^{c}_{\alpha,\beta}], \\
-%		%
-%		\widehat{\omega}_{\alpha,\beta} =& \widehat{\lambda}_{\alpha} + \widehat{\lambda}_{\beta}, \\
-%		%
-%		\mathcal{R}_{s}(\omega) =& [\mathbf{Q}(\omega\mathbf{I} 
-%		- \Lu)\mathbf{Q}]^{-1}, \\
-%		%
-%		(\alpha,\beta) \in& \IndexSet{\alpha,\beta}{1,m},
-%	\end{split}
-%\end{align}
-%where, the quantity $\mathcal{R}_{s}(\omega)$ is a \emph{restricted resolvent} operator, \ie, the resolvent operator restricted to the stable subspace of $\Lu$. 
-%
-%The lower-triangular structure of the system of equations for the unknown fields $\vecy_{\alpha,\beta,\gamma,\ldots}$ persists for higher order terms as well. Therefore, if one considers a higher order power series for $\mathfrak{h}$, the structure of the solutions given by equation~\eqref{eqn:resolvent_fields_order_2} can be generalized to higher orders, such that the expressions for the third and fourth order fields would be obtained as,
-%\begin{align}
-%	\label{eqn:resolvent_fields_higher_order}
-%	\begin{split}
-%		\vfield{y}_{\alpha,\beta,\gamma,\ldots} =&  	\mathcal{R}_{s}(\widehat{\omega}_{\alpha,\beta,\gamma,\ldots})[\vfield{g}_{\alpha,\beta,\gamma,\ldots} - \vfield{g}^{c}_{\alpha,\beta,\gamma,\ldots}], \\
-%		%
-%		\widehat{\omega}_{\alpha,\beta,\gamma,\ldots} =& \widehat{\lambda}_{\alpha} + 	\widehat{\lambda}_{\beta} + \widehat{\lambda}_{\gamma} + \ldots, \\
-%		(\alpha,\beta,\gamma,\ldots) \in& \IndexSet{\alpha,\beta,\gamma,\ldots}{1,m}.
-%	\end{split} 
-%\end{align}
-%At all orders, the coupling terms $\vfield{g}^{c}_{\alpha,\beta,\gamma,\ldots}$ vanish for the index tuples $(\alpha,\beta,\gamma,\ldots)\in\IndexSet{\alpha,\beta,\gamma,\ldots}{1,n}$. For higher order evaluations of the asymptotic series, the inhomogeneous terms $\vfield{g}_{\alpha,\beta,\gamma,\ldots}$ would also contain contributions from terms evaluated at lower order. 
-%
-%Finally, note that the resolvent operator in equations~\eqref{eqn:resolvent_fields_order_2} and \eqref{eqn:resolvent_fields_higher_order} is never singular. The singularity of the resolvent operator occurs at points on the complex plane corresponding to the eigenvalue spectrum of the corresponding operator. In this case the operator in question is the restricted operator $(\mathbf{Q}\Lu\mathbf{Q})$, which has an eigenvalue spectrum with strictly negative real part $(\mathfrak{Re}(\lambda) < 0)$. On the other hand, for all asymptotic terms, the restricted resolvent is evaluated at points $\widehat{\omega}$ which is the sum of integral multiples of the critical eigenvalues, hence $\mathfrak{Re}(\widehat{\omega}_{\alpha,\beta,\ldots}) = 0$ identically. Therefore the restricted resolvent operator is non-singular for all the asymptotic terms. The singularity of the resolvent operator is usually associated with resonant terms leading to higher order terms in the Poincar\'{e} normal form or, to secular terms when considering a multiple time-scale expansion of solutions. In the current case the question of resonance never arises. 
-%
-%Finally, once the fields associated with the asymptotic expansion of $\mathfrak{h}(\xbf)$ have been evaluated to the desired order, the power series for $\mathfrak{h}$ can be substituted into equation~\eqref{eqn:evolution_final1} resulting in a set of ordinary differential equations for the evolution of the critical mode amplitudes in the center-manifold,
-%\begin{align}
-%	\dfrac{d\mathbf{x}}{d t} =& \mathbf{\widehat{K}}\mathbf{x} + \mathcal{\widehat{F}}(\mathbf{x},\mathfrak{h}(\xbf)) \label{eqn:amplitude}.
-%\end{align}
-%These are different from the usual ``amplitude equations'' \cite{newell69,cross80,cross09} which typically refer to the slowly modulating component of solutions, also referred to as the Stuart-Landau equations \citep{stuart58,stuart60,sipp07} in the hydrodynamics literature. In this case the amplitude evolution includes both the fast time scale due to the instabilities as well as any slow timescale variations that may emerge. The Stuart-Landau equations may be derived from the reduced set of equations~\eqref{eqn:evolution_final1} by considering a multiple-timescale expansion for the obtained ordinary differential equations, if so desired. 
+\subsubsection{Asymptotic terms of $\mathcal{O}(|x|^{k})$}
+\label{sec:normal_form_Ok}
+
+For all subsequent orders the structure of the problem remains essentially the same as the third order terms. At any order $k$, one obtains a systems of equations for $T^{k}_{m}$ vectors $\yhatbf_{i_{1},i_{2},\ldots,i_{k}}$ which is lower triangular and hence can be solved sequentially. The cross contributions of the vectors due to $\Khat$ has the same structure as in figure~\ref{fig:Khat_coupling_O3} but with $k$ columns (possibly with repetitions) of $\Khat$ contributing. The lower order terms $\hhatbf^{L}_{i_{1},i_{2},\ldots,i_{k}}$ and the off-diagonal contributions $\hhatbf^{O}_{i_{1},i_{2},\ldots,i_{k}}$ are always known a-priori. For each index $(i_{1},i_{2},\ldots,i_{k})\in\IndexSet{k}{1,m}$ one obtains an equation similar to equation~\eqref{eqn:asymptotic_O3_compact}, 
+\begin{subequations}
+	\begin{align}
+		\label{eqn:asymptotic_Ok_compact}
+		\begin{aligned}
+			\left[\omega_{i_{1},i_{2},\ldots,i_{k}}\Ihat - \ExtL\right]\yhatbf_{i_{1},i_{2},\ldots,i_{k}} + \sum^{m}_{j=1}\AsParamEl^{j}_{i_{1},i_{2},\ldots,i_{k}}\vhatbf_{j} \\
+			 = \fhatbf_{i_{1},i_{2},\ldots,i_{k}} - \hhatbf^{O}_{i_{1},i_{2},\ldots,i_{k}} 
+			 - \hhatbf^{L}_{i_{1},i_{2},\ldots,i_{k}},
+		\end{aligned} &&\\
+		%
+		\omega_{i_{1},i_{2},\ldots,i_{k}} = \widehat{K}_{i_{1},i_{1}} + \widehat{K}_{i_{2},i_{2}} + \ldots + \widehat{K}_{i_{k},i_{k}}. &&
+	\end{align}
+\end{subequations}
+The resonance condition arises whenever, 
+\begin{align}
+	\label{eqn:resonance_condition_Ok}
+	\omega_{i_{1},i_{2},\ldots,i_{k}} = \widehat{K}_{j,j}, && j\in 1,\ldots,m,
+\end{align}
+which then defines the normal form coefficients,
+\begin{subequations}
+\begin{align}
+	\label{eqn:gk_definition}
+	\AsParamEl^{j}_{i_{1},i_{2},\ldots,i_{k}} =&
+			\whatbf_{j}^{\dagger}(\fhatbf_{i_{1},i_{2},\ldots,i_{k}} - \hhatbf^{L}_{i_{1},i_{2},\ldots,i_{k}}
+			- \hhatbf^{O}_{i_{1},i_{2},\ldots,i_{k}}), \\
+			0 =& \whatbf_{j}^{\dagger}\yhatbf_{i_{1},i_{2},\ldots,i_{k}}
+\end{align}
+\end{subequations}
+else, $\AsParamEl^{j}_{i_{1},i_{2},\ldots,i_{k}} = 0, \forall j\in 1,\ldots,m$, and $\yhatbf_{i_{1},i_{2},\ldots,i_{k}}$ is unconstrained. 
+
 
 
 
