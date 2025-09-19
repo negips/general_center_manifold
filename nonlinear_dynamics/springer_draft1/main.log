@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.16)  18 SEP 2025 16:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.16)  19 SEP 2025 17:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -986,24 +986,24 @@ LaTeX Warning: Unused global option(s):
 (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 154.
-LaTeX Font Info:    ... okay on input line 154.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 154.
-LaTeX Font Info:    ... okay on input line 154.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 154.
-LaTeX Font Info:    ... okay on input line 154.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 154.
-LaTeX Font Info:    ... okay on input line 154.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 154.
-LaTeX Font Info:    ... okay on input line 154.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 154.
-LaTeX Font Info:    ... okay on input line 154.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 154.
-LaTeX Font Info:    ... okay on input line 154.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 154.
-LaTeX Font Info:    ... okay on input line 154.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 154.
-LaTeX Font Info:    ... okay on input line 154.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1062,13 +1062,13 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Redefining \S on input line 154.
-LaTeX Font Info:    Redeclaring symbol font `AMSa' on input line 154.
+LaTeX Info: Redefining \S on input line 156.
+LaTeX Font Info:    Redeclaring symbol font `AMSa' on input line 156.
 LaTeX Font Info:    Overwriting symbol font `AMSa' in version `normal'
-(Font)                  U/msa/m/n --> U/msa/m/n on input line 154.
+(Font)                  U/msa/m/n --> U/msa/m/n on input line 156.
 LaTeX Font Info:    Overwriting symbol font `AMSa' in version `bold'
-(Font)                  U/msa/m/n --> U/msa/m/n on input line 154.
-Package hyperref Info: Link coloring ON on input line 154.
+(Font)                  U/msa/m/n --> U/msa/m/n on input line 156.
+Package hyperref Info: Link coloring ON on input line 156.
 
 (./main.out) (./main.out)
 \@outlinefile=\write4
@@ -1080,21 +1080,21 @@ Package caption Info: End \AtBeginDocument code.
 \c__nicematrix_shift_exterior_Vdots_dim=\dimen373
 \c__nicematrix_innersep_middle_dim=\dimen374
 LaTeX Font Info:    Calculating math sizes for size <11.04124> on input line 17
-5.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 175
+7.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 177
 .
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 175
+LaTeX Font Info:    Trying to load font information for U+msb on input line 177
 .
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Calculating math sizes for size <10.03749> on input line 17
-5.
+7.
 
 (./derivation_p1.tex
 LaTeX Font Info:    Trying to load font information for U+dsrom on input line 1
@@ -1142,47 +1142,47 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 148.
+(hyperref)                removing `math shift' on input line 147.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\setbox' on input line 148.
+(hyperref)                removing `\setbox' on input line 147.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 148.
+(hyperref)                removing `\z@' on input line 147.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hbox' on input line 148.
+(hyperref)                removing `\hbox' on input line 147.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathsurround' on input line 148.
+(hyperref)                removing `\mathsurround' on input line 147.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 148.
+(hyperref)                removing `\z@' on input line 147.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 148.
+(hyperref)                removing `math shift' on input line 147.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\textstyle' on input line 148.
+(hyperref)                removing `\textstyle' on input line 147.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 148.
+(hyperref)                removing `math shift' on input line 147.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathaccent' on input line 148.
+(hyperref)                removing `\mathaccent' on input line 147.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 148.
+(hyperref)                removing `math shift' on input line 147.
 
 
 
@@ -1197,13 +1197,65 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [3]
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 194.
+(amsmath)                trying to recover with `aligned' on input line 192.
 
 
 
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 232.
+(amsmath)                trying to recover with `aligned' on input line 229.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 269.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\setbox' on input line 269.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 269.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 269.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 269.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 269.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 269.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\textstyle' on input line 269.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 269.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathaccent' on input line 269.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 269.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\dagger' on input line 269.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 269.
 
 
 
@@ -1217,72 +1269,20 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [4]
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 272.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\setbox' on input line 272.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 272.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hbox' on input line 272.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathsurround' on input line 272.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 272.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 272.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\textstyle' on input line 272.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 272.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathaccent' on input line 272.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 272.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\dagger' on input line 272.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 272.
+Package amsmath Warning: Cannot use `split' here;
+(amsmath)                trying to recover with `aligned' on input line 291.
 
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 294.
+(amsmath)                trying to recover with `aligned' on input line 301.
 
 
-Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 304.
-
-
-
-
-Underfull \hbox (badness 1132) in paragraph at lines 345--347
+Underfull \hbox (badness 1132) in paragraph at lines 342--344
 \OT1/cmr/m/n/10 of the $\OML/cmm/m/it/10.03749 h$ \OT1/cmr/m/n/10 vec-tors $\OM
 L/cmm/b/it/10.03749 ^^P[]$\OT1/cmr/m/n/10 . The matrix of vec-tors
  []
+
+
 
 
 
@@ -1297,16 +1297,6 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [5]
 
 ) (./derivation_normal.tex
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \hbox (badness 10000) has occurred while \output is active
-[]| []
- []
-
-[6]
 Underfull \hbox (badness 2600) in paragraph at lines 10--11
 []\OT1/cmr/m/n/10 To sim-plify nota-tion for mul-ti-ple indices
  []
@@ -1317,28 +1307,26 @@ Underfull \hbox (badness 1303) in paragraph at lines 10--11
  []
 
 
-Underfull \hbox (badness 2359) in paragraph at lines 26--28
-\OT1/cmr/m/n/10 If an ele-ment $(\OML/cmm/m/it/10.03749 i[]; i[]; [] ; i[]\OT1/
-cmr/m/n/10 )$ pre-ceds an ele-
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]| []
+ []
+
+[6]
+Underfull \hbox (badness 1009) in paragraph at lines 26--28
+\OT1/cmr/m/n/10 ceds an ele-ment $(\OML/cmm/m/it/10.03749 j[]; j[]; [] ; j[]\OT
+1/cmr/m/n/10 )$ in order-ing it
  []
 
 
-Underfull \hbox (badness 2970) in paragraph at lines 26--28
-\OT1/cmr/m/n/10 as $(\OML/cmm/m/it/10.03749 i[]; i[]; [] ; i[]\OT1/cmr/m/n/10 )
- \OMS/cmsy/m/n/10.03749 ^^^ \OT1/cmr/m/n/10 (\OML/cmm/m/it/10.03749 j[]; j[]; [
-] ; j[]\OT1/cmr/m/n/10 )$ while, if
- []
-
-
-Underfull \hbox (badness 4752) in paragraph at lines 26--28
-\OT1/cmr/m/n/10 (\OML/cmm/m/it/10.03749 i[]; i[]; [] ; i[]\OT1/cmr/m/n/10 )$ su
-c-ceeds $(\OML/cmm/m/it/10.03749 j[]; j[]; [] ; j[]\OT1/cmr/m/n/10 )$ in the
- []
-
-
-Underfull \hbox (badness 3724) in paragraph at lines 26--28
-\OT1/cmr/m/n/10 order-ing it is denoted as $(\OML/cmm/m/it/10.03749 i[]; i[]; [
-] ; i[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10.03749 ^^_
+Underfull \hbox (badness 1028) in paragraph at lines 26--28
+\OT1/cmr/m/n/10 is denoted as $(\OML/cmm/m/it/10.03749 i[]; i[]; [] ; i[]\OT1/c
+mr/m/n/10 ) \OMS/cmsy/m/n/10.03749 ^^^ \OT1/cmr/m/n/10 (\OML/cmm/m/it/10.03749 
+j[]; j[]; [] ; j[]\OT1/cmr/m/n/10 )$
  []
 
 
@@ -1354,12 +1342,18 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [7]
-Overfull \hbox (1.47766pt too wide) detected at line 90
+Underfull \hbox (badness 5970) in paragraph at lines 77--79
+\OT1/cmr/m/n/10 Here the terms $\OT1/cmr/bx/n/10.03749 g[] \OMS/cmsy/m/n/10.037
+49 2 \U/dsrom/m/n/10.03749 C[]$\OT1/cmr/m/n/10 , while,
+ []
+
+
+Overfull \hbox (1.47766pt too wide) detected at line 99
 []
  []
 
 
-Underfull \hbox (badness 2088) in paragraph at lines 90--92
+Underfull \hbox (badness 2088) in paragraph at lines 99--101
 \OT1/cmr/m/n/10 Here $\OML/cmm/m/it/10.03749 g[]$ \OT1/cmr/m/n/10 rep-re-sents 
 the $\OML/cmm/m/it/10.03749 []$ \OT1/cmr/m/n/10 ele-ment of the
  []
@@ -1368,26 +1362,23 @@ the $\OML/cmm/m/it/10.03749 []$ \OT1/cmr/m/n/10 ele-ment of the
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 93.
+(hyperref)                removing `math shift' on input line 102.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 93.
+(hyperref)                removing `math shift' on input line 102.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 110.
+(hyperref)                removing `math shift' on input line 119.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 110.
+(hyperref)                removing `superscript' on input line 119.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 110.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
+(hyperref)                removing `math shift' on input line 119.
 
 
 
@@ -1400,12 +1391,9 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [8]
-Underfull \hbox (badness 1067) in paragraph at lines 140--141
+Underfull \hbox (badness 1067) in paragraph at lines 149--150
 \OT1/cmr/m/n/10 cou-pled due to the off-diagonal terms in $[]$,
  []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
@@ -1434,7 +1422,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 \l__nicematrix_final_i_int=\count392
 \l__nicematrix_final_j_int=\count393
 )
-Underfull \hbox (badness 1142) in paragraph at lines 160--164
+Underfull \hbox (badness 1142) in paragraph at lines 169--173
 []\OT1/cmr/m/n/10 A visual rep-re-sen-ta-tion of this cross cou-
  []
 
@@ -1449,23 +1437,23 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [9]
-Underfull \hbox (badness 1983) in paragraph at lines 165--166
+Underfull \hbox (badness 1983) in paragraph at lines 174--175
 []\OT1/cmr/m/n/10 To keep the nota-tion com-pact, the non-
  []
 
 
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 207.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 198.
+(hyperref)                removing `superscript' on input line 207.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 198.
+(hyperref)                removing `math shift' on input line 207.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 198.
 
 (./matrix_image_o3.tex
 \g__nicematrix_block_box_7_box=\box97
@@ -1476,9 +1464,17 @@ Overfull \hbox (5.05309pt too wide) detected at line 74
  []
 
 )
-Underfull \hbox (badness 4660) in paragraph at lines 227--229
+Underfull \hbox (badness 4660) in paragraph at lines 236--238
 []\OT1/cmr/m/n/10 The sec-ond set of brack-et-ted terms in
  []
+
+
+Package amsmath Warning: Cannot use `split' here;
+(amsmath)                trying to recover with `aligned' on input line 255.
+
+
+Package amsmath Warning: Cannot use `split' here;
+(amsmath)                trying to recover with `aligned' on input line 258.
 
 
 
@@ -1492,42 +1488,18 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [10]
 
-Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 246.
-
-
-Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 249.
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 264.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 255.
+(hyperref)                removing `superscript' on input line 264.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 255.
+(hyperref)                removing `math shift' on input line 264.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 255.
-
-
-Underfull \hbox (badness 1122) in paragraph at lines 258--260
-\OT1/cmr/m/n/10 order terms. At any order $\OML/cmm/m/it/10.03749 k$\OT1/cmr/m/
-n/10 , one obtains a
- []
-
-
-Underfull \hbox (badness 1325) in paragraph at lines 258--260
-\OT1/cmr/m/n/10 e-ti-tions) of $[]$ con-tribut-ing. The lower order
- []
-
-
-
-
-Overfull \hbox (5.40546pt too wide) detected at line 284
-[]
- []
 
 ) (./main.bbl
 Underfull \hbox (badness 6842) in paragraph at lines 16--21
@@ -1540,16 +1512,6 @@ Underfull \hbox (badness 1694) in paragraph at lines 23--28
  []
 
 
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \hbox (badness 10000) has occurred while \output is active
-[]| []
- []
-
-[11]
 Underfull \hbox (badness 1052) in paragraph at lines 30--35
 \OT1/cmr/m/it/10.03749 Bifur-ca-tions, Cen-ter Man-i-folds, and Nor-
  []
@@ -1575,6 +1537,16 @@ Underfull \hbox (badness 2608) in paragraph at lines 53--57
  []
 
 
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]| []
+ []
+
+[11]
 Underfull \hbox (badness 4505) in paragraph at lines 66--69
 \OT1/cmr/m/n/10 for the navier--stokes.  \OT1/cmr/m/it/10.03749 arXiv preprint
  []
@@ -1602,9 +1574,9 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 1C149BA12FF23CB2FDFE6D3A10C6DCE6;2324.
  ) 
 Here is how much of TeX's memory you used:
- 31060 strings out of 469626
- 618647 string characters out of 5471010
- 1037442 words of memory out of 5000000
+ 31057 strings out of 469626
+ 618610 string characters out of 5471010
+ 1012844 words of memory out of 5000000
  57253 multiletter control sequences out of 15000+600000
  650899 words of font info for 132 fonts, out of 8000000 for 9000
  1151 hyphenation exceptions out of 8191
@@ -1639,10 +1611,10 @@ ve/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive
 25/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb></usr/local/texlive/2
 025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive
 /2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on main.pdf (12 pages, 383699 bytes).
+Output written on main.pdf (12 pages, 384557 bytes).
 PDF statistics:
- 450 PDF objects out of 1000 (max. 8388607)
- 372 compressed objects within 4 object streams
- 125 named destinations out of 1000 (max. 500000)
+ 447 PDF objects out of 1000 (max. 8388607)
+ 369 compressed objects within 4 object streams
+ 122 named destinations out of 1000 (max. 500000)
  109 words of extra memory for PDF output out of 10000 (max. 10000000)
 

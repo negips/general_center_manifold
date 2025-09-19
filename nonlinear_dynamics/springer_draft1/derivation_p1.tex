@@ -53,7 +53,7 @@ Additionally, $\LambdaC$ is defined as an $n\times n$ diagonal matrix consisting
 \subsection{The Extended System}
 \label{sec:extended_system}
 
-The same system is now considered for the case of parameter perturbation so that the evolution dynamics are now evaluated at parameter values of $\vecmu = \vecMu + \vecnu$, with $\vecnu$ being the vector of parameter perturbations, $\vecnu = [\nu_{1},\nu_{2},\ldots,\nu_{l}]$. In addition, the system is forced with small-amplitude harmonic forcing of the type
+The same system is now considered for the case of parameter perturbation so that the evolution dynamics are now evaluated at parameter values of $\vecmu = \vecMu + \vecnu$, with $\vecnu$ being the vector of parameter perturbations, $\vecnu = [\nu_{1};\nu_{2};\ldots;\nu_{l}]$. In addition, the system is forced with small-amplitude harmonic forcing of the type
 \begin{align}
 	\label{eqn:harmonic_forcing}
 	\vecf_{H}(t) =\sum_{i=1}^{h}\vecf_{i}\theta_{i}(t); && \theta_{i} = \epsilon_{i}e^{\lambda^{H}_{i}t},
@@ -62,7 +62,7 @@ where, the various $\theta_{i}$ are treated as the dynamic variable, $\lambda^{H
 \begin{align}
 	\frac{\partial \vecu}{\partial t} =& \vecf(\vecUb + \vecu,\vecMu + \vecnu) + \sum_{i=1}^{h}\vecf_{i}\theta_{i}; \nonumber.
 \end{align}
-The diagonal matrix for the harmonic angular frequencies is represented by $\LambdaH = diagm(\boldsymbol{\lambda}^{H})$. Similarly, $\boldsymbol{\lambda}^{P} = [\lambda^{P}_{1};\lambda^{P}_{2};\ldots;\lambda^{P}_{l}]$ is defined as a vector of length $l$, with all $\lambda^{P}_{i} = 0$ identically, for $i\in 1\ldots l$. These may be thought of parameter eigenvalues of parameter angular frequencies depending on the point of view. In either case, these vanish identically. $\LambdaP = diagm(\boldsymbol{\lambda}^{P})$ is defined as an $l\times l$ null matrix, to represent the trivial linear evolution matrix for the parameter variables $\vecnu$. The extended system including the evolution equations for the newly introduced variables $\vecnu$ and $\vectheta$, henceforth referred to as the \emph{extended variables}, is given by,
+The diagonal matrix for the harmonic angular frequencies is represented by $\LambdaH = diagm(\boldsymbol{\lambda}^{H})$. Similarly, $\boldsymbol{\lambda}^{P} = [\lambda^{P}_{1};\lambda^{P}_{2};\ldots;\lambda^{P}_{l}]$ is defined as a vector of length $l$, with all $\lambda^{P}_{i} = 0$ identically, for $i\in 1,\ldots, l$. These may be thought of parameter eigenvalues of parameter angular frequencies depending on the point of view. In either case, these vanish identically. $\LambdaP = diagm(\boldsymbol{\lambda}^{P})$ is defined as an $l\times l$ null matrix, to represent the trivial linear evolution matrix for the parameter variables $\vecnu$. The extended system including the evolution equations for the newly introduced variables $\vecnu$ and $\vectheta$, henceforth referred to as the \emph{extended variables}, is given by,
 \begin{subequations}
 	\begin{align}
 			\label{eqn:evolution_extended1}
@@ -97,7 +97,7 @@ This is the same expression as in equation~\eqref{eqn:harmonic_forcing}, just wr
 \end{equation}
 where, the dependence on $\vecUb$ and $\vecMu$ has been suppressed for notational convenience. 
 
-An overhead hat notation, $\widehat{\cdot}$ , is used to refer to variables and operators associated with the extend space, so that the new state vector, non-linear term and the linearized direct and adjoint operators are denoted by $\efield{u}$, $\efield{f}_{NL}$, $\widehat{\mathcal{L}}$ and $\widehat{\mathcal{L}^{\dagger}}$, that are defined as,
+An overhead hat notation, $\widehat{\cdot}$ , is used to refer to variables and operators associated with the extend space, so that the new state vector, non-linear term and the linearized direct and adjoint operators are denoted by $\efield{u}$, $\efield{f}_{NL}$, $\ExtL$ and $\ExtL^{\dagger}$, that are defined as,
 \begin{align}
 	\efield{u} =& \begin{bmatrix}
 		\vecu; &
@@ -127,10 +127,9 @@ An overhead hat notation, $\widehat{\cdot}$ , is used to refer to variables and 
 		\Lu^{\dagger} 		   & \mathbf{0} & \mathbf{0} \\
 		\Lmu^{\dagger}	 	& \mathbf{\Lambda}^{\dagger}_{P} & \mathbf{0} \\
 		\Ltheta^{\dagger}  & \mathbf{0} & \mathbf{\Lambda}^{\dagger}_{H} \\
-	\end{bmatrix},
+	\end{bmatrix}.
 \end{align}
-where, the superscript $^{T}$ refers to vector transpose.
-The full system may then be represented compactly as
+The full system is now $M$-dimensional, with $M=N+l+h$, and may be represented compactly as,
 \begin{equation}
 	\label{eqn:evolution_extended_compact}
 	\dfrac{\partial \efield{u}}{\partial t} =
@@ -175,11 +174,10 @@ If the original linear system $\Lu$ is non-singular then, the $l$ eigenpairs gen
 	\label{eqn:nonsingular_pmode} 
 	\begin{align}
 		(\lambda^{P}_{i}\mathbf{I} - \Lu)\vecv^{P}_{i} &= \Lmu(\vfield{e}^{P}_{i}), &&  (\lambda^{P}_{i} = 0) \\
-	  			\efield{v}^{P}_{i} &= \begin{bmatrix}
-	  	\vecv^{p}_{i}; &
-	  	\vfield{e}^{P}_{i}; &
-	  	\veczero
-	  \end{bmatrix}, && \forall i \in 1,\ldots l.
+	  			\vhatbf^{P}_{i} &= [
+	  	\vecv^{p}_{i}; 
+	  	\vfield{e}^{P}_{i}; 
+	  	\veczero  ], && \forall i \in 1,\ldots l.
 	\end{align}
 \end{subequations}
 This can be verified that $(\lambda^{P}_{i} - \ExtL)\efield{v}^{P}_{i} = 0$. 
@@ -197,25 +195,24 @@ However, if $\Lu$ is singular then equation~\eqref{eqn:nonsingular_pmode} is ind
 \begin{subequations}
 	\label{eqn:singular_pmode}
 	\begin{align}
-		(\lambda^{P}_{i}\mathbf{I} - \Lu)\vecv^{P}_{i} &= \Lmu(\vfield{e}^{P}_{i}) - \mathbf{V}\vfield{\gamma}^{P}_{i}, &&  (\lambda^{P}_{i} = 0) \\
+		(\lambda^{P}_{i}\mathbf{I} - \Lu)\vecv^{P}_{i} &= \Lmu(\vfield{e}^{P}_{i}) - \mathbf{V}\vfield{\gamma}^{P}_{i}, &  (\lambda^{P}_{i} = 0) &&\\
 		%
-		\vecw^{C\dagger}_{j}\vecv^{P}_{i} &= 0, && \textit{if } \lambda^{P}_{i} = \lambda^{C}_{j}, \\
+		\vecw^{C\dagger}_{j}\vecv^{P}_{i} &= 0, & \textit{if } \lambda^{P}_{i} = \lambda^{C}_{j}, &&\\
 		%
-		\efield{v}^{P}_{i} &= \begin{bmatrix}
-			\vecv^{P}_{i}; &
-			\vfield{e}^{P}_{i}; &
-			\veczero
-		\end{bmatrix}, && \forall i \in 1,\ldots l.
+		\vhatbf^{P}_{i} &= [
+			\vecv^{P}_{i};
+			\vfield{e}^{P}_{i};
+			\veczero ], & \forall i \in 1,\ldots l.&&
 	\end{align}
 \end{subequations}
-In the singular case, $\efield{v}^{P}_{i}$ is no longer an eigenvector of $\ExtL$, however, it is a generalized eigenvector satisfying $(\lambda^{P}_{i}\mathbf{I} - \ExtL)^{2}\efield{v}^{P}_{i} = \veczero$. Note that $\vfield{\gamma}^{P}_{i}$ is identically zero for the non-singular case and equation~\eqref{eqn:singular_pmode} reduces to equation~\eqref{eqn:nonsingular_pmode}. Henceforth these modes shall be referred to as \emph{parameter modes} and will be defined by equation~\eqref{eqn:singular_pmode}, since it is the more general definition. The matrix of all the vectors $\vfield{\gamma}^{P}_{i}$ is denoted $\GammaP$. 
+In the singular case, $\efield{v}^{P}_{i}$ is no longer an eigenvector of $\ExtL$, however, it is a generalized eigenvector satisfying $(\lambda^{P}_{i}\mathbf{I} - \ExtL)^{2}\vhatbf^{P}_{i} = \veczero$. Note that $\vfield{\gamma}^{P}_{i}$ is identically zero for the non-singular case and equation~\eqref{eqn:singular_pmode} reduces to equation~\eqref{eqn:nonsingular_pmode}. Henceforth these modes shall be referred to as \emph{parameter modes} and will be defined by equation~\eqref{eqn:singular_pmode}, since it is the more general definition. The matrix of all the vectors $\vfield{\gamma}^{P}_{i}$ is denoted $\GammaP$. 
 
 Similarly, when the harmonic forcing is non-resonant, the $h$ eigenpairs generated by system extension due to $\vectheta$ have the following structure,
 \begin{subequations}
 	\label{eqn:nonsingular_hmode} 
 	\begin{align}
 		(\lambda^{H}_{i}\mathbf{I} - \Lu)\vecv^{H}_{i} &= \Ltheta(\vfield{e}^{H}_{i}), &&  \\
-		\efield{v}^{H}_{i} &= \begin{bmatrix}
+		\vhatbf^{H}_{i} &= \begin{bmatrix}
 			\vecv^{H}_{i}; &
 			\veczero; &
 			\vfield{e}^{H}_{i}
@@ -240,14 +237,14 @@ where, $(\vfield{\gamma}^{H}_{i})_{j}$ is the $j^{th}$ component of the vector $
 		%
 		\vecw^{C\dagger}_{j}\vecv^{H}_{i} &= 0, && \textit{if } \lambda^{H}_{i} = \lambda^{C}_{j}, \\
 		%
-		\efield{v}^{H}_{i} &= \begin{bmatrix}
+		\vhatbf^{H}_{i} &= \begin{bmatrix}
 			\vecv^{H}_{i}; &
 			\veczero; &
 			\vfield{e}^{H}_{i}
 		\end{bmatrix}, && \forall i \in 1,\ldots h.
 	\end{align}
 \end{subequations}
-In the resonant case, this satisfies the generalized eigenvalue equation $(\lambda^{H}_{i}\mathbf{I} - \ExtL)^{2}\efield{v}^{H}_{i} = \veczero$. 
+In the resonant case, this satisfies the generalized eigenvalue equation $(\lambda^{H}_{i}\mathbf{I} - \ExtL)^{2}\vhatbf^{H}_{i} = \veczero$. 
 Again, equation~\eqref{eqn:singular_hmode} reduces to equation~\eqref{eqn:nonsingular_hmode} when the forcing is non-resonant. Henceforth these modes will be referred to as \emph{forcing modes} and are defined by the more general definition given by equation~\eqref{eqn:singular_hmode}. The matrix of all the vectors $\vfield{\gamma}^{H}_{i}$ is denoted $\GammaH$.
 The critical eigenspace of $\ExtL$ can be represented by three matrices
 \begin{align}
@@ -276,7 +273,7 @@ The eigenspace structure for the adjoint problem is important to consider since 
 	\label{eqn:extended_adjoint_mode} 
 	\begin{align}
 		(\lambda^{C*}_{i}\mathbf{I} - \Lu^{\dagger})\vecw^{C}_{i} = 0, &&  \forall i \in 1,\ldots n, \\
-		\efield{w}^{C}_{i} = \begin{bmatrix}
+		\whatbf^{C}_{i} = \begin{bmatrix}
 			\vecw^{C}_{i}; &
 			\vfield{\zeta}^{P}_{i}; &
 			\vfield{\zeta}^{H}_{i}
@@ -303,12 +300,12 @@ $\forall j\in 1,\ldots,l$, and, the $j^{th}$ component of $\vfield{\zeta}^{H}_{i
 		0;		&& \textit{if}\ \lambda^{C*}_{i} = \lambda^{H*}_{j},
 	\end{split}\right.
 \end{equation}
-$\forall j\in 1,\ldots,h$. Here, $(\Lmu^{\dagger}\vecw^{C}_{i})_{j}$ refers to the $j^{th}$ component of the vector $(\Lmu^{\dagger}\vecw^{C}_{i})$, and likewise for $(\Ltheta^{\dagger}\vecw^{C}_{i})_{j}$. It may be verified that the definition is consistent with the eigenvalue equation, $(\lambda^{C*}_{i}\mathbf{I} - \ExtL^{\dagger})\efield{w}^{C}_{i} = 0$, for the non-resonant cases, and satisfies generalized eigenvalue equation, $(\lambda^{C*}_{i}\mathbf{I} - \ExtL^{\dagger})^{2}\efield{w}^{C}_{i} = 0$, for the resonant cases. 
+$\forall j\in 1,\ldots,h$. Here, $(\Lmu^{\dagger}\vecw^{C}_{i})_{j}$ refers to the $j^{th}$ component of the vector $(\Lmu^{\dagger}\vecw^{C}_{i})$, and likewise for $(\Ltheta^{\dagger}\vecw^{C}_{i})_{j}$. It may be verified that the definition is consistent with the eigenvalue equation, $(\lambda^{C*}_{i}\mathbf{I} - \ExtL^{\dagger})\whatbf^{C}_{i} = 0$, for the non-resonant cases, and satisfies generalized eigenvalue equation, $(\lambda^{C*}_{i}\mathbf{I} - \ExtL^{\dagger})^{2}\whatbf^{C}_{i} = 0$, for the resonant cases. 
 
 The adjoint parameter modes are given simply by,
 \begin{align}
 	\label{eqn:adjoint_pmode} 
-	\efield{w}^{P}_{i} &= \begin{bmatrix}
+	\whatbf^{P}_{i} &= \begin{bmatrix}
 		\veczero; &
 		\vfield{e}^{P}_{i}; &
 		\veczero
@@ -317,13 +314,13 @@ The adjoint parameter modes are given simply by,
 which satisfies $(\lambda^{P*}_{i}\mathbf{I} - \ExtL^{\dagger})\efield{w}^{P}_{i} = 0$. And the adjoint forcing modes are given by,
 \begin{align}
 	\label{eqn:adjoint_hmode} 
-	\efield{w}^{H}_{i} &= \begin{bmatrix}
+	\whatbf^{H}_{i} &= \begin{bmatrix}
 		\veczero; &
 		\veczero; &
 		\vfield{e}^{H}_{i}
 	\end{bmatrix}, && \forall i \in 1,\ldots h,
 \end{align}
-which satisfies $(\lambda^{H*}_{i}\mathbf{I} - \ExtL^{\dagger})\efield{w}^{H}_{i} = 0$.
+which satisfies $(\lambda^{H*}_{i}\mathbf{I} - \ExtL^{\dagger})\whatbf^{H}_{i} = 0$.
 
 The extended eigenspace of $\ExtL^{\dagger}$ can be represented with matrices as 
 \begin{align}
