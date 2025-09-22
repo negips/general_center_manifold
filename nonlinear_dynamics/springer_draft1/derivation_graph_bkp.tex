@@ -1,0 +1,239 @@
+\section{Center Manifold for the extended system}
+\label{sec:center_manifold_derivation}
+
+\subsection{Graph Equation}
+\label{sec:graph_equation}
+
+Section~\ref{sec:extended_system} and \ref{sec:extended_subspace_structure} outline the spectral properties of the system when extended to include the parameters as dynamic variables. Effectively the size of the critical subspace increases and, the eigen-structure of the extended linearized system $\ExtL$ can be deduced from the spectral properties of the original linear system $\Lu$. The critical subspace of the new system is of dimension $m=n+l+h$. The center-manifold theorem can be applied to this extended system given by equation~\eqref{eqn:evolution_extended_compact} so that both parameter perturbations and harmonic forcings are directly incorporated into the larger center-manifold. 
+
+A particular graph style parameterization is chosen for the representation of the invariant center-manifold which explicitly decomposes the critical and stable subspace components. The solution to equation~\eqref{eqn:evolution_extended_compact} is decomposed into the fields belonging to the critical and stable subspaces of $\ExtL$. Since the critical subspace is finite dimensional, it is represented by the time-dependent amplitudes of the critical eigenvectors. Accordingly, the solution is decomposed as
+\begin{subequations}
+	\begin{align}
+		\efield{u}(t) =& \mathbf{\widehat{V}}\mathbf{x}(t) + \Qhat\efield{u}_{s}(t), \\
+		%
+		\mathbf{\widehat{V}}\mathbf{x} =& \mathbf{\widehat{V}_{C}}\mathbf{x}_{C} + \mathbf{\widehat{V}_{P}}\mathbf{x}_{P} + \mathbf{\widehat{V}_{H}}\mathbf{x}_{H},  	
+	\end{align}
+	%
+	\begin{align}
+		\mathbf{x} = \begin{bmatrix}
+			\mathbf{x}_{C} \\
+			\mathbf{x}_{P} \\
+			\mathbf{x}_{H} 
+		\end{bmatrix}, &&
+		%
+		\efield{u}_{s}(t) = \begin{bmatrix}
+			\vfield{u}_{s} \\
+			\veczero \\
+			\veczero 
+		\end{bmatrix}, \nonumber
+	\end{align} 
+\end{subequations}
+where $\mathbf{x} \in \mathds{C}^{m}$, is the complex vector of the time-dependent amplitudes of the critical eigenmodes, with $\mathbf{x}_{C}\in\mathds{C}^{n}$, $\mathbf{x}_{P}\in\mathds{C}^{l}$ and $\mathbf{x}_{H}\in\mathds{C}^{h}$ being the amplitude vectors for the (extension of the) original critical modes, parameter modes and the harmonic modes respectively. $\efield{u}_{s}$ is the part of the solution lying in the stable subspace of $\ExtL$. In accordance with lemma~\ref{lemma:lemma1}, the extended variables vanish for $\efield{u}_{s}$. $\Qhat$ is projector onto the stable subspace of $\ExtL$. Note that $\Qhat\efield{u}_{s} = \efield{u}_{s}$, by definition of $\Qhat$ and $\efield{u}_{s}$. The nonlinear term is now denoted as $\mathcal{N}(\mathbf{x},\vfield{u}_{s}) = \vfield{f}_{NL}(\vecu,\vecnu)$ with its extension $\mathcal{\widehat{N}}(\mathbf{x},\vfield{u}_{s}) = \efield{f}_{NL}(\vecu,\vecnu)$, to emphasize the change of variables. Substituting the solution decomposition in to equation~\eqref{eqn:evolution_extended_compact} and using the projection matrices $\mathbf{\widehat{W}}$ and $\Qhat$ one obtains the two evolution equations for $\xbf$ and $\efield{u}_{s}$ as
+\begin{subequations}
+	\begin{align}
+		\dfrac{d\mathbf{x}}{d t} =& \mathbf{\widehat{K}}\mathbf{x} + \mathbf{\widehat{W}}^{H}\mathcal{\widehat{N}} \label{eqn:evolution_extended_decomposed1}.\\
+		%
+		\dfrac{\partial \Qhat \efield{u}_{s}}{\partial t} =& \Qhat\ExtL \Qhat\efield{u}_{s} + \Qhat\mathcal{\widehat{N}}
+		 \label{eqn:evolution_extended_decomposed2}. 
+	\end{align}
+\end{subequations}
+Equation~ \eqref{eqn:evolution_extended_decomposed2} may be further simplified by noting that the individual terms have the following structure,
+\begin{align}
+		\Qhat\efield{u}_{s} = 
+		\begin{bmatrix}
+			\mathbf{Q}\vfield{u}_{s} \\
+			\veczero \\
+			\veczero 
+		\end{bmatrix}, &
+		%
+		\hspace{1mm} \Qhat\ExtL\Qhat\efield{u}_{s} = 
+		\begin{bmatrix}
+			\mathbf{Q}\Lu\mathbf{Q}\vfield{u}_{s} \\
+			\veczero \\
+			\veczero 
+		\end{bmatrix}, &
+		%
+		\Qhat\mathcal{\widehat{N}} = 
+		\begin{bmatrix}
+			\mathbf{Q}\mathcal{N} \\
+			\veczero \\
+			\veczero 
+		\end{bmatrix},	
+	\nonumber
+\end{align}
+Since the extended variables vanish for all three terms in equation~\eqref{eqn:evolution_extended_decomposed2}, the stable subspace solution $\vfield{u}_{s}$ can be evaluated completely within the original system. A further notational change is made for the non-linear terms with,
+\begin{eqnarray}
+	\mathcal{\widehat{F}}(\mathbf{x},\vfield{u}_{s}) = \mathbf{\widehat{W}}^{H}\mathcal{\widehat{N}}(\mathbf{x},\vfield{u}_{s}), \nonumber \\
+	% 
+	\mathcal{G}(\mathbf{x},\vfield{u}_{s}) = \mathbf{Q}\mathcal{N}(\mathbf{x},\vfield{u}_{s}), \nonumber
+\end{eqnarray} 
+which results in the pair of equations given by
+\begin{subequations}
+	\begin{align}
+		\dfrac{d\mathbf{x}}{d t} =& \mathbf{\widehat{K}}\mathbf{x} + \mathcal{\widehat{F}}(\mathbf{x},\vfield{u}_{s}) \label{eqn:evolution_final1}.\\
+		%
+		\dfrac{\partial \mathbf{Q}\vfield{u}_{s}}{\partial t} =& (\mathbf{Q}\Lu \mathbf{Q})\vfield{u}_{s} + \mathcal{G}(\mathbf{x},\vfield{u}_{s})
+		\label{eqn:evolution_final2}. 
+	\end{align}
+	\label{eqn:evolution_final}
+\end{subequations}
+ 
+ The individual terms in equation~\eqref{eqn:evolution_final} are easily interpretted. $\mathbf{x}$ is the vector if amplitudes of the critical eigenmodes of the extended space, $\mathbf{\widehat{K}}$ is the extended linearized operator reduced to the critical subspace and $\mathcal{\widehat{F}}$ is the vector of components of the projection of the nonlinearity in the critical eigendirections. $\vecu_{s}$ is the part of the solution that belongs to the stable subspace, $\mathbf{Q}\Lu\mathbf{Q}$ is the restriction of the original linear operator to the stable subspace, and $\mathcal{G}(\mathbf{x},\vfield{u}_{s})$ is the restriction of the non-linearity to the stable subspace. The form of the equations is very similar to the one regularly used for center-manifold applications in ordinary differential equations \citep{guckenheimer83,wiggins03}. 
+ 
+ Note that equation~\eqref{eqn:evolution_final1} for the parameter and forcing modes simply reduces to,
+ \begin{align} 	
+ 	\dfrac{d \xbf_{P}}{d t} = \LambdaP\xbf_{P}, && 	\dfrac{d \xbf_{H}}{d t} = \LambdaH\xbf_{H}. \nonumber
+ \end{align}
+This represents equations~\eqref{eqn:evolution_extended2} and \eqref{eqn:evolution_extended3} in the transformed variables. In addition, due to the chosen scaling of eigenvectors and use of cannonical vectors $\vfield{e}^{P}_{i}$ for the definition of the parameter modes, the parameter perturbations are given by $\vecnu = \xbf_{P}$. Similarly, for harmonic forcings in equation~\eqref{eqn:harmonic_forcing} we have $\vectheta = \xbf_{H}$. 
+
+Finally note that the two evolution equations~\eqref{eqn:evolution_final1} and \eqref{eqn:evolution_final2} represent slightly different quantities since, $\mathbf{x}$ is the critical mode \emph{amplitude vector}. Equation~\eqref{eqn:evolution_final1} is effectively the reduced order model of the system albeit, \emph{not} in its normal form. $\vfield{u}_{s}$ is the part of the total solution in the stable subspace, which is effectively driven by the critical subspace. Henceforth, $\vfield{u}_{s}$ will generically be referred to as a field. 
+
+The center-manifold theorem is now applied to equation~\eqref{eqn:evolution_final}. 	The solution to equation~\eqref{eqn:evolution_final}, denoted as the pair ($\mathbf{x},\vfield{u}_{s}$), is assumed to lie in a Hilbert space which is a direct product of the critical and stable subspaces, $\mathds{H} = \mathds{C}^{m} \bigoplus \mathds{T}_{s}$, where $\mathds{C}^{m}$ is the complex vector space of dimension $m$ and represents the center subspace of the linearized operator of the system given by equation~\eqref{eqn:evolution_final}. $\mathds{T}_{s}$ represents the stable subspace of the linearized operator. 
+%
+Using the center-manifold theorem, one may assume that the stable solution $\vfield{u}_{s}$ evolves as a graph over the critical subspace $\mathbf{x}$ such that $\vfield{u}_{s} \sim \mathfrak{h}(\mathbf{x})$ where, $\mathfrak{h}$ is a function with the following properties,
+\begin{eqnarray}
+	\label{eqn:CM_approx_properties}
+	\mathfrak{h}: \mathds{C}^{m} \to \mathds{T}_{s}, & \nonumber \\
+	\mathfrak{h}(\mathbf{x}) \mapsto (\boldsymbol{0},\vfield{0}), & \hspace{5mm} \textit{for}\ \mathbf{x} = [0,0,\ldots,0] , \nonumber \\
+	\mathfrak{h}(\mathbf{x}) \sim \mathcal{O}(\mathbf{x}^{2}), & \nonumber
+\end{eqnarray}
+\ie, $\mathfrak{h}$ maps the critical subspace $\mathds{C}^{m}$ into the stable subspace $\mathds{T}_{s}$, vanishes at the origin and, is asymptotic to $\mathcal{O}(\mathbf{x}^{2})$, as $\mathbf{x}$ approaches the origin. 
+In general the smoothness of $\mathfrak{h}$ depends on the smoothness of the nonlinearities $\mathcal{\widehat{F}}$ and $\mathcal{G}$. Typically the center-manifold cannot be assumed to be analytic apriori \citep{carr82,sijbrand85}. In the current work degeneracies arising due to the loss of analyticity are not considered and the center manifold is assumed to be smooth enough to allow asymptotic approximations to a certain order. Substitution of $\mathfrak{h}$ in to equation~\eqref{eqn:evolution_final} results in a graph equation,
+\begin{align}
+	\label{eqn:graph_equation}
+	\left(\frac{\partial \mathbf{Q}\mathfrak{h}}{\partial \mathbf{x}}\right)\cdot \left(\mathbf{\widehat{K}}\mathbf{x} + \mathcal{\widehat{F}}(\mathbf{x},\mathfrak{h}) \right) = (\mathbf{Q}\Lu\mathbf{Q})\mathfrak{h} + \mathcal{G}(\mathbf{x},\mathfrak{h}),
+\end{align}
+which defines the center-manifold for the system governed by equation~\eqref{eqn:evolution_final}. 
+
+\subsection{Asymptotic Approximation}
+\label{sec:asymptotic_center_manifold}
+
+To simplify notation for multiple indices used hereafter, a multi-dimensional index set $\IndexSet{i,j,k,\ldots}{a,b}$ is introduced, which is an ordered set of all multi-dimensional indices $(i,j,k,\ldots)$, defined as 
+\begin{equation}
+	\label{eqn:index_set}
+	\begin{split}
+		\IndexSet{i,j,k,\ldots}{a,b} \coloneq &  \bm{\lbrace} (i,j,k,\ldots)\ \bm{|}\ i,j,k,a,b \in\mathds{N}, \\
+					 & \forall\ a\le i \le b,\ i\le j \le b ,		\\
+					& j\le k \le b,  \ldots \bm{\rbrace},
+	\end{split}
+\end{equation}
+%\begin{equation}
+%	\label{eqn:index_set}
+%	\IndexSet{i,j,k,\ldots}{a,b} \coloneq \left\lbrace
+%	\begin{tabular}{c | l}
+%									 & $i,j,k,a,b \in \mathds{N}$, \\
+%		 							 & $a\le i \le b$,       					\\
+%	$(i,j,k,\ldots)$	 & $i\le j \le b $,						     \\
+%									 & $j\le k \le b$,  					   \\
+%									 &  $\ldots$
+%	\end{tabular}\right\rbrace,
+%\end{equation}
+where, $i,j,k,\ldots$, are the index variables and $[a,b]$ specify the lower and upper bounds of the indices. Note that the higher index always starts from the previous index.
+Hence the index-set $\IndexSet{i,j}{1,3}$ is the set containing the tuples, $\{(1,1), (1,2), (1,3), (2,2), (2,3), (3,3)\}$. Similarly, multiple nested summations are denoted as,
+\begin{equation}
+	\label{eqn:summation}
+	\sum_{(i,j,k,\ldots)}^{[a,b]} = \sum_{i=a}^{b}\sum_{j=i}^{b}\sum_{k=j}^{b}\ldots
+\end{equation}
+As before, the higher index starts from the previous index.
+
+The graph equation for the solution in stable subspace obtained in equation~\eqref{eqn:graph_equation} is in general a highly non-linear equation and typically can not be solved analytically. As an alternative, $\mathfrak{h}$ may be approximated asymptotically via a power series in $\mathbf{x}$ as, 
+\begin{align}
+	\label{eqn:H_asymptotic}
+	\begin{split}
+	\mathfrak{h}(\mathbf{x}) =& \sum_{(a,b)}^{[1,m]} x_{a}x_{b}\vfield{y}_{a,b} +
+	%
+	\sum_{(a,b,c)}^{[1,m]} x_{a}x_{b}x_{c}\vfield{y}_{a,b,c} \\
+	%
+	& + \mathcal{O}(\mathbf{x}^{4}),
+\end{split}
+\end{align}
+where, the $x_{a},\ x_{b}$, \textit{etc}, are the (time-dependent) components of the critical subspace variables $\mathbf{x}$ and, the various $\vfield{y}_{a,b,c\ldots}$ are the \emph{time-independent} fields associated with each term of the power series and represents the structure of the solution terms lying in the stable subspace. Substitution of the asymptotic expressions into the graph equation and with some algebraic manipulation, one obtains a series of linear inhomogeneous equations for the individual fields $\vfield{y}_{a,b,c\ldots}$, which may be solved for, order by order. At each order $k$, one obtains $T_{k} = C(m+k-1,k)$ fields, where, 
+\begin{align}
+	\label{eqn:binomial}
+	C(n,k) = \binom{n}{k} = \dfrac{n!}{k! (n-k)!},
+\end{align}
+defines the binomial coefficient of $n$ and $k$. For example for a critical subspace dimension of $m=4$ one obtains $T_{2} = 10$ unknown fields $\vfield{y}_{a,b}$ at second order $(k=2)$ and, $T_{3} = 20$ unknown fields $\vfield{y}_{a,b,c}$ at third order $(k=3)$. Therefore one obtains a $T_{k}\times T_{k}$ matrix representing the linear system of equations for the fields $\vecy_{a,b,c,\ldots}$, along with the inhomogeneous terms at each order $k$. 
+
+Considering a second-order asymptotic approximation for $\mathfrak{h}$, and the substitution of equation~\eqref{eqn:H_asymptotic} in to equation~\eqref{eqn:graph_equation}, results in expressions for the second order terms as,
+\begin{align}
+	\begin{split}
+	\sum_{(a,b)}^{[1,m]}\sum_{i=1}^{m}(\widehat{K}_{a,i}x_{i}x_{b} + \widehat{K}_{b,i}x_{a}x_{i})\Q\vecy_{a,b} \\
+	%
+	- \sum_{(a,b)}^{[1,m]}[(\Q\Lu\Q)\vecy_{a,b} + \vfield{g}_{a,b}]x_{a}x_{b} = 0,
+	\end{split}
+\end{align}
+where, the terms arising from $\mathcal{G}$ and $[(\partial \Q\mathfrak{h}/\partial \mathbf{x})\cdot \mathcal{\widehat{F}}]$ are represented by $\vfield{g}_{a,b}$. These do not contain any contributions from the field terms $\vfield{y}_{a,b}$ and are the inhomogeneous terms arising at each order.  $\widehat{K}_{a,i}$ and $\widehat{K}_{b,i}$ are the matrix elements of $\mathbf{\widehat{K}}$. 
+
+%The balance of coefficients of each polynomial term $x_{\alpha}x_{\beta}$ results in an equation of the form,
+%\begin{align}
+%	\label{eqn:second_order_alpha_beta_terms}
+%	\begin{split}
+%		 \vfield{g}_{\alpha,\beta} =& \ \ \ \mathbf{Q}\left[\sum_{j=1}^{\beta}\widehat{K}_{j,\alpha}\vfield{y}_{j,\beta} + \sum_{j=1}^{\alpha}\widehat{K}_{j,\beta}\vfield{y}_{j,\alpha} \right] \\
+%		%
+%		& + \mathbf{Q}\left[\sum_{j=\alpha}^{M}\widehat{K}_{j,\beta}\vfield{y}_{\alpha,j} + \sum_{j=\beta}^{M}\widehat{K}_{j,\alpha}\vfield{y}_{\beta,j} \right] \\
+%		%
+%		& - \mathbf{Q}\left[\sum_{j=1}^{\alpha}\widehat{K}_{j,\beta}\vfield{y}_{j,\alpha} + \sum_{j=\beta}^{M}\widehat{K}_{j,\alpha}\vfield{y}_{\beta,j} \right]\delta_{\alpha,\beta} \\
+%		%
+%		& - (\mathbf{Q}\Lu\mathbf{Q})\vfield{y}_{\alpha,\beta}.
+%	\end{split}
+%\end{align}
+The various fields $\vfield{y}_{a,b}$ are coupled due to the off-diagonal matrix elements of $\Khat$. This is in fact the case even at higher orders of the asymptotic approximation. It is always the off-diagonal terms of $\Khat$ that couple the different fields, $\vecy_{a,b,c,\ldots}$, within each order, so that the system of equations obtained needs to be solved simultaneously for all fields within each order. For large systems, even at moderate values of $m$ and $k$, this can become prohibitive since the number of fields $T_{k}$ rises rapidly. However, the matrix $\Khat$ has a sparse and particular structure with $\GammaP$ and $\GammaH$ being responsible for the off-diagonal elements. Due to this structure the resulting fields may infact be solved sequentially. The structure of the system of equations arising at second order is analyzed symbolically in appendix~\ref{app:AppendixA}. Due to the sparsity pattern of $\Khat$, the system of equations obtained at second order results in a lower-triangular matrix for the unknown fields $\vecy_{a,b}$, which allows the fields to be solved individually in sequential order. This results in a general equation for the field terms at second order as,
+\begin{align}
+	% \label{eqn:coupled_fields1}
+	(\widehat{\lambda}_{\alpha} + \widehat{\lambda}_{\beta})\mathbf{Q}\vfield{y}_{\alpha,\beta} 
+	%
+	- (\mathbf{Q}\Lu\mathbf{Q})\vfield{y}_{\alpha,\beta} = \vfield{g}_{\alpha,\beta} - \vfield{g}^{c}_{\alpha,\beta}, \nonumber
+\end{align}
+where, $\widehat{\lambda}_{\alpha},\widehat{\lambda}_{\beta} \in \widehat{\boldsymbol{\lambda}}$, are the diagonal elements of $\Khat$, and the coupling terms for each pair of $(\alpha,\beta)$ have been denoted $\vfield{g}^{c}_{\alpha,\beta}$. These coupling terms vanish identically for the indices $(\alpha,\beta)\in\IndexSet{\alpha,\beta}{1,n}$) and for the remaining terms they are known apriori due to the lower-triangular nature of the system of equations. Recall that the unknown fields $\vfield{y}_{\alpha,\beta}\in\mathds{T}_{s}$, and $\mathbf{Q}$ is the projector into the stable subspace. Therefore $\mathbf{Q}^{2} = \mathbf{Q}$, and, $\mathbf{Q}^{2}\vfield{y}_{\alpha,\beta} = \mathbf{Q}\vfield{y}_{\alpha,\beta}$ and the system may be represented in a slightly different manner as, 
+	\begin{align}
+	\label{eqn:resolvent_fields_order_2}
+	\begin{split}
+		\vfield{y}_{\alpha,\beta} =&  \mathcal{R}_{s}(\widehat{\omega}_{\alpha,\beta})[\vfield{g}_{\alpha,\beta} - \vfield{g}^{c}_{\alpha,\beta}], \\
+		%
+		\widehat{\omega}_{\alpha,\beta} =& \widehat{\lambda}_{\alpha} + \widehat{\lambda}_{\beta}, \\
+		%
+		\mathcal{R}_{s}(\omega) =& [\mathbf{Q}(\omega\mathbf{I} 
+		- \Lu)\mathbf{Q}]^{-1}, \\
+		%
+		(\alpha,\beta) \in& \IndexSet{\alpha,\beta}{1,m},
+	\end{split}
+\end{align}
+where, the quantity $\mathcal{R}_{s}(\omega)$ is a \emph{restricted resolvent} operator, \ie, the resolvent operator restricted to the stable subspace of $\Lu$. 
+
+The lower-triangular structure of the system of equations for the unknown fields $\vecy_{\alpha,\beta,\gamma,\ldots}$ persists for higher order terms as well. Therefore, if one considers a higher order power series for $\mathfrak{h}$, the structure of the solutions given by equation~\eqref{eqn:resolvent_fields_order_2} can be generalized to higher orders, such that the expressions for the third and fourth order fields would be obtained as,
+\begin{align}
+	\label{eqn:resolvent_fields_higher_order}
+	\begin{split}
+		\vfield{y}_{\alpha,\beta,\gamma,\ldots} =&  	\mathcal{R}_{s}(\widehat{\omega}_{\alpha,\beta,\gamma,\ldots})[\vfield{g}_{\alpha,\beta,\gamma,\ldots} - \vfield{g}^{c}_{\alpha,\beta,\gamma,\ldots}], \\
+		%
+		\widehat{\omega}_{\alpha,\beta,\gamma,\ldots} =& \widehat{\lambda}_{\alpha} + 	\widehat{\lambda}_{\beta} + \widehat{\lambda}_{\gamma} + \ldots, \\
+		(\alpha,\beta,\gamma,\ldots) \in& \IndexSet{\alpha,\beta,\gamma,\ldots}{1,m}.
+	\end{split} 
+\end{align}
+At all orders, the coupling terms $\vfield{g}^{c}_{\alpha,\beta,\gamma,\ldots}$ vanish for the index tuples $(\alpha,\beta,\gamma,\ldots)\in\IndexSet{\alpha,\beta,\gamma,\ldots}{1,n}$. For higher order evaluations of the asymptotic series, the inhomogeneous terms $\vfield{g}_{\alpha,\beta,\gamma,\ldots}$ would also contain contributions from terms evaluated at lower order. 
+
+Finally, note that the resolvent operator in equations~\eqref{eqn:resolvent_fields_order_2} and \eqref{eqn:resolvent_fields_higher_order} is never singular. The singularity of the resolvent operator occurs at points on the complex plane corresponding to the eigenvalue spectrum of the corresponding operator. In this case the operator in question is the restricted operator $(\mathbf{Q}\Lu\mathbf{Q})$, which has an eigenvalue spectrum with strictly negative real part $(\mathfrak{Re}(\lambda) < 0)$. On the other hand, for all asymptotic terms, the restricted resolvent is evaluated at points $\widehat{\omega}$ which is the sum of integral multiples of the critical eigenvalues, hence $\mathfrak{Re}(\widehat{\omega}_{\alpha,\beta,\ldots}) = 0$ identically. Therefore the restricted resolvent operator is non-singular for all the asymptotic terms. The singularity of the resolvent operator is usually associated with resonant terms leading to higher order terms in the Poincar\'{e} normal form or, to secular terms when considering a multiple time-scale expansion of solutions. In the current case the question of resonance never arises. 
+
+Finally, once the fields associated with the asymptotic expansion of $\mathfrak{h}(\xbf)$ have been evaluated to the desired order, the power series for $\mathfrak{h}$ can be substituted into equation~\eqref{eqn:evolution_final1} resulting in a set of ordinary differential equations for the evolution of the critical mode amplitudes in the center-manifold,
+\begin{align}
+	\dfrac{d\mathbf{x}}{d t} =& \mathbf{\widehat{K}}\mathbf{x} + \mathcal{\widehat{F}}(\mathbf{x},\mathfrak{h}(\xbf)) \label{eqn:amplitude}.
+\end{align}
+These are different from the usual ``amplitude equations'' \cite{newell69,cross80,cross09} which typically refer to the slowly modulating component of solutions, also referred to as the Stuart-Landau equations \citep{stuart58,stuart60,sipp07} in the hydrodynamics literature. In this case the amplitude evolution includes both the fast time scale due to the instabilities as well as any slow timescale variations that may emerge. The Stuart-Landau equations may be derived from the reduced set of equations~\eqref{eqn:evolution_final1} by considering a multiple-timescale expansion for the obtained ordinary differential equations, if so desired. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -109,6 +109,7 @@ At first order the non-linear terms do not contribute and one simply obtains,
 \end{align}
 Here, the first restrictions on the asymptotic form of $\Param$ are applied, associating the unknown terms $\yhatbf_{i_{1}}$, $\AsParam_{i_{1}}$ \etc\ with the generalized eigenvalue problem such that,
 \begin{subequations}
+	\label{eqn:GEV_O1}
 	\begin{align}
 		\begin{bmatrix} \yhatbf_{i_{1}}, \yhatbf_{i_{2}},\ldots,\yhatbf_{i_{m}}\end{bmatrix} = 	\mathbf{\widehat{V}}, \\
 		\begin{bmatrix} \AsParam_{i_{1}}, \AsParam_{i_{2}},\ldots,\AsParam_{i_{m}}\end{bmatrix} = \mathbf{\widehat{K}}.
@@ -372,12 +373,12 @@ which then defines the normal form coefficients for $j\in\{1,\ldots,n\}$,
 		0 =& \mathbf{w}_{j}^{\dagger}\mathbf{y}_{i_{1},\ldots,i_{k}}.
 	\end{align}
 \end{subequations}
-In the absence of resonance or, resonance occurring for $j\in\{n+1,\ldots,m\}$, 
+In the absence of resonance or, if resonance occurs for $j\in\{n+1,\ldots,m\}$, 
 \begin{align}
 	\label{eqn:resonance_modification2_Ok_std}
 	\AsParamEl^{j}_{i_{1},\ldots,i_{k}} =&	0,
 \end{align}
-and $\mathbf{y}_{i_{1},\ldots,i_{k}}$ is unconstrained. 
+and $\mathbf{y}_{i_{1},\ldots,i_{k}}$ is unconstrained.
 
 
 
