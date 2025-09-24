@@ -21,6 +21,11 @@
 \usepackage{subcaption}
 \usepackage{amsthm}			% Theorems
 
+% Algorithms
+\usepackage{algorithm}%
+\usepackage{algorithmicx}%
+\usepackage{algpseudocode}%
+
 \usepackage{nicematrix}
 \usepackage{tikz}
 \usetikzlibrary{tikzmark}
@@ -148,6 +153,20 @@
 \def\AsParam{\mathbf{g}}
 \def\AsParamEl{g}
 
+\def\ResolventHatOp{\widehat{\mathcal{R}}}
+\def\ResolventOp{\mathcal{R}}
+
+\newcommand\Resolvent[1]{
+	[\ResolventOp(#1)]
+}
+
+\newcommand\ResolventHat[1]{
+	[\ResolventHatOp(#1)]
+}
+
+\newcommand\RestrictedResolvent[1]{
+	[\ResolventOp_{s}(#1)]
+}
 
 \DeclarePairedDelimiter{\vpceil}{\boldsymbol{\lceil}}{\boldsymbol{\rceil}}
 \DeclareBoldMathCommand\bigblbracket{\left\lceil}

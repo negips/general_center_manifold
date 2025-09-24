@@ -1,7 +1,7 @@
-\subsection{A Graph Method}
+\subsection{A Graph Style Parameterization}
 \label{sec:graph_method}
 
-In the earlier subsection it was shown that even though one starts from an extended system, for the evaluation of the higher order asymptotic terms of the center-manifold only  the standard linear system is required and the system extension only affects the tangent (linear) space. This aspect however is not unique to the normal form and other parameterizations can be constructed in which the asymptotic center-manifold of a system can be evaluated using just the standard linear operator $\Lu$. Here we construct a particular graph style parameterization.
+In the earlier subsection it was shown that even though one starts from an extended system, for the evaluation of the higher order asymptotic terms of the center-manifold only  the standard linear system is required and the system extension only affects the tangent (linear) space. This aspect however is not unique to the normal form and other parameterizations can be constructed in which the asymptotic center-manifold of a system can be evaluated using just the standard linear operator $\Lu$. Here we construct one such parameterization.
 
 Starting again with the asymptotic representations of $\Param(\xbf)$ and $\mathcal{Y}(\xbf)$ as in equations~\eqref{eqn:reduced_normal_form} and \eqref{eqn:asymptotic_normal_form} respectively, one may constrain all higher order terms $\yhatbf_{i_{1},\ldots,i_{k}}$ to lie in the complement of the center subspace (spanned by $\Vhat$), resulting in,
 \begin{align}
@@ -10,29 +10,133 @@ Starting again with the asymptotic representations of $\Param(\xbf)$ and $\mathc
 \end{align}
 for all $(i_{1},\ldots,i_{k})\in\IndexSet{k}{1,m},\ k\ge2$. Note that this condition applies regardless of resonance. 
 
-At $\mathcal{O}(|\xbf|)$ one again obtains equation~\eqref{eqn:asymptotic_O1} and as in the case of the normal form, the unknowns $\yhatbf_{i_{1}},\AsParam_{i_{1}}$ \etc, can be associated with the generalized eigenvalue problem resulting in equation~\eqref{eqn:GEV_O1}. At first order the expressions are identical to those obtained for the normal form, which is unsurprising since the $\mathcal{O}(|\xbf|)$ terms only represent the center subspace.
+At $\mathcal{O}(|\xbf|)$ one again obtains equation~\eqref{eqn:asymptotic_O1} and, as in the case of the normal form, the unknowns $\yhatbf_{i_{1}},\AsParam_{i_{1}}$ \etc, can be associated with the generalized eigenvalue problem resulting in equation~\eqref{eqn:GEV_O1}. At first order the expressions are identical to those obtained for the normal form, which is unsurprising since the $\mathcal{O}(|\xbf|)$ terms only represent the center subspace.
 
 One may therefore represent the general expression for the evaluation of higher order terms as,
 \begin{align}
 	\label{eqn:graph_Ok_compact}
 	\begin{aligned}
-		\left[\omega_{i_{1},\ldots,i_{k}}\Ihat - \ExtL\right]\yhatbf_{i_{1},\ldots,i_{k}} + \sum^{m}_{j=1}\AsParamEl^{j}_{i_{1},\ldots,i_{k}}\vhatbf_{j} \\
+		\ResolventHat{\omega_{i_{1},\ldots,i_{k}}}^{-1}\yhatbf_{i_{1},\ldots,i_{k}} + \sum^{m}_{j=1}\AsParamEl^{j}_{i_{1},\ldots,i_{k}}\vhatbf_{j} \\
 		= \fhatbf_{i_{1},\ldots,i_{k}} - \hhatbf^{O}_{i_{1},\ldots,i_{k}} 
 		- \hhatbf^{L}_{i_{1},\ldots,i_{k}}.
 	\end{aligned} &&
 \end{align}
-Since the graph parameterization is defined by equation~\eqref{eqn:graph_condition}, one obtains the definition of the asymptotic terms of $\Param$ as,
+Since the parameterization is defined by equation~\eqref{eqn:graph_condition}, one obtains the definition of the asymptotic terms of $\Param$ as,
  \begin{align}
- 	\label{eqn:graph_Ok_param_compact}
+ 	\label{eqn:graph_gk_definition}
  		 \AsParamEl^{j}_{i_{1},\ldots,i_{k}} 
  		= \whatbf^{\dagger}_{j}(\fhatbf_{i_{1},\ldots,i_{k}} - \hhatbf^{O}_{i_{1},\ldots,i_{k}} 
  		- \hhatbf^{L}_{i_{1},\ldots,i_{k}}),
  \end{align}
-$\forall j\in1,\ldots,m$. The extended variables vanish for $\fhatbf_{i_{1},\ldots,i_{k}}$ by construction and following the logical arguments presented in the previous section, one may again show that the extended variables also vanish for $\hhatbf^{O}_{i_{1},\ldots,i_{k}}, \hhatbf^{L}_{i_{1},\ldots,i_{k}}$ and $\yhatbf_{i_{1},\ldots,i_{k}}$. This then implies that, 
+$\forall j\in1,\ldots,m$. The extended variables vanish for $\fhatbf_{i_{1},\ldots,i_{k}}$ by construction and, following the logical arguments presented in the previous section, it may be verified that the extended variables also vanish for $\hhatbf^{O}_{i_{1},\ldots,i_{k}}, \hhatbf^{L}_{i_{1},\ldots,i_{k}}$ and $\yhatbf_{i_{1},\ldots,i_{k}}$. This then implies that, 
 \begin{align}
-	\label{eqn:graph_Ok_param_compact2}
+	\label{eqn:graph_gk_definition2}
 	\AsParamEl^{j}_{i_{1},\ldots,i_{k}}= 0, && \forall j\in n+1,\ldots,m.
 \end{align}
+Equation~\eqref{eqn:graph_Ok_compact} then reduces to its single component form,
+\begin{align}
+	\label{eqn:graph_Ok_compact2}
+	\begin{aligned}
+		\Resolvent{\omega_{i_{1},\ldots,i_{k}}}^{-1}\mathbf{y}_{i_{1},\ldots,i_{k}} + \sum^{n}_{j=1}\AsParamEl^{j}_{i_{1},\ldots,i_{k}}\mathbf{v}_{j} \\
+		= \mathbf{f}_{i_{1},\ldots,i_{k}} - \mathbf{h}^{O}_{i_{1},\ldots,i_{k}} 
+		- \mathbf{h}^{L}_{i_{1},\ldots,i_{k}}.
+	\end{aligned} &&
+\end{align}
+One may define the projection operator on to the complement of the center subspace of $\Lu$ as, 
+\begin{align}
+	\label{eqn:complement_projector}
+	\mathbf{Q} = \mathbf{I} - \mathbf{V}\mathbf{W}^{\dagger}.
+\end{align}
+By construction we have, $\mathbf{Q}\mathbf{y}_{i_{1},\ldots,i_{k}} = \mathbf{y}_{i_{1},\ldots,i_{k}}$. Expressing the resolvent operator restricted to the complement of the center subspace as 
+\begin{align}
+	\mathcal{R}_{s}(\omega) = \left[\mathbf{Q}(\omega\mathbf{I} - \Lu)\mathbf{Q}\right]^{-1}
+\end{align}
+Equation~\eqref{eqn:graph_Ok_compact2} can then be rewritten in a restricted subspace as,
+\begin{align}
+	\label{eqn:graph_Ok_compact3}
+	\begin{aligned}
+		\RestrictedResolvent{\omega_{i_{1},\ldots,i_{k}}}^{-1}\mathbf{y}_{i_{1},\ldots,i_{k}} = \\
+		\mathbf{Q}\left[\mathbf{f}_{i_{1},\ldots,i_{k}} - \mathbf{h}^{O}_{i_{1},\ldots,i_{k}} 
+		- \mathbf{h}^{L}_{i_{1},\ldots,i_{k}}\right],
+	\end{aligned} 
+\end{align}
+with the asymptotic components of $\Param$ defined as
+\begin{subequations}
+	\label{eqn:graph_gk_definition3}
+	\begin{align}
+		\AsParamEl^{j}_{i_{1},\ldots,i_{k}} 
+		=& \mathbf{w}^{\dagger}_{j}(\mathbf{f}_{i_{1},\ldots,i_{k}} - \mathbf{f}^{O}_{i_{1},\ldots,i_{k}} 
+		- \mathbf{f}^{L}_{i_{1},\ldots,i_{k}}), \\
+		%
+		&\textit{for $j\in 1,\ldots,n$,} \nonumber \\
+		%
+	 	\AsParamEl^{j}_{i_{1},\ldots,i_{k}} 
+	 	=& 0, \\
+	 	&\textit{\textit{for} $j\in n+1,\ldots,m$.} \nonumber
+	 \end{align}
+\end{subequations}
+ This particular graph style parameterization has been utilized by \citet{negi24} for the Navier--Stokes system where the Reynolds number perturbations have been used for the system extension. The two methods can be presented in algorithmic form as
+ \begin{algorithm}
+ 	\caption{Center--Manifold: Normal form}\label{algo:normal_form}
+ 	\begin{algorithmic}[1]
+ 		\Require System: $\partial \vecu/\partial t = \Lu \vecu + \vecf_{NL}(\vecu)$
+ 		\Ensure $\vecf_{NL}(\vecu) = \veczero$ 
+ 		\Require Direct/Adjoint Critical Spectra: \\
+ 		$\Lu \mathbf{V} = \mathbf{V}\LambdaC$ \\
+ 		$\Lu^{\dagger} \mathbf{W} = \mathbf{W}\LambdaC^{\dagger}$
+ 		\Ensure $\mathbf{W}^{\dagger}\mathbf{V} = \mathbf{I}_{n}$.
+% 		
+% 		%
+% 		$\partial \vecu/\partial t = \Lu \vecu + \Lmu\vecnu + \vecf_{NL}(\vecu,\vecnu) + \sum \vecf_{j}\theta_{j}(t)$\\
+% 		$d\vecnu/dt = \veczero; \hspace{10pt}  d\theta_{j}/dt = \lambda^{H}_{j}\theta_{j}$. 
+ 		\Ensure $y = x^n$ 
+ 		\State $y \Leftarrow 1$
+ 		\If{$n < 0$}
+ 		\State $X \Leftarrow 1 / x$
+ 		\State $N \Leftarrow -n$
+ 		\Else
+ 		\State $X \Leftarrow x$
+ 		\State $N \Leftarrow n$
+ 		\EndIf
+ 		\While{$N \neq 0$}
+ 		\If{$N$ is even}
+ 		\State $X \Leftarrow X \times X$
+ 		\State $N \Leftarrow N / 2$
+ 		\Else[$N$ is odd]
+ 		\State $y \Leftarrow y \times X$
+ 		\State $N \Leftarrow N - 1$
+ 		\EndIf
+ 		\EndWhile
+ 	\end{algorithmic}
+ \end{algorithm}
+ 
+ The resulting expressions for the normal form given by equations~\eqref{eqn:asymptotic_Ok_compact_std},  \eqref{eqn:resonance_modification_Ok_std} and, the graph style parameterization given by equations~\eqref{eqn:graph_Ok_compact3}, \eqref{eqn:graph_gk_definition3} are quite similar.  
+ 
+% \begin{algorithm}
+% 	\caption{Calculate $y = x^n$}\label{algo1}
+% 	\begin{algorithmic}[1]
+% 		\Require $n \geq 0 \vee x \neq 0$
+% 		\Ensure $y = x^n$ 
+% 		\State $y \Leftarrow 1$
+% 		\If{$n < 0$}\label{algln2}
+% 		\State $X \Leftarrow 1 / x$
+% 		\State $N \Leftarrow -n$
+% 		\Else
+% 		\State $X \Leftarrow x$
+% 		\State $N \Leftarrow n$
+% 		\EndIf
+% 		\While{$N \neq 0$}
+% 		\If{$N$ is even}
+% 		\State $X \Leftarrow X \times X$
+% 		\State $N \Leftarrow N / 2$
+% 		\Else[$N$ is odd]
+% 		\State $y \Leftarrow y \times X$
+% 		\State $N \Leftarrow N - 1$
+% 		\EndIf
+% 		\EndWhile
+% 	\end{algorithmic}
+% \end{algorithm}
+
 
 
 %A particular graph-style parameterization has been used in \cite{negi24} for the construction of center-manifolds of the Navier--Stokes while treating variations of the Reynolds number as parameter perturbations. 

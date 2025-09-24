@@ -184,15 +184,20 @@ To keep the notation compact, the non-vanishing off-diagonal coupling terms will
 	\end{aligned}\right. 
 \end{equation}
 The resulting equation for $\yhatbf_{a,b}$ may be written as
-\begin{align}
+\begin{subequations}
 	\label{eqn:asymptotic_O2_compact}
-	\begin{aligned}
-	\left[\omega_{a,b}\Ihat - \ExtL\right]\yhatbf_{a,b} + \sum^{m}_{i=1}\AsParamEl^{i}_{a,b}\vhatbf_{i} 
-	 = \fhatbf_{a,b} - \hhatbf^{O}_{a,b},
-	\end{aligned} \\
-	\omega_{a,b} = \widehat{K}_{a,a} + \widehat{K}_{b,b}. \nonumber
+	\begin{align}
+		\ResolventHat{\omega_{a,b}}^{-1}\yhatbf_{a,b} + \sum^{m}_{i=1}\AsParamEl^{i}_{a,b}\vhatbf_{i} 
+		 = \fhatbf_{a,b} - \hhatbf^{O}_{a,b}, \\
+		\omega_{a,b} = \widehat{K}_{a,a} + \widehat{K}_{b,b},
+	\end{align}
+\end{subequations}
+where, $\ResolventHatOp(\omega)$ is the resolvent operator for the extended linear system defined as,
+\begin{align}
+	\label{eqn:extended_resolvent}
+	\ResolventHatOp(\omega) = (\omega\Ihat - \ExtL)^{-1}.
 \end{align}
-This equation is singular when $\omega_{a,b}$ is an eigenvalue of $\ExtL$, which is often referred to as a resonance condition. The normal form of the invariant manifold precisely resolves this singularity by requiring $\yhatbf_{a,b}$ to have a vanishing component along the singular direction. However, equation~\eqref{eqn:asymptotic_O2_ab} still needs to be balanced along the singular directions, which can only be done by $\sum^{m}_{j=1}\AsParamEl^{j}_{a,b}\vhatbf_{j}$. Multiplying equation~\eqref{eqn:asymptotic_O2_compact} with $\whatbf_{j}^{\dagger}$ and requiring that $\whatbf_{j}^{\dagger}\yhatbf_{a,b} = 0$ (in case of resonance), then provides us with the definition of $\AsParam_{a,b}$,
+The resolvent operator is the key mathematical object defining the asymptotic expressions. $\ResolventHatOp(\omega_{a,b})$ is singular when $\omega_{a,b}$ is an eigenvalue of $\ExtL$, which is often referred to as a resonance condition. The normal form of the invariant manifold precisely resolves this singularity by requiring $\yhatbf_{a,b}$ to have a vanishing component along the singular direction. However, equation~\eqref{eqn:asymptotic_O2_ab} still needs to be balanced along the singular directions, which can only be done by $\sum^{m}_{j=1}\AsParamEl^{j}_{a,b}\vhatbf_{j}$. Multiplying equation~\eqref{eqn:asymptotic_O2_compact} with $\whatbf_{j}^{\dagger}$ and requiring that $\whatbf_{j}^{\dagger}\yhatbf_{a,b} = 0$ (in case of resonance), then provides us with the definition of $\AsParam_{a,b}$,
 \begin{equation}
 	\label{eqn:g2_definition}
 	\AsParamEl^{j}_{a,b} =
@@ -235,16 +240,16 @@ The $\Khat$ matrix is responsible for the cross contributions of different vecto
 \input{matrix_image_o3}
 
 The second set of bracketted terms in equation~\eqref{eqn:asymptotic_O3} are contributions from the lower order asymptotic terms. For a given index $(a,b,c)$, we represent the low order contributions as $\hhatbf^{L}_{a,b,c}$ and the contributions of the off-diagonal terms as $\hhatbf^{O}_{a,b,c}$ resulting in the compact expression for $\yhatbf_{a,b,c}$ as
-%\begin{subequations}
+\begin{subequations}
 \begin{align}
 	\begin{aligned}
 		\label{eqn:asymptotic_O3_compact}
-		\left[\omega_{a,b,c}\Ihat - \ExtL\right]\yhatbf_{a,b,c}  + \sum^{m}_{j=1}\AsParamEl^{j}_{a,b,c}\vhatbf_{j} \\ 
+		\ResolventHat{\omega_{a,b,c}}^{-1}\yhatbf_{a,b,c}  + \sum^{m}_{j=1}\AsParamEl^{j}_{a,b,c}\vhatbf_{j} \\ 
 		 = \fhatbf_{a,b,c} - \hhatbf^{O}_{a,b,c} - \hhatbf^{L}_{a,b,c},
 	\end{aligned} &&\\
-	\omega_{a,b,c} = \widehat{K}_{a,a} + \widehat{K}_{b,b} + \widehat{K}_{c,c}.&& \nonumber
+	\omega_{a,b,c} = \widehat{K}_{a,a} + \widehat{K}_{b,b} + \widehat{K}_{c,c}.&&
 \end{align}
-%\end{subequations}
+\end{subequations}
 The resolution of the system singularities due to the resonance condition, $\omega_{a,b,c} = \widehat{K}_{j,j}$, provides us with the third order terms of the reduced representation,
 \begin{equation}
 	\label{eqn:g3_definition}
@@ -266,19 +271,19 @@ and $\whatbf^{\dagger}_{j}\yhatbf_{a,b,c} = 0$ if the resonance condition holds.
 \label{sec:normal_form_Ok}
 
 For all subsequent orders the structure of the problem remains essentially the same as the third order terms. At any order $k$, one obtains a systems of equations for $T^{k}_{m}$ vectors $\yhatbf_{i_{1},\ldots,i_{k}}$ which is lower triangular and hence can be solved sequentially. The cross contributions of the vectors due to $\Khat$ has the same structure as in figure~\ref{fig:Khat_coupling_O3} but with $k$ columns (possibly with repetitions) of $\Khat$ contributing. The lower order terms $\hhatbf^{L}_{i_{1},\ldots,i_{k}}$ are always known a-priori. When solving for the unknown vectors sequentially the off-diagonal contributions $\hhatbf^{O}_{i_{1},\ldots,i_{k}}$ are always known a-priori. For each index $(i_{1},\ldots,i_{k})\in\IndexSet{k}{1,m}$ one obtains an equation similar to equation~\eqref{eqn:asymptotic_O3_compact}, 
-%\begin{subequations}
+\begin{subequations}
+	\label{eqn:asymptotic_Ok_compact}
 	\begin{align}
-		\label{eqn:asymptotic_Ok_compact}
 		\begin{aligned}
-			\left[\omega_{i_{1},\ldots,i_{k}}\Ihat - \ExtL\right]\yhatbf_{i_{1},\ldots,i_{k}} + \sum^{m}_{j=1}\AsParamEl^{j}_{i_{1},\ldots,i_{k}}\vhatbf_{j} \\
+			\ResolventHat{\omega_{i_{1},\ldots,i_{k}}}^{-1}\yhatbf_{i_{1},\ldots,i_{k}} + \sum^{m}_{j=1}\AsParamEl^{j}_{i_{1},\ldots,i_{k}}\vhatbf_{j} \\
 			 = \fhatbf_{i_{1},\ldots,i_{k}} - \hhatbf^{O}_{i_{1},\ldots,i_{k}} 
 			 - \hhatbf^{L}_{i_{1},\ldots,i_{k}},
 		\end{aligned} &&\\
 		%
-		\omega_{i_{1},\ldots,i_{k}} = \widehat{K}_{i_{1},i_{1}} + \widehat{K}_{i_{2},i_{2}} + \ldots + \widehat{K}_{i_{k},i_{k}}. && \nonumber
+		\omega_{i_{1},\ldots,i_{k}} = \widehat{K}_{i_{1},i_{1}} + \widehat{K}_{i_{2},i_{2}} + \ldots + \widehat{K}_{i_{k},i_{k}}, &&
 	\end{align}
-%\end{subequations}
-The resonance condition arises whenever, 
+\end{subequations}
+with the resonance condition arisising whenever, 
 \begin{align}
 	\label{eqn:resonance_condition_Ok}
 	\omega_{i_{1},\ldots,i_{k}} = \widehat{K}_{j,j}, && j\in 1,\ldots,m,
@@ -291,7 +296,7 @@ which then defines the normal form coefficients,
 	\AsParamEl^{j}_{i_{1},\ldots,i_{k}} =&
 			\whatbf_{j}^{\dagger}(\fhatbf_{i_{1},\ldots,i_{k}} - \hhatbf^{L}_{i_{1},\ldots,i_{k}}
 			- \hhatbf^{O}_{i_{1},\ldots,i_{k}}), \\
-			0 =& \whatbf_{j}^{\dagger}\yhatbf_{i_{1},\ldots,i_{k}}
+			0 =& \whatbf_{j}^{\dagger}\yhatbf_{i_{1},\ldots,i_{k}},
 \end{align}
 \end{subequations}
 else, $\AsParamEl^{j}_{i_{1},\ldots,i_{k}} = 0$, and $\yhatbf_{i_{1},\ldots,i_{k}}$ is unconstrained. 
@@ -311,26 +316,26 @@ for a particular frequency $\omega$ and generic right hand side, $\widehat{\math
 		%
 		(\omega\mathbf{I} - \LambdaP)\mathbf{y}^{(2)} = \mathbf{r}^{(2)}, \\
 		%
-		(\omega\mathbf{I} - \LambdaH)\mathbf{y}^{(3)} = \mathbf{r}^{(3)}. 
+		(\omega\mathbf{I} - \LambdaH)\mathbf{y}^{(3)} = \mathbf{r}^{(3)}.
 	\end{align}
 \end{subequations}
 Clearly, $\mathbf{r}^{(2)}=\veczero$ and an $\omega$ that is non-resonant with $\boldsymbol{\lambda}^{P}$ implies $\mathbf{y}^{(2)} = \veczero$. Similarly, $\mathbf{r}^{(3)}=\veczero$ implies $\mathbf{y}^{(3)} = \veczero$ when $\omega$ is non-resonant with the external forcing frequencies $\boldsymbol{\lambda}^{H}$. In either case, if $\omega$ is resonant with the frequencies in $\boldsymbol{\lambda}^{P}$ or $\boldsymbol{\lambda}^{H}$, the condition for the removal of singularities, $\whatbf^{\dagger}_{j}\yhatbf = \veczero$,  again ensures $\mathbf{y}^{(2)} = \veczero$ and $\mathbf{y}^{(3)} = \veczero$. Therefore equation~\eqref{eqn:generic_resolvent} simply reduces to,
 \begin{align}
 	\label{eqn:generic_resolvent_reduced}
-	(\omega\mathbf{I} - \Lu)\mathbf{y}^{(1)} = \mathbf{r}^{(1)},
+	\Resolvent{\omega}^{-1}\mathbf{y}^{(1)} = \mathbf{r}^{(1)}; && \ResolventOp({\omega}) = (\omega\mathbf{I} - \Lu)^{-1}, 
 \end{align}
-which only requires the original linear operator $\Lu$.
+where, $\ResolventOp$ is now the resolvent operator for the standard linear system $\Lu$.
 
-The asymptotic terms can now be examined sequentially noting that by construction the non-linear term has the form $\efield{f}_{NL} = [\vecf_{NL}; \veczero; \veczero]$ and hence so do all $\fhatbf_{i_{1},\ldots,i_{k}}$ derived from it. Starting at $\mathcal{O}(|\xbf|^{2})$ and $(i_{1},i_{2})=(1,1)$, one has the resolvent equation in the extended system,
+The asymptotic terms can now be examined sequentially noting that by construction the extended variables vanish for the non-linear term, which has the form $\efield{f}_{NL} = [\vecf_{NL}; \veczero; \veczero]$, and hence so do all $\fhatbf_{i_{1},\ldots,i_{k}}$ derived from it. Starting at $\mathcal{O}(|\xbf|^{2})$ and $(i_{1},i_{2})=(1,1)$, one has the resolvent equation in the extended system,
 \begin{align}
 	\label{eqn:asymptotic_O2_11}
-		\left[\omega_{1,1}\Ihat - \ExtL\right]\yhatbf_{1,1} + \sum^{m}_{j=1}\AsParamEl^{j}_{1,1}\vhatbf_{j} 
+		\ResolventHat{\omega_{1,1}}^{-1}\yhatbf_{1,1} + \sum^{m}_{j=1}\AsParamEl^{j}_{1,1}\vhatbf_{j} 
 		= \fhatbf_{1,1}
 \end{align}
-Regardless of resonance, since $\fhatbf_{1,1}$ has the form $[\mathbf{f}_{1,1};\veczero;\veczero]$ hence $\yhatbf_{1,1} = [\mathbf{y}_{1,1};\veczero;\veczero]$, and equation~\eqref{eqn:asymptotic_O2_11} reduces to,
+The extended variables vanish for $\fhatbf_{1,1}$ and therefore, regardless of resonance, they also vanish for $\yhatbf_{1,1}$, which then has the form $ \yhatbf_{1,1} = [\mathbf{y}_{1,1};\veczero;\veczero]$. Hence equation~\eqref{eqn:asymptotic_O2_11} reduces to,
 \begin{align}
 	\label{eqn:asymptotic_O2_11r}
-	\left[\omega_{1,1}\mathbf{I} - \Lu\right]\mathbf{y}_{1,1} + \sum^{n}_{j=1}\AsParamEl^{j}_{1,1}\mathbf{v}_{j} 
+	\Resolvent{\omega_{1,1}}^{-1}\mathbf{y}_{1,1} + \sum^{n}_{j=1}\AsParamEl^{j}_{1,1}\mathbf{v}_{j} 
 	= \mathbf{f}_{1,1},
 \end{align}
 with $\AsParamEl^{j}_{1,1} = 0$, for $j\in \{n+1,\ldots,m\}$. 
@@ -338,26 +343,28 @@ with $\AsParamEl^{j}_{1,1} = 0$, for $j\in \{n+1,\ldots,m\}$.
 For the next term $(i_{1},i_{2})=(1,2)$, the right hand side now also contains contributions $\hhatbf^{O}_{1,2}$ due to the off-diagonal terms of $\Khat$. These however can only come from the preceeding term, $\yhatbf_{1,1}$, and therefore off-diagonal contributions also have the form $\hhatbf^{O}_{1,2} = [\mathbf{h}^{O}_{1,2};\veczero;\veczero]$, which further implies that $\yhatbf_{1,2} = [\mathbf{y}_{1,2};\veczero;\veczero]$. The resulting equation being, 
 \begin{align}
 	\label{eqn:asymptotic_O2_12r}
-	\left[\omega_{1,2}\mathbf{I} - \Lu\right]\mathbf{y}_{1,2} + \sum^{n}_{j=1}\AsParamEl^{j}_{1,2}\mathbf{v}_{j} 
+	\Resolvent{\omega_{1,2}}^{-1}\mathbf{y}_{1,2} + \sum^{n}_{j=1}\AsParamEl^{j}_{1,2}\mathbf{v}_{j} 
 	= \mathbf{f}_{1,2} - \mathbf{h}^{O}_{1,2},
 \end{align}
 with $\AsParamEl^{j}_{1,2} = 0$, for $j\in \{n+1,\ldots,m\}$.
 
 This logic repeats for all $(i_{1},i_{2})\in\IndexSet{2}{1,m}$ and all unknown vectors at second order have the form $\yhatbf_{i_{1},i_{2}} = [\mathbf{y}_{i_{1},i_{2}}; \veczero; \veczero]$ and therefore the resolvent equations can be solved using the original linear system $\Lu$. 
 
-At $\mathcal{O}(|\xbf|^{3})$ the right hand side also has contributions from $\hhatbf^{L}_{i_{1},i_{2},i_{3}}$ that arise from the lower order asymptotic terms. However since these arise only due to the second order asymptotic terms $\yhatbf_{i_{1},i_{2}}$ and therefore $\hhatbf^{L}_{i_{1},i_{2},i_{3}} = [\mathbf{h}^{L}_{i_{1},i_{2},i_{3}}; \veczero; \veczero]$. The same logical arguments presented earlier apply and hence all third order asymptotic terms also have the form $\yhatbf_{i_{1},i_{2},i_{3}} = [\mathbf{y}_{i_{1},i_{2},i_{3}}; \veczero; \veczero]$ and only require the standard linear system $\Lu$ for their evaluation. As noted earlier, equations for the higher order asymptotic terms have the same essential structure as the third-order equations and hence at all orders the asymptotic terms have the form $\yhatbf_{i_{1},\ldots,i_{k}} = [\mathbf{y}_{i_{1},\ldots,i_{3}}; \veczero; \veczero]$ and only require the standard linear system $\Lu$ for their evaluation. 
+At $\mathcal{O}(|\xbf|^{3})$ the right hand side also has contributions from $\hhatbf^{L}_{i_{1},i_{2},i_{3}}$ that arise from the lower order asymptotic terms. However, these arise only due to the second order asymptotic terms $\yhatbf_{i_{1},i_{2}}$ and therefore, $\hhatbf^{L}_{i_{1},i_{2},i_{3}} = [\mathbf{h}^{L}_{i_{1},i_{2},i_{3}}; \veczero; \veczero]$. The same logical arguments presented earlier apply and hence all third order asymptotic terms also have the form $\yhatbf_{i_{1},i_{2},i_{3}} = [\mathbf{y}_{i_{1},i_{2},i_{3}}; \veczero; \veczero]$ and only require the standard linear system $\Lu$ for their evaluation. As noted earlier, equations for the higher order asymptotic terms have the same essential structure as the third-order equations and hence at all orders the asymptotic terms have the form $\yhatbf_{i_{1},\ldots,i_{k}} = [\mathbf{y}_{i_{1},\ldots,i_{3}}; \veczero; \veczero]$ and only require the standard linear system $\Lu$ for their evaluation. 
 
 Equations~\eqref{eqn:asymptotic_Ok_compact},\eqref{eqn:resonance_condition_Ok} and \eqref{eqn:resonance_modification_Ok} may be rewritten for the standard system as,
-\begin{align}
+\begin{subequations}
 	\label{eqn:asymptotic_Ok_compact_std}
-	\begin{aligned}
-		\left[\omega_{i_{1},\ldots,i_{k}}\mathbf{I} - \Lu\right]\mathbf{y}_{i_{1},\ldots,i_{k}} + \sum^{n}_{j=1}\AsParamEl^{j}_{i_{1},\ldots,i_{k}}\mathbf{v}_{j} \\
-		= \mathbf{f}_{i_{1},\ldots,i_{k}} - \mathbf{h}^{O}_{i_{1},\ldots,i_{k}} 
-		- \mathbf{h}^{L}_{i_{1},\ldots,i_{k}},
-	\end{aligned} &&\\
-	%
-	\omega_{i_{1},\ldots,i_{k}} = \widehat{K}_{i_{1},i_{1}} + \widehat{K}_{i_{2},i_{2}} + \ldots + \widehat{K}_{i_{k},i_{k}}. && \nonumber
-\end{align}
+	\begin{align}
+		\begin{aligned}
+			\Resolvent{\omega_{i_{1},\ldots,i_{k}}}^{-1}\mathbf{y}_{i_{1},\ldots,i_{k}} + \sum^{n}_{j=1}\AsParamEl^{j}_{i_{1},\ldots,i_{k}}\mathbf{v}_{j} \\
+			= \mathbf{f}_{i_{1},\ldots,i_{k}} - \mathbf{h}^{O}_{i_{1},\ldots,i_{k}} 
+			- \mathbf{h}^{L}_{i_{1},\ldots,i_{k}},
+		\end{aligned} \\
+		%
+		\omega_{i_{1},\ldots,i_{k}} = \widehat{K}_{i_{1},i_{1}} + \widehat{K}_{i_{2},i_{2}} + \ldots + \widehat{K}_{i_{k},i_{k}}.
+	\end{align}
+\end{subequations}
 with the resonance condition being the same, \ie,
 \begin{align}
 	\label{eqn:resonance_condition_Ok_std}

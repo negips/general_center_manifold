@@ -50,7 +50,7 @@ Additionally, $\LambdaC$ is defined as an $n\times n$ diagonal matrix consisting
 
 
 %%%%%%%%%
-\subsection{The Extended System}
+\subsection{From the Standard System to the Extended System}
 \label{sec:extended_system}
 
 The same system is now considered for the case of parameter perturbation so that the evolution dynamics are now evaluated at parameter values of $\vecmu = \vecMu + \vecnu$, with $\vecnu$ being the vector of parameter perturbations, $\vecnu = [\nu_{1};\nu_{2};\ldots;\nu_{l}]$. In addition, the system is forced with small-amplitude harmonic forcing of the type
@@ -62,7 +62,7 @@ where, the various $\theta_{i}$ are treated as the dynamic variable, $\lambda^{H
 \begin{align}
 	\frac{\partial \vecu}{\partial t} =& \vecf(\vecUb + \vecu,\vecMu + \vecnu) + \sum_{i=1}^{h}\vecf_{i}\theta_{i}; \nonumber.
 \end{align}
-The diagonal matrix for the harmonic angular frequencies is represented by $\LambdaH = diagm(\boldsymbol{\lambda}^{H})$. Similarly, $\boldsymbol{\lambda}^{P} = [\lambda^{P}_{1};\lambda^{P}_{2};\ldots;\lambda^{P}_{l}]$ is defined as a vector of length $l$, with all $\lambda^{P}_{i} = 0$ identically, for $i\in 1,\ldots, l$. These may be thought of parameter eigenvalues of parameter angular frequencies depending on the point of view. In either case, these vanish identically. $\LambdaP = diagm(\boldsymbol{\lambda}^{P})$ is defined as an $l\times l$ null matrix, to represent the trivial linear evolution matrix for the parameter variables $\vecnu$. The extended system including the evolution equations for the newly introduced variables $\vecnu$ and $\vectheta$, henceforth referred to as the \emph{extended variables}, is given by,
+The diagonal matrix for the harmonic angular frequencies is represented by $\LambdaH = diagm(\boldsymbol{\lambda}^{H})$. Similarly, $\boldsymbol{\lambda}^{P} = [\lambda^{P}_{1};\lambda^{P}_{2};\ldots;\lambda^{P}_{l}]$ is defined as a vector of length $l$, with all $\lambda^{P}_{i} = 0$ identically, for $i\in 1,\ldots, l$. These may be thought of parameter eigenvalues or parameter angular frequencies depending on the point of view. In either case, these vanish identically. $\LambdaP = diagm(\boldsymbol{\lambda}^{P})$ is defined as an $l\times l$ null matrix, to represent the trivial linear evolution matrix for the parameter variables $\vecnu$. The extended system including the evolution equations for the newly introduced variables $\vecnu$ and $\vectheta$, henceforth referred to as the \emph{extended variables}, is given by,
 \begin{subequations}
 	\begin{align}
 			\label{eqn:evolution_extended1}
@@ -149,7 +149,7 @@ There are however some subtleties involved when the system extension introduces 
 Observe that if $(\lambda^{C}_{i}, \vecv^{C}_{i})$ is a critical eigenpair of the original linearized operator $\Lu$, then its extension to $\ExtL$ satisfies,
 \begin{subequations}
 	\begin{align}
-		(\lambda^{C}_{i}\mathbf{I} - \ExtL)\vhatbf^{C}_{i} &= \veczero, \\
+		(\lambda^{C}_{i}\Ihat - \ExtL)\vhatbf^{C}_{i} &= \veczero, \\
 			\vhatbf^{C}_{i} &= \begin{bmatrix}
 			\vecv^{C}_{i}; &
 			\veczero; &
@@ -157,7 +157,7 @@ Observe that if $(\lambda^{C}_{i}, \vecv^{C}_{i})$ is a critical eigenpair of th
 		\end{bmatrix},
 	\end{align}
 \end{subequations}
-$\forall i\in 1,\ldots,n$, which may be verified via simple substitution. Hence all critical eigenmodes of $\Lu$ can be trivially extended to $\ExtL$. This definition for the extension of the eigenvectors in fact applies even to modes that are not critical eigenmodes. 
+$\forall i\in 1,\ldots,n$, which may be verified via simple substitution. Here $\Ihat$ is the identity matrix for the extended system. Hence all critical eigenmodes of $\Lu$ can be trivially extended to $\ExtL$. This definition for the extension of the eigenvectors in fact applies even to modes that are not critical eigenmodes. 
 
 The additional critical eigenpairs introduced due to system extension need to be deduced. Two sets of canonical unit vectors are defined such that,
 \begin{subequations}
@@ -180,7 +180,7 @@ If the original linear system $\Lu$ is non-singular then, the $l$ eigenpairs gen
 	  	\veczero  ], && \forall i \in 1,\ldots l.
 	\end{align}
 \end{subequations}
-It can be verified that $(\lambda^{P}_{i}\Ihat - \ExtL)\vhatbf^{P}_{i} = 0$, where $\Ihat$ is the identity matrix for the extended system. 
+It can be verified that $(\lambda^{P}_{i}\Ihat - \ExtL)\vhatbf^{P}_{i} = 0$.
 
 However, if $\Lu$ is singular then equation~\eqref{eqn:nonsingular_pmode} is indeterminate and the definition needs to be modified. For the $i^{th}$ \emph{parameter mode}, define a vector $\vfield{\gamma}^{P}_{i} \in \mathds{C}^{n}$, where the $j^{th}$ element of the vector is given by,
 \begin{equation}
@@ -345,18 +345,20 @@ where, $\mathbf{W}$ is the matrix of the adjoint critical eigenvectors of $\Lu^{
 	\label{eqn:extended_biorthogonal_matrices}
 	\mathbf{\widehat{W}}^{\dagger}\mathbf{\widehat{V}} = \mathbf{I}_{m}.
 \end{align}
-This is the analogue of equation~\eqref{eqn:biorthogonal_matrices}, and is simply a statement of the biorthogonality relation between the direct and adjoint eigenvectors in the extended space. The projection matrices into the critical and stable subspaces of $\ExtL$ are given by,
-\begin{align}
-	\label{eqn:extended_projectors}
-	\mathbf{\widehat{P}} &= \mathbf{\widehat{V}}\mathbf{\widehat{W}}^{\dagger} \\
-	%
-	\implies \mathbf{\widehat{P}} &= \mathbf{\widehat{V}_{C}}\mathbf{\widehat{W}}^{\dagger}_{C} + \mathbf{\widehat{V}_{P}}\mathbf{\widehat{W}}^{\dagger}_{P} +
-	\mathbf{\widehat{V}_{H}}\mathbf{\widehat{W}}^{\dagger}_{H}, \nonumber \\
-	%
-	\mathbf{\widehat{Q}} &= \Ihat - \mathbf{\widehat{V}}\mathbf{\widehat{W}}^{\dagger}, \\
-	\implies \mathbf{\widehat{Q}} &= \Ihat - \mathbf{\widehat{V}_{C}}\mathbf{\widehat{W}}^{\dagger}_{C} - \mathbf{\widehat{V}_{P}}\mathbf{\widehat{W}}^{\dagger}_{P} -
-	\mathbf{\widehat{V}_{H}}\mathbf{\widehat{W}}^{\dagger}_{H}. \nonumber
-\end{align}
+This is the analogue of equation~\eqref{eqn:biorthogonal_matrices}, and is simply a statement of the biorthogonality relation between the direct and adjoint eigenvectors in the extended space. 
+
+%The projection matrices into the critical and stable subspaces of $\ExtL$ are given by,
+%\begin{align}
+%	\label{eqn:extended_projectors}
+%	\mathbf{\widehat{P}} &= \mathbf{\widehat{V}}\mathbf{\widehat{W}}^{\dagger} \\
+%	%
+%	\implies \mathbf{\widehat{P}} &= \mathbf{\widehat{V}_{C}}\mathbf{\widehat{W}}^{\dagger}_{C} + \mathbf{\widehat{V}_{P}}\mathbf{\widehat{W}}^{\dagger}_{P} +
+%	\mathbf{\widehat{V}_{H}}\mathbf{\widehat{W}}^{\dagger}_{H}, \nonumber \\
+%	%
+%	\mathbf{\widehat{Q}} &= \Ihat - \mathbf{\widehat{V}}\mathbf{\widehat{W}}^{\dagger}, \\
+%	\implies \mathbf{\widehat{Q}} &= \Ihat - \mathbf{\widehat{V}_{C}}\mathbf{\widehat{W}}^{\dagger}_{C} - \mathbf{\widehat{V}_{P}}\mathbf{\widehat{W}}^{\dagger}_{P} -
+%	\mathbf{\widehat{V}_{H}}\mathbf{\widehat{W}}^{\dagger}_{H}. \nonumber
+%\end{align}
 
 
 Finally, we have the generalized eigenvalue relation,
@@ -385,58 +387,61 @@ Note that due to the special structure of the adjoint parameter and forcing mode
 
 %Finally, note that extended variables vanish identically for fields which lie entirely in the stable subspace of $\ExtL$. 
 
-This completes the extension of the system and the subspace structure for both the direct and adjoint systems can be readily identified. While the structure of the extended subspaces has been evaluated, reformulation of the problem as an extended system may have detrimental practical implications when considering large systems. Practical methods for solving such systems often rely on numerical algorithms that exploit inherent structure of the problem (Hermicity for conjugate-gradient solvers for example). In such a scenario, additional degrees of freedom can potential destroy the system symmetries and may require substantial changes in the numerical approach to the system solution. This would be particularly true of asymptotic approaches that require resolvent calculations \citep{coullet83,cabre05,sipp07,haragus11,carini15,gallaire16,haro16,jain22,negi24}, which itself is a computationally challenging task for large systems. Such a scenario would be highly undesireable. However, as it turns out, at least some of the parameterizations involved in the evaluation of center-manifolds do not in fact require the use of the extended system after the initial evaluation of the extended tangent space. All higher order calculations can be performed using the original linear system $\Lu$. This is clarified in the next section where the parameterization and its asymptotic terms are explicitly built. First however, we prove the following results which will come in handy.  
+This completes the extension of the system and the subspace structure for both the direct and adjoint systems can be readily identified. While the structure of the extended subspaces has been evaluated, reformulation of the problem as an extended system may have detrimental practical implications when considering large systems. Practical methods for solving such systems often rely on numerical algorithms that exploit inherent structure of the problem (Hermicity for conjugate-gradient solvers for example). In such a scenario, additional degrees of freedom can potential destroy the system symmetries and may require substantial changes in the numerical approach to the system solution. This would be particularly true of asymptotic approaches that require resolvent calculations \citep{coullet83,cabre05,sipp07,haragus11,carini15,gallaire16,haro16,jain22,negi24}, which itself is a computationally challenging task for large systems. Such a scenario would be highly undesireable. However, as it turns out, at least some of the parameterizations involved in the evaluation of center-manifolds do not in fact require the use of the extended system after the initial evaluation of the extended tangent space. All higher order calculations can be performed using the original linear system $\Lu$. This is clarified in the next section where the parameterization and its asymptotic terms are explicitly built. 
 
-\begin{lemma}
-	\label{lemma:lemma1}
-	Given an extended system described by equation~\eqref{eqn:evolution_extended}, with a linearized operator $\ExtL$, given by equation~\eqref{eqn:linearized_operator_extended}, 
-	if a vector, $\efield{u} = [\vfield{u};\vecnu;\vectheta]$, is such that its projection onto the center-subspace of $\ExtL$ vanishes, then, the extended variables $\vecnu$ and $\vectheta$ must also vanish identically for $\efield{u}$. 
-\end{lemma}
 
-\begin{proof}
-	\label{proof:proof1}
-	A vector $\efield{u}$ whose components along the center-subspace vanish implies that $\mathbf{\widehat{W}}^{\dagger}\efield{u} = \veczero$, where $\mathbf{\widehat{W}} = [\mathbf{\widehat{W}}_{C}, \mathbf{\widehat{W}}_{P}, \mathbf{\widehat{W}}_{H}]$, are as deduced in sections~\ref{sec:extended_system} and \ref{sec:extended_subspace_structure}. 
-	\begin{align}
-		\therefore \mathbf{\widehat{W}}^{\dagger}\efield{u} =& \begin{bmatrix}
-			\mathbf{W}^{\dagger}\vfield{u} + \mathbf{Z}^{\dagger}_{P}\vecnu + \mathbf{Z}^{\dagger}_{H}\vectheta \\
-			\mathbf{I}^{\dagger}\vecnu \\
-			\mathbf{I}^{\dagger}\vectheta
-		\end{bmatrix} = \begin{bmatrix}
-			\veczero \\
-			\veczero \\
-			\veczero
-		\end{bmatrix}. 		\nonumber
-	\end{align}
-	For this to hold,
-	\begin{align}
-		\mathbf{I}^{\dagger}\vecnu = \veczero, \implies \vecnu = \veczero, \nonumber \\ \mathbf{I}^{\dagger}\vectheta = \veczero, \implies \vectheta = \veczero. \nonumber
-	\end{align}
-	Hence, both the extended variables $\vecnu$ and $\vectheta$ vanish identically.
-\end{proof}
-
-\begin{corollary}
-	\label{corollary:corollary1}
-	Given an extended system described by equation~\eqref{eqn:evolution_extended}, with a linearized operator $\ExtL$, given by equation~\eqref{eqn:linearized_operator_extended}, 
-	if a vector, $\efield{u} = [\vfield{u};\vecnu;\vectheta]$, is such that its projection onto the center-subspace of $\ExtL$ vanishes, then, the projection of $\vfield{u}$ onto the center-subspace of $\Lu$ also vanishes.
-\end{corollary}
-\begin{proof}
-	\label{proof:proof2}
-	For a vector $\efield{u}$ that satisfies $\mathbf{\widehat{W}}^{\dagger}\efield{u} = \veczero$, by lemma~\ref{lemma:lemma1}, both $\vecnu$ and $\vectheta$ vanish identically. 
-	\begin{align}
-		\therefore \mathbf{\widehat{W}}^{\dagger}\efield{u} =& \begin{bmatrix}
-			\mathbf{W}^{\dagger}\vfield{u} \\
-			\veczero \\
-			\veczero
-		\end{bmatrix} = \begin{bmatrix}
-			\veczero \\
-			\veczero \\
-			\veczero
-		\end{bmatrix}, 		\nonumber
-	\end{align}
-	which implies $\mathbf{W}^{\dagger}\vfield{u} = \veczero$.  However, $\mathbf{W}$ spans the center-subspace of $\Lu^{\dagger}$, and therefore $\mathbf{W}^{\dagger}\vfield{u}$ is the projection of $\vfield{u}$ onto the center-subspace of $\Lu$, which vanishes as required.
-\end{proof}
-
-A proof of corollary~\ref{corollary:corollary1} in the case of infinite dimensional systems with parameter extensions can be found in \cite{haragus11}. 
+%First however, we prove the following results which will come in handy.  
+%
+%\begin{lemma}
+%	\label{lemma:lemma1}
+%	Given an extended system described by equation~\eqref{eqn:evolution_extended}, with a linearized operator $\ExtL$, given by equation~\eqref{eqn:linearized_operator_extended}, 
+%	if a vector, $\efield{u} = [\vfield{u};\vecnu;\vectheta]$, is such that its projection onto the center-subspace of $\ExtL$ vanishes, then, the extended variables $\vecnu$ and $\vectheta$ must also vanish identically for $\efield{u}$. 
+%\end{lemma}
+%
+%\begin{proof}
+%	\label{proof:proof1}
+%	A vector $\efield{u}$ whose components along the center-subspace vanish implies that $\mathbf{\widehat{W}}^{\dagger}\efield{u} = \veczero$, where $\mathbf{\widehat{W}} = [\mathbf{\widehat{W}}_{C}, \mathbf{\widehat{W}}_{P}, \mathbf{\widehat{W}}_{H}]$, are as deduced in sections~\ref{sec:extended_system} and \ref{sec:extended_subspace_structure}. 
+%	\begin{align}
+%		\therefore \mathbf{\widehat{W}}^{\dagger}\efield{u} =& \begin{bmatrix}
+%			\mathbf{W}^{\dagger}\vfield{u} + \mathbf{Z}^{\dagger}_{P}\vecnu + \mathbf{Z}^{\dagger}_{H}\vectheta \\
+%			\mathbf{I}^{\dagger}\vecnu \\
+%			\mathbf{I}^{\dagger}\vectheta
+%		\end{bmatrix} = \begin{bmatrix}
+%			\veczero \\
+%			\veczero \\
+%			\veczero
+%		\end{bmatrix}. 		\nonumber
+%	\end{align}
+%	For this to hold,
+%	\begin{align}
+%		\mathbf{I}^{\dagger}\vecnu = \veczero, \implies \vecnu = \veczero, \nonumber \\ \mathbf{I}^{\dagger}\vectheta = \veczero, \implies \vectheta = \veczero. \nonumber
+%	\end{align}
+%	Hence, both the extended variables $\vecnu$ and $\vectheta$ vanish identically.
+%\end{proof}
+%
+%\begin{corollary}
+%	\label{corollary:corollary1}
+%	Given an extended system described by equation~\eqref{eqn:evolution_extended}, with a linearized operator $\ExtL$, given by equation~\eqref{eqn:linearized_operator_extended}, 
+%	if a vector, $\efield{u} = [\vfield{u};\vecnu;\vectheta]$, is such that its projection onto the center-subspace of $\ExtL$ vanishes, then, the projection of $\vfield{u}$ onto the center-subspace of $\Lu$ also vanishes.
+%\end{corollary}
+%\begin{proof}
+%	\label{proof:proof2}
+%	For a vector $\efield{u}$ that satisfies $\mathbf{\widehat{W}}^{\dagger}\efield{u} = \veczero$, by lemma~\ref{lemma:lemma1}, both $\vecnu$ and $\vectheta$ vanish identically. 
+%	\begin{align}
+%		\therefore \mathbf{\widehat{W}}^{\dagger}\efield{u} =& \begin{bmatrix}
+%			\mathbf{W}^{\dagger}\vfield{u} \\
+%			\veczero \\
+%			\veczero
+%		\end{bmatrix} = \begin{bmatrix}
+%			\veczero \\
+%			\veczero \\
+%			\veczero
+%		\end{bmatrix}, 		\nonumber
+%	\end{align}
+%	which implies $\mathbf{W}^{\dagger}\vfield{u} = \veczero$.  However, $\mathbf{W}$ spans the center-subspace of $\Lu^{\dagger}$, and therefore $\mathbf{W}^{\dagger}\vfield{u}$ is the projection of $\vfield{u}$ onto the center-subspace of $\Lu$, which vanishes as required.
+%\end{proof}
+%
+%A proof of corollary~\ref{corollary:corollary1} in the case of infinite dimensional systems with parameter extensions can be found in \cite{haragus11}. 
 
 
 

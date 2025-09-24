@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.16)  22 SEP 2025 19:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.16)  24 SEP 2025 18:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -571,18 +571,51 @@ Package caption Info: New subtype `subfigure' on input line 238.
 \c@subfigure=\count324
 Package caption Info: New subtype `subtable' on input line 238.
 \c@subtable=\count325
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count326
+\float@exts=\toks37
+\float@box=\box75
+\@float@everytoks=\toks38
+\@floatcapt=\box76
+)
+\@float@every@algorithm=\toks39
+\c@algorithm=\count327
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count328
+\c@ALG@rem=\count329
+\c@ALG@nested=\count330
+\ALG@tlm=\skip73
+\ALG@thistlm=\skip74
+\c@ALG@Lnr=\count331
+\c@ALG@blocknr=\count332
+\c@ALG@storecount=\count333
+\c@ALG@tmpcounter=\count334
+\ALG@tmplength=\skip75
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
+
+Document Style - pseudocode environments for use with the `algorithmicx' style
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/nicematrix/nicematrix.sty
 (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
 (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
 (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
 x
-\pgfutil@everybye=\toks37
+\pgfutil@everybye=\toks40
 \pgfutil@tempdima=\dimen269
 \pgfutil@tempdimb=\dimen270
 )
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box75
+\pgfutil@abb=\box77
 ) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/pgf.revision.tex)
 Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
@@ -590,12 +623,12 @@ Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks38
-\pgfkeys@temptoks=\toks39
+\pgfkeys@pathtoks=\toks41
+\pgfkeys@temptoks=\toks42
 
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfil
 tered.code.tex
-\pgfkeys@tmptoks=\toks40
+\pgfkeys@tmptoks=\toks43
 ))
 \pgf@x=\dimen271
 \pgf@y=\dimen272
@@ -609,14 +642,14 @@ tered.code.tex
 \pgf@yd=\dimen280
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
-\c@pgf@counta=\count326
-\c@pgf@countb=\count327
-\c@pgf@countc=\count328
-\c@pgf@countd=\count329
-\t@pgf@toka=\toks41
-\t@pgf@tokb=\toks42
-\t@pgf@tokc=\toks43
-\pgf@sys@id@count=\count330
+\c@pgf@counta=\count335
+\c@pgf@countb=\count336
+\c@pgf@countc=\count337
+\c@pgf@countd=\count338
+\t@pgf@toka=\toks44
+\t@pgf@tokb=\toks45
+\t@pgf@tokc=\toks46
+\pgf@sys@id@count=\count339
 
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
@@ -634,8 +667,8 @@ File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
 code.tex
 File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfsyssoftpath@smallbuffer@items=\count331
-\pgfsyssoftpath@bigbuffer@items=\count332
+\pgfsyssoftpath@smallbuffer@items=\count340
+\pgfsyssoftpath@bigbuffer@items=\count341
 )
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
 code.tex
@@ -666,11 +699,11 @@ Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen281
-\pgfmath@count=\count333
-\pgfmath@box=\box76
-\pgfmath@toks=\toks44
-\pgfmath@stack@operand=\toks45
-\pgfmath@stack@operation=\toks46
+\pgfmath@count=\count342
+\pgfmath@box=\box78
+\pgfmath@toks=\toks47
+\pgfmath@stack@operand=\toks48
+\pgfmath@stack@operation=\toks49
 )
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
 tex)
@@ -692,7 +725,7 @@ code.tex)
 erarithmetics.code.tex)
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count334
+\c@pgfmathroundto@lastzeros=\count343
 )) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
 de.tex
@@ -727,10 +760,10 @@ File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
 de.tex
 File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfpic=\box77
-\pgf@hbox=\box78
-\pgf@layerbox@main=\box79
-\pgf@picture@serial@count=\count335
+\pgfpic=\box79
+\pgf@hbox=\box80
+\pgf@layerbox@main=\box81
+\pgf@picture@serial@count=\count344
 )
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
 ate.code.tex
@@ -765,8 +798,8 @@ File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
 e.tex
 File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@max=\dimen305
-\pgf@sys@shading@range@num=\count336
-\pgf@shadingcount=\count337
+\pgf@sys@shading@range@num=\count345
+\pgf@shadingcount=\count346
 )
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
 e.tex
@@ -775,7 +808,7 @@ File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
 code.tex
 File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfexternal@startupbox=\box80
+\pgfexternal@startupbox=\box82
 )
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
 de.tex
@@ -796,37 +829,37 @@ File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
 e.tex
 File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfnodeparttextbox=\box81
+\pgfnodeparttextbox=\box83
 )
 Package: nicematrix 2025/03/30 v7.1b Enhanced arrays with the help of PGF/TikZ
  (/usr/local/texlive/2025/texmf-dist/tex/latex/tools/array.sty
 Package: array 2024/10/17 v2.6g Tabular extension package (FMi)
 \col@sep=\dimen306
-\ar@mcellbox=\box82
+\ar@mcellbox=\box84
 \extrarowheight=\dimen307
-\NC@list=\toks47
-\extratabsurround=\skip73
-\backup@length=\skip74
-\ar@cellbox=\box83
+\NC@list=\toks50
+\extratabsurround=\skip76
+\backup@length=\skip77
+\ar@cellbox=\box85
 )
-\g__nicematrix_env_int=\count338
-\g__nicematrix_NiceMatrixBlock_int=\count339
-\g__nicematrix_notes_caption_int=\count340
+\g__nicematrix_env_int=\count347
+\g__nicematrix_NiceMatrixBlock_int=\count348
+\g__nicematrix_notes_caption_int=\count349
 \l__nicematrix_columns_width_dim=\dimen308
 \l__nicematrix_col_width_dim=\dimen309
-\g__nicematrix_row_total_int=\count341
-\g__nicematrix_col_total_int=\count342
-\g__nicematrix_last_row_node_int=\count343
-\l__nicematrix_key_nb_rows_int=\count344
+\g__nicematrix_row_total_int=\count350
+\g__nicematrix_col_total_int=\count351
+\g__nicematrix_last_row_node_int=\count352
+\l__nicematrix_key_nb_rows_int=\count353
 \g__nicematrix_blocks_wd_dim=\dimen310
 \g__nicematrix_blocks_ht_dim=\dimen311
 \g__nicematrix_blocks_dp_dim=\dimen312
 \l__nicematrix_width_dim=\dimen313
 \l__nicematrix_tabular_width_dim=\dimen314
 \l__nicematrix_rule_width_dim=\dimen315
-\l__nicematrix_old_iRow_int=\count345
-\l__nicematrix_old_jCol_int=\count346
-\g__nicematrix_total_X_weight_int=\count347
+\l__nicematrix_old_iRow_int=\count354
+\l__nicematrix_old_jCol_int=\count355
+\g__nicematrix_total_X_weight_int=\count356
 \l__nicematrix_X_columns_dim=\dimen316
 \l__nicematrix_x_initial_dim=\dimen317
 \l__nicematrix_y_initial_dim=\dimen318
@@ -844,30 +877,30 @@ Package: array 2024/10/17 v2.6g Tabular extension package (FMi)
 \g__nicematrix_dp_last_row_dim=\dimen330
 \g__nicematrix_width_last_col_dim=\dimen331
 \g__nicematrix_width_first_col_dim=\dimen332
-\l__nicematrix_row_min_int=\count348
-\l__nicematrix_row_max_int=\count349
-\l__nicematrix_col_min_int=\count350
-\l__nicematrix_col_max_int=\count351
-\l__nicematrix_start_int=\count352
-\l__nicematrix_end_int=\count353
-\l__nicematrix_local_start_int=\count354
-\l__nicematrix_local_end_int=\count355
-\g__nicematrix_static_num_of_col_int=\count356
+\l__nicematrix_row_min_int=\count357
+\l__nicematrix_row_max_int=\count358
+\l__nicematrix_col_min_int=\count359
+\l__nicematrix_col_max_int=\count360
+\l__nicematrix_start_int=\count361
+\l__nicematrix_end_int=\count362
+\l__nicematrix_local_start_int=\count363
+\l__nicematrix_local_end_int=\count364
+\g__nicematrix_static_num_of_col_int=\count365
 \l__nicematrix_rounded_corners_dim=\dimen333
 \l__nicematrix_tab_rounded_corners_dim=\dimen334
 \l__nicematrix_offset_dim=\dimen335
 \l__nicematrix_line_width_dim=\dimen336
-\g__nicematrix_block_box_int=\count357
+\g__nicematrix_block_box_int=\count366
 \l__nicematrix_submatrix_extra_height_dim=\dimen337
 \l__nicematrix_submatrix_left_xshift_dim=\dimen338
 \l__nicematrix_submatrix_right_xshift_dim=\dimen339
-\l__nicematrix_first_row_int=\count358
-\l__nicematrix_first_col_int=\count359
-\l__nicematrix_last_row_int=\count360
-\l__nicematrix_last_col_int=\count361
-\c@tabularnote=\count362
-\g__nicematrix_tabularnote_int=\count363
-\c@nicematrix_draft=\count364
+\l__nicematrix_first_row_int=\count367
+\l__nicematrix_first_col_int=\count368
+\l__nicematrix_last_row_int=\count369
+\l__nicematrix_last_col_int=\count370
+\c@tabularnote=\count371
+\g__nicematrix_tabularnote_int=\count372
+\c@nicematrix_draft=\count373
 \l__nicematrix_cell_space_top_limit_dim=\dimen340
 \l__nicematrix_cell_space_bottom_limit_dim=\dimen341
 \l__nicematrix_xdots_inter_dim=\dimen342
@@ -880,8 +913,8 @@ Package: array 2024/10/17 v2.6g Tabular extension package (FMi)
 \l__nicematrix_extra_left_margin_dim=\dimen349
 \l__nicematrix_extra_right_margin_dim=\dimen350
 \c__nicematrix_max_l_dim=\dimen351
-\l__nicematrix_position_int=\count365
-\l__nicematrix_multiplicity_int=\count366
+\l__nicematrix_position_int=\count374
+\l__nicematrix_multiplicity_int=\count375
 \l__nicematrix_brace_yshift_dim=\dimen352
 )
 (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
@@ -911,8 +944,8 @@ Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
 \pgffor@iter=\dimen355
 \pgffor@skip=\dimen356
-\pgffor@stack=\toks48
-\pgffor@toks=\toks49
+\pgffor@stack=\toks51
+\pgffor@toks=\toks52
 ))
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
 e.tex
@@ -921,7 +954,7 @@ Package: tikz 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
 dlers.code.tex
 File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@plot@mark@count=\count367
+\pgf@plot@mark@count=\count376
 \pgfplotmarksize=\dimen357
 )
 \tikz@lastx=\dimen358
@@ -932,23 +965,23 @@ File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \tikz@lastmovetoy=\dimen363
 \tikzleveldistance=\dimen364
 \tikzsiblingdistance=\dimen365
-\tikz@figbox=\box84
-\tikz@figbox@bg=\box85
-\tikz@tempbox=\box86
-\tikz@tempbox@bg=\box87
-\tikztreelevel=\count368
-\tikznumberofchildren=\count369
-\tikznumberofcurrentchild=\count370
-\tikz@fig@count=\count371
+\tikz@figbox=\box86
+\tikz@figbox@bg=\box87
+\tikz@tempbox=\box88
+\tikz@tempbox@bg=\box89
+\tikztreelevel=\count377
+\tikznumberofchildren=\count378
+\tikznumberofcurrentchild=\count379
+\tikz@fig@count=\count380
 
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
 e.tex
 File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfmatrixcurrentrow=\count372
-\pgfmatrixcurrentcolumn=\count373
-\pgf@matrix@numberofcolumns=\count374
+\pgfmatrixcurrentrow=\count381
+\pgfmatrixcurrentcolumn=\count382
+\pgf@matrix@numberofcolumns=\count383
 )
-\tikz@expandcount=\count375
+\tikz@expandcount=\count384
 
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarytopaths.code.tex
@@ -963,7 +996,7 @@ Package: expl3 2025-03-26 L3 programming layer (loader)
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-03-14 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count376
+\l__color_backend_stack_int=\count385
 ))
 (/usr/local/texlive/2025/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
 Package: l3keys2e 2024-08-16 LaTeX2e option processing using LaTeX3 keys
@@ -975,9 +1008,9 @@ Package: xparse 2024-08-16 L3 Experimental document command parser
 \l__sn_xa_dim=\dimen368
 \l__sn_ya_dim=\dimen369
 )
-\c@theorem=\count377
-\c@lemma=\count378
-\c@corollary=\count379
+\c@theorem=\count386
+\c@lemma=\count387
+\c@corollary=\count388
 
 
 LaTeX Warning: Unused global option(s):
@@ -986,24 +1019,24 @@ LaTeX Warning: Unused global option(s):
 (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 158.
-LaTeX Font Info:    ... okay on input line 158.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 158.
-LaTeX Font Info:    ... okay on input line 158.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 158.
-LaTeX Font Info:    ... okay on input line 158.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 158.
-LaTeX Font Info:    ... okay on input line 158.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 158.
-LaTeX Font Info:    ... okay on input line 158.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 158.
-LaTeX Font Info:    ... okay on input line 158.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 158.
-LaTeX Font Info:    ... okay on input line 158.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 158.
-LaTeX Font Info:    ... okay on input line 158.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 158.
-LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 177.
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 177.
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 177.
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 177.
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 177.
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 177.
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 177.
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 177.
+LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 177.
+LaTeX Font Info:    ... okay on input line 177.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1042,17 +1075,17 @@ LaTeX Font Info:    ... okay on input line 158.
 
 (/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count380
+\scratchcounter=\count389
 \scratchdimen=\dimen370
-\scratchbox=\box88
-\nofMPsegments=\count381
-\nofMParguments=\count382
-\everyMPshowfont=\toks50
-\MPscratchCnt=\count383
+\scratchbox=\box90
+\nofMPsegments=\count390
+\nofMParguments=\count391
+\everyMPshowfont=\toks53
+\MPscratchCnt=\count392
 \MPscratchDim=\dimen371
-\MPnumerator=\count384
-\makeMPintoPDFobject=\count385
-\everyMPtoPDFconversion=\toks51
+\MPnumerator=\count393
+\makeMPintoPDFobject=\count394
+\everyMPtoPDFconversion=\toks54
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1062,39 +1095,40 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Redefining \S on input line 158.
-LaTeX Font Info:    Redeclaring symbol font `AMSa' on input line 158.
+LaTeX Info: Redefining \S on input line 177.
+LaTeX Font Info:    Redeclaring symbol font `AMSa' on input line 177.
 LaTeX Font Info:    Overwriting symbol font `AMSa' in version `normal'
-(Font)                  U/msa/m/n --> U/msa/m/n on input line 158.
+(Font)                  U/msa/m/n --> U/msa/m/n on input line 177.
 LaTeX Font Info:    Overwriting symbol font `AMSa' in version `bold'
-(Font)                  U/msa/m/n --> U/msa/m/n on input line 158.
-Package hyperref Info: Link coloring ON on input line 158.
+(Font)                  U/msa/m/n --> U/msa/m/n on input line 177.
+Package hyperref Info: Link coloring ON on input line 177.
 
 (./main.out) (./main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c__nicematrix_shift_Ldots_last_row_dim=\dimen372
 \c__nicematrix_shift_exterior_Vdots_dim=\dimen373
 \c__nicematrix_innersep_middle_dim=\dimen374
-LaTeX Font Info:    Calculating math sizes for size <11.04124> on input line 17
-9.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 179
+LaTeX Font Info:    Calculating math sizes for size <11.04124> on input line 19
+8.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 198
 .
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 179
+LaTeX Font Info:    Trying to load font information for U+msb on input line 198
 .
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Calculating math sizes for size <10.03749> on input line 17
-9.
+LaTeX Font Info:    Calculating math sizes for size <10.03749> on input line 19
+8.
 
 (./derivation_p1.tex
 LaTeX Font Info:    Trying to load font information for U+dsrom on input line 1
@@ -1294,19 +1328,9 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 []| []
  []
 
-[5]
-
-) (./derivation_normal.tex
+[5]) (./derivation_normal.tex
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \hbox (badness 10000) has occurred while \output is active
-[]| []
- []
-
-[6]
 Underfull \hbox (badness 2600) in paragraph at lines 10--11
 []\OT1/cmr/m/n/10 To sim-plify nota-tion for mul-ti-ple indices
  []
@@ -1332,8 +1356,6 @@ j[]; j[]; [] ; j[]\OT1/cmr/m/n/10 )$
 
 
 
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1341,7 +1363,9 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 []| []
  []
 
-[7]
+[6]
+
+
 Underfull \hbox (badness 5970) in paragraph at lines 77--79
 \OT1/cmr/m/n/10 Here the terms $\OT1/cmr/bx/n/10.03749 g[] \OMS/cmsy/m/n/10.037
 49 2 \U/dsrom/m/n/10.03749 C[]$\OT1/cmr/m/n/10 , while,
@@ -1353,16 +1377,22 @@ Overfull \hbox (1.47766pt too wide) detected at line 99
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-
 Underfull \hbox (badness 2088) in paragraph at lines 99--101
 \OT1/cmr/m/n/10 Here $\OML/cmm/m/it/10.03749 g[]$ \OT1/cmr/m/n/10 rep-re-sents 
 the $\OML/cmm/m/it/10.03749 []$ \OT1/cmr/m/n/10 ele-ment of the
  []
 
+
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]| []
+ []
+
+[7]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 102.
@@ -1384,16 +1414,11 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 120.
 
 
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Underfull \hbox (badness 10000) has occurred while \output is active
-[]| []
- []
 
-[8]
+
 Underfull \hbox (badness 1067) in paragraph at lines 150--151
 \OT1/cmr/m/n/10 cou-pled due to the off-diagonal terms in $[]$,
  []
@@ -1403,33 +1428,48 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-(./matrix_image_o2.tex
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]| []
+ []
+
+[8] (./matrix_image_o2.tex
 \g__nicematrix_max_cell_width_dim=\dimen375
-\c@iRow=\count386
-\c@jCol=\count387
-\l__nicematrix_cell_box=\box89
-\l__nicematrix_the_array_box=\box90
+\c@iRow=\count395
+\c@jCol=\count396
+\l__nicematrix_cell_box=\box91
+\l__nicematrix_the_array_box=\box92
 \l__nicematrix_left_delim_dim=\dimen376
 \l__nicematrix_right_delim_dim=\dimen377
-\g__nicematrix_block_box_1_box=\box91
-\g__nicematrix_block_box_2_box=\box92
-\g__nicematrix_block_box_3_box=\box93
-\g__nicematrix_block_box_4_box=\box94
-\g__nicematrix_block_box_5_box=\box95
-\g__nicematrix_block_box_6_box=\box96
-\g__nicematrix_ddots_int=\count388
-\g__nicematrix_iddots_int=\count389
+\g__nicematrix_block_box_1_box=\box93
+\g__nicematrix_block_box_2_box=\box94
+\g__nicematrix_block_box_3_box=\box95
+\g__nicematrix_block_box_4_box=\box96
+\g__nicematrix_block_box_5_box=\box97
+\g__nicematrix_block_box_6_box=\box98
+\g__nicematrix_ddots_int=\count397
+\g__nicematrix_iddots_int=\count398
 \g__nicematrix_delta_x_one_dim=\dimen378
 \g__nicematrix_delta_y_one_dim=\dimen379
 \g__nicematrix_delta_x_two_dim=\dimen380
 \g__nicematrix_delta_y_two_dim=\dimen381
-\l__nicematrix_initial_i_int=\count390
-\l__nicematrix_initial_j_int=\count391
-\l__nicematrix_final_i_int=\count392
-\l__nicematrix_final_j_int=\count393
+\l__nicematrix_initial_i_int=\count399
+\l__nicematrix_initial_j_int=\count400
+\l__nicematrix_final_i_int=\count401
+\l__nicematrix_final_j_int=\count402
 )
 Underfull \hbox (badness 1142) in paragraph at lines 170--174
 []\OT1/cmr/m/n/10 A visual rep-re-sen-ta-tion of this cross cou-
+ []
+
+
+
+
+Underfull \hbox (badness 1983) in paragraph at lines 175--176
+[]\OT1/cmr/m/n/10 To keep the nota-tion com-pact, the non-
  []
 
 
@@ -1443,33 +1483,42 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [9]
-Underfull \hbox (badness 1983) in paragraph at lines 175--176
-[]\OT1/cmr/m/n/10 To keep the nota-tion com-pact, the non-
- []
 
-
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 213.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 208.
+(hyperref)                removing `superscript' on input line 213.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 208.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 208.
+(hyperref)                removing `math shift' on input line 213.
 
 (./matrix_image_o3.tex
-\g__nicematrix_block_box_7_box=\box97
-\g__nicematrix_block_box_8_box=\box98
+\g__nicematrix_block_box_7_box=\box99
+\g__nicematrix_block_box_8_box=\box100
 
 Overfull \hbox (5.05309pt too wide) detected at line 74
 []
  []
 
 )
+
+
+Underfull \hbox (badness 4660) in paragraph at lines 242--244
+[]\OT1/cmr/m/n/10 The sec-ond set of brack-et-ted terms in
+ []
+
+
+Package amsmath Warning: Cannot use `split' here;
+(amsmath)                trying to recover with `aligned' on input line 261.
+
+
+Package amsmath Warning: Cannot use `split' here;
+(amsmath)                trying to recover with `aligned' on input line 264.
+
+
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1480,31 +1529,29 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [10]
-Underfull \hbox (badness 4660) in paragraph at lines 237--239
-[]\OT1/cmr/m/n/10 The sec-ond set of brack-et-ted terms in
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 270.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 270.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 270.
+
+
+
+
+Underfull \hbox (badness 2435) in paragraph at lines 310--314
+\OT1/cmr/m/n/10 com-po-nent form for a generic vec-tor $[] =
  []
 
 
-Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 256.
-
-
-Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 259.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 265.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 265.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 265.
-
-
+Underfull \hbox (badness 1092) in paragraph at lines 329--330
+[]\OT1/cmr/m/n/10 The asymp-totic terms can now be exam-
+ []
 
 
 
@@ -1517,21 +1564,16 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [11]
-Underfull \hbox (badness 2435) in paragraph at lines 305--309
-\OT1/cmr/m/n/10 com-po-nent form for a generic vec-tor $[] =
- []
-
-
-Underfull \hbox (badness 3503) in paragraph at lines 329--331
-\OT1/cmr/m/n/10 Regardless of res-o-nance, since $[]$ has the
- []
-
-
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 346--347
+Underfull \hbox (badness 10000) in paragraph at lines 351--352
 []\OT1/cmr/m/n/10 This logic repeats for all $(\OML/cmm/m/it/10.03749 i[]; i[]\
 OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10.03749 2
+ []
+
+
+
+) (./derivation_graph.tex
+Underfull \hbox (badness 2671) in paragraph at lines 15--16
+[]\OT1/cmr/m/n/10 One may there-fore rep-re-sent the gen-eral
  []
 
 
@@ -1544,19 +1586,31 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 []| []
  []
 
-[12]) (./derivation_graph.tex
-Underfull \hbox (badness 2671) in paragraph at lines 15--16
-[]\OT1/cmr/m/n/10 One may there-fore rep-re-sent the gen-eral
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 23--25
+\OT1/cmr/m/n/10 Since the param-e-ter-i-za-tion is defined by
  []
 
 
 
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 80.
 ) (./main.bbl
 Underfull \hbox (badness 6842) in paragraph at lines 16--21
 \OT1/cmr/m/n/10 De La Llave.  The param-e-ter-i-za-tion
  []
 
 
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]| []
+ []
+
+[13]
 Underfull \hbox (badness 1694) in paragraph at lines 23--28
 []\OT1/cmr/m/n/10 D. Sipp and A. Lebe-dev.  Global sta-
  []
@@ -1587,16 +1641,6 @@ Underfull \hbox (badness 2608) in paragraph at lines 53--57
  []
 
 
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \hbox (badness 10000) has occurred while \output is active
-[]| []
- []
-
-[13]
 Underfull \hbox (badness 4505) in paragraph at lines 66--69
 \OT1/cmr/m/n/10 for the navier--stokes.  \OT1/cmr/m/it/10.03749 arXiv preprint
  []
@@ -1621,16 +1665,16 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-03-26>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B80163C94B874497D71546249AEBCCA3;2780.
+(rerunfilecheck)             Checksum: 9FD17C91CBC79C2EE3BFBA94D03A0927;3018.
  ) 
 Here is how much of TeX's memory you used:
- 31108 strings out of 469626
- 619548 string characters out of 5471010
- 1037666 words of memory out of 5000000
- 57279 multiletter control sequences out of 15000+600000
- 650899 words of font info for 132 fonts, out of 8000000 for 9000
+ 31743 strings out of 469626
+ 629665 string characters out of 5471010
+ 1025502 words of memory out of 5000000
+ 57890 multiletter control sequences out of 15000+600000
+ 652311 words of font info for 137 fonts, out of 8000000 for 9000
  1151 hyphenation exceptions out of 8191
- 90i,33n,131p,1533b,833s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,33n,131p,1461b,835s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pf
 b></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy
 7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10
@@ -1638,33 +1682,28 @@ b></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy
 pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pf
 b></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb>
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
-/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pf
-b></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
-></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><
-/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></u
-sr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr
-/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr
-/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib5.pfb><
-/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.p
-fb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
-></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><
-/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></u
-sr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/
-local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/loc
-al/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/
-texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
-exlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/tex
-live/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texli
-ve/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive
-/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/
-2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/20
-25/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb></usr/local/texlive/2
-025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive
-/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on main.pdf (14 pages, 395377 bytes).
+/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></us
+r/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/
+local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/
+local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib5.pfb></
+usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pf
+b></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></
+usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></us
+r/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/l
+ocal/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/loca
+l/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/t
+exlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
+xlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texl
+ive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texliv
+e/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive
+/2025/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb></usr/local/texliv
+e/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb>
+Output written on main.pdf (14 pages, 353817 bytes).
 PDF statistics:
- 498 PDF objects out of 1000 (max. 8388607)
+ 488 PDF objects out of 1000 (max. 8388607)
  417 compressed objects within 5 object streams
- 144 named destinations out of 1000 (max. 500000)
+ 157 named destinations out of 1000 (max. 500000)
  125 words of extra memory for PDF output out of 10000 (max. 10000000)
 
