@@ -24,8 +24,8 @@
 % Algorithms
 \usepackage{algorithm}%
 %\usepackage{algorithmic}
-\usepackage{algorithmicx}%
-\usepackage{algpseudocode}%
+%\usepackage{algorithmicx}%
+\usepackage[indLines=true,noEnd=false,beginComment=/*~,beginLComment=/*~,endLComment=~*/]{algpseudocodex}%
 
 \usepackage{nicematrix}
 \usepackage{tikz}
@@ -60,19 +60,11 @@
 \newcommand{\vfield}[1]{
 	\boldsymbol{#1}
 }
-% Pressure field
-\newcommand{\pfield}[1]{
-	\mathrm{#1}
-}
-\newcommand{\vpfield}[1]{
-	\mathbb{#1}
-}
+
 \newcommand{\efield}[1]{
 	{\widehat{\vfield{#1}}}
 }
-\newcommand{\Lmui}[1]{
-	{\mathcal{L}_{\mu_{#1}}}
-}
+
 \newcommand{\inv}[1]{
 	\mathrm{#1^{-1}}
 }
@@ -91,6 +83,7 @@
 \def\vecu{\vfield{u}}
 
 \def\veczero{\mathbf{0}}
+\def\vecu{\mathbf{u}}
 \def\vecv{\mathbf{v}}
 \def\vecw{\mathbf{w}}
 \def\vecy{\mathbf{y}}
@@ -101,6 +94,9 @@
 \def\vecnu{\vfield{\nu}}
 \def\vecMu{\vfield{\mu^{b}}}
 \def\vectheta{\vfield{\theta}}
+
+\def\evecu{\widehat{\mathbf{u}}}
+\def\evecv{\widehat{\mathbf{v}}}
 
 \def\Lu{\mathbf{L}}
 \def\Lmu{\mathbf{L}_{\vecmu}}
@@ -173,7 +169,7 @@
 \DeclareBoldMathCommand\bigblbracket{\left\lceil}
 \DeclareBoldMathCommand\bigbrbracket{\right\rceil}
 
-
+%\setlength{\algorithmicindent}{2.0em}
 
 \begin{document}
 	

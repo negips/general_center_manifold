@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.16)  25 SEP 2025 17:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.16)  26 SEP 2025 17:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -586,6 +586,8 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@every@algorithm=\toks39
 \c@algorithm=\count327
 )
+(/usr/local/texlive/2025/texmf-dist/tex/latex/algpseudocodex/algpseudocodex.sty
+Package: algpseudocodex 2023-04-17 v1.1.2 pseudocode typesetting
 (/usr/local/texlive/2025/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
@@ -600,26 +602,47 @@ Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
 \c@ALG@storecount=\count333
 \c@ALG@tmpcounter=\count334
 \ALG@tmplength=\skip75
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
-Package: algpseudocode 
-
-Document Style - pseudocode environments for use with the `algorithmicx' style
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/nicematrix/nicematrix.sty
-(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
-(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/fifo-stack/fifo-stack.sty
+Package: fifo-stack 2014/03/24 v1.0 Multi-FIFO/stack system
+\tmp@fifo@stack@top=\count335
+\tmp@fifo@stack@bottom=\count336
+\tmp@fifo@stack@size=\count337
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box77
+\sift@deathcycles=\count338
+\@vwid@loff=\dimen269
+\@vwid@roff=\dimen270
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tabto-ltx/tabto.sty
+Package: tabto 2018/12/28  v 1.4  Another tabbing mechanism
+\CurrentLineWidth=\dimen271
+\TabPrevPos=\dimen272
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/totcount/totcount.sty
+Package: totcount 2011/01/25 v1.2 package for gettingthe total value of LaTeX c
+ounters
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
 (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
 x
 \pgfutil@everybye=\toks40
-\pgfutil@tempdima=\dimen269
-\pgfutil@tempdimb=\dimen270
+\pgfutil@tempdima=\dimen273
+\pgfutil@tempdimb=\dimen274
 )
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box77
+\pgfutil@abb=\box78
 ) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/pgf.revision.tex)
 Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
 ))
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
@@ -630,26 +653,26 @@ Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
 tered.code.tex
 \pgfkeys@tmptoks=\toks43
 ))
-\pgf@x=\dimen271
-\pgf@y=\dimen272
-\pgf@xa=\dimen273
-\pgf@ya=\dimen274
-\pgf@xb=\dimen275
-\pgf@yb=\dimen276
-\pgf@xc=\dimen277
-\pgf@yc=\dimen278
-\pgf@xd=\dimen279
-\pgf@yd=\dimen280
+\pgf@x=\dimen275
+\pgf@y=\dimen276
+\pgf@xa=\dimen277
+\pgf@ya=\dimen278
+\pgf@xb=\dimen279
+\pgf@yb=\dimen280
+\pgf@xc=\dimen281
+\pgf@yc=\dimen282
+\pgf@xd=\dimen283
+\pgf@yd=\dimen284
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
-\c@pgf@counta=\count335
-\c@pgf@countb=\count336
-\c@pgf@countc=\count337
-\c@pgf@countd=\count338
+\c@pgf@counta=\count339
+\c@pgf@countb=\count340
+\c@pgf@countc=\count341
+\c@pgf@countd=\count342
 \t@pgf@toka=\toks44
 \t@pgf@tokb=\toks45
 \t@pgf@tokc=\toks46
-\pgf@sys@id@count=\count339
+\pgf@sys@id@count=\count343
 
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
@@ -667,8 +690,8 @@ File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
 code.tex
 File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfsyssoftpath@smallbuffer@items=\count340
-\pgfsyssoftpath@bigbuffer@items=\count341
+\pgfsyssoftpath@smallbuffer@items=\count344
+\pgfsyssoftpath@bigbuffer@items=\count345
 )
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
 code.tex
@@ -698,9 +721,9 @@ Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen281
-\pgfmath@count=\count342
-\pgfmath@box=\box78
+\pgfmath@dimen=\dimen285
+\pgfmath@count=\count346
+\pgfmath@box=\box79
 \pgfmath@toks=\toks47
 \pgfmath@stack@operand=\toks48
 \pgfmath@stack@operation=\toks49
@@ -725,57 +748,57 @@ code.tex)
 erarithmetics.code.tex)
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count343
+\c@pgfmathroundto@lastzeros=\count347
 )) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
 de.tex
 File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@picminx=\dimen282
-\pgf@picmaxx=\dimen283
-\pgf@picminy=\dimen284
-\pgf@picmaxy=\dimen285
-\pgf@pathminx=\dimen286
-\pgf@pathmaxx=\dimen287
-\pgf@pathminy=\dimen288
-\pgf@pathmaxy=\dimen289
-\pgf@xx=\dimen290
-\pgf@xy=\dimen291
-\pgf@yx=\dimen292
-\pgf@yy=\dimen293
-\pgf@zx=\dimen294
-\pgf@zy=\dimen295
+\pgf@picminx=\dimen286
+\pgf@picmaxx=\dimen287
+\pgf@picminy=\dimen288
+\pgf@picmaxy=\dimen289
+\pgf@pathminx=\dimen290
+\pgf@pathmaxx=\dimen291
+\pgf@pathminy=\dimen292
+\pgf@pathmaxy=\dimen293
+\pgf@xx=\dimen294
+\pgf@xy=\dimen295
+\pgf@yx=\dimen296
+\pgf@yy=\dimen297
+\pgf@zx=\dimen298
+\pgf@zy=\dimen299
 )
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
 ruct.code.tex
 File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@path@lastx=\dimen296
-\pgf@path@lasty=\dimen297
+\pgf@path@lastx=\dimen300
+\pgf@path@lasty=\dimen301
 )
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
 .code.tex
 File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@shorten@end@additional=\dimen298
-\pgf@shorten@start@additional=\dimen299
+\pgf@shorten@end@additional=\dimen302
+\pgf@shorten@start@additional=\dimen303
 )
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
 de.tex
 File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfpic=\box79
-\pgf@hbox=\box80
-\pgf@layerbox@main=\box81
-\pgf@picture@serial@count=\count344
+\pgfpic=\box80
+\pgf@hbox=\box81
+\pgf@layerbox@main=\box82
+\pgf@picture@serial@count=\count348
 )
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
 ate.code.tex
 File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgflinewidth=\dimen300
+\pgflinewidth=\dimen304
 )
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
 ations.code.tex
 File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@pt@x=\dimen301
-\pgf@pt@y=\dimen302
-\pgf@pt@temp=\dimen303
+\pgf@pt@x=\dimen305
+\pgf@pt@y=\dimen306
+\pgf@pt@temp=\dimen307
 )
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
 e.tex
@@ -792,14 +815,14 @@ File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
 de.tex
 File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfarrowsep=\dimen304
+\pgfarrowsep=\dimen308
 )
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
 e.tex
 File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@max=\dimen305
-\pgf@sys@shading@range@num=\count345
-\pgf@shadingcount=\count346
+\pgf@max=\dimen309
+\pgf@sys@shading@range@num=\count349
+\pgf@shadingcount=\count350
 )
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
 e.tex
@@ -808,7 +831,7 @@ File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
 code.tex
 File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfexternal@startupbox=\box82
+\pgfexternal@startupbox=\box83
 )
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
 de.tex
@@ -829,98 +852,8 @@ File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
 e.tex
 File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfnodeparttextbox=\box83
+\pgfnodeparttextbox=\box84
 )
-Package: nicematrix 2025/03/30 v7.1b Enhanced arrays with the help of PGF/TikZ
- (/usr/local/texlive/2025/texmf-dist/tex/latex/tools/array.sty
-Package: array 2024/10/17 v2.6g Tabular extension package (FMi)
-\col@sep=\dimen306
-\ar@mcellbox=\box84
-\extrarowheight=\dimen307
-\NC@list=\toks50
-\extratabsurround=\skip76
-\backup@length=\skip77
-\ar@cellbox=\box85
-)
-\g__nicematrix_env_int=\count347
-\g__nicematrix_NiceMatrixBlock_int=\count348
-\g__nicematrix_notes_caption_int=\count349
-\l__nicematrix_columns_width_dim=\dimen308
-\l__nicematrix_col_width_dim=\dimen309
-\g__nicematrix_row_total_int=\count350
-\g__nicematrix_col_total_int=\count351
-\g__nicematrix_last_row_node_int=\count352
-\l__nicematrix_key_nb_rows_int=\count353
-\g__nicematrix_blocks_wd_dim=\dimen310
-\g__nicematrix_blocks_ht_dim=\dimen311
-\g__nicematrix_blocks_dp_dim=\dimen312
-\l__nicematrix_width_dim=\dimen313
-\l__nicematrix_tabular_width_dim=\dimen314
-\l__nicematrix_rule_width_dim=\dimen315
-\l__nicematrix_old_iRow_int=\count354
-\l__nicematrix_old_jCol_int=\count355
-\g__nicematrix_total_X_weight_int=\count356
-\l__nicematrix_X_columns_dim=\dimen316
-\l__nicematrix_x_initial_dim=\dimen317
-\l__nicematrix_y_initial_dim=\dimen318
-\l__nicematrix_x_final_dim=\dimen319
-\l__nicematrix_y_final_dim=\dimen320
-\l__nicematrix_tmpc_dim=\dimen321
-\l__nicematrix_tmpd_dim=\dimen322
-\l__nicematrix_tmpe_dim=\dimen323
-\l__nicematrix_tmpf_dim=\dimen324
-\g__nicematrix_dp_row_zero_dim=\dimen325
-\g__nicematrix_ht_row_zero_dim=\dimen326
-\g__nicematrix_ht_row_one_dim=\dimen327
-\g__nicematrix_dp_ante_last_row_dim=\dimen328
-\g__nicematrix_ht_last_row_dim=\dimen329
-\g__nicematrix_dp_last_row_dim=\dimen330
-\g__nicematrix_width_last_col_dim=\dimen331
-\g__nicematrix_width_first_col_dim=\dimen332
-\l__nicematrix_row_min_int=\count357
-\l__nicematrix_row_max_int=\count358
-\l__nicematrix_col_min_int=\count359
-\l__nicematrix_col_max_int=\count360
-\l__nicematrix_start_int=\count361
-\l__nicematrix_end_int=\count362
-\l__nicematrix_local_start_int=\count363
-\l__nicematrix_local_end_int=\count364
-\g__nicematrix_static_num_of_col_int=\count365
-\l__nicematrix_rounded_corners_dim=\dimen333
-\l__nicematrix_tab_rounded_corners_dim=\dimen334
-\l__nicematrix_offset_dim=\dimen335
-\l__nicematrix_line_width_dim=\dimen336
-\g__nicematrix_block_box_int=\count366
-\l__nicematrix_submatrix_extra_height_dim=\dimen337
-\l__nicematrix_submatrix_left_xshift_dim=\dimen338
-\l__nicematrix_submatrix_right_xshift_dim=\dimen339
-\l__nicematrix_first_row_int=\count367
-\l__nicematrix_first_col_int=\count368
-\l__nicematrix_last_row_int=\count369
-\l__nicematrix_last_col_int=\count370
-\c@tabularnote=\count371
-\g__nicematrix_tabularnote_int=\count372
-\c@nicematrix_draft=\count373
-\l__nicematrix_cell_space_top_limit_dim=\dimen340
-\l__nicematrix_cell_space_bottom_limit_dim=\dimen341
-\l__nicematrix_xdots_inter_dim=\dimen342
-\l__nicematrix_xdots_shorten_start_dim=\dimen343
-\l__nicematrix_xdots_shorten_end_dim=\dimen344
-\l__nicematrix_xdots_radius_dim=\dimen345
-\l__nicematrix_notes_above_space_dim=\dimen346
-\l__nicematrix_left_margin_dim=\dimen347
-\l__nicematrix_right_margin_dim=\dimen348
-\l__nicematrix_extra_left_margin_dim=\dimen349
-\l__nicematrix_extra_right_margin_dim=\dimen350
-\c__nicematrix_max_l_dim=\dimen351
-\l__nicematrix_position_int=\count374
-\l__nicematrix_multiplicity_int=\count375
-\l__nicematrix_brace_yshift_dim=\dimen352
-)
-(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
-(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
-Package: pgf 2023-01-15 v3.1.10 (3.1.10)
-
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
 tex
 File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
@@ -928,8 +861,8 @@ File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
 -0-65.sty
 Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
-\pgf@nodesepstart=\dimen353
-\pgf@nodesepend=\dimen354
+\pgf@nodesepstart=\dimen310
+\pgf@nodesepend=\dimen311
 )
 (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
 -1-18.sty
@@ -942,10 +875,10 @@ Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
-\pgffor@iter=\dimen355
-\pgffor@skip=\dimen356
-\pgffor@stack=\toks51
-\pgffor@toks=\toks52
+\pgffor@iter=\dimen312
+\pgffor@skip=\dimen313
+\pgffor@stack=\toks50
+\pgffor@toks=\toks51
 ))
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
 e.tex
@@ -954,39 +887,47 @@ Package: tikz 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
 dlers.code.tex
 File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@plot@mark@count=\count376
-\pgfplotmarksize=\dimen357
+\pgf@plot@mark@count=\count351
+\pgfplotmarksize=\dimen314
 )
-\tikz@lastx=\dimen358
-\tikz@lasty=\dimen359
-\tikz@lastxsaved=\dimen360
-\tikz@lastysaved=\dimen361
-\tikz@lastmovetox=\dimen362
-\tikz@lastmovetoy=\dimen363
-\tikzleveldistance=\dimen364
-\tikzsiblingdistance=\dimen365
-\tikz@figbox=\box86
-\tikz@figbox@bg=\box87
-\tikz@tempbox=\box88
-\tikz@tempbox@bg=\box89
-\tikztreelevel=\count377
-\tikznumberofchildren=\count378
-\tikznumberofcurrentchild=\count379
-\tikz@fig@count=\count380
+\tikz@lastx=\dimen315
+\tikz@lasty=\dimen316
+\tikz@lastxsaved=\dimen317
+\tikz@lastysaved=\dimen318
+\tikz@lastmovetox=\dimen319
+\tikz@lastmovetoy=\dimen320
+\tikzleveldistance=\dimen321
+\tikzsiblingdistance=\dimen322
+\tikz@figbox=\box85
+\tikz@figbox@bg=\box86
+\tikz@tempbox=\box87
+\tikz@tempbox@bg=\box88
+\tikztreelevel=\count352
+\tikznumberofchildren=\count353
+\tikznumberofcurrentchild=\count354
+\tikz@fig@count=\count355
 
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
 e.tex
 File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfmatrixcurrentrow=\count381
-\pgfmatrixcurrentcolumn=\count382
-\pgf@matrix@numberofcolumns=\count383
+\pgfmatrixcurrentrow=\count356
+\pgfmatrixcurrentcolumn=\count357
+\pgf@matrix@numberofcolumns=\count358
 )
-\tikz@expandcount=\count384
+\tikz@expandcount=\count359
 
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryfit.code.tex
+File: tikzlibraryfit.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
 (/usr/local/texlive/2025/texmf-dist/tex/latex/tikzmark/tikzlibrarytikzmark.code
 .tex
 File: tikzlibrarytikzmark.code.tex 2022/08/24 v1.15 TikZ library for marking po
@@ -996,47 +937,177 @@ Package: expl3 2025-03-26 L3 programming layer (loader)
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-03-14 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count385
+\l__color_backend_stack_int=\count360
 ))
 (/usr/local/texlive/2025/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
 Package: l3keys2e 2024-08-16 LaTeX2e option processing using LaTeX3 keys
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2024-08-16 L3 Experimental document command parser
 )
-\l__sn_x_dim=\dimen366
-\l__sn_y_dim=\dimen367
-\l__sn_xa_dim=\dimen368
-\l__sn_ya_dim=\dimen369
+\l__sn_x_dim=\dimen323
+\l__sn_y_dim=\dimen324
+\l__sn_xa_dim=\dimen325
+\l__sn_ya_dim=\dimen326
 )
-\c@theorem=\count386
-\c@lemma=\count387
-\c@corollary=\count388
+\algpx@codeBoxInnerSep=\skip76
+\algpx@codeBoxSep=\skip77
+\algpx@codeBoxOuterSep=\skip78
+\algpx@indShiftX=\skip79
+\algpx@indStartShiftY=\skip80
+\algpx@indEndShiftY=\skip81
+\algpx@indXLineLength=\skip82
+\algpx@minIndDist=\skip83
+\algpx@oldPos=\skip84
+\algpx@newPos=\skip85
+\algpx@tmpLen=\skip86
+\algpx@currentLineskiplimit=\skip87
+\algpx@currentLineskip=\skip88
+\algpx@indStartY=\skip89
+\algpx@indEndY=\skip90
+\algpx@indStartX=\skip91
+\algpx@extraShiftX=\skip92
+\algpx@minTopPageHeight=\skip93
+\algpx@minBotPageDepth=\skip94
+\c@algpx@codeBoxCount=\count361
+\c@algpx@nestedCBoxCount=\count362
+\c@algpx@startedBoxesCount=\count363
+\c@algpx@endedBoxesCount=\count364
+\c@algpx@nestedBoxedStringCount=\count365
+\c@algpx@nestedBoxedStringMaxCount=\count366
+\c@algpx@indentCount=\count367
+\c@algpx@lastIndentEnded=\count368
+\c@algpx@pageCount=\count369
+\c@algpx@tmpCount=\count370
+\algpx@boxedStringBox=\box89
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/nicematrix/nicematrix.sty
+Package: nicematrix 2025/03/30 v7.1b Enhanced arrays with the help of PGF/TikZ
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/array.sty
+Package: array 2024/10/17 v2.6g Tabular extension package (FMi)
+\col@sep=\dimen327
+\ar@mcellbox=\box90
+\extrarowheight=\dimen328
+\NC@list=\toks52
+\extratabsurround=\skip95
+\backup@length=\skip96
+\ar@cellbox=\box91
+)
+\g__nicematrix_env_int=\count371
+\g__nicematrix_NiceMatrixBlock_int=\count372
+\g__nicematrix_notes_caption_int=\count373
+\l__nicematrix_columns_width_dim=\dimen329
+\l__nicematrix_col_width_dim=\dimen330
+\g__nicematrix_row_total_int=\count374
+\g__nicematrix_col_total_int=\count375
+\g__nicematrix_last_row_node_int=\count376
+\l__nicematrix_key_nb_rows_int=\count377
+\g__nicematrix_blocks_wd_dim=\dimen331
+\g__nicematrix_blocks_ht_dim=\dimen332
+\g__nicematrix_blocks_dp_dim=\dimen333
+\l__nicematrix_width_dim=\dimen334
+\l__nicematrix_tabular_width_dim=\dimen335
+\l__nicematrix_rule_width_dim=\dimen336
+\l__nicematrix_old_iRow_int=\count378
+\l__nicematrix_old_jCol_int=\count379
+\g__nicematrix_total_X_weight_int=\count380
+\l__nicematrix_X_columns_dim=\dimen337
+\l__nicematrix_x_initial_dim=\dimen338
+\l__nicematrix_y_initial_dim=\dimen339
+\l__nicematrix_x_final_dim=\dimen340
+\l__nicematrix_y_final_dim=\dimen341
+\l__nicematrix_tmpc_dim=\dimen342
+\l__nicematrix_tmpd_dim=\dimen343
+\l__nicematrix_tmpe_dim=\dimen344
+\l__nicematrix_tmpf_dim=\dimen345
+\g__nicematrix_dp_row_zero_dim=\dimen346
+\g__nicematrix_ht_row_zero_dim=\dimen347
+\g__nicematrix_ht_row_one_dim=\dimen348
+\g__nicematrix_dp_ante_last_row_dim=\dimen349
+\g__nicematrix_ht_last_row_dim=\dimen350
+\g__nicematrix_dp_last_row_dim=\dimen351
+\g__nicematrix_width_last_col_dim=\dimen352
+\g__nicematrix_width_first_col_dim=\dimen353
+\l__nicematrix_row_min_int=\count381
+\l__nicematrix_row_max_int=\count382
+\l__nicematrix_col_min_int=\count383
+\l__nicematrix_col_max_int=\count384
+\l__nicematrix_start_int=\count385
+\l__nicematrix_end_int=\count386
+\l__nicematrix_local_start_int=\count387
+\l__nicematrix_local_end_int=\count388
+\g__nicematrix_static_num_of_col_int=\count389
+\l__nicematrix_rounded_corners_dim=\dimen354
+\l__nicematrix_tab_rounded_corners_dim=\dimen355
+\l__nicematrix_offset_dim=\dimen356
+\l__nicematrix_line_width_dim=\dimen357
+\g__nicematrix_block_box_int=\count390
+\l__nicematrix_submatrix_extra_height_dim=\dimen358
+\l__nicematrix_submatrix_left_xshift_dim=\dimen359
+\l__nicematrix_submatrix_right_xshift_dim=\dimen360
+\l__nicematrix_first_row_int=\count391
+\l__nicematrix_first_col_int=\count392
+\l__nicematrix_last_row_int=\count393
+\l__nicematrix_last_col_int=\count394
+\c@tabularnote=\count395
+\g__nicematrix_tabularnote_int=\count396
+\c@nicematrix_draft=\count397
+\l__nicematrix_cell_space_top_limit_dim=\dimen361
+\l__nicematrix_cell_space_bottom_limit_dim=\dimen362
+\l__nicematrix_xdots_inter_dim=\dimen363
+\l__nicematrix_xdots_shorten_start_dim=\dimen364
+\l__nicematrix_xdots_shorten_end_dim=\dimen365
+\l__nicematrix_xdots_radius_dim=\dimen366
+\l__nicematrix_notes_above_space_dim=\dimen367
+\l__nicematrix_left_margin_dim=\dimen368
+\l__nicematrix_right_margin_dim=\dimen369
+\l__nicematrix_extra_left_margin_dim=\dimen370
+\l__nicematrix_extra_right_margin_dim=\dimen371
+\c__nicematrix_max_l_dim=\dimen372
+\l__nicematrix_position_int=\count398
+\l__nicematrix_multiplicity_int=\count399
+\l__nicematrix_brace_yshift_dim=\dimen373
+)
+\c@theorem=\count400
+\c@lemma=\count401
+\c@corollary=\count402
 
 
 LaTeX Warning: Unused global option(s):
     [vancouver-num].
 
-(./main.aux)
+(./main.aux
+\c@algpx@indentEndPage-0@totc=\count403
+\c@algpx@indentEndPage-1@totc=\count404
+\c@algpx@indentEndPage-2@totc=\count405
+\c@algpx@indentEndPage-3@totc=\count406
+\c@algpx@indentEndPage-4@totc=\count407
+\c@algpx@indentEndPage-5@totc=\count408
+\c@algpx@indentEndPage-6@totc=\count409
+\c@algpx@indentEndPage-7@totc=\count410
+\c@algpx@indentEndPage-8@totc=\count411
+\c@algpx@indentEndPage-9@totc=\count412
+)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 178.
-LaTeX Font Info:    ... okay on input line 178.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 178.
-LaTeX Font Info:    ... okay on input line 178.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 178.
-LaTeX Font Info:    ... okay on input line 178.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 178.
-LaTeX Font Info:    ... okay on input line 178.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 178.
-LaTeX Font Info:    ... okay on input line 178.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 178.
-LaTeX Font Info:    ... okay on input line 178.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 178.
-LaTeX Font Info:    ... okay on input line 178.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 178.
-LaTeX Font Info:    ... okay on input line 178.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 178.
-LaTeX Font Info:    ... okay on input line 178.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 174.
+LaTeX Font Info:    ... okay on input line 174.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 174.
+LaTeX Font Info:    ... okay on input line 174.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 174.
+LaTeX Font Info:    ... okay on input line 174.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 174.
+LaTeX Font Info:    ... okay on input line 174.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 174.
+LaTeX Font Info:    ... okay on input line 174.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 174.
+LaTeX Font Info:    ... okay on input line 174.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 174.
+LaTeX Font Info:    ... okay on input line 174.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 174.
+LaTeX Font Info:    ... okay on input line 174.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 174.
+LaTeX Font Info:    ... okay on input line 174.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1075,16 +1146,16 @@ LaTeX Font Info:    ... okay on input line 178.
 
 (/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count389
-\scratchdimen=\dimen370
-\scratchbox=\box90
-\nofMPsegments=\count390
-\nofMParguments=\count391
+\scratchcounter=\count413
+\scratchdimen=\dimen374
+\scratchbox=\box92
+\nofMPsegments=\count414
+\nofMParguments=\count415
 \everyMPshowfont=\toks53
-\MPscratchCnt=\count392
-\MPscratchDim=\dimen371
-\MPnumerator=\count393
-\makeMPintoPDFobject=\count394
+\MPscratchCnt=\count416
+\MPscratchDim=\dimen375
+\MPnumerator=\count417
+\makeMPintoPDFobject=\count418
 \everyMPtoPDFconversion=\toks54
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1095,13 +1166,13 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Redefining \S on input line 178.
-LaTeX Font Info:    Redeclaring symbol font `AMSa' on input line 178.
+LaTeX Info: Redefining \S on input line 174.
+LaTeX Font Info:    Redeclaring symbol font `AMSa' on input line 174.
 LaTeX Font Info:    Overwriting symbol font `AMSa' in version `normal'
-(Font)                  U/msa/m/n --> U/msa/m/n on input line 178.
+(Font)                  U/msa/m/n --> U/msa/m/n on input line 174.
 LaTeX Font Info:    Overwriting symbol font `AMSa' in version `bold'
-(Font)                  U/msa/m/n --> U/msa/m/n on input line 178.
-Package hyperref Info: Link coloring ON on input line 178.
+(Font)                  U/msa/m/n --> U/msa/m/n on input line 174.
+Package hyperref Info: Link coloring ON on input line 174.
 
 (./main.out) (./main.out)
 \@outlinefile=\write4
@@ -1110,25 +1181,25 @@ Package hyperref Info: Link coloring ON on input line 178.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c__nicematrix_shift_Ldots_last_row_dim=\dimen372
-\c__nicematrix_shift_exterior_Vdots_dim=\dimen373
-\c__nicematrix_innersep_middle_dim=\dimen374
+\c__nicematrix_shift_Ldots_last_row_dim=\dimen376
+\c__nicematrix_shift_exterior_Vdots_dim=\dimen377
+\c__nicematrix_innersep_middle_dim=\dimen378
 LaTeX Font Info:    Calculating math sizes for size <11.04124> on input line 19
-9.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 199
+5.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 195
 .
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 199
+LaTeX Font Info:    Trying to load font information for U+msb on input line 195
 .
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Calculating math sizes for size <10.03749> on input line 19
-9.
+5.
 
 (./derivation_p1.tex
 LaTeX Font Info:    Trying to load font information for U+dsrom on input line 1
@@ -1444,29 +1515,29 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [8] (./matrix_image_o2.tex
-\g__nicematrix_max_cell_width_dim=\dimen375
-\c@iRow=\count395
-\c@jCol=\count396
-\l__nicematrix_cell_box=\box91
-\l__nicematrix_the_array_box=\box92
-\l__nicematrix_left_delim_dim=\dimen376
-\l__nicematrix_right_delim_dim=\dimen377
-\g__nicematrix_block_box_1_box=\box93
-\g__nicematrix_block_box_2_box=\box94
-\g__nicematrix_block_box_3_box=\box95
-\g__nicematrix_block_box_4_box=\box96
-\g__nicematrix_block_box_5_box=\box97
-\g__nicematrix_block_box_6_box=\box98
-\g__nicematrix_ddots_int=\count397
-\g__nicematrix_iddots_int=\count398
-\g__nicematrix_delta_x_one_dim=\dimen378
-\g__nicematrix_delta_y_one_dim=\dimen379
-\g__nicematrix_delta_x_two_dim=\dimen380
-\g__nicematrix_delta_y_two_dim=\dimen381
-\l__nicematrix_initial_i_int=\count399
-\l__nicematrix_initial_j_int=\count400
-\l__nicematrix_final_i_int=\count401
-\l__nicematrix_final_j_int=\count402
+\g__nicematrix_max_cell_width_dim=\dimen379
+\c@iRow=\count419
+\c@jCol=\count420
+\l__nicematrix_cell_box=\box93
+\l__nicematrix_the_array_box=\box94
+\l__nicematrix_left_delim_dim=\dimen380
+\l__nicematrix_right_delim_dim=\dimen381
+\g__nicematrix_block_box_1_box=\box95
+\g__nicematrix_block_box_2_box=\box96
+\g__nicematrix_block_box_3_box=\box97
+\g__nicematrix_block_box_4_box=\box98
+\g__nicematrix_block_box_5_box=\box99
+\g__nicematrix_block_box_6_box=\box100
+\g__nicematrix_ddots_int=\count421
+\g__nicematrix_iddots_int=\count422
+\g__nicematrix_delta_x_one_dim=\dimen382
+\g__nicematrix_delta_y_one_dim=\dimen383
+\g__nicematrix_delta_x_two_dim=\dimen384
+\g__nicematrix_delta_y_two_dim=\dimen385
+\l__nicematrix_initial_i_int=\count423
+\l__nicematrix_initial_j_int=\count424
+\l__nicematrix_final_i_int=\count425
+\l__nicematrix_final_j_int=\count426
 )
 Underfull \hbox (badness 1142) in paragraph at lines 170--174
 []\OT1/cmr/m/n/10 A visual rep-re-sen-ta-tion of this cross cou-
@@ -1503,8 +1574,8 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 213.
 
 (./matrix_image_o3.tex
-\g__nicematrix_block_box_7_box=\box99
-\g__nicematrix_block_box_8_box=\box100
+\g__nicematrix_block_box_7_box=\box101
+\g__nicematrix_block_box_8_box=\box102
 
 Overfull \hbox (5.05309pt too wide) detected at line 74
 []
@@ -1575,17 +1646,16 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 []| []
  []
 
-[11]) (./derivation_graph.tex
-
-
-Underfull \hbox (badness 2671) in paragraph at lines 15--16
-[]\OT1/cmr/m/n/10 One may there-fore rep-re-sent the gen-eral
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 23--25
-\OT1/cmr/m/n/10 Since the param-e-ter-i-za-tion is defined by
- []
+[11]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 392.
+\c@algpx@indentEndPage-0=\count427
+\c@algpx@indentEndPage-1=\count428
+\c@algpx@indentEndPage-2=\count429
+\c@algpx@indentEndPage-3=\count430
+\c@algpx@indentEndPage-4=\count431
+\c@algpx@indentEndPage-5=\count432
+) (./derivation_graph.tex
 
 
 
@@ -1598,34 +1668,21 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [12]
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 80.
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 9
-5.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2024/11/19 v2.5n Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.03749> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 95.
-
-Underfull \hbox (badness 10000) in paragraph at lines 95--96
-[] \OMS/cmsy/m/n/10.03749 f\OT1/cmr/m/n/10 Build all r.h.s. con-tri-bu-tions fo
-r
+Underfull \hbox (badness 2671) in paragraph at lines 15--16
+[]\OT1/cmr/m/n/10 One may there-fore rep-re-sent the gen-eral
  []
 
 
-Underfull \hbox (badness 1048) in paragraph at lines 112--113
-[] \OMS/cmsy/m/n/10.03749 f\OT1/cmr/m/n/10 Build com-po-nent along the sin-gu-l
-ar
+Underfull \hbox (badness 10000) in paragraph at lines 23--25
+\OT1/cmr/m/n/10 Since the param-e-ter-i-za-tion is defined by
  []
 
-)
 
-(./main.bbl
-Underfull \hbox (badness 6842) in paragraph at lines 16--21
-\OT1/cmr/m/n/10 De La Llave.  The param-e-ter-i-za-tion
- []
 
+\c@algpx@indentEndPage-6=\count433
+\c@algpx@indentEndPage-7=\count434
+\c@algpx@indentEndPage-8=\count435
+\c@algpx@indentEndPage-9=\count436
 
 
 
@@ -1637,6 +1694,18 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [13]
+Overfull \hbox (2.24036pt too wide) detected at line 131
+[]
+ []
+
+
+
+) (./main.bbl
+Underfull \hbox (badness 6842) in paragraph at lines 16--21
+\OT1/cmr/m/n/10 De La Llave.  The param-e-ter-i-za-tion
+ []
+
+
 Underfull \hbox (badness 1694) in paragraph at lines 23--28
 []\OT1/cmr/m/n/10 D. Sipp and A. Lebe-dev.  Global sta-
  []
@@ -1657,6 +1726,16 @@ Underfull \hbox (badness 4954) in paragraph at lines 37--41
  []
 
 
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]| []
+ []
+
+[14]
 Underfull \hbox (badness 4120) in paragraph at lines 53--57
 []\OT1/cmr/m/n/10 Alex Haro, Marta Canadell, Jordi-Lluis
  []
@@ -1683,7 +1762,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 []| []
  []
 
-[14
+[15
 
 ] (./main.aux)
  ***********
@@ -1694,13 +1773,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 9FD17C91CBC79C2EE3BFBA94D03A0927;3018.
  ) 
 Here is how much of TeX's memory you used:
- 31779 strings out of 469626
- 630248 string characters out of 5471010
- 1026795 words of memory out of 5000000
- 57917 multiletter control sequences out of 15000+600000
+ 33261 strings out of 469626
+ 663257 string characters out of 5471010
+ 1074369 words of memory out of 5000000
+ 59376 multiletter control sequences out of 15000+600000
  652311 words of font info for 137 fonts, out of 8000000 for 9000
  1151 hyphenation exceptions out of 8191
- 90i,33n,131p,1461b,835s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,33n,131p,1559b,1118s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pf
 b></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy
 7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10
@@ -1726,10 +1805,10 @@ ive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texliv
 e/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive
 /2025/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb></usr/local/texliv
 e/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb>
-Output written on main.pdf (14 pages, 351290 bytes).
+Output written on main.pdf (15 pages, 357923 bytes).
 PDF statistics:
- 492 PDF objects out of 1000 (max. 8388607)
- 421 compressed objects within 5 object streams
- 163 named destinations out of 1000 (max. 500000)
+ 500 PDF objects out of 1000 (max. 8388607)
+ 428 compressed objects within 5 object streams
+ 166 named destinations out of 1000 (max. 500000)
  125 words of extra memory for PDF output out of 10000 (max. 10000000)
 

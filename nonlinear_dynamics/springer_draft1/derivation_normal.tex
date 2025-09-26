@@ -350,7 +350,7 @@ with $\AsParamEl^{j}_{1,2} = 0$, for $j\in \{n+1,\ldots,m\}$.
 
 This logic repeats for all $(i_{1},i_{2})\in\IndexSet{2}{1,m}$ and all unknown vectors at second order have the form $\yhatbf_{i_{1},i_{2}} = [\mathbf{y}_{i_{1},i_{2}}; \veczero; \veczero]$ and therefore the resolvent equations can be solved using the original linear system $\Lu$. 
 
-At $\mathcal{O}(|\xbf|^{3})$ the right hand side also has contributions from $\hhatbf^{L}_{i_{1},i_{2},i_{3}}$ that arise from the lower order asymptotic terms. However, these arise only due to the second order asymptotic terms $\yhatbf_{i_{1},i_{2}}$ and therefore, $\hhatbf^{L}_{i_{1},i_{2},i_{3}} = [\mathbf{h}^{L}_{i_{1},i_{2},i_{3}}; \veczero; \veczero]$. The same logical arguments presented earlier apply and hence all third order asymptotic terms also have the form $\yhatbf_{i_{1},i_{2},i_{3}} = [\mathbf{y}_{i_{1},i_{2},i_{3}}; \veczero; \veczero]$ and only require the standard linear system $\Lu$ for their evaluation. As noted earlier, equations for the higher order asymptotic terms have the same essential structure as the third-order equations and hence at all orders the asymptotic terms have the form $\yhatbf_{i_{1},\ldots,i_{k}} = [\mathbf{y}_{i_{1},\ldots,i_{3}}; \veczero; \veczero]$ and only require the standard linear system $\Lu$ for their evaluation. 
+At $\mathcal{O}(|\xbf|^{3})$ the right hand side also has contributions from $\hhatbf^{L}_{i_{1},i_{2},i_{3}}$ that arise from the lower order asymptotic terms. However, these arise only due to the second order asymptotic terms $\yhatbf_{i_{1},i_{2}}$ and therefore, $\hhatbf^{L}_{i_{1},i_{2},i_{3}} = [\mathbf{h}^{L}_{i_{1},i_{2},i_{3}}; \veczero; \veczero]$. The same logical arguments presented earlier apply and hence all third order asymptotic terms also have the form $\yhatbf_{i_{1},i_{2},i_{3}} = [\mathbf{y}_{i_{1},i_{2},i_{3}}; \veczero; \veczero]$ and only require the standard linear system $\Lu$ for their evaluation. As noted earlier, equations for the higher order asymptotic terms have the same essential structure as the third-order equations and hence at all orders the asymptotic terms have the form $\yhatbf_{i_{1},\ldots,i_{k}} = [\mathbf{y}_{i_{1},\ldots,i_{k}}; \veczero; \veczero]$ and only require the standard linear system $\Lu$ for their evaluation. 
 
 Equations~\eqref{eqn:asymptotic_Ok_compact},\eqref{eqn:resonance_condition_Ok} and \eqref{eqn:resonance_modification_Ok} may be rewritten for the standard system as,
 \begin{subequations}
@@ -387,7 +387,45 @@ In the absence of resonance or, if resonance occurs for $j\in\{n+1,\ldots,m\}$,
 \end{align}
 and $\mathbf{y}_{i_{1},\ldots,i_{k}}$ is unconstrained.
 
-
+The entire procedure for the evaluation of the normal form is presented succinctly in algorithm~\ref{algo:normal_form}. 
+ \begin{algorithm}
+	\caption{Center--Manifold: Normal form}\label{algo:normal_form}
+	\begin{algorithmic}[0]
+		\Require System: $\partial \vecu/\partial t = \Lu \vecu + \vecf(\vecu,\vecMu)$.
+		\Ensure $\vecf(\vecu,\vecMu) = \veczero;$ $\partial\vecf/\partial \vecu = \veczero$. 
+		\Require Tangent Space: $\mathbf{W}^{\dagger}\Lu \mathbf{V} = \LambdaC$.
+		\LComment{Center subspace dimension: $n$.} 
+		\Require Extension via $\vecnu, \vectheta$ and $\vecf_{NL}(\vecu,\vecnu)$.
+		\State Extend Tangent space: $\What^{\dagger}\ExtL \Vhat = \Khat$
+		\LComment{Center subspace dimension: $m = n + l + h$.} 
+		\Require Maximum Asymptotic order: $k_{max}$
+		\For{$(k\in 2,3,\ldots,k_{max})$}
+		\For{$(i_{1},\ldots,i_{k})\in \IndexSet{k}{1,m}$}
+		\State \LComment {Build all r.h.s. contributions for $({i_{1},\ldots,i_{k}})$.}
+		\State $\mathbf{r} = \mathbf{f}_{i_{1},\ldots,i_{k}} + \mathbf{h}^{O}_{i_{1},\ldots,i_{k}} + \mathbf{h}^{L}_{i_{1},\ldots,i_{k}}$ %\Comment{Resolvent r.h.s} 
+		\State $\omega = \widehat{K}_{i_{1},i_{1}} + \widehat{K}_{i_{2},i_{2}} + \ldots + \widehat{K}_{i_{k},i_{k}}$
+		\State \Comment {Build reduced representation $\AsParam_{i_{1},\ldots,i_{k}}$}
+		\For{$(j \in 1,\ldots,n)$}
+		\If {($\omega = \widehat{K}_{j,j}$)} \Comment {Resonant $\omega$}
+		\State $\AsParamEl^{j}_{i_{1},\ldots,i_{k}} = \mathbf{w}^{\dagger}_{j}\mathbf{r}$
+		\Else
+		\State $\AsParamEl^{j}_{i_{1},\ldots,i_{k}} = 0$
+		\EndIf
+		\EndFor
+		\For{$(j \in n+1,\ldots,m)$}
+		\State $\AsParamEl^{j}_{i_{1},\ldots,i_{k}} = 0$
+		\EndFor
+		\State \LComment {Build singular components}
+		\State $\mathbf{r}_{s} = \sum_{j=1}^{n}\mathbf{v}_{j}\AsParamEl^{j}_{i_{1},\ldots,i_{k}}$ 
+		\State \LComment {Evaluate resolvent}
+		\State $\mathbf{y}_{i_{1},\ldots,i_{k}} = \ResolventOp(\omega)[\mathbf{r} - \mathbf{r}_{s}]$ 
+		\LComment {$\ResolventOp(\omega) = (\omega\mathbf{I} - \Lu)^{-1}$}
+		\EndFor
+		\EndFor \\
+		\Return $\Khat, \Vhat,\What$,\\
+		\Return ${y}_{i_{1},\ldots,i_{k}}, \AsParam_{i_{1},\ldots,i_{k}}, \forall k\in 2,\ldots,k_{max}$. 
+	\end{algorithmic}
+\end{algorithm}
 
 
 

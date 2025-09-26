@@ -75,76 +75,67 @@ with the asymptotic components of $\Param$ defined as
 	 	&\textit{\textit{for} $j\in n+1,\ldots,m$.} \nonumber
 	 \end{align}
 \end{subequations}
- This particular graph style parameterization has been utilized by \citet{negi24} for the Navier--Stokes system where the Reynolds number perturbations have been used for the system extension. The two methods can be presented in algorithmic form as
- \begin{algorithm}
- 	\caption{Center--Manifold: Normal form}\label{algo:normal_form}
- 	%\algsetup{indent=1em}
+ This particular graph style parameterization has been utilized by \citet{negi24} for the Navier--Stokes system where the Reynolds number perturbations have been used for the system extension. The procedure for obtaining the graph representation is summarized in  algorithm~\ref{algo:graph_form}. 
+  \begin{algorithm}
+ 	\caption{Center--Manifold: Graph parameterization}\label{algo:graph_form}
  	\begin{algorithmic}[0]
- 		\Require System: $\partial \vecu/\partial t = \Lu \vecu + \vecf(\vecu,\vecMu)$
+ 		\Require System: $\partial \vecu/\partial t = \Lu \vecu + \vecf(\vecu,\vecMu)$.
  		\Ensure $\vecf(\vecu,\vecMu) = \veczero;$ $\partial\vecf/\partial \vecu = \veczero$. 
- 		\Require Tangent Space: $\mathbf{W}^{\dagger}\Lu \mathbf{V} = \LambdaC$;
- 		\State Center subspace dimension: $n$. 
- 		\Ensure $\mathbf{W}^{\dagger}\mathbf{V} = \mathbf{I}_{n}$.
- 		\Require System extension via $\vecnu, \vectheta$. 
- 		\State Construct new non-linear term: $\vecf_{NL}(\vecu,\vecnu)$,
- 		\State Extended Tangent space: $\What^{\dagger}\ExtL \Vhat = \Khat$
- 		\State Center subspace dimension: $m = n + l + h$. 
+ 		\Require Tangent Space: $\mathbf{W}^{\dagger}\Lu \mathbf{V} = \LambdaC$.
+ 		\LComment{Center subspace dimension: $n$.} 
+ 		\Require Extension via $\vecnu, \vectheta$ and $\vecf_{NL}(\vecu,\vecnu)$.
+ 		\State Extend Tangent space: $\What^{\dagger}\ExtL \Vhat = \Khat$
+ 		\LComment{Center subspace dimension: $m = n + l + h$.} 
+ 		\State $\mathbf{Q} = \mathbf{I} - \mathbf{V}\mathbf{W}^{\dagger}$ \Comment{Subspace projector.}
  		\Require Maximum Asymptotic order: $k_{max}$
- 		\For{$k\in 2,3,\ldots,k_{max}$}
- 			\For{$(i_{1},\ldots,i_{k})\in \IndexSet{k}{1,m}$}
- 				\State \{Build all r.h.s. contributions for $({i_{1},\ldots,i_{k}})$.\}
- 				\State Build $\mathbf{f}$ \Comment {Non-linear.}
- 				\State Build $\mathbf{h}^{O}$ \Comment {Off-diagonal.}
- 				\State Build $\mathbf{h}^{L}$ \Comment {Lower order.}
- 				\State $\mathbf{r} = \mathbf{f} + \mathbf{h}^{O} + \mathbf{h}^{L} $
- 				\State $\omega = \widehat{K}_{i_{1},i_{1}} + \widehat{K}_{i_{2},i_{2}} + \ldots + \widehat{K}_{i_{k},i_{k}}$
- 				\State \{Build reduced representation $\AsParam_{i_{1},\ldots,i_{k}}$:\}
- 					\For{$j \in 1,\ldots,n$}
- 						\If {($\omega = \widehat{K}_{j,j}$)} \Comment {Resonant $\omega$}
- 							\State $\AsParamEl^{j}_{i_{1},\ldots,i_{k}} = \mathbf{w}^{\dagger}_{j}\mathbf{r}$
- 						\Else
- 							\State $\AsParamEl^{j}_{i_{1},\ldots,i_{k}} = 0$
- 						\EndIf
- 					\EndFor
- 					\For{$j \in n+1,\ldots,m$}
- 						\State $\AsParamEl^{j}_{i_{1},\ldots,i_{k}} = 0$
- 					\EndFor
- 					\State \{Build component along the singular directions:\}
- 					\State $\mathbf{r}_{s} = \sum_{j=1}^{n}\mathbf{v}_{j}\AsParamEl^{j}_{i_{1},\ldots,i_{k}}$ \Comment {Singular component.}
- 					\State Evaluate: $\mathbf{y}_{i_{1},\ldots,i_{k}} = \ResolventOp(\omega)[\mathbf{r} - \mathbf{r}_{s}]$
- 			\EndFor
+ 		\For{$(k\in 2,3,\ldots,k_{max})$}
+ 		\For{$(i_{1},\ldots,i_{k})\in \IndexSet{k}{1,m}$}
+ 		\State \LComment {Build all r.h.s. contributions for $({i_{1},\ldots,i_{k}})$.}
+ 		\State $\mathbf{r} = \mathbf{f}_{i_{1},\ldots,i_{k}} + \mathbf{h}^{O}_{i_{1},\ldots,i_{k}} + \mathbf{h}^{L}_{i_{1},\ldots,i_{k}}$ %\Comment{Resolvent r.h.s} 
+ 		\State $\omega = \widehat{K}_{i_{1},i_{1}} + \widehat{K}_{i_{2},i_{2}} + \ldots + \widehat{K}_{i_{k},i_{k}}$
+ 		\State \Comment {Build reduced representation $\AsParam_{i_{1},\ldots,i_{k}}$}
+ 		\For{$(j \in 1,\ldots,n)$}
+ 		\State $\AsParamEl^{j}_{i_{1},\ldots,i_{k}} = \mathbf{w}^{\dagger}_{j}\mathbf{r}$
+ 		\EndFor
+ 		\For{$(j \in n+1,\ldots,m)$}
+ 		\State $\AsParamEl^{j}_{i_{1},\ldots,i_{k}} = 0$
+ 		\EndFor
+ 		\State \LComment {Evaluate restricted resolvent}
+ 		\State $\mathbf{y}_{i_{1},\ldots,i_{k}} = \ResolventOp_{s}(\omega)\mathbf{Q}\mathbf{r}$,
+ 		\State with, $\mathbf{Q}\mathbf{y}_{i_{1},\ldots,i_{k}} = \veczero$.
+ 		\LComment {$\ResolventOp_{s}(\omega) = [\mathbf{Q}(\omega\mathbf{I} - \Lu)\mathbf{Q}]^{-1}$}
+ 		\EndFor
  		\EndFor \\
+ 		\Return $\Khat, \Vhat,\What$,\\
  		\Return ${y}_{i_{1},\ldots,i_{k}}, \AsParam_{i_{1},\ldots,i_{k}}, \forall k\in 2,\ldots,k_{max}$. 
  	\end{algorithmic}
  \end{algorithm}
  
- The resulting expressions for the normal form given by equations~\eqref{eqn:asymptotic_Ok_compact_std},  \eqref{eqn:resonance_modification_Ok_std} and, the graph style parameterization given by equations~\eqref{eqn:graph_Ok_compact3}, \eqref{eqn:graph_gk_definition3} are quite similar.  
+ The resulting expressions for the normal form given by equations~\eqref{eqn:asymptotic_Ok_compact_std},  \eqref{eqn:resonance_modification_Ok_std} and, the graph style parameterization given by equations~\eqref{eqn:graph_Ok_compact3}, \eqref{eqn:graph_gk_definition3} are quite similar. The similarity is due to the fact that the tangent space in both cases is identical, with $\Khat$ representing the linear part of the parameterization $\mathcal{G}(\xbf)$. Typically one is interested in the normal form of the reduced equations since they result in the ``simplest form'' of the representation. The particular graph parameterization however is advantageous when one needs to consider the mapping from the full system state to the reduced manifold, \ie, $\evecu \mapsto \xbf$. For both normal form and the graph parameterization, mapping that is explicitly constructed is $\mathcal{Y}: \xbf \mapsto \evecu$. The inverse map $\inv{\mathcal{Y}}: \evecu \mapsto \xbf$ is not constructed. It is also difficult to construct from the knowledge of $\mathcal{Y}$ itself  because $\mathcal{Y}$ is constructed asymptotically and is hardly ever evaluated beyond a few orders. However, since the graph parameterization is constructed with the property that higher order terms lie in the complement of the tangent space, the inverse map $\inv{\mathcal{Y}}$ can be easily constructed by leveraging this property. Therefore, recalling that the first order vectors $\yhatbf_{i} = \evecv_{i}$, we have,
+ \begin{align}
+ 		\begin{split}
+ 		\evecu = \mathcal{Y}(\xbf) =& \sum^{[1,m]}_{(1)}\yhatbf_{i_{1}}x_{i_{1}} + \sum^{[1,m]}_{(2)}\yhatbf_{i_{1},i_{2}}x_{i_{1}}x_{i_{2}} \\
+ 		%
+ 		& + \sum^{[1,m]}_{(3)}\yhatbf_{i_{1},i_{2},i_{3}}x_{i_{1}}x_{i_{2}}x_{i_{3}} + \ldots,
+ 	\end{split} \nonumber \\
+ 	%
+ 	\begin{split}
+ 		\implies\What^{\dagger}\evecu =& \sum^{[1,m]}_{(1)}\What^{\dagger}\evecv_{i_{1}}x_{i_{1}} + \sum^{[1,m]}_{(2)}\What^{\dagger}\yhatbf_{i_{1},i_{2}}x_{i_{1}}x_{i_{2}} \\
+ 		%
+ 		& + \sum^{[1,m]}_{(3)}\What^{\dagger}\yhatbf_{i_{1},i_{2},i_{3}}x_{i_{1}}x_{i_{2}}x_{i_{3}} + \ldots,
+ 	\end{split} \nonumber \\
+ 	%
+ 	\begin{split}
+ 		\implies\What^{\dagger}\evecu =& \Ihat\xbf + \mathbf{0} + \mathbf{0} + \ldots .
+ 	\end{split} \nonumber
+ \end{align}
+ Therefore, when considering the graph parameterization presented earlier, the inverse map $\inv{\mathcal{Y}}: \evecu \mapsto \xbf$ is simply,
+ \begin{align}
+ 	\label{eqn:inverse_map}
+ 	\xbf = \inv{\mathcal{Y}}(\evecu) = \What^{\dagger}\evecu.
+ \end{align}
+ For the normal form, one does not get this simple inverse map since the higher order terms generically do not lie in the complement of the tangent space ($\Vhat$). 
  
-% \begin{algorithm}
-% 	\caption{Calculate $y = x^n$}\label{algo1}
-% 	\begin{algorithmic}[1]
-% 		\Require $n \geq 0 \vee x \neq 0$
-% 		\Ensure $y = x^n$ 
-% 		\State $y \Leftarrow 1$
-% 		\If{$n < 0$}\label{algln2}
-% 		\State $X \Leftarrow 1 / x$
-% 		\State $N \Leftarrow -n$
-% 		\Else
-% 		\State $X \Leftarrow x$
-% 		\State $N \Leftarrow n$
-% 		\EndIf
-% 		\While{$N \neq 0$}
-% 		\If{$N$ is even}
-% 		\State $X \Leftarrow X \times X$
-% 		\State $N \Leftarrow N / 2$
-% 		\Else[$N$ is odd]
-% 		\State $y \Leftarrow y \times X$
-% 		\State $N \Leftarrow N - 1$
-% 		\EndIf
-% 		\EndWhile
-% 	\end{algorithmic}
-% \end{algorithm}
-
 
 
 %A particular graph-style parameterization has been used in \cite{negi24} for the construction of center-manifolds of the Navier--Stokes while treating variations of the Reynolds number as parameter perturbations. 
