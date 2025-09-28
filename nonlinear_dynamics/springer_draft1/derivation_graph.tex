@@ -6,7 +6,7 @@ In the earlier subsection it was shown that even though one starts from an exten
 Starting again with the asymptotic representations of $\Param(\xbf)$ and $\mathcal{Y}(\xbf)$ as in equations~\eqref{eqn:reduced_normal_form} and \eqref{eqn:asymptotic_normal_form} respectively, one may constrain all higher order terms $\yhatbf_{i_{1},\ldots,i_{k}}$ to lie in the complement of the center subspace (spanned by $\Vhat$), resulting in,
 \begin{align}
 	\label{eqn:graph_condition}
-	\whatbf^{\dagger}_{j}\yhatbf_{i_{1},\ldots,i_{k}} = \veczero, && \forall j\in1,\ldots,m,
+	\EAevec^{\dagger}_{j}\yhatbf_{i_{1},\ldots,i_{k}} = \veczero, && \forall j\in1,\ldots,m,
 \end{align}
 for all $(i_{1},\ldots,i_{k})\in\IndexSet{k}{1,m},\ k\ge2$. Note that this condition applies regardless of resonance. 
 
@@ -16,7 +16,7 @@ One may therefore represent the general expression for the evaluation of higher 
 \begin{align}
 	\label{eqn:graph_Ok_compact}
 	\begin{aligned}
-		\ResolventHat{\omega_{i_{1},\ldots,i_{k}}}^{-1}\yhatbf_{i_{1},\ldots,i_{k}} + \sum^{m}_{j=1}\AsParamEl^{j}_{i_{1},\ldots,i_{k}}\vhatbf_{j} \\
+		\ResolventHat{\omega_{i_{1},\ldots,i_{k}}}^{-1}\yhatbf_{i_{1},\ldots,i_{k}} + \sum^{m}_{j=1}\AsParamEl^{j}_{i_{1},\ldots,i_{k}}\EDevec_{j} \\
 		= \fhatbf_{i_{1},\ldots,i_{k}} - \hhatbf^{O}_{i_{1},\ldots,i_{k}} 
 		- \hhatbf^{L}_{i_{1},\ldots,i_{k}}.
 	\end{aligned} &&
@@ -25,7 +25,7 @@ Since the parameterization is defined by equation~\eqref{eqn:graph_condition}, o
  \begin{align}
  	\label{eqn:graph_gk_definition}
  		 \AsParamEl^{j}_{i_{1},\ldots,i_{k}} 
- 		= \whatbf^{\dagger}_{j}(\fhatbf_{i_{1},\ldots,i_{k}} - \hhatbf^{O}_{i_{1},\ldots,i_{k}} 
+ 		= \EAevec^{\dagger}_{j}(\fhatbf_{i_{1},\ldots,i_{k}} - \hhatbf^{O}_{i_{1},\ldots,i_{k}} 
  		- \hhatbf^{L}_{i_{1},\ldots,i_{k}}),
  \end{align}
 $\forall j\in1,\ldots,m$. The extended variables vanish for $\fhatbf_{i_{1},\ldots,i_{k}}$ by construction and, following the logical arguments presented in the previous section, it may be verified that the extended variables also vanish for $\hhatbf^{O}_{i_{1},\ldots,i_{k}}, \hhatbf^{L}_{i_{1},\ldots,i_{k}}$ and $\yhatbf_{i_{1},\ldots,i_{k}}$. This then implies that, 
@@ -37,7 +37,7 @@ Equation~\eqref{eqn:graph_Ok_compact} then reduces to its single component form,
 \begin{align}
 	\label{eqn:graph_Ok_compact2}
 	\begin{aligned}
-		\Resolvent{\omega_{i_{1},\ldots,i_{k}}}^{-1}\mathbf{y}_{i_{1},\ldots,i_{k}} + \sum^{n}_{j=1}\AsParamEl^{j}_{i_{1},\ldots,i_{k}}\mathbf{v}_{j} \\
+		\Resolvent{\omega_{i_{1},\ldots,i_{k}}}^{-1}\mathbf{y}_{i_{1},\ldots,i_{k}} + \sum^{n}_{j=1}\AsParamEl^{j}_{i_{1},\ldots,i_{k}}\Devec_{j} \\
 		= \mathbf{f}_{i_{1},\ldots,i_{k}} - \mathbf{h}^{O}_{i_{1},\ldots,i_{k}} 
 		- \mathbf{h}^{L}_{i_{1},\ldots,i_{k}}.
 	\end{aligned} &&
@@ -45,9 +45,9 @@ Equation~\eqref{eqn:graph_Ok_compact} then reduces to its single component form,
 One may define the projection operator on to the complement of the center subspace of $\Lu$ as, 
 \begin{align}
 	\label{eqn:complement_projector}
-	\mathbf{Q} = \mathbf{I} - \mathbf{V}\mathbf{W}^{\dagger}.
+	\mathbf{Q} = \mathbf{I} - \DevMatrix\AevMatrix^{\dagger}.
 \end{align}
-By construction we have, $\mathbf{Q}\mathbf{y}_{i_{1},\ldots,i_{k}} = \mathbf{y}_{i_{1},\ldots,i_{k}}$. Expressing the resolvent operator restricted to the complement of the center subspace as 
+By construction we have, $\mathbf{Q}\mathbf{y}_{i_{1},\ldots,i_{k}} = \mathbf{y}_{i_{1},\ldots,i_{k}}$ and, $\mathbf{Q}\sum^{n}_{j=1}\AsParamEl^{j}_{i_{1},\ldots,i_{k}}\Devec_{j} = \veczero$. Expressing the resolvent operator restricted to the complement of the center subspace as 
 \begin{align}
 	\mathcal{R}_{s}(\omega) = \left[\mathbf{Q}(\omega\mathbf{I} - \Lu)\mathbf{Q}\right]^{-1}
 \end{align}
@@ -65,7 +65,7 @@ with the asymptotic components of $\Param$ defined as
 	\label{eqn:graph_gk_definition3}
 	\begin{align}
 		\AsParamEl^{j}_{i_{1},\ldots,i_{k}} 
-		=& \mathbf{w}^{\dagger}_{j}(\mathbf{f}_{i_{1},\ldots,i_{k}} - \mathbf{f}^{O}_{i_{1},\ldots,i_{k}} 
+		=& \Aevec^{\dagger}_{j}(\mathbf{f}_{i_{1},\ldots,i_{k}} - \mathbf{f}^{O}_{i_{1},\ldots,i_{k}} 
 		- \mathbf{f}^{L}_{i_{1},\ldots,i_{k}}), \\
 		%
 		&\textit{for $j\in 1,\ldots,n$,} \nonumber \\
@@ -79,14 +79,14 @@ with the asymptotic components of $\Param$ defined as
   \begin{algorithm}
  	\caption{Center--Manifold: Graph parameterization}\label{algo:graph_form}
  	\begin{algorithmic}[0]
- 		\Require System: $\partial \vecu/\partial t = \Lu \vecu + \vecf(\vecu,\vecMu)$.
- 		\Ensure $\vecf(\vecu,\vecMu) = \veczero;$ $\partial\vecf/\partial \vecu = \veczero$. 
- 		\Require Tangent Space: $\mathbf{W}^{\dagger}\Lu \mathbf{V} = \LambdaC$.
+ 		\Require System: $\partial \vecu/\partial t = \Lu \vecu + \NonLin(\vecu,\vecMu)$.
+ 		\Ensure $\NonLin(\veczero,\vecMu) = \veczero;$ $\partial\NonLin/\partial \vecu = \veczero$. 
+ 		\Require Tangent Space: $\AevMatrix^{\dagger}\Lu \DevMatrix = \LambdaC$.
  		\LComment{Center subspace dimension: $n$.} 
- 		\Require Extension via $\vecnu, \vectheta$ and $\vecf_{NL}(\vecu,\vecnu)$.
- 		\State Extend Tangent space: $\What^{\dagger}\ExtL \Vhat = \Khat$
+ 		\Require Extension via $\vecnu, \vectheta$ and $\NewNonLin(\vecu,\vecnu,\vectheta)$.
+ 		\State Extend Tangent space: $\EAevMatrix^{\dagger}\ExtL \EDevMatrix = \Khat$
  		\LComment{Center subspace dimension: $m = n + l + h$.} 
- 		\State $\mathbf{Q} = \mathbf{I} - \mathbf{V}\mathbf{W}^{\dagger}$ \Comment{Subspace projector.}
+ 		\State $\mathbf{Q} = \mathbf{I} - \DevMatrix\AevMatrix^{\dagger}$ \Comment{Subspace projector.}
  		\Require Maximum Asymptotic order: $k_{max}$
  		\For{$(k\in 2,3,\ldots,k_{max})$}
  		\For{$(i_{1},\ldots,i_{k})\in \IndexSet{k}{1,m}$}
@@ -95,7 +95,7 @@ with the asymptotic components of $\Param$ defined as
  		\State $\omega = \widehat{K}_{i_{1},i_{1}} + \widehat{K}_{i_{2},i_{2}} + \ldots + \widehat{K}_{i_{k},i_{k}}$
  		\State \Comment {Build reduced representation $\AsParam_{i_{1},\ldots,i_{k}}$}
  		\For{$(j \in 1,\ldots,n)$}
- 		\State $\AsParamEl^{j}_{i_{1},\ldots,i_{k}} = \mathbf{w}^{\dagger}_{j}\mathbf{r}$
+ 		\State $\AsParamEl^{j}_{i_{1},\ldots,i_{k}} = \Aevec^{\dagger}_{j}\mathbf{r}$
  		\EndFor
  		\For{$(j \in n+1,\ldots,m)$}
  		\State $\AsParamEl^{j}_{i_{1},\ldots,i_{k}} = 0$
@@ -106,35 +106,34 @@ with the asymptotic components of $\Param$ defined as
  		\LComment {$\ResolventOp_{s}(\omega) = [\mathbf{Q}(\omega\mathbf{I} - \Lu)\mathbf{Q}]^{-1}$}
  		\EndFor
  		\EndFor \\
- 		\Return $\Khat, \Vhat,\What$,\\
- 		\Return ${y}_{i_{1},\ldots,i_{k}}, \AsParam_{i_{1},\ldots,i_{k}}, \forall k\in 2,\ldots,k_{max}$. 
+ 		\Return $\Khat, \EDevMatrix,\EAevMatrix,\Param(\xbf),\CenM(\xbf)$.
  	\end{algorithmic}
  \end{algorithm}
  
  The resulting expressions for the normal form given by equations~\eqref{eqn:asymptotic_Ok_compact_std},  \eqref{eqn:resonance_modification_Ok_std} and, the graph style parameterization given by equations~\eqref{eqn:graph_Ok_compact3}, \eqref{eqn:graph_gk_definition3} are quite similar. The similarity is due to the fact that the tangent space in both cases is identical, with $\Khat$ representing the linear part of the parameterization $\mathcal{G}(\xbf)$. Typically one is interested in the normal form of the reduced equations since they result in the ``simplest form'' of the representation. The particular graph parameterization however is advantageous when one needs to consider the mapping from the full system state to the reduced manifold, \ie, $\evecu \mapsto \xbf$. For both normal form and the graph parameterization, mapping that is explicitly constructed is $\mathcal{Y}: \xbf \mapsto \evecu$. The inverse map $\inv{\mathcal{Y}}: \evecu \mapsto \xbf$ is not constructed. It is also difficult to construct from the knowledge of $\mathcal{Y}$ itself  because $\mathcal{Y}$ is constructed asymptotically and is hardly ever evaluated beyond a few orders. However, since the graph parameterization is constructed with the property that higher order terms lie in the complement of the tangent space, the inverse map $\inv{\mathcal{Y}}$ can be easily constructed by leveraging this property. Therefore, recalling that the first order vectors $\yhatbf_{i} = \evecv_{i}$, we have,
  \begin{align}
  		\begin{split}
- 		\evecu = \mathcal{Y}(\xbf) =& \sum^{[1,m]}_{(1)}\yhatbf_{i_{1}}x_{i_{1}} + \sum^{[1,m]}_{(2)}\yhatbf_{i_{1},i_{2}}x_{i_{1}}x_{i_{2}} \\
+ 		\evecu = \CenM(\xbf) =& \sum^{[1,m]}_{(1)}\yhatbf_{i_{1}}x_{i_{1}} + \sum^{[1,m]}_{(2)}\yhatbf_{i_{1},i_{2}}x_{i_{1}}x_{i_{2}} \\
  		%
  		& + \sum^{[1,m]}_{(3)}\yhatbf_{i_{1},i_{2},i_{3}}x_{i_{1}}x_{i_{2}}x_{i_{3}} + \ldots,
  	\end{split} \nonumber \\
  	%
  	\begin{split}
- 		\implies\What^{\dagger}\evecu =& \sum^{[1,m]}_{(1)}\What^{\dagger}\evecv_{i_{1}}x_{i_{1}} + \sum^{[1,m]}_{(2)}\What^{\dagger}\yhatbf_{i_{1},i_{2}}x_{i_{1}}x_{i_{2}} \\
+ 		\implies\EAevMatrix^{\dagger}\evecu =& \sum^{[1,m]}_{(1)}\EAevMatrix^{\dagger}\EDevec_{i_{1}}x_{i_{1}} + \sum^{[1,m]}_{(2)}\EAevMatrix^{\dagger}\yhatbf_{i_{1},i_{2}}x_{i_{1}}x_{i_{2}} \\
  		%
- 		& + \sum^{[1,m]}_{(3)}\What^{\dagger}\yhatbf_{i_{1},i_{2},i_{3}}x_{i_{1}}x_{i_{2}}x_{i_{3}} + \ldots,
+ 		& + \sum^{[1,m]}_{(3)}\EAevMatrix^{\dagger}\yhatbf_{i_{1},i_{2},i_{3}}x_{i_{1}}x_{i_{2}}x_{i_{3}} + \ldots,
  	\end{split} \nonumber \\
  	%
  	\begin{split}
- 		\implies\What^{\dagger}\evecu =& \Ihat\xbf + \mathbf{0} + \mathbf{0} + \ldots .
+ 		\implies\EAevMatrix^{\dagger}\evecu =& \Ihat\xbf + \mathbf{0} + \mathbf{0} + \ldots .
  	\end{split} \nonumber
  \end{align}
  Therefore, when considering the graph parameterization presented earlier, the inverse map $\inv{\mathcal{Y}}: \evecu \mapsto \xbf$ is simply,
  \begin{align}
  	\label{eqn:inverse_map}
- 	\xbf = \inv{\mathcal{Y}}(\evecu) = \What^{\dagger}\evecu.
+ 	\xbf = \inv{\CenM}(\evecu) = \EAevMatrix^{\dagger}\evecu.
  \end{align}
- For the normal form, one does not get this simple inverse map since the higher order terms generically do not lie in the complement of the tangent space ($\Vhat$). 
+ For the normal form, one does not get this simple inverse map since the higher order terms generically do not lie in the complement of the tangent space ($\EDevMatrix$). 
  
 
 

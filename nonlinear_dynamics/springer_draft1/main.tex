@@ -87,6 +87,7 @@
 \def\vecv{\mathbf{v}}
 \def\vecw{\mathbf{w}}
 \def\vecy{\mathbf{y}}
+
 \def\vecf{\vfield{f}}
 \def\vecg{\vfield{g}}
 \def\vecyp{\mathbb{y}}
@@ -100,26 +101,23 @@
 
 \def\Lu{\mathbf{L}}
 \def\Lmu{\mathbf{L}_{\vecmu}}
+\def\Lnu{\mathbf{L}_{\vecnu}}
 \def\Ltheta{\mathbf{L}_{\vectheta}}
 \def\ExtL{\mathbf{\widehat{L}}}
 
+\def\NonLin{\mathcal{N}}
+\def\NewNonLin{\mathcal{N}'}
+\def\ENonLin{\widehat{\NewNonLin}}
 
 \def\bcdot{\boldsymbol{\cdot}}
 \def\ie{\textit{i.e.}\ }
 \def\etc{\textit{etc.}}
-\def\blbracket{\boldsymbol{\lceil}}
-\def\brbracket{\boldsymbol{\rceil}}
-
-\def\invRec{\inv{Re_{c}}}
-\def\Rey{\mathrm{Re}}
-
 
 \def\Lambdabf{\mathbf{\Lambda}}
 \def\LambdaC{\Lambdabf_{C}}
 \def\LambdaP{\Lambdabf_{P}}
 \def\LambdaH{\Lambdabf_{H}}
-\def\LambdaR{\Lambdabf_{R}}
-\def\LambdaI{\Lambdabf_{I}}
+
 
 \def\Gammabf{\mathbf{\Gamma}}
 \def\GammaP{\Gammabf_{P}}
@@ -132,11 +130,22 @@
 \def\Vhat{\mathbf{\widehat{V}}}
 \def\What{\mathbf{\widehat{W}}}
 
+\def\Devec{\mathbf{v}}
+\def\Aevec{\mathbf{w}}
+\def\EDevec{\widehat{\Devec}}
+\def\EAevec{\widehat{\Aevec}}
+
+\def\DevMatrix{\mathbf{V}}
+\def\AevMatrix{\mathbf{W}}
+\def\EDevMatrix{\widehat{\DevMatrix}}
+\def\AevMatrix{\mathbf{W}}
+\def\EAevMatrix{\widehat{\AevMatrix}}
 
 \def\Xbf{\mathbf{X}}
 \def\Ybf{\mathbf{Y}}
 \def\xbf{\mathbf{x}}
 \def\zbf{\mathbf{z}}
+
 \def\yhatbf{\mathbf{\widehat{y}}}
 \def\fhatbf{\mathbf{\widehat{f}}}
 \def\hhatbf{\mathbf{\widehat{h}}}
@@ -150,17 +159,18 @@
 \def\AsParam{\mathbf{g}}
 \def\AsParamEl{g}
 
-\def\ResolventHatOp{\widehat{\mathcal{R}}}
-\def\ResolventOp{\mathcal{R}}
+\def\CenM{\mathcal{Y}}
+\def\AsECenM{\widehat{\mathbf{y}}}
+\def\AsCenM{\mathbf{y}}
 
+\def\ResolventOp{\mathcal{R}}
+\def\ResolventHatOp{\widehat{\ResolventOp}}
 \newcommand\Resolvent[1]{
 	[\ResolventOp(#1)]
 }
-
 \newcommand\ResolventHat[1]{
 	[\ResolventHatOp(#1)]
 }
-
 \newcommand\RestrictedResolvent[1]{
 	[\ResolventOp_{s}(#1)]
 }
