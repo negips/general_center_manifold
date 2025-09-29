@@ -30,6 +30,7 @@
 \newlabel{eqn:singular_pmode}{{17}{4}{Subspace structure for $\ExtL $}{equation.17}{}}
 \newlabel{eqn:nonsingular_hmode}{{18}{4}{Subspace structure for $\ExtL $}{equation.18}{}}
 \newlabel{eqn:singular_hmode}{{20}{4}{Subspace structure for $\ExtL $}{equation.20}{}}
+\newlabel{eqn:extended_direct_tangent_space}{{22}{4}{Subspace structure for $\ExtL $}{equation.22}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {1.3.2}Subspace structure for $\mathbf  {\setbox \z@ \hbox {\mathsurround \z@ $\textstyle L$}\mathaccent "0362{L}}^{\dagger }$}{4}{subsubsection.1.3.2}\protected@file@percent }
 \citation{coullet83,cabre05,sipp07,haragus11,carini15,gallaire16,haro16,jain22,negi24}
 \newlabel{eqn:extended_adjoint_mode}{{23}{5}{Subspace structure for $\ExtL ^{\dagger }$}{equation.23}{}}
@@ -37,6 +38,7 @@
 \newlabel{eqn:extended_resonant_adjoint_eigenvector2}{{25}{5}{Subspace structure for $\ExtL ^{\dagger }$}{equation.25}{}}
 \newlabel{eqn:adjoint_pmode}{{26}{5}{Subspace structure for $\ExtL ^{\dagger }$}{equation.26}{}}
 \newlabel{eqn:adjoint_hmode}{{27}{5}{Subspace structure for $\ExtL ^{\dagger }$}{equation.27}{}}
+\newlabel{eqn:extended_adjoint_tangent_space}{{28}{5}{Subspace structure for $\ExtL ^{\dagger }$}{equation.28}{}}
 \newlabel{eqn:extended_biorthogonal_matrices}{{29}{5}{Subspace structure for $\ExtL ^{\dagger }$}{equation.29}{}}
 \newlabel{eqn:extended_generalized_eigenvalue}{{30}{5}{Subspace structure for $\ExtL ^{\dagger }$}{equation.30}{}}
 \newlabel{eqn:khat}{{31}{5}{Subspace structure for $\ExtL ^{\dagger }$}{equation.31}{}}
@@ -44,28 +46,463 @@
 \citation{cabre03a,cabre03b,cabre05}
 \citation{coullet83}
 \citation{carini15,jain22,negi24}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Extended tangent space ($\mathbf  {\setbox \z@ \hbox {\mathsurround \z@ $\textstyle L$}\mathaccent "0362{L}}$)}}{6}{algorithm.1}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{algo:extended_direct_tangent}{{1}{6}{Extended tangent space ($\ExtL $)}{algorithm.1}{}}
+\savepicturepage{pgfid1}{6}
+\pgfsyspdfmark {pgfid1}{5578117}{41462411}
+\savepicturepage{pgfid2}{6}
+\pgfsyspdfmark {pgfid2}{11273534}{41462411}
+\savepicturepage{pgfid3}{6}
+\pgfsyspdfmark {pgfid3}{11273534}{41462411}
+\savepicturepage{pgfid4}{6}
+\pgfsyspdfmark {pgfid4}{6561158}{40673030}
+\savepicturepage{pgfid5}{6}
+\pgfsyspdfmark {pgfid5}{6561158}{40673030}
+\savepicturepage{pgfid6}{6}
+\pgfsyspdfmark {pgfid6}{12524118}{40673030}
+\savepicturepage{pgfid7}{6}
+\pgfsyspdfmark {pgfid7}{12524118}{40673030}
+\savepicturepage{pgfid8}{6}
+\pgfsyspdfmark {pgfid8}{7544199}{39883649}
+\savepicturepage{pgfid9}{6}
+\pgfsyspdfmark {pgfid9}{7544199}{39883649}
+\savepicturepage{pgfid10}{6}
+\pgfsyspdfmark {pgfid10}{7544199}{39883649}
+\savepicturepage{pgfid11}{6}
+\pgfsyspdfmark {pgfid11}{7544199}{39883649}
+\savepicturepage{pgfid12}{6}
+\pgfsyspdfmark {pgfid12}{7544199}{39883649}
+\savepicturepage{pgfid13}{6}
+\pgfsyspdfmark {pgfid13}{13008721}{39883649}
+\savepicturepage{pgfid14}{6}
+\pgfsyspdfmark {pgfid14}{13008721}{39883649}
+\savepicturepage{pgfid15}{6}
+\pgfsyspdfmark {pgfid15}{8527240}{38921466}
+\savepicturepage{pgfid16}{6}
+\pgfsyspdfmark {pgfid16}{8527240}{38921466}
+\savepicturepage{pgfid17}{6}
+\pgfsyspdfmark {pgfid17}{8527240}{38921466}
+\savepicturepage{pgfid18}{6}
+\pgfsyspdfmark {pgfid18}{8527240}{38921466}
+\savepicturepage{pgfid19}{6}
+\pgfsyspdfmark {pgfid19}{14032079}{38921466}
+\savepicturepage{pgfid20}{6}
+\pgfsyspdfmark {pgfid20}{14032079}{38921466}
+\savepicturepage{pgfid21}{6}
+\pgfsyspdfmark {pgfid21}{7544199}{38132085}
+\savepicturepage{pgfid22}{6}
+\pgfsyspdfmark {pgfid22}{7544199}{38132085}
+\savepicturepage{pgfid23}{6}
+\pgfsyspdfmark {pgfid23}{7544199}{38132085}
+\savepicturepage{pgfid24}{6}
+\pgfsyspdfmark {pgfid24}{7544199}{38132085}
+\savepointas{algpx@indentEnd-2}{pgfid25}{1.19995pt}{8.61108pt}
+\savepicturepage{pgfid25}{6}
+\pgfsyspdfmark {pgfid25}{7544199}{38132085}
+\savepicturepage{pgfid26}{6}
+\pgfsyspdfmark {pgfid26}{7544199}{38132085}
+\savepicturepage{pgfid27}{6}
+\pgfsyspdfmark {pgfid27}{8746170}{38132085}
+\savepicturepage{pgfid28}{6}
+\pgfsyspdfmark {pgfid28}{8746170}{38132085}
+\savepicturepage{pgfid29}{6}
+\pgfsyspdfmark {pgfid29}{8527240}{37342704}
+\savepicturepage{pgfid30}{6}
+\pgfsyspdfmark {pgfid30}{8527240}{37342704}
+\savepicturepage{pgfid31}{6}
+\pgfsyspdfmark {pgfid31}{8527240}{37342704}
+\savepicturepage{pgfid32}{6}
+\pgfsyspdfmark {pgfid32}{8527240}{37342704}
+\savepicturepage{pgfid33}{6}
+\pgfsyspdfmark {pgfid33}{11906416}{37342704}
+\savepicturepage{pgfid34}{6}
+\pgfsyspdfmark {pgfid34}{11906416}{37342704}
+\savepicturepage{pgfid35}{6}
+\pgfsyspdfmark {pgfid35}{7544199}{36553323}
+\savepicturepage{pgfid36}{6}
+\pgfsyspdfmark {pgfid36}{7544199}{36553323}
+\savepicturepage{pgfid37}{6}
+\pgfsyspdfmark {pgfid37}{7544199}{36553323}
+\savepicturepage{pgfid38}{6}
+\pgfsyspdfmark {pgfid38}{7544199}{36553323}
+\savepointas{algpx@indentEnd-3}{pgfid39}{1.19995pt}{8.61108pt}
+\savepicturepage{pgfid39}{6}
+\pgfsyspdfmark {pgfid39}{7544199}{36553323}
+\savepicturepage{pgfid40}{6}
+\pgfsyspdfmark {pgfid40}{9462914}{36553323}
+\savepicturepage{pgfid41}{6}
+\pgfsyspdfmark {pgfid41}{9462914}{36553323}
+\savepicturepage{pgfid42}{6}
+\pgfsyspdfmark {pgfid42}{6561158}{35763942}
+\savepicturepage{pgfid43}{6}
+\pgfsyspdfmark {pgfid43}{6561158}{35763942}
+\savepicturepage{pgfid44}{6}
+\pgfsyspdfmark {pgfid44}{6561158}{35763942}
+\savepicturepage{pgfid45}{6}
+\pgfsyspdfmark {pgfid45}{6561158}{35763942}
+\savepointas{algpx@indentEnd-1}{pgfid46}{1.19995pt}{8.61108pt}
+\savepicturepage{pgfid46}{6}
+\pgfsyspdfmark {pgfid46}{6561158}{35763942}
+\savepicturepage{pgfid47}{6}
+\pgfsyspdfmark {pgfid47}{8887810}{35763942}
+\savepicturepage{pgfid48}{6}
+\pgfsyspdfmark {pgfid48}{8887810}{35763942}
+\savepicturepage{pgfid49}{6}
+\pgfsyspdfmark {pgfid49}{5578117}{34974561}
+\savepicturepage{pgfid50}{6}
+\pgfsyspdfmark {pgfid50}{5578117}{34974561}
+\savepicturepage{pgfid51}{6}
+\pgfsyspdfmark {pgfid51}{5578117}{34974561}
+\savepicturepage{pgfid52}{6}
+\pgfsyspdfmark {pgfid52}{5578117}{34974561}
+\savepointas{algpx@indentEnd-0}{pgfid53}{1.19995pt}{8.61108pt}
+\savepicturepage{pgfid53}{6}
+\pgfsyspdfmark {pgfid53}{5578117}{34974561}
+\savepicturepage{pgfid54}{6}
+\pgfsyspdfmark {pgfid54}{5578117}{32606418}
+\savepicturepage{pgfid55}{6}
+\pgfsyspdfmark {pgfid55}{11443318}{32606418}
+\savepicturepage{pgfid56}{6}
+\pgfsyspdfmark {pgfid56}{11443318}{32606418}
+\savepicturepage{pgfid57}{6}
+\pgfsyspdfmark {pgfid57}{6561158}{31817037}
+\savepicturepage{pgfid58}{6}
+\pgfsyspdfmark {pgfid58}{6561158}{31817037}
+\savepicturepage{pgfid59}{6}
+\pgfsyspdfmark {pgfid59}{6561158}{31817037}
+\savepicturepage{pgfid60}{6}
+\pgfsyspdfmark {pgfid60}{6561158}{31817037}
+\savepicturepage{pgfid61}{6}
+\pgfsyspdfmark {pgfid61}{6561158}{31817037}
+\savepicturepage{pgfid62}{6}
+\pgfsyspdfmark {pgfid62}{12524118}{31817037}
+\savepicturepage{pgfid63}{6}
+\pgfsyspdfmark {pgfid63}{12524118}{31817037}
+\savepicturepage{pgfid64}{6}
+\pgfsyspdfmark {pgfid64}{7544199}{31027656}
+\savepicturepage{pgfid65}{6}
+\pgfsyspdfmark {pgfid65}{7544199}{31027656}
+\savepicturepage{pgfid66}{6}
+\pgfsyspdfmark {pgfid66}{7544199}{31027656}
+\savepicturepage{pgfid67}{6}
+\pgfsyspdfmark {pgfid67}{7544199}{31027656}
+\savepicturepage{pgfid68}{6}
+\pgfsyspdfmark {pgfid68}{7544199}{31027656}
+\savepicturepage{pgfid69}{6}
+\pgfsyspdfmark {pgfid69}{13069044}{31027656}
+\savepicturepage{pgfid70}{6}
+\pgfsyspdfmark {pgfid70}{13069044}{31027656}
+\savepicturepage{pgfid71}{6}
+\pgfsyspdfmark {pgfid71}{8527240}{30065473}
+\savepicturepage{pgfid72}{6}
+\pgfsyspdfmark {pgfid72}{8527240}{30065473}
+\savepicturepage{pgfid73}{6}
+\pgfsyspdfmark {pgfid73}{8527240}{30065473}
+\savepicturepage{pgfid74}{6}
+\pgfsyspdfmark {pgfid74}{8527240}{30065473}
+\savepicturepage{pgfid75}{6}
+\pgfsyspdfmark {pgfid75}{16717379}{30065473}
+\savepicturepage{pgfid76}{6}
+\pgfsyspdfmark {pgfid76}{16717379}{30065473}
+\savepicturepage{pgfid77}{6}
+\pgfsyspdfmark {pgfid77}{7544199}{29276092}
+\savepicturepage{pgfid78}{6}
+\pgfsyspdfmark {pgfid78}{7544199}{29276092}
+\savepicturepage{pgfid79}{6}
+\pgfsyspdfmark {pgfid79}{7544199}{29276092}
+\savepicturepage{pgfid80}{6}
+\pgfsyspdfmark {pgfid80}{7544199}{29276092}
+\savepointas{algpx@indentEnd-6}{pgfid81}{1.19995pt}{8.61108pt}
+\savepicturepage{pgfid81}{6}
+\pgfsyspdfmark {pgfid81}{7544199}{29276092}
+\savepicturepage{pgfid82}{6}
+\pgfsyspdfmark {pgfid82}{7544199}{29276092}
+\savepicturepage{pgfid83}{6}
+\pgfsyspdfmark {pgfid83}{8746170}{29276092}
+\savepicturepage{pgfid84}{6}
+\pgfsyspdfmark {pgfid84}{8746170}{29276092}
+\savepicturepage{pgfid85}{6}
+\pgfsyspdfmark {pgfid85}{8527240}{28486711}
+\savepicturepage{pgfid86}{6}
+\pgfsyspdfmark {pgfid86}{8527240}{28486711}
+\savepicturepage{pgfid87}{6}
+\pgfsyspdfmark {pgfid87}{8527240}{28486711}
+\savepicturepage{pgfid88}{6}
+\pgfsyspdfmark {pgfid88}{8527240}{28486711}
+\savepicturepage{pgfid89}{6}
+\pgfsyspdfmark {pgfid89}{14557660}{28486711}
+\savepicturepage{pgfid90}{6}
+\pgfsyspdfmark {pgfid90}{14557660}{28486711}
+\savepicturepage{pgfid91}{6}
+\pgfsyspdfmark {pgfid91}{7544199}{27697330}
+\savepicturepage{pgfid92}{6}
+\pgfsyspdfmark {pgfid92}{7544199}{27697330}
+\savepicturepage{pgfid93}{6}
+\pgfsyspdfmark {pgfid93}{7544199}{27697330}
+\savepicturepage{pgfid94}{6}
+\pgfsyspdfmark {pgfid94}{7544199}{27697330}
+\savepointas{algpx@indentEnd-7}{pgfid95}{1.19995pt}{8.61108pt}
+\savepicturepage{pgfid95}{6}
+\pgfsyspdfmark {pgfid95}{7544199}{27697330}
+\savepicturepage{pgfid96}{6}
+\pgfsyspdfmark {pgfid96}{9462914}{27697330}
+\savepicturepage{pgfid97}{6}
+\pgfsyspdfmark {pgfid97}{9462914}{27697330}
+\savepicturepage{pgfid98}{6}
+\pgfsyspdfmark {pgfid98}{6561158}{26907949}
+\savepicturepage{pgfid99}{6}
+\pgfsyspdfmark {pgfid99}{6561158}{26907949}
+\savepicturepage{pgfid100}{6}
+\pgfsyspdfmark {pgfid100}{6561158}{26907949}
+\savepicturepage{pgfid101}{6}
+\pgfsyspdfmark {pgfid101}{6561158}{26907949}
+\savepointas{algpx@indentEnd-5}{pgfid102}{1.19995pt}{8.61108pt}
+\savepicturepage{pgfid102}{6}
+\pgfsyspdfmark {pgfid102}{6561158}{26907949}
+\savepicturepage{pgfid103}{6}
+\pgfsyspdfmark {pgfid103}{8887810}{26907949}
+\savepicturepage{pgfid104}{6}
+\pgfsyspdfmark {pgfid104}{8887810}{26907949}
+\savepicturepage{pgfid105}{6}
+\pgfsyspdfmark {pgfid105}{5578117}{26118568}
+\savepicturepage{pgfid106}{6}
+\pgfsyspdfmark {pgfid106}{5578117}{26118568}
+\savepicturepage{pgfid107}{6}
+\pgfsyspdfmark {pgfid107}{5578117}{26118568}
+\savepicturepage{pgfid108}{6}
+\pgfsyspdfmark {pgfid108}{5578117}{26118568}
+\savepointas{algpx@indentEnd-4}{pgfid109}{1.19995pt}{8.61108pt}
+\savepicturepage{pgfid109}{6}
+\pgfsyspdfmark {pgfid109}{5578117}{26118568}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces Extended tangent space ($\mathbf  {\setbox \z@ \hbox {\mathsurround \z@ $\textstyle L$}\mathaccent "0362{L}}^{\dagger }$)}}{6}{algorithm.2}\protected@file@percent }
+\newlabel{algo:extended_adjoint_tangent}{{2}{6}{Extended tangent space ($\ExtL ^{\dagger }$)}{algorithm.2}{}}
+\savepicturepage{pgfid110}{6}
+\pgfsyspdfmark {pgfid110}{21241427}{40903925}
+\savepicturepage{pgfid111}{6}
+\pgfsyspdfmark {pgfid111}{27122465}{40903925}
+\savepicturepage{pgfid112}{6}
+\pgfsyspdfmark {pgfid112}{27122465}{40903925}
+\savepicturepage{pgfid113}{6}
+\pgfsyspdfmark {pgfid113}{22224468}{40114544}
+\savepicturepage{pgfid114}{6}
+\pgfsyspdfmark {pgfid114}{22224468}{40114544}
+\savepicturepage{pgfid115}{6}
+\pgfsyspdfmark {pgfid115}{28001807}{40114544}
+\savepicturepage{pgfid116}{6}
+\pgfsyspdfmark {pgfid116}{28001807}{40114544}
+\savepicturepage{pgfid117}{6}
+\pgfsyspdfmark {pgfid117}{23207509}{39325163}
+\savepicturepage{pgfid118}{6}
+\pgfsyspdfmark {pgfid118}{23207509}{39325163}
+\savepicturepage{pgfid119}{6}
+\pgfsyspdfmark {pgfid119}{23207509}{39325163}
+\savepicturepage{pgfid120}{6}
+\pgfsyspdfmark {pgfid120}{23207509}{39325163}
+\savepicturepage{pgfid121}{6}
+\pgfsyspdfmark {pgfid121}{23207509}{39325163}
+\savepicturepage{pgfid122}{6}
+\pgfsyspdfmark {pgfid122}{28672031}{39325163}
+\savepicturepage{pgfid123}{6}
+\pgfsyspdfmark {pgfid123}{28672031}{39325163}
+\savepicturepage{pgfid124}{6}
+\pgfsyspdfmark {pgfid124}{24190550}{38535782}
+\savepicturepage{pgfid125}{6}
+\pgfsyspdfmark {pgfid125}{24190550}{38535782}
+\savepicturepage{pgfid126}{6}
+\pgfsyspdfmark {pgfid126}{24190550}{38535782}
+\savepicturepage{pgfid127}{6}
+\pgfsyspdfmark {pgfid127}{24190550}{38535782}
+\savepicturepage{pgfid128}{6}
+\pgfsyspdfmark {pgfid128}{27577035}{38535782}
+\savepicturepage{pgfid129}{6}
+\pgfsyspdfmark {pgfid129}{27577035}{38535782}
+\savepicturepage{pgfid130}{6}
+\pgfsyspdfmark {pgfid130}{23207509}{37746401}
+\savepicturepage{pgfid131}{6}
+\pgfsyspdfmark {pgfid131}{23207509}{37746401}
+\savepicturepage{pgfid132}{6}
+\pgfsyspdfmark {pgfid132}{23207509}{37746401}
+\savepicturepage{pgfid133}{6}
+\pgfsyspdfmark {pgfid133}{23207509}{37746401}
+\savepointas{algpx@indentEnd-10}{pgfid134}{1.19995pt}{8.61108pt}
+\savepicturepage{pgfid134}{6}
+\pgfsyspdfmark {pgfid134}{23207509}{37746401}
+\savepicturepage{pgfid135}{6}
+\pgfsyspdfmark {pgfid135}{23207509}{37746401}
+\savepicturepage{pgfid136}{6}
+\pgfsyspdfmark {pgfid136}{24409480}{37746401}
+\savepicturepage{pgfid137}{6}
+\pgfsyspdfmark {pgfid137}{24409480}{37746401}
+\savepicturepage{pgfid138}{6}
+\pgfsyspdfmark {pgfid138}{24190550}{36957020}
+\savepicturepage{pgfid139}{6}
+\pgfsyspdfmark {pgfid139}{24190550}{36957020}
+\savepicturepage{pgfid140}{6}
+\pgfsyspdfmark {pgfid140}{24190550}{36957020}
+\savepicturepage{pgfid141}{6}
+\pgfsyspdfmark {pgfid141}{24190550}{36957020}
+\savepicturepage{pgfid142}{6}
+\pgfsyspdfmark {pgfid142}{33451160}{36957020}
+\savepicturepage{pgfid143}{6}
+\pgfsyspdfmark {pgfid143}{33451160}{36957020}
+\savepicturepage{pgfid144}{6}
+\pgfsyspdfmark {pgfid144}{23207509}{36167639}
+\savepicturepage{pgfid145}{6}
+\pgfsyspdfmark {pgfid145}{23207509}{36167639}
+\savepicturepage{pgfid146}{6}
+\pgfsyspdfmark {pgfid146}{23207509}{36167639}
+\savepicturepage{pgfid147}{6}
+\pgfsyspdfmark {pgfid147}{23207509}{36167639}
+\savepointas{algpx@indentEnd-11}{pgfid148}{1.19995pt}{8.61108pt}
+\savepicturepage{pgfid148}{6}
+\pgfsyspdfmark {pgfid148}{23207509}{36167639}
+\savepicturepage{pgfid149}{6}
+\pgfsyspdfmark {pgfid149}{25126224}{36167639}
+\savepicturepage{pgfid150}{6}
+\pgfsyspdfmark {pgfid150}{25126224}{36167639}
+\savepicturepage{pgfid151}{6}
+\pgfsyspdfmark {pgfid151}{22224468}{35378258}
+\savepicturepage{pgfid152}{6}
+\pgfsyspdfmark {pgfid152}{22224468}{35378258}
+\savepicturepage{pgfid153}{6}
+\pgfsyspdfmark {pgfid153}{22224468}{35378258}
+\savepicturepage{pgfid154}{6}
+\pgfsyspdfmark {pgfid154}{22224468}{35378258}
+\savepointas{algpx@indentEnd-9}{pgfid155}{1.19995pt}{8.61108pt}
+\savepicturepage{pgfid155}{6}
+\pgfsyspdfmark {pgfid155}{22224468}{35378258}
+\savepicturepage{pgfid156}{6}
+\pgfsyspdfmark {pgfid156}{24551120}{35378258}
+\savepicturepage{pgfid157}{6}
+\pgfsyspdfmark {pgfid157}{24551120}{35378258}
+\savepicturepage{pgfid158}{6}
+\pgfsyspdfmark {pgfid158}{22224468}{34588877}
+\savepicturepage{pgfid159}{6}
+\pgfsyspdfmark {pgfid159}{22224468}{34588877}
+\savepicturepage{pgfid160}{6}
+\pgfsyspdfmark {pgfid160}{22224468}{34588877}
+\savepicturepage{pgfid161}{6}
+\pgfsyspdfmark {pgfid161}{22224468}{34588877}
+\savepicturepage{pgfid162}{6}
+\pgfsyspdfmark {pgfid162}{22224468}{34588877}
+\savepicturepage{pgfid163}{6}
+\pgfsyspdfmark {pgfid163}{28171591}{34588877}
+\savepicturepage{pgfid164}{6}
+\pgfsyspdfmark {pgfid164}{28171591}{34588877}
+\savepicturepage{pgfid165}{6}
+\pgfsyspdfmark {pgfid165}{23207509}{33799496}
+\savepicturepage{pgfid166}{6}
+\pgfsyspdfmark {pgfid166}{23207509}{33799496}
+\savepicturepage{pgfid167}{6}
+\pgfsyspdfmark {pgfid167}{23207509}{33799496}
+\savepicturepage{pgfid168}{6}
+\pgfsyspdfmark {pgfid168}{23207509}{33799496}
+\savepicturepage{pgfid169}{6}
+\pgfsyspdfmark {pgfid169}{23207509}{33799496}
+\savepicturepage{pgfid170}{6}
+\pgfsyspdfmark {pgfid170}{28732354}{33799496}
+\savepicturepage{pgfid171}{6}
+\pgfsyspdfmark {pgfid171}{28732354}{33799496}
+\savepicturepage{pgfid172}{6}
+\pgfsyspdfmark {pgfid172}{24190550}{33010115}
+\savepicturepage{pgfid173}{6}
+\pgfsyspdfmark {pgfid173}{24190550}{33010115}
+\savepicturepage{pgfid174}{6}
+\pgfsyspdfmark {pgfid174}{24190550}{33010115}
+\savepicturepage{pgfid175}{6}
+\pgfsyspdfmark {pgfid175}{24190550}{33010115}
+\savepicturepage{pgfid176}{6}
+\pgfsyspdfmark {pgfid176}{27637358}{33010115}
+\savepicturepage{pgfid177}{6}
+\pgfsyspdfmark {pgfid177}{27637358}{33010115}
+\savepicturepage{pgfid178}{6}
+\pgfsyspdfmark {pgfid178}{23207509}{32220734}
+\savepicturepage{pgfid179}{6}
+\pgfsyspdfmark {pgfid179}{23207509}{32220734}
+\savepicturepage{pgfid180}{6}
+\pgfsyspdfmark {pgfid180}{23207509}{32220734}
+\savepicturepage{pgfid181}{6}
+\pgfsyspdfmark {pgfid181}{23207509}{32220734}
+\savepointas{algpx@indentEnd-13}{pgfid182}{1.19995pt}{8.61108pt}
+\savepicturepage{pgfid182}{6}
+\pgfsyspdfmark {pgfid182}{23207509}{32220734}
+\savepicturepage{pgfid183}{6}
+\pgfsyspdfmark {pgfid183}{23207509}{32220734}
+\savepicturepage{pgfid184}{6}
+\pgfsyspdfmark {pgfid184}{24409480}{32220734}
+\savepicturepage{pgfid185}{6}
+\pgfsyspdfmark {pgfid185}{24409480}{32220734}
+\savepicturepage{pgfid186}{6}
+\pgfsyspdfmark {pgfid186}{24190550}{31431353}
+\savepicturepage{pgfid187}{6}
+\pgfsyspdfmark {pgfid187}{24190550}{31431353}
+\savepicturepage{pgfid188}{6}
+\pgfsyspdfmark {pgfid188}{24190550}{31431353}
+\savepicturepage{pgfid189}{6}
+\pgfsyspdfmark {pgfid189}{24190550}{31431353}
+\savepicturepage{pgfid190}{6}
+\pgfsyspdfmark {pgfid190}{33545539}{31431353}
+\savepicturepage{pgfid191}{6}
+\pgfsyspdfmark {pgfid191}{33545539}{31431353}
+\savepicturepage{pgfid192}{6}
+\pgfsyspdfmark {pgfid192}{23207509}{30641972}
+\savepicturepage{pgfid193}{6}
+\pgfsyspdfmark {pgfid193}{23207509}{30641972}
+\savepicturepage{pgfid194}{6}
+\pgfsyspdfmark {pgfid194}{23207509}{30641972}
+\savepicturepage{pgfid195}{6}
+\pgfsyspdfmark {pgfid195}{23207509}{30641972}
+\savepointas{algpx@indentEnd-14}{pgfid196}{1.19995pt}{8.61108pt}
+\savepicturepage{pgfid196}{6}
+\pgfsyspdfmark {pgfid196}{23207509}{30641972}
+\savepicturepage{pgfid197}{6}
+\pgfsyspdfmark {pgfid197}{25126224}{30641972}
+\savepicturepage{pgfid198}{6}
+\pgfsyspdfmark {pgfid198}{25126224}{30641972}
+\savepicturepage{pgfid199}{6}
+\pgfsyspdfmark {pgfid199}{22224468}{29852591}
+\savepicturepage{pgfid200}{6}
+\pgfsyspdfmark {pgfid200}{22224468}{29852591}
+\savepicturepage{pgfid201}{6}
+\pgfsyspdfmark {pgfid201}{22224468}{29852591}
+\savepicturepage{pgfid202}{6}
+\pgfsyspdfmark {pgfid202}{22224468}{29852591}
+\savepointas{algpx@indentEnd-12}{pgfid203}{1.19995pt}{8.61108pt}
+\savepicturepage{pgfid203}{6}
+\pgfsyspdfmark {pgfid203}{22224468}{29852591}
+\savepicturepage{pgfid204}{6}
+\pgfsyspdfmark {pgfid204}{24551120}{29852591}
+\savepicturepage{pgfid205}{6}
+\pgfsyspdfmark {pgfid205}{24551120}{29852591}
+\savepicturepage{pgfid206}{6}
+\pgfsyspdfmark {pgfid206}{21241427}{29063210}
+\savepicturepage{pgfid207}{6}
+\pgfsyspdfmark {pgfid207}{21241427}{29063210}
+\savepicturepage{pgfid208}{6}
+\pgfsyspdfmark {pgfid208}{21241427}{29063210}
+\savepicturepage{pgfid209}{6}
+\pgfsyspdfmark {pgfid209}{21241427}{29063210}
+\savepointas{algpx@indentEnd-8}{pgfid210}{1.19995pt}{8.61108pt}
+\savepicturepage{pgfid210}{6}
+\pgfsyspdfmark {pgfid210}{21241427}{29063210}
 \@writefile{toc}{\contentsline {section}{\numberline {2}Center Manifold for the extended system}{6}{section.2}\protected@file@percent }
 \newlabel{sec:center_manifold_derivation}{{2}{6}{Center Manifold for the extended system}{section.2}{}}
-\newlabel{eqn:index_set}{{33}{6}{Center Manifold for the extended system}{equation.33}{}}
-\newlabel{eqn:summation}{{34}{6}{Center Manifold for the extended system}{equation.34}{}}
 \citation{haro16}
 \citation{jain22}
+\newlabel{eqn:index_set}{{33}{7}{Center Manifold for the extended system}{equation.33}{}}
+\newlabel{eqn:summation}{{34}{7}{Center Manifold for the extended system}{equation.34}{}}
 \newlabel{eqn:binomial}{{35}{7}{Center Manifold for the extended system}{equation.35}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Normal Form}{7}{subsection.2.1}\protected@file@percent }
 \newlabel{sec:normal_form}{{2.1}{7}{Normal Form}{subsection.2.1}{}}
-\newlabel{eqn:reduced_normal_form}{{38}{7}{Normal Form}{equation.38}{}}
-\newlabel{eqn:asymptotic_normal_form}{{39}{7}{Normal Form}{equation.39}{}}
-\newlabel{eqn:asymptotic_nonlinear_term}{{40}{7}{Normal Form}{equation.40}{}}
-\newlabel{eqn:asymptotic_substitution}{{41}{7}{Normal Form}{equation.41}{}}
+\newlabel{eqn:reduced_normal_form}{{38}{8}{Normal Form}{equation.38}{}}
+\newlabel{eqn:asymptotic_normal_form}{{39}{8}{Normal Form}{equation.39}{}}
+\newlabel{eqn:asymptotic_nonlinear_term}{{40}{8}{Normal Form}{equation.40}{}}
+\newlabel{eqn:asymptotic_substitution}{{41}{8}{Normal Form}{equation.41}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.1}Asymptotic terms of $\mathcal  {O}(|x|)$}{8}{subsubsection.2.1.1}\protected@file@percent }
 \newlabel{sec:normal_form_O1}{{2.1.1}{8}{Asymptotic terms of $\mathcal {O}(|x|)$}{subsubsection.2.1.1}{}}
 \newlabel{eqn:asymptotic_O1}{{42}{8}{Asymptotic terms of $\mathcal {O}(|x|)$}{equation.42}{}}
 \newlabel{eqn:GEV_O1}{{43}{8}{Asymptotic terms of $\mathcal {O}(|x|)$}{equation.43}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.2}Asymptotic terms of $\mathcal  {O}(|x|^{2})$}{8}{subsubsection.2.1.2}\protected@file@percent }
-\newlabel{sec:normal_form_O2}{{2.1.2}{8}{Asymptotic terms of $\mathcal {O}(|x|^{2})$}{subsubsection.2.1.2}{}}
-\newlabel{eqn:asymptotic_O2}{{44}{8}{Asymptotic terms of $\mathcal {O}(|x|^{2})$}{equation.44}{}}
-\newlabel{eqn:asymptotic_O2_ab}{{45}{8}{Asymptotic terms of $\mathcal {O}(|x|^{2})$}{equation.45}{}}
-\newlabel{eqn:O2_ab_split}{{46}{8}{Asymptotic terms of $\mathcal {O}(|x|^{2})$}{equation.46}{}}
 \ExplSyntaxOn \cs_if_free:NT \pgfsyspdfmark {\cs_set_eq:NN \pgfsyspdfmark \@gobblethree }\ExplSyntaxOff 
 \ExplSyntaxOn 
 \char_set_catcode_space:n {32}
@@ -75,82 +512,11 @@
 \char_set_catcode_space:n {32}
 \tl_gset:cn {c__nicematrix_2_tl}{\seq_gset_from_clist:Nn \g__nicematrix_size_seq {1,10,10,1,10,10}\seq_gset_from_clist:Nn \g__nicematrix_pos_of_blocks_seq {{8}{10}{9}{10}{},{8}{8}{9}{9}{},{8}{7}{10}{7}{},{5}{5}{6}{6}{},{5}{4}{10}{4}{},{2}{2}{3}{3}{},{2}{1}{3}{1}{},{1}{7}{6}{7}{},{1}{4}{3}{4}{}}}
 \ExplSyntaxOff 
-\pgfsyspdfmark {pgfid70}{6153629}{49707069}
-\pgfsyspdfmark {pgfid71}{6284702}{48934626}
-\pgfsyspdfmark {pgfid72}{6920757}{48934626}
-\pgfsyspdfmark {pgfid73}{8464827}{48934626}
-\pgfsyspdfmark {pgfid74}{9807801}{48934626}
-\pgfsyspdfmark {pgfid75}{12755894}{48934626}
-\pgfsyspdfmark {pgfid76}{6153629}{48615347}
-\pgfsyspdfmark {pgfid77}{6829734}{48062783}
-\pgfsyspdfmark {pgfid78}{6920757}{48062783}
-\pgfsyspdfmark {pgfid79}{6153629}{47825967}
-\pgfsyspdfmark {pgfid80}{6920757}{47273403}
-\pgfsyspdfmark {pgfid81}{6153629}{47036587}
-\pgfsyspdfmark {pgfid82}{6920757}{46264144}
-\pgfsyspdfmark {pgfid83}{8464827}{46264144}
-\pgfsyspdfmark {pgfid84}{9807801}{46264144}
-\pgfsyspdfmark {pgfid85}{11412920}{46264144}
-\pgfsyspdfmark {pgfid86}{6153629}{45944865}
-\pgfsyspdfmark {pgfid87}{6920757}{45392301}
-\pgfsyspdfmark {pgfid88}{9807801}{45392301}
-\pgfsyspdfmark {pgfid89}{6153629}{45155485}
-\pgfsyspdfmark {pgfid90}{6920757}{44602921}
-\pgfsyspdfmark {pgfid91}{6153629}{44366105}
-\pgfsyspdfmark {pgfid92}{6920757}{43593662}
-\pgfsyspdfmark {pgfid93}{11412920}{43593662}
-\pgfsyspdfmark {pgfid94}{12755894}{43593662}
-\pgfsyspdfmark {pgfid95}{14361013}{43593662}
-\pgfsyspdfmark {pgfid96}{6153629}{43274383}
-\pgfsyspdfmark {pgfid97}{6920757}{42721819}
-\pgfsyspdfmark {pgfid98}{12755894}{42721819}
-\pgfsyspdfmark {pgfid99}{15847517}{42721819}
-\pgfsyspdfmark {pgfid100}{6153629}{42485003}
-\pgfsyspdfmark {pgfid101}{6920757}{41932439}
-\pgfsyspdfmark {pgfid102}{6153629}{41695623}
-\pgfsyspdfmark {pgfid103}{6920757}{40923180}
-\pgfsyspdfmark {pgfid104}{14361013}{40923180}
-\pgfsyspdfmark {pgfid105}{15847517}{40923180}
-\pgfsyspdfmark {pgfid106}{6153629}{40603901}
-\pgfsyspdfmark {pgfid107}{6153629}{40603901}
-\pgfsyspdfmark {pgfid108}{7687884}{40603901}
-\pgfsyspdfmark {pgfid109}{7950029}{40603901}
-\pgfsyspdfmark {pgfid110}{8979624}{40603901}
-\pgfsyspdfmark {pgfid111}{10635977}{40603901}
-\pgfsyspdfmark {pgfid112}{10898122}{40603901}
-\pgfsyspdfmark {pgfid113}{11927717}{40603901}
-\pgfsyspdfmark {pgfid114}{13584070}{40603901}
-\pgfsyspdfmark {pgfid115}{13846215}{40603901}
-\pgfsyspdfmark {pgfid116}{14875810}{40603901}
-\pgfsyspdfmark {pgfid117}{16819223}{40603901}
-\pgfsyspdfmark {pgfid118}{16819223}{44991031}
-\pgfsyspdfmark {pgfid119}{16819223}{44991031}
-\pgfsyspdfmark {pgfid120}{16819223}{44991031}
-\pgfsyspdfmark {pgfid121}{16819223}{44991031}
-\pgfsyspdfmark {pgfid122}{16819223}{44991031}
-\pgfsyspdfmark {pgfid123}{16819223}{44991031}
-\pgfsyspdfmark {pgfid124}{16819223}{44991031}
-\pgfsyspdfmark {pgfid125}{16819223}{44991031}
-\pgfsyspdfmark {pgfid126}{16819223}{44991031}
-\pgfsyspdfmark {pgfid127}{16819223}{44991031}
-\pgfsyspdfmark {pgfid128}{16819223}{44991031}
-\pgfsyspdfmark {pgfid129}{16819223}{44991031}
-\pgfsyspdfmark {pgfid130}{16819223}{44991031}
-\pgfsyspdfmark {pgfid131}{16819223}{44991031}
-\pgfsyspdfmark {pgfid132}{16819223}{44991031}
-\pgfsyspdfmark {pgfid133}{16819223}{44991031}
-\pgfsyspdfmark {pgfid134}{16819223}{44991031}
-\pgfsyspdfmark {pgfid135}{16819223}{44991031}
-\pgfsyspdfmark {pgfid136}{17263742}{44964817}
-\savepicturepage{pgfid138}{9}
-\pgfsyspdfmark {pgfid138}{17263742}{44964817}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Coupling of the vectors $\mathbf  {\setbox \z@ \hbox {\mathsurround \z@ $\textstyle y$}\mathaccent "0362{y}}_{i_{1},i_{2}}$ with the $\mathbf  {\setbox \z@ \hbox {\mathsurround \z@ $\textstyle K$}\mathaccent "0362{K}}$ matrix for a given $(a,b)$.}}{9}{figure.caption.3}\protected@file@percent }
-\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{fig:Khat_coupling_O2}{{1}{9}{Coupling of the vectors $\yhatbf _{i_{1},i_{2}}$ with the $\Khat $ matrix for a given $(a,b)$}{figure.caption.3}{}}
-\newlabel{eqn:offdiagonal_O2}{{47}{9}{Asymptotic terms of $\mathcal {O}(|x|^{2})$}{equation.47}{}}
-\newlabel{eqn:asymptotic_O2_compact}{{48}{9}{Asymptotic terms of $\mathcal {O}(|x|^{2})$}{equation.48}{}}
-\newlabel{eqn:extended_resolvent}{{49}{9}{Asymptotic terms of $\mathcal {O}(|x|^{2})$}{equation.49}{}}
-\newlabel{eqn:g2_definition}{{50}{9}{Asymptotic terms of $\mathcal {O}(|x|^{2})$}{equation.50}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.2}Asymptotic terms of $\mathcal  {O}(|x|^{2})$}{9}{subsubsection.2.1.2}\protected@file@percent }
+\newlabel{sec:normal_form_O2}{{2.1.2}{9}{Asymptotic terms of $\mathcal {O}(|x|^{2})$}{subsubsection.2.1.2}{}}
+\newlabel{eqn:asymptotic_O2}{{44}{9}{Asymptotic terms of $\mathcal {O}(|x|^{2})$}{equation.44}{}}
+\newlabel{eqn:asymptotic_O2_ab}{{45}{9}{Asymptotic terms of $\mathcal {O}(|x|^{2})$}{equation.45}{}}
+\newlabel{eqn:O2_ab_split}{{46}{9}{Asymptotic terms of $\mathcal {O}(|x|^{2})$}{equation.46}{}}
 \ExplSyntaxOn 
 \char_set_catcode_space:n {32}
 \tl_gset:cn {c__nicematrix_3_tl}{\seq_gset_from_clist:Nn \g__nicematrix_size_seq {1,13,13,1,13,13}\seq_gset_from_clist:Nn \g__nicematrix_pos_of_blocks_seq {{11}{13}{12}{13}{},{11}{11}{12}{12}{},{11}{10}{13}{10}{},{8}{8}{9}{9}{},{8}{7}{13}{7}{},{5}{5}{6}{6}{},{5}{4}{13}{4}{},{2}{2}{3}{3}{},{2}{1}{3}{1}{},{1}{10}{9}{10}{},{1}{7}{6}{7}{},{1}{4}{3}{4}{}}}
@@ -159,456 +525,543 @@
 \char_set_catcode_space:n {32}
 \tl_gset:cn {c__nicematrix_4_tl}{\seq_gset_from_clist:Nn \g__nicematrix_size_seq {1,13,13,1,13,13}\seq_gset_from_clist:Nn \g__nicematrix_pos_of_blocks_seq {{11}{13}{12}{13}{},{11}{11}{12}{12}{},{11}{10}{13}{10}{},{8}{8}{9}{9}{},{8}{7}{13}{7}{},{5}{5}{6}{6}{},{5}{4}{13}{4}{},{2}{2}{3}{3}{},{2}{1}{3}{1}{},{1}{10}{9}{10}{},{1}{7}{6}{7}{},{1}{4}{3}{4}{}}}
 \ExplSyntaxOff 
+\pgfsyspdfmark {pgfid280}{6675743}{49707069}
+\pgfsyspdfmark {pgfid281}{6806816}{48934626}
+\pgfsyspdfmark {pgfid282}{7442871}{48934626}
+\pgfsyspdfmark {pgfid283}{8986941}{48934626}
+\pgfsyspdfmark {pgfid284}{10329915}{48934626}
+\pgfsyspdfmark {pgfid285}{13278008}{48934626}
+\pgfsyspdfmark {pgfid286}{6675743}{48615347}
+\pgfsyspdfmark {pgfid287}{7351848}{48062783}
+\pgfsyspdfmark {pgfid288}{7442871}{48062783}
+\pgfsyspdfmark {pgfid289}{6675743}{47825967}
+\pgfsyspdfmark {pgfid290}{7442871}{47273403}
+\pgfsyspdfmark {pgfid291}{6675743}{47036587}
+\pgfsyspdfmark {pgfid292}{7442871}{46264144}
+\pgfsyspdfmark {pgfid293}{8986941}{46264144}
+\pgfsyspdfmark {pgfid294}{10329915}{46264144}
+\pgfsyspdfmark {pgfid295}{11935034}{46264144}
+\pgfsyspdfmark {pgfid296}{6675743}{45944865}
+\pgfsyspdfmark {pgfid297}{7442871}{45392301}
+\pgfsyspdfmark {pgfid298}{10329915}{45392301}
+\pgfsyspdfmark {pgfid299}{6675743}{45155485}
+\pgfsyspdfmark {pgfid300}{7442871}{44602921}
+\pgfsyspdfmark {pgfid301}{6675743}{44366105}
+\pgfsyspdfmark {pgfid302}{7442871}{43593662}
+\pgfsyspdfmark {pgfid303}{11935034}{43593662}
+\pgfsyspdfmark {pgfid304}{13278008}{43593662}
+\pgfsyspdfmark {pgfid305}{14883127}{43593662}
+\pgfsyspdfmark {pgfid306}{6675743}{43274383}
+\pgfsyspdfmark {pgfid307}{7442871}{42721819}
+\pgfsyspdfmark {pgfid308}{13278008}{42721819}
+\pgfsyspdfmark {pgfid309}{16369631}{42721819}
+\pgfsyspdfmark {pgfid310}{6675743}{42485003}
+\pgfsyspdfmark {pgfid311}{7442871}{41932439}
+\pgfsyspdfmark {pgfid312}{6675743}{41695623}
+\pgfsyspdfmark {pgfid313}{7442871}{40923180}
+\pgfsyspdfmark {pgfid314}{14883127}{40923180}
+\pgfsyspdfmark {pgfid315}{16369631}{40923180}
+\pgfsyspdfmark {pgfid316}{6675743}{40603901}
+\pgfsyspdfmark {pgfid317}{6675743}{40603901}
+\pgfsyspdfmark {pgfid318}{8209998}{40603901}
+\pgfsyspdfmark {pgfid319}{8472143}{40603901}
+\pgfsyspdfmark {pgfid320}{9501738}{40603901}
+\pgfsyspdfmark {pgfid321}{11158091}{40603901}
+\pgfsyspdfmark {pgfid322}{11420236}{40603901}
+\pgfsyspdfmark {pgfid323}{12449831}{40603901}
+\pgfsyspdfmark {pgfid324}{14106184}{40603901}
+\pgfsyspdfmark {pgfid325}{14368329}{40603901}
+\pgfsyspdfmark {pgfid326}{15397924}{40603901}
+\pgfsyspdfmark {pgfid327}{17341337}{40603901}
+\pgfsyspdfmark {pgfid328}{17341337}{44991031}
+\pgfsyspdfmark {pgfid329}{17341337}{44991031}
+\pgfsyspdfmark {pgfid330}{17341337}{44991031}
+\pgfsyspdfmark {pgfid331}{17341337}{44991031}
+\pgfsyspdfmark {pgfid332}{17341337}{44991031}
+\pgfsyspdfmark {pgfid333}{17341337}{44991031}
+\pgfsyspdfmark {pgfid334}{17341337}{44991031}
+\pgfsyspdfmark {pgfid335}{17341337}{44991031}
+\pgfsyspdfmark {pgfid336}{17341337}{44991031}
+\pgfsyspdfmark {pgfid337}{17341337}{44991031}
+\pgfsyspdfmark {pgfid338}{17341337}{44991031}
+\pgfsyspdfmark {pgfid339}{17341337}{44991031}
+\pgfsyspdfmark {pgfid340}{17341337}{44991031}
+\pgfsyspdfmark {pgfid341}{17341337}{44991031}
+\pgfsyspdfmark {pgfid342}{17341337}{44991031}
+\pgfsyspdfmark {pgfid343}{17341337}{44991031}
+\pgfsyspdfmark {pgfid344}{17341337}{44991031}
+\pgfsyspdfmark {pgfid345}{17341337}{44991031}
+\pgfsyspdfmark {pgfid346}{17785856}{44964817}
+\savepicturepage{pgfid348}{10}
+\pgfsyspdfmark {pgfid348}{17785856}{44964817}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Coupling of the vectors $\mathbf  {\setbox \z@ \hbox {\mathsurround \z@ $\textstyle y$}\mathaccent "0362{y}}_{i_{1},i_{2}}$ with the $\mathbf  {\setbox \z@ \hbox {\mathsurround \z@ $\textstyle K$}\mathaccent "0362{K}}$ matrix for a given $(a,b)$.}}{10}{figure.caption.3}\protected@file@percent }
+\newlabel{fig:Khat_coupling_O2}{{1}{10}{Coupling of the vectors $\yhatbf _{i_{1},i_{2}}$ with the $\Khat $ matrix for a given $(a,b)$}{figure.caption.3}{}}
+\newlabel{eqn:offdiagonal_O2}{{47}{10}{Asymptotic terms of $\mathcal {O}(|x|^{2})$}{equation.47}{}}
+\newlabel{eqn:asymptotic_O2_compact}{{48}{10}{Asymptotic terms of $\mathcal {O}(|x|^{2})$}{equation.48}{}}
+\newlabel{eqn:extended_resolvent}{{49}{10}{Asymptotic terms of $\mathcal {O}(|x|^{2})$}{equation.49}{}}
+\newlabel{eqn:g2_definition}{{50}{10}{Asymptotic terms of $\mathcal {O}(|x|^{2})$}{equation.50}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.3}Asymptotic terms of $\mathcal  {O}(|x|^{3})$}{10}{subsubsection.2.1.3}\protected@file@percent }
 \newlabel{sec:normal_form_O3}{{2.1.3}{10}{Asymptotic terms of $\mathcal {O}(|x|^{3})$}{subsubsection.2.1.3}{}}
 \newlabel{eqn:asymptotic_O3}{{51}{10}{Asymptotic terms of $\mathcal {O}(|x|^{3})$}{equation.51}{}}
-\newlabel{eqn:asymptotic_O3_compact}{{52a}{10}{Asymptotic terms of $\mathcal {O}(|x|^{3})$}{equation.52a}{}}
-\pgfsyspdfmark {pgfid228}{21030586}{49707069}
-\pgfsyspdfmark {pgfid229}{21161659}{48934626}
-\pgfsyspdfmark {pgfid230}{21797714}{48934626}
-\pgfsyspdfmark {pgfid231}{23341784}{48934626}
-\pgfsyspdfmark {pgfid232}{24684758}{48934626}
-\pgfsyspdfmark {pgfid233}{27632851}{48934626}
-\pgfsyspdfmark {pgfid234}{30580944}{48934626}
-\pgfsyspdfmark {pgfid235}{21030586}{48615347}
-\pgfsyspdfmark {pgfid236}{21706691}{48062783}
-\pgfsyspdfmark {pgfid237}{21797714}{48062783}
-\pgfsyspdfmark {pgfid238}{21030586}{47825967}
-\pgfsyspdfmark {pgfid239}{21797714}{47273403}
-\pgfsyspdfmark {pgfid240}{21030586}{47036587}
-\pgfsyspdfmark {pgfid241}{21797714}{46264144}
-\pgfsyspdfmark {pgfid242}{23341784}{46264144}
-\pgfsyspdfmark {pgfid243}{24684758}{46264144}
-\pgfsyspdfmark {pgfid244}{26289877}{46264144}
-\pgfsyspdfmark {pgfid245}{21030586}{45944865}
-\pgfsyspdfmark {pgfid246}{21797714}{45392301}
-\pgfsyspdfmark {pgfid247}{24684758}{45392301}
-\pgfsyspdfmark {pgfid248}{21030586}{45155485}
-\pgfsyspdfmark {pgfid249}{21797714}{44602921}
-\pgfsyspdfmark {pgfid250}{21030586}{44366105}
-\pgfsyspdfmark {pgfid251}{21797714}{43593662}
-\pgfsyspdfmark {pgfid252}{26289877}{43593662}
-\pgfsyspdfmark {pgfid253}{27632851}{43593662}
-\pgfsyspdfmark {pgfid254}{29237970}{43593662}
-\pgfsyspdfmark {pgfid255}{21030586}{43274383}
-\pgfsyspdfmark {pgfid256}{21797714}{42721819}
-\pgfsyspdfmark {pgfid257}{27632851}{42721819}
-\pgfsyspdfmark {pgfid258}{21030586}{42485003}
-\pgfsyspdfmark {pgfid259}{21797714}{41932439}
-\pgfsyspdfmark {pgfid260}{21030586}{41695623}
-\pgfsyspdfmark {pgfid261}{21797714}{40923180}
-\pgfsyspdfmark {pgfid262}{29237970}{40923180}
-\pgfsyspdfmark {pgfid263}{30580944}{40923180}
-\pgfsyspdfmark {pgfid264}{32186063}{40923180}
-\pgfsyspdfmark {pgfid265}{21030586}{40603901}
-\pgfsyspdfmark {pgfid266}{21797714}{40051337}
-\pgfsyspdfmark {pgfid267}{30580944}{40051337}
-\pgfsyspdfmark {pgfid268}{33672567}{40051337}
-\pgfsyspdfmark {pgfid269}{21030586}{39814521}
-\pgfsyspdfmark {pgfid270}{21797714}{39261957}
-\pgfsyspdfmark {pgfid271}{21030586}{39025141}
-\pgfsyspdfmark {pgfid272}{21797714}{38252698}
-\pgfsyspdfmark {pgfid273}{32186063}{38252698}
-\pgfsyspdfmark {pgfid274}{33672567}{38252698}
-\pgfsyspdfmark {pgfid275}{21030586}{37933419}
-\pgfsyspdfmark {pgfid276}{21030586}{37933419}
-\pgfsyspdfmark {pgfid277}{22564841}{37933419}
-\pgfsyspdfmark {pgfid278}{22826986}{37933419}
-\pgfsyspdfmark {pgfid279}{23856581}{37933419}
-\pgfsyspdfmark {pgfid280}{25512934}{37933419}
-\pgfsyspdfmark {pgfid281}{25775079}{37933419}
-\pgfsyspdfmark {pgfid282}{26804674}{37933419}
-\pgfsyspdfmark {pgfid283}{28461027}{37933419}
-\pgfsyspdfmark {pgfid284}{28723172}{37933419}
-\pgfsyspdfmark {pgfid285}{29752767}{37933419}
-\pgfsyspdfmark {pgfid286}{31409120}{37933419}
-\pgfsyspdfmark {pgfid287}{31671265}{37933419}
-\pgfsyspdfmark {pgfid288}{32700860}{37933419}
-\pgfsyspdfmark {pgfid289}{34644273}{37933419}
-\pgfsyspdfmark {pgfid290}{34644273}{43655790}
-\pgfsyspdfmark {pgfid291}{34644273}{43655790}
-\pgfsyspdfmark {pgfid292}{34644273}{43655790}
-\pgfsyspdfmark {pgfid293}{34644273}{43655790}
-\pgfsyspdfmark {pgfid294}{34644273}{43655790}
-\pgfsyspdfmark {pgfid295}{34644273}{43655790}
-\pgfsyspdfmark {pgfid296}{34644273}{43655790}
-\pgfsyspdfmark {pgfid297}{34644273}{43655790}
-\pgfsyspdfmark {pgfid298}{34644273}{43655790}
-\pgfsyspdfmark {pgfid299}{34644273}{43655790}
-\pgfsyspdfmark {pgfid300}{34644273}{43655790}
-\pgfsyspdfmark {pgfid301}{34644273}{43655790}
-\pgfsyspdfmark {pgfid302}{34644273}{43655790}
-\pgfsyspdfmark {pgfid303}{34644273}{43655790}
-\pgfsyspdfmark {pgfid304}{34644273}{43655790}
-\pgfsyspdfmark {pgfid305}{34644273}{43655790}
-\pgfsyspdfmark {pgfid306}{34644273}{43655790}
-\pgfsyspdfmark {pgfid307}{34644273}{43655790}
-\pgfsyspdfmark {pgfid308}{34644273}{43655790}
-\pgfsyspdfmark {pgfid309}{34644273}{43655790}
-\pgfsyspdfmark {pgfid310}{34644273}{43655790}
-\pgfsyspdfmark {pgfid311}{34644273}{43655790}
-\pgfsyspdfmark {pgfid312}{34644273}{43655790}
-\pgfsyspdfmark {pgfid313}{34644273}{43655790}
-\pgfsyspdfmark {pgfid314}{35088792}{43629576}
-\savepicturepage{pgfid316}{10}
-\pgfsyspdfmark {pgfid316}{35088792}{43629576}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Coupling of the vectors $\mathbf  {\setbox \z@ \hbox {\mathsurround \z@ $\textstyle y$}\mathaccent "0362{y}}_{i_{1},i_{2},i_{3}}$ with the $\mathbf  {\setbox \z@ \hbox {\mathsurround \z@ $\textstyle K$}\mathaccent "0362{K}}$ matrix for a given $(a,b,c)$.}}{10}{figure.caption.4}\protected@file@percent }
-\newlabel{fig:Khat_coupling_O3}{{2}{10}{Coupling of the vectors $\yhatbf _{i_{1},i_{2},i_{3}}$ with the $\Khat $ matrix for a given $(a,b,c)$}{figure.caption.4}{}}
-\newlabel{eqn:g3_definition}{{53}{10}{Asymptotic terms of $\mathcal {O}(|x|^{3})$}{equation.53}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.4}Asymptotic terms of $\mathcal  {O}(|x|^{k})$}{10}{subsubsection.2.1.4}\protected@file@percent }
-\newlabel{sec:normal_form_Ok}{{2.1.4}{10}{Asymptotic terms of $\mathcal {O}(|x|^{k})$}{subsubsection.2.1.4}{}}
+\pgfsyspdfmark {pgfid438}{4845162}{49707069}
+\pgfsyspdfmark {pgfid439}{4976235}{48934626}
+\pgfsyspdfmark {pgfid440}{5612290}{48934626}
+\pgfsyspdfmark {pgfid441}{7156360}{48934626}
+\pgfsyspdfmark {pgfid442}{8499334}{48934626}
+\pgfsyspdfmark {pgfid443}{11447427}{48934626}
+\pgfsyspdfmark {pgfid444}{14395520}{48934626}
+\pgfsyspdfmark {pgfid445}{4845162}{48615347}
+\pgfsyspdfmark {pgfid446}{5521267}{48062783}
+\pgfsyspdfmark {pgfid447}{5612290}{48062783}
+\pgfsyspdfmark {pgfid448}{4845162}{47825967}
+\pgfsyspdfmark {pgfid449}{5612290}{47273403}
+\pgfsyspdfmark {pgfid450}{4845162}{47036587}
+\pgfsyspdfmark {pgfid451}{5612290}{46264144}
+\pgfsyspdfmark {pgfid452}{7156360}{46264144}
+\pgfsyspdfmark {pgfid453}{8499334}{46264144}
+\pgfsyspdfmark {pgfid454}{10104453}{46264144}
+\pgfsyspdfmark {pgfid455}{4845162}{45944865}
+\pgfsyspdfmark {pgfid456}{5612290}{45392301}
+\pgfsyspdfmark {pgfid457}{8499334}{45392301}
+\pgfsyspdfmark {pgfid458}{4845162}{45155485}
+\pgfsyspdfmark {pgfid459}{5612290}{44602921}
+\pgfsyspdfmark {pgfid460}{4845162}{44366105}
+\pgfsyspdfmark {pgfid461}{5612290}{43593662}
+\pgfsyspdfmark {pgfid462}{10104453}{43593662}
+\pgfsyspdfmark {pgfid463}{11447427}{43593662}
+\pgfsyspdfmark {pgfid464}{13052546}{43593662}
+\pgfsyspdfmark {pgfid465}{4845162}{43274383}
+\pgfsyspdfmark {pgfid466}{5612290}{42721819}
+\pgfsyspdfmark {pgfid467}{11447427}{42721819}
+\pgfsyspdfmark {pgfid468}{4845162}{42485003}
+\pgfsyspdfmark {pgfid469}{5612290}{41932439}
+\pgfsyspdfmark {pgfid470}{4845162}{41695623}
+\pgfsyspdfmark {pgfid471}{5612290}{40923180}
+\pgfsyspdfmark {pgfid472}{13052546}{40923180}
+\pgfsyspdfmark {pgfid473}{14395520}{40923180}
+\pgfsyspdfmark {pgfid474}{16000639}{40923180}
+\pgfsyspdfmark {pgfid475}{4845162}{40603901}
+\pgfsyspdfmark {pgfid476}{5612290}{40051337}
+\pgfsyspdfmark {pgfid477}{14395520}{40051337}
+\pgfsyspdfmark {pgfid478}{17487143}{40051337}
+\pgfsyspdfmark {pgfid479}{4845162}{39814521}
+\pgfsyspdfmark {pgfid480}{5612290}{39261957}
+\pgfsyspdfmark {pgfid481}{4845162}{39025141}
+\pgfsyspdfmark {pgfid482}{5612290}{38252698}
+\pgfsyspdfmark {pgfid483}{16000639}{38252698}
+\pgfsyspdfmark {pgfid484}{17487143}{38252698}
+\pgfsyspdfmark {pgfid485}{4845162}{37933419}
+\pgfsyspdfmark {pgfid486}{4845162}{37933419}
+\pgfsyspdfmark {pgfid487}{6379417}{37933419}
+\pgfsyspdfmark {pgfid488}{6641562}{37933419}
+\pgfsyspdfmark {pgfid489}{7671157}{37933419}
+\pgfsyspdfmark {pgfid490}{9327510}{37933419}
+\pgfsyspdfmark {pgfid491}{9589655}{37933419}
+\pgfsyspdfmark {pgfid492}{10619250}{37933419}
+\pgfsyspdfmark {pgfid493}{12275603}{37933419}
+\pgfsyspdfmark {pgfid494}{12537748}{37933419}
+\pgfsyspdfmark {pgfid495}{13567343}{37933419}
+\pgfsyspdfmark {pgfid496}{15223696}{37933419}
+\pgfsyspdfmark {pgfid497}{15485841}{37933419}
+\pgfsyspdfmark {pgfid498}{16515436}{37933419}
+\pgfsyspdfmark {pgfid499}{18458849}{37933419}
+\pgfsyspdfmark {pgfid500}{18458849}{43655790}
+\pgfsyspdfmark {pgfid501}{18458849}{43655790}
+\pgfsyspdfmark {pgfid502}{18458849}{43655790}
+\pgfsyspdfmark {pgfid503}{18458849}{43655790}
+\pgfsyspdfmark {pgfid504}{18458849}{43655790}
+\pgfsyspdfmark {pgfid505}{18458849}{43655790}
+\pgfsyspdfmark {pgfid506}{18458849}{43655790}
+\pgfsyspdfmark {pgfid507}{18458849}{43655790}
+\pgfsyspdfmark {pgfid508}{18458849}{43655790}
+\pgfsyspdfmark {pgfid509}{18458849}{43655790}
+\pgfsyspdfmark {pgfid510}{18458849}{43655790}
+\pgfsyspdfmark {pgfid511}{18458849}{43655790}
+\pgfsyspdfmark {pgfid512}{18458849}{43655790}
+\pgfsyspdfmark {pgfid513}{18458849}{43655790}
+\pgfsyspdfmark {pgfid514}{18458849}{43655790}
+\pgfsyspdfmark {pgfid515}{18458849}{43655790}
+\pgfsyspdfmark {pgfid516}{18458849}{43655790}
+\pgfsyspdfmark {pgfid517}{18458849}{43655790}
+\pgfsyspdfmark {pgfid518}{18458849}{43655790}
+\pgfsyspdfmark {pgfid519}{18458849}{43655790}
+\pgfsyspdfmark {pgfid520}{18458849}{43655790}
+\pgfsyspdfmark {pgfid521}{18458849}{43655790}
+\pgfsyspdfmark {pgfid522}{18458849}{43655790}
+\pgfsyspdfmark {pgfid523}{18458849}{43655790}
+\pgfsyspdfmark {pgfid524}{18903368}{43629576}
+\savepicturepage{pgfid526}{11}
+\pgfsyspdfmark {pgfid526}{18903368}{43629576}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Coupling of the vectors $\mathbf  {\setbox \z@ \hbox {\mathsurround \z@ $\textstyle y$}\mathaccent "0362{y}}_{i_{1},i_{2},i_{3}}$ with the $\mathbf  {\setbox \z@ \hbox {\mathsurround \z@ $\textstyle K$}\mathaccent "0362{K}}$ matrix for a given $(a,b,c)$.}}{11}{figure.caption.4}\protected@file@percent }
+\newlabel{fig:Khat_coupling_O3}{{2}{11}{Coupling of the vectors $\yhatbf _{i_{1},i_{2},i_{3}}$ with the $\Khat $ matrix for a given $(a,b,c)$}{figure.caption.4}{}}
+\newlabel{eqn:asymptotic_O3_compact}{{52a}{11}{Asymptotic terms of $\mathcal {O}(|x|^{3})$}{equation.52a}{}}
+\newlabel{eqn:g3_definition}{{53}{11}{Asymptotic terms of $\mathcal {O}(|x|^{3})$}{equation.53}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.4}Asymptotic terms of $\mathcal  {O}(|x|^{k})$}{11}{subsubsection.2.1.4}\protected@file@percent }
+\newlabel{sec:normal_form_Ok}{{2.1.4}{11}{Asymptotic terms of $\mathcal {O}(|x|^{k})$}{subsubsection.2.1.4}{}}
 \newlabel{eqn:asymptotic_Ok_compact}{{54}{11}{Asymptotic terms of $\mathcal {O}(|x|^{k})$}{equation.54}{}}
 \newlabel{eqn:resonance_condition_Ok}{{55}{11}{Asymptotic terms of $\mathcal {O}(|x|^{k})$}{equation.55}{}}
 \newlabel{eqn:resonance_modification_Ok}{{56}{11}{Asymptotic terms of $\mathcal {O}(|x|^{k})$}{equation.56}{}}
 \newlabel{eqn:gk_definition}{{56a}{11}{Asymptotic terms of $\mathcal {O}(|x|^{k})$}{equation.56a}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.5}From the Extended System to the Standard System}{11}{subsubsection.2.1.5}\protected@file@percent }
 \newlabel{sec:extended_to_standard}{{2.1.5}{11}{From the Extended System to the Standard System}{subsubsection.2.1.5}{}}
-\newlabel{eqn:generic_resolvent}{{57}{11}{From the Extended System to the Standard System}{equation.57}{}}
-\newlabel{eqn:generic_resolvent_reduced}{{58}{11}{From the Extended System to the Standard System}{equation.58}{}}
-\newlabel{eqn:asymptotic_O2_11}{{59}{11}{From the Extended System to the Standard System}{equation.59}{}}
-\newlabel{eqn:asymptotic_O2_11r}{{60}{11}{From the Extended System to the Standard System}{equation.60}{}}
-\newlabel{eqn:asymptotic_O2_12r}{{61}{11}{From the Extended System to the Standard System}{equation.61}{}}
+\newlabel{eqn:generic_resolvent}{{57}{12}{From the Extended System to the Standard System}{equation.57}{}}
+\newlabel{eqn:generic_resolvent_reduced}{{58}{12}{From the Extended System to the Standard System}{equation.58}{}}
+\newlabel{eqn:asymptotic_O2_11}{{59}{12}{From the Extended System to the Standard System}{equation.59}{}}
+\newlabel{eqn:asymptotic_O2_11r}{{60}{12}{From the Extended System to the Standard System}{equation.60}{}}
+\newlabel{eqn:asymptotic_O2_12r}{{61}{12}{From the Extended System to the Standard System}{equation.61}{}}
 \newlabel{eqn:asymptotic_Ok_compact_std}{{62}{12}{From the Extended System to the Standard System}{equation.62}{}}
-\newlabel{eqn:resonance_condition_Ok_std}{{63}{12}{From the Extended System to the Standard System}{equation.63}{}}
-\newlabel{eqn:resonance_modification_Ok_std}{{64}{12}{From the Extended System to the Standard System}{equation.64}{}}
-\newlabel{eqn:resonance_modification2_Ok_std}{{65}{12}{From the Extended System to the Standard System}{equation.65}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}A Graph Style Parameterization}{12}{subsection.2.2}\protected@file@percent }
-\newlabel{sec:graph_method}{{2.2}{12}{A Graph Style Parameterization}{subsection.2.2}{}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Center--Manifold: Normal form}}{12}{algorithm.1}\protected@file@percent }
-\newlabel{algo:normal_form}{{1}{12}{Center--Manifold: Normal form}{algorithm.1}{}}
-\savepicturepage{pgfid317}{12}
-\pgfsyspdfmark {pgfid317}{21241427}{41189564}
-\savepicturepage{pgfid318}{12}
-\pgfsyspdfmark {pgfid318}{28909866}{41189564}
-\savepicturepage{pgfid319}{12}
-\pgfsyspdfmark {pgfid319}{28909866}{41189564}
-\savepicturepage{pgfid320}{12}
-\pgfsyspdfmark {pgfid320}{22224468}{40400183}
-\savepicturepage{pgfid321}{12}
-\pgfsyspdfmark {pgfid321}{22224468}{40400183}
-\savepicturepage{pgfid322}{12}
-\pgfsyspdfmark {pgfid322}{32089030}{40400183}
-\savepicturepage{pgfid323}{12}
-\pgfsyspdfmark {pgfid323}{32089030}{40400183}
-\savepicturepage{pgfid324}{12}
-\pgfsyspdfmark {pgfid324}{23207509}{39610802}
-\savepicturepage{pgfid325}{12}
-\pgfsyspdfmark {pgfid325}{23207509}{39610802}
-\savepicturepage{pgfid326}{12}
-\pgfsyspdfmark {pgfid326}{23207509}{39610802}
-\savepicturepage{pgfid327}{12}
-\pgfsyspdfmark {pgfid327}{23207509}{39610802}
-\savepicturepage{pgfid328}{12}
-\pgfsyspdfmark {pgfid328}{23207509}{39610802}
-\savepicturepage{pgfid329}{12}
-\pgfsyspdfmark {pgfid329}{23207509}{39610802}
-\savepicturepage{pgfid330}{12}
-\pgfsyspdfmark {pgfid330}{23207509}{39117440}
-\savepicturepage{pgfid331}{12}
-\pgfsyspdfmark {pgfid331}{23207509}{39117440}
-\savepicturepage{pgfid332}{12}
-\pgfsyspdfmark {pgfid332}{23207509}{39117440}
-\savepicturepage{pgfid333}{12}
-\pgfsyspdfmark {pgfid333}{23207509}{39117440}
-\savepicturepage{pgfid334}{12}
-\pgfsyspdfmark {pgfid334}{33311496}{39117440}
-\savepicturepage{pgfid335}{12}
-\pgfsyspdfmark {pgfid335}{33311496}{39117440}
-\savepicturepage{pgfid336}{12}
-\pgfsyspdfmark {pgfid336}{23207509}{37538678}
-\savepicturepage{pgfid337}{12}
-\pgfsyspdfmark {pgfid337}{23207509}{37538678}
-\savepicturepage{pgfid338}{12}
-\pgfsyspdfmark {pgfid338}{23207509}{37538678}
-\savepicturepage{pgfid339}{12}
-\pgfsyspdfmark {pgfid339}{23207509}{37538678}
-\savepicturepage{pgfid340}{12}
-\pgfsyspdfmark {pgfid340}{32260712}{37538678}
-\savepicturepage{pgfid341}{12}
-\pgfsyspdfmark {pgfid341}{32260712}{37538678}
-\savepicturepage{pgfid342}{12}
-\pgfsyspdfmark {pgfid342}{23207509}{36571009}
-\savepicturepage{pgfid343}{12}
-\pgfsyspdfmark {pgfid343}{23207509}{36571009}
-\savepicturepage{pgfid344}{12}
-\pgfsyspdfmark {pgfid344}{23207509}{36571009}
-\savepicturepage{pgfid345}{12}
-\pgfsyspdfmark {pgfid345}{23207509}{36571009}
-\savepicturepage{pgfid346}{12}
-\pgfsyspdfmark {pgfid346}{32650535}{36571009}
-\savepicturepage{pgfid347}{12}
-\pgfsyspdfmark {pgfid347}{32650535}{36571009}
-\savepicturepage{pgfid348}{12}
-\pgfsyspdfmark {pgfid348}{23207509}{35781628}
-\savepicturepage{pgfid349}{12}
-\pgfsyspdfmark {pgfid349}{23207509}{35781628}
-\savepicturepage{pgfid350}{12}
-\pgfsyspdfmark {pgfid350}{23207509}{35781628}
-\savepicturepage{pgfid351}{12}
-\pgfsyspdfmark {pgfid351}{23207509}{35781628}
-\savepicturepage{pgfid352}{12}
-\pgfsyspdfmark {pgfid352}{34757633}{35781628}
-\savepicturepage{pgfid353}{12}
-\pgfsyspdfmark {pgfid353}{34757633}{35781628}
-\savepicturepage{pgfid354}{12}
-\pgfsyspdfmark {pgfid354}{23207509}{34992247}
-\savepicturepage{pgfid355}{12}
-\pgfsyspdfmark {pgfid355}{23207509}{34992247}
-\savepicturepage{pgfid356}{12}
-\pgfsyspdfmark {pgfid356}{23207509}{34992247}
-\savepicturepage{pgfid357}{12}
-\pgfsyspdfmark {pgfid357}{23207509}{34992247}
-\savepicturepage{pgfid358}{12}
-\pgfsyspdfmark {pgfid358}{23207509}{34992247}
-\savepicturepage{pgfid359}{12}
-\pgfsyspdfmark {pgfid359}{29170469}{34992247}
-\savepicturepage{pgfid360}{12}
-\pgfsyspdfmark {pgfid360}{29170469}{34992247}
-\savepicturepage{pgfid361}{12}
-\pgfsyspdfmark {pgfid361}{24190550}{34121500}
-\savepicturepage{pgfid362}{12}
-\pgfsyspdfmark {pgfid362}{24190550}{34121500}
-\savepicturepage{pgfid363}{12}
-\pgfsyspdfmark {pgfid363}{24190550}{34121500}
-\savepicturepage{pgfid364}{12}
-\pgfsyspdfmark {pgfid364}{24190550}{34121500}
-\savepicturepage{pgfid365}{12}
-\pgfsyspdfmark {pgfid365}{24190550}{34121500}
-\savepicturepage{pgfid366}{12}
-\pgfsyspdfmark {pgfid366}{34757633}{34121500}
-\savepicturepage{pgfid367}{12}
-\pgfsyspdfmark {pgfid367}{34757633}{34121500}
-\savepicturepage{pgfid368}{12}
-\pgfsyspdfmark {pgfid368}{25173591}{33231872}
-\savepicturepage{pgfid369}{12}
-\pgfsyspdfmark {pgfid369}{25173591}{33231872}
-\savepicturepage{pgfid370}{12}
-\pgfsyspdfmark {pgfid370}{25173591}{33231872}
-\savepicturepage{pgfid371}{12}
-\pgfsyspdfmark {pgfid371}{25173591}{33231872}
-\savepicturepage{pgfid372}{12}
-\pgfsyspdfmark {pgfid372}{29235104}{33231872}
-\savepicturepage{pgfid373}{12}
-\pgfsyspdfmark {pgfid373}{29235104}{33231872}
-\savepicturepage{pgfid374}{12}
-\pgfsyspdfmark {pgfid374}{24190550}{32442491}
-\savepicturepage{pgfid375}{12}
-\pgfsyspdfmark {pgfid375}{24190550}{32442491}
-\savepicturepage{pgfid376}{12}
-\pgfsyspdfmark {pgfid376}{24190550}{32442491}
-\savepicturepage{pgfid377}{12}
-\pgfsyspdfmark {pgfid377}{24190550}{32442491}
-\savepointas{algpx@indentEnd-3}{pgfid378}{1.19995pt}{8.61108pt}
-\savepicturepage{pgfid378}{12}
-\pgfsyspdfmark {pgfid378}{24190550}{32442491}
-\savepicturepage{pgfid379}{12}
-\pgfsyspdfmark {pgfid379}{24190550}{32442491}
-\savepicturepage{pgfid380}{12}
-\pgfsyspdfmark {pgfid380}{25392521}{32442491}
-\savepicturepage{pgfid381}{12}
-\pgfsyspdfmark {pgfid381}{25392521}{32442491}
-\savepicturepage{pgfid382}{12}
-\pgfsyspdfmark {pgfid382}{25173591}{31653110}
-\savepicturepage{pgfid383}{12}
-\pgfsyspdfmark {pgfid383}{25173591}{31653110}
-\savepicturepage{pgfid384}{12}
-\pgfsyspdfmark {pgfid384}{25173591}{31653110}
-\savepicturepage{pgfid385}{12}
-\pgfsyspdfmark {pgfid385}{25173591}{31653110}
-\savepicturepage{pgfid386}{12}
-\pgfsyspdfmark {pgfid386}{28420413}{31653110}
-\savepicturepage{pgfid387}{12}
-\pgfsyspdfmark {pgfid387}{28420413}{31653110}
-\savepicturepage{pgfid388}{12}
-\pgfsyspdfmark {pgfid388}{24190550}{30863729}
-\savepicturepage{pgfid389}{12}
-\pgfsyspdfmark {pgfid389}{24190550}{30863729}
-\savepicturepage{pgfid390}{12}
-\pgfsyspdfmark {pgfid390}{24190550}{30863729}
-\savepicturepage{pgfid391}{12}
-\pgfsyspdfmark {pgfid391}{24190550}{30863729}
-\savepointas{algpx@indentEnd-4}{pgfid392}{1.19995pt}{8.61108pt}
-\savepicturepage{pgfid392}{12}
-\pgfsyspdfmark {pgfid392}{24190550}{30863729}
-\savepicturepage{pgfid393}{12}
-\pgfsyspdfmark {pgfid393}{26109265}{30863729}
-\savepicturepage{pgfid394}{12}
-\pgfsyspdfmark {pgfid394}{26109265}{30863729}
-\savepicturepage{pgfid395}{12}
-\pgfsyspdfmark {pgfid395}{23207509}{30074348}
-\savepicturepage{pgfid396}{12}
-\pgfsyspdfmark {pgfid396}{23207509}{30074348}
-\savepicturepage{pgfid397}{12}
-\pgfsyspdfmark {pgfid397}{23207509}{30074348}
-\savepicturepage{pgfid398}{12}
-\pgfsyspdfmark {pgfid398}{23207509}{30074348}
-\savepointas{algpx@indentEnd-2}{pgfid399}{1.19995pt}{8.61108pt}
-\savepicturepage{pgfid399}{12}
-\pgfsyspdfmark {pgfid399}{23207509}{30074348}
-\savepicturepage{pgfid400}{12}
-\pgfsyspdfmark {pgfid400}{25534161}{30074348}
-\savepicturepage{pgfid401}{12}
-\pgfsyspdfmark {pgfid401}{25534161}{30074348}
-\savepicturepage{pgfid402}{12}
-\pgfsyspdfmark {pgfid402}{23207509}{29284967}
-\savepicturepage{pgfid403}{12}
-\pgfsyspdfmark {pgfid403}{23207509}{29284967}
-\savepicturepage{pgfid404}{12}
-\pgfsyspdfmark {pgfid404}{23207509}{29284967}
-\savepicturepage{pgfid405}{12}
-\pgfsyspdfmark {pgfid405}{23207509}{29284967}
-\savepicturepage{pgfid406}{12}
-\pgfsyspdfmark {pgfid406}{23207509}{29284967}
-\savepicturepage{pgfid407}{12}
-\pgfsyspdfmark {pgfid407}{30550127}{29284967}
-\savepicturepage{pgfid408}{12}
-\pgfsyspdfmark {pgfid408}{30550127}{29284967}
-\savepicturepage{pgfid409}{12}
-\pgfsyspdfmark {pgfid409}{24190550}{28495586}
-\savepicturepage{pgfid410}{12}
-\pgfsyspdfmark {pgfid410}{24190550}{28495586}
-\savepicturepage{pgfid411}{12}
-\pgfsyspdfmark {pgfid411}{24190550}{28495586}
-\savepicturepage{pgfid412}{12}
-\pgfsyspdfmark {pgfid412}{24190550}{28495586}
-\savepicturepage{pgfid413}{12}
-\pgfsyspdfmark {pgfid413}{27437372}{28495586}
-\savepicturepage{pgfid414}{12}
-\pgfsyspdfmark {pgfid414}{27437372}{28495586}
-\savepicturepage{pgfid415}{12}
-\pgfsyspdfmark {pgfid415}{23207509}{27706205}
-\savepicturepage{pgfid416}{12}
-\pgfsyspdfmark {pgfid416}{23207509}{27706205}
-\savepicturepage{pgfid417}{12}
-\pgfsyspdfmark {pgfid417}{23207509}{27706205}
-\savepicturepage{pgfid418}{12}
-\pgfsyspdfmark {pgfid418}{23207509}{27706205}
-\savepointas{algpx@indentEnd-5}{pgfid419}{1.19995pt}{8.61108pt}
-\savepicturepage{pgfid419}{12}
-\pgfsyspdfmark {pgfid419}{23207509}{27706205}
-\savepicturepage{pgfid420}{12}
-\pgfsyspdfmark {pgfid420}{25534161}{27706205}
-\savepicturepage{pgfid421}{12}
-\pgfsyspdfmark {pgfid421}{25534161}{27706205}
-\savepicturepage{pgfid422}{12}
-\pgfsyspdfmark {pgfid422}{23207509}{26916824}
-\savepicturepage{pgfid423}{12}
-\pgfsyspdfmark {pgfid423}{23207509}{26916824}
-\savepicturepage{pgfid424}{12}
-\pgfsyspdfmark {pgfid424}{23207509}{26916824}
-\savepicturepage{pgfid425}{12}
-\pgfsyspdfmark {pgfid425}{23207509}{26916824}
-\savepicturepage{pgfid426}{12}
-\pgfsyspdfmark {pgfid426}{23207509}{26916824}
-\savepicturepage{pgfid427}{12}
-\pgfsyspdfmark {pgfid427}{23207509}{26916824}
-\savepicturepage{pgfid428}{12}
-\pgfsyspdfmark {pgfid428}{23207509}{26423462}
-\savepicturepage{pgfid429}{12}
-\pgfsyspdfmark {pgfid429}{23207509}{26423462}
-\savepicturepage{pgfid430}{12}
-\pgfsyspdfmark {pgfid430}{23207509}{26423462}
-\savepicturepage{pgfid431}{12}
-\pgfsyspdfmark {pgfid431}{23207509}{26423462}
-\savepicturepage{pgfid432}{12}
-\pgfsyspdfmark {pgfid432}{31697667}{26423462}
-\savepicturepage{pgfid433}{12}
-\pgfsyspdfmark {pgfid433}{31697667}{26423462}
-\savepicturepage{pgfid434}{12}
-\pgfsyspdfmark {pgfid434}{23207509}{25634081}
-\savepicturepage{pgfid435}{12}
-\pgfsyspdfmark {pgfid435}{23207509}{25634081}
-\savepicturepage{pgfid436}{12}
-\pgfsyspdfmark {pgfid436}{23207509}{25634081}
-\savepicturepage{pgfid437}{12}
-\pgfsyspdfmark {pgfid437}{23207509}{25634081}
-\savepicturepage{pgfid438}{12}
-\pgfsyspdfmark {pgfid438}{29142639}{25634081}
-\savepicturepage{pgfid439}{12}
-\pgfsyspdfmark {pgfid439}{29142639}{25634081}
-\savepicturepage{pgfid440}{12}
-\pgfsyspdfmark {pgfid440}{23207509}{24844700}
-\savepicturepage{pgfid441}{12}
-\pgfsyspdfmark {pgfid441}{23207509}{24844700}
-\savepicturepage{pgfid442}{12}
-\pgfsyspdfmark {pgfid442}{23207509}{24844700}
-\savepicturepage{pgfid443}{12}
-\pgfsyspdfmark {pgfid443}{23207509}{24844700}
-\savepicturepage{pgfid444}{12}
-\pgfsyspdfmark {pgfid444}{23207509}{24844700}
-\savepicturepage{pgfid445}{12}
-\pgfsyspdfmark {pgfid445}{23207509}{24844700}
-\savepicturepage{pgfid446}{12}
-\pgfsyspdfmark {pgfid446}{23207509}{24351338}
-\savepicturepage{pgfid447}{12}
-\pgfsyspdfmark {pgfid447}{23207509}{24351338}
-\savepicturepage{pgfid448}{12}
-\pgfsyspdfmark {pgfid448}{23207509}{24351338}
-\savepicturepage{pgfid449}{12}
-\pgfsyspdfmark {pgfid449}{23207509}{24351338}
-\savepicturepage{pgfid450}{12}
-\pgfsyspdfmark {pgfid450}{29327349}{24351338}
-\savepicturepage{pgfid451}{12}
-\pgfsyspdfmark {pgfid451}{29327349}{24351338}
-\savepicturepage{pgfid452}{12}
-\pgfsyspdfmark {pgfid452}{23207509}{23561957}
-\savepicturepage{pgfid453}{12}
-\pgfsyspdfmark {pgfid453}{23207509}{23561957}
-\savepicturepage{pgfid454}{12}
-\pgfsyspdfmark {pgfid454}{23207509}{23561957}
-\savepicturepage{pgfid455}{12}
-\pgfsyspdfmark {pgfid455}{23207509}{23561957}
-\savepicturepage{pgfid456}{12}
-\pgfsyspdfmark {pgfid456}{29784668}{23561957}
-\savepicturepage{pgfid457}{12}
-\pgfsyspdfmark {pgfid457}{29784668}{23561957}
-\savepicturepage{pgfid458}{12}
-\pgfsyspdfmark {pgfid458}{23207509}{22772576}
-\savepicturepage{pgfid459}{12}
-\pgfsyspdfmark {pgfid459}{23207509}{22772576}
-\savepicturepage{pgfid460}{12}
-\pgfsyspdfmark {pgfid460}{23207509}{22772576}
-\savepicturepage{pgfid461}{12}
-\pgfsyspdfmark {pgfid461}{23207509}{22772576}
-\savepicturepage{pgfid462}{12}
-\pgfsyspdfmark {pgfid462}{29685521}{22772576}
-\savepicturepage{pgfid463}{12}
-\pgfsyspdfmark {pgfid463}{29685521}{22772576}
-\savepicturepage{pgfid464}{12}
-\pgfsyspdfmark {pgfid464}{22224468}{21983195}
-\savepicturepage{pgfid465}{12}
-\pgfsyspdfmark {pgfid465}{22224468}{21983195}
-\savepicturepage{pgfid466}{12}
-\pgfsyspdfmark {pgfid466}{22224468}{21983195}
-\savepicturepage{pgfid467}{12}
-\pgfsyspdfmark {pgfid467}{22224468}{21983195}
-\savepointas{algpx@indentEnd-1}{pgfid468}{1.19995pt}{8.61108pt}
-\savepicturepage{pgfid468}{12}
-\pgfsyspdfmark {pgfid468}{22224468}{21983195}
-\savepicturepage{pgfid469}{12}
-\pgfsyspdfmark {pgfid469}{24551120}{21983195}
-\savepicturepage{pgfid470}{12}
-\pgfsyspdfmark {pgfid470}{24551120}{21983195}
-\savepicturepage{pgfid471}{12}
-\pgfsyspdfmark {pgfid471}{21241427}{21193814}
-\savepicturepage{pgfid472}{12}
-\pgfsyspdfmark {pgfid472}{21241427}{21193814}
-\savepicturepage{pgfid473}{12}
-\pgfsyspdfmark {pgfid473}{21241427}{21193814}
-\savepicturepage{pgfid474}{12}
-\pgfsyspdfmark {pgfid474}{21241427}{21193814}
-\savepointas{algpx@indentEnd-0}{pgfid475}{1.19995pt}{8.61108pt}
-\savepicturepage{pgfid475}{12}
-\pgfsyspdfmark {pgfid475}{21241427}{21193814}
-\citation{negi24}
+\newlabel{eqn:resonance_condition_Ok_std}{{63}{13}{From the Extended System to the Standard System}{equation.63}{}}
+\newlabel{eqn:resonance_modification_Ok_std}{{64}{13}{From the Extended System to the Standard System}{equation.64}{}}
+\newlabel{eqn:resonance_modification2_Ok_std}{{65}{13}{From the Extended System to the Standard System}{equation.65}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}A Graph Style Parameterization}{13}{subsection.2.2}\protected@file@percent }
+\newlabel{sec:graph_method}{{2.2}{13}{A Graph Style Parameterization}{subsection.2.2}{}}
 \newlabel{eqn:graph_condition}{{66}{13}{A Graph Style Parameterization}{equation.66}{}}
-\newlabel{eqn:graph_Ok_compact}{{67}{13}{A Graph Style Parameterization}{equation.67}{}}
-\newlabel{eqn:graph_gk_definition}{{68}{13}{A Graph Style Parameterization}{equation.68}{}}
-\newlabel{eqn:graph_gk_definition2}{{69}{13}{A Graph Style Parameterization}{equation.69}{}}
-\newlabel{eqn:graph_Ok_compact2}{{70}{13}{A Graph Style Parameterization}{equation.70}{}}
-\newlabel{eqn:complement_projector}{{71}{13}{A Graph Style Parameterization}{equation.71}{}}
-\newlabel{eqn:graph_Ok_compact3}{{73}{13}{A Graph Style Parameterization}{equation.73}{}}
-\newlabel{eqn:graph_gk_definition3}{{74}{13}{A Graph Style Parameterization}{equation.74}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {3}{\ignorespaces Center--Manifold: Normal form}}{13}{algorithm.3}\protected@file@percent }
+\newlabel{algo:normal_form}{{3}{13}{Center--Manifold: Normal form}{algorithm.3}{}}
+\savepicturepage{pgfid527}{13}
+\pgfsyspdfmark {pgfid527}{20719313}{40418455}
+\savepicturepage{pgfid528}{13}
+\pgfsyspdfmark {pgfid528}{28387752}{40418455}
+\savepicturepage{pgfid529}{13}
+\pgfsyspdfmark {pgfid529}{28387752}{40418455}
+\savepicturepage{pgfid530}{13}
+\pgfsyspdfmark {pgfid530}{21702354}{39629074}
+\savepicturepage{pgfid531}{13}
+\pgfsyspdfmark {pgfid531}{21702354}{39629074}
+\savepicturepage{pgfid532}{13}
+\pgfsyspdfmark {pgfid532}{31566916}{39629074}
+\savepicturepage{pgfid533}{13}
+\pgfsyspdfmark {pgfid533}{31566916}{39629074}
+\savepicturepage{pgfid534}{13}
+\pgfsyspdfmark {pgfid534}{22685395}{38839693}
+\savepicturepage{pgfid535}{13}
+\pgfsyspdfmark {pgfid535}{22685395}{38839693}
+\savepicturepage{pgfid536}{13}
+\pgfsyspdfmark {pgfid536}{22685395}{38839693}
+\savepicturepage{pgfid537}{13}
+\pgfsyspdfmark {pgfid537}{22685395}{38839693}
+\savepicturepage{pgfid538}{13}
+\pgfsyspdfmark {pgfid538}{22685395}{38839693}
+\savepicturepage{pgfid539}{13}
+\pgfsyspdfmark {pgfid539}{22685395}{38839693}
+\savepicturepage{pgfid540}{13}
+\pgfsyspdfmark {pgfid540}{22685395}{38346331}
+\savepicturepage{pgfid541}{13}
+\pgfsyspdfmark {pgfid541}{22685395}{38346331}
+\savepicturepage{pgfid542}{13}
+\pgfsyspdfmark {pgfid542}{22685395}{38346331}
+\savepicturepage{pgfid543}{13}
+\pgfsyspdfmark {pgfid543}{22685395}{38346331}
+\savepicturepage{pgfid544}{13}
+\pgfsyspdfmark {pgfid544}{32789382}{38346331}
+\savepicturepage{pgfid545}{13}
+\pgfsyspdfmark {pgfid545}{32789382}{38346331}
+\savepicturepage{pgfid546}{13}
+\pgfsyspdfmark {pgfid546}{22685395}{36767569}
+\savepicturepage{pgfid547}{13}
+\pgfsyspdfmark {pgfid547}{22685395}{36767569}
+\savepicturepage{pgfid548}{13}
+\pgfsyspdfmark {pgfid548}{22685395}{36767569}
+\savepicturepage{pgfid549}{13}
+\pgfsyspdfmark {pgfid549}{22685395}{36767569}
+\savepicturepage{pgfid550}{13}
+\pgfsyspdfmark {pgfid550}{31927719}{36767569}
+\savepicturepage{pgfid551}{13}
+\pgfsyspdfmark {pgfid551}{31927719}{36767569}
+\savepicturepage{pgfid552}{13}
+\pgfsyspdfmark {pgfid552}{22685395}{35799900}
+\savepicturepage{pgfid553}{13}
+\pgfsyspdfmark {pgfid553}{22685395}{35799900}
+\savepicturepage{pgfid554}{13}
+\pgfsyspdfmark {pgfid554}{22685395}{35799900}
+\savepicturepage{pgfid555}{13}
+\pgfsyspdfmark {pgfid555}{22685395}{35799900}
+\savepicturepage{pgfid556}{13}
+\pgfsyspdfmark {pgfid556}{32128421}{35799900}
+\savepicturepage{pgfid557}{13}
+\pgfsyspdfmark {pgfid557}{32128421}{35799900}
+\savepicturepage{pgfid558}{13}
+\pgfsyspdfmark {pgfid558}{22685395}{35010519}
+\savepicturepage{pgfid559}{13}
+\pgfsyspdfmark {pgfid559}{22685395}{35010519}
+\savepicturepage{pgfid560}{13}
+\pgfsyspdfmark {pgfid560}{22685395}{35010519}
+\savepicturepage{pgfid561}{13}
+\pgfsyspdfmark {pgfid561}{22685395}{35010519}
+\savepicturepage{pgfid562}{13}
+\pgfsyspdfmark {pgfid562}{22685395}{35010519}
+\savepicturepage{pgfid563}{13}
+\pgfsyspdfmark {pgfid563}{22685395}{35010519}
+\savepicturepage{pgfid564}{13}
+\pgfsyspdfmark {pgfid564}{22685395}{34517157}
+\savepicturepage{pgfid565}{13}
+\pgfsyspdfmark {pgfid565}{22685395}{34517157}
+\savepicturepage{pgfid566}{13}
+\pgfsyspdfmark {pgfid566}{22685395}{34517157}
+\savepicturepage{pgfid567}{13}
+\pgfsyspdfmark {pgfid567}{22685395}{34517157}
+\savepicturepage{pgfid568}{13}
+\pgfsyspdfmark {pgfid568}{30247133}{34517157}
+\savepicturepage{pgfid569}{13}
+\pgfsyspdfmark {pgfid569}{30247133}{34517157}
+\savepicturepage{pgfid570}{13}
+\pgfsyspdfmark {pgfid570}{22685395}{33727776}
+\savepicturepage{pgfid571}{13}
+\pgfsyspdfmark {pgfid571}{22685395}{33727776}
+\savepicturepage{pgfid572}{13}
+\pgfsyspdfmark {pgfid572}{22685395}{33727776}
+\savepicturepage{pgfid573}{13}
+\pgfsyspdfmark {pgfid573}{22685395}{33727776}
+\savepicturepage{pgfid574}{13}
+\pgfsyspdfmark {pgfid574}{22685395}{33727776}
+\savepicturepage{pgfid575}{13}
+\pgfsyspdfmark {pgfid575}{28648355}{33727776}
+\savepicturepage{pgfid576}{13}
+\pgfsyspdfmark {pgfid576}{28648355}{33727776}
+\savepicturepage{pgfid577}{13}
+\pgfsyspdfmark {pgfid577}{23668436}{32857029}
+\savepicturepage{pgfid578}{13}
+\pgfsyspdfmark {pgfid578}{23668436}{32857029}
+\savepicturepage{pgfid579}{13}
+\pgfsyspdfmark {pgfid579}{23668436}{32857029}
+\savepicturepage{pgfid580}{13}
+\pgfsyspdfmark {pgfid580}{23668436}{32857029}
+\savepicturepage{pgfid581}{13}
+\pgfsyspdfmark {pgfid581}{23668436}{32857029}
+\savepicturepage{pgfid582}{13}
+\pgfsyspdfmark {pgfid582}{29125686}{32857029}
+\savepicturepage{pgfid583}{13}
+\pgfsyspdfmark {pgfid583}{29125686}{32857029}
+\savepicturepage{pgfid584}{13}
+\pgfsyspdfmark {pgfid584}{24651477}{31967401}
+\savepicturepage{pgfid585}{13}
+\pgfsyspdfmark {pgfid585}{24651477}{31967401}
+\savepicturepage{pgfid586}{13}
+\pgfsyspdfmark {pgfid586}{24651477}{31967401}
+\savepicturepage{pgfid587}{13}
+\pgfsyspdfmark {pgfid587}{24651477}{31967401}
+\savepicturepage{pgfid588}{13}
+\pgfsyspdfmark {pgfid588}{28712990}{31967401}
+\savepicturepage{pgfid589}{13}
+\pgfsyspdfmark {pgfid589}{28712990}{31967401}
+\savepicturepage{pgfid590}{13}
+\pgfsyspdfmark {pgfid590}{23668436}{31178020}
+\savepicturepage{pgfid591}{13}
+\pgfsyspdfmark {pgfid591}{23668436}{31178020}
+\savepicturepage{pgfid592}{13}
+\pgfsyspdfmark {pgfid592}{23668436}{31178020}
+\savepicturepage{pgfid593}{13}
+\pgfsyspdfmark {pgfid593}{23668436}{31178020}
+\savepointas{algpx@indentEnd-18}{pgfid594}{1.19995pt}{8.61108pt}
+\savepicturepage{pgfid594}{13}
+\pgfsyspdfmark {pgfid594}{23668436}{31178020}
+\savepicturepage{pgfid595}{13}
+\pgfsyspdfmark {pgfid595}{23668436}{31178020}
+\savepicturepage{pgfid596}{13}
+\pgfsyspdfmark {pgfid596}{24870407}{31178020}
+\savepicturepage{pgfid597}{13}
+\pgfsyspdfmark {pgfid597}{24870407}{31178020}
+\savepicturepage{pgfid598}{13}
+\pgfsyspdfmark {pgfid598}{24651477}{30388639}
+\savepicturepage{pgfid599}{13}
+\pgfsyspdfmark {pgfid599}{24651477}{30388639}
+\savepicturepage{pgfid600}{13}
+\pgfsyspdfmark {pgfid600}{24651477}{30388639}
+\savepicturepage{pgfid601}{13}
+\pgfsyspdfmark {pgfid601}{24651477}{30388639}
+\savepicturepage{pgfid602}{13}
+\pgfsyspdfmark {pgfid602}{27898299}{30388639}
+\savepicturepage{pgfid603}{13}
+\pgfsyspdfmark {pgfid603}{27898299}{30388639}
+\savepicturepage{pgfid604}{13}
+\pgfsyspdfmark {pgfid604}{23668436}{29599258}
+\savepicturepage{pgfid605}{13}
+\pgfsyspdfmark {pgfid605}{23668436}{29599258}
+\savepicturepage{pgfid606}{13}
+\pgfsyspdfmark {pgfid606}{23668436}{29599258}
+\savepicturepage{pgfid607}{13}
+\pgfsyspdfmark {pgfid607}{23668436}{29599258}
+\savepointas{algpx@indentEnd-19}{pgfid608}{1.19995pt}{8.61108pt}
+\savepicturepage{pgfid608}{13}
+\pgfsyspdfmark {pgfid608}{23668436}{29599258}
+\savepicturepage{pgfid609}{13}
+\pgfsyspdfmark {pgfid609}{25587151}{29599258}
+\savepicturepage{pgfid610}{13}
+\pgfsyspdfmark {pgfid610}{25587151}{29599258}
+\savepicturepage{pgfid611}{13}
+\pgfsyspdfmark {pgfid611}{22685395}{28809877}
+\savepicturepage{pgfid612}{13}
+\pgfsyspdfmark {pgfid612}{22685395}{28809877}
+\savepicturepage{pgfid613}{13}
+\pgfsyspdfmark {pgfid613}{22685395}{28809877}
+\savepicturepage{pgfid614}{13}
+\pgfsyspdfmark {pgfid614}{22685395}{28809877}
+\savepointas{algpx@indentEnd-17}{pgfid615}{1.19995pt}{8.61108pt}
+\savepicturepage{pgfid615}{13}
+\pgfsyspdfmark {pgfid615}{22685395}{28809877}
+\savepicturepage{pgfid616}{13}
+\pgfsyspdfmark {pgfid616}{25012047}{28809877}
+\savepicturepage{pgfid617}{13}
+\pgfsyspdfmark {pgfid617}{25012047}{28809877}
+\savepicturepage{pgfid618}{13}
+\pgfsyspdfmark {pgfid618}{22685395}{28020496}
+\savepicturepage{pgfid619}{13}
+\pgfsyspdfmark {pgfid619}{22685395}{28020496}
+\savepicturepage{pgfid620}{13}
+\pgfsyspdfmark {pgfid620}{22685395}{28020496}
+\savepicturepage{pgfid621}{13}
+\pgfsyspdfmark {pgfid621}{22685395}{28020496}
+\savepicturepage{pgfid622}{13}
+\pgfsyspdfmark {pgfid622}{22685395}{28020496}
+\savepicturepage{pgfid623}{13}
+\pgfsyspdfmark {pgfid623}{30028013}{28020496}
+\savepicturepage{pgfid624}{13}
+\pgfsyspdfmark {pgfid624}{30028013}{28020496}
+\savepicturepage{pgfid625}{13}
+\pgfsyspdfmark {pgfid625}{23668436}{27231115}
+\savepicturepage{pgfid626}{13}
+\pgfsyspdfmark {pgfid626}{23668436}{27231115}
+\savepicturepage{pgfid627}{13}
+\pgfsyspdfmark {pgfid627}{23668436}{27231115}
+\savepicturepage{pgfid628}{13}
+\pgfsyspdfmark {pgfid628}{23668436}{27231115}
+\savepicturepage{pgfid629}{13}
+\pgfsyspdfmark {pgfid629}{26915258}{27231115}
+\savepicturepage{pgfid630}{13}
+\pgfsyspdfmark {pgfid630}{26915258}{27231115}
+\savepicturepage{pgfid631}{13}
+\pgfsyspdfmark {pgfid631}{22685395}{26441734}
+\savepicturepage{pgfid632}{13}
+\pgfsyspdfmark {pgfid632}{22685395}{26441734}
+\savepicturepage{pgfid633}{13}
+\pgfsyspdfmark {pgfid633}{22685395}{26441734}
+\savepicturepage{pgfid634}{13}
+\pgfsyspdfmark {pgfid634}{22685395}{26441734}
+\savepointas{algpx@indentEnd-20}{pgfid635}{1.19995pt}{8.61108pt}
+\savepicturepage{pgfid635}{13}
+\pgfsyspdfmark {pgfid635}{22685395}{26441734}
+\savepicturepage{pgfid636}{13}
+\pgfsyspdfmark {pgfid636}{25012047}{26441734}
+\savepicturepage{pgfid637}{13}
+\pgfsyspdfmark {pgfid637}{25012047}{26441734}
+\savepicturepage{pgfid638}{13}
+\pgfsyspdfmark {pgfid638}{22685395}{25652353}
+\savepicturepage{pgfid639}{13}
+\pgfsyspdfmark {pgfid639}{22685395}{25652353}
+\savepicturepage{pgfid640}{13}
+\pgfsyspdfmark {pgfid640}{22685395}{25652353}
+\savepicturepage{pgfid641}{13}
+\pgfsyspdfmark {pgfid641}{22685395}{25652353}
+\savepicturepage{pgfid642}{13}
+\pgfsyspdfmark {pgfid642}{22685395}{25652353}
+\savepicturepage{pgfid643}{13}
+\pgfsyspdfmark {pgfid643}{22685395}{25652353}
+\savepicturepage{pgfid644}{13}
+\pgfsyspdfmark {pgfid644}{22685395}{25158991}
+\savepicturepage{pgfid645}{13}
+\pgfsyspdfmark {pgfid645}{22685395}{25158991}
+\savepicturepage{pgfid646}{13}
+\pgfsyspdfmark {pgfid646}{22685395}{25158991}
+\savepicturepage{pgfid647}{13}
+\pgfsyspdfmark {pgfid647}{22685395}{25158991}
+\savepicturepage{pgfid648}{13}
+\pgfsyspdfmark {pgfid648}{31175553}{25158991}
+\savepicturepage{pgfid649}{13}
+\pgfsyspdfmark {pgfid649}{31175553}{25158991}
+\savepicturepage{pgfid650}{13}
+\pgfsyspdfmark {pgfid650}{22685395}{24369610}
+\savepicturepage{pgfid651}{13}
+\pgfsyspdfmark {pgfid651}{22685395}{24369610}
+\savepicturepage{pgfid652}{13}
+\pgfsyspdfmark {pgfid652}{22685395}{24369610}
+\savepicturepage{pgfid653}{13}
+\pgfsyspdfmark {pgfid653}{22685395}{24369610}
+\savepicturepage{pgfid654}{13}
+\pgfsyspdfmark {pgfid654}{28620525}{24369610}
+\savepicturepage{pgfid655}{13}
+\pgfsyspdfmark {pgfid655}{28620525}{24369610}
+\savepicturepage{pgfid656}{13}
+\pgfsyspdfmark {pgfid656}{22685395}{23580229}
+\savepicturepage{pgfid657}{13}
+\pgfsyspdfmark {pgfid657}{22685395}{23580229}
+\savepicturepage{pgfid658}{13}
+\pgfsyspdfmark {pgfid658}{22685395}{23580229}
+\savepicturepage{pgfid659}{13}
+\pgfsyspdfmark {pgfid659}{22685395}{23580229}
+\savepicturepage{pgfid660}{13}
+\pgfsyspdfmark {pgfid660}{22685395}{23580229}
+\savepicturepage{pgfid661}{13}
+\pgfsyspdfmark {pgfid661}{22685395}{23580229}
+\savepicturepage{pgfid662}{13}
+\pgfsyspdfmark {pgfid662}{22685395}{23086867}
+\savepicturepage{pgfid663}{13}
+\pgfsyspdfmark {pgfid663}{22685395}{23086867}
+\savepicturepage{pgfid664}{13}
+\pgfsyspdfmark {pgfid664}{22685395}{23086867}
+\savepicturepage{pgfid665}{13}
+\pgfsyspdfmark {pgfid665}{22685395}{23086867}
+\savepicturepage{pgfid666}{13}
+\pgfsyspdfmark {pgfid666}{28805235}{23086867}
+\savepicturepage{pgfid667}{13}
+\pgfsyspdfmark {pgfid667}{28805235}{23086867}
+\savepicturepage{pgfid668}{13}
+\pgfsyspdfmark {pgfid668}{22685395}{22297486}
+\savepicturepage{pgfid669}{13}
+\pgfsyspdfmark {pgfid669}{22685395}{22297486}
+\savepicturepage{pgfid670}{13}
+\pgfsyspdfmark {pgfid670}{22685395}{22297486}
+\savepicturepage{pgfid671}{13}
+\pgfsyspdfmark {pgfid671}{22685395}{22297486}
+\savepicturepage{pgfid672}{13}
+\pgfsyspdfmark {pgfid672}{34235519}{22297486}
+\savepicturepage{pgfid673}{13}
+\pgfsyspdfmark {pgfid673}{34235519}{22297486}
+\savepicturepage{pgfid674}{13}
+\pgfsyspdfmark {pgfid674}{22685395}{21508105}
+\savepicturepage{pgfid675}{13}
+\pgfsyspdfmark {pgfid675}{22685395}{21508105}
+\savepicturepage{pgfid676}{13}
+\pgfsyspdfmark {pgfid676}{22685395}{21508105}
+\savepicturepage{pgfid677}{13}
+\pgfsyspdfmark {pgfid677}{22685395}{21508105}
+\savepicturepage{pgfid678}{13}
+\pgfsyspdfmark {pgfid678}{29163407}{21508105}
+\savepicturepage{pgfid679}{13}
+\pgfsyspdfmark {pgfid679}{29163407}{21508105}
+\savepicturepage{pgfid680}{13}
+\pgfsyspdfmark {pgfid680}{21702354}{20718724}
+\savepicturepage{pgfid681}{13}
+\pgfsyspdfmark {pgfid681}{21702354}{20718724}
+\savepicturepage{pgfid682}{13}
+\pgfsyspdfmark {pgfid682}{21702354}{20718724}
+\savepicturepage{pgfid683}{13}
+\pgfsyspdfmark {pgfid683}{21702354}{20718724}
+\savepointas{algpx@indentEnd-16}{pgfid684}{1.19995pt}{8.61108pt}
+\savepicturepage{pgfid684}{13}
+\pgfsyspdfmark {pgfid684}{21702354}{20718724}
+\savepicturepage{pgfid685}{13}
+\pgfsyspdfmark {pgfid685}{24029006}{20718724}
+\savepicturepage{pgfid686}{13}
+\pgfsyspdfmark {pgfid686}{24029006}{20718724}
+\savepicturepage{pgfid687}{13}
+\pgfsyspdfmark {pgfid687}{20719313}{19929343}
+\savepicturepage{pgfid688}{13}
+\pgfsyspdfmark {pgfid688}{20719313}{19929343}
+\savepicturepage{pgfid689}{13}
+\pgfsyspdfmark {pgfid689}{20719313}{19929343}
+\savepicturepage{pgfid690}{13}
+\pgfsyspdfmark {pgfid690}{20719313}{19929343}
+\savepointas{algpx@indentEnd-15}{pgfid691}{1.19995pt}{8.61108pt}
+\savepicturepage{pgfid691}{13}
+\pgfsyspdfmark {pgfid691}{20719313}{19929343}
+\citation{negi24}
+\newlabel{eqn:graph_Ok_compact}{{67}{14}{A Graph Style Parameterization}{equation.67}{}}
+\newlabel{eqn:graph_gk_definition}{{68}{14}{A Graph Style Parameterization}{equation.68}{}}
+\newlabel{eqn:graph_gk_definition2}{{69}{14}{A Graph Style Parameterization}{equation.69}{}}
+\newlabel{eqn:graph_Ok_compact2}{{70}{14}{A Graph Style Parameterization}{equation.70}{}}
+\newlabel{eqn:complement_projector}{{71}{14}{A Graph Style Parameterization}{equation.71}{}}
+\newlabel{eqn:graph_Ok_compact3}{{73}{14}{A Graph Style Parameterization}{equation.73}{}}
+\newlabel{eqn:graph_gk_definition3}{{74}{14}{A Graph Style Parameterization}{equation.74}{}}
 \bibstyle{unsrtnat}
 \bibdata{references}
 \bibcite{coullet83}{{1}{1983}{{Coullet and Spiegel}}{{}}}
@@ -617,255 +1070,267 @@
 \bibcite{haragus11}{{4}{2011}{{Haragus and G\'{e}rard}}{{}}}
 \bibcite{carini15}{{5}{2015}{{Carini et~al.}}{{Carini, Auteri, and Giannetti}}}
 \bibcite{gallaire16}{{6}{2016}{{Gallaire et~al.}}{{Gallaire, Boujo, Mantic-Lugo, Arratia, Thiria, and Meliga}}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces Center--Manifold: Graph parameterization}}{14}{algorithm.2}\protected@file@percent }
-\newlabel{algo:graph_form}{{2}{14}{Center--Manifold: Graph parameterization}{algorithm.2}{}}
-\savepicturepage{pgfid476}{14}
-\pgfsyspdfmark {pgfid476}{5578117}{39738711}
-\savepicturepage{pgfid477}{14}
-\pgfsyspdfmark {pgfid477}{13246556}{39738711}
-\savepicturepage{pgfid478}{14}
-\pgfsyspdfmark {pgfid478}{13246556}{39738711}
-\savepicturepage{pgfid479}{14}
-\pgfsyspdfmark {pgfid479}{6561158}{38949330}
-\savepicturepage{pgfid480}{14}
-\pgfsyspdfmark {pgfid480}{6561158}{38949330}
-\savepicturepage{pgfid481}{14}
-\pgfsyspdfmark {pgfid481}{16425720}{38949330}
-\savepicturepage{pgfid482}{14}
-\pgfsyspdfmark {pgfid482}{16425720}{38949330}
-\savepicturepage{pgfid483}{14}
-\pgfsyspdfmark {pgfid483}{7544199}{38159949}
-\savepicturepage{pgfid484}{14}
-\pgfsyspdfmark {pgfid484}{7544199}{38159949}
-\savepicturepage{pgfid485}{14}
-\pgfsyspdfmark {pgfid485}{7544199}{38159949}
-\savepicturepage{pgfid486}{14}
-\pgfsyspdfmark {pgfid486}{7544199}{38159949}
-\savepicturepage{pgfid487}{14}
-\pgfsyspdfmark {pgfid487}{7544199}{38159949}
-\savepicturepage{pgfid488}{14}
-\pgfsyspdfmark {pgfid488}{7544199}{38159949}
-\savepicturepage{pgfid489}{14}
-\pgfsyspdfmark {pgfid489}{7544199}{37666587}
-\savepicturepage{pgfid490}{14}
-\pgfsyspdfmark {pgfid490}{7544199}{37666587}
-\savepicturepage{pgfid491}{14}
-\pgfsyspdfmark {pgfid491}{7544199}{37666587}
-\savepicturepage{pgfid492}{14}
-\pgfsyspdfmark {pgfid492}{7544199}{37666587}
-\savepicturepage{pgfid493}{14}
-\pgfsyspdfmark {pgfid493}{17648186}{37666587}
-\savepicturepage{pgfid494}{14}
-\pgfsyspdfmark {pgfid494}{17648186}{37666587}
-\savepicturepage{pgfid495}{14}
-\pgfsyspdfmark {pgfid495}{7544199}{36087825}
-\savepicturepage{pgfid496}{14}
-\pgfsyspdfmark {pgfid496}{7544199}{36087825}
-\savepicturepage{pgfid497}{14}
-\pgfsyspdfmark {pgfid497}{7544199}{36087825}
-\savepicturepage{pgfid498}{14}
-\pgfsyspdfmark {pgfid498}{7544199}{36087825}
-\savepicturepage{pgfid499}{14}
-\pgfsyspdfmark {pgfid499}{16597402}{36087825}
-\savepicturepage{pgfid500}{14}
-\pgfsyspdfmark {pgfid500}{16597402}{36087825}
-\savepicturepage{pgfid501}{14}
-\pgfsyspdfmark {pgfid501}{7544199}{35120156}
-\savepicturepage{pgfid502}{14}
-\pgfsyspdfmark {pgfid502}{7544199}{35120156}
-\savepicturepage{pgfid503}{14}
-\pgfsyspdfmark {pgfid503}{7544199}{35120156}
-\savepicturepage{pgfid504}{14}
-\pgfsyspdfmark {pgfid504}{7544199}{35120156}
-\savepicturepage{pgfid505}{14}
-\pgfsyspdfmark {pgfid505}{16987225}{35120156}
-\savepicturepage{pgfid506}{14}
-\pgfsyspdfmark {pgfid506}{16987225}{35120156}
-\savepicturepage{pgfid507}{14}
-\pgfsyspdfmark {pgfid507}{7544199}{34330775}
-\savepicturepage{pgfid508}{14}
-\pgfsyspdfmark {pgfid508}{7544199}{34330775}
-\savepicturepage{pgfid509}{14}
-\pgfsyspdfmark {pgfid509}{7544199}{34330775}
-\savepicturepage{pgfid510}{14}
-\pgfsyspdfmark {pgfid510}{7544199}{34330775}
-\savepicturepage{pgfid511}{14}
-\pgfsyspdfmark {pgfid511}{19094323}{34330775}
-\savepicturepage{pgfid512}{14}
-\pgfsyspdfmark {pgfid512}{19094323}{34330775}
-\savepicturepage{pgfid513}{14}
-\pgfsyspdfmark {pgfid513}{7544199}{33541394}
-\savepicturepage{pgfid514}{14}
-\pgfsyspdfmark {pgfid514}{7544199}{33541394}
-\savepicturepage{pgfid515}{14}
-\pgfsyspdfmark {pgfid515}{7544199}{33541394}
-\savepicturepage{pgfid516}{14}
-\pgfsyspdfmark {pgfid516}{7544199}{33541394}
-\savepicturepage{pgfid517}{14}
-\pgfsyspdfmark {pgfid517}{7544199}{33541394}
-\savepicturepage{pgfid518}{14}
-\pgfsyspdfmark {pgfid518}{13507159}{33541394}
-\savepicturepage{pgfid519}{14}
-\pgfsyspdfmark {pgfid519}{13507159}{33541394}
-\savepicturepage{pgfid520}{14}
-\pgfsyspdfmark {pgfid520}{8527240}{32676133}
-\savepicturepage{pgfid521}{14}
-\pgfsyspdfmark {pgfid521}{8527240}{32676133}
-\savepicturepage{pgfid522}{14}
-\pgfsyspdfmark {pgfid522}{8527240}{32676133}
-\savepicturepage{pgfid523}{14}
-\pgfsyspdfmark {pgfid523}{8527240}{32676133}
-\savepicturepage{pgfid524}{14}
-\pgfsyspdfmark {pgfid524}{12588753}{32676133}
-\savepicturepage{pgfid525}{14}
-\pgfsyspdfmark {pgfid525}{12588753}{32676133}
-\savepicturepage{pgfid526}{14}
-\pgfsyspdfmark {pgfid526}{7544199}{31886752}
-\savepicturepage{pgfid527}{14}
-\pgfsyspdfmark {pgfid527}{7544199}{31886752}
-\savepicturepage{pgfid528}{14}
-\pgfsyspdfmark {pgfid528}{7544199}{31886752}
-\savepicturepage{pgfid529}{14}
-\pgfsyspdfmark {pgfid529}{7544199}{31886752}
-\savepointas{algpx@indentEnd-8}{pgfid530}{1.19995pt}{8.61108pt}
-\savepicturepage{pgfid530}{14}
-\pgfsyspdfmark {pgfid530}{7544199}{31886752}
-\savepicturepage{pgfid531}{14}
-\pgfsyspdfmark {pgfid531}{9870851}{31886752}
-\savepicturepage{pgfid532}{14}
-\pgfsyspdfmark {pgfid532}{9870851}{31886752}
-\savepicturepage{pgfid533}{14}
-\pgfsyspdfmark {pgfid533}{7544199}{31097371}
-\savepicturepage{pgfid534}{14}
-\pgfsyspdfmark {pgfid534}{7544199}{31097371}
-\savepicturepage{pgfid535}{14}
-\pgfsyspdfmark {pgfid535}{7544199}{31097371}
-\savepicturepage{pgfid536}{14}
-\pgfsyspdfmark {pgfid536}{7544199}{31097371}
-\savepicturepage{pgfid537}{14}
-\pgfsyspdfmark {pgfid537}{7544199}{31097371}
-\savepicturepage{pgfid538}{14}
-\pgfsyspdfmark {pgfid538}{14886817}{31097371}
-\savepicturepage{pgfid539}{14}
-\pgfsyspdfmark {pgfid539}{14886817}{31097371}
-\savepicturepage{pgfid540}{14}
-\pgfsyspdfmark {pgfid540}{8527240}{30307990}
-\savepicturepage{pgfid541}{14}
-\pgfsyspdfmark {pgfid541}{8527240}{30307990}
-\savepicturepage{pgfid542}{14}
-\pgfsyspdfmark {pgfid542}{8527240}{30307990}
-\savepicturepage{pgfid543}{14}
-\pgfsyspdfmark {pgfid543}{8527240}{30307990}
-\savepicturepage{pgfid544}{14}
-\pgfsyspdfmark {pgfid544}{11774062}{30307990}
-\savepicturepage{pgfid545}{14}
-\pgfsyspdfmark {pgfid545}{11774062}{30307990}
-\savepicturepage{pgfid546}{14}
-\pgfsyspdfmark {pgfid546}{7544199}{29518609}
-\savepicturepage{pgfid547}{14}
-\pgfsyspdfmark {pgfid547}{7544199}{29518609}
-\savepicturepage{pgfid548}{14}
-\pgfsyspdfmark {pgfid548}{7544199}{29518609}
-\savepicturepage{pgfid549}{14}
-\pgfsyspdfmark {pgfid549}{7544199}{29518609}
-\savepointas{algpx@indentEnd-9}{pgfid550}{1.19995pt}{8.61108pt}
-\savepicturepage{pgfid550}{14}
-\pgfsyspdfmark {pgfid550}{7544199}{29518609}
-\savepicturepage{pgfid551}{14}
-\pgfsyspdfmark {pgfid551}{9870851}{29518609}
-\savepicturepage{pgfid552}{14}
-\pgfsyspdfmark {pgfid552}{9870851}{29518609}
-\savepicturepage{pgfid553}{14}
-\pgfsyspdfmark {pgfid553}{7544199}{28729228}
-\savepicturepage{pgfid554}{14}
-\pgfsyspdfmark {pgfid554}{7544199}{28729228}
-\savepicturepage{pgfid555}{14}
-\pgfsyspdfmark {pgfid555}{7544199}{28729228}
-\savepicturepage{pgfid556}{14}
-\pgfsyspdfmark {pgfid556}{7544199}{28729228}
-\savepicturepage{pgfid557}{14}
-\pgfsyspdfmark {pgfid557}{7544199}{28729228}
-\savepicturepage{pgfid558}{14}
-\pgfsyspdfmark {pgfid558}{7544199}{28729228}
-\savepicturepage{pgfid559}{14}
-\pgfsyspdfmark {pgfid559}{7544199}{28235866}
-\savepicturepage{pgfid560}{14}
-\pgfsyspdfmark {pgfid560}{7544199}{28235866}
-\savepicturepage{pgfid561}{14}
-\pgfsyspdfmark {pgfid561}{7544199}{28235866}
-\savepicturepage{pgfid562}{14}
-\pgfsyspdfmark {pgfid562}{7544199}{28235866}
-\savepicturepage{pgfid563}{14}
-\pgfsyspdfmark {pgfid563}{16538674}{28235866}
-\savepicturepage{pgfid564}{14}
-\pgfsyspdfmark {pgfid564}{16538674}{28235866}
-\savepicturepage{pgfid565}{14}
-\pgfsyspdfmark {pgfid565}{7544199}{27446485}
-\savepicturepage{pgfid566}{14}
-\pgfsyspdfmark {pgfid566}{7544199}{27446485}
-\savepicturepage{pgfid567}{14}
-\pgfsyspdfmark {pgfid567}{7544199}{27446485}
-\savepicturepage{pgfid568}{14}
-\pgfsyspdfmark {pgfid568}{7544199}{27446485}
-\savepicturepage{pgfid569}{14}
-\pgfsyspdfmark {pgfid569}{13392045}{27446485}
-\savepicturepage{pgfid570}{14}
-\pgfsyspdfmark {pgfid570}{13392045}{27446485}
-\savepicturepage{pgfid571}{14}
-\pgfsyspdfmark {pgfid571}{7544199}{26657104}
-\savepicturepage{pgfid572}{14}
-\pgfsyspdfmark {pgfid572}{7544199}{26657104}
-\savepicturepage{pgfid573}{14}
-\pgfsyspdfmark {pgfid573}{7544199}{26657104}
-\savepicturepage{pgfid574}{14}
-\pgfsyspdfmark {pgfid574}{7544199}{26657104}
-\savepicturepage{pgfid575}{14}
-\pgfsyspdfmark {pgfid575}{13352214}{26657104}
-\savepicturepage{pgfid576}{14}
-\pgfsyspdfmark {pgfid576}{13352214}{26657104}
-\savepicturepage{pgfid577}{14}
-\pgfsyspdfmark {pgfid577}{7544199}{25867723}
-\savepicturepage{pgfid578}{14}
-\pgfsyspdfmark {pgfid578}{7544199}{25867723}
-\savepicturepage{pgfid579}{14}
-\pgfsyspdfmark {pgfid579}{7544199}{25867723}
-\savepicturepage{pgfid580}{14}
-\pgfsyspdfmark {pgfid580}{7544199}{25867723}
-\savepicturepage{pgfid581}{14}
-\pgfsyspdfmark {pgfid581}{15803902}{25867723}
-\savepicturepage{pgfid582}{14}
-\pgfsyspdfmark {pgfid582}{15803902}{25867723}
-\savepicturepage{pgfid583}{14}
-\pgfsyspdfmark {pgfid583}{6561158}{25078342}
-\savepicturepage{pgfid584}{14}
-\pgfsyspdfmark {pgfid584}{6561158}{25078342}
-\savepicturepage{pgfid585}{14}
-\pgfsyspdfmark {pgfid585}{6561158}{25078342}
-\savepicturepage{pgfid586}{14}
-\pgfsyspdfmark {pgfid586}{6561158}{25078342}
-\savepointas{algpx@indentEnd-7}{pgfid587}{1.19995pt}{8.61108pt}
-\savepicturepage{pgfid587}{14}
-\pgfsyspdfmark {pgfid587}{6561158}{25078342}
-\savepicturepage{pgfid588}{14}
-\pgfsyspdfmark {pgfid588}{8887810}{25078342}
-\savepicturepage{pgfid589}{14}
-\pgfsyspdfmark {pgfid589}{8887810}{25078342}
-\savepicturepage{pgfid590}{14}
-\pgfsyspdfmark {pgfid590}{5578117}{24288961}
-\savepicturepage{pgfid591}{14}
-\pgfsyspdfmark {pgfid591}{5578117}{24288961}
-\savepicturepage{pgfid592}{14}
-\pgfsyspdfmark {pgfid592}{5578117}{24288961}
-\savepicturepage{pgfid593}{14}
-\pgfsyspdfmark {pgfid593}{5578117}{24288961}
-\savepointas{algpx@indentEnd-6}{pgfid594}{1.19995pt}{8.61108pt}
-\savepicturepage{pgfid594}{14}
-\pgfsyspdfmark {pgfid594}{5578117}{24288961}
-\newlabel{eqn:inverse_map}{{75}{14}{A Graph Style Parameterization}{equation.75}{}}
 \bibcite{haro16}{{7}{2016}{{Haro et~al.}}{{Haro, Canadell, Figueras, Luque, Mondelo, et~al.}}}
 \bibcite{jain22}{{8}{2022}{{Jain and Haller}}{{}}}
 \bibcite{negi24}{{9}{2024}{{Negi}}{{}}}
 \bibcite{cabre03a}{{10}{2003{}}{{Cabr{\'e} et~al.}}{{Cabr{\'e}, Fontich, and De~la Llave}}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {4}{\ignorespaces Center--Manifold: Graph parameterization}}{15}{algorithm.4}\protected@file@percent }
+\newlabel{algo:graph_form}{{4}{15}{Center--Manifold: Graph parameterization}{algorithm.4}{}}
+\savepicturepage{pgfid692}{15}
+\pgfsyspdfmark {pgfid692}{5056003}{39756983}
+\savepicturepage{pgfid693}{15}
+\pgfsyspdfmark {pgfid693}{12724442}{39756983}
+\savepicturepage{pgfid694}{15}
+\pgfsyspdfmark {pgfid694}{12724442}{39756983}
+\savepicturepage{pgfid695}{15}
+\pgfsyspdfmark {pgfid695}{6039044}{38967602}
+\savepicturepage{pgfid696}{15}
+\pgfsyspdfmark {pgfid696}{6039044}{38967602}
+\savepicturepage{pgfid697}{15}
+\pgfsyspdfmark {pgfid697}{15903606}{38967602}
+\savepicturepage{pgfid698}{15}
+\pgfsyspdfmark {pgfid698}{15903606}{38967602}
+\savepicturepage{pgfid699}{15}
+\pgfsyspdfmark {pgfid699}{7022085}{38178221}
+\savepicturepage{pgfid700}{15}
+\pgfsyspdfmark {pgfid700}{7022085}{38178221}
+\savepicturepage{pgfid701}{15}
+\pgfsyspdfmark {pgfid701}{7022085}{38178221}
+\savepicturepage{pgfid702}{15}
+\pgfsyspdfmark {pgfid702}{7022085}{38178221}
+\savepicturepage{pgfid703}{15}
+\pgfsyspdfmark {pgfid703}{7022085}{38178221}
+\savepicturepage{pgfid704}{15}
+\pgfsyspdfmark {pgfid704}{7022085}{38178221}
+\savepicturepage{pgfid705}{15}
+\pgfsyspdfmark {pgfid705}{7022085}{37684859}
+\savepicturepage{pgfid706}{15}
+\pgfsyspdfmark {pgfid706}{7022085}{37684859}
+\savepicturepage{pgfid707}{15}
+\pgfsyspdfmark {pgfid707}{7022085}{37684859}
+\savepicturepage{pgfid708}{15}
+\pgfsyspdfmark {pgfid708}{7022085}{37684859}
+\savepicturepage{pgfid709}{15}
+\pgfsyspdfmark {pgfid709}{17126072}{37684859}
+\savepicturepage{pgfid710}{15}
+\pgfsyspdfmark {pgfid710}{17126072}{37684859}
+\savepicturepage{pgfid711}{15}
+\pgfsyspdfmark {pgfid711}{7022085}{36106097}
+\savepicturepage{pgfid712}{15}
+\pgfsyspdfmark {pgfid712}{7022085}{36106097}
+\savepicturepage{pgfid713}{15}
+\pgfsyspdfmark {pgfid713}{7022085}{36106097}
+\savepicturepage{pgfid714}{15}
+\pgfsyspdfmark {pgfid714}{7022085}{36106097}
+\savepicturepage{pgfid715}{15}
+\pgfsyspdfmark {pgfid715}{16264409}{36106097}
+\savepicturepage{pgfid716}{15}
+\pgfsyspdfmark {pgfid716}{16264409}{36106097}
+\savepicturepage{pgfid717}{15}
+\pgfsyspdfmark {pgfid717}{7022085}{35138428}
+\savepicturepage{pgfid718}{15}
+\pgfsyspdfmark {pgfid718}{7022085}{35138428}
+\savepicturepage{pgfid719}{15}
+\pgfsyspdfmark {pgfid719}{7022085}{35138428}
+\savepicturepage{pgfid720}{15}
+\pgfsyspdfmark {pgfid720}{7022085}{35138428}
+\savepicturepage{pgfid721}{15}
+\pgfsyspdfmark {pgfid721}{16465111}{35138428}
+\savepicturepage{pgfid722}{15}
+\pgfsyspdfmark {pgfid722}{16465111}{35138428}
+\savepicturepage{pgfid723}{15}
+\pgfsyspdfmark {pgfid723}{7022085}{34349047}
+\savepicturepage{pgfid724}{15}
+\pgfsyspdfmark {pgfid724}{7022085}{34349047}
+\savepicturepage{pgfid725}{15}
+\pgfsyspdfmark {pgfid725}{7022085}{34349047}
+\savepicturepage{pgfid726}{15}
+\pgfsyspdfmark {pgfid726}{7022085}{34349047}
+\savepicturepage{pgfid727}{15}
+\pgfsyspdfmark {pgfid727}{7022085}{34349047}
+\savepicturepage{pgfid728}{15}
+\pgfsyspdfmark {pgfid728}{7022085}{34349047}
+\savepicturepage{pgfid729}{15}
+\pgfsyspdfmark {pgfid729}{7022085}{33855685}
+\savepicturepage{pgfid730}{15}
+\pgfsyspdfmark {pgfid730}{7022085}{33855685}
+\savepicturepage{pgfid731}{15}
+\pgfsyspdfmark {pgfid731}{7022085}{33855685}
+\savepicturepage{pgfid732}{15}
+\pgfsyspdfmark {pgfid732}{7022085}{33855685}
+\savepicturepage{pgfid733}{15}
+\pgfsyspdfmark {pgfid733}{14583823}{33855685}
+\savepicturepage{pgfid734}{15}
+\pgfsyspdfmark {pgfid734}{14583823}{33855685}
+\savepicturepage{pgfid735}{15}
+\pgfsyspdfmark {pgfid735}{7022085}{33066304}
+\savepicturepage{pgfid736}{15}
+\pgfsyspdfmark {pgfid736}{7022085}{33066304}
+\savepicturepage{pgfid737}{15}
+\pgfsyspdfmark {pgfid737}{7022085}{33066304}
+\savepicturepage{pgfid738}{15}
+\pgfsyspdfmark {pgfid738}{7022085}{33066304}
+\savepicturepage{pgfid739}{15}
+\pgfsyspdfmark {pgfid739}{7022085}{33066304}
+\savepicturepage{pgfid740}{15}
+\pgfsyspdfmark {pgfid740}{12985045}{33066304}
+\savepicturepage{pgfid741}{15}
+\pgfsyspdfmark {pgfid741}{12985045}{33066304}
+\savepicturepage{pgfid742}{15}
+\pgfsyspdfmark {pgfid742}{8005126}{32201043}
+\savepicturepage{pgfid743}{15}
+\pgfsyspdfmark {pgfid743}{8005126}{32201043}
+\savepicturepage{pgfid744}{15}
+\pgfsyspdfmark {pgfid744}{8005126}{32201043}
+\savepicturepage{pgfid745}{15}
+\pgfsyspdfmark {pgfid745}{8005126}{32201043}
+\savepicturepage{pgfid746}{15}
+\pgfsyspdfmark {pgfid746}{12066639}{32201043}
+\savepicturepage{pgfid747}{15}
+\pgfsyspdfmark {pgfid747}{12066639}{32201043}
+\savepicturepage{pgfid748}{15}
+\pgfsyspdfmark {pgfid748}{7022085}{31411662}
+\savepicturepage{pgfid749}{15}
+\pgfsyspdfmark {pgfid749}{7022085}{31411662}
+\savepicturepage{pgfid750}{15}
+\pgfsyspdfmark {pgfid750}{7022085}{31411662}
+\savepicturepage{pgfid751}{15}
+\pgfsyspdfmark {pgfid751}{7022085}{31411662}
+\savepointas{algpx@indentEnd-23}{pgfid752}{1.19995pt}{8.61108pt}
+\savepicturepage{pgfid752}{15}
+\pgfsyspdfmark {pgfid752}{7022085}{31411662}
+\savepicturepage{pgfid753}{15}
+\pgfsyspdfmark {pgfid753}{9348737}{31411662}
+\savepicturepage{pgfid754}{15}
+\pgfsyspdfmark {pgfid754}{9348737}{31411662}
+\savepicturepage{pgfid755}{15}
+\pgfsyspdfmark {pgfid755}{7022085}{30622281}
+\savepicturepage{pgfid756}{15}
+\pgfsyspdfmark {pgfid756}{7022085}{30622281}
+\savepicturepage{pgfid757}{15}
+\pgfsyspdfmark {pgfid757}{7022085}{30622281}
+\savepicturepage{pgfid758}{15}
+\pgfsyspdfmark {pgfid758}{7022085}{30622281}
+\savepicturepage{pgfid759}{15}
+\pgfsyspdfmark {pgfid759}{7022085}{30622281}
+\savepicturepage{pgfid760}{15}
+\pgfsyspdfmark {pgfid760}{14364703}{30622281}
+\savepicturepage{pgfid761}{15}
+\pgfsyspdfmark {pgfid761}{14364703}{30622281}
+\savepicturepage{pgfid762}{15}
+\pgfsyspdfmark {pgfid762}{8005126}{29832900}
+\savepicturepage{pgfid763}{15}
+\pgfsyspdfmark {pgfid763}{8005126}{29832900}
+\savepicturepage{pgfid764}{15}
+\pgfsyspdfmark {pgfid764}{8005126}{29832900}
+\savepicturepage{pgfid765}{15}
+\pgfsyspdfmark {pgfid765}{8005126}{29832900}
+\savepicturepage{pgfid766}{15}
+\pgfsyspdfmark {pgfid766}{11251948}{29832900}
+\savepicturepage{pgfid767}{15}
+\pgfsyspdfmark {pgfid767}{11251948}{29832900}
+\savepicturepage{pgfid768}{15}
+\pgfsyspdfmark {pgfid768}{7022085}{29043519}
+\savepicturepage{pgfid769}{15}
+\pgfsyspdfmark {pgfid769}{7022085}{29043519}
+\savepicturepage{pgfid770}{15}
+\pgfsyspdfmark {pgfid770}{7022085}{29043519}
+\savepicturepage{pgfid771}{15}
+\pgfsyspdfmark {pgfid771}{7022085}{29043519}
+\savepointas{algpx@indentEnd-24}{pgfid772}{1.19995pt}{8.61108pt}
+\savepicturepage{pgfid772}{15}
+\pgfsyspdfmark {pgfid772}{7022085}{29043519}
+\savepicturepage{pgfid773}{15}
+\pgfsyspdfmark {pgfid773}{9348737}{29043519}
+\savepicturepage{pgfid774}{15}
+\pgfsyspdfmark {pgfid774}{9348737}{29043519}
+\savepicturepage{pgfid775}{15}
+\pgfsyspdfmark {pgfid775}{7022085}{28254138}
+\savepicturepage{pgfid776}{15}
+\pgfsyspdfmark {pgfid776}{7022085}{28254138}
+\savepicturepage{pgfid777}{15}
+\pgfsyspdfmark {pgfid777}{7022085}{28254138}
+\savepicturepage{pgfid778}{15}
+\pgfsyspdfmark {pgfid778}{7022085}{28254138}
+\savepicturepage{pgfid779}{15}
+\pgfsyspdfmark {pgfid779}{7022085}{28254138}
+\savepicturepage{pgfid780}{15}
+\pgfsyspdfmark {pgfid780}{7022085}{28254138}
+\savepicturepage{pgfid781}{15}
+\pgfsyspdfmark {pgfid781}{7022085}{27760776}
+\savepicturepage{pgfid782}{15}
+\pgfsyspdfmark {pgfid782}{7022085}{27760776}
+\savepicturepage{pgfid783}{15}
+\pgfsyspdfmark {pgfid783}{7022085}{27760776}
+\savepicturepage{pgfid784}{15}
+\pgfsyspdfmark {pgfid784}{7022085}{27760776}
+\savepicturepage{pgfid785}{15}
+\pgfsyspdfmark {pgfid785}{16016560}{27760776}
+\savepicturepage{pgfid786}{15}
+\pgfsyspdfmark {pgfid786}{16016560}{27760776}
+\savepicturepage{pgfid787}{15}
+\pgfsyspdfmark {pgfid787}{7022085}{26971395}
+\savepicturepage{pgfid788}{15}
+\pgfsyspdfmark {pgfid788}{7022085}{26971395}
+\savepicturepage{pgfid789}{15}
+\pgfsyspdfmark {pgfid789}{7022085}{26971395}
+\savepicturepage{pgfid790}{15}
+\pgfsyspdfmark {pgfid790}{7022085}{26971395}
+\savepicturepage{pgfid791}{15}
+\pgfsyspdfmark {pgfid791}{18572209}{26971395}
+\savepicturepage{pgfid792}{15}
+\pgfsyspdfmark {pgfid792}{18572209}{26971395}
+\savepicturepage{pgfid793}{15}
+\pgfsyspdfmark {pgfid793}{7022085}{26182014}
+\savepicturepage{pgfid794}{15}
+\pgfsyspdfmark {pgfid794}{7022085}{26182014}
+\savepicturepage{pgfid795}{15}
+\pgfsyspdfmark {pgfid795}{7022085}{26182014}
+\savepicturepage{pgfid796}{15}
+\pgfsyspdfmark {pgfid796}{7022085}{26182014}
+\savepicturepage{pgfid797}{15}
+\pgfsyspdfmark {pgfid797}{12830100}{26182014}
+\savepicturepage{pgfid798}{15}
+\pgfsyspdfmark {pgfid798}{12830100}{26182014}
+\savepicturepage{pgfid799}{15}
+\pgfsyspdfmark {pgfid799}{7022085}{25392633}
+\savepicturepage{pgfid800}{15}
+\pgfsyspdfmark {pgfid800}{7022085}{25392633}
+\savepicturepage{pgfid801}{15}
+\pgfsyspdfmark {pgfid801}{7022085}{25392633}
+\savepicturepage{pgfid802}{15}
+\pgfsyspdfmark {pgfid802}{7022085}{25392633}
+\savepicturepage{pgfid803}{15}
+\pgfsyspdfmark {pgfid803}{15281788}{25392633}
+\savepicturepage{pgfid804}{15}
+\pgfsyspdfmark {pgfid804}{15281788}{25392633}
+\savepicturepage{pgfid805}{15}
+\pgfsyspdfmark {pgfid805}{6039044}{24603252}
+\savepicturepage{pgfid806}{15}
+\pgfsyspdfmark {pgfid806}{6039044}{24603252}
+\savepicturepage{pgfid807}{15}
+\pgfsyspdfmark {pgfid807}{6039044}{24603252}
+\savepicturepage{pgfid808}{15}
+\pgfsyspdfmark {pgfid808}{6039044}{24603252}
+\savepointas{algpx@indentEnd-22}{pgfid809}{1.19995pt}{8.61108pt}
+\savepicturepage{pgfid809}{15}
+\pgfsyspdfmark {pgfid809}{6039044}{24603252}
+\savepicturepage{pgfid810}{15}
+\pgfsyspdfmark {pgfid810}{8365696}{24603252}
+\savepicturepage{pgfid811}{15}
+\pgfsyspdfmark {pgfid811}{8365696}{24603252}
+\savepicturepage{pgfid812}{15}
+\pgfsyspdfmark {pgfid812}{5056003}{23813871}
+\savepicturepage{pgfid813}{15}
+\pgfsyspdfmark {pgfid813}{5056003}{23813871}
+\savepicturepage{pgfid814}{15}
+\pgfsyspdfmark {pgfid814}{5056003}{23813871}
+\savepicturepage{pgfid815}{15}
+\pgfsyspdfmark {pgfid815}{5056003}{23813871}
+\savepointas{algpx@indentEnd-21}{pgfid816}{1.19995pt}{8.61108pt}
+\savepicturepage{pgfid816}{15}
+\pgfsyspdfmark {pgfid816}{5056003}{23813871}
+\newlabel{eqn:inverse_map}{{75}{15}{A Graph Style Parameterization}{equation.75}{}}
 \bibcite{cabre03b}{{11}{2003{}}{{Cabr{\'e} et~al.}}{{Cabr{\'e}, Fontich, and De~la Llave}}}
 \expandafter\ifx\csname c@algpx@indentEndPage-0@totc\endcsname\relax\newcounter{algpx@indentEndPage-0@totc}\fi\setcounter{algpx@indentEndPage-0@totc}{0}
 \expandafter\ifx\csname c@algpx@indentEndPage-1@totc\endcsname\relax\newcounter{algpx@indentEndPage-1@totc}\fi\setcounter{algpx@indentEndPage-1@totc}{0}
@@ -877,4 +1342,19 @@
 \expandafter\ifx\csname c@algpx@indentEndPage-7@totc\endcsname\relax\newcounter{algpx@indentEndPage-7@totc}\fi\setcounter{algpx@indentEndPage-7@totc}{0}
 \expandafter\ifx\csname c@algpx@indentEndPage-8@totc\endcsname\relax\newcounter{algpx@indentEndPage-8@totc}\fi\setcounter{algpx@indentEndPage-8@totc}{0}
 \expandafter\ifx\csname c@algpx@indentEndPage-9@totc\endcsname\relax\newcounter{algpx@indentEndPage-9@totc}\fi\setcounter{algpx@indentEndPage-9@totc}{0}
-\gdef \@abspage@last{15}
+\expandafter\ifx\csname c@algpx@indentEndPage-10@totc\endcsname\relax\newcounter{algpx@indentEndPage-10@totc}\fi\setcounter{algpx@indentEndPage-10@totc}{0}
+\expandafter\ifx\csname c@algpx@indentEndPage-11@totc\endcsname\relax\newcounter{algpx@indentEndPage-11@totc}\fi\setcounter{algpx@indentEndPage-11@totc}{0}
+\expandafter\ifx\csname c@algpx@indentEndPage-12@totc\endcsname\relax\newcounter{algpx@indentEndPage-12@totc}\fi\setcounter{algpx@indentEndPage-12@totc}{0}
+\expandafter\ifx\csname c@algpx@indentEndPage-13@totc\endcsname\relax\newcounter{algpx@indentEndPage-13@totc}\fi\setcounter{algpx@indentEndPage-13@totc}{0}
+\expandafter\ifx\csname c@algpx@indentEndPage-14@totc\endcsname\relax\newcounter{algpx@indentEndPage-14@totc}\fi\setcounter{algpx@indentEndPage-14@totc}{0}
+\expandafter\ifx\csname c@algpx@indentEndPage-15@totc\endcsname\relax\newcounter{algpx@indentEndPage-15@totc}\fi\setcounter{algpx@indentEndPage-15@totc}{0}
+\expandafter\ifx\csname c@algpx@indentEndPage-16@totc\endcsname\relax\newcounter{algpx@indentEndPage-16@totc}\fi\setcounter{algpx@indentEndPage-16@totc}{0}
+\expandafter\ifx\csname c@algpx@indentEndPage-17@totc\endcsname\relax\newcounter{algpx@indentEndPage-17@totc}\fi\setcounter{algpx@indentEndPage-17@totc}{0}
+\expandafter\ifx\csname c@algpx@indentEndPage-18@totc\endcsname\relax\newcounter{algpx@indentEndPage-18@totc}\fi\setcounter{algpx@indentEndPage-18@totc}{0}
+\expandafter\ifx\csname c@algpx@indentEndPage-19@totc\endcsname\relax\newcounter{algpx@indentEndPage-19@totc}\fi\setcounter{algpx@indentEndPage-19@totc}{0}
+\expandafter\ifx\csname c@algpx@indentEndPage-20@totc\endcsname\relax\newcounter{algpx@indentEndPage-20@totc}\fi\setcounter{algpx@indentEndPage-20@totc}{0}
+\expandafter\ifx\csname c@algpx@indentEndPage-21@totc\endcsname\relax\newcounter{algpx@indentEndPage-21@totc}\fi\setcounter{algpx@indentEndPage-21@totc}{0}
+\expandafter\ifx\csname c@algpx@indentEndPage-22@totc\endcsname\relax\newcounter{algpx@indentEndPage-22@totc}\fi\setcounter{algpx@indentEndPage-22@totc}{0}
+\expandafter\ifx\csname c@algpx@indentEndPage-23@totc\endcsname\relax\newcounter{algpx@indentEndPage-23@totc}\fi\setcounter{algpx@indentEndPage-23@totc}{0}
+\expandafter\ifx\csname c@algpx@indentEndPage-24@totc\endcsname\relax\newcounter{algpx@indentEndPage-24@totc}\fi\setcounter{algpx@indentEndPage-24@totc}{0}
+\gdef \@abspage@last{16}

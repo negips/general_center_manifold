@@ -90,7 +90,7 @@ The diagonal matrix for the harmonic angular frequencies is represented by $\Lam
 \begin{subequations}
 	\begin{align}
 			\label{eqn:evolution_extended1}
-			\frac{\partial \vecu}{\partial t} =& \Lu\vecu + \Lmu\vecnu +\Ltheta\vectheta + \NonLin'(\vecu,\vecnu,\vectheta) \\
+			\frac{\partial \vecu}{\partial t} =& \Lu\vecu + \Lnu\vecnu +\Ltheta\vectheta + \NonLin'(\vecu,\vecnu,\vectheta) \\
 			%
 			\label{eqn:evolution_extended2}
 			\frac{d \vecnu}{d t} = & \mathbf{\Lambda}_{P}\vecnu \\
@@ -120,7 +120,7 @@ An overhead hat notation, $\widehat{\cdot}$ , is used to refer to variables and 
 	\label{eqn:linearized_operator_extended}
 	\ExtL =
 	\begin{bmatrix}
-		\Lu & \Lmu & \Ltheta \\
+		\Lu & \Lnu & \Ltheta \\
 		\mathbf{0} 	& \mathbf{\Lambda}_{P} & \mathbf{0} \\
 		\mathbf{0} 	& \mathbf{0} &  \mathbf{\Lambda}_{H}
 	\end{bmatrix},	
@@ -129,7 +129,7 @@ An overhead hat notation, $\widehat{\cdot}$ , is used to refer to variables and 
 	\ExtL^{\dagger} =
 	\begin{bmatrix}
 		\Lu^{\dagger} 		   & \mathbf{0} & \mathbf{0} \\
-		\Lmu^{\dagger}	 	& \mathbf{\Lambda}^{\dagger}_{P} & \mathbf{0} \\
+		\Lnu^{\dagger}	 	& \mathbf{\Lambda}^{\dagger}_{P} & \mathbf{0} \\
 		\Ltheta^{\dagger}  & \mathbf{0} & \mathbf{\Lambda}^{\dagger}_{H} \\
 	\end{bmatrix}.
 \end{align}
@@ -181,7 +181,7 @@ If the original linear system $\Lu$ is non-singular then, the strcuture of the $
 	  	\Devec^{P}_{i}; 
 	  	\vfield{e}^{P}_{i}; 
 	  	\veczero  ], && \forall i \in 1,\ldots l, \\
-	  	(\lambda^{P}_{i}\mathbf{I} - \Lu)\Devec^{P}_{i} = \Lmu\vfield{e}^{P}_{i}, &&  (\lambda^{P}_{i} = 0). 
+	  	(\lambda^{P}_{i}\mathbf{I} - \Lu)\Devec^{P}_{i} = \Lnu\vfield{e}^{P}_{i}, &&  (\lambda^{P}_{i} = 0). 
 	\end{align}
 \end{subequations}
 It can be verified that $(\lambda^{P}_{i}\Ihat - \ExtL)\EDevec^{P}_{i} = 0$.
@@ -191,7 +191,7 @@ However, if $\Lu$ is singular then equation~\eqref{eqn:nonsingular_pmode} is ind
 	(\vfield{\gamma}^{P}_{i})_{j} =
 	\left\lbrace
 	\begin{split}
-		\Aevec^{\dagger}_{j}\Lmu\vfield{e}^{P}_{i},  && \textit{if } \lambda^{P}_{i} = \lambda^{C}_{j}, \\
+		\Aevec^{\dagger}_{j}\Lnu\vfield{e}^{P}_{i},  && \textit{if } \lambda^{P}_{i} = \lambda^{C}_{j}, \\
 		0,						 && \textit{otherwise.}	
 	\end{split}\right.
 	%
@@ -205,7 +205,7 @@ However, if $\Lu$ is singular then equation~\eqref{eqn:nonsingular_pmode} is ind
 		\vfield{e}^{P}_{i};
 		\veczero ], && \forall i \in 1,\ldots l, \\
 		%
-		(\lambda^{P}_{i}\mathbf{I} - \Lu)\Devec^{P}_{i} = \Lmu\vfield{e}^{P}_{i} - \DevMatrix\vfield{\gamma}^{P}_{i}, &&  (\lambda^{P}_{i} = 0), \\
+		(\lambda^{P}_{i}\mathbf{I} - \Lu)\Devec^{P}_{i} = \Lnu\vfield{e}^{P}_{i} - \DevMatrix\vfield{\gamma}^{P}_{i}, &&  (\lambda^{P}_{i} = 0), \\
 		%
 		\Aevec^{\dagger}_{j}\Devec^{P}_{i} =0, && \textit{if } \lambda^{P}_{i} = \lambda^{C}_{j}. 
 	\end{align}
@@ -262,6 +262,7 @@ The two sets of vectors $\vfield{\gamma}^{P}_{i}$ and $\vfield{\gamma}^{H}_{i}$ 
  
 The critical eigenspace of $\ExtL$ can be represented by three matrices
 \begin{align}
+	\label{eqn:extended_direct_tangent_space}
 	\EDevMatrix_{C} = \begin{bmatrix}
 		\DevMatrix \\
 		\veczero \\
@@ -300,7 +301,7 @@ with vectors $\vfield{\zeta}^{P}_{i}$ and $\vfield{\zeta}^{H}_{i}$ defined such 
 	(\vfield{\zeta}^{P}_{i})_{j} = 
 	\left\lbrace
 	\begin{split}
-		(\Lmu^{\dagger}\Aevec_{i})_{j}/(\lambda^{C*}_{i} - \lambda^{P*}_{j}); && \textit{if}\ \lambda^{C*}_{i} \ne \lambda^{P*}_{j}, \\
+		(\Lnu^{\dagger}\Aevec_{i})_{j}/(\lambda^{C*}_{i} - \lambda^{P*}_{j}); && \textit{if}\ \lambda^{C*}_{i} \ne \lambda^{P*}_{j}, \\
 		0;		&& \textit{if}\ \lambda^{C*}_{i} = \lambda^{P*}_{j},
 	\end{split}\right.
 \end{equation}
@@ -314,7 +315,7 @@ $\forall j\in 1,\ldots,l$, and, the $j^{th}$ component of $\vfield{\zeta}^{H}_{i
 		0;		&& \textit{if}\ \lambda^{C*}_{i} = \lambda^{H*}_{j},
 	\end{split}\right.
 \end{equation}
-$\forall j\in 1,\ldots,h$. Here, $(\Lmu^{\dagger}\Aevec_{i})_{j}$ refers to the $j^{th}$ component of the vector $(\Lmu^{\dagger}\Aevec_{i})$, and likewise for $(\Ltheta^{\dagger}\Aevec_{i})_{j}$. It may be verified that the definition is consistent with the eigenvalue equation, $(\lambda^{C*}_{i}\Ihat - \ExtL^{\dagger})\EAevec^{C}_{i} = 0$, for the non-resonant cases, and satisfies generalized eigenvalue equation, $(\lambda^{C*}_{i}\Ihat - \ExtL^{\dagger})^{2}\EAevec^{C}_{i} = 0$, for the resonant cases. 
+$\forall j\in 1,\ldots,h$. Here, $(\Lnu^{\dagger}\Aevec_{i})_{j}$ refers to the $j^{th}$ component of the vector $(\Lnu^{\dagger}\Aevec_{i})$, and likewise for $(\Ltheta^{\dagger}\Aevec_{i})_{j}$. It may be verified that the definition is consistent with the eigenvalue equation, $(\lambda^{C*}_{i}\Ihat - \ExtL^{\dagger})\EAevec^{C}_{i} = 0$, for the non-resonant cases, and satisfies generalized eigenvalue equation, $(\lambda^{C*}_{i}\Ihat - \ExtL^{\dagger})^{2}\EAevec^{C}_{i} = 0$, for the resonant cases. 
 
 The adjoint parameter modes are given simply by,
 \begin{align}
@@ -338,6 +339,7 @@ which satisfies $(\lambda^{H*}_{i}\Ihat - \ExtL^{\dagger})\EAevec^{H}_{i} = 0$.
 
 The extended eigenspace of $\ExtL^{\dagger}$ can be represented with matrices as 
 \begin{align}
+	\label{eqn:extended_adjoint_tangent_space}
 	\EAevMatrix_{C} = \begin{bmatrix}
 		\AevMatrix \\
 		\mathbf{Z}_{P} \\
@@ -384,7 +386,83 @@ Note that due to the special structure of the adjoint parameter and forcing mode
 		\EAevMatrix^{\dagger}_{P}\ENonLin = \veczero, && \EAevMatrix^{\dagger}_{H}\ENonLin = \veczero. 
 \end{align}
 
-This completes the extension of the system and the subspace structure for both the direct and adjoint systems can be readily identified. While the structure of the extended subspaces has been evaluated, reformulation of the problem as an extended system may have detrimental practical implications when considering large systems. Practical methods for solving such systems often rely on numerical algorithms that exploit inherent structure of the problem (Hermicity for conjugate-gradient solvers for example). In such a scenario, additional degrees of freedom can potential destroy the system symmetries and may require substantial changes in the numerical approach to the system solution. This would be particularly true of asymptotic approaches that require resolvent calculations \citep{coullet83,cabre05,sipp07,haragus11,carini15,gallaire16,haro16,jain22,negi24}, which itself is a computationally challenging task for large systems. Such a scenario would be highly undesireable. However, as it turns out, at least some of the parameterizations involved in the evaluation of center-manifolds do not in fact require the use of the extended system after the initial evaluation of the extended tangent space. All higher order calculations can be performed using the original linear system $\Lu$. This is clarified in the next section where the parameterization and its asymptotic terms are explicitly built. 
+This completes the extension of the system and the subspace structure for both the direct and adjoint systems can be readily identified. The extension of the tangent space is summarized in algorithms~\ref{algo:extended_direct_tangent} and ~\ref{algo:extended_adjoint_tangent}.
+ \begin{algorithm}
+	\caption{Extended tangent space ($\ExtL$)}\label{algo:extended_direct_tangent}
+	\begin{algorithmic}[0]
+		\Require System: $\partial \vecu/\partial t = \Lu \vecu + \NonLin(\vecu,\vecMu)$.
+		\Ensure $\NonLin(\veczero,\vecMu) = \veczero;$ $\partial\NonLin/\partial \vecu = \veczero$. 
+		\Require Tangent Space: $\AevMatrix^{\dagger}\Lu \DevMatrix = \LambdaC$.
+		\LComment{Center subspace dimension: $n$.} 
+		\State \textbf{Construct:} Linear operators $\Lnu\in\mathds{C}^{N\times l}$ and $\Ltheta\in\mathds{C}^{N\times m}$ for extended variables $\vecnu,\vectheta$. 
+		\Require Diagonal submatrices: $\LambdaP,\LambdaH$.
+		\LComment{Build: $\GammaP \in \mathds{C}^{n\times l};\ \GammaH \in \mathds{C}^{n\times h}$.}
+		\For {$(i \in 1,\ldots,l)$}
+			\For{$(j\in 1,\ldots,n)$}
+				\If {($\lambda^{P}_{i} = \lambda^{C}_{j}$)}
+					\State $(\GammaP)_{j,i} = \Aevec^{\dagger}_{j}\Lnu\vfield{e}^{P}_{i}$,
+				\Else
+					\State $(\GammaP)_{j,i} = 0$,
+				\EndIf
+			\EndFor
+		\EndFor
+		\State  $\Lu\mathbf{V}_{P} + \Lnu\mathbf{I}_{l} = \mathbf{V}_{P}\LambdaP + \DevMatrix\GammaP$, \Comment{Eq.~\eqref{eqn:singular_pmode}}
+		\LComment{with singular components removed.}
+		% Harmonic 
+		\For {$(i \in 1,\ldots,h)$}
+			\For{$(j\in 1,\ldots,n)$}
+				\If {($\lambda^{H}_{i} = \lambda^{C}_{j}$)}
+					\State $(\GammaH)_{j,i} = (\vfield{\gamma}^{H}_{i})_{j} = \Aevec^{\dagger}_{j}\Ltheta\vfield{e}^{H}_{i}$,
+				\Else
+					\State $(\GammaH)_{j,i} = (\vfield{\gamma}^{H}_{i})_{j} = 0$.
+				\EndIf
+			\EndFor
+		\EndFor
+		\State  $\Lu\mathbf{V}_{H} + \Ltheta\mathbf{I}_{h} = \mathbf{V}_{H}\LambdaH + \DevMatrix\GammaH$, \Comment{Eq.~\eqref{eqn:singular_hmode}}
+		\LComment{with singular components removed.}
+		\State \textbf{Construct:} $\EDevMatrix$ \Comment{Eq.~\eqref{eqn:extended_direct_tangent_space}}
+		\State \textbf{Construct:} $\Khat$ \Comment{Eq.~\eqref{eqn:khat}}
+		
+		\State \Return{$\Khat, \EDevMatrix$.}
+	\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}
+	\caption{Extended tangent space ($\ExtL^{\dagger}$)}\label{algo:extended_adjoint_tangent}
+	\begin{algorithmic}[0]
+		\Require System: $\partial \vecu/\partial t = \Lu \vecu + \NonLin(\vecu,\vecMu)$.
+		\Ensure $\NonLin(\veczero,\vecMu) = \veczero;$ $\partial\NonLin/\partial \vecu = \veczero$. 
+		\Require Tangent Space: $\AevMatrix^{\dagger}\Lu \DevMatrix = \LambdaC$.
+		\LComment{Center subspace dimension: $n$.} 
+		\State \textbf{Construct:} Linear operators $\Lnu\in\mathds{C}^{N\times l}$ and $\Ltheta\in\mathds{C}^{N\times m}$ for extended variables $\vecnu,\vectheta$. 
+		\Require Diagonal submatrices: $\LambdaP,\LambdaH$.
+		
+		\State \LComment{Build: $\mathbf{Z}_{P} \in \mathds{C}^{l\times n};\ \mathbf{Z}_{H} \in \mathds{C}^{h\times n}$.}
+		\For{$(i\in 1,\ldots,n)$}
+			\For {$(j \in 1,\ldots,l)$}
+				\If {($\lambda^{P}_{j} = \lambda^{C}_{i}$)}
+					\State $(\mathbf{Z}_{P})_{j,i} = 0$,
+				\Else
+					\State $(\mathbf{Z}_{P})_{j,i} =
+				(\Lnu^{\dagger}\Aevec_{i})_{j}/(\lambda^{C*}_{i} - \lambda^{P*}_{j})$,
+				\EndIf
+			\EndFor
+			% Harmonic
+			\For {$(j \in 1,\ldots,h)$}
+				\If {($\lambda^{H}_{j} = \lambda^{C}_{i}$)}
+					\State $(\mathbf{Z}_{H})_{j,i} = 0$,
+				\Else
+					\State $(\mathbf{Z}_{H})_{j,i} =
+						(\Ltheta^{\dagger}\Aevec_{i})_{j}/(\lambda^{C*}_{i} - \lambda^{H*}_{j})$,
+				\EndIf
+			\EndFor
+		\EndFor
+		\State \textbf{Construct:} $\EAevMatrix$ \Comment{Eq.~\eqref{eqn:extended_adjoint_tangent_space}}
+		\State \Return{$\EAevMatrix$.}
+	\end{algorithmic}
+\end{algorithm}
+
+While the structure of the extended subspaces has been evaluated, reformulation of the problem as an extended system may have detrimental practical implications when considering large systems. Practical methods for solving such systems often rely on numerical algorithms that exploit inherent structure of the problem (Hermicity for conjugate-gradient solvers for example). In such a scenario, additional degrees of freedom can potential destroy the system symmetries and may require substantial changes in the numerical approach to the system solution. This would be particularly true of asymptotic approaches that require resolvent calculations \citep{coullet83,cabre05,sipp07,haragus11,carini15,gallaire16,haro16,jain22,negi24}, which itself is a computationally challenging task for large systems. Such a scenario would be highly undesireable. However, as it turns out, at least some of the parameterizations involved in the evaluation of center-manifolds do not in fact require the use of the extended system after the initial evaluation of the extended tangent space. All higher order calculations can be performed using the original linear system $\Lu$. This is clarified in the next section where the parameterization and its asymptotic terms are explicitly built. 
 
 
 %First however, we prove the following results which will come in handy.  
