@@ -1,4 +1,4 @@
-\section{Center Manifold for the extended system}
+\section{Center Manifold for the Extended System}
 \label{sec:center_manifold_derivation}
 
 In the context of invariant manifold theory, several previous approaches for the approximation of such manifolds can be effectively viewed  as instances of what is referred to as the parametrization method. The framework was introduced in a series of papers by \citet{cabre03a,cabre03b,cabre05}, although, a particular instance of such an approach was presented earlier by \citet{coullet83} for the evaluation of the normal form of center manifolds. Nevertheless, subsequent works by \citet*{carini15,jain22,negi24} can be fruitfully viewed through the lens of the parameterization method. Within this framework the reduced representation of the invariant manifold being approximated can be chosen in an arbitrary manner depending on the particular requirements of the reduction being sought. Amongst the plethora of arbitrary choices, the normal form is an important representation that is often sought since it results in the simplest form of the reduced equations. In the next subsection the normal form representation for the center-manifold of the extended system is deduced. 
@@ -42,42 +42,42 @@ defines the binomial coefficient of $p$ and $q$.
 
 One may find the exposition on the implementation of the parameterization method in previous works of \citet{haro16} and \citet{jain22}. To be clear, the application of the parameterization method to an extended system like equation~\eqref{eqn:evolution_extended} follows the same steps as outlined in those earlier works. However, many of the essential steps are repeated here to bring out the structure of system of equations at each asymptotic order in the context of system extension.
 
-Consider the extended system as defined by equation~\eqref{eqn:evolution_extended}, represented in a compact form by equation~\eqref{eqn:evolution_extended_compact}, which has an $m$-dimensional critical subspace ($m = n+l+h$). Assume $\xbf = [x_{1}; x_{2};\ldots;x_{m}]$ is an $m$-dimensional vector of coordinates that parameterize the center-manifold of the extended system. The evolution of the system along the center-manifold in the parameterized coordinates is assumed to be given by 
+Consider the extended system as defined by equation~\eqref{eqn:evolution_extended}, represented in a compact form by equation~\eqref{eqn:evolution_extended_compact}, which has an $m$-dimensional critical subspace ($m = n+l+h$). Assume $\vecparv = [\parv_{1}; \parv_{2};\ldots;\parv_{m}]$ is an $m$-dimensional vector of coordinates that parameterize the center-manifold of the extended system. The evolution of the system along the center-manifold in the parameterized coordinates is assumed to be given by 
 \begin{align}
-	\dt{\xbf} = \Param(\xbf), \\
+	\dt{\vecparv} = \Param(\vecparv), \\
 	\Param: \mathds{C}^{m} \rightarrow \mathds{C}^{m} \nonumber.
 \end{align}
-$\Param$ and will also be referred to as the reduced representation (of the extended system). The system solution on the center-manifold corresponding to a point $\xbf$ of the parameterized system is given by $\CenM(\xbf)$, which is map from the parameterized coordinates to the full system state,
+$\Param$ will also be referred to as the reduced representation (of the extended system). The system solution on the center-manifold corresponding to a point $\vecparv$ of the parameterized system is given by $\CenM(\vecparv)$, which is map from the parameterized coordinates to the full system state,
 \begin{align}
 	\CenM:\mathds{C}^{m} \rightarrow \mathds{C}^{M}.
 \end{align}
- At this stage neither $\Param(\xbf)$ nor $\CenM(\xbf)$ have been specified in any form, since, the parameterization can be arbitrarily chosen. In order to obtain a normal form of the reduced system one may expand both $\Param(\xbf)$ and $\CenM(\xbf)$ as a formal power series in $\xbf$ and constrain the asymptotic form of $\Param$ to be in a normal form for the parameterized coordinates $\xbf$. The asymptotic form of $\CenM$ is obtained by introducing the asymptotic expansions into equation~\eqref{eqn:evolution_extended_compact} and solving the terms order-by-order. 
+ At this stage neither $\Param(\vecparv)$ nor $\CenM(\vecparv)$ have been specified in any form, since, the parameterization can be arbitrarily chosen. In order to obtain a normal form of the reduced system one may expand both $\Param(\vecparv)$ and $\CenM(\vecparv)$ as a formal power series in $\vecparv$ and constrain the asymptotic form of $\Param$ to be in a normal form for the parameterized coordinates $\vecparv$. The asymptotic form of $\CenM$ is obtained by introducing the asymptotic expansions into equation~\eqref{eqn:evolution_extended_compact} and solving the terms order-by-order. 
 
 In what follows, Einstein summation is \emph{not} assumed for repeated indices unless otherwise specified. We assume the power series expansions as,
 \begin{align}
 	\label{eqn:reduced_normal_form}
 	\begin{split}
-	\Param(\xbf) =& \sum^{[1,m]}_{(1)}\AsParam_{i_{1}}x_{i_{1}} + \sum^{[1,m]}_{(2)}\AsParam_{i_{1},i_{2}}x_{i_{1}}x_{i_{2}} + \\
+	\Param(\vecparv) =& \sum^{[1,m]}_{(1)}\AsParam_{i_{1}}\parv_{i_{1}} + \sum^{[1,m]}_{(2)}\AsParam_{i_{1},i_{2}}\parv_{i_{1}}\parv_{i_{2}} + \\
 	%
-	& \sum^{[1,m]}_{(3)}\AsParam_{i_{1},i_{2},i_{3}}x_{i_{1}}x_{i_{2}}x_{i_{3}} + \ldots,
+	& \sum^{[1,m]}_{(3)}\AsParam_{i_{1},i_{2},i_{3}}\parv_{i_{1}}\parv_{i_{2}}\parv_{i_{3}} + \ldots,
 	\end{split}
 \end{align}
 and, 
 \begin{align}
 	\label{eqn:asymptotic_normal_form}
 	\begin{split}
-		\CenM(\xbf) =& \sum^{[1,m]}_{(1)}\AsECenM_{i_{1}}x_{i_{1}} + \sum^{[1,m]}_{(2)}\AsECenM_{i_{1},i_{2}}x_{i_{1}}x_{i_{2}} + \\
+		\CenM(\vecparv) =& \sum^{[1,m]}_{(1)}\AsECenM_{i_{1}}\parv_{i_{1}} + \sum^{[1,m]}_{(2)}\AsECenM_{i_{1},i_{2}}\parv_{i_{1}}\parv_{i_{2}} + \\
 		%
-		& \sum^{[1,m]}_{(3)}\AsECenM_{i_{1},i_{2},i_{3}}x_{i_{1}}x_{i_{2}}x_{i_{3}} + \ldots .
+		& \sum^{[1,m]}_{(3)}\AsECenM_{i_{1},i_{2},i_{3}}\parv_{i_{1}}\parv_{i_{2}}\parv_{i_{3}} + \ldots .
 	\end{split}
 \end{align}
-Here the terms $\AsParam_{i_{1},i_{2},i_{3},\ldots} \in \mathds{C}^{m}$, while, $\AsECenM_{i_{1},i_{2},i_{3},\ldots} \in \mathds{C}^{M}$. Given the asymptotic form of $\CenM(\xbf)$, one automatically obtains the nonlinear term $\ENonLin$ as a power series in $\xbf$. This can be represented as,
+Here the terms $\AsParam_{i_{1},i_{2},i_{3},\ldots} \in \mathds{C}^{m}$, while, $\AsECenM_{i_{1},i_{2},i_{3},\ldots} \in \mathds{C}^{M}$. Given the asymptotic form of $\CenM(\vecparv)$, one automatically obtains the nonlinear term $\ENonLin$ as a power series in $\vecparv$. This can be represented as,
 \begin{align}
 	\label{eqn:asymptotic_nonlinear_term}
 	\begin{split}
-		\ENonLin =& \sum^{[1,m]}_{(2)}\AsEForcing_{i_{1},i_{2}}x_{i_{1}}x_{i_{2}} + \\
+		\ENonLin =& \sum^{[1,m]}_{(2)}\AsEForcing_{i_{1},i_{2}}\parv_{i_{1}}\parv_{i_{2}} + \\
 		%
-		& \sum^{[1,m]}_{(3)}\AsEForcing_{i_{1},i_{2},i_{3}}x_{i_{1}}x_{i_{2}}x_{i_{3}} + \ldots,
+		& \sum^{[1,m]}_{(3)}\AsEForcing_{i_{1},i_{2},i_{3}}\parv_{i_{1}}\parv_{i_{2}}\parv_{i_{3}} + \ldots,
 	\end{split}
 \end{align}
 which is obtained via the collection of terms with similar powers. 
@@ -86,14 +86,14 @@ Substitution of the power series expansions into equation~\eqref{eqn:evolution_e
 \begin{align}
 	\label{eqn:asymptotic_substitution}
 	\begin{split}
-		\sum^{m}_{\alpha=1}\dfrac{\partial }{\partial x_{\alpha}}\Big(\sum^{[1,m]}_{(1)}\AsECenM_{i_{1}}x_{i_{1}} + \ldots \Big)	 \Big(\sum^{[1,m]}_{(1)}\AsParamEl^{\alpha}_{j_{1}}x_{j_{1}} +\ldots \Big)= \\
+		\sum^{m}_{\alpha=1}\dfrac{\partial }{\partial \parv_{\alpha}}\Big(\sum^{[1,m]}_{(1)}\AsECenM_{i_{1}}\parv_{i_{1}} + \ldots \Big)	 \Big(\sum^{[1,m]}_{(1)}\AsParamEl^{\alpha}_{j_{1}}\parv_{j_{1}} +\ldots \Big)= \\
 		%
-		\ExtL\Big(\sum^{[1,m]}_{(1)}\AsECenM_{i_{1}}x_{i_{1}} + \ldots \Big)  +
+		\ExtL\Big(\sum^{[1,m]}_{(1)}\AsECenM_{i_{1}}\parv_{i_{1}} + \ldots \Big)  +
 		% 
-		\Big(\sum^{[1,m]}_{(2)}\AsEForcing_{i_{1},i_{2}}x_{i_{1}}x_{i_{2}} + \ldots\Big).
+		\Big(\sum^{[1,m]}_{(2)}\AsEForcing_{i_{1},i_{2}}\parv_{i_{1}}\parv_{i_{2}} + \ldots\Big).
 	\end{split}
 \end{align}
-Here $\AsParamEl^{\alpha}_{j_{1}}$ represents the $\alpha^{th}$ element of the vector $\AsParam_{j_{1}}$. At order $k$, one obtains $m\times T^{k}_{m}$ unknowns which define the elements of the vectors $\AsParam_{i_{1},\ldots,i_{k}}$, and the corresponding $T^{k}_{m}$ unknown vectors $\AsECenM_{i_{1},\ldots,i_{k}}$. The definitions of the two sets of unknowns are interdependent since the form of the reduced representation $\mathcal{G}(\xbf)$ determines the map $\CenM(\xbf)$ from the parameterized coordinates to the full solution (and vice versa). 
+Here $\AsParamEl^{\alpha}_{j_{1}}$ represents the $\alpha^{th}$ element of the vector $\AsParam_{j_{1}}$. At order $k$, one obtains $m\times T^{k}_{m}$ unknowns which define the elements of the vectors $\AsParam_{i_{1},\ldots,i_{k}}$, and the corresponding $T^{k}_{m}$ unknown vectors $\AsECenM_{i_{1},\ldots,i_{k}}$. The definitions of the two sets of unknowns are interdependent since the form of the reduced representation $\mathcal{G}(\vecparv)$ determines the map $\CenM(\vecparv)$ from the parameterized coordinates to the full solution (and vice versa). 
 
 \subsubsection{Asymptotic terms of $\mathcal{O}(|x|)$}
 \label{sec:normal_form_O1}
@@ -101,7 +101,7 @@ Here $\AsParamEl^{\alpha}_{j_{1}}$ represents the $\alpha^{th}$ element of the v
 At first order the non-linear terms do not contribute and one simply obtains,
 \begin{align}
 		\label{eqn:asymptotic_O1}
-		\sum^{[1,m]}_{(1)}\Big( \sum^{m}_{\alpha=1}\AsParamEl^{\alpha}_{i_{1}}\AsECenM_{\alpha} - \ExtL\AsECenM_{i_{1}} \Big)x_{i_{1}} = \veczero.
+		\sum^{[1,m]}_{(1)}\Big( \sum^{m}_{\alpha=1}\AsParamEl^{\alpha}_{i_{1}}\AsECenM_{\alpha} - \ExtL\AsECenM_{i_{1}} \Big)\parv_{i_{1}} = \veczero.
 \end{align}
 Here, the first restrictions on the asymptotic form of $\Param$ are applied, associating the unknown terms $\AsECenM_{i_{1}}$, $\AsParam_{i_{1}}$ \etc\ with the generalized eigenvalue problem such that,
 \begin{subequations}
@@ -113,21 +113,21 @@ Here, the first restrictions on the asymptotic form of $\Param$ are applied, ass
 \end{subequations}
 This reduces equation~\eqref{eqn:asymptotic_O1} to equation~\eqref{eqn:extended_generalized_eigenvalue} which, then satisfies the tangency condition of the invariant manifold, \ie, at the origin the center-manifold is tangent to the center subspace. Subsequently, $\widehat{K}_{i,j}$ will be used for all the first order terms of the type $\AsParam^{i}_{j}$ and the first order vectors $\AsECenM_{i}$ will be replaced by the respective eigenvectors $\EDevec_{i}$. The reduced matrix $\mathbf{\widehat{K}}$ is responsible for the cross-coupling of different $\AsECenM_{i_{1},\ldots,i_{k}}$ at each order of the asymptotic expansion. 
 
-\subsubsection{Asymptotic terms of $\mathcal{O}(|x|^{2})$}
+\subsubsection{Asymptotic terms of $\mathcal{O}(|\mathbf{z}|^{2})$}
 \label{sec:normal_form_O2}
 
 At second order the non-linear terms contribute and one obtains the following equation,
 \begin{align}
 	\label{eqn:asymptotic_O2}
 	\begin{split}
-		& \sum^{[1,m]}_{(2)}\sum^{m}_{j=1}\Big( \widehat{K}_{i_{1},j}x_{i_{2}}x_{j} + \widehat{K}_{i_{2},j}x_{i_{1}}x_{j} \Big)\AsECenM_{i_{1},i_{2}} + \\
+		& \sum^{[1,m]}_{(2)}\sum^{m}_{j=1}\Big( \widehat{K}_{i_{1},j}\parv_{i_{2}}\parv_{j} + \widehat{K}_{i_{2},j}\parv_{i_{1}}\parv_{j} \Big)\AsECenM_{i_{1},i_{2}} + \\
 		%
-		& \sum^{[1,m]}_{(2)} \sum^{m}_{j=1}\AsParamEl^{j}_{i_{1},i_{2}}\EDevec_{j}x_{i_{1}}x_{i_{2}} - \sum^{[1,m]}_{(2)} \ExtL\AsECenM_{i_{1},i_{2}}x_{i_{1}}x_{i_{2}} \\ 
+		& \sum^{[1,m]}_{(2)} \sum^{m}_{j=1}\AsParamEl^{j}_{i_{1},i_{2}}\EDevec_{j}\parv_{i_{1}}\parv_{i_{2}} - \sum^{[1,m]}_{(2)} \ExtL\AsECenM_{i_{1},i_{2}}\parv_{i_{1}}\parv_{i_{2}} \\ 
 		%
-		& = \sum^{[1,m]}_{(2)} \AsEForcing_{i_{1},i_{2}}x_{i_{1}}x_{i_{2}}.
+		& = \sum^{[1,m]}_{(2)} \AsEForcing_{i_{1},i_{2}}\parv_{i_{1}}\parv_{i_{2}}.
 	\end{split} 
 \end{align}
-Collecting the expressions for a particular asymptotic term $x_{a}x_{b}$, where $(a,b)\in\IndexSet{2}{1,m}$, equation~\eqref{eqn:asymptotic_O2} reduces to,
+Collecting the expressions for a particular asymptotic term $\parv_{a}\parv_{b}$, where $(a,b)\in\IndexSet{2}{1,m}$, equation~\eqref{eqn:asymptotic_O2} reduces to,
 \begin{equation}
 	\label{eqn:asymptotic_O2_ab}
 	\begin{split}
@@ -141,7 +141,7 @@ Collecting the expressions for a particular asymptotic term $x_{a}x_{b}$, where 
 		& + \sum^{m}_{j=1}\AsParamEl^{j}_{a,b}\EDevec_{j} - \ExtL\AsECenM_{a,b} = \AsEForcing_{a,b}.
 	\end{split}
 \end{equation}
-At second order one obtains $T^{2}_{m}$ equations, one for each tuple in the $(a,b)\in\IndexSet{2}{1,m}$, which collectively form the system of equations for all $\AsECenM_{i_{1},i_{2}}$ vectors that needs to be solved. Here, several properties of the structure of equation~\eqref{eqn:asymptotic_O2_ab} need to be pointed out that have important practical implications. 
+At second order one obtains $T^{2}_{m}$ equations, one for each tuple $(a,b)\in\IndexSet{2}{1,m}$, which collectively form the system of equations for all $\AsECenM_{i_{1},i_{2}}$ vectors that needs to be solved. Here, several properties of the structure of equation~\eqref{eqn:asymptotic_O2_ab} need to be pointed out that have important practical implications. 
 
 First, the various unknown vectors $\AsECenM_{i_{1},i_{2}}$ are coupled due to the off-diagonal terms in $\Khat$, which appear in the first two bracketted terms in equation~\eqref{eqn:asymptotic_O2_ab}. Recall that we are considering the tuples in our index set to be ordered so that the vectors $\AsECenM_{i_{1},i_{2}}$ can also be ordered in the same manner. For any index $(a,b)\in\IndexSet{2}{1,m}$ (and assuming $b>a$) the bracketted terms in equation~\eqref{eqn:asymptotic_O2_ab} can be rewritten as,
 \begin{equation}
@@ -161,7 +161,7 @@ First, the various unknown vectors $\AsECenM_{i_{1},i_{2}}$ are coupled due to t
 		\widehat{K}_{i,a}\AsECenM_{b,i}\delta^{a}_{b}\right)}^{S3}.
 	\end{split}
 \end{equation}
-The terms marked as $P1,P2,P3$ are terms where elements of $\Khat$ multiply vectors $\AsECenM_{i_{1},i_{2}}$ such that $(i_{1},i_{2})\prec(a,b)$. The terms marked $D1,D2$ are those where elements of $\Khat$ multiply only with $\AsECenM_{a,b}$, and the terms marked as $S1,S2,S3$ are those where $\Khat$ elements multiply vectors succeeding $\AsECenM_{a,b}$, \ie, $(i_{1},i_{2})\succ(a,b)$. Notice that all the succeeding terms in $S1,S2,S3$ are always multiplied by elements of the $\Khat$ matrix that are below the main diagonal. However, since $\Khat$ has an upper triangular structure, all terms marked $S1,S2,S3$ vanish. Therefore the equation resulting from any polynomial term $x_{a}x_{b}$ couples the vector $\AsECenM_{a,b}$ only only with those that preceed it in the ordering, \ie, with $\AsECenM_{i_{1},i_{2}}\prec\AsECenM_{a,b}$. Thus the resulting system of equations for the $T^{2}_{m}$ unknown vectors $\AsECenM_{i_{1},i_{2}}$ at second order is lower triangular and even though the fields are coupled with each other, they can still be solved for sequentially one at a time with back substitution. The splitting of terms in equation~\eqref{eqn:O2_ab_split} is done for $b>a$ however, the same conclusion applies even for the case of $b=a$ and the resulting system of equations is always lower triangular. 
+The terms marked as $P1,P2,P3$ are terms where elements of $\Khat$ multiply vectors $\AsECenM_{i_{1},i_{2}}$ such that $(i_{1},i_{2})\prec(a,b)$. The terms marked $D1,D2$ are those where elements of $\Khat$ multiply only with $\AsECenM_{a,b}$, and the terms marked as $S1,S2,S3$ are those where $\Khat$ elements multiply vectors succeeding $\AsECenM_{a,b}$, \ie, $(i_{1},i_{2})\succ(a,b)$. Notice that all the succeeding terms in $S1,S2,S3$ are always multiplied by elements of the $\Khat$ matrix that are below the main diagonal. However, since $\Khat$ has an upper triangular structure, all terms marked $S1,S2,S3$ vanish. Therefore the equation resulting from any polynomial term $\parv_{a}\parv_{b}$ couples the vector $\AsECenM_{a,b}$ only with those that preceed it in the ordering, \ie, with $\AsECenM_{i_{1},i_{2}}\prec\AsECenM_{a,b}$. Thus the resulting system of equations for the $T^{2}_{m}$ unknown vectors $\AsECenM_{i_{1},i_{2}}$ at second order is lower triangular and even though the fields are coupled with each other, they can still be solved for sequentially one at a time with back substitution. The splitting of terms in equation~\eqref{eqn:O2_ab_split} is done for $b>a$ however, the same conclusion applies even for the case of $b=a$ and the resulting system of equations is always lower triangular. 
 
 A visual representation of this cross coupling is shown in figure~\ref{fig:Khat_coupling_O2}. For a given index $(a,b)\in\IndexSet{2}{1,m}$, the elements of the matrix $\Khat$ marked by $\mathbf{P}$ multiply vectors $\AsECenM_{i_{1},i_{2}}$ that precede $\AsECenM_{a,b}$ in the ordering. Similarly, the elements marked by $\mathbf{S}$ multiply the vectors $\AsECenM_{i_{1},i_{2}}$ which succeed $\AsECenM_{a,b}$ in the ordering. The diagonal terms $\widehat{K}_{a,a}$ and $\widehat{K}_{b,b}$ always multiply $\AsECenM_{a,b}$. Obviously, when $\Khat$ is upper triangular, the contributions of the succeeding elements will always vanish. 
 % Matrix
@@ -185,6 +185,7 @@ The resulting equation for $\AsECenM_{a,b}$ may be written as
 	\begin{align}
 		\ResolventHat{\omega_{a,b}}^{-1}\AsECenM_{a,b} + \sum^{m}_{i=1}\AsParamEl^{i}_{a,b}\EDevec_{i} 
 		 = \AsEForcing_{a,b} - \AsEForcingO_{a,b}, \\
+		 %
 		\omega_{a,b} = \widehat{K}_{a,a} + \widehat{K}_{b,b},
 	\end{align}
 \end{subequations}
@@ -205,7 +206,7 @@ The resolvent operator is the key mathematical object defining the asymptotic ex
 where, $\EAevec_{j}$ is the $j^{th}$ adjoint eigenvector of $\ExtL$ as defined earlier. Since the system is lower triangular the terms $\AsEForcingO_{a,b}$ are always known apriori when solving the system sequentially. 
 
 %%
-\subsubsection{Asymptotic terms of $\mathcal{O}(|x|^{3})$}
+\subsubsection{Asymptotic terms of $\mathcal{O}(|\mathbf{z}|^{3})$}
 \label{sec:normal_form_O3}
 
 At third (and higher) order one also obtains contributions from the lower order terms.  The sum of all contributions at third order can be written as,
@@ -213,22 +214,22 @@ At third (and higher) order one also obtains contributions from the lower order 
 	\label{eqn:asymptotic_O3}
 	\begin{split}
 		& \sum^{[1,m]}_{(3)}\sum^{m}_{j=1}\left[  
-		\widehat{K}_{i_{1},j}x_{i_{2}}x_{i_{3}}x_{j} + 
+		\widehat{K}_{i_{1},j}\parv_{i_{2}}\parv_{i_{3}}\parv_{j} + 
 		%
-		\widehat{K}_{i_{2},j}x_{i_{1}}x_{i_{3}}x_{j} 
+		\widehat{K}_{i_{2},j}\parv_{i_{1}}\parv_{i_{3}}\parv_{j} 
 		\right. + \\
 		%
 		& \left.
-		\widehat{K}_{i_{3},j}x_{i_{1}}x_{i_{2}}x_{j} \right]\AsECenM_{i_{1},i_{2},i_{3}} +  \\
+		\widehat{K}_{i_{3},j}\parv_{i_{1}}\parv_{i_{2}}\parv_{j} \right]\AsECenM_{i_{1},i_{2},i_{3}} +  \\
 		%
 		& \sum^{[1,m]}_{(2)}\sum^{[1,m]}_{(2)}\left[ 
-		\AsParamEl^{i_{1}}_{j_{1},j_{2}}x_{i_{2}}x_{j_{1}}x_{j_{2}} + \AsParamEl^{i_{2}}_{j_{1},j_{2}}x_{i_{1}}x_{j_{1}}x_{j_{2}}
+		\AsParamEl^{i_{1}}_{j_{1},j_{2}}\parv_{i_{2}}\parv_{j_{1}}\parv_{j_{2}} + \AsParamEl^{i_{2}}_{j_{1},j_{2}}\parv_{i_{1}}\parv_{j_{1}}\parv_{j_{2}}
 		\right]\AsECenM_{i_{1},i_{2}} \\
 		%
 		%
-		& + \sum^{m}_{j=1}\sum^{[1,m]}_{(3)} \AsParamEl^{j}_{i_{1},i_{2},i_{3}}\EDevec_{j}x_{i_{1}}x_{i_{2}}x_{i_{3}}  \\ 
+		& + \sum^{m}_{j=1}\sum^{[1,m]}_{(3)} \AsParamEl^{j}_{i_{1},i_{2},i_{3}}\EDevec_{j}\parv_{i_{1}}\parv_{i_{2}}\parv_{i_{3}}  \\ 
 		%
-		& - \sum^{[1,m]}_{(3)} \ExtL\AsECenM_{i_{1},i_{2},i_{3}}x_{i_{1}}x_{i_{2}}x_{i_{3}} = \sum^{[1,m]}_{(3)} \AsEForcing_{i_{1},i_{2},i_{3}}x_{i_{1}}x_{i_{2}}x_{i_{3}}.
+		& - \sum^{[1,m]}_{(3)} \ExtL\AsECenM_{i_{1},i_{2},i_{3}}\parv_{i_{1}}\parv_{i_{2}}\parv_{i_{3}} = \sum^{[1,m]}_{(3)} \AsEForcing_{i_{1},i_{2},i_{3}}\parv_{i_{1}}\parv_{i_{2}}\parv_{i_{3}}.
 	\end{split} 
 \end{align}
 The $\Khat$ matrix is responsible for the cross contributions of different vectors $\AsECenM_{i_{1},i_{2},i_{3}}$ as seen from the first set of bracketted terms in equation~\eqref{eqn:asymptotic_O3}. Again, for a given tuple $(a,b,c)\in\IndexSet{3}{1,m}$, the coupling of $\Khat$ elements with vectors preceeding and succeeding $\AsECenM_{a,b,c}$ is depicted in figure~\ref{fig:Khat_coupling_O3}. With $\Khat$ being upper triangular, the contribution of succeeding elements, $(i_{1},i_{2},i_{3})\succ (a,b,c)$, vanishes and the resulting system of equations for $\AsECenM_{i_{1},i_{2},i_{3}}$ at third order is again lower triangular.
@@ -236,13 +237,13 @@ The $\Khat$ matrix is responsible for the cross contributions of different vecto
 
 The second set of bracketted terms in equation~\eqref{eqn:asymptotic_O3} are contributions from the lower order asymptotic terms. For a given index $(a,b,c)$, we represent the low order contributions as $\AsEForcingL_{a,b,c}$ and the contributions of the off-diagonal terms as $\AsEForcingO_{a,b,c}$ resulting in the compact expression for $\AsECenM_{a,b,c}$ as
 \begin{subequations}
+\label{eqn:asymptotic_O3_compact}
 \begin{align}
 	\begin{aligned}
-		\label{eqn:asymptotic_O3_compact}
 		\ResolventHat{\omega_{a,b,c}}^{-1}\AsECenM_{a,b,c}  + \sum^{m}_{j=1}\AsParamEl^{j}_{a,b,c}\EDevec_{j} \\ 
 		 = \AsEForcing_{a,b,c} - \AsEForcingO_{a,b,c} - \AsEForcingL_{a,b,c},
-	\end{aligned} &&\\
-	\omega_{a,b,c} = \widehat{K}_{a,a} + \widehat{K}_{b,b} + \widehat{K}_{c,c}.&&
+	\end{aligned}\\
+	\omega_{a,b,c} = \widehat{K}_{a,a} + \widehat{K}_{b,b} + \widehat{K}_{c,c}
 \end{align}
 \end{subequations}
 The resolution of the system singularities due to the resonance condition, $\omega_{a,b,c} = \widehat{K}_{j,j}$, provides us with the third order terms of the reduced representation,
@@ -262,10 +263,10 @@ The resolution of the system singularities due to the resonance condition, $\ome
 \end{equation}
 and $\EAevec^{\dagger}_{j}\AsECenM_{a,b,c} = 0$ if the resonance condition holds. 
 
-\subsubsection{Asymptotic terms of $\mathcal{O}(|x|^{k})$}
+\subsubsection{Asymptotic terms of $\mathcal{O}(|\mathbf{z}|^{k})$}
 \label{sec:normal_form_Ok}
 
-For all subsequent orders the structure of the problem remains essentially the same as the third order terms. At any order $k$, one obtains a systems of equations for $T^{k}_{m}$ vectors $\AsECenM_{i_{1},\ldots,i_{k}}$ which is lower triangular and hence can be solved sequentially. The cross contributions of the vectors due to $\Khat$ has the same structure as in figure~\ref{fig:Khat_coupling_O3} but with $k$ columns (possibly with repetitions) of $\Khat$ contributing. The lower order terms $\AsEForcingL_{i_{1},\ldots,i_{k}}$ are always known a-priori. When solving for the unknown vectors sequentially the off-diagonal contributions $\AsEForcingO_{i_{1},\ldots,i_{k}}$ are always known a-priori. For each index $(i_{1},\ldots,i_{k})\in\IndexSet{k}{1,m}$ one obtains an equation similar to equation~\eqref{eqn:asymptotic_O3_compact}, 
+For all subsequent orders the structure of the problem remains essentially the same as the third order terms. At any order $k$, one obtains a systems of equations for $T^{k}_{m}$ vectors $\AsECenM_{i_{1},\ldots,i_{k}}$ which is lower triangular and hence can be solved sequentially. The cross contributions of the vectors due to $\Khat$ has the same structure as in figure~\ref{fig:Khat_coupling_O3} but with $k$ columns (possibly with repetitions) of $\Khat$ contributing. The lower order terms $\AsEForcingL_{i_{1},\ldots,i_{k}}$ are always known a-priori. When solving for the unknown vectors sequentially the off-diagonal contributions $\AsEForcingO_{i_{1},\ldots,i_{k}}$ are also known a-priori. For each index $(i_{1},\ldots,i_{k})\in\IndexSet{k}{1,m}$ one obtains an equation similar to equation~\eqref{eqn:asymptotic_O3_compact}, 
 \begin{subequations}
 	\label{eqn:asymptotic_Ok_compact}
 	\begin{align}
@@ -273,9 +274,9 @@ For all subsequent orders the structure of the problem remains essentially the s
 			\ResolventHat{\omega_{i_{1},\ldots,i_{k}}}^{-1}\AsECenM_{i_{1},\ldots,i_{k}} + \sum^{m}_{j=1}\AsParamEl^{j}_{i_{1},\ldots,i_{k}}\EDevec_{j} \\
 			 = \AsEForcing_{i_{1},\ldots,i_{k}} - \AsEForcingO_{i_{1},\ldots,i_{k}} 
 			 - \AsEForcingL_{i_{1},\ldots,i_{k}},
-		\end{aligned} &&\\
+		\end{aligned}\\
 		%
-		\omega_{i_{1},\ldots,i_{k}} = \widehat{K}_{i_{1},i_{1}} + \widehat{K}_{i_{2},i_{2}} + \ldots + \widehat{K}_{i_{k},i_{k}}, &&
+		\omega_{i_{1},\ldots,i_{k}} = \widehat{K}_{i_{1},i_{1}} + \widehat{K}_{i_{2},i_{2}} + \ldots + \widehat{K}_{i_{k},i_{k}},
 	\end{align}
 \end{subequations}
 with the resonance condition arising whenever, 
@@ -284,17 +285,36 @@ with the resonance condition arising whenever,
 	\omega_{i_{1},\ldots,i_{k}} = \widehat{K}_{j,j}, && j\in 1,\ldots,m,
 \end{align}
 which then defines the normal form coefficients,
-\begin{subequations}
-	\label{eqn:resonance_modification_Ok}
-\begin{align}
+%\begin{subequations}
+%	\label{eqn:resonance_modification_Ok}
+%\begin{align}
+%	\label{eqn:gk_definition}
+%	\AsParamEl^{j}_{i_{1},\ldots,i_{k}} =&
+%			\EAevec_{j}^{\dagger}(\AsEForcing_{i_{1},\ldots,i_{k}} - \AsEForcingL_{i_{1},\ldots,i_{k}}
+%			- \AsEForcingO_{i_{1},\ldots,i_{k}}), \\
+%			0 =& \EAevec_{j}^{\dagger}\AsECenM_{i_{1},\ldots,i_{k}},
+%\end{align}
+%\end{subequations}
+\begin{equation}
+	%\label{eqn:resonance_modification_Ok}
 	\label{eqn:gk_definition}
-	\AsParamEl^{j}_{i_{1},\ldots,i_{k}} =&
-			\EAevec_{j}^{\dagger}(\AsEForcing_{i_{1},\ldots,i_{k}} - \AsEForcingL_{i_{1},\ldots,i_{k}}
-			- \AsEForcingO_{i_{1},\ldots,i_{k}}), \\
-			0 =& \EAevec_{j}^{\dagger}\AsECenM_{i_{1},\ldots,i_{k}},
-\end{align}
-\end{subequations}
-else, $\AsParamEl^{j}_{i_{1},\ldots,i_{k}} = 0$, and $\AsECenM_{i_{1},\ldots,i_{k}}$ is unconstrained. 
+	\AsParamEl^{j}_{i_{1},\ldots,i_{k}} =
+	\begin{cases}
+		\begin{split}
+			\EAevec_{j}^{\dagger}(\AsEForcing_{i_{1},\ldots,i_{k}} 
+			- \AsEForcingL_{i_{1},\ldots,i_{k}} \\
+			- \AsEForcingO_{i_{1},\ldots,i_{k}})
+		\end{split}; & 
+		\begin{split}
+			\textit{if},\ \omega_{i_{1},\ldots,i_{k}}\\
+			= \widehat{K}_{j,j}
+		\end{split} \\
+		 %
+		 0 = & \textit{otherwise},
+		%0 =& \EAevec_{j}^{\dagger}\AsECenM_{i_{1},\ldots,i_{k}},
+	\end{cases}
+\end{equation}
+and, $\EAevec_{j}^{\dagger}\AsECenM_{i_{1},\ldots,i_{k}} = 0$ in case of resonance. 
 
 \subsubsection{From the Extended System to the Standard System}
 \label{sec:extended_to_standard}
@@ -306,7 +326,7 @@ for a particular frequency $\omega$ and generic right hand side, $\widehat{\math
 \begin{subequations}
 	\label{eqn:generic_resolvent}
 	\begin{align}
-		(\omega\mathbf{I} - \Lu)\AsCenM^{(1)} + \Lmu\AsCenM^{(2)} + \Ltheta\AsCenM^{(3)} = \mathbf{r}^{(1)}, \\
+		(\omega\mathbf{I} - \Lu)\AsCenM^{(1)} + \Lnu\AsCenM^{(2)} + \Ltheta\AsCenM^{(3)} = \mathbf{r}^{(1)}, \\
 		%
 		(\omega\mathbf{I} - \LambdaP)\AsCenM^{(2)} = \mathbf{r}^{(2)}, \\
 		%
@@ -320,7 +340,7 @@ Clearly, $\mathbf{r}^{(2)}=\veczero$ and an $\omega$ that is non-resonant with $
 \end{align}
 where, $\ResolventOp$ is now the resolvent operator for the standard linear system $\Lu$.
 
-The asymptotic terms can now be examined sequentially noting that by construction the extended variables vanish for the non-linear term, which has the form $\ENonLin = [\NewNonLin; \veczero; \veczero]$, and hence so do all $\AsEForcing_{i_{1},\ldots,i_{k}} = [\AsForcing_{i_{1},\ldots,i_{k}};\veczero;\veczero]$ derived from it. Starting at $\mathcal{O}(|\xbf|^{2})$ and $(i_{1},i_{2})=(1,1)$, one has the resolvent equation in the extended system,
+The asymptotic terms can now be examined sequentially noting that by construction the extended variables vanish for the non-linear term, which has the form $\ENonLin = [\NewNonLin; \veczero; \veczero]$, and hence so do all $\AsEForcing_{i_{1},\ldots,i_{k}} = [\AsForcing_{i_{1},\ldots,i_{k}};\veczero;\veczero]$ derived from it. Starting at $\mathcal{O}(|\vecparv|^{2})$ and $(i_{1},i_{2})=(1,1)$, one has the resolvent equation in the extended system,
 \begin{align}
 	\label{eqn:asymptotic_O2_11}
 		\ResolventHat{\omega_{1,1}}^{-1}\AsECenM_{1,1} + \sum^{m}_{j=1}\AsParamEl^{j}_{1,1}\EDevec_{j} 
@@ -344,9 +364,9 @@ with $\AsParamEl^{j}_{1,2} = 0$, for $j\in \{n+1,\ldots,m\}$.
 
 This logic repeats for all $(i_{1},i_{2})\in\IndexSet{2}{1,m}$ and all unknown vectors at second order have the form $\AsECenM_{i_{1},i_{2}} = [\AsCenM_{i_{1},i_{2}}; \veczero; \veczero]$ and therefore the resolvent equations can be solved using the original linear system $\Lu$. 
 
-At $\mathcal{O}(|\xbf|^{3})$ the right hand side also has contributions from $\AsEForcingL_{i_{1},i_{2},i_{3}}$ that arise from the lower order asymptotic terms. However, these arise only due to the second order asymptotic terms $\AsECenM_{i_{1},i_{2}}$ and therefore, $\AsEForcingL_{i_{1},i_{2},i_{3}} = [\AsForcingL_{i_{1},i_{2},i_{3}}; \veczero; \veczero]$. The same logical arguments presented earlier apply and hence all third order asymptotic terms also have the form $\AsECenM_{i_{1},i_{2},i_{3}} = [\AsCenM_{i_{1},i_{2},i_{3}}; \veczero; \veczero]$ and only require the standard linear system $\Lu$ for their evaluation. As noted earlier, equations for the higher order asymptotic terms have the same essential structure as the third-order equations and hence at all orders the asymptotic terms have the form $\AsECenM_{i_{1},\ldots,i_{k}} = [\AsCenM_{i_{1},\ldots,i_{k}}; \veczero; \veczero]$ and only require the standard linear system $\Lu$ for their evaluation. 
+At $\mathcal{O}(|\vecparv|^{3})$ the right hand side also has contributions from $\AsEForcingL_{i_{1},i_{2},i_{3}}$ that arise from the lower order asymptotic terms. However, these arise only due to the second order asymptotic terms $\AsECenM_{i_{1},i_{2}}$ and therefore, $\AsEForcingL_{i_{1},i_{2},i_{3}} = [\AsForcingL_{i_{1},i_{2},i_{3}}; \veczero; \veczero]$. The same logical arguments presented earlier apply and hence all third order asymptotic terms also have the form $\AsECenM_{i_{1},i_{2},i_{3}} = [\AsCenM_{i_{1},i_{2},i_{3}}; \veczero; \veczero]$ and only require the standard linear system $\Lu$ for their evaluation. As noted earlier, equations for the higher order asymptotic terms have the same essential structure as the third-order equations and hence at all orders the asymptotic terms have the form $\AsECenM_{i_{1},\ldots,i_{k}} = [\AsCenM_{i_{1},\ldots,i_{k}}; \veczero; \veczero]$ and only require the standard linear system $\Lu$ for their evaluation. 
 
-Equations~\eqref{eqn:asymptotic_Ok_compact},\eqref{eqn:resonance_condition_Ok} and \eqref{eqn:resonance_modification_Ok} may be rewritten for the standard system as,
+Equations~\eqref{eqn:asymptotic_Ok_compact} and \eqref{eqn:gk_definition} may be rewritten for the standard system as,
 \begin{subequations}
 	\label{eqn:asymptotic_Ok_compact_std}
 	\begin{align}
@@ -365,21 +385,39 @@ with the resonance condition being the same, \ie,
 	\omega_{i_{1},\ldots,i_{k}} = \widehat{K}_{j,j}, && j\in 1,\ldots,m,
 \end{align}
 which then defines the normal form coefficients for $j\in\{1,\ldots,n\}$,
-\begin{subequations}
-	\label{eqn:resonance_modification_Ok_std}
-	\begin{align}
-		\AsParamEl^{j}_{i_{1},\ldots,i_{k}} =&
-		\Aevec_{j}^{\dagger}(\AsForcing_{i_{1},\ldots,i_{k}} - \AsForcingL_{i_{1},\ldots,i_{k}}
-		- \AsForcingO_{i_{1},\ldots,i_{k}}), \\
-		0 =& \Aevec_{j}^{\dagger}\AsCenM_{i_{1},\ldots,i_{k}}.
-	\end{align}
-\end{subequations}
-In the absence of resonance or, if resonance occurs for $j\in\{n+1,\ldots,m\}$, 
+%\begin{subequations}
+%	\label{eqn:resonance_modification_Ok_std}
+%	\begin{align}
+%		\AsParamEl^{j}_{i_{1},\ldots,i_{k}} =&
+%		\Aevec_{j}^{\dagger}(\AsForcing_{i_{1},\ldots,i_{k}} - \AsForcingL_{i_{1},\ldots,i_{k}}
+%		- \AsForcingO_{i_{1},\ldots,i_{k}}), \\
+%		0 =& \Aevec_{j}^{\dagger}\AsCenM_{i_{1},\ldots,i_{k}}.
+%	\end{align}
+%\end{subequations}
+\begin{equation}
+	\label{eqn:gk_definition2}
+	\AsParamEl^{j}_{i_{1},\ldots,i_{k}} =
+	\begin{cases}
+		\begin{split}
+			\Aevec_{j}^{\dagger}(\AsForcing_{i_{1},\ldots,i_{k}} 
+			- \AsForcingL_{i_{1},\ldots,i_{k}} \\
+			- \AsForcingO_{i_{1},\ldots,i_{k}})
+		\end{split}; & 
+		\begin{split}
+			\textit{if},\ \omega_{i_{1},\ldots,i_{k}}\\
+			= \widehat{K}_{j,j}
+		\end{split} \\
+		%
+		0 = & \textit{otherwise},
+	\end{cases}
+\end{equation}
+and $\Aevec^{\dagger}_{j}\AsCenM_{i_{1},\ldots,i_{k}} = 0$ in case of resonance. 
+For all $j\in\{n+1,\ldots,m\}$, 
 \begin{align}
 	\label{eqn:resonance_modification2_Ok_std}
 	\AsParamEl^{j}_{i_{1},\ldots,i_{k}} =&	0,
 \end{align}
-and $\AsCenM_{i_{1},\ldots,i_{k}}$ is unconstrained.
+regardless of resonance.
 
 The entire procedure for the evaluation of the normal form is presented succinctly in algorithm~\ref{algo:normal_form}. 
  \begin{algorithm}
@@ -396,10 +434,10 @@ The entire procedure for the evaluation of the normal form is presented succinct
 		\LComment{Substitute asymptotic expansions}
 		\For{$(k\in 2,3,\ldots,k_{max})$}
 			\For{$(i_{1},\ldots,i_{k})\in \IndexSet{k}{1,m}$}
-				\State \LComment {Build all r.h.s. contributions for $({i_{1},\ldots,i_{k}})$.}
-				\State $\mathbf{r} = \AsForcing_{i_{1},\ldots,i_{k}} + \AsForcingO_{i_{1},\ldots,i_{k}} + \AsForcingL_{i_{1},\ldots,i_{k}}$ %\Comment{Resolvent r.h.s} 
+				\State \LComment {Build all r.h.s. contributions.}
+				\State $\mathbf{r} = \AsForcing_{i_{1},\ldots,i_{k}} - \AsForcingO_{i_{1},\ldots,i_{k}} - \AsForcingL_{i_{1},\ldots,i_{k}}$ %\Comment{Resolvent r.h.s} 
 				\State $\omega = \widehat{K}_{i_{1},i_{1}} + \widehat{K}_{i_{2},i_{2}} + \ldots + \widehat{K}_{i_{k},i_{k}}$
-				\State \LComment {Build $\AsParam_{i_{1},\ldots,i_{k}}$, Eq.~\eqref{eqn:resonance_modification_Ok_std}}
+				\State \LComment {Build $\AsParam_{i_{1},\ldots,i_{k}}$, Eq.~\eqref{eqn:gk_definition2}}
 				\For{$(j \in 1,\ldots,n)$}
 					\If {($\omega = \widehat{K}_{j,j}$)} 
 						\State $\AsParamEl^{j}_{i_{1},\ldots,i_{k}} = \Aevec^{\dagger}_{j}\mathbf{r}$
@@ -417,7 +455,7 @@ The entire procedure for the evaluation of the normal form is presented succinct
 				\LComment {$\ResolventOp(\omega) = (\omega\mathbf{I} - \Lu)^{-1}$}
 			\EndFor
 		\EndFor \\
-		\Return $\Param(\xbf), \CenM(\xbf)$.
+		\Return $\Param(\vecparv), \CenM(\vecparv)$.
 	\end{algorithmic}
 \end{algorithm}
 

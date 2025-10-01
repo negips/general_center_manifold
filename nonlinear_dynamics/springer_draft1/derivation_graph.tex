@@ -1,47 +1,57 @@
 \subsection{A Graph Style Parameterization}
 \label{sec:graph_method}
 
-In the earlier subsection it was shown that even though one starts from an extended system, for the evaluation of the higher order asymptotic terms of the center-manifold only  the standard linear system is required and the system extension only affects the tangent (linear) space. This aspect however is not unique to the normal form and other parameterizations can be constructed in which the asymptotic center-manifold of a system can be evaluated using just the standard linear operator $\Lu$. Here we construct one such parameterization.
+In the earlier subsection it was shown that even though one starts from an extended system, for the evaluation of the higher order asymptotic terms of the center-manifold (in its normal form) only  the standard linear system is required and the system extension only affects the tangent (linear) space. This aspect however is not unique to the normal form and other parameterizations can be constructed in which the asymptotic center-manifold of a system can be evaluated using just the standard linear operator $\Lu$. Here we construct one such parameterization.
 
-Starting again with the asymptotic representations of $\Param(\xbf)$ and $\CenM(\xbf)$ as in equations~\eqref{eqn:reduced_normal_form} and \eqref{eqn:asymptotic_normal_form} respectively, one may constrain all higher order terms $\AsECenM_{i_{1},\ldots,i_{k}}$ to lie in the complement of the center subspace (spanned by $\EDevMatrix$), resulting in,
+Starting again with the asymptotic representations of $\Param(\vecparv)$ and $\CenM(\vecparv)$ as in equations~\eqref{eqn:reduced_normal_form} and \eqref{eqn:asymptotic_normal_form} respectively, one may constrain all higher order terms $\AsECenM_{i_{1},\ldots,i_{k}}$ to lie in the complement of the center subspace (spanned by $\EDevMatrix$), resulting in,
 \begin{align}
 	\label{eqn:graph_condition}
 	\EAevec^{\dagger}_{j}\AsECenM_{i_{1},\ldots,i_{k}} = \veczero, && \forall j\in1,\ldots,m,
 \end{align}
 for all $(i_{1},\ldots,i_{k})\in\IndexSet{k}{1,m},\ k\ge2$. Note that this condition applies regardless of resonance. 
 
-At $\mathcal{O}(|\xbf|)$ one again obtains equation~\eqref{eqn:asymptotic_O1} and, as in the case of the normal form, the unknowns $\AsECenM_{i_{1}},\AsParam_{i_{1}}$ \etc, can be associated with the generalized eigenvalue problem resulting in equation~\eqref{eqn:GEV_O1}. At first order the expressions are identical to those obtained for the normal form, which is unsurprising since the $\mathcal{O}(|\xbf|)$ terms only represent the center subspace.
+At $\mathcal{O}(|\vecparv|)$ one again obtains equation~\eqref{eqn:asymptotic_O1} and, as in the case of the normal form, the unknowns $\AsECenM_{i_{1}},\AsParam_{i_{1}}$ \etc, can be associated with the generalized eigenvalue problem resulting in equation~\eqref{eqn:GEV_O1}. At first order the expressions are identical to those obtained for the normal form, which is unsurprising since the $\mathcal{O}(|\vecparv|)$ terms only represent the center subspace.
 
-One may therefore represent the general expression for the evaluation of higher order terms as,
+Since the linear part of the reduced representation is given by $\Khat$, one again obtains a lower triangular system of equations for the unknown vectors $\AsECenM_{i_{1},\ldots,i_{k}}$ at all asymptotic orders, which can be solved sequentially one vector at a a time. One may therefore represent the general expression for the evaluation of higher order terms as,
+\begin{subequations}
+\label{eqn:graph_Ok_compact}
 \begin{align}
-	\label{eqn:graph_Ok_compact}
 	\begin{aligned}
-		\ResolventHat{\omega_{i_{1},\ldots,i_{k}}}^{-1}\AsCenM_{i_{1},\ldots,i_{k}} + \sum^{m}_{j=1}\AsParamEl^{j}_{i_{1},\ldots,i_{k}}\EDevec_{j} \\
+		\ResolventHat{\omega_{i_{1},\ldots,i_{k}}}^{-1}\AsECenM_{i_{1},\ldots,i_{k}} + \sum^{m}_{j=1}\AsParamEl^{j}_{i_{1},\ldots,i_{k}}\EDevec_{j} \\
 		= \AsEForcing_{i_{1},\ldots,i_{k}} - \AsEForcingO_{i_{1},\ldots,i_{k}} 
 		- \AsEForcingL_{i_{1},\ldots,i_{k}}.
-	\end{aligned} &&
+	\end{aligned} \\
+	%
+	\omega_{i_{1},\ldots,i_{k}} = \widehat{K}_{i_{1},i_{1}} + \widehat{K}_{i_{2},i_{2}} + \ldots + \widehat{K}_{i_{k},i_{k}}.
 \end{align}
+\end{subequations}
 Since the parameterization is defined by equation~\eqref{eqn:graph_condition}, one obtains the definition of the asymptotic terms of $\Param$ as,
- \begin{align}
+ \begin{equation}
  	\label{eqn:graph_gk_definition}
  		 \AsParamEl^{j}_{i_{1},\ldots,i_{k}} 
  		= \EAevec^{\dagger}_{j}(\AsEForcing_{i_{1},\ldots,i_{k}} - \AsEForcingO_{i_{1},\ldots,i_{k}} 
  		- \AsEForcingL_{i_{1},\ldots,i_{k}}),
- \end{align}
-$\forall j\in1,\ldots,m$. The extended variables vanish for $\AsEForcing_{i_{1},\ldots,i_{k}}$ by construction and, following the logical arguments presented in the previous section, it may be verified that the extended variables also vanish for $\AsEForcingO_{i_{1},\ldots,i_{k}}, \AsEForcingL_{i_{1},\ldots,i_{k}}$ and $\AsECenM_{i_{1},\ldots,i_{k}}$. This then implies that, 
+ \end{equation}
+$\forall j\in1,\ldots,m$. 
+
+The extended variables vanish for $\AsEForcing_{i_{1},\ldots,i_{k}}$ by construction and, following the logical arguments presented in the previous subsection, it may be verified that the extended variables also vanish for $\AsEForcingO_{i_{1},\ldots,i_{k}}, \AsEForcingL_{i_{1},\ldots,i_{k}}$ and $\AsECenM_{i_{1},\ldots,i_{k}}$ (with $k\ge2$). This then implies that, 
 \begin{align}
 	\label{eqn:graph_gk_definition2}
 	\AsParamEl^{j}_{i_{1},\ldots,i_{k}}= 0, && \forall j\in n+1,\ldots,m.
 \end{align}
 Equation~\eqref{eqn:graph_Ok_compact} then reduces to its single component form,
+\begin{subequations}
+\label{eqn:graph_Ok_compact2}
 \begin{align}
-	\label{eqn:graph_Ok_compact2}
 	\begin{aligned}
 		\Resolvent{\omega_{i_{1},\ldots,i_{k}}}^{-1}\AsCenM_{i_{1},\ldots,i_{k}} + \sum^{n}_{j=1}\AsParamEl^{j}_{i_{1},\ldots,i_{k}}\Devec_{j} \\
 		= \AsForcing_{i_{1},\ldots,i_{k}} - \AsForcingO_{i_{1},\ldots,i_{k}} 
 		- \AsForcingL_{i_{1},\ldots,i_{k}}.
-	\end{aligned} &&
+	\end{aligned} \\
+	%
+	\omega_{i_{1},\ldots,i_{k}} = \widehat{K}_{i_{1},i_{1}} + \widehat{K}_{i_{2},i_{2}} + \ldots + \widehat{K}_{i_{k},i_{k}}.
 \end{align}
+\end{subequations}
 One may define the projection operator on to the complement of the center subspace of $\Lu$ as, 
 \begin{align}
 	\label{eqn:complement_projector}
@@ -52,14 +62,18 @@ By construction we have, $\mathbf{Q}\AsCenM_{i_{1},\ldots,i_{k}} = \AsCenM_{i_{1
 	\mathcal{R}_{s}(\omega) = \left[\mathbf{Q}(\omega\mathbf{I} - \Lu)\mathbf{Q}\right]^{-1}
 \end{align}
 Equation~\eqref{eqn:graph_Ok_compact2} can then be rewritten in a restricted subspace as,
+\begin{subequations}
+\label{eqn:graph_Ok_compact3}
 \begin{align}
-	\label{eqn:graph_Ok_compact3}
 	\begin{aligned}
 		\RestrictedResolvent{\omega_{i_{1},\ldots,i_{k}}}^{-1}\AsCenM_{i_{1},\ldots,i_{k}} = \\
 		\mathbf{Q}\left[\AsForcing_{i_{1},\ldots,i_{k}} - \AsForcingO_{i_{1},\ldots,i_{k}} 
 		- \AsForcingL_{i_{1},\ldots,i_{k}}\right],
-	\end{aligned} 
+	\end{aligned} \\
+	%
+	\omega_{i_{1},\ldots,i_{k}} = \widehat{K}_{i_{1},i_{1}} + \widehat{K}_{i_{2},i_{2}} + \ldots + \widehat{K}_{i_{k},i_{k}}.
 \end{align}
+\end{subequations}
 with the asymptotic components of $\Param$ defined as
 \begin{subequations}
 	\label{eqn:graph_gk_definition3}
@@ -90,8 +104,8 @@ with the asymptotic components of $\Param$ defined as
  		\Require Maximum Asymptotic order: $k_{max}$
  		\For{$(k\in 2,3,\ldots,k_{max})$}
  		\For{$(i_{1},\ldots,i_{k})\in \IndexSet{k}{1,m}$}
- 		\State \LComment {Build all r.h.s. contributions for $({i_{1},\ldots,i_{k}})$.}
- 		\State $\mathbf{r} = \AsForcing_{i_{1},\ldots,i_{k}} + \AsForcingO_{i_{1},\ldots,i_{k}} + \AsForcingL_{i_{1},\ldots,i_{k}}$ %\Comment{Resolvent r.h.s} 
+ 		\State \LComment {Build all r.h.s. contributions.}
+ 		\State $\mathbf{r} = \AsForcing_{i_{1},\ldots,i_{k}} - \AsForcingO_{i_{1},\ldots,i_{k}} - \AsForcingL_{i_{1},\ldots,i_{k}}$ %\Comment{Resolvent r.h.s} 
  		\State $\omega = \widehat{K}_{i_{1},i_{1}} + \widehat{K}_{i_{2},i_{2}} + \ldots + \widehat{K}_{i_{k},i_{k}}$
  		\State \LComment {Build $\AsParam_{i_{1},\ldots,i_{k}}$, Eq.~\eqref{eqn:graph_gk_definition3}}
  		\For{$(j \in 1,\ldots,n)$}
@@ -106,32 +120,32 @@ with the asymptotic components of $\Param$ defined as
  		\LComment {$\ResolventOp_{s}(\omega) = [\mathbf{Q}(\omega\mathbf{I} - \Lu)\mathbf{Q}]^{-1}$}
  		\EndFor
  		\EndFor \\
- 		\Return $\Param(\xbf),\CenM(\xbf)$.
+ 		\Return $\Param(\vecparv),\CenM(\vecparv)$.
  	\end{algorithmic}
  \end{algorithm}
  
- The resulting expressions for the normal form given by equations~\eqref{eqn:asymptotic_Ok_compact_std},  \eqref{eqn:resonance_modification_Ok_std} and, the graph style parameterization given by equations~\eqref{eqn:graph_Ok_compact3}, \eqref{eqn:graph_gk_definition3} are quite similar. The similarity is due to the fact that the tangent space in both cases is identical, with $\Khat$ representing the linear part of the parameterization $\mathcal{G}(\xbf)$. Typically one is interested in the normal form of the reduced equations since they result in the ``simplest form'' of the representation. The particular graph parameterization however is advantageous when one needs to consider the mapping from the full system state to the reduced manifold, \ie, $\evecu \mapsto \xbf$. For both normal form and the graph parameterization, mapping that is explicitly constructed is $\mathcal{Y}: \xbf \mapsto \evecu$. The inverse map $\inv{\mathcal{Y}}: \evecu \mapsto \xbf$ is not constructed. It is also difficult to construct from the knowledge of $\mathcal{Y}$ itself  because $\mathcal{Y}$ is constructed asymptotically and is hardly ever evaluated beyond a few orders. However, since the graph parameterization is constructed with the property that higher order terms lie in the complement of the tangent space, the inverse map $\inv{\mathcal{Y}}$ can be easily constructed by leveraging this property. Therefore, recalling that the first order vectors $\AsCenM_{i} = \evecv_{i}$, we have,
+ The resulting expressions for the normal form given by equations~\eqref{eqn:asymptotic_Ok_compact_std},  \eqref{eqn:gk_definition2} and, the graph style parameterization given by equations~\eqref{eqn:graph_Ok_compact3}, \eqref{eqn:graph_gk_definition3} are quite similar. The similarity is due to the fact that the tangent space in both cases is identical, with $\Khat$ representing the linear part of the parameterization $\mathcal{G}(\vecparv)$. Typically one is interested in the normal form of the reduced equations since they result in the ``simplest form'' of the representation. The particular graph parameterization however is advantageous when one needs to consider the mapping from the full system state to the reduced manifold, \ie, $\evecu \mapsto \vecparv$. For both normal form and the graph parameterization, mapping that is explicitly constructed is $\mathcal{Y}: \vecparv \mapsto \evecu$. The inverse map $\inv{\mathcal{Y}}: \evecu \mapsto \vecparv$ is not constructed. It is also difficult to construct from the knowledge of $\mathcal{Y}$ itself  because $\mathcal{Y}$ is constructed asymptotically and is hardly ever evaluated beyond a few orders. However, since the graph parameterization is constructed with the property that higher order terms lie in the complement of the tangent space, the inverse map $\inv{\mathcal{Y}}$ can be easily constructed by leveraging this property. Therefore, recalling that the first order vectors $\AsCenM_{i} = \evecv_{i}$, we have,
  \begin{align}
  		\begin{split}
- 		\evecu = \CenM(\xbf) =& \sum^{[1,m]}_{(1)}\AsECenM_{i_{1}}x_{i_{1}} + \sum^{[1,m]}_{(2)}\AsECenM_{i_{1},i_{2}}x_{i_{1}}x_{i_{2}} \\
+ 		\evecu = \CenM(\vecparv) =& \sum^{[1,m]}_{(1)}\AsECenM_{i_{1}}\parv_{i_{1}} + \sum^{[1,m]}_{(2)}\AsECenM_{i_{1},i_{2}}\parv_{i_{1}}\parv_{i_{2}} \\
  		%
- 		& + \sum^{[1,m]}_{(3)}\AsECenM_{i_{1},i_{2},i_{3}}x_{i_{1}}x_{i_{2}}x_{i_{3}} + \ldots,
+ 		& + \sum^{[1,m]}_{(3)}\AsECenM_{i_{1},i_{2},i_{3}}\parv_{i_{1}}\parv_{i_{2}}\parv_{i_{3}} + \ldots,
  	\end{split} \nonumber \\
  	%
  	\begin{split}
- 		\implies\EAevMatrix^{\dagger}\evecu =& \sum^{[1,m]}_{(1)}\EAevMatrix^{\dagger}\EDevec_{i_{1}}x_{i_{1}} + \sum^{[1,m]}_{(2)}\EAevMatrix^{\dagger}\AsECenM_{i_{1},i_{2}}x_{i_{1}}x_{i_{2}} \\
+ 		\implies\EAevMatrix^{\dagger}\evecu =& \sum^{[1,m]}_{(1)}\EAevMatrix^{\dagger}\EDevec_{i_{1}}\parv_{i_{1}} + \sum^{[1,m]}_{(2)}\EAevMatrix^{\dagger}\AsECenM_{i_{1},i_{2}}\parv_{i_{1}}\parv_{i_{2}} \\
  		%
- 		& + \sum^{[1,m]}_{(3)}\EAevMatrix^{\dagger}\AsECenM_{i_{1},i_{2},i_{3}}x_{i_{1}}x_{i_{2}}x_{i_{3}} + \ldots,
+ 		& + \sum^{[1,m]}_{(3)}\EAevMatrix^{\dagger}\AsECenM_{i_{1},i_{2},i_{3}}\parv_{i_{1}}\parv_{i_{2}}\parv_{i_{3}} + \ldots,
  	\end{split} \nonumber \\
  	%
  	\begin{split}
- 		\implies\EAevMatrix^{\dagger}\evecu =& \Ihat\xbf + \mathbf{0} + \mathbf{0} + \ldots .
+ 		\implies\EAevMatrix^{\dagger}\evecu =& \Ihat\vecparv + \mathbf{0} + \mathbf{0} + \ldots .
  	\end{split} \nonumber
  \end{align}
- Therefore, when considering the graph parameterization presented earlier, the inverse map $\inv{\mathcal{Y}}: \evecu \mapsto \xbf$ is simply,
+ Therefore, when considering the graph parameterization presented earlier, the inverse map $\inv{\mathcal{Y}}: \evecu \mapsto \vecparv$ is simply,
  \begin{align}
  	\label{eqn:inverse_map}
- 	\xbf = \inv{\CenM}(\evecu) = \EAevMatrix^{\dagger}\evecu.
+ 	\vecparv = \inv{\CenM}(\evecu) = \EAevMatrix^{\dagger}\evecu.
  \end{align}
  For the normal form, one does not get this simple inverse map since the higher order terms generically do not lie in the complement of the tangent space ($\EDevMatrix$). 
  
@@ -140,7 +154,7 @@ with the asymptotic components of $\Param$ defined as
 %A particular graph-style parameterization has been used in \cite{negi24} for the construction of center-manifolds of the Navier--Stokes while treating variations of the Reynolds number as parameter perturbations. 
 
 
-%Since the parameterization can be chosen arbitrarily, one can always choose a representation in which $\mathcal{Y}(\xbf)$ has non trivial components in the extended variables even for the higher order asymptotic terms $\AsCenM_{i_{1},\ldots,i_{k}}$.
+%Since the parameterization can be chosen arbitrarily, one can always choose a representation in which $\mathcal{Y}(\vecparv)$ has non trivial components in the extended variables even for the higher order asymptotic terms $\AsCenM_{i_{1},\ldots,i_{k}}$.
 
 %One may find the exposition on the implementation of the parameterization method in previous works of \citet{haro16} and \citet{jain22}. To be clear, the application of the parameterization method to an extended system like equation~\eqref{eqn:evolution_extended} follows the same steps as outlined in those earlier works. However, many of the essential steps are repeated here to bring out the structure of system of equations at each asymptotic order in the context of system extension.
 

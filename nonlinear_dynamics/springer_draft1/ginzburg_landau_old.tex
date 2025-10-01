@@ -10,7 +10,7 @@ The asymptotic center-manifold derived in section~\ref{sec:center_manifold_deriv
 		\dfrac{\partial A^{*}}{\partial t} =& \left[\delta^{*}_{1}\nabla + \delta^{*}_{2} + \delta^{*}_{3}x + \delta^{*}_{4}\Lap\right]A^{*} + \delta^{*}_{5}|A|^{2}A^{*}. 
 	\end{align}
 \end{subequations}
-Where, $x$ is the spatial coordinate, $\nabla$ and $\Lap$ are the one-dimensional gradient and Laplacian operators, and the superscript $^{*}$ represents complex conjugation. Typically such a model would arise as the simplified dynamics of a more detailed dynamical system. Here the Ginzburg-Landau model itself is treated as the underlying dynamical model, which represents the standard system in our context. Such models have often been utilized to investigate local and global bifurcations in spatially developing flows \citep{chomaz88,chomaz05}. It is easily seen that $A(x)=0$ represents a fixed point of the system, with the linear operators given by
+Where, $x$ is the spatial coordinate, $\nabla$ and $\Lap$ are the one-dimensional gradient and Laplacian operators, and the superscript $^{*}$ represents complex conjugation. Typically such a model would arise as the simplified dynamics of a more detailed dynamical system. Here the Ginzburg-Landau model itself is treated as the underlying dynamical model. Such models have often been utilized to investigate local and global bifurcations in spatially developing flows \citep{chomaz88,chomaz05}. For $A=0$ at the left and right domain boundaries, it is easily seen that $A(x)=0$ represents a fixed point of the system, with the linear operators given by
 \begin{align}
 	\mathcal{L}_{0}	=& \left[\delta_{1}\nabla + \delta_{2} + \delta_{3}x + \delta_{4}\Lap\right], \nonumber \\
 	%
@@ -18,12 +18,11 @@ Where, $x$ is the spatial coordinate, $\nabla$ and $\Lap$ are the one-dimensiona
 \end{align}
 The linear operator for both $A$ and $A^{*}$ are written together as
 \begin{eqnarray}
-	\Lu = \begin{bmatrix}
+	\mathcal{L} = \begin{bmatrix}
 		\mathcal{L}_{0}		& 0 \\
 		0								  & \mathcal{L}^{*}_{0}
-	\end{bmatrix},
+	\end{bmatrix}
 \end{eqnarray}
-which represents the linear operator for the standard system. The state variable is denoted by $\vecu = [A; A^{*}]$. 
 
 For semi-infinite domains, $x\in[0,\infty)$, the spectrum for $\mathcal{L}_{0}$ is known analytically \citep{chomaz88} and is given by,
 %\begin{subequations}
@@ -33,9 +32,9 @@ For semi-infinite domains, $x\in[0,\infty)$, the spectrum for $\mathcal{L}_{0}$ 
 		%\phi_{n}(x)		=& \mathrm{Ai}([-\delta_{3}/\delta_{4}]^{1/3}x + \zeta_{n}), \label{eqn:eigenvectors}
 	\end{align}
 %\end{subequations}
-and the corrresponding complex conjugate for $\mathcal{L}^{*}_{0}$. Here $\zeta_{n}$ denotes the countable set of zeros of the Airy function. The system parameters are chosen \emph{ad hoc} as $\delta^{b}_{1} = -1.0$, $\delta^{b}_{2} = 0.741 + 1.025i$, $\delta^{b}_{3}=-0.125$, $\delta^{b}_{4}=(1.0 - i)/\sqrt{2}$ and $\delta^{b}_{5} =-0.1+0.1i$, such that the system is at the bifurcation point with a single critical eigenmode with eigenvalue $\omega_{1} = 1.0i$ for $\mathcal{L}_{0}$ and its conjugate, $-1.0i$ for $\mathcal{L}^{*}_{0}$, and all other eigenvalues have negative real parts. 
+and the corrresponding complex conjugate for $\mathcal{L}^{*}_{0}$. Here $\zeta_{n}$ denotes the countable set of zeros of the Airy function. The system parameters are chosen \emph{ad hoc} as $\delta^{b}_{1} = -1.0$, $\delta^{b}_{2} = 0.741 + 1.025i$, $\delta^{b}_{3}=-0.125$, $\delta^{b}_{4}=(1.0 - i)/\sqrt{2}$ and $\delta^{b}_{5} =-0.1+0.1i$, such that the system is at the bifurcation point with a single critical eigenmode with eigenvalue $\omega_{c} = 1.0i$ for $\mathcal{L}_{0}$ and its conjugate, $-1.0i$ for $\mathcal{L}^{*}_{0}$, and all other eigenvalues have negative real parts. 
  
- A center-manifold approximation of the model problem requires the evaluation of restricted resolvents, which is a difficult problem to solve analytically. Therefore the problem is considered in a trucated domain of $x\in [0,40]$ with the boundary conditions of $A = 0$ at $x=0$ and, $\partial A/\partial x = 0$ (natural boundary conditions) at $x=40$. Due to the spatially localized nature of the first few eigenvectors (which dictate the global dynamics), this truncation does not affect the dynamics in any significant manner, as can be seen from the comparison of the numerically evaluated spectrum (via the implicitly restarted Arnoldi method \citep{sorensen92}) in the truncated domain to the analytical spectrum in the semi-infinite domain (figure~\ref{fig:GL_spectrum}). 
+ A center-manifold approximation of the model problem requires the evaluation of restricted resolvents, which is a difficult problem to solve analytically. Therefore the problem is considered in a trucated domain of $x\in [0,40]$ with the boundary conditions of $A = 0$ at $x=0$ and, $\partial A/\partial x = 0$ at $x=40$. Due to the spatially localized nature of the first few eigenvectors (which dictate the global dynamics), this truncation does not affect the dynamics in any significant manner, as can be seen from the comparison of the numerically evaluated spectrum (via the implicitly restarted Arnoldi method \citep{sorensen92}) in the truncated domain to the analytical spectrum in the semi-infinite domain (figure~\ref{fig:GL_spectrum}). 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.49\textwidth]{GL_spectra}
@@ -43,62 +42,46 @@ and the corrresponding complex conjugate for $\mathcal{L}^{*}_{0}$. Here $\zeta_
 	\label{fig:GL_spectrum}
 \end{figure}
 
-The standard system then has the critical eigenvalue and eigenvector matrices as
-\begin{align}
-	\LambdaC = \begin{bmatrix}
-		\omega_{1} & 0 \\
-		0					  & \omega^{*}_{1}
-	\end{bmatrix}; &&
+The structure of the eigenmodes is given by,
+ \begin{align}
+	\vecv_{5} = \begin{Bmatrix}
+		\phi_{c} \\
+		0 
+	\end{Bmatrix}, & \hspace{2mm}
 	%
-	\DevMatrix = [\Devec_{1}; \Devec_{2}]; &&
+	\vecv_{6} = \begin{Bmatrix}
+		0 \\
+		\phi^{*}_{c} 
+	\end{Bmatrix}, \nonumber
+\end{align}
+where, $(\omega_{c},\phi_{c})$ and $(\omega^{*}_{c},\phi^{*}_{c})$ are the critical eigenpairs of $\mathcal{L}_{0}$ and $\mathcal{L}^{*}_{0}$ respectively. Similarly, the adjoint eigenmodes are denoted as,
+\begin{align}
+	\vecw_{5} = \begin{Bmatrix}
+		\chi_{c} \\
+		0 
+	\end{Bmatrix}, & \hspace{2mm}
 	%
-	 \AevMatrix = [\Aevec_{1}; \Aevec_{2}], \nonumber
+	\vecw_{6} = \begin{Bmatrix}
+		0 \\
+		\chi^{*}_{c} 
+	\end{Bmatrix}, \nonumber
 \end{align}
-where the eigenvectors have the following form in terms of the two components,
+where, $(\omega^{*}_{c},\chi_{c})$ and $(\omega_{c},\chi^{*}_{c})$ are the eigenpairs of corresponding adjoint linear operators $\mathcal{L}^{\dagger}_{0}$ and $\mathcal{L}^{*\dagger}_{0}$ respectively. The numerically calculated eigenvectors $\phi_{c}$ and $\chi_{c}$ are shown in figure~\ref{fig:GL_fields}. The projection operator into the stable subspace of $\mathcal{L}$ is defined as
 \begin{align}
-	\Devec_{1} = [\phi_{c}; \veczero]; && \Devec_{2} = [\veczero; \phi^{*}_{c}], \nonumber \\
-	\Aevec_{1} = [\chi_{c}; \veczero]; && \Aevec_{2} = [\veczero; \chi^{*}_{c}], \nonumber
+	\mathbf{Q} = \mathbf{I} - \vecv_{5}\vecw_{5}^{H} - \vecv_{6}\vecw_{6}^{H}. \nonumber
 \end{align}
-The numerically calculated eigenvectors $\phi_{c}$ and $\chi_{c}$ are shown in figure~\ref{fig:GL_fields}. 
-
-
-The system in equation~\eqref{eqn:ginzburg_landau} has a total of five parameters (ten including the complex-conjugate pairs) that can be varied from their bifurcation values. In order to avoid an explosion in the number of terms $T^{k}_{m}$ arising from the combinatorial problem, only the variations in $\delta_{4}$ and $\delta^{*}_{4}$ are considered, which suffice to illustrate the construction of the asymptotic center-manifold under parameter variations. Although the parameters are complex-conjugate pairs, it turns out to be simplest to treat them all as independent parameters and enforce the complex-conjugate property later when parameter values are prescribed, which is essentially the same as treating $A$ and $A^{*}$ independently and having two independent critical eigenvectors $\vecv_{1}$ and $\vecv_{2}$. 
-The extended variable for the parameter evolution is then $\vecnu = [\delta'_{4};\delta'^{*}_{4}]$, with 
+The projectors into the stable subspaces of $\mathcal{L}_{0}$ and $\mathcal{L}^{*}_{0}$ are denoted as $\mathbf{Q}_{0}$ and $\mathbf{Q}^{*}_{0}$, and are given by,
 \begin{align}
-	\delta_{4} =& \delta^{b}_{4} + \delta'_{4}, \nonumber & 
-	\delta^{*}_{4} =& (\delta^{b}_{4})^{*} + \delta'^{*}_{4}. \nonumber
-\end{align}
-We consider the harmonically forced system with, $h=5$ and angular frequencies, $\boldsymbol{\lambda}^{H} = [0.0; 1i; -1.0i; 2.37i; -2.37i]$. The external forcing is given by equation~\eqref{eqn:harmonic_forcing}, and we specify the forcing shapes $\fieldf^{H}_{i}$, \emph{ad hoc}, based on,
-\begin{align}
-	\xi(x) = \dfrac{1}{\sqrt{\pi}}e^{-(x - 7.0)^{2}} \nonumber
-\end{align} 
-with the forcing shapes being,
-\begin{align}
-	\fieldf^{H}_{1} = \dfrac{1}{\sqrt{2}}\begin{bmatrix}
-		\xi(x) \\
-		\xi(x)
-	\end{bmatrix}, & \fieldf^{H}_{2} = \begin{bmatrix}
-	\xi(x) \\
-	\veczero
-	\end{bmatrix}, &
-	\fieldf^{H}_{3} = \begin{bmatrix}
-	\veczero \\
-	\xi(x)
-	\end{bmatrix}, \nonumber \\
-	%
-	\fieldf^{H}_{4} = \begin{bmatrix}
-		\xi(x) \\
-		\veczero
-	\end{bmatrix}, & \fieldf^{H}_{5} = \begin{bmatrix}
-	\veczero \\
-	\xi(x)
-	\end{bmatrix}. &\nonumber
+	\mathbf{Q}_{0} 			=& \mathbf{I} - \phi_{c}\chi^{H}_{c}, & 
+	\mathbf{Q}^{*}_{0} 	=& \mathbf{I} - \phi^{*}_{c}\chi^{*H}_{c}. \nonumber
 \end{align}
 
-
-
-
-
+The system in equation~\eqref{eqn:ginzburg_landau} has a total of five parameters (ten including the complex-conjugate pairs) that can be varied from their bifurcation values. In order to avoid an explosion in the number of terms $T_{k}$ arising from the combinatorial problem, only the variations in $\delta_{3},\delta_{4},\delta^{*}_{3}$ and $\delta^{*}_{4}$ are considered, which suffice to illustrate the construction of the asymptotic center-manifold under parameter variations. Although the parameters are complex-conjugate pairs, it turns out to be simplest to treat them all as independent parameters and enforce the complex-conjugate property later when parameter values are prescribed, which is essentially the same as treating $A$ and $A^{*}$ independently and having two independent critical eigenvectors $\vecv_{5}$ and $\vecv_{6}$. 
+The extended variable for the parameter evolution is then $\vecnu = [\delta'_{3};\delta'_{4};\delta'^{*}_{3};\delta'^{*}_{4}]$, with 
+\begin{align}
+	\delta_{3} =& \delta^{b}_{3} + \delta'_{3},& \delta_{4} =& \delta^{b}_{4} + \delta'_{4}, \nonumber \\
+	\delta^{*}_{3} =& (\delta^{b}_{3})^{*} + \delta'^{*}_{3}, &\delta^{*}_{4} =& (\delta^{b}_{4})^{*} + \delta'^{*}_{4}. \nonumber
+\end{align}
 The extended state vector is denoted as $\widehat{A} = [A; A^{*}; \vecnu]$. With the knowledge of the linear operator and having calculated the critical eigenmodes, all the expressions for the center-manifold approximation of the extended system can now be easily built. 
 The extended linear operator is given by,
  \begin{align}

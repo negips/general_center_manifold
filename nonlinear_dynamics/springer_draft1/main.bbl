@@ -1,4 +1,4 @@
-\begin{thebibliography}{11}
+\begin{thebibliography}{14}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -82,5 +82,26 @@ Xavier Cabr{\'e}, Ernest Fontich, and Rafael De~la Llave.
   with respect to parameters.
 \newblock \emph{Indiana University mathematics journal}, pages 329--360,
   2003{\natexlab{b}}.
+
+\bibitem[Chomaz et~al.(1988)Chomaz, Huerre, and Redekopp]{chomaz88}
+JM~Chomaz, P~Huerre, and LG~Redekopp.
+\newblock Bifurcations to local and global modes in spatially developing flows.
+\newblock \emph{Physical review letters}, 60\penalty0 (1):\penalty0 25, 1988.
+\newblock \doi{10.1103/PhysRevLett.60.25}.
+
+\bibitem[Chomaz(2005)]{chomaz05}
+Jean-Marc Chomaz.
+\newblock Global instabilities in spatially developing flows: non-normality and
+  nonlinearity.
+\newblock \emph{Annu. Rev. Fluid Mech.}, 37\penalty0 (1):\penalty0 357--392,
+  2005.
+\newblock \doi{10.1146/annurev.fluid.37.061903.175810}.
+
+\bibitem[Sorensen(1992)]{sorensen92}
+Danny~C Sorensen.
+\newblock Implicit application of polynomial filters in a k-step arnoldi
+  method.
+\newblock \emph{Siam journal on matrix analysis and applications}, 13\penalty0
+  (1):\penalty0 357--385, 1992.
 
 \end{thebibliography}

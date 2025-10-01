@@ -42,12 +42,6 @@
 \newcommand*{\dt}[1]{%
 	\accentset{\mbox{\large\bfseries .}}{#1}}
 
-%\newcommand{\obliquesymbol}[1]{%
-%	\begin{tikzpicture}[#1]%
-%		\draw (0,0) -- (1.0ex,0);%
-%		\draw (0.5ex,0) -- (1.0ex,0.8ex);%
-%	\end{tikzpicture}%
-%}
 
 \graphicspath{{imgs/}{imgs2/}}
 
@@ -75,12 +69,9 @@
 	\bm{\mathcal{I}}\{(#1),[#2]\}
 	}
 
-
-\def\vecU{\vfield{U}}
-\def\vecUb{\vfield{U^{b}}}
-\def\vecPb{\pfield{P^{b}}}
-
-\def\vecu{\vfield{u}}
+\def\fieldu{\vfield{u}}
+\def\fieldub{\vfield{u}^{b}}
+\def\fieldf{\vfield{f}}
 
 \def\veczero{\mathbf{0}}
 \def\vecu{\mathbf{u}}
@@ -88,12 +79,15 @@
 \def\vecw{\mathbf{w}}
 \def\vecy{\mathbf{y}}
 
+
+
 \def\vecf{\vfield{f}}
 \def\vecg{\vfield{g}}
 \def\vecyp{\mathbb{y}}
 \def\vecmu{\vfield{\mu}}
+\def\vecMu{\vfield{\mu}^{b}}
+
 \def\vecnu{\vfield{\nu}}
-\def\vecMu{\vfield{\mu^{b}}}
 \def\vectheta{\vfield{\theta}}
 
 \def\evecu{\widehat{\mathbf{u}}}
@@ -141,8 +135,9 @@
 \def\AevMatrix{\mathbf{W}}
 \def\EAevMatrix{\widehat{\AevMatrix}}
 
-\def\Xbf{\mathbf{X}}
-\def\Ybf{\mathbf{Y}}
+\def\parv{z}
+\def\vecparv{\mathbf{\parv}}
+
 \def\xbf{\mathbf{x}}
 \def\zbf{\mathbf{z}}
 
@@ -217,7 +212,7 @@ The extension is done in a very general setting and it is shown that the consequ
 \input{derivation_p1}
 \input{derivation_normal}
 \input{derivation_graph}
-%\input{ginzburg_landau}
+\input{ginzburg_landau}
 %\input{appendix}
 
 \FloatBarrier

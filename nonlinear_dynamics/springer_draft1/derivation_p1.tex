@@ -5,25 +5,25 @@
 \subsection{The Standard System}
 \label{sec:standard_system}
 
-Consider a system with its state variable denoted by $\vecu$, consisting of $l$ parameters given by the vector $\vecmu$, and an evolution law given by
+Consider a system with its state variable denoted by $\vfield{u}$, consisting of $l$ parameters given by the vector $\vecmu$, and an evolution law given by
 \begin{equation}
-	\frac{\partial \vecu}{\partial t} = \vecf(\vecu,\vecmu).
+	\frac{\partial \fieldu}{\partial t} = \fieldf(\fieldu,\vecmu).
 	\label{eqn:evolution0}
 \end{equation}
-The system state $\vecu$ is $N$-dimensional where, $N$ is assumed to be large. 
-The evolution law may arise from a finite set of ordinary differential equations or, may be a finite representation of an infinite dimensional partial differential equation as often arises from the numerical discretization of the space-time evolution equations of physical systems. Typically, physical systems will have real parameters $\vecmu$ however, allowing for complex parameters presents no additional difficulty and we assume that $\vecmu \in \mathds{C}^{l}$. Without loss of generality one may assume $\vecu = \veczero$ to be a fixed point of the system for a certain set of parameters $\vecmu = \vecMu$, \ie,
+The system state $\fieldu$ is $N$-dimensional where, $N$ is assumed to be large. 
+The evolution law may arise from a finite set of ordinary differential equations or, may be a finite representation of an infinite dimensional partial differential equation as often arises from the numerical discretization of the space-time evolution equations of physical systems. Typically, physical systems will have real parameters $\vecmu$ however, allowing for complex parameters presents no additional difficulty and we assume that $\vecmu \in \mathds{C}^{l}$. Without loss of generality one may assume $\fieldu = \fieldub$ to be a fixed point of the system for a certain set of parameters $\vecmu = \vecMu$, \ie,
 \begin{align}
 	\label{eqn:fixed_point}
-	\vfield{f}(\veczero,\vecMu) = \veczero.
+	\fieldf(\fieldub,\vecMu) = \veczero.
 \end{align}
-At the bifurcation point one may then divide the evolution operator into its linear and non-linear parts as,
+We may consider the evolution of the deviation from the fixed point solution $\vecu = \vfield{u} - \vfield{u}^{b}$, and divide the evolution operator into its linear and non-linear parts as,
 \begin{align}
 	\frac{\partial \vecu}{\partial t} = \Lu \vecu + \NonLin(\vecu,\vecMu)
 \end{align}
 where,
 \begin{align}
-	\Lu =& \left[\left.\dfrac{\partial \vecf}{\partial \vecu}\right|_{(\vecu=\veczero,\vecmu=\vecMu)}\right] \nonumber \\
-	\mathcal{N}(\vecu,\vecMu) =& \vfield{f}(\vecu,\vecMu) - \Lu\vecu. \nonumber
+	\Lu =& \left[\left.\dfrac{\partial \fieldf}{\partial \fieldu}\right|_{(\fieldu=\fieldub,\vecmu=\vecMu)}\right] \nonumber \\
+	\mathcal{N}(\vecu,\vecMu) =& \vfield{f}(\fieldub + \vecu,\vecMu) - \Lu\vecu. \nonumber
 \end{align}
 Furthermore, it is assumed that at $\vecmu = \vecMu$ the system undergoes a multiple co-dimension bufurcation and that the linearized operator $\Lu\in\mathds{C}^{N\times N}$ has a discrete set of $n$ critical eigenvalues $\lambda^{C}_{i},\ i\in 1,\ldots,n$, with zero growth rate $(\mathfrak{Re}(\lambda^{C}_{i}) = 0)$. This includes both purely real critical eigenvalues with $\mathfrak{Re}(\lambda^{C}_{i}) = 0,\ \mathfrak{Im}(\lambda^{C}_{i}) = 0$, and purely imaginary critical eigenvalues with $\mathfrak{Re}(\lambda^{C}_{i}) = 0,\ \mathfrak{Im}(\lambda^{C}_{i}) \ne 0$. Accordingly, the system has $n$ critical eigenpairs $(\lambda^{C}_{i},\Devec_{i}), i\in 1\ldots n$, where $\Devec_{i}$ represents the eigenvector corresponding to $\lambda^{C}_{i}$. For real systems the purely imaginary critical eigenvalues will occur in conjugate pairs. 
 
@@ -46,7 +46,7 @@ Due to the chosen scaling denoted by equation~\eqref{eqn:std_biorthogonality} th
 \end{align}
 where, $\mathbf{I}_{n}$ represents an identity matrix of order $n\times n$. The columns of the matrices $\DevMatrix$ and $\AevMatrix$ span the $n$-dimensional center-subspace of the linear operators $\Lu$ and $\Lu^{\dagger}$ respectively. 
 
-Additionally, $\LambdaC$ is defined as an $n\times n$ diagonal matrix consisting of the critical eigenvalues of $\Lu$, with the implicit assumption of diagonalizability of $\Lu$ within the critical subspace. The ordering of the eigenvalues in $\LambdaC$ and eigenvectors in $\DevMatrix$ and $\AevMatrix$ is consistent with each other so that we have the eigenvalue relations,
+Additionally, $\LambdaC$ is defined as an $n\times n$ diagonal matrix consisting of the critical eigenvalues of $\Lu$, with the implicit assumption of diagonalizability of $\Lu$ within the center subspace. The ordering of the eigenvalues in $\LambdaC$ and eigenvectors in $\DevMatrix$ and $\AevMatrix$ is consistent with each other so that we have the eigenvalue relations,
 \begin{align}
 	\label{eqn:eigenvalue_relation}
 	\Lu\DevMatrix = \DevMatrix\LambdaC, &&  \Lu^{\dagger}\AevMatrix = \AevMatrix\LambdaC^{\dagger}.
@@ -61,26 +61,27 @@ Additionally, $\LambdaC$ is defined as an $n\times n$ diagonal matrix consisting
 The same system is now considered for the case of parameter perturbation so that the evolution dynamics are now evaluated at parameter values of $\vecmu = \vecMu + \vecnu$, with $\vecnu$ being the vector of parameter perturbations, $\vecnu = [\nu_{1};\nu_{2};\ldots;\nu_{l}]$. In addition, the system is forced with harmonic forcing of the type
 \begin{align}
 	\label{eqn:harmonic_forcing}
-	\vecf^{H}(\vectheta) =\sum_{i=1}^{h}\vecf^{H}_{i}\theta_{i}(t); && \theta_{i} = e^{\lambda^{H}_{i}t},
+	\fieldf^{H}(\vectheta) =\sum_{i=1}^{h}\fieldf^{H}_{i}\theta_{i}(t); && \partial \theta_{i}/\partial t = \lambda^{H}_{i}\theta_{i},
 \end{align}
 where, $\vectheta = [\theta_{1};\theta_{2};\ldots;\theta_{h}]$ and the various $\theta_{i}$ are treated as dynamic variables. $\lambda^{H}_{i}$ is purely imaginary, with the imaginary part representing the angular frequency of the forcing. The vector of angular frequencies is denoted as $\boldsymbol{\lambda}^{H} = [\lambda^{H}_{1};\lambda^{H}_{2};\ldots;\lambda^{H}_{h}]$. Constant forcing terms are readily incorporated when a particular (or multiple) $\lambda^{H}_{i}=0$. 
-The (time-independent) shape of the $i^{th}$ harmonic forcing is denoted as $\vecf_{i}$.
+The (time-independent) shape of the $i^{th}$ harmonic forcing is denoted as $\vecf^{H}_{i}$.
 Denoting the new harmonically forced evolution operator as,
 \begin{align}
-	\vecf'(\vecu,\vecnu,\vectheta) =  \vecf(\vecu,\vecMu + \vecnu) + \vecf^{H}(\vectheta),
+	\fieldf'(\vecu,\vecnu,\vectheta) =  \fieldf(\fieldub + \vecu ,\vecMu + \vecnu) + \fieldf^{H}(\vectheta),
 \end{align}
 one may again separate out the linear and non-linear parts as,
 \begin{align}
 	%\label{eqn:split_operators}
-	\Lu = \left[\left.\dfrac{\partial \vfield{f}'}{\partial \vecu}\right|_{(\vecu=\veczero,\vecnu=\veczero,\vectheta=\veczero)}\right] = \left[\left.\dfrac{\partial \vfield{f}}{\partial \vecu}\right|_{(\vecu=\veczero,\vecmu=\vecMu)}\right], \nonumber \\
+	\Lu =& \left[\left.\dfrac{\partial \fieldf'}{\partial \vecu}\right|_{(\vecu=\veczero,\vecnu=\veczero,\vectheta=\veczero)}\right] =& \left[\left.\dfrac{\partial \fieldf}{\partial \fieldu}\right|_{(\fieldu=\fieldub,\vecmu=\vecMu)}\right], \nonumber \\
 	%
-	\Lnu = \left[\left.\frac{\partial \vfield{f}'}{\partial \vecnu}\right|_{(\vecu=\veczero,\vecnu=\veczero,\vectheta=\veczero)}\right] =
-	 \left[\left.\frac{\partial \vfield{f}}{\partial \vecmu}\right|_{(\vecu=\veczero,\vecmu=\vecMu)}\right], \nonumber \\
+	\Lnu =& \left[\left.\frac{\partial \fieldf'}{\partial \vecnu}\right|_{(\vecu=\veczero,\vecnu=\veczero,\vectheta=\veczero)}\right] =&
+	 \left[\left.\frac{\partial \fieldf}{\partial \vecmu}\right|_{(\fieldu=\fieldub,\vecmu=\vecMu)}\right], \nonumber \\
 	 %
-	 \Ltheta = \left[\left.\frac{\partial \vfield{f}'}{\partial \vectheta}\right|_{(\vecu=\veczero,\vecnu=\veczero,\vectheta=\veczero)}\right] =
-	 \left[\left.\frac{\partial \vfield{f}^{H}}{\partial \vectheta}\right|_{(\vectheta=\veczero)}\right] \nonumber, \\
-	 %
-	 \NewNonLin(\vecu,\vecnu,\vectheta) = \vfield{f}'(\vecu,\vecnu,\vectheta) - \Lu\vecu - \Lnu\vecnu - \Ltheta\vectheta. \nonumber
+	 \Ltheta =& \left[\left.\frac{\partial \fieldf'}{\partial \vectheta}\right|_{(\vecu=\veczero,\vecnu=\veczero,\vectheta=\veczero)}\right] =&
+	 \left[\left.\frac{\partial \fieldf^{H}}{\partial \vectheta}\right|_{(\vectheta=\veczero)}\right] \nonumber,
+\end{align}
+\begin{align}
+	 \NewNonLin(\vecu,\vecnu,\vectheta) =& \vfield{f}'(\vecu,\vecnu,\vectheta) - \Lu\vecu - \Lnu\vecnu - \Ltheta\vectheta. \nonumber
 \end{align}
 where, $\Lu\in\mathds{C}^{N\times N}$, $\Lnu\in\mathds{C}^{N\times l}$, $\Ltheta\in\mathds{C}^{N\times h}$ which results in the evolution equation given by,  
 \begin{align}
@@ -103,17 +104,8 @@ The diagonal matrix for the harmonic angular frequencies is represented by $\Lam
 
 An overhead hat notation, $\widehat{\cdot}$ , is used to refer to variables and operators associated with the extend space, so that the new state vector, non-linear term and the linearized direct and adjoint operators are denoted by $\efield{u}$, $\ENonLin$, $\ExtL$ and $\ExtL^{\dagger}$, that are defined as,
 \begin{align}
-	\efield{u} =& \begin{bmatrix}
-		\vecu; &
-		\vecnu; &
-		\vectheta
-	\end{bmatrix}, \nonumber \\
-	% 
-	\ENonLin =& \begin{bmatrix}
-		\NewNonLin; &
-		\veczero;	&
-		\veczero
-	\end{bmatrix}, \nonumber
+	\evecu = [\vecu; \vecnu; \vectheta], &&	% 
+	\ENonLin =[\NewNonLin; \veczero; \veczero], \nonumber
 \end{align}
 %
 \begin{align}
@@ -136,29 +128,25 @@ An overhead hat notation, $\widehat{\cdot}$ , is used to refer to variables and 
 The full system is now $M$-dimensional, with $M=N+l+h$, and may be represented compactly as,
 \begin{equation}
 	\label{eqn:evolution_extended_compact}
-	\dfrac{\partial \efield{u}}{\partial t} =
-	\ExtL\efield{u}  + \efield{f}_{NL}.
+	\dfrac{\partial \evecu}{\partial t} =
+	\ExtL\evecu  + \ENonLin(\evecu).
 \end{equation}
 The system defined by equation~\eqref{eqn:evolution_extended}, or its compact form in equation~\eqref{eqn:evolution_extended_compact}, with additional dynamical equations for the extended variables will be referred to as the \emph{extended system}. 
 
-\subsection{Extended Subspace Structure}
+\section{Extended Subspace Structure}
 \label{sec:extended_subspace_structure}
 
-The extended system has a larger critical subspace of dimension $m = n+l+h$, as compared to the original system due to the $l+h$ additional variables introduced. While the extension of the system seems almost trivial, the eigenvector structure in the additional critical dimensions however is far from trivial. Nevertheless, the extended eigenspace structure can be deduced directly from the properties of the original system. It turns out to be incredibly useful to analyze the structure of the extended subspace since the the adjoint extended critical subspace does have a special structure which allows the asymptotic terms of the center-manifold to be evaluated using the original linear system $\Lu$. 
+The extended system has a larger center subspace of dimension $m = n+l+h$, as compared to the original system due to the $l+h$ additional variables introduced. While the extension of the system seems almost trivial, the eigenvector structure in the new dimensions however is far from trivial. Nevertheless, the extended eigenspace structure can be deduced directly from the properties of the original system. It is useful to examine the structure of the extended subspace since the the adjoint extended critical subspace does have a special structure which has important practical implications for the asymptotic evaluation of the center-manifold of the extended system.
 
 There are however some subtleties involved when the system extension introduces new eigenvalues that are resonant with the original linear system $\Lu$. In such a scenario the system extension leads to a generalized eigenspace for the resonant eigenvalues. The subspace structure is now evaluated in detail for both the resonant and non-resonant cases. This is first done for the extended operator $\ExtL$ and then for the adjoint operator $\ExtL^{\dagger}$. 
 
-\subsubsection{Subspace structure for $\ExtL$}
+\subsection{Subspace structure for $\ExtL$}
 
 Observe that if $(\lambda^{C}_{i}, \Devec_{i})$ is a critical eigenpair of the original linearized operator $\Lu$, then its extension to $\ExtL$ satisfies,
 \begin{subequations}
 	\begin{align}
-		(\lambda^{C}_{i}\Ihat - \ExtL)\EDevec^{C}_{i} &= \veczero, \\
-			\EDevec^{C}_{i} &= \begin{bmatrix}
-			\Devec_{i}; &
-			\veczero; &
-			\veczero
-		\end{bmatrix},
+		\EDevec^{C}_{i} = [\Devec_{i}; \veczero; \veczero], \\
+		(\lambda^{C}_{i}\Ihat - \ExtL)\EDevec^{C}_{i} = \veczero, 
 	\end{align}
 \end{subequations}
 $\forall i\in 1,\ldots,n$, which may be verified via simple substitution. Here $\Ihat$ is the identity matrix for the extended system. Hence all critical eigenmodes of $\Lu$ can be trivially extended to $\ExtL$. This definition for the extension of the eigenvectors in fact applies to \emph{all} eigenmodes of $\Lu$. 
@@ -192,10 +180,10 @@ However, if $\Lu$ is singular then equation~\eqref{eqn:nonsingular_pmode} is ind
 	\left\lbrace
 	\begin{split}
 		\Aevec^{\dagger}_{j}\Lnu\vfield{e}^{P}_{i},  && \textit{if } \lambda^{P}_{i} = \lambda^{C}_{j}, \\
-		0,						 && \textit{otherwise.}	
+		0,						 && \textit{otherwise},	
 	\end{split}\right.
-	%
 \end{equation}
+and we have a new definition of $\EDevec^{P}_{i}$ satisfying,
 \begin{subequations}
 	\label{eqn:singular_pmode}
 	\begin{align}
@@ -225,7 +213,7 @@ Similarly, when the harmonic forcing is non-resonant, the $h$ forcing modes gene
 		(\lambda^{H}_{i}\mathbf{I} - \Lu)\Devec^{H}_{i} = \Ltheta\vfield{e}^{H}_{i}. &&
 	\end{align}
 \end{subequations}
-On the other hand, when the harmonic forcing is resonant with some of the angular frequencies of $\Lu$ then, analogous to the case of parameter modes, one defines, 
+One may again verify $(\lambda^{H}_{i}\Ihat - \ExtL)\EDevec^{H}_{i} = \veczero$. On the other hand, when the harmonic forcing is resonant with some of the angular frequencies of $\Lu$ then, analogous to the case of parameter modes, one defines, 
 \begin{equation}
 	(\vfield{\gamma}^{H}_{i})_{j} =
 	\left\lbrace
@@ -239,15 +227,15 @@ where, $(\vfield{\gamma}^{H}_{i})_{j}$ is the $j^{th}$ component of the vector $
 \begin{subequations}
 	\label{eqn:singular_hmode}
 	\begin{align}
-		(\lambda^{H}_{i}\mathbf{I} - \Lu)\Devec^{H}_{i} &= \Ltheta\vfield{e}^{H}_{i} - \DevMatrix\vfield{\gamma}^{H}_{i}, &&   \\
-		%
-		\Aevec^{\dagger}_{j}\Devec^{H}_{i} &= 0, && \textit{if } \lambda^{H}_{i} = \lambda^{C}_{j}, \\
-		%
-		\EDevec^{H}_{i} &= \begin{bmatrix}
+				\EDevec^{H}_{i} &= \begin{bmatrix}
 			\Devec^{H}_{i}; &
 			\veczero; &
 			\vfield{e}^{H}_{i}
-		\end{bmatrix}, && \forall i \in 1,\ldots h.
+		\end{bmatrix}, && \forall i \in 1,\ldots h. \\
+		%
+		(\lambda^{H}_{i}\mathbf{I} - \Lu)\Devec^{H}_{i} &= \Ltheta\vfield{e}^{H}_{i} - \DevMatrix\vfield{\gamma}^{H}_{i}, &&   \\
+		%
+		\Aevec^{\dagger}_{j}\Devec^{H}_{i} &= 0, && \textit{if } \lambda^{H}_{i} = \lambda^{C}_{j},
 	\end{align}
 \end{subequations}
 In the resonant case, this satisfies the generalized eigenvalue equation $(\lambda^{H}_{i}\Ihat - \ExtL)^{2}\EDevec^{H}_{i} = \veczero$. 
@@ -270,20 +258,20 @@ The critical eigenspace of $\ExtL$ can be represented by three matrices
 	\end{bmatrix}, &&
 	\EDevMatrix_{P} = \begin{bmatrix}
 		\DevMatrix_{P} \\
-		\mathbf{I} \\
+		\mathbf{I}_{l} \\
 		\veczero
 	\end{bmatrix}, &&
 	\EDevMatrix_{H} = \begin{bmatrix}
 		\DevMatrix_{H} \\
 		\veczero \\
-		\mathbf{I}
+		\mathbf{I}_{h}
 	\end{bmatrix},
 \end{align}
 where, $\DevMatrix$ is the matrix of the critical eigenvectors of $\Lu$. The matrix $\DevMatrix_{P}$ comprises of the $l$ vectors $\Devec^{P}_{i}$ of the parameter modes, and, $\DevMatrix_{H}$ comprises of the $h$ vectors $\Devec^{H}_{i}$ of the forcing modes. The matrix of vectors of the extended eigenspace is denoted by, $\EDevMatrix = [\EDevMatrix_{C}, \EDevMatrix_{P}, \EDevMatrix_{H}]$ with the individual vectors denoted as $\EDevec_{i},\ i\in 1,2,\ldots,m$. 
 
-\subsubsection{Subspace structure for $\ExtL^{\dagger}$}
+\subsection{Subspace structure for $\ExtL^{\dagger}$}
 
-The eigenspace structure for the adjoint problem is important to consider since these vectors define the projection operators into the extended critical subspace. The critical eigenmodes of the $\ExtL^{\dagger}$ can be extended via the following definition,
+The eigenspace structure for the adjoint problem is important to consider since these vectors define the projection operators into the extended center subspace. The critical eigenmodes of the $\ExtL^{\dagger}$ can be extended via the following definition,
 \begin{subequations}
 	\label{eqn:extended_adjoint_mode} 
 	\begin{align}
@@ -347,21 +335,21 @@ The extended eigenspace of $\ExtL^{\dagger}$ can be represented with matrices as
 	\end{bmatrix}, &&
 	\EAevMatrix_{P} = \begin{bmatrix}
 		\veczero \\
-		\mathbf{I} \\
+		\mathbf{I}_{l} \\
 		\veczero
 	\end{bmatrix}, &&
 	\EAevMatrix_{H} = \begin{bmatrix}
 		\veczero \\
 		\veczero \\
-		\mathbf{I}
+		\mathbf{I}_{h}
 	\end{bmatrix},
 \end{align}
-where, $\AevMatrix$ is the matrix of the adjoint critical eigenvectors of $\Lu^{\dagger}$. The matrix $\mathbf{Z}_{P}$ comprises of the $l$ vectors $\vfield{\zeta}^{P}_{i}$ and, $\mathbf{Z}_{H}$ comprises of the $h$ vectors $\vfield{\zeta}^{H}_{i}$. The matrix of vectors of the critical adjoint eigenspace is denoted by, $\mathbf{\widehat{W}} = [\mathbf{\widehat{W}}_{C}, \mathbf{\widehat{W}}_{P}, \mathbf{\widehat{W}}_{H}]$ with the individual vectors denoted as $\EAevec_{i},\ i\in 1,2,\ldots,m$. It can be verified that,
+where, $\AevMatrix$ is the matrix of the adjoint critical eigenvectors of $\Lu^{\dagger}$. The matrix $\mathbf{Z}_{P}$ comprises of the vectors $\vfield{\zeta}^{P}_{i}$ and, $\mathbf{Z}_{H}$ comprises of the vectors $\vfield{\zeta}^{H}_{i}$. The matrix of vectors of the extended (adjoint) center subspace is denoted by, $\mathbf{\widehat{W}} = [\mathbf{\widehat{W}}_{C}, \mathbf{\widehat{W}}_{P}, \mathbf{\widehat{W}}_{H}]$ with the individual vectors denoted as $\EAevec_{i},\ i\in 1,2,\ldots,m$. It can be verified that,
 \begin{align}
 	\label{eqn:extended_biorthogonal_matrices}
 	\EAevMatrix^{\dagger}\EDevMatrix = \mathbf{I}_{m}.
 \end{align}
-This is the analogue of equation~\eqref{eqn:biorthogonal_matrices}, and is simply a statement of the biorthogonality relation between the direct and adjoint eigenvectors in the extended space. 
+This is the analogue of equation~\eqref{eqn:biorthogonal_matrices}, and is simply a statement of the biorthogonality relation between the direct and adjoint eigenvectors in the extended center subspace. 
 
 Finally, we have the generalized eigenvalue relations,
 \begin{align}
@@ -378,7 +366,7 @@ with,
 		\mathbf{0} & \mathbf{0} & \LambdaH
 	\end{bmatrix},
 \end{eqnarray}
-being the reduced matrix representing the oblique projection of the extended linear operator $\ExtL$ onto the critical subspace. Obviously $\Khat\in\mathds{C}^{m\times m}$. The diagonal elements of $\mathbf{\widehat{K}}$ represent the eigenvalues of the reduced system, that are the critical eigenvalues of the extended system, and may be represented by the vector $\widehat{\boldsymbol{\lambda}} = diag(\mathbf{\widehat{K}})$. 
+being the reduced matrix representing the action of $\ExtL$ in the extended center subspace. Obviously $\Khat\in\mathds{C}^{m\times m}$ and the diagonal elements of $\mathbf{\widehat{K}}$ represent the eigenvalues of the reduced system, that are the critical eigenvalues of the extended system.
 
 Note that due to the special structure of the adjoint parameter and forcing modes, the projection of the extended nonlinearity $\ENonLin$ onto the subspace spanned by the (direct) parameter and forcing modes vanishes identically. That is to say,
 \begin{align}
@@ -406,7 +394,8 @@ This completes the extension of the system and the subspace structure for both t
 				\EndIf
 			\EndFor
 		\EndFor
-		\State  $\Lu\mathbf{V}_{P} + \Lnu\mathbf{I}_{l} = \mathbf{V}_{P}\LambdaP + \DevMatrix\GammaP$, \Comment{Eq.~\eqref{eqn:singular_pmode}}
+		\State\LComment{Solve $\DevMatrix_{P}$}
+		\State $\Lu\mathbf{V}_{P} + \Lnu\mathbf{I}_{l} = \mathbf{V}_{P}\LambdaP + \DevMatrix\GammaP$, \Comment{Eq.~\eqref{eqn:singular_pmode}}
 		\LComment{with singular components removed.}
 		% Harmonic 
 		\For {$(i \in 1,\ldots,h)$}
@@ -418,7 +407,8 @@ This completes the extension of the system and the subspace structure for both t
 				\EndIf
 			\EndFor
 		\EndFor
-		\State  $\Lu\mathbf{V}_{H} + \Ltheta\mathbf{I}_{h} = \mathbf{V}_{H}\LambdaH + \DevMatrix\GammaH$, \Comment{Eq.~\eqref{eqn:singular_hmode}}
+		\State\LComment{Solve $\DevMatrix_{H}$}
+		\State $\Lu\mathbf{V}_{H} + \Ltheta\mathbf{I}_{h} = \mathbf{V}_{H}\LambdaH + \DevMatrix\GammaH$, \Comment{Eq.~\eqref{eqn:singular_hmode}}
 		\LComment{with singular components removed.}
 		\State \textbf{Construct:} $\EDevMatrix$ \Comment{Eq.~\eqref{eqn:extended_direct_tangent_space}}
 		\State \textbf{Construct:} $\Khat$ \Comment{Eq.~\eqref{eqn:khat}}
