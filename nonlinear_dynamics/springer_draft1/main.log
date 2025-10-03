@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.16)  1 OCT 2025 20:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.16)  3 OCT 2025 18:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1105,24 +1105,24 @@ LaTeX Warning: Unused global option(s):
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 189.
-LaTeX Font Info:    ... okay on input line 189.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 189.
-LaTeX Font Info:    ... okay on input line 189.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 189.
-LaTeX Font Info:    ... okay on input line 189.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 189.
-LaTeX Font Info:    ... okay on input line 189.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 189.
-LaTeX Font Info:    ... okay on input line 189.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 189.
-LaTeX Font Info:    ... okay on input line 189.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 189.
-LaTeX Font Info:    ... okay on input line 189.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 189.
-LaTeX Font Info:    ... okay on input line 189.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 189.
-LaTeX Font Info:    ... okay on input line 189.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 191.
+LaTeX Font Info:    ... okay on input line 191.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 191.
+LaTeX Font Info:    ... okay on input line 191.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 191.
+LaTeX Font Info:    ... okay on input line 191.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 191.
+LaTeX Font Info:    ... okay on input line 191.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 191.
+LaTeX Font Info:    ... okay on input line 191.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 191.
+LaTeX Font Info:    ... okay on input line 191.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 191.
+LaTeX Font Info:    ... okay on input line 191.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 191.
+LaTeX Font Info:    ... okay on input line 191.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 191.
+LaTeX Font Info:    ... okay on input line 191.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1181,13 +1181,13 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Redefining \S on input line 189.
-LaTeX Font Info:    Redeclaring symbol font `AMSa' on input line 189.
+LaTeX Info: Redefining \S on input line 191.
+LaTeX Font Info:    Redeclaring symbol font `AMSa' on input line 191.
 LaTeX Font Info:    Overwriting symbol font `AMSa' in version `normal'
-(Font)                  U/msa/m/n --> U/msa/m/n on input line 189.
+(Font)                  U/msa/m/n --> U/msa/m/n on input line 191.
 LaTeX Font Info:    Overwriting symbol font `AMSa' in version `bold'
-(Font)                  U/msa/m/n --> U/msa/m/n on input line 189.
-Package hyperref Info: Link coloring ON on input line 189.
+(Font)                  U/msa/m/n --> U/msa/m/n on input line 191.
+Package hyperref Info: Link coloring ON on input line 191.
 
 (./main.out) (./main.out)
 \@outlinefile=\write4
@@ -1200,21 +1200,21 @@ Package caption Info: End \AtBeginDocument code.
 \c__nicematrix_shift_exterior_Vdots_dim=\dimen377
 \c__nicematrix_innersep_middle_dim=\dimen378
 LaTeX Font Info:    Calculating math sizes for size <11.04124> on input line 21
-0.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 210
+2.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 212
 .
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 210
+LaTeX Font Info:    Trying to load font information for U+msb on input line 212
 .
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Calculating math sizes for size <10.03749> on input line 21
-0.
+2.
 
 (./derivation_p1.tex
 LaTeX Font Info:    Trying to load font information for U+dsrom on input line 1
@@ -1782,24 +1782,29 @@ Package epstopdf Info: Source file: <imgs/GL_spectra.eps>
 (epstopdf)                    size: 17238 bytes
 (epstopdf)             Command: <repstopdf --outfile=imgs/GL_spectra-eps-conver
 ted-to.pdf imgs/GL_spectra.eps>
-(epstopdf)             \includegraphics on input line 41.
+(epstopdf)             \includegraphics on input line 40.
 Package epstopdf Info: Output file is already uptodate.
-<imgs/GL_spectra-eps-converted-to.pdf, id=395, 578.16pt x 433.62pt>
+<imgs/GL_spectra-eps-converted-to.pdf, id=394, 578.16pt x 433.62pt>
 File: imgs/GL_spectra-eps-converted-to.pdf Graphic file (type pdf)
 <use imgs/GL_spectra-eps-converted-to.pdf>
 Package pdftex.def Info: imgs/GL_spectra-eps-converted-to.pdf  used on input li
-ne 41.
+ne 40.
 (pdftex.def)             Requested size: 223.0721pt x 167.29819pt.
 
-Overfull \hbox (6.83116pt too wide) in paragraph at lines 41--42
+Overfull \hbox (6.83116pt too wide) in paragraph at lines 40--41
  [][] 
  []
 
 
 
 
-Underfull \hbox (badness 2237) in paragraph at lines 70--72
+Underfull \hbox (badness 2237) in paragraph at lines 69--71
 \OT1/cmr/m/n/10 We con-sider the har-mon-i-cally forced sys-tem
+ []
+
+
+Underfull \hbox (badness 2189) in paragraph at lines 98--99
+[]\OT1/cmr/m/n/10 The extended state vec-tor is now $[] =
  []
 
 
@@ -1813,20 +1818,83 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [16 <./imgs/GL_spectra-eps-converted-to.pdf>]
-Overfull \hbox (31.21219pt too wide) detected at line 132
+Overfull \hbox (3.691pt too wide) detected at line 136
 []
  []
 
 
-Overfull \hbox (1.33615pt too wide) detected at line 165
+Underfull \hbox (badness 10000) in paragraph at lines 136--154
+\OT1/cmr/m/n/10 The result-ing $[]$ matrix being, 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--154
+
+ []
+
+CUTED [- LAST -]
+Extra skip:44.6344pt
+Left:234.61232pt/3.61353pt
+Right:191.647pt/1.94444pt
+Split: 229.76006pt
+Output:229.76006pt
+Pageshrink: 8.0pt
+Pagestretch: 16.0pt
+@colht:614.57951pt
+CUTED [output]: 229.76006pt
+CUTED [leftcolumn badness]: 91
+CUTED [rightcolumn badness]: 10000
+
+Overfull \hbox (31.21219pt too wide) detected at line 189
 []
  []
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Underfull \hbox (badness 5490) in paragraph at lines 176--179
+
+
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]| []
+ []
+
+[17]
+Overfull \hbox (1.33615pt too wide) detected at line 222
+[]
+ []
+
+
+Underfull \hbox (badness 5490) in paragraph at lines 233--236
 \OT1/cmr/m/n/10 The center-manifold theorem is applied to
+ []
+
+
+
+Package epstopdf Info: Source file: <imgs/GL_fields.eps>
+(epstopdf)                    date: 2025-09-04 14:34:01
+(epstopdf)                    size: 26864 bytes
+(epstopdf)             Output file: <imgs/GL_fields-eps-converted-to.pdf>
+(epstopdf)                    date: 2025-09-04 14:34:01
+(epstopdf)                    size: 12562 bytes
+(epstopdf)             Command: <repstopdf --outfile=imgs/GL_fields-eps-convert
+ed-to.pdf imgs/GL_fields.eps>
+(epstopdf)             \includegraphics on input line 312.
+Package epstopdf Info: Output file is already uptodate.
+<imgs/GL_fields-eps-converted-to.pdf, id=460, 578.16pt x 433.62pt>
+File: imgs/GL_fields-eps-converted-to.pdf Graphic file (type pdf)
+<use imgs/GL_fields-eps-converted-to.pdf>
+Package pdftex.def Info: imgs/GL_fields-eps-converted-to.pdf  used on input lin
+e 312.
+(pdftex.def)             Requested size: 223.0721pt x 167.29819pt.
+
+Overfull \hbox (6.83116pt too wide) in paragraph at lines 312--313
+ [][] 
  []
 
 
@@ -1839,36 +1907,13 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 []| []
  []
 
-[17
-pdfTeX warning (ext4): destination with the same identifier (name{equation.79})
+[18
+pdfTeX warning (ext4): destination with the same identifier (name{equation.80})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.249 	 \end{align}
+l.332 \begin{align}
                    ]
-Package epstopdf Info: Source file: <imgs/GL_fields.eps>
-(epstopdf)                    date: 2025-09-04 14:34:01
-(epstopdf)                    size: 26864 bytes
-(epstopdf)             Output file: <imgs/GL_fields-eps-converted-to.pdf>
-(epstopdf)                    date: 2025-09-04 14:34:01
-(epstopdf)                    size: 12562 bytes
-(epstopdf)             Command: <repstopdf --outfile=imgs/GL_fields-eps-convert
-ed-to.pdf imgs/GL_fields.eps>
-(epstopdf)             \includegraphics on input line 255.
-Package epstopdf Info: Output file is already uptodate.
-<imgs/GL_fields-eps-converted-to.pdf, id=469, 578.16pt x 433.62pt>
-File: imgs/GL_fields-eps-converted-to.pdf Graphic file (type pdf)
-<use imgs/GL_fields-eps-converted-to.pdf>
-Package pdftex.def Info: imgs/GL_fields-eps-converted-to.pdf  used on input lin
-e 255.
-(pdftex.def)             Requested size: 223.0721pt x 167.29819pt.
-
-Overfull \hbox (6.83116pt too wide) in paragraph at lines 255--256
- [][] 
- []
-
-
-
 Package epstopdf Info: Source file: <imgs/center_manifold_omega1.eps>
 (epstopdf)                    date: 2025-09-04 14:34:01
 (epstopdf)                    size: 23989 bytes
@@ -1878,14 +1923,14 @@ to.pdf>
 (epstopdf)                    size: 14949 bytes
 (epstopdf)             Command: <repstopdf --outfile=imgs/center_manifold_omega
 1-eps-converted-to.pdf imgs/center_manifold_omega1.eps>
-(epstopdf)             \includegraphics on input line 288.
+(epstopdf)             \includegraphics on input line 345.
 Package epstopdf Info: Output file is already uptodate.
-<imgs/center_manifold_omega1-eps-converted-to.pdf, id=475, 578.16pt x 433.62pt>
+<imgs/center_manifold_omega1-eps-converted-to.pdf, id=486, 578.16pt x 433.62pt>
 
 File: imgs/center_manifold_omega1-eps-converted-to.pdf Graphic file (type pdf)
 <use imgs/center_manifold_omega1-eps-converted-to.pdf>
 Package pdftex.def Info: imgs/center_manifold_omega1-eps-converted-to.pdf  used
- on input line 288.
+ on input line 345.
 (pdftex.def)             Requested size: 223.0721pt x 167.29819pt.
 Package epstopdf Info: Source file: <imgs/center_manifold_omega2.eps>
 (epstopdf)                    date: 2025-09-04 14:34:01
@@ -1896,37 +1941,44 @@ to.pdf>
 (epstopdf)                    size: 16265 bytes
 (epstopdf)             Command: <repstopdf --outfile=imgs/center_manifold_omega
 2-eps-converted-to.pdf imgs/center_manifold_omega2.eps>
-(epstopdf)             \includegraphics on input line 289.
+(epstopdf)             \includegraphics on input line 346.
 Package epstopdf Info: Output file is already uptodate.
-<imgs/center_manifold_omega2-eps-converted-to.pdf, id=476, 578.16pt x 433.62pt>
+<imgs/center_manifold_omega2-eps-converted-to.pdf, id=487, 578.16pt x 433.62pt>
 
 File: imgs/center_manifold_omega2-eps-converted-to.pdf Graphic file (type pdf)
 <use imgs/center_manifold_omega2-eps-converted-to.pdf>
 Package pdftex.def Info: imgs/center_manifold_omega2-eps-converted-to.pdf  used
- on input line 289.
+ on input line 346.
 (pdftex.def)             Requested size: 223.0721pt x 167.29819pt.
 
-Overfull \hbox (6.83116pt too wide) in paragraph at lines 288--290
+Overfull \hbox (6.83116pt too wide) in paragraph at lines 345--347
  [][] 
  []
 
 
-Overfull \hbox (6.83116pt too wide) in paragraph at lines 288--290
+Overfull \hbox (6.83116pt too wide) in paragraph at lines 345--347
  [] 
  []
 
 
-Underfull \hbox (badness 1460) in paragraph at lines 290--290
+Underfull \hbox (badness 1460) in paragraph at lines 347--347
 []\OT1/cmr/bx/n/10.03749 Fig. 5\OT1/cmr/m/n/10 : |Com-par-i-son of the angu-lar
  fre-quen-
  []
 
 
-Underfull \hbox (badness 1286) in paragraph at lines 285--293
+Underfull \hbox (badness 1286) in paragraph at lines 342--350
 []\OT1/cmr/m/n/10 The center-manifold reduc-tion obtained in
  []
 
-)
+
+
+) (./main.bbl
+Underfull \hbox (badness 6842) in paragraph at lines 16--21
+\OT1/cmr/m/n/10 De La Llave.  The param-e-ter-i-za-tion
+ []
+
+
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1936,17 +1988,11 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 []| []
  []
 
-[18 <./imgs/GL_fields-eps-converted-to.pdf>] (./main.bbl
-Underfull \hbox (badness 6842) in paragraph at lines 16--21
-\OT1/cmr/m/n/10 De La Llave.  The param-e-ter-i-za-tion
- []
-
-
+[19 <./imgs/GL_fields-eps-converted-to.pdf> <./imgs/center_manifold_omega1-eps-
+converted-to.pdf> <./imgs/center_manifold_omega2-eps-converted-to.pdf>]
 Underfull \hbox (badness 1694) in paragraph at lines 23--28
 []\OT1/cmr/m/n/10 D. Sipp and A. Lebe-dev.  Global sta-
  []
-
-
 
 
 Underfull \hbox (badness 1052) in paragraph at lines 30--35
@@ -1994,18 +2040,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \hbox (badness 10000) has occurred while \output is active
-[]| []
- []
-
-[19 <./imgs/center_manifold_omega1-eps-converted-to.pdf> <./imgs/center_manifol
-d_omega2-eps-converted-to.pdf>])
-
-
+)
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2015,9 +2050,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 []| []
  []
 
-[20
-
-] (./main.aux)
+[20] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-03-26>
@@ -2026,13 +2059,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 26A64D36DDA47E2261B5D55DD8AFCB30;3108.
  ) 
 Here is how much of TeX's memory you used:
- 34353 strings out of 469626
- 687398 string characters out of 5471010
- 1107419 words of memory out of 5000000
- 60428 multiletter control sequences out of 15000+600000
+ 36166 strings out of 469626
+ 722730 string characters out of 5471010
+ 1127808 words of memory out of 5000000
+ 62240 multiletter control sequences out of 15000+600000
  656677 words of font info for 154 fonts, out of 8000000 for 9000
  1151 hyphenation exceptions out of 8191
- 99i,33n,131p,1556b,1418s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,33n,131p,1556b,1532s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pf
 b></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
@@ -2056,10 +2089,10 @@ e/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2
 exmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2025/te
 xmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb></usr/local/texlive/2025/t
 exmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb>
-Output written on main.pdf (20 pages, 429039 bytes).
+Output written on main.pdf (20 pages, 433442 bytes).
 PDF statistics:
- 762 PDF objects out of 1000 (max. 8388607)
- 548 compressed objects within 6 object streams
- 201 named destinations out of 1000 (max. 500000)
+ 763 PDF objects out of 1000 (max. 8388607)
+ 549 compressed objects within 6 object streams
+ 202 named destinations out of 1000 (max. 500000)
  153 words of extra memory for PDF output out of 10000 (max. 10000000)
 
