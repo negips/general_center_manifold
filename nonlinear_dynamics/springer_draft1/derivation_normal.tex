@@ -95,7 +95,7 @@ Substitution of the power series expansions into equation~\eqref{eqn:evolution_e
 \end{align}
 Here $\AsParamEl^{\alpha}_{j_{1}}$ represents the $\alpha^{th}$ element of the vector $\AsParam_{j_{1}}$. At order $k$, one obtains $m\times T^{k}_{m}$ unknowns which define the elements of the vectors $\AsParam_{i_{1},\ldots,i_{k}}$, and the corresponding $T^{k}_{m}$ unknown vectors $\AsECenM_{i_{1},\ldots,i_{k}}$. The definitions of the two sets of unknowns are interdependent since the form of the reduced representation $\mathcal{G}(\vecparv)$ determines the map $\CenM(\vecparv)$ from the parameterized coordinates to the full solution (and vice versa). 
 
-\subsubsection{Asymptotic terms of $\mathcal{O}(|z|)$}
+\subsubsection{Asymptotic terms of $\mathcal{O}(|\parv|)$}
 \label{sec:normal_form_O1}
 
 At first order the non-linear terms do not contribute and one simply obtains,
@@ -113,7 +113,7 @@ Here, the first restrictions on the asymptotic form of $\Param$ are applied, ass
 \end{subequations}
 This reduces equation~\eqref{eqn:asymptotic_O1} to equation~\eqref{eqn:extended_generalized_eigenvalue} which, then satisfies the tangency condition of the invariant manifold, \ie, at the origin the center-manifold is tangent to the center subspace. Subsequently, $\widehat{K}_{i,j}$ will be used for all the first order terms of the type $\AsParam^{i}_{j}$ and the first order vectors $\AsECenM_{i}$ will be replaced by the respective eigenvectors $\EDevec_{i}$. The reduced matrix $\mathbf{\widehat{K}}$ is responsible for the cross-coupling of different $\AsECenM_{i_{1},\ldots,i_{k}}$ at each order of the asymptotic expansion. 
 
-\subsubsection{Asymptotic terms of $\mathcal{O}(|\mathbf{z}|^{2})$}
+\subsubsection{Asymptotic terms of $\mathcal{O}(|\parv|^{2})$}
 \label{sec:normal_form_O2}
 
 At second order the non-linear terms contribute and one obtains the following equation,
@@ -206,7 +206,7 @@ The resolvent operator is the key mathematical object defining the asymptotic ex
 where, $\EAevec_{j}$ is the $j^{th}$ adjoint eigenvector of $\ExtL$ as defined earlier. Since the system is lower triangular the terms $\AsEForcingO_{a,b}$ are always known apriori when solving the system sequentially. 
 
 %%
-\subsubsection{Asymptotic terms of $\mathcal{O}(|\mathbf{z}|^{3})$}
+\subsubsection{Asymptotic terms of $\mathcal{O}(|\parv|^{3})$}
 \label{sec:normal_form_O3}
 
 At third (and higher) order one also obtains contributions from the lower order terms.  The sum of all contributions at third order can be written as,
@@ -263,7 +263,7 @@ The resolution of the system singularities due to the resonance condition, $\ome
 \end{equation}
 and $\EAevec^{\dagger}_{j}\AsECenM_{a,b,c} = 0$ if the resonance condition holds. 
 
-\subsubsection{Asymptotic terms of $\mathcal{O}(|\mathbf{z}|^{k})$}
+\subsubsection{Asymptotic terms of $\mathcal{O}(|\parv|^{k})$}
 \label{sec:normal_form_Ok}
 
 For all subsequent orders the structure of the problem remains essentially the same as the third order terms. At any order $k$, one obtains a systems of equations for $T^{k}_{m}$ vectors $\AsECenM_{i_{1},\ldots,i_{k}}$ which is lower triangular and hence can be solved sequentially. The cross contributions of the vectors due to $\Khat$ has the same structure as in figure~\ref{fig:Khat_coupling_O3} but with $k$ columns (possibly with repetitions) of $\Khat$ contributing. The lower order terms $\AsEForcingL_{i_{1},\ldots,i_{k}}$ are always known a-priori. When solving for the unknown vectors sequentially the off-diagonal contributions $\AsEForcingO_{i_{1},\ldots,i_{k}}$ are also known a-priori. For each index $(i_{1},\ldots,i_{k})\in\IndexSet{k}{1,m}$ one obtains an equation similar to equation~\eqref{eqn:asymptotic_O3_compact}, 

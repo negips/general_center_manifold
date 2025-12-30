@@ -25,16 +25,36 @@ For semi-infinite domains, $x\in[0,\infty)$, the spectrum for $\mathcal{L}_{0}$ 
 		%\phi_{j}(x)		=& \mathrm{Ai}([-\delta_{3}/\delta_{4}]^{1/3}x + \zeta_{j}), \label{eqn:eigenvectors}
 	\end{align}
 %\end{subequations}
-and the corrresponding complex conjugate for $\mathcal{L}^{*}_{0}$. Here $\zeta_{j}$ denotes the countable set of zeros of the Airy function. The system parameters are chosen \emph{ad hoc} as $\delta^{b}_{1} = -1.0$, $\delta^{b}_{2} = 0.741 + 1.025\iota$, $\delta^{b}_{3}=-0.125$, $\delta^{b}_{4}=(1.0 - \iota)/\sqrt{2}$ and $\delta^{b}_{5} =-0.1+0.1\iota$, such that the system is at the bifurcation point with a single critical mode with eigenvalue $\omega_{1} = 1.0\iota$ for $\mathcal{L}_{0}$ and its conjugate, $-1.0\iota$ for $\mathcal{L}^{*}_{0}$, and all other eigenvalues have negative real parts. The linear operator at the bifurcation point for the state vector, $\vecu = [A; A^{*}]$ (with $\vecu\in\mathds{C}^{N}$), is written as
+and the corrresponding complex conjugate for $\mathcal{L}^{*}_{0}$. Here $\zeta_{j}$ denotes the countable set of zeros of the Airy function. The system parameters are chosen \emph{ad hoc} and are given in table~\ref{table:GL_bifurcation_params}, which results in a single critical eigenmode with eigenvalue $\omega_{1} = 1.0\iota$ for $\mathcal{L}_{0}$ and its conjugate, $-1.0\iota$ for $\mathcal{L}^{*}_{0}$. All other eigenvalues have negative real parts. 
+\begin{table}[h]
+	\renewcommand{\arraystretch}{1.5}
+	\begin{tabular}{cccc}
+			Parameter & Value & Parameter & Value \\
+			\hline
+			\hline
+			$\delta^{b}_{1}$ & $-0.1$  & $\delta^{b}_{4}$ & $(1.0 - \iota)/\sqrt{2}$ \\
+			\hline
+			%
+			 $\delta^{b}_{2}$ & $0.741 + 1.025\iota$ & $\delta^{b}_{5}$ & $-0.1+0.1\iota$ \\
+			 \hline
+			%
+			$\delta^{b}_{3}$ & $-0.125$ &  $\omega_{1}$ & $1.0\iota$ \\
+			\hline	
+			\hline
+		\end{tabular}
+		\caption{Parameters for the Ginzburg Landau system at bifurcation.}
+		\label{table:GL_bifurcation_params} 
+\end{table}
+ The linear operator at the bifurcation point for the state vector, $\vecu = [A; A^{*}]$ (with $\vecu\in\mathds{C}^{N}$), is written as
 \begin{eqnarray}
 	\Lu = \begin{bmatrix}
 		\mathcal{L}_{0}		& 0 \\
 		0								  & \mathcal{L}^{*}_{0}
 	\end{bmatrix},
 \end{eqnarray}
-which represents the linear operator for the standard system. 
+which, in our context, represents the linear operator for the standard system. 
  
- A center-manifold approximation of the model problem requires the evaluation of restricted resolvents, which is a difficult problem to solve analytically. Therefore the problem is considered in a trucated domain of $x\in [0,L]$ with the boundary conditions of $A = 0$ at $x=0$ and, $\partial A/\partial x = 0$ (natural boundary conditions) at $x=L$. Here the domain length is specified as $L=40$. Due to the spatially localized nature of the first few eigenvectors (which dictate the global dynamics), this truncation does not affect the spectrum in any significant manner, as can be seen from the comparison of the numerically evaluated spectrum (via the implicitly restarted Arnoldi method \citep{sorensen92}) in the truncated domain to the analytical spectrum in the semi-infinite domain (figure~\ref{fig:GL_spectrum}). 
+ A center-manifold approximation of the model problem requires the evaluation of restricted resolvents, which is a difficult problem to solve analytically. Therefore the problem is considered in a trucated domain of $x\in [0,L]$ with the boundary conditions of $A = 0$ at $x=0$ and, $\partial A/\partial x = 0$ (natural boundary conditions) at $x=L$. Here the domain length is specified as $L=40$. Due to the spatially localized nature of the first few eigenvectors (which dictate the global dynamics), this truncation does not affect the spectrum in any significant manner. This can be verified from the comparison of the numerically evaluated spectrum (via the implicitly restarted Arnoldi method \citep{sorensen92}) in the truncated domain to the analytical spectrum in the semi-infinite domain (figure~\ref{fig:GL_spectrum}). 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.49\textwidth]{spectra}
@@ -62,7 +82,7 @@ The numerically calculated eigenvectors $\phi_{1}$ and $\chi_{1}$ are shown in f
 \begin{figure}
 	\centering
 	\includegraphics[width=0.49\textwidth]{extended_eigenvectors}
-	\caption{The numerically evaluated eigenvector $\phi_{1}$, the adjoint eigenvector $\chi_{1}$ and the shape of the harmonic forcing $\xi$.}
+	\caption{The numerically evaluated eigenvector $\phi_{1}$, the adjoint eigenvector $\chi_{1}$ and, the shape of the harmonic forcing $\xi$.}
 	\label{fig:extended_eigenvectors}
 \end{figure}
 
@@ -109,7 +129,7 @@ Treating $\delta^{'}_{4}$ and $\delta^{'*}_{4}$ as dynamic variables results in 
 		0 &  0 
 	\end{bmatrix}. \nonumber
 \end{align}
-Obviously the parameter eigenvalues are non-resonant and therefore the coupling matrix $\GammaP$ is trivial, \ie,
+The parameter eigenvalues are non-resonant and therefore the coupling matrix $\GammaP$ is trivial, \ie,
 \begin{align}
 	\GammaP = 
 	\begin{bmatrix}
@@ -138,10 +158,11 @@ resulting in the final extended matrices as,
 		\begin{bmatrix}
 			\DevMatrix & \DevMatrix_{P} \\ 
 			\mathbf{0} &  \mathbf{I}_{p}
-		\end{bmatrix}. \nonumber 
+		\end{bmatrix}, \nonumber 
 \end{align}
+where, both $\GammaP$ and $\DevMatrix_{P}$ are null matrices (of appropriate sizes). 
 
-Once $\EDevMatrix$ and $\Khat$ are known, algorithm~\ref{algo:normal_form} may now be applied to the extended system to obtain the center-manifold approximation to the desired order. Since $\GammaP$ is a trivial matrix $\Khat$ is diagonal and, all asymptotic vectors $\AsCenM_{i_{1},\ldots,i_{k}}$ can be evaluated independent of each other. For $m=4$, one obtains $T^{2}_{4} = 10$ terms at second order and $T^{3}_{4}=20$ terms at third order. The final reduced equations are found to be,
+Once $\EDevMatrix$ and $\Khat$ are known, algorithm~\ref{algo:normal_form} may now be applied to the extended system to obtain the center-manifold approximation to the desired order. Since $\GammaP$ is a trivial matrix $\Khat$ is diagonal and, all asymptotic vectors $\AsCenM_{i_{1},\ldots,i_{k}}$ can be evaluated independent of each other. For $m=4$, one obtains $T^{2}_{4} = 10$ terms at second order and $T^{3}_{4}=20$ terms at third order. The final reduced equations (reduced representation $\Param(\vecparv)$) are found to be,
 \begin{align}
 	\begin{aligned}
 		\dfrac{d \parv_{1}}{d t} =&
@@ -162,19 +183,19 @@ along with the complex conjugated equations for $\parv_{2}$ and $\parv_{4}$. One
 	\end{aligned} \nonumber
 \end{align}
 
-The results of the asymptotic center-manifold approximations compared with the fully non-linear response of the Ginzburg Landau system are shown in figure~\ref{fig:parameter_response}. The results compare very well for small $\delta'_{4}$ values, with progressive loss of accuracy for larger parameter variations which is typical of asyptotic results. 
+The results of the asymptotic center-manifold approximations compared with the fully non-linear response of the Ginzburg-Landau system are shown in figure~\ref{fig:parameter_response}. The results compare very well for small $\delta'_{4}$ values, with progressive loss of accuracy for larger parameter variations which is typical of asymptotic results. 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.49\textwidth]{diffusion_response}
-	\caption{Spatial shape of the system response $(|A|)$ to perturbations of $\delta_{4}$ parameter. The solid lines indicate results of the non-linear simulations of the Ginzburg Landau system and the dashed lines with markers indicate the results of the center-manifold approximation.}
+	\caption{Spatial shape of the system response $(|A|)$ to perturbations of $\delta_{4}$ parameter. The solid lines indicate results of the non-linear simulations of the Ginzburg-Landau system and the dashed lines with markers indicate the results of the center-manifold approximation.}
 	\label{fig:parameter_response}
 \end{figure}
 
-A similar comparison for the angular frequency of the saturated limit-cycle is shown in figure~\ref{fig:parameter_omega}. The center-manifold approximation provides in a fairly accurate reproduction of the non-linear angular frequency variation.
+A similar comparison for the angular frequency of the saturated limit-cycle is shown in figure~\ref{fig:parameter_omega}. The center-manifold approximation provides a fairly accurate reproduction of the non-linear angular frequency variation.
 \begin{figure}
 	\centering
 	\includegraphics[width=0.49\textwidth]{diffusion_omega}
-	\caption{Variation of the final limit-cycle-oscillation angular frequency due to perturbations of $\delta_{4}$ parameter. The empty circles indicate results of the non-linear simulations of the Ginzburg Landau system and the filled circles indicate the results of the center-manifold approximation.}
+	\caption{Variation of the final limit-cycle-oscillation angular frequency due to perturbations of $\delta_{4}$ parameter. The empty circles indicate results of the non-linear simulations of the Ginzburg-Landau system and the filled circles indicate the results of the center-manifold approximation.}
 	\label{fig:parameter_omega}
 \end{figure}
 
@@ -192,7 +213,21 @@ For the second case the system is forced with a pair of non-resonant complex-con
 		\xi^{*}(x)
 		\end{bmatrix}, 
 \end{align}
-where, $\xi(x)$ is defined in equation~\eqref{eqn:forcing_shape0}. No parameter perturbations are considered, resulting in $n=2$, $p=0$, $h=2$ and $m=4$. Since the external forcing is non-resonant, one obtains the following matrices,
+where, $\xi(x)$ is defined in equation~\eqref{eqn:forcing_shape0}. The governing equations can be written as
+\begin{subequations}
+	\label{eqn:ginzburg_landau_forced}
+	\begin{align}
+		\dfrac{\partial A}{\partial t} =& \mathcal{L}_{0}A + \delta^{b}_{5} (A^{*}A)A + \xi(x)\theta,  \\
+		%
+		\dfrac{\partial A^{*}}{\partial t} =& \mathcal{L}^{*}_{0} A^{*} + (\delta^{b}_{5})^{*}(A^{*}A)A^{*} + + \xi^{*}(x)\theta^{*},  \\
+		%
+		\dfrac{d\theta}{d t} =& \lambda^{H}_{1}\theta,  \\ 
+		%
+		\dfrac{d\theta^{*}}{d t} =& (\lambda^{H}_{1}\theta)^{*}. 
+	\end{align}
+\end{subequations}
+
+No parameter perturbations are considered, resulting in $n=2$, $p=0$, $h=2$ and $m=4$. Since the external forcing is non-resonant, one obtains the following matrices,
 \begin{align}
 	\LambdaC = 
 	\begin{bmatrix}
@@ -251,17 +286,17 @@ Here, the substitutions $\parv_{1} \mapsto \parv$, $\parv_{2}\mapsto\parv^{*}$, 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.49\textwidth]{nonresonant_response}
-	\caption{Spatial shape of the system response $(|A|)$ to harmonic forcing with amplitude $|\theta|$. The solid lines indicate results of the non-linear simulations of the Ginzburg Landau system and the dashed lines with markers indicate the results of the center-manifold approximation.}
+	\caption{Spatial shape of the system response $(|A|)$ to harmonic forcing with amplitude $|\theta|$. The solid lines indicate results of the non-linear simulations of the Ginzburg-Landau system and the dashed lines with markers indicate the results of the center-manifold approximation.}
 	\label{fig:nonresonant_response}
 \end{figure}
 
-Since $|\theta|$ is an apriori known quantity which remains invariant in time, it can simply be treated as another constant paramter and, the effect of non-resonant harmonic forcing on the critical mode of the system can easily be understood by looking at the linear part of the reduced system: $[-0.0258|\theta|^{2} + (1 + 0.0507|\theta|^{2})\iota]\parv$. The harmonic forcing effectively increases the angular frequency, but also induces a negative growth rate, and therefore a stabilizing effect on the original critical mode. The net result is that the original critical mode eventually decays to zero and vanishes, even if it may be initially excited, and the final response is simply the forced response to the harmonic forcing. Of course this may not always be the case and the forcing can induce a destabilizing behavior of the original critical mode. 
+Since $|\theta|$ is an apriori known quantity which remains invariant in time, it can simply be treated as another constant paramter and, the effect of non-resonant harmonic forcing on the critical mode of the system can easily be understood by looking at the linear part of the reduced system, \ie $[-0.0258|\theta|^{2} + (1 + 0.0507|\theta|^{2})\iota]\parv$. The harmonic forcing effectively increases the angular frequency, but also induces a negative growth rate, and therefore a stabilizing effect on the original critical mode. The net result is that the original critical mode eventually decays to zero and vanishes, even if it may be initially excited, and the final response is simply the forced response to the harmonic forcing. Of course this may not always be the case and the forcing can induce a destabilizing behavior of the original critical mode. 
 
 
 \subsection{Case III: Resonant Forcing}
 \label{sec:resonant}
 
-As in the previous subsection we again consider the case of the system forced with a pair of complex conjugate harmonic forcings. This time however the angular frequencies of the external forcings are resonant with internal critical angular frequencies of the system. Accordingly, the eigenvalues of the forcing modes is given by $\boldsymbol{\lambda}^{H} = [\iota; -\iota]$ and the eigenvalue matrices are given by,
+As in the previous subsection we again consider the case of the system forced with a pair of complex conjugate harmonic forcings. This time however the angular frequencies of the external forcings are resonant with the internal eigenmodes of the system. Accordingly, the eigenvalues of the forcing modes is given by $\boldsymbol{\lambda}^{H} = [\iota; -\iota]$ and the eigenvalue matrices are given by,
 \begin{align}
 	\LambdaC = 
 	\begin{bmatrix}
@@ -275,7 +310,7 @@ As in the previous subsection we again consider the case of the system forced wi
 		0 &  -\iota 
 	\end{bmatrix} \nonumber
 \end{align}
-The forcing shapes are again given by equation~\eqref{eqn:forcing_shapes}. Due to resonance, the matrix $\GammaH$ is no longer trivial and its individual entries are evaluated as
+The forcing shapes are again given by equation~\eqref{eqn:forcing_shapes} and the resulting forced system is again described by equation~\eqref{eqn:ginzburg_landau_forced}. Due to resonance, the matrix $\GammaH$ is no longer trivial and its individual entries are evaluated according to algorithm~\ref{algo:extended_direct_tangent} as,
 \begin{align}
 	 (\vfield{\gamma}^{H}_{1})_{1} =& \Aevec_{1}^{\dagger}\fieldf^{H}_{1}, &&
 	%
@@ -336,11 +371,11 @@ The asymptotic center-manifold evaluation through the application of algorithm~\
 \end{align}
 and its conjugate for $\parv^{*}$ and $\theta^{*}$. Clearly, in the case of resonant forcings, the original critical mode evolution depends on the amplitude as well as the phase of the external forcing. 
 
-A comparison of the system response between the non-linear results and the center-manifold approximation is shown in figure~
+A comparison of the system response between the non-linear results and the center-manifold approximation is shown in figure~\ref{fig:resonant_response}. Again a good agreement is found for small values of $|\theta|$ with systematic deviation for larger amplitudes typical of asymptotic methods. 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.49\textwidth]{resonant_response}
-	\caption{Spatial shape of the system response $(|A|)$ to resonant harmonic forcing with amplitude $|\theta|$. The solid lines indicate results of the non-linear simulations of the Ginzburg Landau system and the dashed lines with markers indicate the results of the center-manifold approximation.}
+	\caption{Spatial shape of the system response $(|A|)$ to resonant harmonic forcing with amplitude $|\theta|$. The solid lines indicate results of the non-linear simulations of the Ginzburg-Landau system and the dashed lines with markers indicate the results of the center-manifold approximation.}
 	\label{fig:resonant_response}
 \end{figure}
 
