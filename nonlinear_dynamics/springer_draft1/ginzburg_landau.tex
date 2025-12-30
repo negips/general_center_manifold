@@ -38,7 +38,7 @@ and the corrresponding complex conjugate for $\mathcal{L}^{*}_{0}$. Here $\zeta_
 			 $\delta^{b}_{2}$ & $0.741 + 1.025\iota$ & $\delta^{b}_{5}$ & $-0.1+0.1\iota$ \\
 			 \hline
 			%
-			$\delta^{b}_{3}$ & $-0.125$ &  $\omega_{1}$ & $1.0\iota$ \\
+			$\delta^{b}_{3}$ & $-0.125$ &  $\omega_{1}$ & $+1.0\iota$ \\
 			\hline	
 			\hline
 		\end{tabular}
@@ -168,7 +168,7 @@ Once $\EDevMatrix$ and $\Khat$ are known, algorithm~\ref{algo:normal_form} may n
 		\dfrac{d \parv_{1}}{d t} =&
 		+\iota\parv_{1} - (0.169 - 0.153\iota)\parv_{1}\parv_{3} \\
 		& -(0.008-0.014\iota)\parv_{1}\parv_{1}\parv_{2} \\
-		& + (0.193 - 0.114\iota)\parv_{1}\parv_{3}\parv_{3}, \\
+		& + (0.194 - 0.114\iota)\parv_{1}\parv_{3}\parv_{3}, \\
 		%
 		\dfrac{d \parv_{3}}{d t} =& 0,
 	\end{aligned} \nonumber
@@ -177,9 +177,9 @@ along with the complex conjugated equations for $\parv_{2}$ and $\parv_{4}$. One
 \begin{align}
 	\begin{aligned}
 		\dfrac{d \parv}{d t} =&
-		+\iota\parv - (0.169 - 0.153\iota)\parv\delta'_{4} \\
+		+\iota\parv - (0.169 - 0.153\iota)\delta'_{4}\parv \\
 		& -(0.008-0.014\iota)|\parv|^{2}\parv \\
-		& + (0.193 - 0.114\iota)\parv(\delta'_{4})^{2}. 
+		& + (0.194 - 0.114\iota)(\delta'_{4})^{2}\parv. 
 	\end{aligned} \nonumber
 \end{align}
 
@@ -277,7 +277,7 @@ As done in section~\ref{sec:parameter-perturbation}, the application of algorith
 		\dfrac{d \parv}{d t} =&
 		+\iota\parv \\
 		& -(0.008-0.014\iota)|\parv|^{2}\parv \\
-		& - (0.026 - 0.051\iota)\parv|\theta|^{2}, \\
+		& - (0.026 - 0.051\iota)|\theta|^{2}\parv, \\
 		%
 		\dfrac{d \theta}{d t} =& +1.3\iota\theta.
 	\end{aligned} \nonumber
@@ -352,7 +352,7 @@ The extended matrices being,
 		\mathbf{0} &  \mathbf{I}_{h}
 	\end{bmatrix}, \nonumber 
 \end{align}
-where $\GammaH$ is no longer trivial and $\Khat$ has an upper triangular structure.
+where, $\GammaH$ is no longer trivial and $\Khat$ has an upper triangular structure.
 
 The asymptotic center-manifold evaluation through the application of algorithm~\ref{algo:normal_form} results in the following reduced system,
 \begin{align}

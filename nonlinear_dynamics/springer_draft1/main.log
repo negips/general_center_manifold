@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.16)  30 DEC 2025 21:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.16)  31 DEC 2025 02:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1242,22 +1242,8 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-LaTeX Warning: Reference `problem_setup' on page 2 undefined on input line 9.
-
-
 LaTeX Warning: Reference `center_manifold_derivation' on page 2 undefined on in
-put line 9.
-
-
-LaTeX Warning: Reference `application_cylinder' on page 2 undefined on input li
-ne 9.
-
-
-LaTeX Warning: Reference `application_cavity' on page 2 undefined on input line
- 9.
-
-
-LaTeX Warning: Reference `conclusion' on page 2 undefined on input line 9.
+put line 10.
 
 ) (./derivation_p1.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1851,7 +1837,7 @@ Package epstopdf Info: Source file: <imgs/spectra.eps>
 -to.pdf imgs/spectra.eps>
 (epstopdf)             \includegraphics on input line 60.
 Package epstopdf Info: Output file is already uptodate.
-<imgs/spectra-eps-converted-to.pdf, id=475, 578.16pt x 433.62pt>
+<imgs/spectra-eps-converted-to.pdf, id=482, 578.16pt x 433.62pt>
 File: imgs/spectra-eps-converted-to.pdf Graphic file (type pdf)
 <use imgs/spectra-eps-converted-to.pdf>
 Package pdftex.def Info: imgs/spectra-eps-converted-to.pdf  used on input line 
@@ -1875,7 +1861,7 @@ o.pdf>
 -eps-converted-to.pdf imgs/extended_eigenvectors.eps>
 (epstopdf)             \includegraphics on input line 84.
 Package epstopdf Info: Output file is already uptodate.
-<imgs/extended_eigenvectors-eps-converted-to.pdf, id=477, 722.7pt x 505.89pt>
+<imgs/extended_eigenvectors-eps-converted-to.pdf, id=484, 722.7pt x 505.89pt>
 File: imgs/extended_eigenvectors-eps-converted-to.pdf Graphic file (type pdf)
 <use imgs/extended_eigenvectors-eps-converted-to.pdf>
 Package pdftex.def Info: imgs/extended_eigenvectors-eps-converted-to.pdf  used 
@@ -1915,7 +1901,7 @@ df>
 s-converted-to.pdf imgs/diffusion_response.eps>
 (epstopdf)             \includegraphics on input line 189.
 Package epstopdf Info: Output file is already uptodate.
-<imgs/diffusion_response-eps-converted-to.pdf, id=569, 578.16pt x 433.62pt>
+<imgs/diffusion_response-eps-converted-to.pdf, id=576, 578.16pt x 433.62pt>
 File: imgs/diffusion_response-eps-converted-to.pdf Graphic file (type pdf)
 <use imgs/diffusion_response-eps-converted-to.pdf>
 Package pdftex.def Info: imgs/diffusion_response-eps-converted-to.pdf  used on 
@@ -1937,7 +1923,7 @@ Package epstopdf Info: Source file: <imgs/diffusion_omega.eps>
 onverted-to.pdf imgs/diffusion_omega.eps>
 (epstopdf)             \includegraphics on input line 197.
 Package epstopdf Info: Output file is already uptodate.
-<imgs/diffusion_omega-eps-converted-to.pdf, id=571, 578.16pt x 433.62pt>
+<imgs/diffusion_omega-eps-converted-to.pdf, id=578, 578.16pt x 433.62pt>
 File: imgs/diffusion_omega-eps-converted-to.pdf Graphic file (type pdf)
 <use imgs/diffusion_omega-eps-converted-to.pdf>
 Package pdftex.def Info: imgs/diffusion_omega-eps-converted-to.pdf  used on inp
@@ -1986,7 +1972,7 @@ Package epstopdf Info: Source file: <imgs/nonresonant_response.eps>
 eps-converted-to.pdf imgs/nonresonant_response.eps>
 (epstopdf)             \includegraphics on input line 288.
 Package epstopdf Info: Output file is already uptodate.
-<imgs/nonresonant_response-eps-converted-to.pdf, id=587, 578.16pt x 433.62pt>
+<imgs/nonresonant_response-eps-converted-to.pdf, id=595, 578.16pt x 433.62pt>
 File: imgs/nonresonant_response-eps-converted-to.pdf Graphic file (type pdf)
 <use imgs/nonresonant_response-eps-converted-to.pdf>
 Package pdftex.def Info: imgs/nonresonant_response-eps-converted-to.pdf  used o
@@ -2050,7 +2036,7 @@ f>
 -converted-to.pdf imgs/resonant_response.eps>
 (epstopdf)             \includegraphics on input line 377.
 Package epstopdf Info: Output file is already uptodate.
-<imgs/resonant_response-eps-converted-to.pdf, id=702, 578.16pt x 433.62pt>
+<imgs/resonant_response-eps-converted-to.pdf, id=709, 578.16pt x 433.62pt>
 File: imgs/resonant_response-eps-converted-to.pdf Graphic file (type pdf)
 <use imgs/resonant_response-eps-converted-to.pdf>
 Package pdftex.def Info: imgs/resonant_response-eps-converted-to.pdf  used on i
@@ -2061,10 +2047,25 @@ Overfull \hbox (6.83116pt too wide) in paragraph at lines 377--378
  [][] 
  []
 
-) (./main.bbl
+) (./discussion.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]| []
+ []
+
+[22 <./imgs/resonant_response-eps-converted-to.pdf>]) (./main.bbl
 
 
 Underfull \hbox (badness 7963) in paragraph at lines 68--73
@@ -2089,7 +2090,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 []| []
  []
 
-[22 <./imgs/resonant_response-eps-converted-to.pdf>]
+[23]
 Underfull \hbox (badness 1052) in paragraph at lines 127--132
 \OT1/cmr/m/it/10.03749 Bifur-ca-tions, Cen-ter Man-i-folds, and Nor-
  []
@@ -2099,11 +2100,6 @@ Underfull \hbox (badness 1092) in paragraph at lines 141--147
 \OT1/cmr/m/it/10.03749 i-cal and Engi-neer-ing Sci-ences\OT1/cmr/m/n/10 , 453(1
 956):
  []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 
 Underfull \hbox (badness 1314) in paragraph at lines 157--161
@@ -2131,6 +2127,11 @@ Underfull \hbox (badness 2608) in paragraph at lines 188--192
  []
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+
 Underfull \hbox (badness 4505) in paragraph at lines 201--204
 \OT1/cmr/m/n/10 for the navier--stokes.  \OT1/cmr/m/it/10.03749 arXiv preprint
  []
@@ -2146,10 +2147,7 @@ Underfull \hbox (badness 2662) in paragraph at lines 222--226
 i-cal
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
+)
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2159,21 +2157,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 []| []
  []
 
-[23])
-
-
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \hbox (badness 10000) has occurred while \output is active
-[]| []
- []
-
-[24
-
-] (./main.aux)
+[24] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-03-26>
@@ -2183,13 +2167,13 @@ L3 programming layer <2025-03-26>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: C76F18F22C102627DCBEF0B33FAC8518;3829.
+(rerunfilecheck)             Checksum: C6D44ED8F0610CE8DF907E7C924CCE38;3988.
  ) 
 Here is how much of TeX's memory you used:
- 34625 strings out of 469626
- 693174 string characters out of 5471010
- 1095949 words of memory out of 5000000
- 60666 multiletter control sequences out of 15000+600000
+ 34633 strings out of 469626
+ 693304 string characters out of 5471010
+ 1096029 words of memory out of 5000000
+ 60670 multiletter control sequences out of 15000+600000
  664739 words of font info for 186 fonts, out of 8000000 for 9000
  1151 hyphenation exceptions out of 8191
  99i,33n,131p,2375b,1461s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2219,10 +2203,10 @@ dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2025/texmf-dis
 t/fonts/type1/public/doublestroke/dsrom10.pfb></usr/local/texlive/2025/texmf-di
 st/fonts/type1/public/amsfonts/euler/eufm10.pfb>
-Output written on main.pdf (24 pages, 539634 bytes).
+Output written on main.pdf (24 pages, 543625 bytes).
 PDF statistics:
- 899 PDF objects out of 1000 (max. 8388607)
- 656 compressed objects within 7 object streams
- 230 named destinations out of 1000 (max. 500000)
- 195 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 908 PDF objects out of 1000 (max. 8388607)
+ 665 compressed objects within 7 object streams
+ 231 named destinations out of 1000 (max. 500000)
+ 203 words of extra memory for PDF output out of 10000 (max. 10000000)
 
