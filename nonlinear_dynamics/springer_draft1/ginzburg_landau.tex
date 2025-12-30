@@ -20,12 +20,12 @@ Where, $x$ is the spatial coordinate, $\nabla$ and $\Lap$ are the one-dimensiona
 For semi-infinite domains, $x\in[0,\infty)$, the spectrum for $\mathcal{L}_{0}$ is known analytically \citep{chomaz88} and is given by,
 %\begin{subequations}
 	\begin{align}
-		\omega_{n}	=& \delta_{2} - \dfrac{\delta_{1}^{2}}{4\delta_{4}} + (\delta_{4}\delta_{3}^{2})^{1/3}\zeta_{n}, \label{eqn:eigenvalues} 
+		\omega_{j}	=& \delta_{2} - \dfrac{\delta_{1}^{2}}{4\delta_{4}} + (\delta_{4}\delta_{3}^{2})^{1/3}\zeta_{j}, \label{eqn:eigenvalues} 
 		%
-		%\phi_{n}(x)		=& \mathrm{Ai}([-\delta_{3}/\delta_{4}]^{1/3}x + \zeta_{n}), \label{eqn:eigenvectors}
+		%\phi_{j}(x)		=& \mathrm{Ai}([-\delta_{3}/\delta_{4}]^{1/3}x + \zeta_{j}), \label{eqn:eigenvectors}
 	\end{align}
 %\end{subequations}
-and the corrresponding complex conjugate for $\mathcal{L}^{*}_{0}$. Here $\zeta_{n}$ denotes the countable set of zeros of the Airy function. The system parameters are chosen \emph{ad hoc} as $\delta^{b}_{1} = -1.0$, $\delta^{b}_{2} = 0.741 + 1.025i$, $\delta^{b}_{3}=-0.125$, $\delta^{b}_{4}=(1.0 - i)/\sqrt{2}$ and $\delta^{b}_{5} =-0.1+0.1i$, such that the system is at the bifurcation point with a single critical mode with eigenvalue $\omega_{1} = 1.0i$ for $\mathcal{L}_{0}$ and its conjugate, $-1.0i$ for $\mathcal{L}^{*}_{0}$, and all other eigenvalues have negative real parts. The linear operator at the bifurcation point for the state vector, $\vecu = [A; A^{*}]$ (with $\vecu\in\mathds{C}^{N}$), is written as
+and the corrresponding complex conjugate for $\mathcal{L}^{*}_{0}$. Here $\zeta_{j}$ denotes the countable set of zeros of the Airy function. The system parameters are chosen \emph{ad hoc} as $\delta^{b}_{1} = -1.0$, $\delta^{b}_{2} = 0.741 + 1.025\iota$, $\delta^{b}_{3}=-0.125$, $\delta^{b}_{4}=(1.0 - \iota)/\sqrt{2}$ and $\delta^{b}_{5} =-0.1+0.1\iota$, such that the system is at the bifurcation point with a single critical mode with eigenvalue $\omega_{1} = 1.0\iota$ for $\mathcal{L}_{0}$ and its conjugate, $-1.0\iota$ for $\mathcal{L}^{*}_{0}$, and all other eigenvalues have negative real parts. The linear operator at the bifurcation point for the state vector, $\vecu = [A; A^{*}]$ (with $\vecu\in\mathds{C}^{N}$), is written as
 \begin{eqnarray}
 	\Lu = \begin{bmatrix}
 		\mathcal{L}_{0}		& 0 \\
@@ -37,16 +37,16 @@ which represents the linear operator for the standard system.
  A center-manifold approximation of the model problem requires the evaluation of restricted resolvents, which is a difficult problem to solve analytically. Therefore the problem is considered in a trucated domain of $x\in [0,L]$ with the boundary conditions of $A = 0$ at $x=0$ and, $\partial A/\partial x = 0$ (natural boundary conditions) at $x=L$. Here the domain length is specified as $L=40$. Due to the spatially localized nature of the first few eigenvectors (which dictate the global dynamics), this truncation does not affect the spectrum in any significant manner, as can be seen from the comparison of the numerically evaluated spectrum (via the implicitly restarted Arnoldi method \citep{sorensen92}) in the truncated domain to the analytical spectrum in the semi-infinite domain (figure~\ref{fig:GL_spectrum}). 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.49\textwidth]{GL_spectra}
+	\includegraphics[width=0.49\textwidth]{spectra}
 	\caption{Comparison of the numerically evaluated spectrum of the Ginzburg-Landau model $(\mathcal{L}_{0})$ in the truncated domain with the analytical spectrum in the semi-infinite domain.}
 	\label{fig:GL_spectrum}
 \end{figure}
 
-The standard system then has the critical eigenvalue and eigenvector matrices as
+The standard system then has $n=2$ critical eigenvalues and, the matrices for the critical eigenvalue and eigenvectors are given as,
 \begin{align}
 	\LambdaC = \begin{bmatrix}
-		i & 0 \\
-		0					  & -i
+		\iota & 0 \\
+		0					  & -\iota
 	\end{bmatrix}; &&
 	%
 	\DevMatrix = [\Devec_{1}; \Devec_{2}]; &&
@@ -55,298 +55,295 @@ The standard system then has the critical eigenvalue and eigenvector matrices as
 \end{align}
 where the eigenvectors have the following form in terms of the two components,
 \begin{align}
-	\Devec_{1} = [\phi_{c}; \veczero]; && \Devec_{2} = [\veczero; \phi^{*}_{c}], \nonumber \\
-	\Aevec_{1} = [\chi_{c}; \veczero]; && \Aevec_{2} = [\veczero; \chi^{*}_{c}], \nonumber
+	\Devec_{1} = [\phi_{1}; \veczero]; && \Devec_{2} = [\veczero; \phi^{*}_{1}], \nonumber \\
+	\Aevec_{1} = [\chi_{1}; \veczero]; && \Aevec_{2} = [\veczero; \chi^{*}_{1}], \nonumber
 \end{align}
-The numerically calculated eigenvectors $\phi_{c}$ and $\chi_{c}$ are shown in figure~\ref{fig:GL_fields}. 
+The numerically calculated eigenvectors $\phi_{1}$ and $\chi_{1}$ are shown in figure~\ref{fig:extended_eigenvectors}. 
+\begin{figure}
+	\centering
+	\includegraphics[width=0.49\textwidth]{extended_eigenvectors}
+	\caption{The numerically evaluated eigenvector $\phi_{1}$, the adjoint eigenvector $\chi_{1}$ and the shape of the harmonic forcing $\xi$.}
+	\label{fig:extended_eigenvectors}
+\end{figure}
 
-
-The system in equation~\eqref{eqn:ginzburg_landau} has a total of five parameters (ten including the complex-conjugate pairs) that can be varied from their bifurcation values. In order to avoid an explosion in the number of terms $T^{k}_{m}$ arising from the combinatorial problem, only the variations in $\delta_{4}$ and $\delta^{*}_{4}$ are considered, which suffice to illustrate the construction of the asymptotic center-manifold under parameter variations. Therefore $l=2$. Although the parameters are complex-conjugate pairs, it turns out to be simplest to treat them all as independent parameters and enforce the complex-conjugate property later when parameter values are prescribed, which is essentially the same as treating $A$ and $A^{*}$ independently and having two independent critical eigenvectors $\vecv_{1}$ and $\vecv_{2}$. 
+The system in equation~\eqref{eqn:ginzburg_landau} has a total of five parameters (ten including the complex-conjugate pairs) that can be varied from their bifurcation values. In order to avoid an explosion in the number of terms $T^{k}_{m}$ arising from the combinatorial problem, only the variations in $\delta_{4}$ and $\delta^{*}_{4}$ are considered. This suffices to illustrate the construction of the asymptotic center-manifold under parameter variations. Although the parameters are complex-conjugate pairs, it turns out to be simplest to treat them as independent parameters and enforce the complex-conjugate property later when parameter values are prescribed, which is essentially the same as treating $A$ and $A^{*}$ independently and having two independent critical eigenvectors $\vecv_{1}$ and $\vecv_{2}$. 
 The extended variable for the parameter evolution is then $\vecnu = [\delta'_{4};\delta'^{*}_{4}]$, with 
 \begin{align}
 	\delta_{4} =& \delta^{b}_{4} + \delta'_{4}, \nonumber & 
 	\delta^{*}_{4} =& (\delta^{b}_{4})^{*} + \delta'^{*}_{4}. \nonumber
 \end{align}
-We consider the harmonically forced system with, $h=5$ and angular frequencies, $\boldsymbol{\lambda}^{H} = [0.0i; 1i; -1.0i; 2.3i; -2.3i]$. The external forcing is given by equation~\eqref{eqn:harmonic_forcing}, and we specify the forcing shapes $\fieldf^{H}_{i}$, \emph{ad hoc}, based on,
+
+Harmonic forcings will be considered to illustrate the two scenarios - resonant and non-resonant external forcings. In all cases, the shape of the external forcing is specified based on,
+\begin{subequations}
+	\label{eqn:forcing_shape0}
 \begin{align}
-	\xi(x) = \dfrac{1}{\sqrt{\beta}}e^{-(x - 7.0)^{2}}, &&
-	\beta = \int_{0}^{L} |\xi(x)|^{2}dx, \nonumber
+	\xi(x) = \dfrac{1}{\beta}e^{-(x - 5.0)^{2}}, \\
+	\beta = \left[\int_{0}^{L} |e^{-(x - 5.0)^{2}}|^{2}dx\right]^{1/2}.
 \end{align} 
-with the forcing shapes being,
+\end{subequations}
+The forcing shape is also shown in figure~\ref{fig:extended_eigenvectors}. In principle all cases of parameter perturbations and harmonic forcings can be considered together however, in order to keep the discussion and the number of combinatorial terms manageable, they are treated as individual cases. 
+
+\subsection{Case I: Parameter Perturbations}
+\label{sec:parameter-perturbation}
+
+First we consider the case of a pair of complex conjugate parameter perturbations $\delta'_{4}, \delta^{'*}_{4}$ without any external forcings. This results in a nonlinear system given by,
+\begin{subequations}
+	%\label{eqn:ginzburg_landau_param_pert}
+	\begin{align}
+		\dfrac{\partial A}{\partial t} =& \mathcal{L}_{0}A + \delta'_{4}\nabla^{2}A + \delta^{b}_{5} (A^{*}A)A, \nonumber \\
+		%
+		\dfrac{\partial A^{*}}{\partial t} =& \mathcal{L}^{*}_{0} A^{*} + \delta^{'*}_{4}\nabla^{2}A^{*} + (\delta^{b}_{5})^{*}(A^{*}A)A^{*}. \nonumber
+	\end{align}
+\end{subequations}
+Treating $\delta^{'}_{4}$ and $\delta^{'*}_{4}$ as dynamic variables results in an extended system with $n=2$, $p=2$, $h=0$, and therefore a total critical subspace dimension of $m=4$. The eigenvalue matrices are given by,
 \begin{align}
-	\fieldf^{H}_{1} = \dfrac{1}{\sqrt{2}}\begin{bmatrix}
-		\xi(x) \\
-		\xi(x)
-	\end{bmatrix}, & \fieldf^{H}_{2} = \begin{bmatrix}
-	\xi(x) \\
-	\veczero
-	\end{bmatrix}, &
-	\fieldf^{H}_{3} = \begin{bmatrix}
-	\veczero \\
-	\xi(x)
-	\end{bmatrix}, \nonumber \\
+	\LambdaC = 
+	\begin{bmatrix}
+		\iota & 0 \\ 
+		0 &  -\iota 
+	\end{bmatrix}, &&
+	% 
+	\LambdaP = 
+	\begin{bmatrix}
+		0 & 0 \\ 
+		0 &  0 
+	\end{bmatrix}. \nonumber
+\end{align}
+Obviously the parameter eigenvalues are non-resonant and therefore the coupling matrix $\GammaP$ is trivial, \ie,
+\begin{align}
+	\GammaP = 
+	\begin{bmatrix}
+		0 & 0 \\ 
+		0 &  0 
+	\end{bmatrix}. \nonumber 
+\end{align}
+In this particular case since the equilibrium state at the bifurcation point is trivial $(A=\veczero)$, the linear matrix $\Lnu$ which couples $A$ and $A^{*}$ to the extended variables is also a null matrix. Therefore, through the application of algorithm~\ref{algo:extended_direct_tangent}, the critical subspace is trivially extended as,
+\begin{align}
+	(\lambda^{P}_{1} - \Lu)\Devec^{P}_{1} &= \veczero, \nonumber \\
 	%
-	\fieldf^{H}_{4} = \begin{bmatrix}
-		\xi(x) \\
-		\veczero
-	\end{bmatrix}, & \fieldf^{H}_{5} = \begin{bmatrix}
-	\veczero \\
-	\xi(x)
-	\end{bmatrix}. &\nonumber
+	(\lambda^{P}_{2} - \Lu)\Devec^{P}_{2} &= \veczero, \nonumber \\
+	%
+	\DevMatrix_{P} &= [\Devec^{P}_{1}, \Devec^{P}_{2}], \nonumber 
+\end{align}
+resulting in the final extended matrices as,
+\begin{align}
+	%
+		\Khat =
+		\begin{bmatrix}
+			\LambdaC & \GammaP \\ 
+			\mathbf{0} &  \LambdaP 
+		\end{bmatrix}, &&
+		%
+		\Vhat =
+		\begin{bmatrix}
+			\DevMatrix & \DevMatrix_{P} \\ 
+			\mathbf{0} &  \mathbf{I}_{p}
+		\end{bmatrix}. \nonumber 
 \end{align}
 
-The extended state vector is now $\evecu = [\vecu; \vecnu; \vectheta] = [A; A^{*}; \vecnu; \vectheta]$. The parameter eigenvalues are obviously $\boldsymbol{\lambda}^{P} = [0; 0]$. Additionally, for the particular model problem, $\Lnu\in\mathds{C}^{N\times l}$ is also a null matrix. Since $\Lu$ is non-singular, all parameter eigenvalues are non-resonant, and the parameter modes are defined as,
+Once $\EDevMatrix$ and $\Khat$ are known, algorithm~\ref{algo:normal_form} may now be applied to the extended system to obtain the center-manifold approximation to the desired order. Since $\GammaP$ is a trivial matrix $\Khat$ is diagonal and, all asymptotic vectors $\AsCenM_{i_{1},\ldots,i_{k}}$ can be evaluated independent of each other. For $m=4$, one obtains $T^{2}_{4} = 10$ terms at second order and $T^{3}_{4}=20$ terms at third order. The final reduced equations are found to be,
 \begin{align}
-	(\lambda^{P}_{1} - \Lu)\Devec^{P}_{1} &= \veczero, && (\vfield{\gamma}^{P}_{1}) = \veczero, \nonumber \\
-	%
-	(\lambda^{P}_{2} - \Lu)\Devec^{P}_{2} &= \veczero, && (\vfield{\gamma}^{P}_{2}) = \veczero. \nonumber 
+	\begin{aligned}
+		\dfrac{d \parv_{1}}{d t} =&
+		+\iota\parv_{1} - (0.169 - 0.153\iota)\parv_{1}\parv_{3} \\
+		& -(0.008-0.014\iota)\parv_{1}\parv_{1}\parv_{2} \\
+		& + (0.193 - 0.114\iota)\parv_{1}\parv_{3}\parv_{3}, \\
+		%
+		\dfrac{d \parv_{3}}{d t} =& 0,
+	\end{aligned} \nonumber
 \end{align}
-Therefore we have,
+along with the complex conjugated equations for $\parv_{2}$ and $\parv_{4}$. One may substitute $\parv_{1} \mapsto \parv$, $\parv_{2}\mapsto\parv^{*}$, $\parv_{3}\mapsto\delta'_{4}$, $\parv_{4}\mapsto\delta'^{*}_{4}$, to obtain expressions directly relating mode amplitude evolution to the parameter perturbations as,
 \begin{align}
-	\DevMatrix_{P} =& [\Devec^{P}_{1}, \Devec^{P}_{2}] = [\veczero; \veczero] \nonumber \\
+	\begin{aligned}
+		\dfrac{d \parv}{d t} =&
+		+\iota\parv - (0.169 - 0.153\iota)\parv\delta'_{4} \\
+		& -(0.008-0.014\iota)|\parv|^{2}\parv \\
+		& + (0.193 - 0.114\iota)\parv(\delta'_{4})^{2}. 
+	\end{aligned} \nonumber
+\end{align}
+
+The results of the asymptotic center-manifold approximations compared with the fully non-linear response of the Ginzburg Landau system are shown in figure~\ref{fig:parameter_response}. The results compare very well for small $\delta'_{4}$ values, with progressive loss of accuracy for larger parameter variations which is typical of asyptotic results. 
+\begin{figure}
+	\centering
+	\includegraphics[width=0.49\textwidth]{diffusion_response}
+	\caption{Spatial shape of the system response $(|A|)$ to perturbations of $\delta_{4}$ parameter. The solid lines indicate results of the non-linear simulations of the Ginzburg Landau system and the dashed lines with markers indicate the results of the center-manifold approximation.}
+	\label{fig:parameter_response}
+\end{figure}
+
+A similar comparison for the angular frequency of the saturated limit-cycle is shown in figure~\ref{fig:parameter_omega}. The center-manifold approximation provides in a fairly accurate reproduction of the non-linear angular frequency variation.
+\begin{figure}
+	\centering
+	\includegraphics[width=0.49\textwidth]{diffusion_omega}
+	\caption{Variation of the final limit-cycle-oscillation angular frequency due to perturbations of $\delta_{4}$ parameter. The empty circles indicate results of the non-linear simulations of the Ginzburg Landau system and the filled circles indicate the results of the center-manifold approximation.}
+	\label{fig:parameter_omega}
+\end{figure}
+
+\subsection{Case II: Non-Resonant Forcing}
+\label{sec:non-resonant}
+
+For the second case the system is forced with a pair of non-resonant complex-conjugate forcings ($h = 2$) with $\boldsymbol{\lambda}^{H} = [1.3\iota; -1.3\iota]$ and forcing shapes $\fieldf^{H}_{i}$ given by
+\begin{align}
+	\label{eqn:forcing_shapes}
+	\fieldf^{H}_{1} = \begin{bmatrix}
+			\xi(x) \\
+			\veczero
+		\end{bmatrix}, && \fieldf^{H}_{2} = \begin{bmatrix}
+		\veczero \\
+		\xi^{*}(x)
+		\end{bmatrix}, 
+\end{align}
+where, $\xi(x)$ is defined in equation~\eqref{eqn:forcing_shape0}. No parameter perturbations are considered, resulting in $n=2$, $p=0$, $h=2$ and $m=4$. Since the external forcing is non-resonant, one obtains the following matrices,
+\begin{align}
+	\LambdaC = 
+	\begin{bmatrix}
+		\iota & 0 \\ 
+		0 &  -\iota 
+	\end{bmatrix}, &
+	% 
+	\LambdaH = 
+	\begin{bmatrix}
+		1.3\iota & 0 \\ 
+		0 &  -1.3\iota 
+	\end{bmatrix}, &
 	%
-	\GammaP =& [\vfield{\gamma}^{P}_{1}, \vfield{\gamma}^{P}_{2}] = \begin{bmatrix}
-		0	& 0 \\
-		0	& 0
+	\GammaH = 
+	\begin{bmatrix}
+		0 & 0 \\ 
+		0 &  0 
+	\end{bmatrix}. \nonumber 
+\end{align}
+The forcing modes are non-trivial and are evaluated as follows,
+\begin{align}
+	(\lambda^{H}_{1} - \Lu)\Devec^{H}_{1} &= \fieldf^{H}_{1}, \nonumber \\
+	%
+	(\lambda^{H}_{2} - \Lu)\Devec^{H}_{2} &= \fieldf^{H}_{2}, \nonumber \\
+	\DevMatrix_{H} &= [\Devec^{H}_{1}, \Devec^{H}_{2}]. \nonumber
+\end{align}
+The resulting extended matrices are given by
+\begin{align}
+	%
+	\Khat =
+	\begin{bmatrix}
+		\LambdaC & \GammaH \\ 
+		\mathbf{0} &  \LambdaH
+	\end{bmatrix}, &&
+	%
+	\Vhat =
+	\begin{bmatrix}
+		\DevMatrix & \DevMatrix_{H} \\ 
+		\mathbf{0} &  \mathbf{I}_{h}
+	\end{bmatrix}, \nonumber 
+\end{align}
+where $\GammaH$ is a trivial matrix and therefore $\Khat$ is diagonal.
+
+As done in section~\ref{sec:parameter-perturbation}, the application of algorithm~\ref{algo:normal_form} results in the evolution equations in their normal form for the reduced system,  
+\begin{align}
+	\begin{aligned}
+		\dfrac{d \parv}{d t} =&
+		+\iota\parv \\
+		& -(0.008-0.014\iota)|\parv|^{2}\parv \\
+		& - (0.026 - 0.051\iota)\parv|\theta|^{2}, \\
+		%
+		\dfrac{d \theta}{d t} =& +1.3\iota\theta.
+	\end{aligned} \nonumber
+\end{align}
+Here, the substitutions $\parv_{1} \mapsto \parv$, $\parv_{2}\mapsto\parv^{*}$, $\parv_{3}\mapsto\theta$ and $\parv_{4}\mapsto\theta^{*}$, have already been performed. One can observe that the amplitude evolution of the original critical mode, denoted by $z$, only depends on the forcing amplitude $|\theta|$ and not on its instantaneous phase. The comarison of the response of the reduced system to that of the fully non-linear system is shown in figure~\ref{fig:nonresonant_response}. The response curves are nearly identical. 
+\begin{figure}
+	\centering
+	\includegraphics[width=0.49\textwidth]{nonresonant_response}
+	\caption{Spatial shape of the system response $(|A|)$ to harmonic forcing with amplitude $|\theta|$. The solid lines indicate results of the non-linear simulations of the Ginzburg Landau system and the dashed lines with markers indicate the results of the center-manifold approximation.}
+	\label{fig:nonresonant_response}
+\end{figure}
+
+Since $|\theta|$ is an apriori known quantity which remains invariant in time, it can simply be treated as another constant paramter and, the effect of non-resonant harmonic forcing on the critical mode of the system can easily be understood by looking at the linear part of the reduced system: $[-0.0258|\theta|^{2} + (1 + 0.0507|\theta|^{2})\iota]\parv$. The harmonic forcing effectively increases the angular frequency, but also induces a negative growth rate, and therefore a stabilizing effect on the original critical mode. The net result is that the original critical mode eventually decays to zero and vanishes, even if it may be initially excited, and the final response is simply the forced response to the harmonic forcing. Of course this may not always be the case and the forcing can induce a destabilizing behavior of the original critical mode. 
+
+
+\subsection{Case III: Resonant Forcing}
+\label{sec:resonant}
+
+As in the previous subsection we again consider the case of the system forced with a pair of complex conjugate harmonic forcings. This time however the angular frequencies of the external forcings are resonant with internal critical angular frequencies of the system. Accordingly, the eigenvalues of the forcing modes is given by $\boldsymbol{\lambda}^{H} = [\iota; -\iota]$ and the eigenvalue matrices are given by,
+\begin{align}
+	\LambdaC = 
+	\begin{bmatrix}
+		\iota & 0 \\ 
+		0 &  -\iota 
+	\end{bmatrix}, &&
+	% 
+	\LambdaH = 
+	\begin{bmatrix}
+		\iota & 0 \\ 
+		0 &  -\iota 
 	\end{bmatrix} \nonumber
 \end{align}
-
-For the harmonic forcings, there are a pair of angular frequencies $\lambda^{h} = \pm 1.0i$ which resonate with the critical eigenvalues of $\Lu$. The forcing modes, $\evecv^{H}_{i}$, and the matrix $\GammaH$ are therefore built as follows
+The forcing shapes are again given by equation~\eqref{eqn:forcing_shapes}. Due to resonance, the matrix $\GammaH$ is no longer trivial and its individual entries are evaluated as
 \begin{align}
-	(\lambda^{H}_{1} - \Lu)\Devec^{H}_{1} &= \fieldf^{H}_{1}, && (\vfield{\gamma}^{H}_{1}) = \veczero, \nonumber \\
+	 (\vfield{\gamma}^{H}_{1})_{1} =& \Aevec_{1}^{\dagger}\fieldf^{H}_{1}, &&
 	%
-	(\lambda^{H}_{2} - \Lu)\Devec^{H}_{2} &= (\mathbf{I} - \Devec_{1}\Aevec_{1}^{\dagger})\fieldf^{H}_{2}, && (\vfield{\gamma}^{H}_{2})_{1} = \Aevec_{1}^{\dagger}\fieldf^{H}_{2}, \nonumber \\
-	%
-	(\lambda^{H}_{3} - \Lu)\Devec^{H}_{3} &= (\mathbf{I} - \Devec_{2}\Aevec_{2}^{\dagger})\fieldf^{H}_{3}, && (\vfield{\gamma}^{H}_{3})_{2} = \Aevec_{2}^{\dagger}\fieldf^{H}_{3}, \nonumber 	\\
-	%
-	(\lambda^{H}_{4} - \Lu)\Devec^{H}_{4} &= \fieldf^{H}_{4}, && (\vfield{\gamma}^{H}_{4}) = \veczero, \nonumber \\
-	%
-	(\lambda^{H}_{5} - \Lu)\Devec^{H}_{5} &= \fieldf^{H}_{5}, && (\vfield{\gamma}^{H}_{5}) = \veczero. \nonumber
+	 (\vfield{\gamma}^{H}_{2})_{1} = 0, \nonumber \\
+	 %
+	 (\vfield{\gamma}^{H}_{1})_{2} =& 0, &&
+	 %
+	 (\vfield{\gamma}^{H}_{2})_{2} = \Aevec_{2}^{\dagger}\fieldf^{H}_{2}, \nonumber 
 \end{align}
-Unlike the parameter mode we have a a nontrivial $\DevMatrix_{H}$ and $\GammaH$,
+resulting in,
 \begin{align}
-	\DevMatrix_{H} =& [\Devec^{H}_{1}, \Devec^{H}_{2}, \Devec^{H}_{3}, \Devec^{H}_{4},\Devec^{H}_{5}] \nonumber \\
-	%
-	\GammaH =& [\vfield{\gamma}^{H}_{1}, \vfield{\gamma}^{H}_{2}, \vfield{\gamma}^{H}_{3}, \vfield{\gamma}^{H}_{4}, \vfield{\gamma}^{H}_{5}] \nonumber \\
-	%
-	\implies\GammaH =& \begin{bmatrix}
-		0	& 0.044 - 0.026i & 									& 0 & 0\\
-		0	& 0							  & 0.044 + 0.026i    & 0 & 0
-	\end{bmatrix}. \nonumber
+	\GammaH = [\vfield{\gamma}^{H}_{1}, \vfield{\gamma}^{H}_{2}] = 
+	\begin{bmatrix}
+		0.151-0.481\iota & 0 \\ 
+		0 &  0.151+0.481\iota
+	\end{bmatrix}. \nonumber 
 \end{align}
-The resulting $\Khat$ matrix being,
-\begin{strip}
+The forcing modes for the extended tangent space are evaluated as,
 \begin{align}
-	\label{eqn:GL_Khat}
-			\Khat = 
-			\begin{bNiceMatrix}[columns-width=0.75cm]
-				i& 0 & 0 & 0 & 0	& 0.044 - 0.026i & 									& 0 & 0\\
-				0& -i & 0 & 0 & 0	& 0							  & 0.044 + 0.026i    & 0 & 0 \\
-				0& 0 & 0 & 0 & 0	& 0 & 0  & 0 & 0\\
-				0& 0 & 0 & 0 & 0	& 0	 & 0  & 0 & 0 \\
-				0& 0 & 0 & 0 & 0	& 0	 & 0  & 0 & 0 \\
-				0& 0 & 0 & 0 & 0	& i	 & 0  & 0 & 0 \\
-				0& 0 & 0 & 0 & 0	& 0	 & -i  & 0 & 0 \\
-				0& 0 & 0 & 0 & 0	& 0	 & 0  & 2.3i & 0 \\
-				0& 0 & 0 & 0 & 0	& 0	 & 0  & 0 & -2.3i 
-			\end{bNiceMatrix}. 
-\end{align}		
-\end{strip}
-
-
-
-
-The extended state vector is denoted as $\widehat{A} = [A; A^{*}; \vecnu]$. With the knowledge of the linear operator and having calculated the critical eigenmodes, all the expressions for the center-manifold approximation of the extended system can now be easily built. 
-The extended linear operator is given by,
- \begin{align}
- 	\mathcal{\widehat{L}} = \begin{bmatrix}
- 		\mathcal{L} 	   & 0				 \\
-		0							  & 0											
- 	\end{bmatrix} = 
- 	%
- 	\begin{bmatrix}
- 		\mathcal{L}_{0} 	   & 0											&	0 \\
- 		0									  & \mathcal{L}^{*}_{0}		&   0 \\
- 		0									  & 0											&  0
- 	\end{bmatrix}. \nonumber
- \end{align}
-This results in six critical modes for the extended system - two critical modes resulting from the original linear system $\mathcal{L}$ and four parameter modes due to system extension. The direct and adjoint eigenvector matrices are given by
- \begin{align}
- 	\mathbf{\widehat{V}} =& [\efield{v}_{1};\efield{v}_{2};\efield{v}_{3};\efield{v}_{4};\efield{v}_{5};\efield{v}_{6}] =&
- 	\begin{bmatrix}
-        0 	    	      &  0		            &  0              &  0              &  \phi_{c} &  0              \\
-        0		      &  0		            &  0              &  0              &  0        &  \phi^{*}_{c}   \\
- 	  \vfield{e}_{1}  &  \vfield{e}_{2}       &  \vfield{e}_{3} &  \vfield{e}_{4} &  0        &  0              \\
- 	\end{bmatrix}, \nonumber \\
- 	%
- 	\mathbf{\widehat{W}} =&
- 	[\efield{w}_{1};\efield{w}_{2};\efield{w}_{3};\efield{w}_{4};\efield{w}_{5};\efield{w}_{6}] =&
- 	\begin{bmatrix}
-        0 	    	      &  0		            &  0              &  0              &  \chi_{c} &  0              \\
-        0		      &  0		            &  0              &  0              &  0        &  \chi^{*}_{c}   \\
- 	  \vfield{e}_{1}  &  \vfield{e}_{2}       &  \vfield{e}_{3} &  \vfield{e}_{4} &  0        &  0              \\
- 	\end{bmatrix}. \nonumber
- \end{align}
-resulting in the reduced system matrix,
-\begin{align}
-	\mathbf{\widehat{K}} = \begin{bmatrix}
-		0 & 0 & 0 & 0 & 0& 0 \\ 
-		0 & 0 & 0 & 0 & 0& 0 \\ 
-		0 & 0 & 0 & 0 & 0& 0 \\ 
-		0 & 0 & 0 & 0 & 0& 0 \\ 
-		0 & 0 & 0 & 0 & \omega_{c} & 0 \\ 
-		0 & 0 & 0 & 0 & 0 & \omega^{*}_{c}
-	\end{bmatrix}. \nonumber
-\end{align}
-Due to the absence of purely real critical eigenvalues in the original system, the $\Gammabf$ matrix vanishes. 
-
-To avoid confusion with the spatial variable $x$, the critical mode amplitudes are denoted by $\zbf = [z_{1};z_{2};z_{3};z_{4};z_{5};z_{6}]$, the stable component solution of the original system is given by $A_{s} = [A_{1s}; A_{2s}]$, and in the extended space it is $\widehat{A}_{s} = [A_{1s}; A_{2s}; 0]$. Thus the total solution is written as,
-\begin{eqnarray}
-	\widehat{A} = \widehat{\mathbf{V}}\zbf + \widehat{A}_{s}. \nonumber
-\end{eqnarray}
-The non-linear term of the original system is given by $\mathcal{N}_{NL} =  [\mathcal{N}_{1}; \mathcal{N}_{2}]$, with $\mathcal{N}_{1}$ and $\mathcal{N}_{2}$ defined as, 
-\begin{align}
- 	\begin{split}
- 		\mathcal{N}_{1} =&
-			z_{1}z_{5}x\phi_{c} + z_{1}xA_{1s} + z_{2}z_{5}\Lap\phi_{c} + z_{2}\Lap A_{1s} \\
-			%
-			 &+ \delta^{b}_{5}(\phi^{*}_{c}z_{6} +  A_{2s}) (\phi_{c}z_{5} +  A_{1s})(\phi_{c}z_{5} +  A_{1s}),
-	\end{split} \nonumber \\
+	(\lambda^{H}_{1} - \Lu)\Devec^{H}_{1} &= \fieldf^{H}_{1} - \DevMatrix\vfield{\gamma}^{H}_{1},  \nonumber \\
 	%
-	\begin{split}
-		\mathcal{N}_{2} =&
-		z_{3}z_{6}x\phi^{*}_{c} + z_{3}xA_{2s} + z_{4}z_{6}\Lap\phi^{*}_{c} + z_{4}\Lap A_{2s} \\
+	(\lambda^{H}_{2} - \Lu)\Devec^{H}_{2} &= \fieldf^{H}_{2} - \DevMatrix\vfield{\gamma}^{H}_{2}, \nonumber \\
+	%
+	\DevMatrix_{H} &= [\Devec^{H}_{1}, \Devec^{H}_{2}]. \nonumber
+	%	%
+\end{align}
+The extended matrices being,
+\begin{align}
+	%
+	\Khat =
+	\begin{bmatrix}
+		\LambdaC & \GammaH \\ 
+		\mathbf{0} &  \LambdaH
+	\end{bmatrix}, &&
+	%
+	\Vhat =
+	\begin{bmatrix}
+		\DevMatrix & \DevMatrix_{H} \\ 
+		\mathbf{0} &  \mathbf{I}_{h}
+	\end{bmatrix}, \nonumber 
+\end{align}
+where $\GammaH$ is no longer trivial and $\Khat$ has an upper triangular structure.
+
+The asymptotic center-manifold evaluation through the application of algorithm~\ref{algo:normal_form} results in the following reduced system,
+\begin{align}
+	\begin{aligned}
+		\dfrac{d \parv}{d t} =&
+		+\iota\parv + (0.151 - 0.482\iota)\theta \\
+		& - (0.008 - 0.014\iota)|\parv|^{2}\parv \\
+		& + (0.012 + 0.019\iota)\parv^{2}\theta^{*} \\
+		& - (0.012 - 0.020\iota)|\parv|^{2}\theta \\
+		& + (0.001 + 0.070\iota)|\theta|^{2}\parv \\
+		& - (0.013 - 0.031\iota)\parv^{*}\theta^{2} \\
+		& - (0.004 - 0.067\iota)|\theta|^{2}\theta \\
 		%
-		&+ \delta^{b*}_{5}(\phi_{c}z_{5} +  A_{1s}) (\phi^{*}_{c}z_{6} +  A_{2s})(\phi^{*}_{c}z_{6} +  A_{2s}),
-	\end{split} \nonumber
+		\dfrac{d \theta}{d t} =& + \iota\theta,
+	\end{aligned} \nonumber
 \end{align}
-and in the extended space it is defined as $\mathcal{\widehat{N}} =  [\mathcal{N}_{1}; \mathcal{N}_{2}; 0]$. The evolution equations for the critical and stable subspaces are
-\begin{subequations}
-	\label{eqn:GL_canonical}
-\begin{align}
-	\dfrac{d z_{i}}{dt}	=& 0, \hspace{10mm} \text{for } i \in {1,2,3,4},\\
-	%
-	\dfrac{d z_{5}}{dt}	=& \omega_{c}z_{5} + \chi_{c}^{H}\mathcal{N}_{1},  \\
-	%
-	\dfrac{d z_{6}}{dt}	=& \omega^{*}_{c}z_{6} + \chi^{*H}_{c}\mathcal{N}_{2},  \\
-	\dfrac{\partial A_{s}}{\partial t} =& \mathbf{Q}\mathcal{L}\mathbf{Q}A_{s} + \mathbf{Q}\mathcal{N}.
-\end{align}
-\end{subequations}
-The center-manifold theorem is applied to equation~\eqref{eqn:GL_canonical} and the stable component solution is evaluated asympotically as a power series in $\zbf$, 
-\begin{align}
-	\label{eqn:GL_asymptotic}
-		\mathfrak{h}(\mathbf{z}) =& \sum_{\alpha=1}^{6}\sum_{\beta=\alpha}^{6} z_{\alpha}z_{\beta}\vfield{y}_{\alpha,\beta}
-		 + \mathcal{O}(\mathbf{z}^{3}), \nonumber \\
-		 %
-		 \vfield{y}_{\alpha,\beta} =& \begin{Bmatrix}
-		 	\vfield{y}^{1}_{\alpha,\beta} \vspace{1mm} \\
-		 	\vfield{y}^{2}_{\alpha,\beta}
-		 \end{Bmatrix}.	\nonumber
-\end{align}
-For $M=6$, a total of $T_{2}=21$ terms are obtained at second order for the asymptotic approximation. All coupling terms $\vecg^{c}_{\alpha,\beta}$ vanish identically and only the following nontrivial forcing terms $\vecg_{\alpha,\beta}$ are obtained at second order,
-%\begin{align}
-%	\vecg_{1,1}  = \vecg_{1,2} = \vecg_{1,3}  = \vecg_{1,4} = \vecg_{1,6} = \vfield{0}, \nonumber \\
-%	\vecg_{2,2} = \vecg_{2,3} = \vecg_{2,4} = \vecg_{2,6} = \vfield{0}, \nonumber \\
-%	\vecg_{3,3} = \vecg_{3,4} = \vecg_{3,5} = \vfield{0}, \nonumber \\
-%	\vecg_{4,4} = \vecg_{4,5} = \vfield{0}, \nonumber \\
-%	\vecg_{5,5} = \vecg_{5,6} = \vecg_{6,6} = \vfield{0}, \nonumber
-%\end{align}
-%and,
-\begin{align}
-	\vecg_{1,5} =& 	\mathbf{Q}\cdot x\vecv_{5} =&
-	\begin{Bmatrix}
-		\mathbf{Q}_{0}x\phi_{c} \\
-		0
-	\end{Bmatrix}, \nonumber \\
-	%
-	\vecg_{2,5} =& 	\mathbf{Q}\cdot \Lap\vecv_{5} =&
-	\begin{Bmatrix}
-		\mathbf{Q}_{0}\Lap\phi_{c}	\\
-		0
-	\end{Bmatrix}, \nonumber \\
-	%
-	\vecg_{3,6} =& 	\mathbf{Q}\cdot x\vecv_{6} =&
-	\begin{Bmatrix}
-		0	\\
-		\mathbf{Q}^{*}_{0}x\phi^{*}_{c}
-	\end{Bmatrix}, \nonumber \\
-	%
-	\vecg_{4,6} =& 	\mathbf{Q}\cdot \Lap\vecv_{6} =&
-	\begin{Bmatrix}
-		0	\\
-		\mathbf{Q}^{*}_{0}\Lap\phi^{*}_{c}
-	\end{Bmatrix}, \nonumber
-\end{align}
-with all other forcing terms $\vecg_{\alpha,\beta}$ vanishing identically at second order. This leads to the restricted resolvent solutions $\vecy_{\alpha,\beta}$ that satisfy,
- \begin{subequations}
- 	\label{eqn:GL_resolvents}
-	 \begin{align}
-	 	\mathbf{Q}[(0 + \omega_{c})\mathbf{I} - \mathcal{L}]\mathbf{Q}\vecy_{1,5} =& \vecg_{1,5}, \\
-	 	%
-	 	\mathbf{Q}[(0 + \omega_{c})\mathbf{I} - \mathcal{L}]\mathbf{Q}\vecy_{2,5} =& \vecg_{2,5}, \\
-	 	%
-	 	\mathbf{Q}[(0 + \omega^{*}_{c})\mathbf{I} - \mathcal{L}]\mathbf{Q}\vecy_{3,6} =& \vecg_{3,6}, \\
-	 	%
-	 	\mathbf{Q}[(0 + \omega^{*}_{c})\mathbf{I} - \mathcal{L}]\mathbf{Q}\vecy_{4,6} =& \vecg_{4,6}, 
-	 \end{align}
-\end{subequations}
-with all other second order terms $\vecy_{\alpha,\beta}$ vanishing. The resolvent solutions in terms of the individual fields are written as
- \begin{subequations}
- 	\label{eqn:GL_sub_resolvents}
-	 \begin{align}
-	 	\mathbf{Q}_{0}[(0 + \omega_{c})\mathbf{I} - \mathcal{L}_{0}]\mathbf{Q}_{0}\vecy^{1}_{1,5} =& \mathbf{Q}_{0}x\phi_{c}, \\
-	 	%
-	 	\mathbf{Q}_{0}[(0 + \omega_{c})\mathbf{I} - \mathcal{L}_{0}]\mathbf{Q}_{0}\vecy^{1}_{2,5} =& \mathbf{Q}_{0}\Lap\phi_{c}, \\
-	 	%
-	 	%
-	 	\mathbf{Q}^{*}_{0}[(0 + \omega^{*}_{c})\mathbf{I} - \mathcal{L}^{*}_{0}]\mathbf{Q}^{*}_{0}\vecy^{2}_{3,6} =& \mathbf{Q}^{*}_{0}x\phi^{*}_{c}, \\
-		%
-		\mathbf{Q}^{*}_{0}[(0 + \omega^{*}_{c})\mathbf{I} - \mathcal{L}^{*}_{0}]\mathbf{Q}^{*}_{0}\vecy^{2}_{2,5} =& \mathbf{Q}^{*}_{0}\Lap\phi^{*}_{c}.
-		%
-	 \end{align}
-\end{subequations}
- Obviously, $\vecy^{2}_{1,5} = \vecy^{2}_{2,5} = \vecy^{1}_{3,6} = \vecy^{1}_{4,6} = 0$, with
- $\vecy^{2}_{3,6} = (\vecy^{1}_{1,5})^{*}$ and $\vecy^{2}_{4,6} = (\vecy^{1}_{2,5})^{*}$, as would be expected from the structure of the original equations. The second-order asymptotic fields $\vecy^{1}_{1,5}$ and $\vecy^{1}_{2,5}$ (along with the critical eigenvectors) are depicted in figure~\ref{fig:GL_fields}. The fields $\phi^{*}_{c}, \chi^{*}_{c},\vecy^{2}_{3,6}$ and $\vecy^{2}_{4,6}$ are the corresponding complex-conjugates (not shown). 
+and its conjugate for $\parv^{*}$ and $\theta^{*}$. Clearly, in the case of resonant forcings, the original critical mode evolution depends on the amplitude as well as the phase of the external forcing. 
+
+A comparison of the system response between the non-linear results and the center-manifold approximation is shown in figure~
 \begin{figure}
 	\centering
-	\includegraphics[width=0.49\textwidth]{GL_fields}
-	\caption{Numerically evaluated eigenvector fields $\phi_{c}$ and $\chi_{c}$, along with the second-order approximations of stable components $\vecy_{1,5}$ and $\vecy_{2,5}$. The real pars of the fields depicted by solid lines while the imaginary parts are depicted with dashed lines of the same color.}
-	\label{fig:GL_fields}
-\end{figure} 
+	\includegraphics[width=0.49\textwidth]{resonant_response}
+	\caption{Spatial shape of the system response $(|A|)$ to resonant harmonic forcing with amplitude $|\theta|$. The solid lines indicate results of the non-linear simulations of the Ginzburg Landau system and the dashed lines with markers indicate the results of the center-manifold approximation.}
+	\label{fig:resonant_response}
+\end{figure}
 
-The complex-conjugation property may now be enforced so that $z_{6}=z^{*}_{5}, z_{3}=z^{*}_{1}, z_{4}=z^{*}_{2}$ and, the original parameter perturbations re-introduced, $z_{1} = \delta'_{3}, z_{2} = \delta'_{4}$. The resulting critical mode amplitude equation is
-\begin{align}
-	\label{eqn:stuart_landau}
-	\begin{split}
-	\dfrac{d z_{5}}{d t} =
-	& \omega_{c}z_{5} + \delta'_{3}(\chi^{H}_{c}x\phi_{c})z_{5} +  				(\delta'_{3})^{2}(\chi^{H}_{c}x\vecy_{1,5})z_{5} \\
-	%
-	& + \delta'_{3}\delta'_{4}(\chi^{H}_{c}x\vecy_{2,5})z_{5} + \delta'_{4}(\chi^{H}_{c}\Lap\phi_{c})z_{5} \\
-	%
-	&  + \delta'_{3}\delta'_{4}(\chi^{H}_{c}\Lap\vecy_{1,5})z_{5} + (\delta'_{4})^{2}(\chi^{H}_{c}\Lap\vecy_{2,5})z_{5} \\
-	%
-	& + \delta^{b}_{5}(\chi^{H}_{c}|\phi_{c}|^{2}\phi_{c})|z_{5}|^{2}z_{5},
-	\end{split} 
-\end{align}
-and its complex conjugate for $z_{6}$, mirroring the original structure of equation~\eqref{eqn:ginzburg_landau}. In this case, the Ginzburg-Landau equation has been reduced to a Stuart-Landau like equation in the vicinity of the bifurcation point. The inner-products in equation~\eqref{eqn:stuart_landau} are evaluated numerically as,
-\begin{align}
-	\chi^{H}_{c}x\phi_{c} =&& 3.011 - 0.807i, \nonumber\\
-	\chi^{H}_{c}x\vecy_{1,5} =&& 4.015 - 1.076i, \nonumber \\
-	\chi^{H}_{c}x\vecy_{2,5} =&& -0.036 - 0.582i,  \nonumber \\
-	\chi^{H}_{c}\Lap\phi_{c} =&& -0.169 + 0.153i, \nonumber \\
-	\chi^{H}_{c}\Lap\vecy_{1,5} =&& 0.936 + 1.101i, \nonumber \\
-	\chi^{H}_{c}\Lap\vecy_{2,5} =&& 0.194 - 0.114i, \nonumber \\
-	\chi^{H}_{c}|\phi_{c}|^{2}\phi_{c} =&& 0.111 - 0.032i. \nonumber
-\end{align}
-
-The center-manifold reduction obtained in equation~\eqref{eqn:stuart_landau} can be compared with the original system by evaluating the saturated angular frequencies, $\Omega$, obtained for the full system and its reduced counter-part for parameter perturbations. The comparison is shown in figure~\ref{fig:omega_parameter_variation} for the variation of $\delta'_{3}$ and $\delta'_{4}$. The agreement is very good close to the bifurcation point with a systematic deviation arising at larger parameter variations. Such deviation would be expected given the asymptotic nature of the approximation. The deviation is also larger for $\delta'_{3}$ compared to $\delta'_{4}$, which could be qualitatively understood apriori, given the relatively large norm of $\vecy_{1,5}$, as seen in figure~\ref{fig:GL_fields}, which arises due to $\delta'_{3}$ perturbations. 
-\begin{figure}
-	\centering
-	\includegraphics[width=0.49\textwidth]{center_manifold_omega1}
-	\includegraphics[width=0.49\textwidth]{center_manifold_omega2}
-	\caption{Comparison of the angular frequencies obtained from the Ginzburg-Landau system, equation~\eqref{eqn:ginzburg_landau}, and its center-manifold reduction, equation~\eqref{eqn:stuart_landau} for different values of parameter perturbations. (Top) $\delta'_{4} = 0$ with varying $\delta'_{3}$ and, (bottom) $\delta'_{3} = 0$ with varying $\delta'_{4}$. Note the negative sign in the $x-$axis label in the bottom figure.}
-	\label{fig:omega_parameter_variation}
-\end{figure} 
 
 
 

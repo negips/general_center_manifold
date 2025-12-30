@@ -42,7 +42,7 @@ defines the binomial coefficient of $p$ and $q$.
 
 One may find the exposition on the implementation of the parameterization method in previous works of \citet{haro16} and \citet{jain22}. To be clear, the application of the parameterization method to an extended system like equation~\eqref{eqn:evolution_extended} follows the same steps as outlined in those earlier works. However, many of the essential steps are repeated here to bring out the structure of system of equations at each asymptotic order in the context of system extension.
 
-Consider the extended system as defined by equation~\eqref{eqn:evolution_extended}, represented in a compact form by equation~\eqref{eqn:evolution_extended_compact}, which has an $m$-dimensional critical subspace ($m = n+l+h$). Assume $\vecparv = [\parv_{1}; \parv_{2};\ldots;\parv_{m}]$ is an $m$-dimensional vector of coordinates that parameterize the center-manifold of the extended system. The evolution of the system along the center-manifold in the parameterized coordinates is assumed to be given by 
+Consider the extended system as defined by equation~\eqref{eqn:evolution_extended}, represented in a compact form by equation~\eqref{eqn:evolution_extended_compact}, which has an $m$-dimensional critical subspace ($m = n+p+h$). Assume $\vecparv = [\parv_{1}; \parv_{2};\ldots;\parv_{m}]$ is an $m$-dimensional vector of coordinates that parameterize the center-manifold of the extended system. The evolution of the system along the center-manifold in the parameterized coordinates is assumed to be given by 
 \begin{align}
 	\dt{\vecparv} = \Param(\vecparv), \\
 	\Param: \mathds{C}^{m} \rightarrow \mathds{C}^{m} \nonumber.
@@ -95,7 +95,7 @@ Substitution of the power series expansions into equation~\eqref{eqn:evolution_e
 \end{align}
 Here $\AsParamEl^{\alpha}_{j_{1}}$ represents the $\alpha^{th}$ element of the vector $\AsParam_{j_{1}}$. At order $k$, one obtains $m\times T^{k}_{m}$ unknowns which define the elements of the vectors $\AsParam_{i_{1},\ldots,i_{k}}$, and the corresponding $T^{k}_{m}$ unknown vectors $\AsECenM_{i_{1},\ldots,i_{k}}$. The definitions of the two sets of unknowns are interdependent since the form of the reduced representation $\mathcal{G}(\vecparv)$ determines the map $\CenM(\vecparv)$ from the parameterized coordinates to the full solution (and vice versa). 
 
-\subsubsection{Asymptotic terms of $\mathcal{O}(|x|)$}
+\subsubsection{Asymptotic terms of $\mathcal{O}(|z|)$}
 \label{sec:normal_form_O1}
 
 At first order the non-linear terms do not contribute and one simply obtains,
@@ -316,7 +316,7 @@ which then defines the normal form coefficients,
 \end{equation}
 and, $\EAevec_{j}^{\dagger}\AsECenM_{i_{1},\ldots,i_{k}} = 0$ in case of resonance. 
 
-\subsubsection{From the Extended System to the Standard System}
+\subsection{From the Extended System to the Standard System}
 \label{sec:extended_to_standard}
 
 For all orders $k\ge2$, one needs to evaluate a resolvent equation of the type given by equation~\eqref{eqn:asymptotic_Ok_compact} for a given right hand side. The $\widehat{\cdot}$ symbol on all terms indicates that the resolvent needs to be evaluated for the extended system. This can potentially be a major drawback since numerical methods for large systems often rely on exploiting the inherent symmetry of the operators which may be destroyed by system extension. However, as it turns out, even though the resolvents are technically solved for the extended linear system $\ExtL$, in fact only the resolvent solutions of the original linear operator $\Lu$ are required. This can be shown by examining the terms sequentially. 
@@ -429,7 +429,7 @@ The entire procedure for the evaluation of the normal form is presented succinct
 		\LComment{Center subspace dimension: $n$.} 
 		\Require Extension via $\vecnu, \vectheta$ and $\NewNonLin(\vecu,\vecnu,\vectheta)$.
 		\State Evaluate $\EDevMatrix,\Khat$ via algorithm~\ref{algo:extended_direct_tangent}. 
-		\LComment{Center subspace dimension: $m = n + l + h$.} 
+		\LComment{Center subspace dim.: $m = n + p + h$.} 
 		\Require Maximum Asymptotic order: $k_{max}$
 		\LComment{Substitute asymptotic expansions}
 		\For{$(k\in 2,3,\ldots,k_{max})$}
@@ -453,15 +453,27 @@ The entire procedure for the evaluation of the normal form is presented succinct
 				\State \LComment {Evaluate resolvent}
 				\State $\AsCenM_{i_{1},\ldots,i_{k}} = \ResolventOp(\omega)[\mathbf{r} - \mathbf{r}_{s}]$ \Comment{Eq.~\eqref{eqn:asymptotic_Ok_compact_std}}
 				\LComment {$\ResolventOp(\omega) = (\omega\mathbf{I} - \Lu)^{-1}$}
+				\State $\AsECenM_{i_{1},\ldots,i_{k}} = [\AsCenM_{i_{1},\ldots,i_{k}}; \veczero; \veczero]$
 			\EndFor
 		\EndFor \\
 		\Return $\Param(\vecparv), \CenM(\vecparv)$.
 	\end{algorithmic}
 \end{algorithm}
 
-
-
-
+The fact that the extended variables vanish for all asymptotic vectors $\AsECenM_{i_{1},\ldots,i_{k}}$ with $k\ge2$ has another simplifying consequence for the parameter perturbations $\vecnu$ and harmonic forcing amplitudes $\vectheta$. Since these variables have been included into the state vector $\evecu$, asymptotic evaluation of the state vector means that these extended variables are also evaluated asymptotically. Therefore,
+\begin{align}
+	\nu_{j} = \sum_{(1)}^{m}(\AsECenM_{i_{1}})_{N+j}\parv_{i_{1}} + \sum_{(2)}^{m}(\AsECenM_{i_{1},i_{2}})_{N+j}\parv_{i_{1}}\parv_{i_{2}} + \ldots,
+\end{align}
+where, $(\AsECenM_{i_{1},i_{2}})_{N+j}$ represents the $(N+j)^{th}$ component of the vector $\AsECenM_{i_{1},i_{2}}$. The high order vectors $\AsECenM_{i_{1},\ldots,i_{k}}$ with $k\ge2$ do not contribute while, for the linear term, $(k=1)$, only one eigenvector has a non-vanishing contribution to $\nu_{j}$. Therefore we have a simple relation between the parameter perturbations $\nu_{j}$ and the reduced coordinates $\vecparv$ as,
+\begin{align}
+	\label{eqn:parameter_reduced_representation}
+	\nu_{j} = \parv_{n+j}.
+\end{align}
+In an identical manner, the relation between the forcing mode variables $\theta_{j}$ and the reduced coordinates is simply,
+\begin{align}
+	\label{eqn:theta_reduced_representation}
+	\theta_{j} = \parv_{n+p+j}.
+\end{align}
 
 
 

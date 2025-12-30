@@ -52,6 +52,8 @@ Equation~\eqref{eqn:graph_Ok_compact} then reduces to its single component form,
 	\omega_{i_{1},\ldots,i_{k}} = \widehat{K}_{i_{1},i_{1}} + \widehat{K}_{i_{2},i_{2}} + \ldots + \widehat{K}_{i_{k},i_{k}}.
 \end{align}
 \end{subequations}
+The simplified mappings between the extended variables and the reduced coordinate representations obtained in equations~\eqref{eqn:parameter_reduced_representation} and \eqref{eqn:theta_reduced_representation} apply for this particular graph representation as well. 
+
 One may define the projection operator on to the complement of the center subspace of $\Lu$ as, 
 \begin{align}
 	\label{eqn:complement_projector}
@@ -99,7 +101,7 @@ with the asymptotic components of $\Param$ defined as
  		\LComment{Center subspace dimension: $n$.} 
  		\Require Extension via $\vecnu, \vectheta$ and $\NewNonLin(\vecu,\vecnu,\vectheta)$.
  		\State Evaluate $\EDevMatrix,\Khat$ via algorithm~\ref{algo:extended_direct_tangent}. 
- 		\LComment{Center subspace dimension: $m = n + l + h$.} 
+ 		\LComment{Center subspace dim.: $m = n + p + h$.} 
  		\State $\mathbf{Q} = \mathbf{I} - \DevMatrix\AevMatrix^{\dagger}$ \Comment{Subspace projector.}
  		\Require Maximum Asymptotic order: $k_{max}$
  		\For{$(k\in 2,3,\ldots,k_{max})$}
@@ -118,13 +120,14 @@ with the asymptotic components of $\Param$ defined as
  		\State $\AsCenM_{i_{1},\ldots,i_{k}} = \ResolventOp_{s}(\omega)\mathbf{Q}\mathbf{r}$, \Comment{Eq.~\eqref{eqn:graph_Ok_compact3}}
  		\State with, $\mathbf{Q}\AsCenM_{i_{1},\ldots,i_{k}} = \veczero$. 
  		\LComment {$\ResolventOp_{s}(\omega) = [\mathbf{Q}(\omega\mathbf{I} - \Lu)\mathbf{Q}]^{-1}$}
+ 		\State $\AsECenM_{i_{1},\ldots,i_{k}} = [\AsCenM_{i_{1},\ldots,i_{k}}; \veczero; \veczero]$
  		\EndFor
  		\EndFor \\
  		\Return $\Param(\vecparv),\CenM(\vecparv)$.
  	\end{algorithmic}
  \end{algorithm}
  
- The resulting expressions for the normal form given by equations~\eqref{eqn:asymptotic_Ok_compact_std},  \eqref{eqn:gk_definition2} and, the graph style parameterization given by equations~\eqref{eqn:graph_Ok_compact3}, \eqref{eqn:graph_gk_definition3} are quite similar. The similarity is due to the fact that the tangent space in both cases is identical, with $\Khat$ representing the linear part of the parameterization $\mathcal{G}(\vecparv)$. Typically one is interested in the normal form of the reduced equations since they result in the ``simplest form'' of the representation. The particular graph parameterization however is advantageous when one needs to consider the mapping from the full system state to the reduced manifold, \ie, $\evecu \mapsto \vecparv$. For both normal form and the graph parameterization, mapping that is explicitly constructed is $\mathcal{Y}: \vecparv \mapsto \evecu$. The inverse map $\inv{\mathcal{Y}}: \evecu \mapsto \vecparv$ is not constructed. It is also difficult to construct from the knowledge of $\mathcal{Y}$ itself  because $\mathcal{Y}$ is constructed asymptotically and is hardly ever evaluated beyond a few orders. However, since the graph parameterization is constructed with the property that higher order terms lie in the complement of the tangent space, the inverse map $\inv{\mathcal{Y}}$ can be easily constructed by leveraging this property. Therefore, recalling that the first order vectors $\AsCenM_{i} = \evecv_{i}$, we have,
+ The resulting expressions for the normal form given by equations~\eqref{eqn:asymptotic_Ok_compact_std},  \eqref{eqn:gk_definition2} and, the graph style parameterization given by equations~\eqref{eqn:graph_Ok_compact3}, \eqref{eqn:graph_gk_definition3} are quite similar. The similarity is due to the fact that the tangent space in both cases is identical, with $\Khat$ representing the linear part of the parameterization $\mathcal{G}(\vecparv)$. Typically one is interested in the normal form of the reduced equations since they result in the ``simplest form'' of the representation. The particular graph parameterization however is advantageous when one needs to consider the mapping from the full system state to the reduced manifold, \ie, $\evecu \mapsto \vecparv$. For both normal form and the graph parameterization, mapping that is explicitly constructed is $\mathcal{Y}: \vecparv \mapsto \evecu$. The inverse map $\inv{\mathcal{Y}}: \evecu \mapsto \vecparv$ is not constructed. It is also difficult to construct from the knowledge of $\mathcal{Y}$ itself  because $\mathcal{Y}$ is constructed asymptotically and is hardly ever evaluated beyond a few orders. However, since the graph parameterization is constructed with the property that higher order terms lie in the complement of the tangent space, the inverse map $\inv{\mathcal{Y}}$ can be easily constructed by leveraging this property. Therefore, recalling that the first order vectors $\AsECenM_{i} = \evecv_{i}$, we have,
  \begin{align}
  		\begin{split}
  		\evecu = \CenM(\vecparv) =& \sum^{[1,m]}_{(1)}\AsECenM_{i_{1}}\parv_{i_{1}} + \sum^{[1,m]}_{(2)}\AsECenM_{i_{1},i_{2}}\parv_{i_{1}}\parv_{i_{2}} \\
