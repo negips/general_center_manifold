@@ -28,7 +28,7 @@ For semi-infinite domains, $x\in[0,\infty)$, the spectrum for $\mathcal{L}_{0}$ 
 and the corrresponding complex conjugate for $\mathcal{L}^{*}_{0}$. Here $\zeta_{j}$ denotes the countable set of zeros of the Airy function. The system parameters are chosen \emph{ad hoc} and are given in table~\ref{table:GL_bifurcation_params}, which results in a single critical eigenmode with eigenvalue $\omega_{1} = 1.0\iota$ for $\mathcal{L}_{0}$ and its conjugate, $-1.0\iota$ for $\mathcal{L}^{*}_{0}$. All other eigenvalues have negative real parts. 
 \begin{table}[h]
 	\renewcommand{\arraystretch}{1.5}
-	\begin{tabular}{cccc}
+	\begin{tabular}{cc|cc}
 			Parameter & Value & Parameter & Value \\
 			\hline
 			\hline
@@ -42,7 +42,7 @@ and the corrresponding complex conjugate for $\mathcal{L}^{*}_{0}$. Here $\zeta_
 			\hline	
 			\hline
 		\end{tabular}
-		\caption{Parameters for the Ginzburg Landau system at bifurcation.}
+		\caption{Parameters for the Ginzburg-Landau system at bifurcation.}
 		\label{table:GL_bifurcation_params} 
 \end{table}
  The linear operator at the bifurcation point for the state vector, $\vecu = [A; A^{*}]$ (with $\vecu\in\mathds{C}^{N}$), is written as
@@ -175,12 +175,13 @@ Once $\EDevMatrix$ and $\Khat$ are known, algorithm~\ref{algo:normal_form} may n
 \end{align}
 along with the complex conjugated equations for $\parv_{2}$ and $\parv_{4}$. One may substitute $\parv_{1} \mapsto \parv$, $\parv_{2}\mapsto\parv^{*}$, $\parv_{3}\mapsto\delta'_{4}$, $\parv_{4}\mapsto\delta'^{*}_{4}$, to obtain expressions directly relating mode amplitude evolution to the parameter perturbations as,
 \begin{align}
+	\label{eqn:parameter_normal_form}
 	\begin{aligned}
 		\dfrac{d \parv}{d t} =&
 		+\iota\parv - (0.169 - 0.153\iota)\delta'_{4}\parv \\
 		& -(0.008-0.014\iota)|\parv|^{2}\parv \\
 		& + (0.194 - 0.114\iota)(\delta'_{4})^{2}\parv. 
-	\end{aligned} \nonumber
+	\end{aligned}
 \end{align}
 
 The results of the asymptotic center-manifold approximations compared with the fully non-linear response of the Ginzburg-Landau system are shown in figure~\ref{fig:parameter_response}. The results compare very well for small $\delta'_{4}$ values, with progressive loss of accuracy for larger parameter variations which is typical of asymptotic results. 
@@ -219,7 +220,7 @@ where, $\xi(x)$ is defined in equation~\eqref{eqn:forcing_shape0}. The governing
 	\begin{align}
 		\dfrac{\partial A}{\partial t} =& \mathcal{L}_{0}A + \delta^{b}_{5} (A^{*}A)A + \xi(x)\theta,  \\
 		%
-		\dfrac{\partial A^{*}}{\partial t} =& \mathcal{L}^{*}_{0} A^{*} + (\delta^{b}_{5})^{*}(A^{*}A)A^{*} + + \xi^{*}(x)\theta^{*},  \\
+		\dfrac{\partial A^{*}}{\partial t} =& \mathcal{L}^{*}_{0} A^{*} + (\delta^{b}_{5})^{*}(A^{*}A)A^{*} + \xi^{*}(x)\theta^{*},  \\
 		%
 		\dfrac{d\theta}{d t} =& \lambda^{H}_{1}\theta,  \\ 
 		%
@@ -273,6 +274,7 @@ where $\GammaH$ is a trivial matrix and therefore $\Khat$ is diagonal.
 
 As done in section~\ref{sec:parameter-perturbation}, the application of algorithm~\ref{algo:normal_form} results in the evolution equations in their normal form for the reduced system,  
 \begin{align}
+	\label{eqn:nonresonant_normal_form}
 	\begin{aligned}
 		\dfrac{d \parv}{d t} =&
 		+\iota\parv \\
@@ -280,7 +282,7 @@ As done in section~\ref{sec:parameter-perturbation}, the application of algorith
 		& - (0.026 - 0.051\iota)|\theta|^{2}\parv, \\
 		%
 		\dfrac{d \theta}{d t} =& +1.3\iota\theta.
-	\end{aligned} \nonumber
+	\end{aligned}
 \end{align}
 Here, the substitutions $\parv_{1} \mapsto \parv$, $\parv_{2}\mapsto\parv^{*}$, $\parv_{3}\mapsto\theta$ and $\parv_{4}\mapsto\theta^{*}$, have already been performed. One can observe that the amplitude evolution of the original critical mode, denoted by $z$, only depends on the forcing amplitude $|\theta|$ and not on its instantaneous phase. The comarison of the response of the reduced system to that of the fully non-linear system is shown in figure~\ref{fig:nonresonant_response}. The response curves are nearly identical. 
 \begin{figure}
@@ -356,6 +358,7 @@ where, $\GammaH$ is no longer trivial and $\Khat$ has an upper triangular struct
 
 The asymptotic center-manifold evaluation through the application of algorithm~\ref{algo:normal_form} results in the following reduced system,
 \begin{align}
+	\label{eqn:resonant_normal_form}
 	\begin{aligned}
 		\dfrac{d \parv}{d t} =&
 		+\iota\parv + (0.151 - 0.482\iota)\theta \\
@@ -367,7 +370,7 @@ The asymptotic center-manifold evaluation through the application of algorithm~\
 		& - (0.004 - 0.067\iota)|\theta|^{2}\theta \\
 		%
 		\dfrac{d \theta}{d t} =& + \iota\theta,
-	\end{aligned} \nonumber
+	\end{aligned}
 \end{align}
 and its conjugate for $\parv^{*}$ and $\theta^{*}$. Clearly, in the case of resonant forcings, the original critical mode evolution depends on the amplitude as well as the phase of the external forcing. 
 
@@ -378,6 +381,17 @@ A comparison of the system response between the non-linear results and the cente
 	\caption{Spatial shape of the system response $(|A|)$ to resonant harmonic forcing with amplitude $|\theta|$. The solid lines indicate results of the non-linear simulations of the Ginzburg-Landau system and the dashed lines with markers indicate the results of the center-manifold approximation.}
 	\label{fig:resonant_response}
 \end{figure}
+
+As a final note, one may observe that performing the substitutions, $\delta'_{4} \mapsto 0$ in equation~\eqref{eqn:parameter_normal_form} and, $\theta \mapsto 0$ in equations~\eqref{eqn:nonresonant_normal_form} and \eqref{eqn:resonant_normal_form}, reduces all three equations to,
+\begin{align}
+	\label{eqn:standard_normal_form}
+	\begin{aligned}
+		\dfrac{d \parv}{d t} =&
+		+\iota\parv - (0.008-0.014\iota)|\parv|^{2}\parv.
+	\end{aligned}
+\end{align}
+This is the normal form of the center-manifold for the standard Ginzburg-Landau system \eqref{eqn:ginzburg_landau}. This provides further numerical validation of the fact that the center-manifold approximation of the extended system reduces to that of the standard system whenever the system perturbation and harmonic forcings vanish.
+
 
 
 

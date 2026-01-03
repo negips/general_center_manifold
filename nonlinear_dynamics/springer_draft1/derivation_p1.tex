@@ -61,7 +61,7 @@ Additionally, $\LambdaC$ is defined as an $n\times n$ diagonal matrix consisting
 The same system is now considered for the case of parameter perturbation so that the evolution dynamics are now evaluated at parameter values of $\vecmu = \vecMu + \vecnu$, with $\vecnu$ being the vector of parameter perturbations, $\vecnu = [\nu_{1};\nu_{2};\ldots;\nu_{p}]$. In addition, the system is forced with harmonic forcing of the type,
 \begin{align}
 	\label{eqn:harmonic_forcing}
-	\fieldf^{H}(\vectheta) =\sum_{i=1}^{h}\fieldf^{H}_{i}\theta_{i}(t); && \partial \theta_{i}/\partial t = \lambda^{H}_{i}\theta_{i},
+	\fieldf^{H}(\vectheta) =\sum_{i=1}^{h}\fieldf^{H}_{i}\theta_{i}(t); && d \theta_{i}/d t = \lambda^{H}_{i}\theta_{i},
 \end{align}
 where, $\vectheta = [\theta_{1};\theta_{2};\ldots;\theta_{h}]$ and the various $\theta_{i}$ are treated as dynamic variables. $\lambda^{H}_{i}$ is purely imaginary, with the imaginary part representing the angular frequency of the forcing. The vector of angular frequencies is denoted as $\boldsymbol{\lambda}^{H} = [\lambda^{H}_{1};\lambda^{H}_{2};\ldots;\lambda^{H}_{h}]$. Constant forcing terms are readily incorporated when a particular (or multiple) $\lambda^{H}_{i}=0$. 
 The (time-independent) shape of the $i^{th}$ harmonic forcing is denoted as $\vecf^{H}_{i}$.
@@ -161,7 +161,7 @@ The additional critical eigenpairs introduced due to system extension need to be
 	\end{align}
 \end{subequations}
 
-If the original linear system $\Lu$ is non-singular then, the strcuture of the $p$ parameter eigenpairs is given by $\Tuple{\lambda^{P}_{i}, \EDevec^{P}_{i}}$, which satisfy
+If the original linear system $\Lu$ is non-singular then, the structure of the $p$ parameter eigenpairs is given by $\Tuple{\lambda^{P}_{i}, \EDevec^{P}_{i}}$, which satisfy
 \begin{subequations}
 	\label{eqn:nonsingular_pmode} 
 	\begin{align}

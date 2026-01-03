@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.16)  31 DEC 2025 02:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.16)  3 JAN 2026 23:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1200,25 +1200,35 @@ Package caption Info: End \AtBeginDocument code.
 \c__nicematrix_shift_exterior_Vdots_dim=\dimen377
 \c__nicematrix_innersep_middle_dim=\dimen378
 LaTeX Font Info:    Calculating math sizes for size <11.04124> on input line 21
-6.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 216
+8.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 218
 .
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 216
+LaTeX Font Info:    Trying to load font information for U+msb on input line 218
 .
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Calculating math sizes for size <10.03749> on input line 21
-6.
+8.
  (./intro.tex
+Underfull \hbox (badness 1014) in paragraph at lines 4--5
+\OT1/cmr/m/n/10 ``weakly non-linear anal-y-sis'' [[], [], [], []],
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
+
+
+Underfull \hbox (badness 1152) in paragraph at lines 6--7
+\OT1/cmr/m/n/10 largely con-fined to small ordi-nary dif-fer-en-tial
+ []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1237,15 +1247,21 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 
 ]
+Underfull \hbox (badness 1242) in paragraph at lines 12--14
+[]\OT1/cmr/m/n/10 A sim-pler sce-nario exists when the time-
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
 
-LaTeX Warning: Reference `center_manifold_derivation' on page 2 undefined on in
-put line 10.
+Underfull \hbox (badness 1005) in paragraph at lines 15--16
+[]\OT1/cmr/m/n/10 As it turns out this detailed exam-i-na-tion
+ []
 
-) (./derivation_p1.tex
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1258,10 +1274,11 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 []| []
  []
 
-[2]
+[2]) (./derivation_p1.tex
 LaTeX Font Info:    Trying to load font information for U+dsrom on input line 1
 4.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/doublestroke/Udsrom.fd
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/doublestroke/Udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 )
 LaTeX Font Info:    Trying to load font information for U+euf on input line 28.
@@ -1371,10 +1388,6 @@ ng modes, denoted as
  []
 
 
-Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 223.
-
-
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1385,6 +1398,10 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [5]
+
+Package amsmath Warning: Cannot use `split' here;
+(amsmath)                trying to recover with `aligned' on input line 223.
+
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 272.
@@ -1438,10 +1455,10 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 272.
 
 
+
+
 Package amsmath Warning: Cannot use `split' here;
 (amsmath)                trying to recover with `aligned' on input line 294.
-
-
 
 
 Package amsmath Warning: Cannot use `split' here;
@@ -1477,9 +1494,6 @@ put line 379.
 \c@algpx@indentEndPage-14=\count448
 
 
-) (./derivation_normal.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 
 
 
@@ -1490,7 +1504,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 []| []
  []
 
-[7]
+[7]) (./derivation_normal.tex
 
 
 Underfull \hbox (badness 2600) in paragraph at lines 6--7
@@ -1532,9 +1546,6 @@ Underfull \hbox (badness 5970) in paragraph at lines 73--75
 \OT1/cmr/m/n/10 Here the terms $\OT1/cmr/bx/n/10.03749 g[] \OMS/cmsy/m/n/10.037
 49 2 \U/dsrom/m/n/10.03749 C[]$\OT1/cmr/m/n/10 , while,
  []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
@@ -1812,7 +1823,7 @@ Underfull \hbox (badness 1019) in paragraph at lines 11--14
 
 LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 31.
 
-Overfull \hbox (8.22241pt too wide) in paragraph at lines 29--47
+Overfull \hbox (8.6224pt too wide) in paragraph at lines 29--47
  [] 
  []
 
@@ -1837,7 +1848,7 @@ Package epstopdf Info: Source file: <imgs/spectra.eps>
 -to.pdf imgs/spectra.eps>
 (epstopdf)             \includegraphics on input line 60.
 Package epstopdf Info: Output file is already uptodate.
-<imgs/spectra-eps-converted-to.pdf, id=482, 578.16pt x 433.62pt>
+<imgs/spectra-eps-converted-to.pdf, id=509, 578.16pt x 433.62pt>
 File: imgs/spectra-eps-converted-to.pdf Graphic file (type pdf)
 <use imgs/spectra-eps-converted-to.pdf>
 Package pdftex.def Info: imgs/spectra-eps-converted-to.pdf  used on input line 
@@ -1861,7 +1872,7 @@ o.pdf>
 -eps-converted-to.pdf imgs/extended_eigenvectors.eps>
 (epstopdf)             \includegraphics on input line 84.
 Package epstopdf Info: Output file is already uptodate.
-<imgs/extended_eigenvectors-eps-converted-to.pdf, id=484, 722.7pt x 505.89pt>
+<imgs/extended_eigenvectors-eps-converted-to.pdf, id=511, 722.7pt x 505.89pt>
 File: imgs/extended_eigenvectors-eps-converted-to.pdf Graphic file (type pdf)
 <use imgs/extended_eigenvectors-eps-converted-to.pdf>
 Package pdftex.def Info: imgs/extended_eigenvectors-eps-converted-to.pdf  used 
@@ -1899,16 +1910,16 @@ df>
 (epstopdf)                    size: 27176 bytes
 (epstopdf)             Command: <repstopdf --outfile=imgs/diffusion_response-ep
 s-converted-to.pdf imgs/diffusion_response.eps>
-(epstopdf)             \includegraphics on input line 189.
+(epstopdf)             \includegraphics on input line 190.
 Package epstopdf Info: Output file is already uptodate.
-<imgs/diffusion_response-eps-converted-to.pdf, id=576, 578.16pt x 433.62pt>
+<imgs/diffusion_response-eps-converted-to.pdf, id=604, 578.16pt x 433.62pt>
 File: imgs/diffusion_response-eps-converted-to.pdf Graphic file (type pdf)
 <use imgs/diffusion_response-eps-converted-to.pdf>
 Package pdftex.def Info: imgs/diffusion_response-eps-converted-to.pdf  used on 
-input line 189.
+input line 190.
 (pdftex.def)             Requested size: 223.0721pt x 167.29819pt.
 
-Overfull \hbox (6.83116pt too wide) in paragraph at lines 189--190
+Overfull \hbox (6.83116pt too wide) in paragraph at lines 190--191
  [][] 
  []
 
@@ -1921,26 +1932,26 @@ Package epstopdf Info: Source file: <imgs/diffusion_omega.eps>
 (epstopdf)                    size: 17369 bytes
 (epstopdf)             Command: <repstopdf --outfile=imgs/diffusion_omega-eps-c
 onverted-to.pdf imgs/diffusion_omega.eps>
-(epstopdf)             \includegraphics on input line 197.
+(epstopdf)             \includegraphics on input line 198.
 Package epstopdf Info: Output file is already uptodate.
-<imgs/diffusion_omega-eps-converted-to.pdf, id=578, 578.16pt x 433.62pt>
+<imgs/diffusion_omega-eps-converted-to.pdf, id=606, 578.16pt x 433.62pt>
 File: imgs/diffusion_omega-eps-converted-to.pdf Graphic file (type pdf)
 <use imgs/diffusion_omega-eps-converted-to.pdf>
 Package pdftex.def Info: imgs/diffusion_omega-eps-converted-to.pdf  used on inp
-ut line 197.
+ut line 198.
 (pdftex.def)             Requested size: 223.0721pt x 167.29819pt.
 
-Overfull \hbox (6.83116pt too wide) in paragraph at lines 197--198
+Overfull \hbox (6.83116pt too wide) in paragraph at lines 198--199
  [][] 
  []
 
 
-Underfull \hbox (badness 1038) in paragraph at lines 198--198
+Underfull \hbox (badness 1038) in paragraph at lines 199--199
 \OT1/cmr/m/n/10 param-e-ter. The empty cir-cles indi-cate results
  []
 
 
-Underfull \hbox (badness 1062) in paragraph at lines 194--201
+Underfull \hbox (badness 1062) in paragraph at lines 195--202
 \OT1/cmr/m/n/10 fairly accu-rate repro-duc-tion of the non-linear
  []
 
@@ -1957,7 +1968,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [19]
 
 
-Overfull \hbox (2.9244pt too wide) detected at line 249
+Overfull \hbox (2.9244pt too wide) detected at line 250
 []
  []
 
@@ -1970,16 +1981,16 @@ Package epstopdf Info: Source file: <imgs/nonresonant_response.eps>
 (epstopdf)                    size: 26974 bytes
 (epstopdf)             Command: <repstopdf --outfile=imgs/nonresonant_response-
 eps-converted-to.pdf imgs/nonresonant_response.eps>
-(epstopdf)             \includegraphics on input line 288.
+(epstopdf)             \includegraphics on input line 290.
 Package epstopdf Info: Output file is already uptodate.
-<imgs/nonresonant_response-eps-converted-to.pdf, id=595, 578.16pt x 433.62pt>
+<imgs/nonresonant_response-eps-converted-to.pdf, id=623, 578.16pt x 433.62pt>
 File: imgs/nonresonant_response-eps-converted-to.pdf Graphic file (type pdf)
 <use imgs/nonresonant_response-eps-converted-to.pdf>
 Package pdftex.def Info: imgs/nonresonant_response-eps-converted-to.pdf  used o
-n input line 288.
+n input line 290.
 (pdftex.def)             Requested size: 223.0721pt x 167.29819pt.
 
-Overfull \hbox (6.83116pt too wide) in paragraph at lines 288--289
+Overfull \hbox (6.83116pt too wide) in paragraph at lines 290--291
  [][] 
  []
 
@@ -2000,17 +2011,17 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 312--314
+Underfull \hbox (badness 10000) in paragraph at lines 314--316
 \OT1/cmr/m/n/10 The forc-ing shapes are again given by
  []
 
 
-Overfull \hbox (5.20909pt too wide) detected at line 330
+Overfull \hbox (5.20909pt too wide) detected at line 332
 []
  []
 
 
-Underfull \hbox (badness 1910) in paragraph at lines 357--358
+Underfull \hbox (badness 1910) in paragraph at lines 359--360
 []\OT1/cmr/m/n/10 The asymp-totic center-manifold eval-u-a-tion
  []
 
@@ -2034,28 +2045,22 @@ f>
 (epstopdf)                    size: 26299 bytes
 (epstopdf)             Command: <repstopdf --outfile=imgs/resonant_response-eps
 -converted-to.pdf imgs/resonant_response.eps>
-(epstopdf)             \includegraphics on input line 377.
+(epstopdf)             \includegraphics on input line 380.
 Package epstopdf Info: Output file is already uptodate.
-<imgs/resonant_response-eps-converted-to.pdf, id=709, 578.16pt x 433.62pt>
+<imgs/resonant_response-eps-converted-to.pdf, id=738, 578.16pt x 433.62pt>
 File: imgs/resonant_response-eps-converted-to.pdf Graphic file (type pdf)
 <use imgs/resonant_response-eps-converted-to.pdf>
 Package pdftex.def Info: imgs/resonant_response-eps-converted-to.pdf  used on i
-nput line 377.
+nput line 380.
 (pdftex.def)             Requested size: 223.0721pt x 167.29819pt.
 
-Overfull \hbox (6.83116pt too wide) in paragraph at lines 377--378
+Overfull \hbox (6.83116pt too wide) in paragraph at lines 380--381
  [][] 
  []
 
+
+
 ) (./discussion.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2065,20 +2070,15 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 []| []
  []
 
-[22 <./imgs/resonant_response-eps-converted-to.pdf>]) (./main.bbl
-
-
-Underfull \hbox (badness 7963) in paragraph at lines 68--73
-\OT1/cmr/m/n/10 band-width, finite ampli-tude con-vec-tion.
- []
-
-
-Underfull \hbox (badness 1694) in paragraph at lines 75--80
-[]\OT1/cmr/m/n/10 D. Sipp and A. Lebe-dev.  Global sta-
- []
-
-
+[22 <./imgs/resonant_response-eps-converted-to.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+) (./main.bbl
+Underfull \hbox (badness 1052) in paragraph at lines 50--55
+\OT1/cmr/m/it/10.03749 Bifur-ca-tions, Cen-ter Man-i-folds, and Nor-
+ []
 
 
 
@@ -2091,23 +2091,38 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [23]
-Underfull \hbox (badness 1052) in paragraph at lines 127--132
-\OT1/cmr/m/it/10.03749 Bifur-ca-tions, Cen-ter Man-i-folds, and Nor-
+Underfull \hbox (badness 1694) in paragraph at lines 70--75
+[]\OT1/cmr/m/n/10 D. Sipp and A. Lebe-dev.  Global sta-
  []
 
 
-Underfull \hbox (badness 1092) in paragraph at lines 141--147
-\OT1/cmr/m/it/10.03749 i-cal and Engi-neer-ing Sci-ences\OT1/cmr/m/n/10 , 453(1
-956):
+Underfull \hbox (badness 7963) in paragraph at lines 112--117
+\OT1/cmr/m/n/10 band-width, finite ampli-tude con-vec-tion.
  []
 
 
-Underfull \hbox (badness 1314) in paragraph at lines 157--161
+Underfull \hbox (badness 2158) in paragraph at lines 127--132
+[]\OT1/cmr/m/n/10 S. M. Cox and A. J. Roberts.  Cen-
+ []
+
+
+Underfull \hbox (badness 1910) in paragraph at lines 127--132
+\OT1/cmr/m/it/10.03749 ics\OT1/cmr/m/n/10 , 32(4):401{436, 1991.  doi: $10 . 10
+17 /
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+
+Underfull \hbox (badness 1314) in paragraph at lines 149--153
 []\OT1/cmr/m/n/10 M. Carini, F. Auteri, and F. Gian-netti.
  []
 
 
-Underfull \hbox (badness 4954) in paragraph at lines 157--161
+Underfull \hbox (badness 4954) in paragraph at lines 149--153
 \OT1/cmr/m/n/10 Centre-manifold reduc-tion of bifur-cat-ing
  []
 
@@ -2117,13 +2132,28 @@ Underfull \hbox (badness 6842) in paragraph at lines 171--176
  []
 
 
-Underfull \hbox (badness 4120) in paragraph at lines 188--192
+Underfull \hbox (badness 4120) in paragraph at lines 179--183
 []\OT1/cmr/m/n/10 Alex Haro, Marta Canadell, Jordi-Lluis
  []
 
 
-Underfull \hbox (badness 2608) in paragraph at lines 188--192
+Underfull \hbox (badness 2608) in paragraph at lines 179--183
 \OT1/cmr/m/n/10 Figueras, Ale-jan-dro Luque, Josep Maria
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 193--199
+[]\OT1/cmr/m/n/10 Alessandra Viz-za-c-caro, Lo^^?^^Pc Opreni,
+ []
+
+
+Underfull \hbox (badness 1997) in paragraph at lines 193--199
+\OT1/cmr/m/n/10 Andrea Salles, Attilio Frangi, and Cyril
+ []
+
+
+Underfull \hbox (badness 1436) in paragraph at lines 201--207
+\OT1/cmr/m/n/10 hit Jain.  Nonau-tonomous spec-tral sub-
  []
 
 
@@ -2132,20 +2162,38 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-Underfull \hbox (badness 4505) in paragraph at lines 201--204
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]| []
+ []
+
+[24]
+Underfull \hbox (badness 1852) in paragraph at lines 209--216
+\OT1/cmr/m/n/10 0022-0396.  doi: $https : / / doi . org / 10 . 1006 /
+ []
+
+
+Underfull \hbox (badness 4505) in paragraph at lines 258--261
 \OT1/cmr/m/n/10 for the navier--stokes.  \OT1/cmr/m/it/10.03749 arXiv preprint
  []
 
 
-Underfull \hbox (badness 3417) in paragraph at lines 222--226
+Underfull \hbox (badness 3417) in paragraph at lines 263--267
 \OT1/cmr/m/n/10 Bifur-ca-tions to local and global modes
  []
 
 
-Underfull \hbox (badness 2662) in paragraph at lines 222--226
+Underfull \hbox (badness 2662) in paragraph at lines 263--267
 \OT1/cmr/m/n/10 in spa-tially devel-op-ing flows.  \OT1/cmr/m/it/10.03749 Phys-
 i-cal
  []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 )
 
@@ -2157,26 +2205,22 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 []| []
  []
 
-[24] (./main.aux)
+[25] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-03-26>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: C6D44ED8F0610CE8DF907E7C924CCE38;3988.
  ) 
 Here is how much of TeX's memory you used:
- 34633 strings out of 469626
- 693304 string characters out of 5471010
- 1096029 words of memory out of 5000000
- 60670 multiletter control sequences out of 15000+600000
+ 34662 strings out of 469626
+ 693729 string characters out of 5471010
+ 1096495 words of memory out of 5000000
+ 60689 multiletter control sequences out of 15000+600000
  664739 words of font info for 186 fonts, out of 8000000 for 9000
  1151 hyphenation exceptions out of 8191
- 99i,33n,131p,2375b,1461s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,33n,131p,1557b,1466s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pf
 b></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
@@ -2203,10 +2247,10 @@ dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2025/texmf-dis
 t/fonts/type1/public/doublestroke/dsrom10.pfb></usr/local/texlive/2025/texmf-di
 st/fonts/type1/public/amsfonts/euler/eufm10.pfb>
-Output written on main.pdf (24 pages, 543625 bytes).
+Output written on main.pdf (25 pages, 549589 bytes).
 PDF statistics:
- 908 PDF objects out of 1000 (max. 8388607)
- 665 compressed objects within 7 object streams
- 231 named destinations out of 1000 (max. 500000)
+ 954 PDF objects out of 1000 (max. 8388607)
+ 709 compressed objects within 8 object streams
+ 241 named destinations out of 1000 (max. 500000)
  203 words of extra memory for PDF output out of 10000 (max. 10000000)
 
