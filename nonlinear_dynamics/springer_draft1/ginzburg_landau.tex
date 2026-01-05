@@ -1,7 +1,7 @@
 \section{A Model Problem}
 \label{sec:ginzburg_landau}
 
-The asymptotic center-manifold derived in section~\ref{sec:center_manifold_derivation} is applied to a Ginzburg-Landau model described by a complex-conjugate pair of equations as,
+The asymptotic center-manifold derived in Section~\ref{sec:center_manifold_derivation} is applied to a Ginzburg-Landau model described by a complex-conjugate pair of equations as,
 \begin{subequations}
 	\label{eqn:ginzburg_landau}
 	\begin{align}
@@ -137,7 +137,7 @@ The parameter eigenvalues are non-resonant and therefore the coupling matrix $\G
 		0 &  0 
 	\end{bmatrix}. \nonumber 
 \end{align}
-In this particular case since the equilibrium state at the bifurcation point is trivial $(A=\veczero)$, the linear matrix $\Lnu$ which couples $A$ and $A^{*}$ to the extended variables is also a null matrix. Therefore, through the application of algorithm~\ref{algo:extended_direct_tangent}, the critical subspace is trivially extended as,
+In this particular case since the equilibrium state at the bifurcation point is trivial $(A=\veczero)$, the linear matrix $\Lnu$ which couples $A$ and $A^{*}$ to the extended variables is also a null matrix. Therefore, through the application of Algorithm~\ref{algo:extended_direct_tangent}, the critical subspace is trivially extended as,
 \begin{align}
 	(\lambda^{P}_{1} - \Lu)\Devec^{P}_{1} &= \veczero, \nonumber \\
 	%
@@ -162,7 +162,7 @@ resulting in the final extended matrices as,
 \end{align}
 where, both $\GammaP$ and $\DevMatrix_{P}$ are null matrices (of appropriate sizes). 
 
-Once $\EDevMatrix$ and $\Khat$ are known, algorithm~\ref{algo:normal_form} may now be applied to the extended system to obtain the center-manifold approximation to the desired order. Since $\GammaP$ is a trivial matrix $\Khat$ is diagonal and, all asymptotic vectors $\AsCenM_{i_{1},\ldots,i_{k}}$ can be evaluated independent of each other. For $m=4$, one obtains $T^{2}_{4} = 10$ terms at second order and $T^{3}_{4}=20$ terms at third order. The final reduced equations (reduced representation $\Param(\vecparv)$) are found to be,
+Once $\EDevMatrix$ and $\Khat$ are known, Algorithm~\ref{algo:normal_form} may now be applied to the extended system to obtain the center-manifold approximation to the desired order. Since $\GammaP$ is a trivial matrix $\Khat$ is diagonal and, all asymptotic vectors $\AsCenM_{i_{1},\ldots,i_{k}}$ can be evaluated independent of each other. For $m=4$, one obtains $T^{2}_{4} = 10$ terms at second order and $T^{3}_{4}=20$ terms at third order. The final reduced equations (reduced representation $\Param(\vecparv)$) are found to be,
 \begin{align}
 	\begin{aligned}
 		\dfrac{d \parv_{1}}{d t} =&
@@ -184,19 +184,19 @@ along with the complex conjugated equations for $\parv_{2}$ and $\parv_{4}$. One
 	\end{aligned}
 \end{align}
 
-The results of the asymptotic center-manifold approximations compared with the fully non-linear response of the Ginzburg-Landau system are shown in figure~\ref{fig:parameter_response}. The results compare very well for small $\delta'_{4}$ values, with progressive loss of accuracy for larger parameter variations which is typical of asymptotic results. 
+The results of the asymptotic center-manifold approximations compared with the fully nonlinear response of the Ginzburg-Landau system are shown in figure~\ref{fig:parameter_response}. The results compare very well for small $\delta'_{4}$ values, with progressive loss of accuracy for larger parameter variations which is typical of asymptotic results. 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.49\textwidth]{diffusion_response}
-	\caption{Spatial shape of the system response $(|A|)$ to perturbations of $\delta_{4}$ parameter. The solid lines indicate results of the non-linear simulations of the Ginzburg-Landau system and the dashed lines with markers indicate the results of the center-manifold approximation.}
+	\caption{Spatial shape of the system response $(|A|)$ to perturbations of $\delta_{4}$ parameter. The solid lines indicate results of the nonlinear simulations of the Ginzburg-Landau system and the dashed lines with markers indicate the results of the center-manifold approximation.}
 	\label{fig:parameter_response}
 \end{figure}
 
-A similar comparison for the angular frequency of the saturated limit-cycle is shown in figure~\ref{fig:parameter_omega}. The center-manifold approximation provides a fairly accurate reproduction of the non-linear angular frequency variation.
+A similar comparison for the angular frequency of the saturated limit-cycle is shown in figure~\ref{fig:parameter_omega}. The center-manifold approximation provides a fairly accurate reproduction of the nonlinear angular frequency variation.
 \begin{figure}
 	\centering
 	\includegraphics[width=0.49\textwidth]{diffusion_omega}
-	\caption{Variation of the final limit-cycle-oscillation angular frequency due to perturbations of $\delta_{4}$ parameter. The empty circles indicate results of the non-linear simulations of the Ginzburg-Landau system and the filled circles indicate the results of the center-manifold approximation.}
+	\caption{Variation of the final limit-cycle-oscillation angular frequency due to perturbations of $\delta_{4}$ parameter. The empty circles indicate results of the nonlinear simulations of the Ginzburg-Landau system and the filled circles indicate the results of the center-manifold approximation.}
 	\label{fig:parameter_omega}
 \end{figure}
 
@@ -272,7 +272,7 @@ The resulting extended matrices are given by
 \end{align}
 where $\GammaH$ is a trivial matrix and therefore $\Khat$ is diagonal.
 
-As done in section~\ref{sec:parameter-perturbation}, the application of algorithm~\ref{algo:normal_form} results in the evolution equations in their normal form for the reduced system,  
+As done in Section~\ref{sec:parameter-perturbation}, the application of Algorithm~\ref{algo:normal_form} results in the evolution equations in their normal form for the reduced system,  
 \begin{align}
 	\label{eqn:nonresonant_normal_form}
 	\begin{aligned}
@@ -284,15 +284,23 @@ As done in section~\ref{sec:parameter-perturbation}, the application of algorith
 		\dfrac{d \theta}{d t} =& +1.3\iota\theta.
 	\end{aligned}
 \end{align}
-Here, the substitutions $\parv_{1} \mapsto \parv$, $\parv_{2}\mapsto\parv^{*}$, $\parv_{3}\mapsto\theta$ and $\parv_{4}\mapsto\theta^{*}$, have already been performed. One can observe that the amplitude evolution of the original critical mode, denoted by $z$, only depends on the forcing amplitude $|\theta|$ and not on its instantaneous phase. The comarison of the response of the reduced system to that of the fully non-linear system is shown in figure~\ref{fig:nonresonant_response}. The response curves are nearly identical. 
+Here, the substitutions $\parv_{1} \mapsto \parv$, $\parv_{2}\mapsto\parv^{*}$, $\parv_{3}\mapsto\theta$ and $\parv_{4}\mapsto\theta^{*}$, have already been performed. One can observe that the amplitude evolution of the original critical mode, denoted by $z$, only depends on the forcing amplitude $|\theta|$ and not on its instantaneous phase. The comarison of the response of the reduced system to that of the fully nonlinear system is shown in figure~\ref{fig:nonresonant_response}. The response curves are nearly identical. 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.49\textwidth]{nonresonant_response}
-	\caption{Spatial shape of the system response $(|A|)$ to harmonic forcing with amplitude $|\theta|$. The solid lines indicate results of the non-linear simulations of the Ginzburg-Landau system and the dashed lines with markers indicate the results of the center-manifold approximation.}
+	\caption{Spatial shape of the system response $(|A|)$ to harmonic forcing with amplitude $|\theta|$. The solid lines indicate results of the nonlinear simulations of the Ginzburg-Landau system and the dashed lines with markers indicate the results of the center-manifold approximation.}
 	\label{fig:nonresonant_response}
 \end{figure}
 
 Since $|\theta|$ is an apriori known quantity which remains invariant in time, it can simply be treated as another constant paramter and, the effect of non-resonant harmonic forcing on the critical mode of the system can easily be understood by looking at the linear part of the reduced system, \ie $[-0.0258|\theta|^{2} + (1 + 0.0507|\theta|^{2})\iota]\parv$. The harmonic forcing effectively increases the angular frequency, but also induces a negative growth rate, and therefore a stabilizing effect on the original critical mode. The net result is that the original critical mode eventually decays to zero and vanishes, even if it may be initially excited, and the final response is simply the forced response to the harmonic forcing. Of course this may not always be the case and the forcing can induce a destabilizing behavior of the original critical mode. 
+
+The center-manifold is also calculated through the graph method presented in Algorithm~\ref{algo:graph_form} to test the instantaneous reconstruction of the fully nonlinear solutions, via equation~\eqref{eqn:inverse_map}. At a given time instance the parameterized coordinates are obtain through a simple projection $\vecparv(t) = \EAevMatrix^{\dagger}\evecu(t)$. The approximate solution on the center-manifold can then be readily obtained via equation~\eqref{eqn:asymptotic_normal_form} once the parameterized coordinates are known. Figure~\ref{fig:nonresonant_reconstruction} shows an instantaneous snapshot of the solution along with the reconstructed solution where a very good agreement can be seen between the two solutions.
+\begin{figure}
+	\centering
+	\includegraphics[width=0.49\textwidth]{nonresonant_reconstruction}
+	\caption{Real and imaginary parts of an instantaneous snapshot of the fully nonlinear Ginzburg-Landau solution (solid lines), as well as the reconstructed solution (dashed line with markers) in the case of non-resonant forcing  ($|\theta|=0.25$).}
+	\label{fig:nonresonant_reconstruction}
+\end{figure}
 
 
 \subsection{Case III: Resonant Forcing}
@@ -312,7 +320,7 @@ As in the previous subsection we again consider the case of the system forced wi
 		0 &  -\iota 
 	\end{bmatrix} \nonumber
 \end{align}
-The forcing shapes are again given by equation~\eqref{eqn:forcing_shapes} and the resulting forced system is again described by equation~\eqref{eqn:ginzburg_landau_forced}. Due to resonance, the matrix $\GammaH$ is no longer trivial and its individual entries are evaluated according to algorithm~\ref{algo:extended_direct_tangent} as,
+The forcing shapes are again given by equation~\eqref{eqn:forcing_shapes} and the resulting forced system is again described by equation~\eqref{eqn:ginzburg_landau_forced}. Due to resonance, the matrix $\GammaH$ is no longer trivial and its individual entries are evaluated according to Algorithm~\ref{algo:extended_direct_tangent} as,
 \begin{align}
 	 (\vfield{\gamma}^{H}_{1})_{1} =& \Aevec_{1}^{\dagger}\fieldf^{H}_{1}, &&
 	%
@@ -356,7 +364,7 @@ The extended matrices being,
 \end{align}
 where, $\GammaH$ is no longer trivial and $\Khat$ has an upper triangular structure.
 
-The asymptotic center-manifold evaluation through the application of algorithm~\ref{algo:normal_form} results in the following reduced system,
+The asymptotic center-manifold evaluation through the application of Algorithm~\ref{algo:normal_form} results in the following reduced system,
 \begin{align}
 	\label{eqn:resonant_normal_form}
 	\begin{aligned}
@@ -374,12 +382,20 @@ The asymptotic center-manifold evaluation through the application of algorithm~\
 \end{align}
 and its conjugate for $\parv^{*}$ and $\theta^{*}$. Clearly, in the case of resonant forcings, the original critical mode evolution depends on the amplitude as well as the phase of the external forcing. 
 
-A comparison of the system response between the non-linear results and the center-manifold approximation is shown in figure~\ref{fig:resonant_response}. Again a good agreement is found for small values of $|\theta|$ with systematic deviation for larger amplitudes typical of asymptotic methods. 
+A comparison of the system response between the nonlinear results and the center-manifold approximation is shown in figure~\ref{fig:resonant_response}. Again a good agreement is found for small values of $|\theta|$ with systematic deviation for larger amplitudes typical of asymptotic methods. 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.49\textwidth]{resonant_response}
-	\caption{Spatial shape of the system response $(|A|)$ to resonant harmonic forcing with amplitude $|\theta|$. The solid lines indicate results of the non-linear simulations of the Ginzburg-Landau system and the dashed lines with markers indicate the results of the center-manifold approximation.}
+	\caption{Spatial shape of the system response $(|A|)$ to resonant harmonic forcing with amplitude $|\theta|$. The solid lines indicate results of the nonlinear simulations of the Ginzburg-Landau system and the dashed lines with markers indicate the results of the center-manifold approximation.}
 	\label{fig:resonant_response}
+\end{figure}
+
+As done in Section~\ref{sec:non-resonant}, the instantaneous solution is reconstructed using the graph-method for center-manifold approximation. Figure~\ref{fig:resonant_reconstruction} shows the comparison between the instantaneous nonlinear and approximate solutions and a good agreement between the two can be observed. 
+\begin{figure}
+	\centering
+	\includegraphics[width=0.49\textwidth]{resonant_reconstruction}
+	\caption{Real and imaginary parts of an instantaneous snapshot of the fully nonlinear Ginzburg-Landau solution (solid lines), as well as the reconstructed solution (dashed line with markers) in the case of resonant forcing $(|\theta|=0.25)$.}
+	\label{fig:resonant_reconstruction}
 \end{figure}
 
 As a final note, one may observe that performing the substitutions, $\delta'_{4} \mapsto 0$ in equation~\eqref{eqn:parameter_normal_form} and, $\theta \mapsto 0$ in equations~\eqref{eqn:nonresonant_normal_form} and \eqref{eqn:resonant_normal_form}, reduces all three equations to,

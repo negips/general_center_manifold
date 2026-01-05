@@ -16,7 +16,7 @@ The evolution law may arise from a finite set of ordinary differential equations
 	\label{eqn:fixed_point}
 	\fieldf(\fieldub,\vecMu) = \veczero.
 \end{align}
-We may consider the evolution of the deviation from the fixed point solution $\vecu = \vfield{u} - \vfield{u}^{b}$, and divide the evolution operator into its linear and non-linear parts as,
+We may consider the evolution of the deviation from the fixed point solution $\vecu = \vfield{u} - \vfield{u}^{b}$, and divide the evolution operator into its linear and nonlinear parts as,
 \begin{align}
 	\frac{\partial \vecu}{\partial t} = \Lu \vecu + \NonLin(\vecu,\vecMu)
 \end{align}
@@ -27,11 +27,11 @@ where,
 \end{align}
 Furthermore, it is assumed that at $\vecmu = \vecMu$ the system undergoes a multiple co-dimension bifurcation and that the linearized operator $\Lu\in\mathds{C}^{N\times N}$ has a discrete set of $n$ critical eigenvalues $\lambda^{C}_{i},\ i\in 1,\ldots,n$, with zero growth rate $(\mathfrak{Re}(\lambda^{C}_{i}) = 0)$. This includes both purely real critical eigenvalues with $\mathfrak{Re}(\lambda^{C}_{i}) = 0,\ \mathfrak{Im}(\lambda^{C}_{i}) = 0$, and purely imaginary critical eigenvalues with $\mathfrak{Re}(\lambda^{C}_{i}) = 0,\ \mathfrak{Im}(\lambda^{C}_{i}) \ne 0$. Accordingly, the system has $n$ critical eigenpairs $\Tuple{\lambda^{C}_{i},\Devec_{i}}, i\in 1\ldots n$, where $\Devec_{i}$ represents the eigenvector corresponding to $\lambda^{C}_{i}$. For real systems the purely imaginary critical eigenvalues will occur in conjugate pairs. 
 
-The adjoint of the direct linearized operator $\Lu$ is denoted as $\Lu^{\dagger}$ which also has $n$ critical eigenpairs $\Tuple{\lambda^{C*}_{i}, \Aevec_{i}}$. The scaling of the eigenvectors of the direct and adjoint operators may be defined such that they satisfy the birthogonality condition
+The adjoint of the direct linearized operator $\Lu$ is denoted as $\Lu^{\dagger}$ which also has $n$ critical eigenpairs $\Tuple{\lambda^{C*}_{i}, \Aevec_{i}}$. The scaling of the eigenvectors of the direct and adjoint operators may be defined such that they satisfy the biorthogonality condition
 \begin{eqnarray}
 	\langle\Aevec_{i},\Devec_{j}\rangle = \Aevec^{\dagger}_{i}\Devec_{j} = \delta_{i,j} \label{eqn:std_biorthogonality},
 \end{eqnarray}
-where $\langle\cdot,\cdot\rangle$ is the standard inner-product and $\delta_{i,j}$ is the Kronecker-delta fuction. The superscript $^{\dagger}$ is used here to indicate a complex-conjugated transpose of vectors and matrices. For scalars complex-conjugation is indicated by a $^{*}$ superscript. The superscript $^{H}$ which is often used for the same purpose is reserved for objects referring to harmonic forcings. One may define the matrices $\DevMatrix$ and $\AevMatrix$, whose columns comprise of the $n$ critical eigenvectors of $\Lu$ and $\Lu^{\dagger}$as,
+where $\langle\cdot,\cdot\rangle$ is the standard inner-product and $\delta_{i,j}$ is the Kronecker-delta function. The superscript $^{\dagger}$ is used here to indicate a complex-conjugated transpose of vectors and matrices. For scalars complex-conjugation is indicated by a $^{*}$ superscript. The superscript $^{H}$ which is often used for the same purpose is reserved for objects referring to harmonic forcings. One may define the matrices $\DevMatrix$ and $\AevMatrix$, whose columns comprise of the $n$ critical eigenvectors of $\Lu$ and $\Lu^{\dagger}$as,
 \begin{subequations}
 	\label{eqn:eigenvectors_std}
 	\begin{align}
@@ -69,7 +69,7 @@ Denoting the new harmonically forced evolution operator as,
 \begin{align}
 	\fieldf'(\vecu,\vecnu,\vectheta) =  \fieldf(\fieldub + \vecu ,\vecMu + \vecnu) + \fieldf^{H}(\vectheta),
 \end{align}
-one may again separate out the linear and non-linear parts as,
+one may again separate out the linear and nonlinear parts as,
 \begin{align}
 	%\label{eqn:split_operators}
 	\Lu =& \left[\left.\dfrac{\partial \fieldf'}{\partial \vecu}\right|_{(\vecu=\veczero,\vecnu=\veczero,\vectheta=\veczero)}\right] =& \left[\left.\dfrac{\partial \fieldf}{\partial \fieldu}\right|_{(\fieldu=\fieldub,\vecmu=\vecMu)}\right], \nonumber \\
@@ -94,15 +94,15 @@ The diagonal matrix for the harmonic angular frequencies is represented by $\Lam
 			\frac{\partial \vecu}{\partial t} =& \Lu\vecu + \Lnu\vecnu +\Ltheta\vectheta + \NonLin'(\vecu,\vecnu,\vectheta) \\
 			%
 			\label{eqn:evolution_extended2}
-			\frac{d \vecnu}{d t} = & \mathbf{\Lambda}_{P}\vecnu \\
+			\frac{d \vecnu}{d t} = & \mathbf{\Lambda}_{P}\vecnu, \\
 			%
 			\label{eqn:evolution_extended3}
-			\frac{d \vectheta}{d t} = &  \mathbf{\Lambda}_{H}\vectheta, 
+			\frac{d \vectheta}{d t} = &  \mathbf{\Lambda}_{H}\vectheta. 
 	\end{align}
 	\label{eqn:evolution_extended}
 \end{subequations}
 
-An overhead hat notation, $\widehat{\cdot}$ , is used to refer to variables and operators associated with the extend space, so that the new state vector, non-linear term and the linearized direct and adjoint operators are denoted by $\efield{u}$, $\ENonLin$, $\ExtL$ and $\ExtL^{\dagger}$, that are defined as,
+An overhead hat notation, $\widehat{\cdot}$ , is used to refer to variables and operators associated with the extend space, so that the new state vector, nonlinear term and the linearized direct and adjoint operators are denoted by $\efield{u}$, $\ENonLin$, $\ExtL$ and $\ExtL^{\dagger}$, that are defined as,
 \begin{align}
 	\evecu = [\vecu; \vecnu; \vectheta], &&	% 
 	\ENonLin =[\NewNonLin; \veczero; \veczero], \nonumber
@@ -452,7 +452,7 @@ This completes the extension of the system and the subspace structure for both t
 	\end{algorithmic}
 \end{algorithm}
 
-While the structure of the extended subspaces has been evaluated, reformulation of the problem as an extended system may have detrimental practical implications when considering large systems. Practical methods for solving such systems often rely on numerical algorithms that exploit inherent structure of the problem (Hermicity for conjugate-gradient solvers for example). In such a scenario, additional degrees of freedom can potential destroy the system symmetries and may require substantial changes in the numerical approach to the system solution. This would be particularly true of asymptotic approaches that require resolvent calculations \citep{coullet83,cabre05,sipp07,haragus11,carini15,gallaire16,haro16,jain22,negi24}, which itself can be a computationally challenging task for large systems. Such a scenario would be highly undesireable. However, as it turns out, at least some of the parameterizations involved in the evaluation of center-manifolds do not in fact require the use of the extended system after the initial evaluation of the extended tangent space. All higher order calculations can be performed using the original linear system $\Lu$. This is clarified in the next section where the parameterization method and its asymptotic terms are explicitly built. 
+While the structure of the extended subspaces has been evaluated, reformulation of the problem as an extended system may have detrimental practical implications when considering large systems. Practical methods for solving such systems often rely on numerical algorithms that exploit inherent structure of the problem (Hermicity for conjugate-gradient solvers for example). In such a scenario, additional degrees of freedom can potential destroy the system symmetries and may require substantial changes in the numerical approach to the system solution. This would be particularly true of asymptotic approaches that require resolvent calculations \citep{coullet83,cabre05,sipp07,haragus11,carini15,gallaire16,haro16,jain22,negi24}, which itself can be a computationally challenging task for large systems. Such a scenario would be highly undesirable. However, as it turns out, at least some of the parameterizations involved in the evaluation of center-manifolds do not in fact require the use of the extended system after the initial evaluation of the extended tangent space. All higher order calculations can be performed using the original linear system $\Lu$. This is clarified in the next section where the parameterization method and its asymptotic terms are explicitly built. 
 
 
 %First however, we prove the following results which will come in handy.  

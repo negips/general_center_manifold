@@ -1,7 +1,7 @@
 \section{Center Manifold for the Extended System}
 \label{sec:center_manifold_derivation}
 
-In the context of invariant manifold theory, several previous approaches for the approximation of such manifolds can be effectively viewed  as instances of what is referred to as the parametrization method. The framework was introduced in a series of papers by \citet{cabre03a,cabre03b,cabre05}, although, a particular instance of such an approach was presented earlier by \citet{coullet83} for the evaluation of the normal form of center manifolds. Nevertheless, subsequent works by \citet*{carini15,jain22,negi24} can be fruitfully viewed through the lens of the parameterization method. Within this framework the reduced representation of the invariant manifold being approximated can be chosen in an arbitrary manner depending on the particular requirements of the reduction being sought. Amongst the plethora of arbitrary choices, the normal form is an important representation that is often sought since it results in the simplest form of the reduced equations. In the next subsection the normal form representation for the center-manifold of the extended system is deduced. 
+In the context of invariant manifold theory, several previous approaches for the approximation of such manifolds can be effectively viewed  as instances of what is referred to as the parametrization method. The framework was introduced in a series of papers by \citet{cabre03a,cabre03b,cabre05}, although, a particular instance of such an approach was presented earlier by \citet{coullet83} for the evaluation of the normal form of center manifolds. Nevertheless, subsequent works by \citet{carini15,jain22,vizzaccaro22,negi24} can be fruitfully viewed through the lens of the parameterization method. Within this framework the reduced representation of the invariant manifold being approximated can be chosen in an arbitrary manner depending on the particular requirements of the reduction being sought. Amongst the plethora of arbitrary choices, the normal form is an important representation that is often sought since it results in the simplest form of the reduced equations. In the next subsection the normal form representation for the center-manifold of the extended system is deduced. 
 
 To simplify notation for multiple indices used hereafter, a multi-dimensional index set $\IndexSet{k}{a,b}$ is introduced, which is an \emph{ordered} set of all  $k$-tuples $(i_{1},i_{2}\ldots,i_{k})$, defined as, 
 \begin{equation}
@@ -51,6 +51,11 @@ $\Param$ will also be referred to as the reduced representation (of the extended
 \begin{align}
 	\CenM:\mathds{C}^{m} \rightarrow \mathds{C}^{M}.
 \end{align}
+This leads to the primary equation for the invariant manifold,
+\begin{align}
+	\label{eqn:invariant_manifold}
+	\left(\dfrac{\partial \CenM}{\partial \vecparv}\right)\cdot\Param = \ExtL\CenM + \ENonLin(\CenM).
+\end{align}
  At this stage neither $\Param(\vecparv)$ nor $\CenM(\vecparv)$ have been specified in any form, since, the parameterization can be arbitrarily chosen. In order to obtain a normal form of the reduced system one may expand both $\Param(\vecparv)$ and $\CenM(\vecparv)$ as a formal power series in $\vecparv$ and constrain the asymptotic form of $\Param$ to be in a normal form for the parameterized coordinates $\vecparv$. The asymptotic form of $\CenM$ is obtained by introducing the asymptotic expansions into equation~\eqref{eqn:evolution_extended_compact} and solving the terms order-by-order. 
 
 In what follows, Einstein summation is \emph{not} assumed for repeated indices unless otherwise specified. We assume the power series expansions as,
@@ -82,7 +87,7 @@ Here the terms $\AsParam_{i_{1},i_{2},i_{3},\ldots} \in \mathds{C}^{m}$, while, 
 \end{align}
 which is obtained via the collection of terms with similar powers. 
 
-Substitution of the power series expansions into equation~\eqref{eqn:evolution_extended_compact} results in 
+Substitution of the power series expansions into equation~\eqref{eqn:invariant_manifold} results in,
 \begin{align}
 	\label{eqn:asymptotic_substitution}
 	\begin{split}
@@ -98,7 +103,7 @@ Here $\AsParamEl^{\alpha}_{j_{1}}$ represents the $\alpha^{th}$ element of the v
 \subsubsection{Asymptotic terms of $\mathcal{O}(|\parv|)$}
 \label{sec:normal_form_O1}
 
-At first order the non-linear terms do not contribute and one simply obtains,
+At first order the nonlinear terms do not contribute and one simply obtains,
 \begin{align}
 		\label{eqn:asymptotic_O1}
 		\sum^{[1,m]}_{(1)}\Big( \sum^{m}_{\alpha=1}\AsParamEl^{\alpha}_{i_{1}}\AsECenM_{\alpha} - \ExtL\AsECenM_{i_{1}} \Big)\parv_{i_{1}} = \veczero.
@@ -116,7 +121,7 @@ This reduces equation~\eqref{eqn:asymptotic_O1} to equation~\eqref{eqn:extended_
 \subsubsection{Asymptotic terms of $\mathcal{O}(|\parv|^{2})$}
 \label{sec:normal_form_O2}
 
-At second order the non-linear terms contribute and one obtains the following equation,
+At second order the nonlinear terms contribute and one obtains the following equation,
 \begin{align}
 	\label{eqn:asymptotic_O2}
 	\begin{split}
@@ -340,7 +345,7 @@ Clearly, $\mathbf{r}^{(2)}=\veczero$ and an $\omega$ that is non-resonant with $
 \end{align}
 where, $\ResolventOp$ is now the resolvent operator for the standard linear system $\Lu$.
 
-The asymptotic terms can now be examined sequentially noting that by construction the extended variables vanish for the non-linear term, which has the form $\ENonLin = [\NewNonLin; \veczero; \veczero]$, and hence so do all $\AsEForcing_{i_{1},\ldots,i_{k}} = [\AsForcing_{i_{1},\ldots,i_{k}};\veczero;\veczero]$ derived from it. Starting at $\mathcal{O}(|\vecparv|^{2})$ and $(i_{1},i_{2})=(1,1)$, one has the resolvent equation in the extended system,
+The asymptotic terms can now be examined sequentially noting that by construction the extended variables vanish for the nonlinear term, which has the form $\ENonLin = [\NewNonLin; \veczero; \veczero]$, and hence so do all $\AsEForcing_{i_{1},\ldots,i_{k}} = [\AsForcing_{i_{1},\ldots,i_{k}};\veczero;\veczero]$ derived from it. Starting at $\mathcal{O}(|\vecparv|^{2})$ and $(i_{1},i_{2})=(1,1)$, one has the resolvent equation in the extended system,
 \begin{align}
 	\label{eqn:asymptotic_O2_11}
 		\ResolventHat{\omega_{1,1}}^{-1}\AsECenM_{1,1} + \sum^{m}_{j=1}\AsParamEl^{j}_{1,1}\EDevec_{j} 
@@ -352,7 +357,7 @@ The extended variables vanish for $\AsEForcing_{1,1}$ and therefore, regardless 
 	\Resolvent{\omega_{1,1}}^{-1}\AsCenM_{1,1} + \sum^{n}_{j=1}\AsParamEl^{j}_{1,1}\Devec_{j} 
 	= \AsForcing_{1,1},
 \end{align}
-with $\AsParamEl^{j}_{1,1} = 0$, for $j\in \{n+1,\ldots,m\}$. 
+with $\AsParamEl^{j}_{1,1} = 0$, for $j\in \{n+1,\ldots,m\}$, since the projection of $\AsEForcing_{1,1}$ onto the subspaces of the extended modes always vanishes due to the special structure of the extended adjoint eigenvectors. 
 
 For the next term $(i_{1},i_{2})=(1,2)$, the right hand side now also contains contributions $\hhatbf^{O}_{1,2}$ due to the off-diagonal terms of $\Khat$. These however can only come from the preceeding term, $\AsECenM_{1,1}$, and therefore off-diagonal contributions also have the form $\AsEForcingO_{1,2} = [\AsForcingO_{1,2};\veczero;\veczero]$, which further implies that $\AsECenM_{1,2} = [\AsCenM_{1,2};\veczero;\veczero]$. The resulting equation being, 
 \begin{align}
@@ -362,7 +367,7 @@ For the next term $(i_{1},i_{2})=(1,2)$, the right hand side now also contains c
 \end{align}
 with $\AsParamEl^{j}_{1,2} = 0$, for $j\in \{n+1,\ldots,m\}$.
 
-This logic repeats for all $(i_{1},i_{2})\in\IndexSet{2}{1,m}$ and all unknown vectors at second order have the form $\AsECenM_{i_{1},i_{2}} = [\AsCenM_{i_{1},i_{2}}; \veczero; \veczero]$ and therefore the resolvent equations can be solved using the original linear system $\Lu$. 
+This logic repeats for all $(i_{1},i_{2})\in\IndexSet{2}{1,m}$ and all unknown vectors at second order have the form $\AsECenM_{i_{1},i_{2}} = [\AsCenM_{i_{1},i_{2}}; \veczero; \veczero]$, with $\AsParamEl^{j}_{i_{1},i_{2}} = 0$, for $j\in \{n+1,\ldots,m\}$, and therefore the resolvent equations can be solved using the original linear system $\Lu$. 
 
 At $\mathcal{O}(|\vecparv|^{3})$ the right hand side also has contributions from $\AsEForcingL_{i_{1},i_{2},i_{3}}$ that arise from the lower order asymptotic terms. However, these arise only due to the second order asymptotic terms $\AsECenM_{i_{1},i_{2}}$ and therefore, $\AsEForcingL_{i_{1},i_{2},i_{3}} = [\AsForcingL_{i_{1},i_{2},i_{3}}; \veczero; \veczero]$. The same logical arguments presented earlier apply and hence all third order asymptotic terms also have the form $\AsECenM_{i_{1},i_{2},i_{3}} = [\AsCenM_{i_{1},i_{2},i_{3}}; \veczero; \veczero]$ and only require the standard linear system $\Lu$ for their evaluation. As noted earlier, equations for the higher order asymptotic terms have the same essential structure as the third-order equations and hence at all orders the asymptotic terms have the form $\AsECenM_{i_{1},\ldots,i_{k}} = [\AsCenM_{i_{1},\ldots,i_{k}}; \veczero; \veczero]$ and only require the standard linear system $\Lu$ for their evaluation. 
 
@@ -408,7 +413,7 @@ which then defines the normal form coefficients for $j\in\{1,\ldots,n\}$,
 			= \widehat{K}_{j,j}
 		\end{split} \\
 		%
-		0 = & \textit{otherwise},
+		0 & \textit{otherwise},
 	\end{cases}
 \end{equation}
 and $\Aevec^{\dagger}_{j}\AsCenM_{i_{1},\ldots,i_{k}} = 0$ in case of resonance. 
@@ -417,9 +422,9 @@ For all $j\in\{n+1,\ldots,m\}$,
 	\label{eqn:resonance_modification2_Ok_std}
 	\AsParamEl^{j}_{i_{1},\ldots,i_{k}} =&	0,
 \end{align}
-regardless of resonance.
+regardless of resonance. Note that in the work of \cite{vizzaccaro24}, the fact that $\AsParamEl^{j}_{i_{1},\ldots,i_{k}} =	0$, for $j>n$, had to be imposed arbitrarily, although with physical justification. With the detailed examination of the adjoint vectors $\What$, this fact emerges automatically and requires no additional argumentation. 
 
-The entire procedure for the evaluation of the normal form is presented succinctly in algorithm~\ref{algo:normal_form}. 
+The entire procedure for the evaluation of the normal form is presented succinctly in Algorithm~\ref{algo:normal_form}. 
  \begin{algorithm}
 	\caption{Center--Manifold: Normal form}\label{algo:normal_form}
 	\begin{algorithmic}[0]
@@ -428,7 +433,7 @@ The entire procedure for the evaluation of the normal form is presented succinct
 		\Require Tangent Space: $\AevMatrix^{\dagger}\Lu \DevMatrix = \LambdaC$.
 		\LComment{Center subspace dimension: $n$.} 
 		\Require Extension via $\vecnu, \vectheta$ and $\NewNonLin(\vecu,\vecnu,\vectheta)$.
-		\State Evaluate $\EDevMatrix,\Khat$ via algorithm~\ref{algo:extended_direct_tangent}. 
+		\State Evaluate $\EDevMatrix,\Khat$ via Algorithm~\ref{algo:extended_direct_tangent}. 
 		\LComment{Center subspace dim.: $m = n + p + h$.} 
 		\Require Maximum Asymptotic order: $k_{max}$
 		\LComment{Substitute asymptotic expansions}

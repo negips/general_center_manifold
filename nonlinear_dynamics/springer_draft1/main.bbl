@@ -1,159 +1,13 @@
-\begin{thebibliography}{38}
+\begin{thebibliography}{40}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[Carr(1982)]{carr82}
-Jack Carr.
-\newblock \emph{Applications of centre manifold theory}, volume~35.
-\newblock Springer Science \& Business Media, 1982.
-
-\bibitem[Carr and Muncaster(1983{\natexlab{a}})]{carr83b}
-Jack Carr and Robert~G Muncaster.
-\newblock The application of centre manifolds to amplitude expansions. i.
-  ordinary differential equations.
-\newblock \emph{Journal of Differential Equations}, 50\penalty0 (2):\penalty0
-  260--279, 1983{\natexlab{a}}.
-\newblock ISSN 0022-0396.
-\newblock \doi{10.1016/0022-0396(83)90077-3}.
-
-\bibitem[Carr and Muncaster(1983{\natexlab{b}})]{carr83}
-Jack Carr and Robert~G Muncaster.
-\newblock The application of centre manifolds to amplitude expansions. ii.
-  infinite dimensional problems.
-\newblock \emph{Journal of differential equations}, 50\penalty0 (2):\penalty0
-  280--288, 1983{\natexlab{b}}.
-
-\bibitem[Sijbrand(1985)]{sijbrand85}
-Jan Sijbrand.
-\newblock Properties of center manifolds.
-\newblock \emph{Transactions of the American Mathematical Society},
-  289\penalty0 (2):\penalty0 431--469, 1985.
-\newblock ISSN 00029947.
-
-\bibitem[Guckenheimer and Holmes(1983)]{guckenheimer83}
-John Guckenheimer and Philip Holmes.
-\newblock \emph{Nonlinear Oscillations, Dynamical Systems, and Bifurcations of
-  Vector Fields}.
-\newblock Springer Science \& Business Media, New York, 1983.
-\newblock \doi{10.1007/b97481}.
-
-\bibitem[Wiggins(2003)]{wiggins03}
-Stephen Wiggins.
-\newblock \emph{Introduction to Applied Nonlinear Dynamical Systems and Chaos}.
-\newblock Springer-Verlag New York, 2003.
-\newblock \doi{10.1007/b97481}.
-
-\bibitem[Haragus and G\'{e}rard(2011)]{haragus11}
-Mariana Haragus and Iooss G\'{e}rard.
-\newblock \emph{Local Bifurcations, Center Manifolds, and Normal Forms in
-  Infinite-Dimensional Dynamical Systems}.
-\newblock Springer-Verlag, New York, 2011.
-\newblock \doi{10.1007/978-0-85729-112-7}.
-
-\bibitem[Roberts(1989)]{roberts89}
-A.~J. Roberts.
-\newblock The utility of an invariant manifold description of the evolution of
-  a dynamical system.
-\newblock \emph{SIAM Journal on Mathematical Analysis}, 20\penalty0
-  (6):\penalty0 1447--1458, 1989.
-\newblock \doi{10.1137/0520094}.
-
-\bibitem[Roberts(2014)]{roberts14}
-Anthony~John Roberts.
-\newblock \emph{Model emergent dynamics in complex systems}.
-\newblock SIAM, 2014.
-
-\bibitem[Sipp and Lebedev(2007)]{sipp07}
-D.~Sipp and A.~Lebedev.
-\newblock Global stability of base and mean flows: a general approach and its
-  applications to cylinder and open cavity flows.
-\newblock \emph{Journal of Fluid Mechanics}, 593:\penalty0 333–358, 2007.
-\newblock \doi{10.1017/S0022112007008907}.
-
-\bibitem[Cross and Greenside(2009)]{cross09}
-Michael Cross and Henry Greenside.
-\newblock \emph{Pattern Formation and Dynamics in Nonequilibrium Systems}.
-\newblock Cambridge University Press, 2009.
-
-\bibitem[Meliga and Chomaz(2011)]{meliga11}
-Philippe Meliga and Jean-Marc Chomaz.
-\newblock An asymptotic expansion for the vortex-induced vibrations of a
-  circular cylinder.
-\newblock \emph{Journal of Fluid Mechanics}, 671:\penalty0 137–167, 2011.
-\newblock \doi{10.1017/S0022112010005550}.
-
-\bibitem[Meliga et~al.(2012)Meliga, Gallaire, and Chomaz]{meliga12}
-Philippe Meliga, François Gallaire, and Jean-Marc Chomaz.
-\newblock A weakly nonlinear mechanism for mode selection in swirling jets.
-\newblock \emph{Journal of Fluid Mechanics}, 699:\penalty0 216–262, 2012.
-\newblock \doi{10.1017/jfm.2012.93}.
-
-\bibitem[Stuart(1960)]{stuart60}
-J.~T. Stuart.
-\newblock On the non-linear mechanics of wave disturbances in stable and
-  unstable parallel flows part 1. the basic behaviour in plane poiseuille flow.
-\newblock \emph{Journal of Fluid Mechanics}, 9\penalty0 (3):\penalty0
-  353–370, 1960.
-\newblock \doi{10.1017/S002211206000116X}.
-
-\bibitem[Watson(1960)]{watson60}
-J.~Watson.
-\newblock On the non-linear mechanics of wave disturbances in stable and
-  unstable parallel flows part 2. the development of a solution for plane
-  {P}oiseuille flow and for plane {C}ouette flow.
-\newblock \emph{Journal of Fluid Mechanics}, 9\penalty0 (3):\penalty0
-  371–389, 1960.
-\newblock \doi{10.1017/S0022112060001171}.
-
-\bibitem[Newell and Whitehead(1969)]{newell69}
-Alan~C. Newell and J.~A. Whitehead.
-\newblock Finite bandwidth, finite amplitude convection.
-\newblock \emph{Journal of Fluid Mechanics}, 38\penalty0 (2):\penalty0
-  279–303, 1969.
-\newblock \doi{10.1017/S0022112069000176}.
-
-\bibitem[Fujimura(1991)]{fujimara91}
-K.~Fujimura.
-\newblock Methods of centre manifold and multiple scales in the theory of
-  weakly nonlinear stability for fluid motions.
-\newblock \emph{Proceedings: Mathematical and Physical Sciences}, 434\penalty0
-  (1892):\penalty0 719--733, 1991.
-\newblock ISSN 09628444.
-
-\bibitem[Cox and Roberts(1991)]{cox91}
-S.~M. Cox and A.~J. Roberts.
-\newblock Centre manifolds of forced dynamical systems.
-\newblock \emph{The Journal of the Australian Mathematical Society. Series B.
-  Applied Mathematics}, 32\penalty0 (4):\penalty0 401–436, 1991.
-\newblock \doi{10.1017/S0334270000008511}.
-
-\bibitem[Roberts(1997)]{roberts97}
-A.J. Roberts.
-\newblock Low-dimensional modelling of dynamics via computer algebra.
-\newblock \emph{Computer Physics Communications}, 100\penalty0 (3):\penalty0
-  215--230, 1997.
-\newblock ISSN 0010-4655.
-\newblock \doi{10.1016/S0010-4655(96)00162-2}.
-
-\bibitem[Coullet and Spiegel(1983)]{coullet83}
-P.~H. Coullet and E.~A. Spiegel.
-\newblock Amplitude equations for systems with competing instabilities.
-\newblock \emph{SIAM Journal on Applied Mathematics}, 43\penalty0 (4):\penalty0
-  776--821, 1983.
-\newblock \doi{10.1137/0143052}.
-
-\bibitem[Carini et~al.(2015)Carini, Auteri, and Giannetti]{carini15}
-M.~Carini, F.~Auteri, and F.~Giannetti.
-\newblock Centre-manifold reduction of bifurcating flows.
-\newblock \emph{Journal of Fluid Mechanics}, 767:\penalty0 109–145, 2015.
-\newblock \doi{10.1017/jfm.2015.3}.
-
 \bibitem[Cabr{\'e} et~al.(2003{\natexlab{a}})Cabr{\'e}, Fontich, and De~la
   Llave]{cabre03a}
-Xavier Cabr{\'e}, Ernest Fontich, and Rafael De~la Llave.
+X.~Cabr{\'e}, E.~Fontich, and R.~De~la Llave.
 \newblock The parameterization method for invariant manifolds i: manifolds
   associated to non-resonant subspaces.
 \newblock \emph{Indiana University mathematics journal}, pages 283--328,
@@ -161,49 +15,45 @@ Xavier Cabr{\'e}, Ernest Fontich, and Rafael De~la Llave.
 
 \bibitem[Cabr{\'e} et~al.(2003{\natexlab{b}})Cabr{\'e}, Fontich, and De~la
   Llave]{cabre03b}
-Xavier Cabr{\'e}, Ernest Fontich, and Rafael De~la Llave.
+X.~Cabr{\'e}, E.~Fontich, and R.~De~la Llave.
 \newblock The parameterization method for invariant manifolds ii: regularity
   with respect to parameters.
 \newblock \emph{Indiana University mathematics journal}, pages 329--360,
   2003{\natexlab{b}}.
 
 \bibitem[Cabr{\'e} et~al.(2005)Cabr{\'e}, Fontich, and De~La~Llave]{cabre05}
-Xavier Cabr{\'e}, Ernest Fontich, and Rafael De~La~Llave.
+X.~Cabr{\'e}, E.~Fontich, and R.~De~La~Llave.
 \newblock The parameterization method for invariant manifolds iii: overview and
   applications.
 \newblock \emph{Journal of Differential Equations}, 218\penalty0 (2):\penalty0
   444--515, 2005.
 
-\bibitem[Haro et~al.(2016)Haro, Canadell, Figueras, Luque, Mondelo,
-  et~al.]{haro16}
-Alex Haro, Marta Canadell, Jordi-Lluis Figueras, Alejandro Luque, Josep~Maria
-  Mondelo, et~al.
-\newblock \emph{The parameterization method for invariant manifolds}.
-\newblock Springer, 2016.
+\bibitem[Carini et~al.(2015)Carini, Auteri, and Giannetti]{carini15}
+M.~Carini, F.~Auteri, and F.~Giannetti.
+\newblock Centre-manifold reduction of bifurcating flows.
+\newblock \emph{Journal of Fluid Mechanics}, 767:\penalty0 109–145, 2015.
+\newblock \doi{10.1017/jfm.2015.3}.
 
-\bibitem[Jain and Haller(2022)]{jain22}
-Shobhit Jain and George Haller.
-\newblock How to compute invariant manifolds and their reduced dynamics in
-  high-dimensional finite element models.
-\newblock \emph{Nonlinear dynamics}, 107\penalty0 (2):\penalty0 1417--1450,
-  2022.
+\bibitem[Carr(1982)]{carr82}
+J.~Carr.
+\newblock \emph{Applications of centre manifold theory}, volume~35.
+\newblock Springer Science \& Business Media, 1982.
 
-\bibitem[Vizzaccaro et~al.(2022)Vizzaccaro, Opreni, Frangi, and
-  Touz{\'e}]{vizzaccaro22}
-Alessandra Vizzaccaro, Lo\"{i}c Opreni, Andrea~Salles, Attilio Frangi, and
-  Cyril Touz{\'e}.
-\newblock High order direct parametrisation of invariant manifolds for model
-  order reduction of finite element structures: application to large amplitude
-  vibrations and uncovering of a folding point.
-\newblock \emph{Nonlinear Dynamics}, 110\penalty0 (1):\penalty0 525--571, 2022.
+\bibitem[Carr and Muncaster(1983{\natexlab{a}})]{carr83}
+J.~Carr and R.~G. Muncaster.
+\newblock The application of centre manifolds to amplitude expansions. ii.
+  infinite dimensional problems.
+\newblock \emph{Journal of differential equations}, 50\penalty0 (2):\penalty0
+  280--288, 1983{\natexlab{a}}.
 
-\bibitem[Thurnher et~al.(2024)Thurnher, Haller, and Jain]{thurnher24}
-Thomas Thurnher, George Haller, and Shobhit Jain.
-\newblock Nonautonomous spectral submanifolds for model reduction of nonlinear
-  mechanical systems under parametric resonance.
-\newblock \emph{Chaos: An Interdisciplinary Journal of Nonlinear Science},
-  34\penalty0 (7), 2024.
-\newblock \doi{10.1063/5.0168431}.
+\bibitem[Carr and Muncaster(1983{\natexlab{b}})]{carr83b}
+J.~Carr and R.~G. Muncaster.
+\newblock The application of centre manifolds to amplitude expansions. i.
+  ordinary differential equations.
+\newblock \emph{Journal of Differential Equations}, 50\penalty0 (2):\penalty0
+  260--279, 1983{\natexlab{b}}.
+\newblock ISSN 0022-0396.
+\newblock \doi{10.1016/0022-0396(83)90077-3}.
 
 \bibitem[Chicone and Latushkin(1997)]{chicone97}
 C.~Chicone and Y.~Latushkin.
@@ -214,16 +64,77 @@ C.~Chicone and Y.~Latushkin.
 \newblock ISSN 0022-0396.
 \newblock \doi{https://doi.org/10.1006/jdeq.1997.3343}.
 
-\bibitem[Siegmund(2002)]{siegmund02}
-Stefan Siegmund.
-\newblock Normal forms for nonautonomous differential equations.
-\newblock \emph{Journal of Differential Equations}, 178\penalty0 (2):\penalty0
-  541--573, 2002.
-\newblock ISSN 0022-0396.
-\newblock \doi{https://doi.org/10.1006/jdeq.2000.4008}.
+\bibitem[Chomaz et~al.(1988)Chomaz, Huerre, and Redekopp]{chomaz88}
+J.~Chomaz, P.~Huerre, and L.~Redekopp.
+\newblock Bifurcations to local and global modes in spatially developing flows.
+\newblock \emph{Physical review letters}, 60\penalty0 (1):\penalty0 25, 1988.
+\newblock \doi{10.1103/PhysRevLett.60.25}.
+
+\bibitem[Chomaz(2005)]{chomaz05}
+J.-M. Chomaz.
+\newblock Global instabilities in spatially developing flows: non-normality and
+  nonlinearity.
+\newblock \emph{Annu. Rev. Fluid Mech.}, 37\penalty0 (1):\penalty0 357--392,
+  2005.
+\newblock \doi{10.1146/annurev.fluid.37.061903.175810}.
+
+\bibitem[Coullet and Spiegel(1983)]{coullet83}
+P.~H. Coullet and E.~A. Spiegel.
+\newblock Amplitude equations for systems with competing instabilities.
+\newblock \emph{SIAM Journal on Applied Mathematics}, 43\penalty0 (4):\penalty0
+  776--821, 1983.
+\newblock \doi{10.1137/0143052}.
+
+\bibitem[Cox and Roberts(1991)]{cox91}
+S.~M. Cox and A.~J. Roberts.
+\newblock Centre manifolds of forced dynamical systems.
+\newblock \emph{The Journal of the Australian Mathematical Society. Series B.
+  Applied Mathematics}, 32\penalty0 (4):\penalty0 401–436, 1991.
+\newblock \doi{10.1017/S0334270000008511}.
+
+\bibitem[Cross and Greenside(2009)]{cross09}
+M.~Cross and H.~Greenside.
+\newblock \emph{Pattern Formation and Dynamics in Nonequilibrium Systems}.
+\newblock Cambridge University Press, 2009.
+
+\bibitem[Fujimura(1991)]{fujimara91}
+K.~Fujimura.
+\newblock Methods of centre manifold and multiple scales in the theory of
+  weakly nonlinear stability for fluid motions.
+\newblock \emph{Proceedings: Mathematical and Physical Sciences}, 434\penalty0
+  (1892):\penalty0 719--733, 1991.
+\newblock ISSN 09628444.
+
+\bibitem[Gallaire et~al.(2016)Gallaire, Boujo, Mantic-Lugo, Arratia, Thiria,
+  and Meliga]{gallaire16}
+F.~Gallaire, E.~Boujo, V.~Mantic-Lugo, C.~Arratia, B.~Thiria, and P.~Meliga.
+\newblock Pushing amplitude equations far from threshold: application to the
+  supercritical hopf bifurcation in the cylinder wake.
+\newblock \emph{Fluid Dynamics Research}, 48\penalty0 (6):\penalty0 061401,
+  2016.
+
+\bibitem[Guckenheimer and Holmes(1983)]{guckenheimer83}
+J.~Guckenheimer and P.~Holmes.
+\newblock \emph{Nonlinear Oscillations, Dynamical Systems, and Bifurcations of
+  Vector Fields}.
+\newblock Springer Science \& Business Media, New York, 1983.
+\newblock \doi{10.1007/b97481}.
+
+\bibitem[Haragus and G\'{e}rard(2011)]{haragus11}
+M.~Haragus and I.~G\'{e}rard.
+\newblock \emph{Local Bifurcations, Center Manifolds, and Normal Forms in
+  Infinite-Dimensional Dynamical Systems}.
+\newblock Springer-Verlag, New York, 2011.
+\newblock \doi{10.1007/978-0-85729-112-7}.
+
+\bibitem[Haro et~al.(2016)Haro, Canadell, Figueras, Luque, Mondelo,
+  et~al.]{haro16}
+A.~Haro, M.~Canadell, J.-L. Figueras, A.~Luque, J.~M. Mondelo, et~al.
+\newblock \emph{The parameterization method for invariant manifolds}.
+\newblock Springer, 2016.
 
 \bibitem[Hochs and Roberts(2019)]{hochs19}
-Peter Hochs and A.J. Roberts.
+P.~Hochs and A.~Roberts.
 \newblock Normal forms and invariant manifolds for nonlinear, non-autonomous
   pdes, viewed as odes in infinite dimensions.
 \newblock \emph{Journal of Differential Equations}, 267\penalty0 (12):\penalty0
@@ -231,10 +142,34 @@ Peter Hochs and A.J. Roberts.
 \newblock ISSN 0022-0396.
 \newblock \doi{https://doi.org/10.1016/j.jde.2019.07.021}.
 
-\bibitem[Roberts(2022)]{roberts22}
-A.~J. Roberts.
-\newblock Backwards theory supports modelling via invariant manifolds for
-  non-autonomous dynamical systems, 2022.
+\bibitem[Jain and Haller(2022)]{jain22}
+S.~Jain and G.~Haller.
+\newblock How to compute invariant manifolds and their reduced dynamics in
+  high-dimensional finite element models.
+\newblock \emph{Nonlinear dynamics}, 107\penalty0 (2):\penalty0 1417--1450,
+  2022.
+
+\bibitem[Jiang et~al.(2005)Jiang, Pierre, and Shaw]{jiang91}
+D.~Jiang, C.~Pierre, and S.~Shaw.
+\newblock Nonlinear normal modes for vibratory systems under harmonic
+  excitation.
+\newblock \emph{Journal of Sound and Vibration}, 288\penalty0 (4):\penalty0
+  791--812, 2005.
+\newblock ISSN 0022-460X.
+\newblock \doi{https://doi.org/10.1016/j.jsv.2005.01.009}.
+
+\bibitem[Meliga and Chomaz(2011)]{meliga11}
+P.~Meliga and J.-M. Chomaz.
+\newblock An asymptotic expansion for the vortex-induced vibrations of a
+  circular cylinder.
+\newblock \emph{Journal of Fluid Mechanics}, 671:\penalty0 137–167, 2011.
+\newblock \doi{10.1017/S0022112010005550}.
+
+\bibitem[Meliga et~al.(2012)Meliga, Gallaire, and Chomaz]{meliga12}
+P.~Meliga, F.~Gallaire, and J.-M. Chomaz.
+\newblock A weakly nonlinear mechanism for mode selection in swirling jets.
+\newblock \emph{Journal of Fluid Mechanics}, 699:\penalty0 216–262, 2012.
+\newblock \doi{10.1017/jfm.2012.93}.
 
 \bibitem[Mercer and Roberts(1990)]{mercer90}
 G.~N. Mercer and A.~J. Roberts.
@@ -245,39 +180,118 @@ G.~N. Mercer and A.~J. Roberts.
 \newblock ISSN 00361399.
 \newblock URL \url{http://www.jstor.org/stable/2101904}.
 
-\bibitem[Gallaire et~al.(2016)Gallaire, Boujo, Mantic-Lugo, Arratia, Thiria,
-  and Meliga]{gallaire16}
-Francois Gallaire, Edouard Boujo, Vladislav Mantic-Lugo, Cristobal Arratia,
-  Benjamin Thiria, and Philippe Meliga.
-\newblock Pushing amplitude equations far from threshold: application to the
-  supercritical hopf bifurcation in the cylinder wake.
-\newblock \emph{Fluid Dynamics Research}, 48\penalty0 (6):\penalty0 061401,
-  2016.
-
 \bibitem[Negi(2024)]{negi24}
-Prabal~S Negi.
+P.~S. Negi.
 \newblock Asymptotic center--manifold for the navier--stokes.
 \newblock \emph{arXiv preprint arXiv:2411.03727}, 2024.
 
-\bibitem[Chomaz et~al.(1988)Chomaz, Huerre, and Redekopp]{chomaz88}
-JM~Chomaz, P~Huerre, and LG~Redekopp.
-\newblock Bifurcations to local and global modes in spatially developing flows.
-\newblock \emph{Physical review letters}, 60\penalty0 (1):\penalty0 25, 1988.
-\newblock \doi{10.1103/PhysRevLett.60.25}.
+\bibitem[Newell and Whitehead(1969)]{newell69}
+A.~C. Newell and J.~A. Whitehead.
+\newblock Finite bandwidth, finite amplitude convection.
+\newblock \emph{Journal of Fluid Mechanics}, 38\penalty0 (2):\penalty0
+  279–303, 1969.
+\newblock \doi{10.1017/S0022112069000176}.
 
-\bibitem[Chomaz(2005)]{chomaz05}
-Jean-Marc Chomaz.
-\newblock Global instabilities in spatially developing flows: non-normality and
-  nonlinearity.
-\newblock \emph{Annu. Rev. Fluid Mech.}, 37\penalty0 (1):\penalty0 357--392,
-  2005.
-\newblock \doi{10.1146/annurev.fluid.37.061903.175810}.
+\bibitem[Roberts(1997)]{roberts97}
+A.~Roberts.
+\newblock Low-dimensional modelling of dynamics via computer algebra.
+\newblock \emph{Computer Physics Communications}, 100\penalty0 (3):\penalty0
+  215--230, 1997.
+\newblock ISSN 0010-4655.
+\newblock \doi{10.1016/S0010-4655(96)00162-2}.
+
+\bibitem[Roberts(1989)]{roberts89}
+A.~J. Roberts.
+\newblock The utility of an invariant manifold description of the evolution of
+  a dynamical system.
+\newblock \emph{SIAM Journal on Mathematical Analysis}, 20\penalty0
+  (6):\penalty0 1447--1458, 1989.
+\newblock \doi{10.1137/0520094}.
+
+\bibitem[Roberts(2014)]{roberts14}
+A.~J. Roberts.
+\newblock \emph{Model emergent dynamics in complex systems}.
+\newblock SIAM, 2014.
+
+\bibitem[Roberts(2022)]{roberts22}
+A.~J. Roberts.
+\newblock Backwards theory supports modelling via invariant manifolds for
+  non-autonomous dynamical systems, 2022.
+
+\bibitem[Siegmund(2002)]{siegmund02}
+S.~Siegmund.
+\newblock Normal forms for nonautonomous differential equations.
+\newblock \emph{Journal of Differential Equations}, 178\penalty0 (2):\penalty0
+  541--573, 2002.
+\newblock ISSN 0022-0396.
+\newblock \doi{https://doi.org/10.1006/jdeq.2000.4008}.
+
+\bibitem[Sijbrand(1985)]{sijbrand85}
+J.~Sijbrand.
+\newblock Properties of center manifolds.
+\newblock \emph{Transactions of the American Mathematical Society},
+  289\penalty0 (2):\penalty0 431--469, 1985.
+\newblock ISSN 00029947.
+
+\bibitem[Sipp and Lebedev(2007)]{sipp07}
+D.~Sipp and A.~Lebedev.
+\newblock Global stability of base and mean flows: a general approach and its
+  applications to cylinder and open cavity flows.
+\newblock \emph{Journal of Fluid Mechanics}, 593:\penalty0 333–358, 2007.
+\newblock \doi{10.1017/S0022112007008907}.
 
 \bibitem[Sorensen(1992)]{sorensen92}
-Danny~C Sorensen.
+D.~C. Sorensen.
 \newblock Implicit application of polynomial filters in a k-step arnoldi
   method.
 \newblock \emph{Siam journal on matrix analysis and applications}, 13\penalty0
   (1):\penalty0 357--385, 1992.
+
+\bibitem[Stuart(1960)]{stuart60}
+J.~T. Stuart.
+\newblock On the non-linear mechanics of wave disturbances in stable and
+  unstable parallel flows part 1. the basic behaviour in plane poiseuille flow.
+\newblock \emph{Journal of Fluid Mechanics}, 9\penalty0 (3):\penalty0
+  353–370, 1960.
+\newblock \doi{10.1017/S002211206000116X}.
+
+\bibitem[Thurnher et~al.(2024)Thurnher, Haller, and Jain]{thurnher24}
+T.~Thurnher, G.~Haller, and S.~Jain.
+\newblock Nonautonomous spectral submanifolds for model reduction of nonlinear
+  mechanical systems under parametric resonance.
+\newblock \emph{Chaos: An Interdisciplinary Journal of Nonlinear Science},
+  34\penalty0 (7), 2024.
+\newblock \doi{10.1063/5.0168431}.
+
+\bibitem[Vizzaccaro et~al.(2022)Vizzaccaro, Opreni, Frangi, and
+  Touz{\'e}]{vizzaccaro22}
+A.~Vizzaccaro, L.~Opreni, Andrea~Salles, A.~Frangi, and C.~Touz{\'e}.
+\newblock High order direct parametrisation of invariant manifolds for model
+  order reduction of finite element structures: application to large amplitude
+  vibrations and uncovering of a folding point.
+\newblock \emph{Nonlinear Dynamics}, 110\penalty0 (1):\penalty0 525--571, 2022.
+
+\bibitem[Vizzaccaro et~al.(2024)Vizzaccaro, Gobat, Frangi, and
+  Touz{\'e}]{vizzaccaro24}
+A.~Vizzaccaro, G.~Gobat, A.~Frangi, and C.~Touz{\'e}.
+\newblock Direct parametrisation of invariant manifolds for non-autonomous
+  forced systems including superharmonic resonances.
+\newblock \emph{Nonlinear Dynamics}, 112\penalty0 (8):\penalty0 6255--6290,
+  2024.
+
+\bibitem[Watson(1960)]{watson60}
+J.~Watson.
+\newblock On the non-linear mechanics of wave disturbances in stable and
+  unstable parallel flows part 2. the development of a solution for plane
+  {P}oiseuille flow and for plane {C}ouette flow.
+\newblock \emph{Journal of Fluid Mechanics}, 9\penalty0 (3):\penalty0
+  371–389, 1960.
+\newblock \doi{10.1017/S0022112060001171}.
+
+\bibitem[Wiggins(2003)]{wiggins03}
+S.~Wiggins.
+\newblock \emph{Introduction to Applied Nonlinear Dynamical Systems and Chaos}.
+\newblock Springer-Verlag New York, 2003.
+\newblock \doi{10.1007/b97481}.
 
 \end{thebibliography}

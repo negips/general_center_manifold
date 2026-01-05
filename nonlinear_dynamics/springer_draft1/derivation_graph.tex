@@ -91,7 +91,7 @@ with the asymptotic components of $\Param$ defined as
 	 	&\textit{\textit{for} $j\in n+1,\ldots,m$.} \nonumber
 	 \end{align}
 \end{subequations}
- This particular graph style parameterization has been utilized by \citet{negi24} for the Navier--Stokes system where the Reynolds number perturbations have been used for the system extension. The procedure for obtaining the graph representation is summarized in  algorithm~\ref{algo:graph_form}. 
+ This particular graph style parameterization has been utilized by \citet{negi24} for the Navier--Stokes system where the Reynolds number perturbations have been used for the system extension. The procedure for obtaining the graph representation is summarized in  Algorithm~\ref{algo:graph_form}. 
   \begin{algorithm}
  	\caption{Center--Manifold: Graph parameterization}\label{algo:graph_form}
  	\begin{algorithmic}[0]
@@ -100,7 +100,7 @@ with the asymptotic components of $\Param$ defined as
  		\Require Tangent Space: $\AevMatrix^{\dagger}\Lu \DevMatrix = \LambdaC$.
  		\LComment{Center subspace dimension: $n$.} 
  		\Require Extension via $\vecnu, \vectheta$ and $\NewNonLin(\vecu,\vecnu,\vectheta)$.
- 		\State Evaluate $\EDevMatrix,\Khat$ via algorithm~\ref{algo:extended_direct_tangent}. 
+ 		\State Evaluate $\EDevMatrix,\Khat$ via Algorithm~\ref{algo:extended_direct_tangent}. 
  		\LComment{Center subspace dim.: $m = n + p + h$.} 
  		\State $\mathbf{Q} = \mathbf{I} - \DevMatrix\AevMatrix^{\dagger}$ \Comment{Subspace projector.}
  		\Require Maximum Asymptotic order: $k_{max}$
