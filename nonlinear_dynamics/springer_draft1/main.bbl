@@ -1,4 +1,4 @@
-\begin{thebibliography}{40}
+\begin{thebibliography}{43}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -120,6 +120,13 @@ J.~Guckenheimer and P.~Holmes.
 \newblock Springer Science \& Business Media, New York, 1983.
 \newblock \doi{10.1007/b97481}.
 
+\bibitem[Haller and Ponsioen(2016)]{haller16}
+G.~Haller and S.~Ponsioen.
+\newblock Nonlinear normal modes and spectral submanifolds: existence,
+  uniqueness and use in model reduction.
+\newblock \emph{Nonlinear dynamics}, 86\penalty0 (3):\penalty0 1493--1534,
+  2016.
+
 \bibitem[Haragus and G\'{e}rard(2011)]{haragus11}
 M.~Haragus and I.~G\'{e}rard.
 \newblock \emph{Local Bifurcations, Center Manifolds, and Normal Forms in
@@ -191,6 +198,23 @@ A.~C. Newell and J.~A. Whitehead.
 \newblock \emph{Journal of Fluid Mechanics}, 38\penalty0 (2):\penalty0
   279–303, 1969.
 \newblock \doi{10.1017/S0022112069000176}.
+
+\bibitem[Opreni et~al.(2023)Opreni, Vizzaccaro, Touz{\'e}, and
+  Frangi]{opreni23}
+A.~Opreni, A.~Vizzaccaro, C.~Touz{\'e}, and A.~Frangi.
+\newblock High-order direct parametrisation of invariant manifolds for model
+  order reduction of finite element structures: application to generic forcing
+  terms and parametrically excited systems.
+\newblock \emph{Nonlinear Dynamics}, 111\penalty0 (6):\penalty0 5401--5447,
+  2023.
+
+\bibitem[Patera(1984)]{patera84}
+A.~T. Patera.
+\newblock A spectral element method for fluid dynamics: Laminar flow in a
+  channel expansion.
+\newblock \emph{Journal of Computational Physics}, 54\penalty0 (3):\penalty0
+  468 -- 488, 1984.
+\newblock ISSN 0021-9991.
 
 \bibitem[Roberts(1997)]{roberts97}
 A.~Roberts.

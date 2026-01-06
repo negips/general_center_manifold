@@ -1,7 +1,7 @@
 \subsection{A Graph Style Parameterization}
 \label{sec:graph_method}
 
-In the earlier subsection it was shown that even though one starts from an extended system, for the evaluation of the higher order asymptotic terms of the center-manifold (in its normal form) only  the standard linear system is required and the system extension only affects the tangent (linear) space. This aspect however is not unique to the normal form and other parameterizations can be constructed in which the asymptotic center-manifold of a system can be evaluated using just the standard linear operator $\Lu$. Here we construct one such parameterization.
+In the earlier subsection it was shown that even though one starts from an extended system, for the evaluation of the higher order asymptotic terms of the center manifold (in its normal form) only  the standard linear system is required and the system extension only affects the tangent (linear) space. This aspect however is not unique to the normal form and other parameterizations can be constructed in which the asymptotic center manifold of a system can be evaluated using just the standard linear operator $\Lu$. Here we construct one such parameterization.
 
 Starting again with the asymptotic representations of $\Param(\vecparv)$ and $\CenM(\vecparv)$ as in equations~\eqref{eqn:reduced_normal_form} and \eqref{eqn:asymptotic_normal_form} respectively, one may constrain all higher order terms $\AsECenM_{i_{1},\ldots,i_{k}}$ to lie in the complement of the center subspace (spanned by $\EDevMatrix$), resulting in,
 \begin{align}
@@ -127,7 +127,7 @@ with the asymptotic components of $\Param$ defined as
  	\end{algorithmic}
  \end{algorithm}
  
- The resulting expressions for the normal form given by equations~\eqref{eqn:asymptotic_Ok_compact_std},  \eqref{eqn:gk_definition2} and, the graph style parameterization given by equations~\eqref{eqn:graph_Ok_compact3}, \eqref{eqn:graph_gk_definition3} are quite similar. The similarity is due to the fact that the tangent space in both cases is identical, with $\Khat$ representing the linear part of the parameterization $\mathcal{G}(\vecparv)$. Typically one is interested in the normal form of the reduced equations since they result in the ``simplest form'' of the representation. The particular graph parameterization however is advantageous when one needs to consider the mapping from the full system state to the reduced manifold, \ie, $\evecu \mapsto \vecparv$. For both normal form and the graph parameterization, mapping that is explicitly constructed is $\mathcal{Y}: \vecparv \mapsto \evecu$. The inverse map $\inv{\mathcal{Y}}: \evecu \mapsto \vecparv$ is not constructed. It is also difficult to construct from the knowledge of $\mathcal{Y}$ itself  because $\mathcal{Y}$ is constructed asymptotically and is hardly ever evaluated beyond a few orders. However, since the graph parameterization is constructed with the property that higher order terms lie in the complement of the tangent space, the inverse map $\inv{\mathcal{Y}}$ can be easily constructed by leveraging this property. Therefore, recalling that the first order vectors $\AsECenM_{i} = \evecv_{i}$, we have,
+ The resulting expressions for the normal form given by equations~\eqref{eqn:asymptotic_Ok_compact_std},  \eqref{eqn:gk_definition2} and, the graph style parameterization given by equations~\eqref{eqn:graph_Ok_compact3}, \eqref{eqn:graph_gk_definition3} are quite similar. The similarity is due to the fact that the linear representation in both cases is identical, with $\Khat$ representing the linear part of the parameterization $\mathcal{G}(\vecparv)$. Typically one is interested in the normal form of the reduced equations since they result in the ``simplest form'' of the representation. The particular graph parameterization however is advantageous when one needs to consider the mapping from the full system state to the reduced manifold, \ie, $\evecu \mapsto \vecparv$. For both normal form and the graph parameterization, mapping that is explicitly constructed is $\mathcal{Y}: \vecparv \mapsto \evecu$. The inverse map $\inv{\mathcal{Y}}: \evecu \mapsto \vecparv$ is not constructed. It is also difficult to construct from the knowledge of $\mathcal{Y}$ itself  because $\mathcal{Y}$ is constructed asymptotically and is hardly ever evaluated beyond a few orders. However, since the graph parameterization is constructed with the property that higher order terms lie in the complement of the tangent space, the inverse map $\inv{\mathcal{Y}}$ can be easily constructed by leveraging this property. Therefore, recalling that the first order vectors $\AsECenM_{i} = \evecv_{i}$, we have,
  \begin{align}
  		\begin{split}
  		\evecu = \CenM(\vecparv) =& \sum^{[1,m]}_{(1)}\AsECenM_{i_{1}}\parv_{i_{1}} + \sum^{[1,m]}_{(2)}\AsECenM_{i_{1},i_{2}}\parv_{i_{1}}\parv_{i_{2}} \\
@@ -142,7 +142,7 @@ with the asymptotic components of $\Param$ defined as
  	\end{split} \nonumber \\
  	%
  	\begin{split}
- 		\implies\EAevMatrix^{\dagger}\evecu =& \Ihat\vecparv + \mathbf{0} + \mathbf{0} + \ldots .
+ 		\implies\EAevMatrix^{\dagger}\evecu =& \mathbf{I}_{m}\vecparv + \mathbf{0} + \mathbf{0} + \ldots .
  	\end{split} \nonumber
  \end{align}
  Therefore, when considering the graph parameterization presented earlier, the inverse map $\inv{\mathcal{Y}}: \evecu \mapsto \vecparv$ is simply,
@@ -152,14 +152,6 @@ with the asymptotic components of $\Param$ defined as
  \end{align}
  For the normal form, one does not get this simple inverse map since the higher order terms generically do not lie in the complement of the tangent space ($\EDevMatrix$). 
  
-
-
-%A particular graph-style parameterization has been used in \cite{negi24} for the construction of center-manifolds of the Navier--Stokes while treating variations of the Reynolds number as parameter perturbations. 
-
-
-%Since the parameterization can be chosen arbitrarily, one can always choose a representation in which $\mathcal{Y}(\vecparv)$ has non trivial components in the extended variables even for the higher order asymptotic terms $\AsCenM_{i_{1},\ldots,i_{k}}$.
-
-%One may find the exposition on the implementation of the parameterization method in previous works of \citet{haro16} and \citet{jain22}. To be clear, the application of the parameterization method to an extended system like equation~\eqref{eqn:evolution_extended} follows the same steps as outlined in those earlier works. However, many of the essential steps are repeated here to bring out the structure of system of equations at each asymptotic order in the context of system extension.
 
 
 

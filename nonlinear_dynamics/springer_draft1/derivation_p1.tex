@@ -11,7 +11,7 @@ Consider a system with its state variable denoted by $\vfield{u}$, consisting of
 	\label{eqn:evolution0}
 \end{equation}
 The system state $\fieldu$ is $N$-dimensional where, $N$ is assumed to be large. 
-The evolution law may arise from a finite set of ordinary differential equations or, may be a finite representation of an infinite dimensional partial differential equation as often arises from the numerical discretization of the space-time evolution equations of physical systems. Typically, physical systems will have real parameters $\vecmu$ however, allowing for complex parameters presents no additional difficulty and we assume that $\vecmu \in \mathds{C}^{p}$. Without loss of generality one may assume $\fieldu = \fieldub$ to be a fixed point of the system for a certain set of parameters $\vecmu = \vecMu$, \ie,
+The evolution law may arise from a finite set of ordinary differential equations or, may be a finite representation of an infinite dimensional partial differential equation, as often arises from the numerical discretization of the space-time evolution equations of physical systems. Typically, physical systems will have real parameters $\vecmu$ however, allowing for complex parameters presents no additional difficulty and we assume that $\vecmu \in \mathds{C}^{p}$. Without loss of generality one may assume $\fieldu = \fieldub$ to be a fixed point of the system for a certain set of parameters $\vecmu = \vecMu$, \ie,
 \begin{align}
 	\label{eqn:fixed_point}
 	\fieldf(\fieldub,\vecMu) = \veczero.
@@ -22,12 +22,12 @@ We may consider the evolution of the deviation from the fixed point solution $\v
 \end{align}
 where,
 \begin{align}
-	\Lu =& \left[\left.\dfrac{\partial \fieldf}{\partial \fieldu}\right|_{(\fieldu=\fieldub,\vecmu=\vecMu)}\right] \nonumber \\
-	\mathcal{N}(\vecu,\vecMu) =& \vfield{f}(\fieldub + \vecu,\vecMu) - \Lu\vecu. \nonumber
+	\Lu =& \left[\left.\dfrac{\partial \fieldf}{\partial \fieldu}\right|_{(\fieldu=\fieldub,\vecmu=\vecMu)}\right], \nonumber \\
+	\mathcal{N}(\vecu,\vecMu) =& \vfield{f}(\fieldub + \vecu,\vecMu) - \Lu\vecu, \nonumber
 \end{align}
-Furthermore, it is assumed that at $\vecmu = \vecMu$ the system undergoes a multiple co-dimension bifurcation and that the linearized operator $\Lu\in\mathds{C}^{N\times N}$ has a discrete set of $n$ critical eigenvalues $\lambda^{C}_{i},\ i\in 1,\ldots,n$, with zero growth rate $(\mathfrak{Re}(\lambda^{C}_{i}) = 0)$. This includes both purely real critical eigenvalues with $\mathfrak{Re}(\lambda^{C}_{i}) = 0,\ \mathfrak{Im}(\lambda^{C}_{i}) = 0$, and purely imaginary critical eigenvalues with $\mathfrak{Re}(\lambda^{C}_{i}) = 0,\ \mathfrak{Im}(\lambda^{C}_{i}) \ne 0$. Accordingly, the system has $n$ critical eigenpairs $\Tuple{\lambda^{C}_{i},\Devec_{i}}, i\in 1\ldots n$, where $\Devec_{i}$ represents the eigenvector corresponding to $\lambda^{C}_{i}$. For real systems the purely imaginary critical eigenvalues will occur in conjugate pairs. 
+where, $\Lu\in\mathds{C}^{N\times N}$, and $\mathcal{N}(\vecu,\vecMu)\in\mathds{C}^{N}$. Furthermore, it is assumed that the fixed point is such that the system undergoes a multiple co-dimension bifurcation and the linearized operator $\Lu$ has a discrete set of $n$ critical eigenvalues $\lambda^{C}_{i},\ i\in 1,\ldots,n$, with zero growth rate $(\mathfrak{Re}(\lambda^{C}_{i}) = 0)$. This includes both purely real critical eigenvalues with $\mathfrak{Re}(\lambda^{C}_{i}) = 0,\ \mathfrak{Im}(\lambda^{C}_{i}) = 0$, and purely imaginary critical eigenvalues with $\mathfrak{Re}(\lambda^{C}_{i}) = 0,\ \mathfrak{Im}(\lambda^{C}_{i}) \ne 0$. Accordingly, the system has $n$ critical eigenpairs $\Tuple{\lambda^{C}_{i},\Devec_{i}}, i\in 1\ldots n$, where $\Devec_{i}$ represents the eigenvector corresponding to $\lambda^{C}_{i}$. For real systems the purely imaginary critical eigenvalues will occur in conjugate pairs. 
 
-The adjoint of the direct linearized operator $\Lu$ is denoted as $\Lu^{\dagger}$ which also has $n$ critical eigenpairs $\Tuple{\lambda^{C*}_{i}, \Aevec_{i}}$. The scaling of the eigenvectors of the direct and adjoint operators may be defined such that they satisfy the biorthogonality condition
+The linearized operator $\Lu$ will also be referred to as the direct (linear) operator. Its adjoint is denoted as $\Lu^{\dagger}$ which also has $n$ critical eigenpairs $\Tuple{\lambda^{C*}_{i}, \Aevec_{i}}$. The scaling of the eigenvectors of the direct and adjoint operators may be defined such that they satisfy the biorthogonality condition,
 \begin{eqnarray}
 	\langle\Aevec_{i},\Devec_{j}\rangle = \Aevec^{\dagger}_{i}\Devec_{j} = \delta_{i,j} \label{eqn:std_biorthogonality},
 \end{eqnarray}
@@ -39,12 +39,14 @@ where $\langle\cdot,\cdot\rangle$ is the standard inner-product and $\delta_{i,j
 		\AevMatrix =& [\Aevec_{1},\Aevec_{2},\ldots,\Aevec_{n}].
 	\end{align}
 \end{subequations}
+Note that in the manuscripts there will be various matrices and vectors that will be stacked either along columns or along rows as the requirement arises. We make a distinction through the use of comma $(,)$ or semicolon $(;)$ as the separator of elements. Hence elements stacked along a row are written as $[a,b,c,\ldots]$, as in equation~\eqref{eqn:eigenvectors_std} for example. Whereas, elements denoted as $[a;b;c;\ldots]$ are stacked along a column as will occur later in the manuscript. This allows the representation of long columns compactly.  
+
 Due to the chosen scaling denoted by equation~\eqref{eqn:std_biorthogonality} the matrices satisfy,
 \begin{align}
 	\label{eqn:biorthogonal_matrices}
 	\AevMatrix^{\dagger}\DevMatrix = \mathbf{I}_{n},
 \end{align}
-where, $\mathbf{I}_{n}$ represents an identity matrix of order $n\times n$. The columns of the matrices $\DevMatrix$ and $\AevMatrix$ span the $n$-dimensional center-subspace of the linear operators $\Lu$ and $\Lu^{\dagger}$ respectively. 
+where, $\mathbf{I}_{n}$ represents an identity matrix of order $n\times n$. The columns of the matrices $\DevMatrix$ and $\AevMatrix$ span the $n$-dimensional center subspace of the linear operators $\Lu$ and $\Lu^{\dagger}$ respectively. 
 
 Additionally, $\LambdaC$ is defined as an $n\times n$ diagonal matrix consisting of the critical eigenvalues of $\Lu$, with the implicit assumption of diagonalizability of $\Lu$ within the center subspace. The ordering of the eigenvalues in $\LambdaC$ and eigenvectors in $\DevMatrix$ and $\AevMatrix$ is consistent with each other so that we have the eigenvalue relations,
 \begin{align}
@@ -58,7 +60,7 @@ Additionally, $\LambdaC$ is defined as an $n\times n$ diagonal matrix consisting
 \subsection{From the Standard System to the Extended System}
 \label{sec:extended_system}
 
-The same system is now considered for the case of parameter perturbation so that the evolution dynamics are now evaluated at parameter values of $\vecmu = \vecMu + \vecnu$, with $\vecnu$ being the vector of parameter perturbations, $\vecnu = [\nu_{1};\nu_{2};\ldots;\nu_{p}]$. In addition, the system is forced with harmonic forcing of the type,
+The same system is now considered for the case of parameter perturbation so that the evolution dynamics are now evaluated at parameter values of $\vecmu = \vecMu + \vecnu$, with $\vecnu$ being the vector of parameter perturbations, $\vecnu = [\nu_{1};\nu_{2};\ldots;\nu_{p}]$. In addition, the system is forced with $h$ harmonic forcing of the type,
 \begin{align}
 	\label{eqn:harmonic_forcing}
 	\fieldf^{H}(\vectheta) =\sum_{i=1}^{h}\fieldf^{H}_{i}\theta_{i}(t); && d \theta_{i}/d t = \lambda^{H}_{i}\theta_{i},
@@ -80,8 +82,9 @@ one may again separate out the linear and nonlinear parts as,
 	 \Ltheta =& \left[\left.\frac{\partial \fieldf'}{\partial \vectheta}\right|_{(\vecu=\veczero,\vecnu=\veczero,\vectheta=\veczero)}\right] =&
 	 \left[\left.\frac{\partial \fieldf^{H}}{\partial \vectheta}\right|_{(\vectheta=\veczero)}\right] \nonumber,
 \end{align}
+and,
 \begin{align}
-	 \NewNonLin(\vecu,\vecnu,\vectheta) =& \vfield{f}'(\vecu,\vecnu,\vectheta) - \Lu\vecu - \Lnu\vecnu - \Ltheta\vectheta. \nonumber
+	 \NewNonLin(\vecu,\vecnu,\vectheta) =& \vfield{f}'(\vecu,\vecnu,\vectheta) - \Lu\vecu - \Lnu\vecnu - \Ltheta\vectheta, \nonumber
 \end{align}
 where, $\Lu\in\mathds{C}^{N\times N}$, $\Lnu\in\mathds{C}^{N\times p}$, $\Ltheta\in\mathds{C}^{N\times h}$ which results in the evolution equation given by,  
 \begin{align}
@@ -136,7 +139,7 @@ The system defined by equation~\eqref{eqn:evolution_extended}, or its compact fo
 \section{Extended Subspace Structure}
 \label{sec:extended_subspace_structure}
 
-The extended system has a larger center subspace of dimension $m = n+p+h$, as compared to the original system due to the $p+h$ additional variables introduced. While the extension of the system seems almost trivial, the eigenvector structure in the new dimensions however is far from trivial. Nevertheless, the extended eigenspace structure can be deduced directly from the properties of the original system. It is useful to examine the structure of the extended subspace since the adjoint extended critical subspace does have a special structure which has important practical implications for the asymptotic evaluation of the center-manifold of the extended system.
+The extended system has a larger center subspace of dimension $m = n+p+h$, as compared to the original system due to the $p+h$ additional variables introduced. While the extension of the system seems almost trivial, the eigenvector structure in the new dimensions however is far from trivial. Nevertheless, the extended eigenspace structure can be deduced directly from the properties of the original system. It is useful to examine the structure of the extended subspace since the adjoint extended critical subspace does have a special structure which has important practical implications for the asymptotic evaluation of the center manifold of the extended system.
 
 There are however some subtleties involved when the system extension introduces new eigenvalues that are resonant with the original linear system $\Lu$. In such a scenario the system extension leads to a generalized eigenspace for the resonant eigenvalues. This is demonstrated in the next subsections where the subspace structure is evaluated in detail for both the resonant and non-resonant cases. This is first done for the extended operator $\ExtL$ and then for the adjoint operator $\ExtL^{\dagger}$. 
 
@@ -271,7 +274,7 @@ where, $\DevMatrix$ is the matrix of the critical eigenvectors of $\Lu$. The mat
 
 \subsection{Subspace structure for $\ExtL^{\dagger}$}
 
-The eigenspace structure for the adjoint problem is important to consider since these vectors define the projection operators into the extended center subspace. The critical eigenmodes of the $\ExtL^{\dagger}$ can be extended via the following definition,
+The eigenspace structure for the adjoint problem is important to consider since these vectors define the projection operators into the extended center subspace. The original critical eigenmodes of the $\Lu^{\dagger}$ can be extended via the following definition,
 \begin{subequations}
 	\label{eqn:extended_adjoint_mode} 
 	\begin{align}
@@ -283,7 +286,7 @@ The eigenspace structure for the adjoint problem is important to consider since 
 		(\lambda^{C*}_{i}\mathbf{I} - \Lu^{\dagger})\Aevec_{i} = 0, &&  \forall i \in 1,\ldots n,
 	\end{align}
 \end{subequations}
-with vectors $\vfield{\zeta}^{P}_{i}$ and $\vfield{\zeta}^{H}_{i}$ defined such that the $j^{th}$ component of  $\vfield{\zeta}^{P}_{i}$ given by,
+with vectors $\vfield{\zeta}^{P}_{i}$ and $\vfield{\zeta}^{H}_{i}$ defined such that the $j^{th}$ component of $\vfield{\zeta}^{P}_{i}$ is given by,
 \begin{equation}
 	\label{eqn:extended_resonant_adjoint_eigenvector1}
 	(\vfield{\zeta}^{P}_{i})_{j} = 
@@ -344,7 +347,16 @@ The extended eigenspace of $\ExtL^{\dagger}$ can be represented with matrices as
 		\mathbf{I}_{h}
 	\end{bmatrix},
 \end{align}
-where, $\AevMatrix$ is the matrix of the adjoint critical eigenvectors of $\Lu^{\dagger}$. The matrix $\mathbf{Z}_{P}$ comprises of the vectors $\vfield{\zeta}^{P}_{i}$ and, $\mathbf{Z}_{H}$ comprises of the vectors $\vfield{\zeta}^{H}_{i}$. The matrix of vectors of the extended (adjoint) center subspace is denoted by, $\mathbf{\widehat{W}} = [\mathbf{\widehat{W}}_{C}, \mathbf{\widehat{W}}_{P}, \mathbf{\widehat{W}}_{H}]$ with the individual vectors denoted as $\EAevec_{i},\ i\in 1,2,\ldots,m$. It can be verified that,
+where, $\AevMatrix$ is the matrix of the adjoint critical eigenvectors of $\Lu^{\dagger}$. The matrices $\mathbf{Z}_{P}\in\mathds{C}^{p\times n}$ and $\mathbf{Z}_{H}\in\mathds{C}^{h\times n}$ are defined as,
+\begin{subequations}
+	\label{eqn:adjoint_vectors_zeta}
+\begin{align}
+	\mathbf{Z}_{P} =& [\vfield{\zeta}^{P}_{1}, \vfield{\zeta}^{P}_{2},\ldots,\vfield{\zeta}^{P}_{n}], \\
+	%
+	\mathbf{Z}_{H} =& [\vfield{\zeta}^{H}_{1}, \vfield{\zeta}^{H}_{2},\ldots,\vfield{\zeta}^{H}_{n}].
+\end{align}
+\end{subequations}
+The matrix of vectors of the extended (adjoint) center subspace is denoted by, $\mathbf{\widehat{W}} = [\mathbf{\widehat{W}}_{C}, \mathbf{\widehat{W}}_{P}, \mathbf{\widehat{W}}_{H}]$ with the individual vectors denoted as $\EAevec_{i},\ i\in 1,2,\ldots,m$. It can be verified that,
 \begin{align}
 	\label{eqn:extended_biorthogonal_matrices}
 	\EAevMatrix^{\dagger}\EDevMatrix = \mathbf{I}_{m}.
@@ -359,7 +371,7 @@ Finally, we have the generalized eigenvalue relations,
 with, 
 \begin{eqnarray}
 	\label{eqn:khat}
-	\mathbf{\widehat{K}} = \mathbf{\widehat{W}}^{\dagger}\ExtL\EDevMatrix = 
+	\Khat = \mathbf{\widehat{W}}^{\dagger}\ExtL\EDevMatrix = 
 	\begin{bmatrix}
 		\LambdaC & \GammaP & \GammaH \\ 
 		\mathbf{0} &  \LambdaP & \mathbf{0} \\ 
@@ -374,7 +386,39 @@ Note that due to the special structure of the adjoint parameter and forcing mode
 		\EAevMatrix^{\dagger}_{P}\ENonLin = \veczero, && \EAevMatrix^{\dagger}_{H}\ENonLin = \veczero. 
 \end{align}
 
-This completes the extension of the system and the subspace structure for both the direct and adjoint systems can be readily identified. The extension of the tangent space is summarized in algorithms~\ref{algo:extended_direct_tangent} and ~\ref{algo:extended_adjoint_tangent}.
+This completes the extension of the system and, the subspace structure for both the direct and adjoint systems can be readily identified. The extension of the tangent spaces is summarized in Algorithm~\ref{algo:extended_direct_tangent} and ~\ref{algo:extended_adjoint_tangent}.
+
+It needs to be mentioned at this point that while the parameter perturbations and harmonic forcings have been treated as distinct classes, from the point of view of extended subspaces there is no real difference. One may simply define a single class of ``extended matrices'' as,
+\begin{equation}
+	\label{eqn:single_class}
+\begin{aligned}
+	\GammaE = [\GammaP, \GammaH], && \mathbf{Z}_{E} = [\mathbf{Z}_{P}; \mathbf{Z}_{H}], \\
+	%
+	\DevMatrix_{E} = [\DevMatrix_{P}, \DevMatrix_{H}], && \EDevMatrix_{C} = [\DevMatrix; \veczero], \\
+	%
+	\EDevMatrix_{E} = [\DevMatrix_{E}; \mathbf{I}_{p+h}], && \EDevMatrix = [\EDevMatrix_{C}, \EDevMatrix_{E}], \\
+	%
+	\EAevMatrix_{C} = [\AevMatrix; \mathbf{Z}_{E}], && \EAevMatrix_{E} = [\veczero; \mathbf{I}_{p+h}],  \\
+	\EAevMatrix = [\EAevMatrix_{C}, \EAevMatrix_{E}], &&
+\end{aligned} 
+\end{equation}
+and,
+\begin{eqnarray}
+	\label{eqn:khat2}
+	\LambdaE =
+	\begin{bmatrix}
+		\LambdaP & \mathbf{0} \\ 
+		\mathbf{0} &  \LambdaH 
+	\end{bmatrix},
+	&&
+	\Khat =
+	\begin{bmatrix}
+		\LambdaC & \GammaE \\ 
+		\mathbf{0} &  \LambdaE 
+	\end{bmatrix},
+\end{eqnarray}
+and refer to parameter and forcing modes as simply extended modes. Algorithmically they are treated in an identical manner.
+
  \begin{algorithm}
 	\caption{Extended tangent space ($\ExtL$)}\label{algo:extended_direct_tangent}
 	\begin{algorithmic}[0]
@@ -430,7 +474,7 @@ This completes the extension of the system and the subspace structure for both t
 		\State \LComment{Build: $\mathbf{Z}_{P} \in \mathds{C}^{p\times n};\ \mathbf{Z}_{H} \in \mathds{C}^{h\times n}$.}
 		\For{$(i\in 1,\ldots,n)$}
 			\For {$(j \in 1,\ldots,p)$}
-				\If {($\lambda^{P}_{j} = \lambda^{C}_{i}$)}
+				\If {($\lambda^{P*}_{j} = \lambda^{C*}_{i}$)}
 					\State $(\mathbf{Z}_{P})_{j,i} = 0$,
 				\Else
 					\State $(\mathbf{Z}_{P})_{j,i} =
@@ -439,7 +483,7 @@ This completes the extension of the system and the subspace structure for both t
 			\EndFor
 			% Harmonic
 			\For {$(j \in 1,\ldots,h)$}
-				\If {($\lambda^{H}_{j} = \lambda^{C}_{i}$)}
+				\If {($\lambda^{H*}_{j} = \lambda^{C*}_{i}$)}
 					\State $(\mathbf{Z}_{H})_{j,i} = 0$,
 				\Else
 					\State $(\mathbf{Z}_{H})_{j,i} =
@@ -452,7 +496,7 @@ This completes the extension of the system and the subspace structure for both t
 	\end{algorithmic}
 \end{algorithm}
 
-While the structure of the extended subspaces has been evaluated, reformulation of the problem as an extended system may have detrimental practical implications when considering large systems. Practical methods for solving such systems often rely on numerical algorithms that exploit inherent structure of the problem (Hermicity for conjugate-gradient solvers for example). In such a scenario, additional degrees of freedom can potential destroy the system symmetries and may require substantial changes in the numerical approach to the system solution. This would be particularly true of asymptotic approaches that require resolvent calculations \citep{coullet83,cabre05,sipp07,haragus11,carini15,gallaire16,haro16,jain22,negi24}, which itself can be a computationally challenging task for large systems. Such a scenario would be highly undesirable. However, as it turns out, at least some of the parameterizations involved in the evaluation of center-manifolds do not in fact require the use of the extended system after the initial evaluation of the extended tangent space. All higher order calculations can be performed using the original linear system $\Lu$. This is clarified in the next section where the parameterization method and its asymptotic terms are explicitly built. 
+While the structure of the extended subspaces has been evaluated, reformulation of the problem as an extended system may have detrimental practical implications when considering large systems. Practical methods for solving such systems often rely on numerical algorithms that exploit inherent structure of the problem (Hermicity for conjugate-gradient solvers for example). In such a scenario, additional degrees of freedom can potential destroy the system symmetries and may require substantial changes in the numerical approach to the system solution. This would be particularly true of asymptotic approaches that require resolvent calculations \citep{coullet83,cabre05,sipp07,haragus11,carini15,gallaire16,haro16,jain22,negi24}, which itself can be a computationally challenging task for large systems. Such a scenario would be highly undesirable. However, as it turns out, at least some of the parameterizations involved in the evaluation of center manifolds do not in fact require the use of the extended system after the initial evaluation of the extended tangent space. The normal form representation being one of them. All higher order calculations can be performed using the original linear system $\Lu$. This is clarified in the next section where the asymptotic terms of the center manifold are explicitly built. 
 
 
 %First however, we prove the following results which will come in handy.  
