@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.16)  6 JAN 2026 22:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.16)  17 JAN 2026 12:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2171,11 +2171,6 @@ Package hyperref Warning: Difference (4) between bookmark levels is greater
 (hyperref)                than one, level fixed on input line 17.
 
 ) (./main.bbl
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-
 Underfull \hbox (badness 2080) in paragraph at lines 25--30
 \OT1/cmr/m/n/10 The param-e-ter-i-za-tion method for invari-
  []
@@ -2185,6 +2180,8 @@ Underfull \hbox (badness 1087) in paragraph at lines 25--30
 \OT1/cmr/m/it/10.03749 Jour-nal of Dif-fer-en-tial Equations\OT1/cmr/m/n/10 , 2
 18(2):
  []
+
+
 
 
 Underfull \hbox (badness 1314) in paragraph at lines 32--36
@@ -2278,6 +2275,11 @@ Underfull \hbox (badness 1708) in paragraph at lines 220--226
  []
 
 
+Underfull \hbox (badness 1057) in paragraph at lines 246--252
+[]\OT1/cmr/m/n/10 S. Sieg-mund.  Nor-mal forms for nonau-
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -2291,11 +2293,6 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [26]
-Underfull \hbox (badness 1057) in paragraph at lines 246--252
-[]\OT1/cmr/m/n/10 S. Sieg-mund.  Nor-mal forms for nonau-
- []
-
-
 Underfull \hbox (badness 1163) in paragraph at lines 254--259
 \OT1/cmr/m/it/10.03749 cal Soci-ety\OT1/cmr/m/n/10 , 289(2):431--469, 1985.  IS
 SN
@@ -2368,7 +2365,7 @@ dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2025/texmf-dis
 t/fonts/type1/public/doublestroke/dsrom10.pfb></usr/local/texlive/2025/texmf-di
 st/fonts/type1/public/amsfonts/euler/eufm10.pfb>
-Output written on main.pdf (27 pages, 598997 bytes).
+Output written on main.pdf (27 pages, 598948 bytes).
 PDF statistics:
  1075 PDF objects out of 1200 (max. 8388607)
  770 compressed objects within 8 object streams

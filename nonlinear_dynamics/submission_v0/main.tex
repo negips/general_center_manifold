@@ -1,4 +1,4 @@
-\documentclass[aps,prr,twocolumn,groupedaddress]{revtex4-2}
+\documentclass[iicol,vancouver-num]{sn-jnl}
 
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -9,26 +9,40 @@
 %\usepackage{logix}
 \usepackage{mathtools}
 \usepackage{dsfont}
-\usepackage{natbib}
-\usepackage[hidelinks]{hyperref}
-\usepackage{tikz}
-\usepackage[bb=stix,bfbb]{mathalpha}
+\usepackage[numbers]{natbib}
+%\usepackage[hidelinks]{hyperref}
+%\usepackage{tikz}
+%\usepackage[bb=stix,bfbb]{mathalpha}
 %\usepackage{bbold}
 \usepackage{bm}
 
 \usepackage{graphicx}
 \usepackage{placeins}
 \usepackage{subcaption}
+\usepackage{amsthm}			% Theorems
+\usepackage{cuted}				% /strip for multicolumn equation
+
+% Algorithms
+\usepackage{algorithm}%
+%\usepackage{algorithmic}
+%\usepackage{algorithmicx}%
+\usepackage[indLines=true,noEnd=false,beginComment=/*~,beginLComment=/*~,endLComment=~*/]{algpseudocodex}%
+
+\usepackage{nicematrix}
+\usepackage{tikz}
+\usetikzlibrary{tikzmark}
+
+%\theoremstyle{nonumberplain}   % note 1
+%\theorembodyfont{\normalfont}
+%\theoremseparator{:}           % note 2
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+%\newtheorem{proof}{Proof}
 
 \newcommand*{\dt}[1]{%
 	\accentset{\mbox{\large\bfseries .}}{#1}}
 
-\newcommand{\obliquesymbol}[1]{%
-	\begin{tikzpicture}[#1]%
-		\draw (0,0) -- (1.0ex,0);%
-		\draw (0.5ex,0) -- (1.0ex,0.8ex);%
-	\end{tikzpicture}%
-}
 
 \graphicspath{{imgs/}{imgs2/}}
 
@@ -41,74 +55,177 @@
 \newcommand{\vfield}[1]{
 	\boldsymbol{#1}
 }
-% Pressure field
-\newcommand{\pfield}[1]{
-	\mathrm{#1}
-}
-\newcommand{\vpfield}[1]{
-	\mathbb{#1}
-}
+
 \newcommand{\efield}[1]{
-	\mathbb{\widehat{#1}}
+	{\widehat{\vfield{#1}}}
 }
+
 \newcommand{\inv}[1]{
 	\mathrm{#1^{-1}}
 }
 
 \newcommand{\fancy}[1]{{\color{white}\contour{black}{#1}}}
 
-\def\vecU{\boldsymbol{U}}
-\def\vecUb{\vfield{U^{0}}}
-\def\vecPb{\pfield{P^{0}}}
-\def\vecu{\vfield{u}}
-\def\vecv{\vfield{v}}
-\def\vecy{\vfield{y}}
+\newcommand\IndexSet[2]{
+	\bm{\mathcal{I}}\{(#1),[#2]\}
+	}
+
+\newcommand\Tuple[1]{
+	\{#1\}
+}
+
+\def\fieldu{\vfield{u}}
+\def\fieldub{\vfield{u}^{b}}
+\def\fieldf{\vfield{f}}
+
+\def\veczero{\mathbf{0}}
+\def\vecu{\mathbf{u}}
+\def\vecv{\mathbf{v}}
+\def\vecw{\mathbf{w}}
+\def\vecy{\mathbf{y}}
+\def\vecA{\mathbf{A}}
+
+
+
+\def\vecf{\vfield{f}}
+\def\vecg{\vfield{g}}
 \def\vecyp{\mathbb{y}}
+\def\vecmu{\vfield{\mu}}
+\def\vecMu{\vfield{\mu}^{b}}
+
+\def\vecnu{\vfield{\nu}}
+\def\vectheta{\vfield{\theta}}
+
+\def\evecu{\widehat{\mathbf{u}}}
+\def\evecv{\widehat{\mathbf{v}}}
+
+\def\Lu{\mathbf{L}}
+\def\Lmu{\mathbf{L}_{\vecmu}}
+\def\Lnu{\mathbf{L}_{\vecnu}}
+\def\Ltheta{\mathbf{L}_{\vectheta}}
+\def\ExtL{\mathbf{\widehat{L}}}
+
+\def\NonLin{\mathcal{N}}
+\def\NewNonLin{\mathcal{N}'}
+\def\ENonLin{\widehat{\NewNonLin}}
+
 \def\bcdot{\boldsymbol{\cdot}}
-\def\ie{\textit{i.e.} }
-\def\blbracket{\boldsymbol{\lceil}}
-\def\brbracket{\boldsymbol{\rceil}}
+\def\ie{\textit{i.e.}\ }
+\def\etc{\textit{etc.}}
 
-\def\invRec{\inv{Re_{c}}}
-\def\Rey{\mathrm{Re}}
+\def\Lambdabf{\mathbf{\Lambda}}
+\def\LambdaC{\Lambdabf_{C}}
+\def\LambdaP{\Lambdabf_{P}}
+\def\LambdaH{\Lambdabf_{H}}
+\def\LambdaE{\Lambdabf_{E}}
 
-%\def\bigblbracket{\boldsymbol{\left\lceil}}
-%\def\bigbrbracket{\boldsymbol{\right\rceil}}
+\def\Gammabf{\mathbf{\Gamma}}
+\def\GammaP{\Gammabf_{P}}
+\def\GammaH{\Gammabf_{H}}
+\def\GammaE{\Gammabf_{E}}
+
+\def\Q{\mathbf{Q}}
+\def\Qhat{\mathbf{\widehat{Q}}}
+\def\Khat{\mathbf{\widehat{K}}}
+\def\Ihat{\mathbf{\widehat{I}}}
+\def\Vhat{\mathbf{\widehat{V}}}
+\def\What{\mathbf{\widehat{W}}}
+
+\def\Devec{\mathbf{v}}
+\def\Aevec{\mathbf{w}}
+\def\EDevec{\widehat{\Devec}}
+\def\EAevec{\widehat{\Aevec}}
+
+\def\DevMatrix{\mathbf{V}}
+\def\AevMatrix{\mathbf{W}}
+\def\EDevMatrix{\widehat{\DevMatrix}}
+\def\AevMatrix{\mathbf{W}}
+\def\EAevMatrix{\widehat{\AevMatrix}}
+
+\def\parv{z}
+\def\vecparv{\mathbf{\parv}}
+
+\def\xbf{\mathbf{x}}
+\def\zbf{\mathbf{z}}
+
+\def\yhatbf{\mathbf{\widehat{y}}}
+\def\fhatbf{\mathbf{\widehat{f}}}
+\def\hhatbf{\mathbf{\widehat{h}}}
+%\def\vhatbf{\mathbf{\widehat{v}}}
+%\def\whatbf{\mathbf{\widehat{w}}}
+\def\zerobf{\mathbf{0}}
+
+\def\Lap{\nabla^{2}}
+
+\def\Param{\mathcal{G}}
+\def\AsParam{\mathbf{g}}
+\def\AsParamEl{g}
+
+\def\CenM{\mathcal{Y}}
+\def\AsECenM{\widehat{\mathbf{y}}}
+\def\AsCenM{\mathbf{y}}
+
+\def\AsForc{h}
+\def\AsEForcing{\widehat{\mathbf{\AsForc}}}
+\def\AsForcing{\mathbf{\AsForc}}
+
+\def\AsEForcingO{\widehat{\mathbf{\AsForc}}^{O}}
+\def\AsForcingO{\mathbf{\AsForc}^{O}}
+
+\def\AsEForcingL{\widehat{\mathbf{\AsForc}}^{L}}
+\def\AsForcingL{\mathbf{\AsForc}^{L}}
+
+\def\ResolventOp{\mathcal{R}}
+\def\ResolventHatOp{\widehat{\ResolventOp}}
+\newcommand\Resolvent[1]{
+	[\ResolventOp(#1)]
+}
+\newcommand\ResolventHat[1]{
+	[\ResolventHatOp(#1)]
+}
+\newcommand\RestrictedResolvent[1]{
+	[\ResolventOp_{s}(#1)]
+}
 
 \DeclarePairedDelimiter{\vpceil}{\boldsymbol{\lceil}}{\boldsymbol{\rceil}}
 \DeclareBoldMathCommand\bigblbracket{\left\lceil}
 \DeclareBoldMathCommand\bigbrbracket{\right\rceil}
 
-
+%\setlength{\algorithmicindent}{2.0em}
 
 \begin{document}
 	
 %opening
-\title{Asymptotic Center--Manifold for the Navier--Stokes}
-\author{Prabal S. Negi}
-\email[]{prabal.negi@oist.jp}
+\title[Extended Center Manifold]{Constructing asymptotic center manifold for extended systems}
+\author*[]{\fnm{Prabal} S. \sur{Negi}}\email{prabal.negi@oist.jp}
+
+%\author{Prabal S. Negi}
+%\email[]{prabal.negi@oist.jp}
 %\homepage[]{Your web page}
 %\thanks{}
 %\altaffiliation{}
-\affiliation{Okinawa Institute of Science and Technology Graduate University, Onna, Okinawa 904-0495, Japan}
+\affil[]{Okinawa Institute of Science and Technology Graduate University, Onna, Okinawa 904-0495, Japan}
 
 \date{\today}
 
-\begin{abstract}
-Center-manifold approximations for infinite-dimensional systems are treated in the context of the Navier--Stokes equations extended to include an equation for the parameter evolution. The consequences of system extension are non-trivial and are examined in detail. The extended system is reformulated via an isomorphic transformation, and the application of the center-manifold theorem to the reformulated system results in a finite set of center-manifold amplitude equations coupled with an infinite-dimensional graph equation for the stable subspace solution. General expressions for the asymptotic solution of the graph equation are then derived. The main benefit of such an approach is that the graph equation, and the subsequent asymptotic expressions are formally valid even when the system is perturbed slightly away from the bifurcation point. The derivation is then applied to two cases - the classic case of the Hopf bifurcation of the cylinder wake, and a case of flow in an open cavity which has interesting dynamical properties after bifurcation. Predictions of the angular frequencies of the reduced systems are in good agreement with those obtained for the full systems close to the bifurcation point. The Stuart-Landau equations for the two cases are also obtained. The presented methodology may easily be applied to other infinite-dimensional systems. 
-\end{abstract}
+\abstract{Center manifold approximation of a generic large nonlinear system at a multiple co-dimension bifurcation point is considered for cases where the system has been perturbed slightly away from the bifurcation point due to small parameter perturbations and harmonic forcing. We take the ``extended systems'' approach to analyze such systems which elevates parameter perturbation as well as harmonic forcing as state variables and extends the dimensionality of the center subspace. The new subspace structure is explicitly evaluated and analyzed in detail. Despite the extension of the operators, it is shown that the construction of an asymptotic center manifold for such an extended system in fact only requires operations on the original linearized system at bifurcation. A key consequence of taking the ``extended systems'' perspective is that algorithms for parameter perturbation, harmonic forcing and unperturbed system center manifolds can be unified into a single algorithm. A Ginzburg-Landau model at bifurcation is used to demonstrate the validity of the approach based on the extended system.}
+
 
 \maketitle
 
 \input{intro}
 \input{derivation_p1}
-\input{cyl}
-\input{cavity}
-\input{appendix}
+\input{derivation_normal}
+\input{derivation_graph}
+\input{ginzburg_landau}
+\input{discussion}
+%\input{appendix}
 
 \FloatBarrier
 
-\bibliographystyle{apalike}
+%\bibliographystyle{unsrtnat}
+%\bibliographystyle{abbrvnat}
+\bibliographystyle{abbrvnat}
 \bibliography{references}
 
 \end{document} 

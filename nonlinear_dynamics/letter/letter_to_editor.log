@@ -1,24 +1,23 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.6.23)  4 NOV 2024 15:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.16)  17 JAN 2026 13:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **letter_to_editor.tex
 (./letter_to_editor.tex
-LaTeX2e <2024-06-01> patch level 1
-L3 programming layer <2024-05-27>
-(/usr/share/texmf-dist/tex/latex/base/letter.cls
-Document Class: letter 2021/12/07 v1.3c Standard LaTeX document class
-(/usr/share/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2024/02/08 v1.4n Standard LaTeX file (size option)
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-03-26>
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/letter.cls
+Document Class: letter 2024/08/12 v1.3c Standard LaTeX document class
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
 )
-\longindentation=\dimen141
-\indentedwidth=\dimen142
-\labelcount=\count194
+\longindentation=\dimen146
+\indentedwidth=\dimen147
+\labelcount=\count197
 )
-(/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count195
-\l__pdf_internal_box=\box52
+(/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2025-03-14 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count198
 )
 (./letter_to_editor.aux)
 \openout1 = `letter_to_editor.aux'.
@@ -45,26 +44,27 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 [1
 
-{/home/prabal/.texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 (./letter_to_editor.aux)
  ***********
-LaTeX2e <2024-06-01> patch level 1
-L3 programming layer <2024-05-27>
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-03-26>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 368 strings out of 475560
- 7623 string characters out of 5778795
- 1930905 words of memory out of 5000000
- 23073 multiletter control sequences out of 15000+600000
- 558069 words of font info for 36 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
- 35i,6n,50p,451b,146s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on letter_to_editor.pdf (1 page, 24262 bytes).
+ 351 strings out of 469626
+ 7259 string characters out of 5471010
+ 429118 words of memory out of 5000000
+ 27248 multiletter control sequences out of 15000+600000
+ 627171 words of font info for 41 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 35i,6n,38p,567b,150s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on letter_to_editor.pdf (1 page, 36099 bytes).
 PDF statistics:
- 13 PDF objects out of 1000 (max. 8388607)
- 7 compressed objects within 1 object stream
+ 18 PDF objects out of 1000 (max. 8388607)
+ 10 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
